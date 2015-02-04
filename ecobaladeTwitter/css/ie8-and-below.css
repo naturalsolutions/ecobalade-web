@@ -1,0 +1,98 @@
+﻿/*#views_slideshow_cycle_div_v_slideshow_detail_balade-block, 
+#views_slideshow_cycle_main_v_slideshow_detail_balade-block .field-content > img,
+.views-field.views-field-field-image-2 ,
+#views_slideshow_cycle_main_v_slideshow_detail_balade-block	{
+      /*width: 100%;
+}
+*/
+
+/*HOME PAGE*/
+/*debug image fold3*/
+div.hero-unit div.views-slideshow-controls-bottom.clearfix{
+float:left!important;
+margin-left:20px;
+}
+.row-fluid{
+margin-top:100px;
+width:95%;
+}
+.row-fluid.friseEspece{
+padding-bottom:50px;
+}
+/*Miniature Slider dans DETAIL TAXON & BALADE */
+.views-content-field-image > img{
+width:auto!important;
+height:65px;
+}
+/*PAGE DETAIL TAXON*/
+div.slideShowDetailTaxon div.views-field.views-field-field-image-2 {
+width:101%;
+}
+div.slideShowDetailTaxon div.views-slideshow-controls-bottom.clearfix{
+margin-right:15px;
+margin-left:0px;
+float:right;
+}
+div.imgSlideShowDetailTaxon img{
+max-width:101%;
+}
+section#block-views-e53a7d0ca74eada4a38ca24bbad94594{
+/*float:right;
+margin-top:-600px;
+margin-right:-700px;
+width:80%;*/
+}
+
+aside.span3{
+width:195px;
+}
+
+.asideRandomListTaxon{
+	/*width:190px;
+	float:right;
+	margin-right:10px;
+	margin-top:-10px;*/
+}
+/*FIN*/
+/*PAGE BALADE*/
+div.imgSlideShow img{
+max-width:106.5%!important;
+}
+div.views-field.views-field-field-image-2 {
+width:106.5%;
+}	
+div.views-slideshow-controls-bottom.clearfix{
+margin-right:-20px;
+margin-left:0px;
+float:right;
+}
+.view-v-slideshow-detail-balade{
+	width:650px;
+}
+.views-field.views-field-field-duree{
+width:32%;
+}
+/*FIN*/
+/*DEBUG PAGE LIST BALADE*/
+aside.span3{
+	margin-left:20px;
+}
+/*FIN*/
+
+#widget_pager_bottom_v_slideshow_detail_balade-block .views-content-field-image > img{
+	width:66.1px;
+}
+.span9{
+	width:700px;
+}
+aside.region-sidebar-second.span3{
+	margin-left:10px;
+}
+.node-type-balade .span9{
+	margin-left:20px;
+}
+
+
+
+
+

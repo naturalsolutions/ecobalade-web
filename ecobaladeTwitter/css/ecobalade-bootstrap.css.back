@@ -1,0 +1,1123 @@
+body {
+	background-image: url(../img/footer.jpg);
+	background-position: bottom center;
+	background-origin: border-box, content-box;
+	background-repeat: repeat-x;
+	padding-top:80px;
+}
+.container-node{
+	background:#E6E6E6;
+	border-radius: 4px ;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	padding-bottom:15px;
+}
+/*---------page aside left---------*/
+.span9 {
+    margin-left: 20px;
+    width: 70%;
+}
+aside.span3 {
+    margin-left: 40px;
+}
+/*---------page aside right----------*/
+.node-type-balade .span9{
+	background: none repeat scroll 0 0 white;
+    border: 1px solid #BBBBBB;
+    border-radius: 4px ;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+    margin-left: 40px;
+}
+
+aside.span3.region-sidebar-second{
+    margin-left: 20px;
+}
+
+#admin-menu, #admin-menu .dropdow{
+	z-index:2000;
+}
+
+@font-face {
+    font-family: 'androgyneregular';
+    src: url('./font/androgyne_tb-webfont.eot');
+    src: url('./font/androgyne_tb-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./font/androgyne_tb-webfont.woff') format('woff'),
+         url('./font/androgyne_tb-webfont.ttf') format('truetype'),
+         url('./font/androgyne_tb-webfont.svg#androgyneregular') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+p{
+	font-size:16px;
+	line-height:27px;
+}
+a {
+   color:#5e852c;
+}
+#main-menu .active{
+	background:#8fb03b;
+	border-radius:2px;
+	color: white;
+text-shadow: 0 1px 0 #5e852c;
+}
+.hero-unit p{
+	font-size:18px;
+	line-height:30px;
+	padding: 0 30px 10px 10px;
+	text-align: justify;
+	min-height:100px;
+}
+.hero-unit-teaser{
+	margin-top:60px;
+}
+a:hover, a:active, a:focus {
+   color:#8fb03b;
+}
+
+a,a:hover, a:active, a:focus {
+   outline: 0;
+}
+
+
+.hero-unit{
+	background:white;
+	padding:0 60px;
+}
+
+.hero-unit p{
+	margin: 1em 0;
+}
+.hero-unit h1{
+	font-size:50px;
+	margin-bottom:10px;
+	color:#3b501B;
+	font-family:"androgyneregular";
+}
+h1,h2,h3,h4{
+	  color:#3b501B;
+	  font-family:"androgyneregular", serif;
+}
+.brand{
+	position:absolute;
+	top:0px;
+	z-index:1031;
+}
+.not-front .brand img{
+	max-width:216px;
+}
+.btn-primary,#edit-submit-v-liste-balade {
+  background-color:  #5e852c;
+  background-image: -moz-linear-gradient(center top , #5e852c, #3B501B);
+  background-repeat: repeat-x;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  color: #FFFFFF;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+ 
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5e852c), to(#3B501B));
+  background-image: -webkit-linear-gradient(top, #5e852c, #3B501B);
+  background-image: -o-linear-gradient(top, #5e852c, #3B501B);
+  background-image: linear-gradient(to bottom, #5e852c, #3B501B);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff5e852c', GradientType=0);
+  border-color: #395418 #395418 #395418;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #3B501B;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+#edit-submit-v-liste-balade,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+  background-color: #3B501B;
+}
+.btn-important{
+  font-size:18px;
+}
+.btn-primary img{
+ margin-top:6px;
+}
+.btn-warning {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #faa732;
+  background-image: -moz-linear-gradient(top, #E47353, #C84B2B);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#E47353), to(#C84B2B));
+  background-image: -webkit-linear-gradient(top, #E47353, #C84B2B);
+  background-image: -o-linear-gradient(top, #E47353, #C84B2B);
+  background-image: linear-gradient(to bottom, #E47353, #C84B2B);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffbb450', endColorstr='#fff89406', GradientType=0);
+  border-color: #C84B2B #C84B2B #ad6704;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #C84B2B;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-warning:hover,
+.btn-warning:active,
+.btn-warning.active,
+.btn-warning.disabled,
+.btn-warning[disabled] {
+  color: #ffffff;
+  background-color: #C84B2B;
+  *background-color: #df8505;
+}
+.btn-warning:active,
+.btn-warning.active {
+  background-color: #c67605 \9;
+}
+.navbar .nav > li{
+	padding:10px;
+}
+.navbar .brand {
+	left:10px;
+	padding-top:0px;
+}
+.nav-pills > .active > a,
+.nav-pills > .active > a:hover {
+  color: #ffffff;
+  background-color: #0088cc;
+}
+.nav-tabs .open .dropdown-toggle,
+.nav-pills .open .dropdown-toggle,
+.nav > li.dropdown.open.active > a:hover {
+  color: #ffffff;
+  background-color: #999999;
+  border-color: #999999;
+}
+.navbar-inverse .nav > li > a:focus,
+.navbar-inverse .nav > li > a:hover {
+  background-color: #ccc;
+  color: #333;
+}
+.navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus {
+  background-color: #8fb03b;
+  color: #FFFFFF;
+}
+
+
+.retour-force{
+	clear:both;
+}
+.navbar-inverse .navbar-inner{
+	background-color:white;
+	background-image:-moz-linear-gradient(center top , #fff, #eee);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#eee));
+  background-image: -webkit-linear-gradient(top, #fff, #eee);
+  background-image: -o-linear-gradient(top, #fff, #eee);
+  background-image: linear-gradient(to bottom, #fff, #eee);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffeeeeee', GradientType=0);
+	
+	border-color:#ddd;
+}
+
+
+
+
+.navbar-inverse .brand, .navbar-inverse .nav > li > a{
+		color:#313131;	
+}
+
+.carousel-caption p {
+  font-size: 16px;
+  text-align:center;
+}
+.hero-unit .carousel-control {
+  background: none repeat scroll 0 0 #3B501B;
+  border: 3px solid #FFFFFF;
+  border-radius: 23px 23px 23px 23px;
+  color: #FFFFFF;
+  font-size: 60px;
+  font-weight: 100;
+  height: 40px;
+  line-height: 30px;
+  margin-top: -20px;
+  opacity: 0.5;
+  position: absolute;
+  text-align: center;
+  top: 90%;
+  left:-10px;
+  width: 40px;
+}
+.carousel-caption {
+	background: none repeat scroll 0 0 rgba(255, 255, 255, 1);
+	padding-top:0px;
+	background: white;
+}
+.carousel-caption h4, .carousel-caption p {
+  color: #333;
+  margin:15px 25px;
+  color:#3b501B;
+
+}
+
+.carousel-control.right {
+  right: -10px;
+  left:auto;
+}
+
+.carousel-obs div{
+	float:left;
+}
+
+.navbar-inverse .btn-navbar {
+  background-color: #3B501B;
+  background-image: -moz-linear-gradient(center top , #527026, #3B501B);
+  background-repeat: repeat-x;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  color: #FFFFFF;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+#fold2{
+	background-image:url(../img/fond-fold2.jpg);
+	background-position:center bottom;
+	background-repeat:no-repeat;
+	background-size: 100% auto;
+	min-height:690px;
+}
+#fold2 .span4{
+	background: rgba(255, 255, 255, 0.75);
+}
+
+#fold3 h4{
+	float:left;
+}
+.picto-inline li{
+	display:inline;
+}
+
+.footer-links{
+	margin-bottom:80px;
+}
+#copyright a{
+	color:white;
+}
+#copyright {
+font-size: 12px;
+position: relative;
+top: 20px;
+color:#395418;
+}
+
+#partenaire{
+	color: #8fb03b;
+	text-align:center;
+}
+/*****fold3*****/
+.contenuEtiquette{
+	position:relative;
+	overflow:hidden;
+}
+.etiquette,.secondEtiquette{
+	text-align:center;
+	background-color:#E47353;
+	position:absolute;
+		-moz-transform:rotate(-45deg);
+	-webkit-transform:rotate(-45deg);
+	-o-transform:rotate(-45deg);
+	transform:rotate(-45deg);
+}
+.etiquette p,.secondEtiquette p{
+	color:white;
+	text-transform:uppercase;
+	font-weight:bold;
+	margin:5px 0px 5px 0px;
+}
+.secondEtiquette{
+	top:60px;
+	left:-70px;
+	width:320px;
+}
+.etiquette{
+	top:40px;
+	left:-55px;
+	width:210px;
+}
+.fleche-balade {
+	float:right;
+	margin:-20px 100px 0 0;
+}
+.fleche-balade p{
+	color:white;
+	font-family:"androgyneregular",serif;
+	margin-top:-50px;
+	text-align:center;
+	font-size:18px;
+}
+.miniCarte{
+	float:right;
+	margin:-10px 10px 0 0;
+}
+ul.filArianeBalade li{
+	display:inline;
+	background: url('../img/balade/fleche-filArianeBalade.png') no-repeat top right;
+	float:left;
+	height:33px;
+}
+ul.filArianeBalade{
+	float:left;
+	margin-top:10px;
+	background:#8FB03B url('../img/balade/fleche-filArianeBaladeDebut.png') no-repeat -4px top;
+	padding-left:10px;
+}
+ul.filArianeBalade li a{
+	float:left;
+	margin:0 10px;
+	padding:6px 5px 5px 0;
+	color:white;
+}
+ul.filArianeBalade li.filArianeBaladeFin{
+	background:#8FB03B;
+}
+
+#fold3 h2{
+	float:left;
+}
+div.zoneBtnBalade{
+	margin-top:40px;
+}
+.zoneBtnBalade a.btn-large{
+	padding:9px 0px;
+	width:100%;
+}
+div.zoneEspecePhotoBalade{
+	margin:25px auto;
+}
+#ancre3{
+	margin-bottom:60px;
+}
+#ancre2{
+	margin-bottom:80px;
+}
+/****************SLIDESHOW ACCUEIL**********************/
+.view-v-slideshow-accueil .views-slideshow-pager-field-item {
+	float:left;
+}
+.view-v-slideshow-accueil  .views-content-counter{
+	margin:0px 10px;
+}
+.view-v-slideshow-accueil  .views-field-counter{
+	border:1px solid #BCBA96;
+	border-radius: 16px;
+	margin:13px;
+}
+.view-v-slideshow-accueil  .active  .views-field-counter{
+	background:#8FB03B;
+	color:white;
+	
+}
+.view-v-slideshow-accueil  .views-field-field-teaser{
+	width:300px;
+	height:50px;
+	margin:auto;
+	font-size:16px;
+	text-align:center;
+	line-height:20px;
+	padding-top:10px;
+}
+.view-v-slideshow-accueil  .views-slideshow-controls-bottom{
+	width:300px;
+	margin:10px 0px 10px 25%;
+}
+/****************DETAILS BALADE***************************/
+.page-header{
+min-height: 40px;
+padding-right: 20px;
+padding-left: 20px;
+background-color: #FAFAFA;
+background-image: -moz-linear-gradient(top, white, #F2F2F2);
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#F2F2F2));
+background-image: -webkit-linear-gradient(top, white, #F2F2F2);
+background-image: -o-linear-gradient(top, white, #F2F2F2);
+background-image: linear-gradient(to bottom, white, #F2F2F2);
+background-repeat: repeat-x;
+border: 1px solid #D4D4D4;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#F2F2F2', GradientType=0);
+-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+line-height: 45px;
+margin-bottom:15px;
+}
+#views_slideshow_cycle_main_v_slideshow_detail_balade-block{
+	float:left;
+}
+/*#views_slideshow_cycle_div_v_slideshow_detail_balade-block_0{
+	width:728px;
+}*/
+.views-slideshow-controls-bottom .views-content-field-image > img{
+	margin:0px 0px 5px 5px;
+	width:82px;
+}
+.node-type-balade .views-slideshow-controls-bottom {
+    float: right;
+    margin-right: 10px;
+}
+/*#views_slideshow_cycle_div_v_slideshow_detail_balade-block, 
+#views_slideshow_cycle_main_v_slideshow_detail_balade-block .field-content > img,
+.views-field.views-field-field-image-2 ,
+#views_slideshow_cycle_main_v_slideshow_detail_balade-block	{
+      width: 80%;
+	}
+	
+.view-v-slideshow-detail-balade{
+	width:90%;
+}
+*/
+.node-type-balade article{
+    clear: both;
+}
+.region-sidebar-second h2,.region-sidebar-first h2{
+	font-size:24px;
+}
+.views-field.views-field-field-image-2{
+	background: none repeat scroll 0 0 black;
+	/* Theoretically for IE 8 & 9 (more valid) */	
+	/* ...but not required as filter works too */
+	/* should come BEFORE filter */
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+	
+	/* This works in IE 8 & 9 too */
+	/* ... but also 5, 6, 7 */
+	filter: alpha(opacity=75);
+	
+	/* Older than Firefox 0.9 */
+	-moz-opacity:0.75;
+	
+	/* Safari 1.x (pre WebKit!) */
+	-khtml-opacity: 0.75;
+    
+	/* Modern!
+	/* Firefox 0.9+, Safari 2?, Chrome any?
+	/* Opera 9+, IE 9+ */
+	opacity: 0.75;
+    height: 40px;
+    margin-top: -40px;
+    position: absolute;
+    width: 728px;
+    z-index: 8;
+}
+.views-field.views-field-field-image-2 .field-content{
+	color:white;
+	margin:10px;
+}
+.node-balade .field-label{
+	font-family:androgyneregular;
+}
+.node-balade .field,.node-balade .comment-wrapper{
+	margin:20px 15px;
+}
+.view-v-slideshow-detail-balade{
+	margin: 10px 0px 10px 15px;
+}
+.field-name-field-description-de-la-balade .field-label{
+	background: none repeat scroll 0 0 white;
+    margin-left: 5px;
+	padding:2px;
+	margin-top:-3px;
+    position: absolute;
+    z-index: 2;
+	color:#3B501B;
+}
+.field-name-field-description-de-la-balade .field-item{
+	border: 1px solid #BBBBBB;
+    padding: 15px 10px 20px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	position: relative;
+    top: 10px;
+    z-index: 1;
+	line-height:24px;
+}
+.field-name-field-carte{
+	position: relative;
+    top: 10px;
+	color:#3B501B;
+}
+.field-name-field-carte .field-label,
+.region-sidebar-second h2,
+.region-sidebar-first h2{
+min-height: 30px;
+padding-left: 10px;
+background-color: #FAFAFA;
+background-image: -moz-linear-gradient(top, white, #F2F2F2);
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#F2F2F2));
+background-image: -webkit-linear-gradient(top, white, #F2F2F2);
+background-image: -o-linear-gradient(top, white, #F2F2F2);
+background-image: linear-gradient(to bottom, white, #F2F2F2);
+background-repeat: repeat-x;
+border: 1px solid #D4D4D4;
+-webkit-border-radius: 4px 4px 0px 0px;
+-moz-border-radius: 4px 4px 0px 0px;
+border-radius: 4px 4px 0px 0px;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#F2F2F2', GradientType=0);
+-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+line-height: 30px;
+font-size:18px;
+margin-bottom: 0;
+}
+.view-v-caracteristiques-balade,
+.view-v-map-localisation-balade,
+.view-v-informations-pratiques-balade{
+	background:white;
+	-webkit-border-radius: 0px 0px 4px 4px;
+	-moz-border-radius: 0px 0px 4px 4px;
+	border-radius: 0px 0px 4px 4px;
+}
+.view-v-caracteristiques-balade .views-field-field-difficulte,
+.view-v-caracteristiques-balade .views-field-field-acces-site .field-content {
+    color: white;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+ }
+ .view-v-caracteristiques-balade .views-field-field-acces-site span {
+    color: white;
+	padding-left:5px;
+ }
+ .view-v-caracteristiques-balade .views-field-field-sponsor span {
+	padding-left:5px;
+ }
+.view-v-caracteristiques-balade .views-field-field-acces-site {
+	background:#E47353;
+}
+.view-v-caracteristiques-balade .views-field-field-difficulte{
+    background: #395419;
+ }
+.view-v-caracteristiques-balade .views-field-field-distance,
+.view-v-caracteristiques-balade .views-field-field-type-de-circuit,
+.view-v-caracteristiques-balade .views-field-field-duree{
+    text-align: center;
+    width: 33%;
+	float:left;
+	height:56px;
+	padding-top:5px;
+	font-weight:bold;
+	font-size:13px;
+	line-height:16px;
+}
+
+.view-v-informations-pratiques-balade .views-field-field-situation span,
+.view-v-informations-pratiques-balade .views-field-field-point-arrivee span,
+.view-v-informations-pratiques-balade .views-field-field-parking span,
+.view-v-informations-pratiques-balade .views-field-field-transport span,
+.view-v-informations-pratiques-balade .views-field-field-point-de-depart span{
+  float:left;
+  font-weight:bold;
+  color:#3B501B;
+}
+
+.view-v-caracteristiques-balade .views-field-field-distance span,
+.view-v-caracteristiques-balade .views-field-field-type-de-circuit span,
+.view-v-caracteristiques-balade .views-field-field-duree span,
+.view-v-caracteristiques-balade .views-field-field-acces-site span,
+.view-v-caracteristiques-balade .views-field-field-sponsor span{
+   font-size:12px;
+   font-weight:normal;
+}
+.view-v-informations-pratiques-balade .views-field-field-point-de-depart .field-content{
+   margin-left:5px;
+   float:left;
+}
+.view-v-informations-pratiques-balade{
+	padding:5px;
+}
+.view-v-informations-pratiques-balade .views-field{
+	clear:left;
+	min-height:30px;
+	margin:10px 0px 5px;
+}
+.view-v-caracteristiques-balade .views-field-field-distance,
+.view-v-caracteristiques-balade .views-field-field-type-de-circuit{
+ 	border-right:1px solid #bbbbbb;
+}
+.view-v-caracteristiques-balade .views-field-field-acces-site{
+    border-top: 1px solid #BBBBBB;
+    clear: left;
+}
+/******************************************************************/
+/***************FOOTER******************************************/
+.large-footer{
+	width:100%;
+}
+.footer {
+  margin-top: 10px;
+	/*padding: 40px 10px 70px 10px;*/
+	color: white;
+	border-top: none;
+	min-height: 386px;
+}
+.footer h2.block-title{
+	font-size: 16px;
+	line-height: 21px;
+	margin: 0 10px 5px 0;
+	color:#CCE390;
+	border-bottom:1px solid #CCE390;
+}
+.footer a{
+	font-size:12px;
+	color:#CCE390;
+}
+.footer .row-fluid .block{
+	width:23.076923076923077%;
+	float:left;
+	margin-right:10px;
+}
+#block-block-5{
+	clear:left;
+	margin-top:40px;
+	float:right;
+}
+#block-block-6 a{
+	margin-left: 20px;
+}
+#block-block-6 {
+	margin-top: 24px;
+	float:right;
+} 
+#block-block-5, #block-block-6{
+	background: white;
+	border-radius: 2px;
+	width:220px;
+	margin-bottom: 5px;
+}
+#block-block-5 h2,#block-block-5 p,#block-block-6 h2,#block-block-6 p{
+	margin:5px 10px;
+	color:#395418;
+}
+#block-block-5 h2,#block-block-6 h2{
+	border-bottom:1px solid #395418;
+}
+#block-menu-menu-mobile{
+	clear:left;
+}
+#block-menu-menu-mobile,#block-menu-menu-partenaires-et-mentions-l-g{
+	position:relative;
+	top:-90px;
+}
+.footer .block-menu ul{
+	margin: auto 5px;
+}
+.footer li a:hover{
+	background:none;
+	text-decoration:underline;
+}
+#ancre_top img{
+	margin-bottom: 10px;
+}
+/******RESEAUX SOCIAUX************************/
+#lien_facebook,#lien_twitter{
+	width: 32px;
+	float: left;
+	height: 32px;
+	margin:5px 5px 10px;
+}
+#lien_facebook{
+	background-image:url('../img/icon_facebook.png');
+	background-repeat: no-repeat;
+}
+#lien_twitter{
+	background-image:url('../img/icon_twitter.png');
+	background-repeat: no-repeat;
+}
+/******ENCART PROF********************/
+#block-block-4{
+	background-image:url('../img/encart_prof_footer.png');
+	background-repeat: no-repeat;
+	float: left;
+	height: 235px;
+	width: 380px;
+	position: relative;
+	top: -28px;
+}
+#block-block-4 h2,#block-block-4 p{
+	color:#395418;
+}
+#block-block-4 p{
+	margin: 20px 40px;
+	color:#395418;
+	/*font-size: 13px;
+	line-height: 21px;*/
+}
+#block-block-4 h2{
+	margin: 30px 30px 0px;
+	border-bottom: 1px solid #395418;
+}
+#block-block-4 p a{
+	float: right;
+	margin: 10px;
+}
+/********STORE APPLICATION MOBILE*******/
+.icon_android_store {
+	background-image: url('../img/logo_android-large.png');
+	width:235px;
+	height:76px;
+	background-repeat: no-repeat;
+}
+a.icon_android_store:hover {
+	background-image: url('../img/logo_android-large-hover.png');
+}
+.footer .icon_iphone_store,.footer .icon_android_store{
+	float:left;
+	width: 156px;
+	height: 51px;
+	margin:2px;
+	padding:0px;
+}
+.footer .icon_iphone_store{
+	background-image: url('../img/logo_iphone.png');
+	background-repeat: no-repeat;
+}
+.footer .icon_android_store{
+	background-image:url('../img/logo_android.png');
+	background-repeat: no-repeat;
+	margin-bottom:10px;
+}
+/*********************/
+
+/************ VIEW LISTE BALADE **********/
+.view-v-liste-balade .views-row {
+	border:1px solid #EBEBEB;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	margin-bottom: 15px;
+	min-height:200px;
+	padding:5px 15px;
+	  *background-color: #e6e6e6;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border: 1px solid #bbbbbb;
+}
+.view-v-liste-balade .views-field-title h1{
+	font-size:18px;
+	line-height: 12px;
+}
+.view-v-liste-balade .views-field-title h1 a{
+	color:#325419;
+}
+.view-v-liste-balade .views-field-field-photo-resume {
+	float:left;
+	margin-right:10px;
+}
+.view-v-liste-balade .views-field-field-sponsor,
+.view-v-liste-balade .views-field-field-distance,
+.view-v-liste-balade .views-field-field-difficulte,
+.view-v-liste-balade .views-field-field-vote{
+	float:left;
+	width:19%;
+	border-right:1px solid #BBBBBB;
+	height: 50px;
+}
+.view-v-liste-balade .views-field-field-sponsor,
+.view-v-liste-balade .views-field-field-distance,
+.view-v-liste-balade .views-field-field-difficulte,
+.view-v-liste-balade .views-field-field-vote,
+.view-v-liste-balade .views-field-view-node{
+		margin:15px 5px 0px;
+}
+.view-v-liste-balade .views-field-field-distance,
+.view-v-liste-balade .views-field-field-difficulte,
+.view-v-liste-balade .views-field-field-vote{
+	text-align:center;
+}
+
+.view-v-liste-balade .views-field-field-distance .field-content,
+.view-v-liste-balade .views-field-field-difficulte .field-content{
+	font-weight:bold;
+}
+.view-v-liste-balade  .fivestar-widget-static {
+	width: 100px; 
+	margin: auto;
+}
+#edit-field-distance-value{
+	width:60px;
+}
+.view-v-liste-balade .views-field-field-teaser{
+	margin:0px;
+	background:white;
+	border:1px solid #eeeeee;
+}
+.view-v-liste-balade .views-field-field-teaser p{
+	margin:10px 10px 0px 0px;
+}
+.view-v-liste-balade .fivestar-widget{
+	width:110px;
+	margin:auto;
+}
+.fivestar-average-text{
+	font-size:11px
+}
+.views-field-view-node a{
+float:right;
+	display: inline-block;
+  *display: inline;
+  padding: 4px 12px;
+  margin-bottom: 0;
+  margin-right:10px;
+  *margin-left: .3em;
+  font-size: 14px;
+  line-height: 20px;
+  *line-height: 20px;
+  color: #333333;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  *background-color: #e6e6e6;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border: 1px solid #bbbbbb;
+  *border: 0;
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-bottom-color: #a2a2a2;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  *zoom: 1;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+
+
+.views-field-view-node a:hover,
+.views-field-view-node a:active,
+.views-field-view-node a.active,
+.views-field-view-node a.disabled,
+.views-field-view-node a[disabled] {
+  color: #333333;
+  background-color: #e6e6e6;
+  *background-color: #d9d9d9;
+}
+
+.views-field-view-node a:active,
+.views-field-view-node a.active {
+  background-color: #cccccc \9;
+}
+
+.views-field-view-node a:first-child {
+  *margin-left: 0;
+}
+
+.views-field-view-node a:hover {
+  color: #333333;
+  text-decoration: none;
+  background-color: #e6e6e6;
+  *background-color: #d9d9d9;
+  /* Buttons in IE7 don't get borders, so darken on hover */
+
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+     -moz-transition: background-position 0.1s linear;
+       -o-transition: background-position 0.1s linear;
+          transition: background-position 0.1s linear;
+}
+
+.views-field-view-node a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.views-field-view-node a.active,
+.views-field-view-node a:active {
+  background-color: #e6e6e6;
+  background-color: #d9d9d9 \9;
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+#block-views-exp-v-liste-balade-page-1 h2{
+	font-size: 21px;
+    line-height: 28px;
+	border-bottom: 1px solid #BBBBBB;
+}
+.page-liste-balades .well{
+	padding:0px;
+}
+.views-exposed-widget .views-submit-button{
+	float:right;
+}
+#block-views-exp-v-liste-balade-page-1 legend{
+	border: medium none;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom:0px;
+}
+#block-views-exp-v-liste-balade-page-1 form{
+	margin:0 0 50px;
+}
+#block-views-exp-v-liste-balade-page-1 label{
+	color:white;
+	font-weight:normal;
+}
+
+.critere-form-aside{
+	background: #395419;
+    padding: 5px;
+	border: 1px solid #D4D4D4;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+/************************************************************************/
+/******************MEDIA QUERIES***************/
+
+@media (min-width: 980px) and(max-width: 1200px){
+	.navbar .brand img{
+		width:300px		
+	}
+	.hero-unit h1{
+	font-size:50px;
+	}
+	.span9 {
+		width:860px;
+	}
+}
+
+@media  (max-width: 979px) {
+    [class*="span"], .row-fluid [class*="span"] {
+	-moz-box-sizing: border-box;
+	display: block;
+	float: none;
+	margin-left: 0;
+	width: 100%;
+    }
+    .navbar .brand img{
+	width:260px;
+    }	
+    .navbar-inverse .nav > li > a {
+      color: #313131;
+      text-align: right;
+    }
+    .navbar-inverse .nav-collapse .nav > li > a:hover,
+    .navbar-inverse .nav-collapse .dropdown-menu a:hover {
+	background-color: #527026;
+    }
+    div.fleche-balade{
+	content:"";
+	margin-right:20px;
+	width:60px;
+    }
+    #fold3 h2{
+	float:none;
+    }
+    .contenuEtiquette img{
+	content:url(../img/balade/photoPrincipalePaysage_balade.jpg);
+	float:left;
+    }
+	body{
+		background-image:none;
+	}
+	.footer{
+	background:#385419;
+	height:100%;
+	padding: 20px 10px;
+	}
+	#block-menu-menu-des-questions-,#block-block-2,#block-menu-menu-mobile,#block-block-4,#block-menu-menu-partenaires-et-mentions-l-g,#block-block-5,#block-block-6{
+		clear:both;
+		margin:10px 0px;
+		top: 0px;
+	}
+	#block-menu-menu-des-questions-,#block-block-2,#block-menu-menu-mobile,#block-menu-menu-partenaires-et-mentions-l-g,#block-block-5,#block-block-6{
+		width:100%;
+		
+	}
+	#copyright{
+		color:#8FB03B;
+	}
+	.views-slideshow-controls-bottom{
+		display:none;
+	 }
+	 
+	aside.span3,.span9,aside.region-sidebar-second.span3,.node-type-balade .span9{
+		margin-left:20px;
+		width:97%;
+	}
+	
+	
+	
+}
+
+@media (max-width: 767px) {
+   ul.filArianeBalade{
+    margin:10px 0px 0px;
+   }
+   div.fleche-balade{
+    position:absolute;
+    margin-left:70%;
+   }
+   #block-block-4,
+   .views-field-field-sponsor,
+   .views-field-field-difficulte,
+   .views-field-field-distance,
+   .views-field-field-vote,
+   .views-field-view-node,
+   .views-slideshow-controls-bottom{
+	display:none;
+	   }
+   .view-v-liste-balade .views-row{
+	min-height:150px;
+   }
+   .hero-unit{
+	padding:0px;
+   }
+   .view-v-slideshow-accueil .views-slideshow-controls-bottom ,
+   .view-v-slideshow-accueil .views-slideshow-controls-bottom  img,
+   .view-v-slideshow-accueil .views-field-field-teaser{
+	margin:0px auto;
+   }
+   .views-field-field-teaser,.views-field-field-teaser p{
+	margin:0px;
+	}
+	
+   /*#views_slideshow_cycle_div_v_slideshow_detail_balade-block, #views_slideshow_cycle_main_v_slideshow_detail_balade-block .field-content > img,
+	.views-field.views-field-field-image-2    {
+      width: 64%;
+	}*/
+	
+	aside.span3{
+	margin-left:0px;
+	}
+	
+	aside.region-sidebar-second.span3{
+		margin-left:10px;
+	}
+	
+	aside.span3,.span9,aside.region-sidebar-second.span3,.node-type-balade .span9{
+	margin-left:5px;
+	width:97%;
+	}
+}
