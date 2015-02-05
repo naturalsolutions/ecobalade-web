@@ -32,3 +32,29 @@ comprends et on fait les modifs décrites.
 
 Quand on a fini, on écrit dans le fichier `updates/derniere_modif` le nom du
 dernier fichier traité.
+
+
+Règles
+------
+
+- Avant chaque instruction, utilisez la chaine de caractère suivante ":>"
+- Pensez à copier les exports des vues/règles/autres afin qu'ils soient versionnées entre ces caractères : {## ... ##}
+
+PS : Ne pas hésiter à détailler le plus possibles les actions à réaliser.
+
+Exemple : 	
+
+		##PAGE D'ACCUEIL
+		################
+		:> Maj vue "v_atlas_presentation" {{ ##
+			
+		...
+
+		## }}
+
+		:> Donner/changer un titre aux contenus "sous-bassins", voir site de dev. Au passage, mettre au statut "Brouillon" si pas fait.
+		:> Maj label, sur l'url : "admin/content/node-type/book-cluster/fields/field_cluster_biblio", cliquer sur modifier les informations de base
+		:> Etiquette -> "Principales ressources bibliographiques ( 10 références maximum )"
+
+
+
