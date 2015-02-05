@@ -608,11 +608,6 @@ body.front figure{
   }
 
 }
-@media  (max-width: 1200px) {
-  body{
-    background-image: url('../img/footer_big.jpg') !important;
-  }
-}
 @media  (max-width: 967px) {
   body{
     background-image: none !important;
@@ -3496,7 +3491,11 @@ body.front #fold2 > h2{
 
 }
 /*En dessous de 1200*/
-@media (max-width: 1200px){
+@media (max-width: 1199px){
+  body{
+    background-image: url('../img/footer_big.jpg');
+    background-position: 50% 101%;
+  }
   #galleriffic #caption {
     width: 100%;
   }

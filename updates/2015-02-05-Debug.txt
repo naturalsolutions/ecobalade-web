@@ -302,6 +302,7 @@ $translatables['v_data_export'] = array(
 :> Supprimer le menu features qui ne sert à rien en tant qu'admin, sur l'url : #overlay=admin/structure/menu/manage/features/edit
 :> Activer le module "Administration Development tools"
 :> Supprimer le menu "les sites", sur l'url : #overlay=admin/structure/menu/manage/menu-les-sites/edit
+:> Supprimer le menu "Mobile", sur l'url : #overlay=admin/structure/menu/manage/menu-mobile/edit
 
 :> Si pas fait, d'après le rapport accessible sur ce lien : "#overlay=admin/reports/status" il faut ajouter un .htaccess dans le repertoire files {## 
 
@@ -329,3 +330,53 @@ SetHandler Drupal_Security_Do_Not_Remove_See_SA_2006_006
 
 :> Changer l'adresse de courriel, sur l'url : #overlay=admin/config/system/site-information
 :> par "contact@natural-solutions.eu" 
+
+:> Faire un backup de la base et du sites et github puis lancer le script "update.php" (1 erreur sur geofield en dev, noter s'il y a erreur en prod aussi pr debug ulterieur)
+
+:> Dans #overlay=admin/structure/menu/manage/navigation/edit, ajouter le texte "### PAS UTILISER POUR LE MOMENT ###" dans la description
+:> Dans #overlay=admin/structure/menu/manage/navigation, désactiver tous les items
+
+:> Dans #overlay=admin/structure/menu/manage/menu-les-balades/edit
+:> Titre -> Liste des balades
+:> Description -> Menu du Footer, il liste toutes les balades, comme la section "balades" du menu principale
+
+:> sur l'url, #overlay=admin/structure/menu/item/1013/edit
+:> Modifier le titre en "Balade de L oppidum - Montagne Ste-Victoire"
+
+:> sur l'url, #overlay=admin/structure/menu/item/823/edit
+:> Modifier le titre en "Balade du Parc des grottes d Azé"
+
+:> sur l'url, #overlay=admin/structure/menu/item/824/edit
+:> Modifier le titre en "Balade de Sugiton - Massif des Calanques"
+
+:> Ajouter d'un item au menu footer, sur l'url : #overlay=admin/structure/menu/manage/menu-les-balades/add
+:> Titre -> Balade de Fuveau
+:> Chemin -> node/2353
+:> Description -> En savoir plus sur la "Balade de Fuveau (13) - La montagne bleue à travers les âges"
+:> Placer le nouvel item en haut
+
+:> Ajouter d'un item au menu footer, sur l'url : #overlay=admin/structure/menu/manage/menu-les-balades/add
+:> Titre -> Balade de la Roque d'Anthéron
+:> Chemin -> node/2354
+:> Description -> En savoir plus sur la "Balade de la Roque d'Anthéron"
+:> Placer le nouvel item en haut
+
+:> Ajouter d'un item au menu footer, sur l'url : #overlay=admin/structure/menu/manage/menu-les-balades/add
+:> Titre -> Balade de Rognes
+:> Chemin -> node/2355
+:> Description -> En savoir plus sur la "Balade de Rognes""
+:> Placer le nouvel item en haut
+
+:> Ajouter d'un item au menu footer, sur l'url : #overlay=admin/structure/menu/manage/menu-les-balades/add
+:> Titre -> Balade de Puyloubier
+:> Chemin -> node/2356
+:> Description -> En savoir plus sur la "Balade de Puyloubier"
+:> Placer le nouvel item en haut
+
+:> Ajouter d'un item au menu footer, sur l'url : #overlay=admin/structure/menu/manage/menu-les-balades/add
+:> Titre -> Balade de Jouques
+:> Chemin -> node/2358
+:> Description -> En savoir plus sur la "Balade de Jouques"
+:> Placer le nouvel item en haut
+
+
