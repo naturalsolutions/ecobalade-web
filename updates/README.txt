@@ -40,7 +40,7 @@ Règles
 - Avant chaque instruction, utilisez la chaine de caractère suivante ":>"
 - Pensez à copier les exports des vues/règles/autres afin qu'ils soient versionnées entre ces caractères : {## ... ##}
 
-PS : Ne pas hésiter à détailler le plus possibles les actions à réaliser.
+PS : Ne pas hésiter à détailler le plus possibles les actions à réaliser, le contexte, ajouter le numéro de story.
 
 Exemple : 	
 

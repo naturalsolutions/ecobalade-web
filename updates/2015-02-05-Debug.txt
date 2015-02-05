@@ -1,0 +1,331 @@
+:> Maj des modules
+
+## Tache qui consiste à enlever la case à cocher (appartient à la balade "x") sur le fiche espece. L'export du xml se fait désormais à partir du champs espece du contenu balade
+:> MAj vue "v_data_export" {## 
+
+$view = new view();
+$view->name = 'v_data_export';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'node';
+$view->human_name = 'v_data_export';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = 'v_data_export';
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'perm';
+$handler->display->display_options['cache']['type'] = 'none';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Réinitialiser';
+$handler->display->display_options['pager']['type'] = 'none';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['row_plugin'] = 'fields';
+/* Champ: Contenu: Titre */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['label'] = 'value';
+$handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+/* Champ: Contenu: nom scientifique */
+$handler->display->display_options['fields']['field_nom_scientifique']['id'] = 'field_nom_scientifique';
+$handler->display->display_options['fields']['field_nom_scientifique']['table'] = 'field_data_field_nom_scientifique';
+$handler->display->display_options['fields']['field_nom_scientifique']['field'] = 'field_nom_scientifique';
+$handler->display->display_options['fields']['field_nom_scientifique']['label'] = 'sciName';
+/* Champ: Champ: Groupe taxonomique */
+$handler->display->display_options['fields']['field_groupe_taxonomique']['id'] = 'field_groupe_taxonomique';
+$handler->display->display_options['fields']['field_groupe_taxonomique']['table'] = 'field_data_field_groupe_taxonomique';
+$handler->display->display_options['fields']['field_groupe_taxonomique']['field'] = 'field_groupe_taxonomique';
+$handler->display->display_options['fields']['field_groupe_taxonomique']['label'] = 'groupe';
+$handler->display->display_options['fields']['field_groupe_taxonomique']['type'] = 'taxonomy_term_reference_plain';
+/* Champ: Contenu: Description */
+$handler->display->display_options['fields']['field_description']['id'] = 'field_description';
+$handler->display->display_options['fields']['field_description']['table'] = 'field_data_field_description';
+$handler->display->display_options['fields']['field_description']['field'] = 'field_description';
+$handler->display->display_options['fields']['field_description']['label'] = 'DESCRIPTION';
+$handler->display->display_options['fields']['field_description']['type'] = 'text_plain';
+/* Champ: Contenu: Image mobile - Minature (ATTENTION LE NOM DE CE FICHIER DOIT ÊTRE LE MÊME QUE CELUI DE LA FICHE ESPÈCE) */
+$handler->display->display_options['fields']['field_image_mobile_minature']['id'] = 'field_image_mobile_minature';
+$handler->display->display_options['fields']['field_image_mobile_minature']['table'] = 'field_data_field_image_mobile_minature';
+$handler->display->display_options['fields']['field_image_mobile_minature']['field'] = 'field_image_mobile_minature';
+$handler->display->display_options['fields']['field_image_mobile_minature']['label'] = 'PICTURE0';
+$handler->display->display_options['fields']['field_image_mobile_minature']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_image_mobile_minature']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_image_mobile_minature']['type'] = 'image_url';
+$handler->display->display_options['fields']['field_image_mobile_minature']['settings'] = array(
+  'image_style' => '',
+  'image_link' => '',
+);
+/* Champ: Contenu: Image mobile - Fiche espèce */
+$handler->display->display_options['fields']['field_image_mobile_fiche_esp_ce']['id'] = 'field_image_mobile_fiche_esp_ce';
+$handler->display->display_options['fields']['field_image_mobile_fiche_esp_ce']['table'] = 'field_data_field_image_mobile_fiche_esp_ce';
+$handler->display->display_options['fields']['field_image_mobile_fiche_esp_ce']['field'] = 'field_image_mobile_fiche_esp_ce';
+$handler->display->display_options['fields']['field_image_mobile_fiche_esp_ce']['label'] = 'PICTURE1';
+$handler->display->display_options['fields']['field_image_mobile_fiche_esp_ce']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_image_mobile_fiche_esp_ce']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_image_mobile_fiche_esp_ce']['type'] = 'image_url';
+$handler->display->display_options['fields']['field_image_mobile_fiche_esp_ce']['settings'] = array(
+  'image_style' => '',
+  'image_link' => '',
+);
+/* Champ: Contenu: Image mobile - Diaporama (ATTENTION ON DOIT RETROUVER L'IMAGE DE COUEVRTURE AVEC LE MEME NOM DE FICHIER) */
+$handler->display->display_options['fields']['field_image_mobile_diaporama']['id'] = 'field_image_mobile_diaporama';
+$handler->display->display_options['fields']['field_image_mobile_diaporama']['table'] = 'field_data_field_image_mobile_diaporama';
+$handler->display->display_options['fields']['field_image_mobile_diaporama']['field'] = 'field_image_mobile_diaporama';
+$handler->display->display_options['fields']['field_image_mobile_diaporama']['label'] = 'PICTURES';
+$handler->display->display_options['fields']['field_image_mobile_diaporama']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_image_mobile_diaporama']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_image_mobile_diaporama']['type'] = 'image_url';
+$handler->display->display_options['fields']['field_image_mobile_diaporama']['settings'] = array(
+  'image_style' => '',
+  'image_link' => '',
+);
+$handler->display->display_options['fields']['field_image_mobile_diaporama']['delta_offset'] = '0';
+/* Champ: Contenu: Critères */
+$handler->display->display_options['fields']['field_crit_res']['id'] = 'field_crit_res';
+$handler->display->display_options['fields']['field_crit_res']['table'] = 'field_data_field_crit_res';
+$handler->display->display_options['fields']['field_crit_res']['field'] = 'field_crit_res';
+$handler->display->display_options['fields']['field_crit_res']['label'] = 'code_critere';
+$handler->display->display_options['fields']['field_crit_res']['type'] = 'taxonomy_term_reference_plain';
+$handler->display->display_options['fields']['field_crit_res']['delta_offset'] = '0';
+/* Champ: Contenu: Son */
+$handler->display->display_options['fields']['field_son']['id'] = 'field_son';
+$handler->display->display_options['fields']['field_son']['table'] = 'field_data_field_son';
+$handler->display->display_options['fields']['field_son']['field'] = 'field_son';
+$handler->display->display_options['fields']['field_son']['label'] = 'AUDIO';
+$handler->display->display_options['fields']['field_son']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_son']['type'] = 'file_url_plain';
+/* Sort criterion: Contenu: Post date */
+$handler->display->display_options['sorts']['created']['id'] = 'created';
+$handler->display->display_options['sorts']['created']['table'] = 'node';
+$handler->display->display_options['sorts']['created']['field'] = 'created';
+$handler->display->display_options['sorts']['created']['order'] = 'DESC';
+/* Filter criterion: Contenu: Publié */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Contenu: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'espece' => 'espece',
+);
+/* Filter criterion: Contenu: Balade (field_c_ft_balade) */
+$handler->display->display_options['filters']['field_c_ft_balade_nid']['id'] = 'field_c_ft_balade_nid';
+$handler->display->display_options['filters']['field_c_ft_balade_nid']['table'] = 'field_data_field_c_ft_balade';
+$handler->display->display_options['filters']['field_c_ft_balade_nid']['field'] = 'field_c_ft_balade_nid';
+$handler->display->display_options['filters']['field_c_ft_balade_nid']['value'] = array(
+  2237 => '2237',
+);
+
+/* Display: Page */
+$handler = $view->new_display('page', 'Page', 'page');
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Contenu: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'espece' => 'espece',
+);
+/* Filter criterion: Contenu: Balade (field_c_ft_balade) */
+$handler->display->display_options['filters']['field_c_ft_balade_nid']['id'] = 'field_c_ft_balade_nid';
+$handler->display->display_options['filters']['field_c_ft_balade_nid']['table'] = 'field_data_field_c_ft_balade';
+$handler->display->display_options['filters']['field_c_ft_balade_nid']['field'] = 'field_c_ft_balade_nid';
+$handler->display->display_options['filters']['field_c_ft_balade_nid']['value'] = array(
+  2305 => '2305',
+);
+$handler->display->display_options['path'] = 'v-data-export';
+
+/* Display: Services */
+$handler = $view->new_display('services', 'Services', 'services_1');
+$handler->display->display_options['defaults']['relationships'] = FALSE;
+/* Relationship: Contenu: Espèces (field_esp_ces) */
+$handler->display->display_options['relationships']['field_esp_ces_nid']['id'] = 'field_esp_ces_nid';
+$handler->display->display_options['relationships']['field_esp_ces_nid']['table'] = 'field_data_field_esp_ces';
+$handler->display->display_options['relationships']['field_esp_ces_nid']['field'] = 'field_esp_ces_nid';
+$handler->display->display_options['relationships']['field_esp_ces_nid']['required'] = TRUE;
+$handler->display->display_options['relationships']['field_esp_ces_nid']['delta'] = '-1';
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Champ: Contenu: Titre */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['relationship'] = 'field_esp_ces_nid';
+$handler->display->display_options['fields']['title']['label'] = 'value';
+$handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+/* Champ: Contenu: nom scientifique */
+$handler->display->display_options['fields']['field_nom_scientifique']['id'] = 'field_nom_scientifique';
+$handler->display->display_options['fields']['field_nom_scientifique']['table'] = 'field_data_field_nom_scientifique';
+$handler->display->display_options['fields']['field_nom_scientifique']['field'] = 'field_nom_scientifique';
+$handler->display->display_options['fields']['field_nom_scientifique']['relationship'] = 'field_esp_ces_nid';
+$handler->display->display_options['fields']['field_nom_scientifique']['label'] = 'sciName';
+/* Champ: Champ: Groupe taxonomique */
+$handler->display->display_options['fields']['field_groupe_taxonomique']['id'] = 'field_groupe_taxonomique';
+$handler->display->display_options['fields']['field_groupe_taxonomique']['table'] = 'field_data_field_groupe_taxonomique';
+$handler->display->display_options['fields']['field_groupe_taxonomique']['field'] = 'field_groupe_taxonomique';
+$handler->display->display_options['fields']['field_groupe_taxonomique']['relationship'] = 'field_esp_ces_nid';
+$handler->display->display_options['fields']['field_groupe_taxonomique']['label'] = 'groupe';
+$handler->display->display_options['fields']['field_groupe_taxonomique']['type'] = 'taxonomy_term_reference_plain';
+/* Champ: Contenu: Description */
+$handler->display->display_options['fields']['field_description']['id'] = 'field_description';
+$handler->display->display_options['fields']['field_description']['table'] = 'field_data_field_description';
+$handler->display->display_options['fields']['field_description']['field'] = 'field_description';
+$handler->display->display_options['fields']['field_description']['relationship'] = 'field_esp_ces_nid';
+$handler->display->display_options['fields']['field_description']['label'] = 'DESCRIPTION';
+$handler->display->display_options['fields']['field_description']['type'] = 'text_plain';
+/* Champ: Contenu: Image mobile - Minature (ATTENTION LE NOM DE CE FICHIER DOIT ÊTRE LE MÊME QUE CELUI DE LA FICHE ESPÈCE) */
+$handler->display->display_options['fields']['field_image_mobile_minature']['id'] = 'field_image_mobile_minature';
+$handler->display->display_options['fields']['field_image_mobile_minature']['table'] = 'field_data_field_image_mobile_minature';
+$handler->display->display_options['fields']['field_image_mobile_minature']['field'] = 'field_image_mobile_minature';
+$handler->display->display_options['fields']['field_image_mobile_minature']['relationship'] = 'field_esp_ces_nid';
+$handler->display->display_options['fields']['field_image_mobile_minature']['label'] = 'PICTURE0';
+$handler->display->display_options['fields']['field_image_mobile_minature']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_image_mobile_minature']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_image_mobile_minature']['type'] = 'image_url';
+$handler->display->display_options['fields']['field_image_mobile_minature']['settings'] = array(
+  'url_type' => '0',
+  'image_style' => '',
+  'image_link' => '',
+);
+/* Champ: Contenu: Image mobile - Fiche espèce */
+$handler->display->display_options['fields']['field_image_mobile_fiche_esp_ce']['id'] = 'field_image_mobile_fiche_esp_ce';
+$handler->display->display_options['fields']['field_image_mobile_fiche_esp_ce']['table'] = 'field_data_field_image_mobile_fiche_esp_ce';
+$handler->display->display_options['fields']['field_image_mobile_fiche_esp_ce']['field'] = 'field_image_mobile_fiche_esp_ce';
+$handler->display->display_options['fields']['field_image_mobile_fiche_esp_ce']['relationship'] = 'field_esp_ces_nid';
+$handler->display->display_options['fields']['field_image_mobile_fiche_esp_ce']['label'] = 'PICTURE1';
+$handler->display->display_options['fields']['field_image_mobile_fiche_esp_ce']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_image_mobile_fiche_esp_ce']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_image_mobile_fiche_esp_ce']['type'] = 'image_url';
+$handler->display->display_options['fields']['field_image_mobile_fiche_esp_ce']['settings'] = array(
+  'url_type' => '0',
+  'image_style' => '',
+  'image_link' => '',
+);
+/* Champ: Contenu: Image mobile - Diaporama (ATTENTION ON DOIT RETROUVER L'IMAGE DE COUEVRTURE AVEC LE MEME NOM DE FICHIER) */
+$handler->display->display_options['fields']['field_image_mobile_diaporama']['id'] = 'field_image_mobile_diaporama';
+$handler->display->display_options['fields']['field_image_mobile_diaporama']['table'] = 'field_data_field_image_mobile_diaporama';
+$handler->display->display_options['fields']['field_image_mobile_diaporama']['field'] = 'field_image_mobile_diaporama';
+$handler->display->display_options['fields']['field_image_mobile_diaporama']['relationship'] = 'field_esp_ces_nid';
+$handler->display->display_options['fields']['field_image_mobile_diaporama']['label'] = 'PICTURES';
+$handler->display->display_options['fields']['field_image_mobile_diaporama']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_image_mobile_diaporama']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_image_mobile_diaporama']['type'] = 'image_url';
+$handler->display->display_options['fields']['field_image_mobile_diaporama']['settings'] = array(
+  'url_type' => '0',
+  'image_style' => '',
+  'image_link' => '',
+);
+$handler->display->display_options['fields']['field_image_mobile_diaporama']['delta_offset'] = '0';
+/* Champ: Contenu: Critères */
+$handler->display->display_options['fields']['field_crit_res']['id'] = 'field_crit_res';
+$handler->display->display_options['fields']['field_crit_res']['table'] = 'field_data_field_crit_res';
+$handler->display->display_options['fields']['field_crit_res']['field'] = 'field_crit_res';
+$handler->display->display_options['fields']['field_crit_res']['relationship'] = 'field_esp_ces_nid';
+$handler->display->display_options['fields']['field_crit_res']['label'] = 'code_critere';
+$handler->display->display_options['fields']['field_crit_res']['type'] = 'taxonomy_term_reference_plain';
+$handler->display->display_options['fields']['field_crit_res']['delta_offset'] = '0';
+/* Champ: Contenu: Son */
+$handler->display->display_options['fields']['field_son']['id'] = 'field_son';
+$handler->display->display_options['fields']['field_son']['table'] = 'field_data_field_son';
+$handler->display->display_options['fields']['field_son']['field'] = 'field_son';
+$handler->display->display_options['fields']['field_son']['relationship'] = 'field_esp_ces_nid';
+$handler->display->display_options['fields']['field_son']['label'] = 'AUDIO';
+$handler->display->display_options['fields']['field_son']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_son']['type'] = 'file_url_plain';
+$handler->display->display_options['defaults']['arguments'] = FALSE;
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Contenu: Publié */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['relationship'] = 'field_esp_ces_nid';
+$handler->display->display_options['filters']['status']['value'] = '0';
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Contenu: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['relationship'] = 'field_esp_ces_nid';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'espece' => 'espece',
+  'balade' => 'balade',
+);
+/* Filter criterion: Contenu: Nid */
+$handler->display->display_options['filters']['nid']['id'] = 'nid';
+$handler->display->display_options['filters']['nid']['table'] = 'node';
+$handler->display->display_options['filters']['nid']['field'] = 'nid';
+$handler->display->display_options['filters']['nid']['value']['value'] = '2416';
+$handler->display->display_options['path'] = 'xml';
+$translatables['v_data_export'] = array(
+  t('Master'),
+  t('v_data_export'),
+  t('more'),
+  t('Apply'),
+  t('Réinitialiser'),
+  t('Sort by'),
+  t('Asc'),
+  t('Desc'),
+  t('value'),
+  t('sciName'),
+  t('groupe'),
+  t('DESCRIPTION'),
+  t('PICTURE0'),
+  t('PICTURE1'),
+  t('PICTURES'),
+  t('code_critere'),
+  t('AUDIO'),
+  t('Page'),
+  t('Services'),
+  t('field_esp_ces'),
+);
+
+
+##}
+
+
+:> Desactiver le module Features sur l'url : #overlay=admin/modules
+:> Supprimer le menu features qui ne sert à rien en tant qu'admin, sur l'url : #overlay=admin/structure/menu/manage/features/edit
+:> Activer le module "Administration Development tools"
+:> Supprimer le menu "les sites", sur l'url : #overlay=admin/structure/menu/manage/menu-les-sites/edit
+
+:> Si pas fait, d'après le rapport accessible sur ce lien : "#overlay=admin/reports/status" il faut ajouter un .htaccess dans le repertoire files {## 
+
+# Turn off all options we don't need.
+Options None
+Options +FollowSymLinks
+
+# Set the catch-all handler to prevent scripts from being executed.
+SetHandler Drupal_Security_Do_Not_Remove_See_SA_2006_006
+<Files *>
+  # Override the handler again if we're run later in the evaluation list.
+  SetHandler Drupal_Security_Do_Not_Remove_See_SA_2013_003
+</Files>
+
+# If we know how to do it safely, disable the PHP engine entirely.
+<IfModule mod_php5.c>
+  php_flag engine off
+</IfModule>
+
+##}
+
+:> Mettre le .htaccess en chmod 644
+:> Copier ce .htaccess dans le repertoire files/private
+:> Mettre le .htaccess en chmod 644
+
+:> Changer l'adresse de courriel, sur l'url : #overlay=admin/config/system/site-information
+:> par "contact@natural-solutions.eu" 
