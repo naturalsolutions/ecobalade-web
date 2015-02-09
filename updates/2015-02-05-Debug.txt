@@ -379,4 +379,15 @@ SetHandler Drupal_Security_Do_Not_Remove_See_SA_2006_006
 :> Description -> En savoir plus sur la "Balade de Jouques"
 :> Placer le nouvel item en haut
 
+:> Supprimer du rep des modules les dossier suivant : 
+:> Cumulus
+:> Tagadelic
+:> Taxonomy CSV import/export
+:> getlocations
+:> features
+:> feeds
+
+
+
+
 
