@@ -29,13 +29,33 @@ function ecobaladeTwitter_form_contact_site_form_alter(&$form, &$form_state) {
  * Add theme call to define the contact form template and path
  */
 function ecobaladeTwitter_theme() {
-	return array(
-   		'contact_site_form' => array(
-						'render element' => 'form',
-						'template' => 'contact-site-form',
-						'path' => drupal_get_path('theme', 'ecobaladeTwitter').'/templates',
-							),
-  			);
+	// return array(
+ //   		'contact_site_form' => array(
+	// 					'render element' => 'form',
+	// 					'template' => 'contact-site-form',
+	// 					'path' => drupal_get_path('theme', 'ecobaladeTwitter').'/templates',
+	// 						),
+ //  			);
+
+   $items = array();
+   
+   $items['contact_site_form'] = array(
+     'render element' => 'form',
+      'template' => 'contact-site-form',
+      'path' => drupal_get_path('theme', 'ecobaladeTwitter').'/templates',
+    );
+   $items['user_login'] = array(
+     'render element' => 'form',
+     'path' => drupal_get_path('theme', 'ecobaladeTwitter') . '/templates',
+     'template' => 'user-login',
+   );
+   $items['user_register_form'] = array(
+     'render element' => 'form',
+     'path' => drupal_get_path('theme', 'ecobaladeTwitter') . '/templates',
+     'template' => 'user-register-form',
+   );
+   
+   return $items;
 }
 /**
  * Preproccess call to process the site contact form
@@ -65,3 +85,5 @@ function ecobaladeTwitter_breadcrumb($variables) {
     return $output;
   }
 }
+
+

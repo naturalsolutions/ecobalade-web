@@ -1,0 +1,25 @@
+
+## FB / CONNECTION USER
+
+:> Activer l'enregsitrement de compte sur l'url : #overlay=admin/config/people/accounts
+:> Qui peut enregistrer des comptes ?  -->  Visiteurs
+:> Cocher "Exiger la vérification de l'adresse de courriel lorsqu'un visiteur crée un compte."
+
+:> Ajouter des sécurité captcha, sur l'url "#overlay=admin/config/people/captcha"
+:> Séléctionner image pour --> user_register_form
+:> Séléctionner image pour --> user_pass
+:> Séléctionner image pour --> user_login_block
+:> Séléctionner image pour --> user_login
+:> Séléctionner image pour --> contact_personal_form
+:> Séléctionner image pour --> contact_site_form
+:> Ajouter le droit "Annuler son propre compte utilisateur" au utilisateurs autentifiés, #overlay=admin/people/permissions
+
+:> Ajouter l'item, sur l'url : admin/structure/menu/manage/user-menu/add
+:> Titre --> Connection
+:> Chemin --> user/login
+:> Description --> Connectez-vous à votre compte.
+
+:> Ajouter & Activer le module "FBOAuth" depuis : https://www.drupal.org/project/fboauth
+:> sur : admin/config/people/fboauth
+:> App ID --> 772953486064288
+:> App Secret  --> a42148722f3b8a98cb3956bc6a0f024d
