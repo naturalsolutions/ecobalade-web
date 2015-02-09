@@ -158,7 +158,7 @@
 								<?php if($baladenid != '2292'):?>
 									<div title="Les petites bêtes" id="picto_insect"></div>
 								<?php endif; ?>
-								<?php if($baladenid != '2355' && $baladenid != '2292'):?>
+								<?php if($baladenid != '2355' && $baladenid != '2292' && $baladenid != '2416'):?>
 										<div title="Les reptiles" id="picto_reptile"></div>
 								<?php endif; ?>
 								<div title="Les arbres" id="picto_arbre"></div>
