@@ -85,5 +85,3 @@ function ecobaladeTwitter_breadcrumb($variables) {
     return $output;
   }
 }
-
-

@@ -46,7 +46,7 @@ body.front div.span6 p.ralewaytypo span{
 
 body.front div.span12 a.btn{
   font-family: 'Raleway', sans-serif;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 body.front div.span6 h3{
@@ -413,25 +413,34 @@ body.node-type-balade p.textDescro{
   line-height: 24px;
   padding: 15px 10px 20px;
 }
-#btn-guide{
-  position: relative;
-  top: -20px;
+body.node-type-balade #btn-guide{
   width: 91%;
   border-radius: 0 0 4px 4px;
 }
-#btn-esp{
-  margin: 4% 0;
-  width: 91%;
+body.node-type-balade #btn-esp{
+  padding: 0;
+  margin: 0;
+  width: 99%;
 }
-
-#btn-esp h2{
-  background: none;
+body.node-type-balade #btn-esp h2{
+  margin: 0;   
+  padding: 0;
+  background: linear-gradient(to top, #2E9050, #4DBB74);
   color: #ffffff;
-  font-size: 1.8em;
+  font-size: 1.6em;
+  line-height: 48px;
   border: none;
-  padding-bottom: 15px;
-}
+  text-shadow:none;
 
+}
+body.node-type-balade #btn-esp h2:hover{
+  background: white;
+  line-height: 46px;
+  border: 1px solid #4DBB74;
+  border-radius: 4px;
+  color: #4DBB74;
+  text-shadow:none;
+}
 body.node-type-balade div.field-name-field-difficulte{
   display: none;
 }
@@ -2074,6 +2083,7 @@ aside.span3 {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
     margin-left: 40px;
+    position: relative;
 }
 
 aside.span3.region-sidebar-second{
@@ -2388,6 +2398,13 @@ border: none;
   text-transform:uppercase;
   font-weight:bold;
   margin:5px 0px 5px 0px;
+}
+
+/******************* PAGE BALADE  ***********************/
+body.node-type-balade div.view-id-v_note_balade{
+  position: absolute; 
+  top: 7px;
+  right:  1%;
 }
 .secondEtiquette{
   top:60px;
@@ -2833,7 +2850,10 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endC
 box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
 line-height: 30px;
 font-size:18px;
-margin-bottom: 0;
+margin:10px 0 0;
+}
+#block-views-exp-v-liste-balade-page-1 > h2:nth-child(1){
+  margin:0px; 
 }
 .view-v-caracteristiques-balade,
 .view-v-map-localisation-balade,
@@ -2871,8 +2891,8 @@ margin-bottom: 0;
     font-weight: normal;
     line-height: 10px;
 }
-.view-v-caracteristiques-balade  .views-field-field-difficulte{
-    background: #8BAD3C;
+body.node-type-balade div.view-v-caracteristiques-balade  .views-field-field-difficulte{
+  background: #55BB79;
   padding:5px 0;
  }
 .views-field-field-distance,
@@ -3433,18 +3453,17 @@ body.front a#fold1BntAllBalades:hover{
   color: #4DBB74 ; 
   background: #ffffff;
   border: 3px solid #4DBB74;
+  line-height: 14px;
   text-shadow: none;
 }
-a#btn-esp:hover{
-  -webkit-transition: 0 !important; 
-  background-position: 0 !important;
-}
+
 
 body.front div.zoneBtnBalade a:hover{
   -webkit-transition: 0 !important; 
   background-position: 0 !important;
   background: #ffffff;
   border: 3px solid #4DBB74;
+  line-height: 17px;
   color: #4DBB74;
   text-shadow: none;
 }
@@ -3472,6 +3491,30 @@ body.front a.email{
 body.front #fold2 > h2{
   color: #333333;
 }
+
+/***Sponsort***/
+body.node-type-balade div.views-field-field-sponsor img{
+  margin: 8% 4%;
+}
+body.node-type-balade div.views-field-field-sponsort-2 img{
+  border-top: 1px dotted #4DBB74;
+  border-bottom: 1px dotted #4DBB74;
+  width: 66%;
+  padding: 4% 8%;
+  margin-left: 9%;
+}
+body.node-type-balade div.views-field-field-sponsort-3 img{
+width: 66%;
+padding: 4% 8%;
+margin-left: 9%;
+}
+/***FinSponsort***/
+
+/****SidebarRight****/
+body.node-type-balade div.view-v-caracteristiques-balade{
+  margin-top: 12px;
+}
+/****FinSidebarRight****/
 
 /******************MEDIA QUERIES***************/
 /* Large desktop au dessous de 1235*/

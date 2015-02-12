@@ -74,8 +74,7 @@
         <div class="highlighted hero-unit"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
      
-	  <section class="<?php print _twitter_bootstrap_content_span($columns); ?>">  
-     
+	  <section class="<?php print _twitter_bootstrap_content_span($columns); ?>">  	  
       <?php if ($tabs): ?>
         <?php print render($tabs); ?>
       <?php endif; ?>
@@ -158,7 +157,7 @@
 								<?php if($baladenid != '2292'):?>
 									<div title="Les petites bêtes" id="picto_insect"></div>
 								<?php endif; ?>
-								<?php if($baladenid != '2355' && $baladenid != '2292' && $baladenid != '2416'):?>
+								<?php if($baladenid != '2355' && $baladenid != '2292'):?>
 										<div title="Les reptiles" id="picto_reptile"></div>
 								<?php endif; ?>
 								<div title="Les arbres" id="picto_arbre"></div>
@@ -182,15 +181,13 @@
     <?php if ($page['sidebar_second']): ?>
       <aside class="span3 region-sidebar-second" role="complementary">
        <?php if ($node): ?>  
-	   
-		<?php print views_embed_view('v_note_balade','block',$baladenid);?>
-		<a id="btn-esp" class="btn btn-primary" target="_blank" alt="lien vers la liste des espèces" href="#espece" title="Les espèces a découvrir" ><h2>Espèces à découvrir</h2></a>
-		<?php print views_embed_view('v_caracteristiques_balade','block_1',$baladenid);?>
+	    <a id="btn-esp" class="btn btn-primary" target="_blank" alt="lien vers la liste des espèces" href="#espece" title="Les espèces a découvrir" ><h2>Espèces à découvrir</h2></a>
 		<h2>Randonner avec un guide ?</h2>
 		<?php print views_embed_view('v_guide_balade','block',$baladenid);?>
-		<?php if($baladenid != '104' && $baladenid != '2387' && $baladenid != '270' && $baladenid != '2237' && $baladenid != '2355' && $baladenid != '269' && $baladenid != '2354' && $baladenid != '2356' && $baladenid != '2358' && $baladenid != '2353' && $baladenid != '268' ):?>
+		<?php if($baladenid != '104' && $baladenid != '2387' && $baladenid != '270' && $baladenid != '2237' && $baladenid != '2355' && $baladenid != '269' && $baladenid != '2354' && $baladenid != '2356' && $baladenid != '2353' && $baladenid != '268' && $baladenid != '2416' && $baladenid != '2358' ):?>
 		<a id="btn-guide" class="btn btn-primary" target="" rel="" title="Contactez-nous" href="mailto:contact@natural-solutions.eu">Vous êtes guides, rejoignez-nous !</a>
 		<?php endif; ?>
+		<?php print views_embed_view('v_caracteristiques_balade','block_1',$baladenid);?>
 		<h2>Localisation</h2>
 		<?php print views_embed_view('v_map_localisation_balade','block',$baladenid);?>
 		<h2>Informations pratiques</h2>
