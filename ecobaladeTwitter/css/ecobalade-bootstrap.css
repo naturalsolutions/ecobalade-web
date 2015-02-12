@@ -3516,6 +3516,14 @@ body.node-type-balade div.view-v-caracteristiques-balade{
 }
 /****FinSidebarRight****/
 
+/*BUG*/
+body.node-type-balade div.field.field-name-field-sponsort-2,
+body.node-type-balade div.field.field-name-field-lien-sponsort-2, 
+body.node-type-balade div.field.field-name-field-sponsort-3, 
+body.node-type-balade div.field.field-name-field-lien-sponsort-3{
+  display: none;
+}
+/*BUG*/
 /******************MEDIA QUERIES***************/
 /* Large desktop au dessous de 1235*/
 @media (max-width: 1235px) {
