@@ -1,0 +1,2 @@
+##MAj du module views, disponible sur l'url : http://ftp.drupal.org/files/projects/views-7.x-3.10.zip
+:> A copier dans le rep : /home/ecobalade/www/sites/all/modules
