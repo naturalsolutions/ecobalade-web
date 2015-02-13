@@ -90,11 +90,13 @@
 
 <script type="text/javascript">
    $( document ).ready(function() {
+
         $('.view-display-id-block_slideshow .view-content').justifiedGallery({
           rowHeight : 150,
           maxRowHeight : 200,
           margins : 2,
           lastRow : 'justify',
         });
-    });
+
+     });
   </script>
