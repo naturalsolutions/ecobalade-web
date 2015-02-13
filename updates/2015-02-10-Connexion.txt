@@ -1,0 +1,3 @@
+
+
+## Désactiver tous les liens sur l'url : admin/structure/menu/manage/user-menu

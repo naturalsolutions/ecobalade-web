@@ -453,6 +453,7 @@ body.node-type-balade div.view-v-balade-similaire div.views-field-title{
   font-size: 0.9em;
   width: 100%;
   padding-top: 1px;
+  z-index: 999;
 }
 body.node-type-balade div.view-v-balade-similaire div.views-row{
   position: relative;
