@@ -3398,17 +3398,32 @@ body.front div#img-front span.txt-front{
   position: relative;
   top: 330px;  
 }
-
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    /* Safari and Chrome, if Chrome rule needed */
+    /*.someClass {
+     color:#c00;
+    }*/
+    /* Safari 5+ ONLY */
+    ::i-block-chrome, body.front div#img-front span.txt-front h2, body.front div#img-front span.txt-front p{ 
+       position: relative;
+      top: 300px;
+    }
+    ::i-block-chrome, .navbar .brand {
+       height: 57px;
+    }
+}
 body.front div#img-front span.txt-front h2{
   font-family: 'Libre Baskerville', serif;
   font-style: italic;
   font-size: 2.4em;
   color: #E9E8ED;
+
 }
 body.front div#img-front span.txt-front p{
   font-style: italic;
   font-size: 1.5em;
   color: #E9E8ED;
+
 }
 body.front div#img-front a#btn-front:hover{
   background: rgba(70, 160, 109, 1);

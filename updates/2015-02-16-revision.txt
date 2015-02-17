@@ -1,0 +1,145 @@
+### EN DEV : 
+:> Pour les sites de DEV : MAj BDD depuis la prod (admin/config/system/backup_migrate) pour avoir les mêmes droits user 
+:> Virer les caches & minifications (admin/config/development/performance)
+
+### Mise en place du systeme de revision
+
+:> Ajouter le module custom_pub depuis : https://www.drupal.org/project/custom_pub
+:> Ajouter par ftp puis activer dans BO de Drupal (admin/modules)
+
+:> Ajouter des statut depuis : admin/structure/custom_pub
+:> label --> Brouillon
+:> option name --> custom_pub_brouillon
+:> available on --> Espece & Balade
+
+:> Ajouter des statut depuis : admin/structure/custom_pub
+:> label --> A valider
+:> option name --> custom_pub_avalider
+:> available on --> Espece & Balade
+
+:> sur : admin/structure/types/manage/balade
+:> Option de publication -> Créer une nouvelle révision && Brouillon
+
+:> sur : admin/structure/types/manage/espece
+:> Option de publication -> Créer une nouvelle révision && Brouillon
+
+:> Ajout de droit  : admin/people/permissions
+:> Custom Publishing Options
+:> Can access/use custom_pub_brouillon custom publishing option on node forms  --> Editeur & Administrateur
+:> Can access/use custom_pub_avalider custom publishing option on node forms   --> Editeur & Administrateur
+
+:> Dans : admin/config/people/captcha
+:> Cocher --> Case sensitive validation: the response has to exactly match the solution. 
+
+:> Dans : admin/config/people/captcha/image_captcha
+:> File format  : PNG with transparent background
+:> Distortion level --> 5
+:> Cocher --> Smooth distortion 
+
+# Editer le menu navigation
+:> sur  : admin/structure/menu/manage/navigation
+:> activer : Astuces de rédaction (désactivé)
+:> activer : Contact (désactivé)
+:> desactiver : Node export: import
+
+# Creation d'un menu client (admin/structure/menu/add)
+:> Titre --> Navigation client
+:> description --> Menu de navigation pour le rôle "client"
+
+# Creation d'un menu client (admin/structure/menu/add)
+:> Titre --> Navigation editeur
+:> description --> Menu de navigation pour le rôle "éditeur"
+
+# Ajouter les liens (admin/structure/menu/manage/menu-navigation-client/add)
+:> Contenu
+:> admin/content
+:> Voir le contenu
+
+# Ajouter les liens (admin/structure/menu/manage/menu-navigation-client/add)
+:> Ajouter du contenu
+:> node/add
+:> Pour ajouter du contenu
+
+# Ajouter les liens (admin/structure/menu/manage/menu-navigation-client/add)
+:> Espèce
+:> node/add/espece
+:> Ensemble des données descriptives relative taxon qui sera associé à une balade
+
+# Ajouter les liens (admin/structure/menu/manage/menu-navigation-client/add)
+:> Balade
+:> node/add/balade
+:> Créer une balade
+
+# Ajouter les liens (admin/structure/menu/manage/menu-navigation-client/add)
+:> Astuces de rédaction
+:> filter/tips
+:> Astuces de rédaction
+
+# Ajouter les liens (admin/structure/menu/manage/menu-navigation-client/add)
+:> Contact
+:> contact
+:> contact
+
+# Ajouter les liens (admin/structure/menu/manage/menu-navigation-editeur/add)
+:> Contenu
+:> admin/content
+:> Voir le contenu
+
+# Ajouter les liens (admin/structure/menu/manage/menu-navigation-editeur/add)
+:> Ajouter du contenu
+:> node/add
+:> Pour ajouter du contenu
+
+# Ajouter les liens (admin/structure/menu/manage/menu-navigation-editeur/add)
+:> Espèce
+:> node/add/espece
+:> Ensemble des données descriptives relative taxon qui sera associé à une balade
+
+# Ajouter les liens (admin/structure/menu/manage/menu-navigation-editeur/add)
+:> Balade
+:> node/add/balade
+:> Créer une balade
+
+# Ajouter les liens (admin/structure/menu/manage/menu-navigation-editeur/add)
+:> Astuces de rédaction
+:> filter/tips
+:> Astuces de rédaction
+
+:> Organiser de cette maniere : 
+{
+Contenu	
+Ajouter du contenu	
+	Balade	
+	Espèce	
+Astuces de rédaction
+Contact #(pour le menu client)
+}
+
+# Ajout du module "admin_menu_source-7.x-1.0" disponible ici --> https://www.drupal.org/project/admin_menu_source
+:> Activer "Administration Menu Source" (admin/modules)
+
+# Configuration du module admin menu source
+:> sur : admin/config/administration/admin_menu/source
+:> Client --> Navigation client
+:> éditeur --> Navigation éditeur
+
+:> Ajout du module diff (https://www.drupal.org/project/diff)
+:> Activer : admin/modules (Diff)
+
+# Conf plain texte par default
+:> sur : admin/structure/types/manage/balade/fields/field_description_de_la_balade
+:> Selectionner Plain texte par défault
+
+:> sur : admin/structure/types/manage/balade/fields/field_acces_site
+:> Selectionner Plain texte par défault
+:> text par défaut --> Accès au site
+:> Verifier que sa a marché sur -> admin/structure/types/manage/balade/fields/field_acces_site
+
+:> sur : admin/structure/types/manage/balade/fields/field_sy_rendre
+:> Selectionner Plain texte par défault
+:> text par défaut --> s'y rendre
+:> Verifier que sa a marché sur -> admin/structure/types/manage/balade/fields/field_sy_rendre
+
+# Ajout de securité
+:> sur --> admin/config/content/honeypot
+:> sur Honeypot Enabled Forms, cocher -->  User Registration form  
