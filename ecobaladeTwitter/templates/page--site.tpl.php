@@ -55,7 +55,7 @@
 
     <?php print render($page['header']); ?>
   </header> <!-- /#header -->
-	 <?php if ($breadcrumb): /*print $breadcrumb;*/echo "<div class='breadcrumb'><a href='".$base_url."'>Accueil</a>&nbsp»&nbsp<a href='".$base_url."/les-sites' title='les sites' title='les sites'>Les sites</a>&nbsp»&nbsp".$title." </div>"; endif;?>
+	 <?php if ($breadcrumb): /*print $breadcrumb;*/echo "<div class='breadcrumb'><a href='".$base_url."'>Accueil</a>&nbsp»&nbsp<a href='".$base_url."/les-sites' title='les sites'>Les sites</a>&nbsp»&nbsp".$title." </div>"; endif;?>
       <a id="main-content"></a>
 	<div class="container-node">
       <?php print render($title_prefix); ?>

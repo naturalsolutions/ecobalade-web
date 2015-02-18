@@ -75,7 +75,20 @@
 						<?php echo $title_espece; ?>
 				</div>
 				<div class='span6' id="descro_specie">
-						<?php echo $descro_espece; ?>
+						
+						<?php $descro_especeTab = explode(' ', $descro_espece); ?>
+						
+						<?php
+						if(count($descro_especeTab) > 20 ){
+
+							for($i=0; $i<20; $i++){
+
+								echo $descro_especeTab[$i];
+								if($i == 19) echo '...';							
+								else echo ' ';
+							}						
+						}else echo $descro_espece;
+						?>
 				</div>
 				<div class='span2' id="lien_specie">
 						<?php echo $lien_espece; ?>

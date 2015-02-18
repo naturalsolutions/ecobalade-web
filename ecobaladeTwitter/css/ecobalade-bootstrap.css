@@ -993,6 +993,9 @@ padding: 0px 10px 15px 10px;
 /********************************************/
 
 /*****LISTE DES TAXONS ***************/
+body.node-type-balade div.view-v-liste-taxon-balade #containerOf1Specie p, body.page-liste-especes div.view-v-all-especes #containerOf1Specie p{
+  font-size: 15px;
+}
 #containerOf1Specie{
   height:auto;
   padding: 6px;
@@ -3528,6 +3531,22 @@ body.node-type-balade div.view-v-caracteristiques-balade{
 }
 /****FinSidebarRight****/
 
+/***BtnBack***/
+body.node-type-balade ul a.back-page{
+  margin: 0px;
+  line-height: 17px;
+  margin-top: 5px;
+  margin-right: 0.4%;
+  text-shadow: none;
+  font-size: 15px;
+}
+body.node-type-balade ul a.back-page:hover{
+  transition: none;
+}
+body.node-type-espece a.back-page:hover{
+  transition: none;
+}
+/***FinBtnBack***/
 /******************MEDIA QUERIES***************/
 /* Large desktop au dessous de 1235*/
 @media (max-width: 1235px) {

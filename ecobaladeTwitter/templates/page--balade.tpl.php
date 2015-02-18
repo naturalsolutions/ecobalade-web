@@ -43,7 +43,7 @@
   	</div>
   </div>
 </header>
-
+<?php global $base_url; ?>
 <div class="container">
 
   <header role="banner" id="page-header">
@@ -53,7 +53,12 @@
 
     <?php print render($page['header']); ?>
   </header> <!-- /#header -->
-	 <?php if ($breadcrumb): print $breadcrumb; endif;?>
+	  <?php if ($breadcrumb): echo "<div class='breadcrumb'><a href='".$base_url."'>Accueil</a>&nbsp»&nbsp<a href='".$base_url."/balade' title='Liste des balades'>Balades</a>&nbsp»&nbsp".$title." </div>"; endif;?>
+		
+	 <!-- 	<a href="/ecobalade-mathieu/"> Accueil </a> >>
+	<a href="/ecobalade-mathieu/balade"> Liste des Balades </a> >>
+	<?php print $title ?>.	 -->
+
       <a id="main-content"></a>
 	<div class="container-node">
       <?php print render($title_prefix); ?>
@@ -92,6 +97,7 @@
 		<!---	<a  data-toggle="tab" data-target="#description">Description</a> -->
 		</li>
 		<li><a class="espece" href="#espece" data-toggle="tab" >Espèces</a></li>
+		<a class="btn pull-right back-page btn-primary" target="" rel="" title="Retour à la liste des balades" href="<?php echo $base_path;?>liste-balades">Retour à la liste des balades</a>
 	</ul> 
 	<div class="tab-content">
 		<div class="tab-pane active" id="description"> 

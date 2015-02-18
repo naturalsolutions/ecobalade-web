@@ -118,7 +118,7 @@
 													}
 													print ("<div id='nom_scf'>".$nom_scf."</div>");
 											?>
-											<a class="btn pull-right back-page btn-primary" target="" rel="" title="Retour à la liste des balades" href="<?php echo $base_path;?>liste-balades">Retour à la liste des balades</a>
+											<a class="btn pull-right back-page btn-primary" target="" rel="" title="Retour à la liste des espèces" href="<?php echo $base_path;?>especes">Retour à la liste des espèces</a>
 										</div>
 									</div>
 									
