@@ -103,7 +103,7 @@
 		<div class="tab-pane active" id="description"> 
 			<!-- *****SLIDESHOW DETAIL BALADE****** -->
 			 <?php if ($node){
-				$baladenid = $node->vid; 
+				$baladenid = $node->nid; 
 				print views_embed_view('v_slideshow_detail_balade','block',$baladenid); 
 			}?> 
 			<!-- AddThis Button BEGIN -->
