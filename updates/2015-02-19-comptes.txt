@@ -1,0 +1,4 @@
+:> Sur l'url : admin/people/permissions
+:> Ajouter les droits : "Voir les profils utilisateur" pour editeur
+:> Ajouter les droits : "Modifier son propre nom d'utilisateur" pour editeur
+:> Ajouter les droits : "Utiliser les formulaires de contact personnels des utilisateurs" pour editeur
