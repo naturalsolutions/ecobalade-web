@@ -385,6 +385,7 @@ $translatables['v_liste_taxon_balade'] = array(
 ##}}
 
 :> Ajout du style (admin/config/media/image-styles/add)
+:> Nom -> espece_phare
 :> Titre -> "Mise à l’échelle et recadrage 200x120 (espece phare)"
 :> Effet -> Mise à l’échelle et recadrage en 200x120
 

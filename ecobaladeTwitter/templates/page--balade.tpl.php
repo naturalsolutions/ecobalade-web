@@ -122,7 +122,7 @@
 			<h4>Description de la balade&nbsp;:&nbsp;</h4>
 			<?php $description = field_get_items($entity_type = 'node', $node, $field_name = 'field_description_de_la_balade'); ?>
 			<?php $description = $description[0]['value']; ?>				
-			<?php echo $description; ?>	
+			<p><?php echo $description; ?></p>
 			</div>
 
 			<!-- Boc espece phare de la balade -->
