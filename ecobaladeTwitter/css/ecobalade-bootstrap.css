@@ -1,25 +1,20 @@
-/*CSS Affichage critères dans fiches taxon back-office sur /module/nsHook/NsHook.module
-save :
 
-#overlay form#fiche-taxon-node-form div.form-item-field-crit-res-und-1135 input,#overlay form#fiche-taxon-node-form div.form-item-field-crit-res-und-1139 input,#overlay form#fiche-taxon-node-form div.form-item-field-crit-res-und-1143 input,#overlay form#fiche-taxon-node-form div.form-item-field-crit-res-und-1150 input{
-  visibility:hidden;
-}
-#overlay form#fiche-taxon-node-form div#edit-field-crit-res div.form-item.form-type-checkbox{
-    float:left;width:15%;
-}#overlay form#fiche-taxon-node-form div.form-item-field-crit-res-und-1134,#overlay form#fiche-taxon-node-form div.form-item-field-crit-res-und-1135,#overlay form#fiche-taxon-node-form div.form-item-field-crit-res-und-1139,#overlay form#fiche-taxon-node-form div.form-item-field-crit-res-und-1143,#overlay form#fiche-taxon-node-form div.form-item-field-crit-res-und-1150{
-    float:left;width:100% !important;margin-top:3%! important;border-bottom:1px dotted !important;
-}
-#overlay form#fiche-taxon-node-form div.vertical-tabs.clearfix{
-  float:left;margin-top:4%;width:100%;
-}
-#overlay form#fiche-taxon-node-form div#edit-actions{
-  float:right;margin-top:1%;
-}
-#overlay form#fiche-taxon-node-form div#edit-field-image-mobile-fiche-esp-ce, #overlay form#fiche-taxon-node-form div#edit-field-image-mobile-minature, #overlay form#fiche-taxon-node-form div#edit-field-image-mobile-diaporama,#overlay form#fiche-taxon-node-form div#edit-field-son{
-  float: left;
-  padding-top: 4%;
-  width: 100%;
-}
+/****************************************************************************************************************************************************/
+/*                                                          CE FICHIER REGROUPE TOUT LE CSS CUSTOM                                                  */ 
+/*                                                                                                                                                  */
+/*                                   !! Veuillez respecter le systeme de selecteur mis en place (pas body.) !!                                      */
+/*                                                                                                                                                  */
+/****************************************************************************************************************************************************/
+/*
+* Feuille de style pour PIM ATLAS - NS 2014 
+* MEMO CSS CONDENSER : http://www.w3.org/TR/CSS2/indexlist.html
+* font: [ [ <'font-style'> || <'font-variant'> || <'font-weight'> ]? <'font-size'> [ / <'line-height'> ]? <'font-family'>
+* background :  [<'background-color'> || <'background-image'> || <'background-repeat'> || <'background-attachment'> || <'background-position'>] | inherit;
+*/
+/***************************************************************************/
+/*                          FONT - POLICE                                  */
+/*                                                                         */
+/***************************************************************************/
 /*VIvien*/
 body.front div.hero-unit-teaser h1{
   font-family : 'RockwellLight', serif;
@@ -113,190 +108,25 @@ body.front div.span4 p span{
     font-style: normal;
 }
 
+/***************************************************************************/
+/*                          DIVERS - Tools                                 */
+/*                                                                         */
+/***************************************************************************/
 
 
-/*A ecraser*/
-/*.miniCarte{
-  float:right;
-  margin:-50px 10px 0 0;
-}
-
-#social_top{
-  float:right;
-  margin-right:3%;
-  margin-top: 2%;
-}
-
-.hero-unit p{
-  margin: 1.3em 0;
-}
-
-.hero-unit p{
-  font-size:18px;
-  line-height:30px;
-  padding: 0 23px 10px 0px;
-  text-align: justify;
-  min-height:100px;
-}
-
-body.node-type-balade div.field-content .view-display-id-block_3 a{
-  position: absolute;
-  font-family: 'Raleway', sans-serif;
-  z-index: 2;
-  color: #2E9050;
-  top: -50px;
-}
-
-body.node-type-balade div.titreDescro{
-  font-size: 17.5px;  
-  font-family: 'Raleway', sans-serif;
-  position: absolute;
-  z-index: 2;
-  color: #2E9050;
-  top: 25px;
-  left: 20px;
-  background-color: #FFF;
-}
-
-
-#details_site span b{
-  font-family: 'Raleway', sans-serif;
-  font-size: 14px;
-}
-
-div#btnShowHideMessage p{
-  font-size: 1.6em;
-  font-family: "Raleway", sans-serif;
-  position: absolute;
-  top: -83px;
-  left: -48px;
-  color: #fff;
-  width: 110px;
-}
-
-div#baniereMessageSite p{
-  font-size: 1.4em;
-  line-height: 34px;
-  text-align: justify;
-  font-family: "Raleway", sans-serif;
-}
-
-#region_site span{
-  font-family: 'Raleway', sans-serif;
-}
-
-#especes_site span{
-  font-family: 'Raleway', sans-serif;
-}
-
-div#container-mobile div#titleOfMobileApp p {
-    font-family: "Raleway", sans-serif;
-    color: rgb(255, 255, 255);
-    font-size: 4em;
-    float: left;
-    margin-left: 25%;
-}
-
-.RandomName_taxons_fiche{
-  margin-left:-12px;
-  display:block;
-  padding-top:20px;
-  font-family: "Raleway", sans-serif;
-  font-size:12px;
-  font-style:normal;
-  letter-spacing : 3px;
-}
-
-.hero-unit h1{
-  font-size:50px;
-  margin-bottom:10px;
-  color:#464646;
-  font-family:"Raleway", sans-serif;
-}
-
-h1,h2,h3,h4{
-    color:#464646;
-    font-family:"RockwellReg", serif;
-}
-
-.fleche-balade p{
-  color:white;
-  font-family:"Raleway", sans-serif;
-  margin-top:-50px;
-  text-align:center;
-  font-size:18px;
-}
-
-.view-v-slideshow-accueil  .views-field-field-teaser{
-
-    color: rgb(119, 119, 119);    
-    text-shadow: 0px 1px 0px rgb(255, 255, 255);
-    font-family: "Raleway", sans-serif;
-    font-size: 18px;
-  font-weight:normal;
-
-  width:300px;
-  height:50px;
-  margin:auto;
+p{
   font-size:16px;
-  text-align:center;
-  line-height:20px;
-  padding-top:10px;
+  line-height:27px;
 }
-*/
-/* ONGLETS PAGE BALADE*/
-/*li.active a.description, li.active a.espece {
-font-family: "Raleway", sans-serif;
-font-size:18px;
-background-color:#4DBB74;
-color:#fff;
+a {
+   color:#4DBB74;
 }
-li.active a.description:hover, li.active a.espece:hover, li.active a.description:focus, li.active a.espece:focus{
-font-family: "Raleway", sans-serif;
-font-size:18px;
-background-color:#4DBB74;
-color:#fff;
-}
-li a.description, li a.espece{
-font-family: "Raleway", sans-serif;
-font-size:18px;
-background-color:#fff;
-color:#4DBB74;
-border-bottom:1px solid #ddd;
-}
+/***************************************************************************/
+/*                          FIN DIVERS - Tools                             */
+/*                                                                         */
+/***************************************************************************/
 
-/* ONGLET PAGE SITE*/
-/*li.active a.especesite {
-font-family: "Raleway", sans-serif;
-font-size:18px;
-background-color:#4DBB74;
-color:#fff;
-}
-li.active a.especesite:hover, li.active a.especesite:focus{
-font-family: "Raleway", sans-serif;
-font-size:18px;
-background-color:#4DBB74;
-color:#fff;
-}
-li a.especesite{
-font-family: "Raleway", sans-serif;
-font-size:18px;
-background-color:#fff;
-color:#4DBB74;
-border-bottom:1px solid #ddd;
-}
 
-.node-balade .field-label,.views-label{
-  font-family:"Raleway", sans-serif;
-}
-
-#main-menu > li:nth-child(7) > a, #navbar > div > div > div > nav > div:nth-child(1) > div:nth-child(7) > a{
-  color: #4E6C24;
-  font-family: "Raleway", sans-serif;
-  display: block;
-}*/
-/*Fin vivien*/
-/*PAGE BOUTIQUE*/
 #navbar > div > div > div > nav > div:nth-child(1) > div:nth-child(6) > a{
   color: #4DBB74;
   font-family: "Raleway";
@@ -328,11 +158,40 @@ body.page-boutique div.sideBarBoutique span{
 
 /*FIN PAGE BOUTIQUE*/
 
-/*PAGE BALADE*/
-body.node-type-balade div.view.view-v-especes-phares.view-id-v_especes_phares.view-display-id-block_2 img{
-  height: 120px;
+/***************************************************************************/
+/***************************************************************************/
+/*                            PAGE BALADE                                  */
+/*                                                                         */
+/***************************************************************************/
+/*********************************  ****************************************/
+/*********************************  ****************************************/
+body.node-type-balade .view-v-informations-pratiques-balade{
+  padding: 7%;
 }
-body.node-type-balade div.view.view-v-especes-phares.view-id-v_especes_phares.view-display-id-block_2 {
+body.node-type-balade div#descriptionZone p{
+  margin: 15px 10px 20px;
+  border: 1px solid #BBBBBB;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  padding: 15px 15px 20px;
+}
+body.node-type-balade div.view-v-slideshow-detail-balade{
+  margin-bottom: 0 !important;
+}
+body.node-type-balade div#descriptionZone {
+  position: relative;
+  top: 20px;
+}
+body.node-type-balade div#descriptionZone h4{
+  position: absolute;
+  z-index: 2;
+  color: #4DBB74;
+  top: -23px;
+  left: 10px;
+  background-color: #FFF;
+}
+body.node-type-balade div.especes-phares div.view-id-v_especes_phares.view-display-id-block_2 {
   float: left;
   padding-left: 2.5%;
   margin: 10px 3px;
@@ -341,11 +200,10 @@ body.node-type-balade div.view.view-v-especes-phares.view-id-v_especes_phares.vi
 
 body.node-type-balade div.especes-phares > h4{
   position: absolute;
-  
-  z-index: 2;
+   z-index: 2;
   color: #4DBB74;
   top: -23px;
-  left: 10px;
+  left: -2px;
   background-color: #FFF
   ;
 }
@@ -379,7 +237,7 @@ body.node-type-balade div.titreDescro{
 body.node-type-balade div.especes-phares{
   height: 140px;
   border: 1px solid #BBBBBB;
-  margin: 40px 10px 20px;
+  margin: 60px 10px 20px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -388,14 +246,9 @@ body.node-type-balade div.especes-phares{
   line-height: 24px;
   padding: 15px 10px 20px;
 }
-
-div#boutons_partage{
-  position: relative;
-  left: 13px;
-  top: 6px;
-  width: 200px;
+body.node-type-balade div#boutons_partage{
+  margin-left: 15px;
 }
-
 /*A ajouter*/
 
 body.node-type-balade div.field-content{
@@ -449,15 +302,21 @@ body.node-type-balade div.view-v-balade-similaire div.views-field-title{
   bottom: 0;
   color: #fff;
   text-align: center;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.4);
   font-size: 0.9em;
   width: 100%;
   padding-top: 1px;
   z-index: 999;
 }
+body.node-type-balade div.view-v-balade-similaire div.views-field-title > span{
+  padding: 2%;
+}
 body.node-type-balade div.view-v-balade-similaire div.views-row{
   position: relative;
-  margin-top: 7px;
+  border-bottom: 1px dotted #fff;
+}
+body.node-type-balade div.view-v-balade-similaire div.views-row.views-row-first{
+  margin-top: 0;
 }
 body.node-type-balade section#comments section.collapseComment{
   background: url('../img/comment_picto.png') no-repeat 0% 2px #f5f5f5;
@@ -1139,7 +998,7 @@ div#picto_insect{
   width: 80px;
   height: 50px;
   float: left;
-  margin-top: -1%;
+  margin-top: -14px;
   cursor: pointer;
   background-size: 66%;
 }div#picto_arbuste{
@@ -1980,10 +1839,6 @@ div.views-field-field-nom-scientifique{
   margin: 4.6% 30%;
 }
 */
-
-div.views-slideshow-cycle-main-frame-row-item.views-row.views-row-0.views-row-first.views-row-odd{
-  position: relative;
-}
 .bnt-large{
   padding : 18px!important;
 }
@@ -2093,13 +1948,7 @@ aside.span3.region-sidebar-second{
 #admin-menu, #admin-menu .dropdow{
   z-index:2000;
 }
-p{
-  font-size:16px;
-  line-height:27px;
-}
-a {
-   color:#2E9050;
-}
+
 #main-menu .active{
   background:#4DBB74;
   border-radius:2px;
@@ -2665,10 +2514,6 @@ margin-left: 1%;
   width: 85%;
   float: left;
 }
-.views_slideshow_cycle_main .views-slideshow-cycle-main-frame {
-  width: 100% !important;
-  height: auto;
-}
 .views_slideshow_cycle_main .views-slideshow-cycle-main-frame-row {
   width: 100% !important;
   height: auto;
@@ -2734,10 +2579,6 @@ width:100px;
 max-width: none;
 }
 /**/
-#views_slideshow_cycle_main_v_slideshow_detail_balade-block{
-  float:left;
-}
-
 #views_slideshow_cycle_main_v_slideshow_detail_balade-block_1{
   float:left;
 }
@@ -2747,10 +2588,6 @@ max-width: none;
 .views-slideshow-controls-bottom .views-content-field-image > img{
   margin:0px 0px 5px 5px;
   width:82px;
-}
- .views-slideshow-controls-bottom {
-    float: right;
-    margin-right: 10px;
 }
 
 .node-type-balade article, .page-espece .views-field-field-description{
@@ -2831,26 +2668,26 @@ max-width: none;
 .field-name-field-detail-balade,
 .region-sidebar-second h2,
 .region-sidebar-first h2{
-min-height: 30px;
-padding-left: 10px;
-background-color: #FAFAFA;
-background-image: -moz-linear-gradient(top, white, #F2F2F2);
-background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#F2F2F2));
-background-image: -webkit-linear-gradient(top, white, #F2F2F2);
-background-image: -o-linear-gradient(top, white, #F2F2F2);
-background-image: linear-gradient(to bottom, white, #F2F2F2);
-background-repeat: repeat-x;
-border: 1px solid #D4D4D4;
--webkit-border-radius: 4px 4px 0px 0px;
--moz-border-radius: 4px 4px 0px 0px;
-border-radius: 4px 4px 0px 0px;
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#F2F2F2', GradientType=0);
--webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
--moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
-line-height: 30px;
-font-size:18px;
-margin:10px 0 0;
+  min-height: 30px;
+  padding-left: 10px;
+  background-color: #FAFAFA;
+  background-image: -moz-linear-gradient(top, white, #F2F2F2);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#F2F2F2));
+  background-image: -webkit-linear-gradient(top, white, #F2F2F2);
+  background-image: -o-linear-gradient(top, white, #F2F2F2);
+  background-image: linear-gradient(to bottom, white, #F2F2F2);
+  background-repeat: repeat-x;
+  border: 1px solid #D4D4D4;
+  -webkit-border-radius: 4px 4px 0px 0px;
+  -moz-border-radius: 4px 4px 0px 0px;
+  border-radius: 4px 4px 0px 0px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#F2F2F2', GradientType=0);
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  line-height: 30px;
+  font-size:18px;
+  margin:23px 0 0;
 }
 #block-views-exp-v-liste-balade-page-1 > h2:nth-child(1){
   margin:0px; 
@@ -2942,9 +2779,7 @@ margin-top:-5px!important;
    margin-left:5px;
    float:left;
 }
-.view-v-informations-pratiques-balade{
-  padding:5px;
-}
+
 .view-v-informations-pratiques-balade .views-field{
   clear:left;
   min-height:30px;
@@ -3525,11 +3360,6 @@ margin-left: 9%;
 }
 /***FinSponsort***/
 
-/****SidebarRight****/
-body.node-type-balade div.view-v-caracteristiques-balade{
-  margin-top: 12px;
-}
-/****FinSidebarRight****/
 
 /***BtnBack***/
 body.node-type-balade ul a.back-page{

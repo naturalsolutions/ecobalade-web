@@ -55,10 +55,7 @@
   </header> <!-- /#header -->
 	  <?php if ($breadcrumb): echo "<div class='breadcrumb'><a href='".$base_url."'>Accueil</a>&nbsp»&nbsp<a href='".$base_url."/balade' title='Liste des balades'>Balades</a>&nbsp»&nbsp".$title." </div>"; endif;?>
 		
-	 <!-- 	<a href="/ecobalade-mathieu/"> Accueil </a> >>
-	<a href="/ecobalade-mathieu/balade"> Liste des Balades </a> >>
-	<?php print $title ?>.	 -->
-
+	
       <a id="main-content"></a>
 	<div class="container-node">
       <?php print render($title_prefix); ?>
@@ -90,95 +87,87 @@
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
      
-	<!--- ONGLETS -->
-	<ul class="nav nav-tabs" id="myTab">
-		<li class="active">
-			<a  class="description" href="#description" data-toggle="tab" >Description</a>
-		<!---	<a  data-toggle="tab" data-target="#description">Description</a> -->
-		</li>
-		<li><a class="espece" href="#espece" data-toggle="tab" >Espèces</a></li>
-		<a class="btn pull-right back-page btn-primary" target="" rel="" title="Retour à la liste des balades" href="<?php echo $base_path;?>liste-balades">Retour à la liste des balades</a>
-	</ul> 
-	<div class="tab-content">
+		<!--- ONGLETS -->
+		<ul class="nav nav-tabs" id="myTab">
+			<li class="active">
+				<a  class="description" href="#description" data-toggle="tab" >Description</a>
+			<!---	<a  data-toggle="tab" data-target="#description">Description</a> -->
+			</li>
+			<li><a class="espece" href="#espece" data-toggle="tab" >Espèces</a></li>
+			<a class="btn pull-right back-page btn-primary" target="" rel="" title="Retour à la liste des balades" href="<?php echo $base_path;?>liste-balades">Retour à la liste des balades</a>
+		</ul> 
+		<div class="tab-content">
 		<div class="tab-pane active" id="description"> 
+		
 			<!-- *****SLIDESHOW DETAIL BALADE****** -->
-			 <?php if ($node){
-				$baladenid = $node->nid; 
-				print views_embed_view('v_slideshow_detail_balade','block',$baladenid); 
-			}?> 
+			 <?php 
+			$baladenid = $node->nid; 
+			print views_embed_view('v_slideshow_detail_balade','block',$baladenid); 
+			?> 
+			
 			<!-- AddThis Button BEGIN -->
-    <div id="boutons_partage">
-      <div class="addthis_toolbox addthis_default_style addthis_32x32_style" >
-          <a class="addthis_button_facebook"></a>
-          <a class="addthis_button_twitter"></a>
-          <a class="addthis_button_google_plusone_share"></a>
-          <a class="addthis_counter addthis_bubble_style"></a>
-      </div>
-    </div>
-    <!-- AddThis Button END -->
-			<!-- *****Contenu NODE DETAIL BALADE****** -->
-			
-			<div class="field-content">
-				</br>
-				<div class="field-label titreDescro">
-					Description de la balade:&nbsp;
-				</div>				
-				<?php $res = views_get_view_result('v_especes_phares','block',$baladenid); ?>
-				<?php $maDescro = $res[0]->_field_data[nid][entity]->field_description_de_la_balade[und][0][value]; ?>
+		    <div id="boutons_partage">
+		      <div class="addthis_toolbox addthis_default_style addthis_32x32_style" >
+		          <a class="addthis_button_facebook"></a>
+		          <a class="addthis_button_twitter"></a>
+		          <a class="addthis_button_google_plusone_share"></a>
+		          <a class="addthis_counter addthis_bubble_style"></a>
+		      </div>
+		    </div>
+		    <!-- AddThis Button END -->							
 				
-				<p class='textDescro'><?php echo $maDescro; ?></p>		
-			
-				<div class="especes-phares">
-					<h4>Espèces phares :&nbsp;</h4>
-					<?php $taxonsIDPhares = views_get_view_result('v_especes_phares','block_1',$baladenid); ?>
-					<?php $taxonsIDPhares = $res[0]->_field_data[nid][entity]->field_esp_ces_phares[und]; ?>
-					
-					<?php 
-						for($i=0;$i<count($taxonsIDPhares);$i++){
-
-							print views_embed_view('v_especes_phares','block_2', $taxonsIDPhares[$i]['nid']);
-												
-						}
-						
-					?>
-
-				</div>
-				<?php print views_embed_view('v_especes_phares','block_3', $baladenid);?>
+				
+			<!-- Boc texte description de la balade -->
+			<div id="descriptionZone">	
+			<h4>Description de la balade&nbsp;:&nbsp;</h4>
+			<?php $description = field_get_items($entity_type = 'node', $node, $field_name = 'field_description_de_la_balade'); ?>
+			<?php $description = $description[0]['value']; ?>				
+			<?php echo $description; ?>	
 			</div>
+
+			<!-- Boc espece phare de la balade -->
+			<div class="especes-phares">
+				<h4>Espèces phares&nbsp;:&nbsp;</h4>
+				<?php $especesPhares = field_get_items($entity_type = 'node', $node, $field_name = 'field_esp_ces_phares'); ?>										
+				<?php for($i=0;$i<count($especesPhares);$i++) { print views_embed_view('v_especes_phares','block_2', $especesPhares[$i]['nid']); } ?>
+			</div>
+
 						
+			<!-- Render Drupal -->
 			<?php print render($page['content']); ?>
+
 		</div>
-		<div class="tab-pane" id="espece">
-			<!-- *****View Liste taxon de la balade ****** -->
+
+		<!-- Conteneur de l'onglet Espece -->
+		<div class="tab-pane" id="espece">		
 			
-			<?php if ($node):?>
-				<?php $baladenid = $node->nid;  ?>	
-						<div class="row-fluid">
-							<div class="span12" id='les_picto_balades'>
-								<div title='Toutes les espèces' id='resetAllFilterOnTaxa'>Tout</div>
-								<div title="Les oiseaux" id="picto_oiseaux"></div>
-								<?php if($baladenid != '269' && $baladenid != '9' &&  $baladenid != '2236' && $baladenid != '2292'):?>
-										<div title="Les mammifères" id="picto_mamifere"></div>
-								<?php endif; ?>
-								<?php if($baladenid != '2292'):?>
-									<div title="Les petites bêtes" id="picto_insect"></div>
-								<?php endif; ?>
-								<?php if($baladenid != '2355' && $baladenid != '2292'):?>
-										<div title="Les reptiles" id="picto_reptile"></div>
-								<?php endif; ?>
-								<div title="Les arbres" id="picto_arbre"></div>
-								<div title="Les arbustes" id="picto_arbuste"></div>
-								<?php if($baladenid == '104'):?>
-										<div title="Les mollusques" id="picto_mollusque"></div>
-								<?php endif; ?>
-								<?php if($baladenid == '2236' || $baladenid == '2355' || $baladenid == '2358' || $baladenid == '2353' || $baladenid == '2323' || $baladenid == '2354' || $baladenid == '2292'):?>
-									<div title="Les Amphibiens" id="picto_amphibien"></div>
-								<?php endif; ?>
-							</div>
+			<?php $baladenid = $node->nid;  ?>	
+					<div class="row-fluid">
+						<div class="span12" id='les_picto_balades'>
+							<div title='Toutes les espèces' id='resetAllFilterOnTaxa'>Tout</div>
+							<div title="Les oiseaux" id="picto_oiseaux"></div>
+							<?php if($baladenid != '269' && $baladenid != '9' &&  $baladenid != '2236' && $baladenid != '2292'):?>
+									<div title="Les mammifères" id="picto_mamifere"></div>
+							<?php endif; ?>
+							<?php if($baladenid != '2292'):?>
+								<div title="Les petites bêtes" id="picto_insect"></div>
+							<?php endif; ?>
+							<?php if($baladenid != '2355' && $baladenid != '2292'):?>
+									<div title="Les reptiles" id="picto_reptile"></div>
+							<?php endif; ?>
+							<div title="Les arbres" id="picto_arbre"></div>
+							<div title="Les arbustes" id="picto_arbuste"></div>
+							<?php if($baladenid == '104'):?>
+									<div title="Les mollusques" id="picto_mollusque"></div>
+							<?php endif; ?>
+							<?php if($baladenid == '2236' || $baladenid == '2355' || $baladenid == '2358' || $baladenid == '2353' || $baladenid == '2323' || $baladenid == '2354' || $baladenid == '2292'):?>
+								<div title="Les Amphibiens" id="picto_amphibien"></div>
+							<?php endif; ?>
 						</div>
-						
-				<?php print views_embed_view('v_liste_taxon_balade','block_list_espece',$baladenid);?>
-			<?php endif;?>
+					</div>
+					
+			<?php print views_embed_view('v_liste_taxon_balade','block_list_espece',$baladenid);?>
+			
 	
 		</div>
 	</div>
@@ -266,8 +255,8 @@ jQuery( document ).ready(function() {
 	$(".Amphibiens").parent().parent().hide();
 	
 	$("#resetAllFilterOnTaxa").css("border","none");
-	$("#picto_oiseaux").css("border","2px dotted #3b501B");
-		$("#picto_oiseaux").css("borderRadius","100%");
+	$("#picto_oiseaux").css("border-bottom","1px solid #55BB79");
+		
 	
 	$("#picto_mamifere").css("border","none");
 	$("#picto_insect").css("border","none");
@@ -292,9 +281,8 @@ jQuery( document ).ready(function() {
 	
 	$("#resetAllFilterOnTaxa").css("border","none");
 	$("#picto_oiseaux").css("border","none");
-	$("#picto_mamifere").css("border","2px dotted #3b501B");
-		$("#picto_mamifere").css("borderRadius","100%");
-	
+	$("#picto_mamifere").css("border-bottom","1px solid #55BB79");
+			
 	$("#picto_insect").css("border","none");
 	$("#picto_reptile").css("border","none");
 	$("#picto_arbre").css("border","none");
@@ -318,8 +306,7 @@ jQuery( document ).ready(function() {
 	$("#picto_oiseaux").css("border","none");
 	$("#picto_mamifere").css("border","none");
 	$("#picto_insect").css("border","none");
-	$("#picto_reptile").css("border","2px dotted #3b501B");
-		$("#picto_reptile").css("borderRadius","100%");
+	$("#picto_reptile").css("border-bottom","1px solid #55BB79");		
 	
 	$("#picto_arbre").css("border","none");
 	$("#picto_arbuste").css("border","none");
@@ -341,8 +328,7 @@ jQuery( document ).ready(function() {
 		$("#resetAllFilterOnTaxa").css("border","none");
 	$("#picto_oiseaux").css("border","none");
 	$("#picto_mamifere").css("border","none");
-	$("#picto_insect").css("border","2px dotted #3b501B");
-		$("#picto_insect").css("borderRadius","100%");
+	$("#picto_insect").css("border-bottom","1px solid #55BB79");
 	
 	$("#picto_reptile").css("border","none");
 	$("#picto_arbre").css("border","none");
@@ -369,8 +355,7 @@ jQuery( document ).ready(function() {
 	$("#picto_reptile").css("border","none");
 	$("#picto_arbre").css("border","none");
 	$("#picto_arbuste").css("border","none");
-	$("#picto_mollusque").css("border","2px dotted #3b501B");
-		$("#picto_mollusque").css("borderRadius","100%");
+	$("#picto_mollusque").css("border-bottom","1px solid #55BB79");
 	
 	$("#picto_amphibien").css("border","none");
 }); 
@@ -394,8 +379,8 @@ jQuery( document ).ready(function() {
 	$("#picto_arbre").css("border","none");
 	$("#picto_arbuste").css("border","none");
 	$("#picto_mollusque").css("border","none");
-	$("#picto_amphibien").css("border","2px dotted #3b501B");
-		$("#picto_amphibien").css("borderRadius","100%");
+	$("#picto_amphibien").css("border-bottom","1px solid #55BB79");
+		
 	
 }); 
 </script>
@@ -417,8 +402,8 @@ jQuery( document ).ready(function() {
 	$("#picto_mamifere").css("border","none");
 	$("#picto_insect").css("border","none");
 	$("#picto_reptile").css("border","none");
-	$("#picto_arbre").css("border","2px dotted #3b501B");
-		$("#picto_arbre").css("borderRadius","100%");
+	$("#picto_arbre").css("border-bottom","1px solid #55BB79");
+		
 	
 	$("#picto_arbuste").css("border","none");
 	$("#picto_mollusque").css("border","none");
@@ -442,8 +427,8 @@ jQuery( document ).ready(function() {
 	$("#picto_insect").css("border","none");
 	$("#picto_reptile").css("border","none");
 	$("#picto_arbre").css("border","none");
-	$("#picto_arbuste").css("border","2px dotted #3b501B");
-		$("#picto_arbuste").css("borderRadius","100%");
+	$("#picto_arbuste").css("border-bottom","1px solid #55BB79");
+		
 	
 	$("#picto_mollusque").css("border","none");
 	$("#picto_amphibien").css("border","none");
