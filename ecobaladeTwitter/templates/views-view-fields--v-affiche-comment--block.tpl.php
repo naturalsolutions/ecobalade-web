@@ -61,8 +61,8 @@
 						<?php $created =  $field->content; ?>
 				<?php endif; ?>
 		<?php endif;?>
-<?php endforeach; ?>
 
+<?php endforeach; ?>
 
 
 <div class="row-fluid contentOfOneComment">

@@ -133,7 +133,7 @@
 			</div>
 
 						
-			<!-- Render Drupal -->
+
 			<?php print render($page['content']); ?>
 
 		</div>
@@ -196,7 +196,9 @@
 
   </div>
  </div><!-- fin container-node -->
+
   		<?php print render($page['footer']); ?>
+  		
 	</div>
 <script type="text/javascript">
 jQuery( document ).ready(function() {

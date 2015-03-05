@@ -169,7 +169,7 @@ body.page-boutique div.sideBarBoutique span{
 body.node-type-balade .view-v-informations-pratiques-balade{
   padding: 7%;
 }
-body.node-type-balade div#descriptionZone p{
+body.node-type-balade div#descriptionZone > p{
   margin: 15px 10px 20px;
   border: 1px solid #BBBBBB;
   -webkit-border-radius: 4px;

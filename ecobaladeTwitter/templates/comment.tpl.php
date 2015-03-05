@@ -1,6 +1,8 @@
 <article class="<?php print $classes . ' ' . $zebra; ?>"<?php print $attributes; ?>>
   
   <header>
+
+
     
       <?php //print $picture; ?>
       <?php //print $submitted; ?>
@@ -19,18 +21,15 @@
     <?php //endif; ?>
     <?php //print render($title_suffix); ?>
   </header> -->
-
+ 
   <?php
     // We hide the comments and links now so that we can render them later.
     hide($content['links']);
     //print render($content);
-        
-    print views_embed_view('v_affiche_comment','block',$node->cid);
+    print views_embed_view('v_affiche_comment','block',$comment->cid);
+
   ?>
 
-  <?php //comment_get_thread($node, $mode = 'COMMENT_MODE_THREADED'); ?>
-
-<pre><?php print_r($node); ?></pre>
 
   <?php if ($signature): ?>
     <footer class="user-signature clearfix">
