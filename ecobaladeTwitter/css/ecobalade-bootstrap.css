@@ -112,7 +112,9 @@ body.front div.span4 p span{
 /*                          DIVERS - Tools                                 */
 /*                                                                         */
 /***************************************************************************/
-
+body.logged-in header#navbar{
+  top: 28px;
+}
 
 p{
   font-size:16px;

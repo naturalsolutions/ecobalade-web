@@ -208,26 +208,10 @@
 				<h1>En balade ou en rando, découvrez la nature pas à pas...</h1>
 				<p style="text-align:left;">En <strong>randonnée</strong>, apprenez à reconnaître la <strong>faune</strong> et la <strong>flore</strong> facilement avec <strong>ecoBalade</strong>. Partagez vos découvertes et sortez ressourcés de cette aventure! Une nouvelle façon de vivre une <strong>balade</strong> dans la <strong>nature</strong></p>
 					<div>
-						<!-- <a class="span6 " href="liste-balades" title="Découvrir toutes les balades disponibles" alt="Liens vers les balades"><img src="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/btn_touteslesbalades.png"/></a> -->
-						<!-- <a class="span6 " id='hp_button_android' target="_blank" rel="external" title="Télécharger l'application ecoBalade sur GooglePlay" href="https://play.google.com/store/apps/details?id=com.ns.ecoBalade&feature=search_result#?t=W251bGwsMSwyLDEsImNvbS5ucy5lY29CYWxhZGUiXQ.."><img src="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/getItOnGooglePlay.jpg" alt="Liens vers GooglePlay"/></a> -->
-						<!-- <a class="span6 " id='hp_button_android' target="_blank" rel="external" title="Télécharger l'application ecoBalade sur GooglePlay" href="https://play.google.com/store/apps/details?id=com.ns.ecoBalade&feature=search_result#?t=W251bGwsMSwyLDEsImNvbS5ucy5lY29CYWxhZGUiXQ.."><img src="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/logo_googlePlay_vert.jpg" alt="Liens vers GooglePlay"/></a> -->
-						<!-- <a class="span6 " target="_blank" rel="external" title="Télécharger l'application sur l'appleStore" href="https://itunes.apple.com/fr/app/ecobalade/id674569147?l=fr&ls=1&mt=8"><img src="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/app_store_button_white.png" alt="Liens vers l'AppleStore"/></a> -->
 						<a class="span5 button" id='hp_button_android' target="_blank" rel="external" title="Télécharger l'application ecoBalade sur GooglePlay" href="https://play.google.com/store/apps/details?id=com.ns.ecoBalade&feature=search_result#?t=W251bGwsMSwyLDEsImNvbS5ucy5lY29CYWxhZGUiXQ.."><span class="icon-android"></span><em>ANDROID APP ON</em>Google play</a>
 						<a class="span5 button" id='hp_button_apple' target="_blank" rel="external" title="Télécharger l'application sur l'appleStore" href="https://itunes.apple.com/fr/app/ecobalade/id674569147?l=fr&ls=1&mt=8"><span class="icon-apple"></span><em>Disponible sur</em>App Store</a>
 						<a id="fold1BntAllBalades" class="span5 btn btn-primary btn-large" target="" rel="" title="Toutes les balades" href="<?php echo $base_path;?>liste-balades">Toutes les balades</a>
-					</div>	
-					
-					<!-- <script type="text/javascript">
-					  $(document).ready(function () {
-						$('#shell img').plaxify();
-						$.plax.enable();
-					  })
-					</script>-->
-
-					<!--<div id="shell">
-					  <a href="liste-balades" alt="Liens vers les balades"><img src="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/img_tt_les_balades.png" data-xrange="10" data-yrange="20" id="bnt_tt_balade_moving"/></a>
-					</div>-->
-			
+					</div>														
 				</p>
 
 			</div>
@@ -264,7 +248,7 @@
         <div class="span6 ">
 		<div class="miniCarte"><img src="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/balade/miniCarte_toulon.png" alt="" /></div>
 		<h3>La Roque d'Anthéron</h3>
-          <p>La <strong>balade</strong> des bords de la <strong>Durance</strong> prend son départ au cœur du charmant village de la <a HREF="http://www.ville-laroquedantheron.fr/"><strong>Roque d’Anthéron</strong></a>, connu comme témoin du rôle des vaudois et des protestants à l’origine du développement du Lubéron au XVIe siècle. Situé au Nord Ouest d’Aix en Provence, la Roque d’Anthéron est entouré de magnifiques paysages sauvages et préservés, à quelques pas du <a HREF="http://www.parcduluberon.fr/"><strong>Parc Naturel Régional du Luberon</strong></a>.</p>
+          <p>La <strong>balade</strong> des bords de la <strong>Durance</strong> prend son départ au cœur du charmant village de la <a HREF="http://www.ville-laroquedantheron.fr/">Roque d’Anthéron</a>, connu comme témoin du rôle des vaudois et des protestants à l’origine du développement du Lubéron au XVIe siècle. Situé au Nord Ouest d’Aix en Provence, la Roque d’Anthéron est entouré de magnifiques paysages sauvages et préservés, à quelques pas du <a HREF="http://www.parcduluberon.fr/">Parc Naturel Régional du Luberon</a>.</p>
 					<p>Cette<strong> randonnée nature</strong> vous emmènera à la découverte de la <strong>faune</strong> typique des milieux d’eau douce ! Vous pourrez observer, le long de la <strong>Durance</strong>, le <a HREF="<?php echo $base_path;?>espece/guepier-d-europe#.VHX03dKG9Gs">Guêpier d’Europe</a>, le <a HREF="<?php echo $base_path;?>espece/heron-pourpre">héron pourpré</a> ou des traces du <a HREF="<?php echo $base_path;?>espece/castor-d-europe#.VHX1Y9KG9Gs">Castor d’Europe</a> ! Cette zone humide est le lieu d’habitat de nombreuse espèces d’oiseaux et notamment d’échassiers. C’est un milieu d’une étonnante richesse !</p>
 			<div class="row-fluid zoneEspecePhotoBalade">
 				<div class="span4"><a href="<?php echo $base_path;?>espece/guepier-d-europe"><img src="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/balade/guepier-d-europe.jpg" alt="le Guepier d'europe" title="le Guepier d'europe"/></a></div>
@@ -272,12 +256,12 @@
 				<div class="span4"><a href="<?php echo $base_path;?>espece/castor-d-europe"><img src="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/balade/castor-d-europe.jpg" alt="le Castor d'europe" title="le Castor d'europe"/></a></div>
 			</div>
 			<div class="row-fluid zoneBtnBalade">
-				<!-- <div class="span5 offset3"><p class=""><a href="liste-balades" alt="Liens vers les balades"><img src="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/btn_touteslesbalades.png"/></a></p></div> -->
+				
 				<div class="span12">
 					<a class="span6 btn btn-primary bnt-large" target="" rel="" title="Détails de la balade" href="<?php echo $base_path;?>balade/balade-de-la-roque-d-antheron-13-les-bords-de-la-durance">Détails de la balade</a> 
 					<a class="span4 btn btn-primary bnt-large offset2" target="" rel="" title="Les balades" href="<?php echo $base_path;?>liste-balades">Toutes les balades</a>
 				</div>
-				<!--<div class="span4"><p class=""><a class="btn btn-warning btn-large disabled" target="_blank" rel="external" title="Bientôt en ligne!" href="">Réserver la balade<br/></a></p></div>-->
+				
 			</div>
 	  </div>
     </div>
@@ -307,8 +291,8 @@
 		 	 
 	<h4>Les espèces observées</h4>
 	<div class="row-fluid friseEspece" id="ancreFooter">
-		
 		<!-- https://github.com/tholman/intense-images -->
+		
 		
 		<div class="span2">
 			<div data-image="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/lapinou2.jpg" class="img-polaroid" data-title="<a href='espece/lapin-de-garenne' title='voir la fiche espèce'>Lapin de garenne</a>" data-caption="Présent dans la balade de <a href='balade/balade-de-la-belle-pierre' title='Voir la page balade'>la Belle Pierre</a>" id='lapinou'><div class="ajaxloader"></div></div>
@@ -352,20 +336,10 @@
 
 		jQuery('.img-polaroid').click(function(){
 
-
-			// //affiche loader
-			// if(device == 'tablette' || device == 'mobile' || device == 'bureau'){
-
-				jQuery( this ).find('.ajaxloader').show();
+			//affiche loader
+			jQuery( this ).find('.ajaxloader').show();
 				
-				
-			//}
-
-
-			
 		});
-
-
 
 		window.onload = function() {
 	
@@ -373,7 +347,6 @@
 		    var elements = document.querySelectorAll( '.img-polaroid' );
 		    Intense( elements );
 		}
-
 
 	}
 
