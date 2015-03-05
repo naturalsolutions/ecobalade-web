@@ -170,12 +170,7 @@ body.node-type-balade .view-v-informations-pratiques-balade{
   padding: 7%;
 }
 body.node-type-balade div#descriptionZone > p{
-  margin: 15px 10px 20px;
-  border: 1px solid #BBBBBB;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  padding: 15px 15px 20px;
+  padding: 20px 15px 20px 15px;
 }
 body.node-type-balade div.view-v-slideshow-detail-balade{
   margin-bottom: 0 !important;
@@ -183,6 +178,9 @@ body.node-type-balade div.view-v-slideshow-detail-balade{
 body.node-type-balade div#descriptionZone {
   position: relative;
   top: 20px;
+  border: 1px solid #BBB;
+  border-radius: 4px;
+  margin: 0px 10px;
 }
 body.node-type-balade div#descriptionZone h4{
   position: absolute;
