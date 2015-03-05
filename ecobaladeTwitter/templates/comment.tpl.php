@@ -28,6 +28,9 @@
     print views_embed_view('v_affiche_comment','block',$node->cid);
   ?>
 
+  <?php //comment_get_thread($node, $mode = 'COMMENT_MODE_THREADED'); ?>
+
+<pre><?php print_r($node); ?></pre>
 
   <?php if ($signature): ?>
     <footer class="user-signature clearfix">

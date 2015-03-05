@@ -8,8 +8,8 @@
   <?php print render($content['comments']); ?>
 
   <?php if ($content['comment_form']): ?>
-    <section id="comment-form-wrapper" class="well collapseComment" title='Ajouter un commentaire'>
-      <h2 class="title"><?php print t('Add new comment'); ?></h2>
+    <section id="comment-form-wrapper" class="well collapseComment" title='Poster une photo ou un commentaire'>
+      <h2 class="title"><?php print t('Poster une photo ou un commentaire'); ?></h2>
       <?php print render($content['comment_form']); ?>
     </section> <!-- /#comment-form-wrapper -->
   <?php endif; ?>

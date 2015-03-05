@@ -75,18 +75,8 @@
 		<div class="arrow-left"></div>
 		<p class='name'><?php echo $name; ?><i class='created'><?php echo $created; ?></i></p>
 		<p class='comment_body'><?php echo $comment_body; ?></p>
-		
-		
-		<?php $image = explode(',', $image)?>
-		<?php $thumb = explode(',', $thumb)?>
-		
 
-		<?php for($i=0;$i<count($image);$i++): ?>
-			
-				<a id="single-large-image" class="imageComment" href="<?php echo $image[$i]; ?>" alt="Large Image"><img src="<?php echo $thumb[$i]; ?>" alt=''/></a>
-									
-		<?php endfor; ?>
-
+		<?php echo $image; ?>
 		
 	</div>
 </div>
