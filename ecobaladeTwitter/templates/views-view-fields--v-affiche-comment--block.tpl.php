@@ -25,12 +25,6 @@
  */
 ?>
 <?php foreach ($fields as $id => $field): ?>
-		<?php if ($id == 'nothing') : ?>
-				<?php if (!empty($field->content)): ?>
-						<?php $thumb =  $field->content; ?>
-				<?php endif; ?>
-		<?php endif;?>
-
 
 		<?php if ($id == 'nothing_1') : ?>
 				<?php if (!empty($field->content) && $field->content != ''): ?>
