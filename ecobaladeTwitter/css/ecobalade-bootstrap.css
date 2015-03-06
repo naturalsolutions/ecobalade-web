@@ -362,6 +362,34 @@ body.node-type-espece section#comments section.collapseComment h2{
   cursor: pointer;
   padding-left: 10%;
 }
+body.node-type-espece #blockCriteresEspece{
+  padding: 0px 10px 15px 10px;
+  position: relative;
+}
+body.node-type-espece #blockDetailsEspece{
+  margin: 23px 10px 22px 10px;
+  border: 1px solid #BBBBBB;
+  padding: 10px 10px 10px 10px;
+  width: 97%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;  
+  position: relative;
+}
+body.node-type-espece #blockDetailsEspece h4{
+  position: absolute;
+  top: -26px;
+  background: #fff;
+  padding: 0 8px
+}
+body.node-type-espece h4.labelKey{
+  position: absolute;
+  top: -15px;
+  background: #fff;
+  padding: 0 8px;
+  z-index: 999;
+  left: 19px;
+}
 /*FIN FICHE ESPECE*/
 
 /**/
@@ -797,9 +825,6 @@ width: 100%;
   font-size: 18px;
   margin-bottom: 0;
   margin-right: 20px;
-}
-#blockDetailsEspece, #blockCriteresEspece{
-padding: 0px 10px 15px 10px;
 }
 
 #fieldPersoCriteria1line{

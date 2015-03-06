@@ -143,18 +143,18 @@
 
 									<div class="row-fluid">
 										<div class="span12" id='blockDetailsEspece'>
-											<?php 		 
-													print views_embed_view('v_espece','block_1',$espnid);  // affichage details des especes
-													
-											?>
-											</br>
+
+											<?php $description = field_get_items($entity_type = 'node', $node, $field_name = 'field_description'); ?>
+											<?php $description = $description[0]['value']; ?>				
+											<h4>Description : </h4>
+											<p><?php echo $description; ?></p>											
 										</div>
 									</div>	
 
 									<div class="row-fluid">
 										<div class="span12" id='blockCriteresEspece'>
 														<?php if(count($criteres) > 1) : ?>
-																<?php  echo "<span class='views-label views-label-field-description' style='position:absolute;margin-top:-7px;'>Les indices pour le reconnaître</span>"; ?>
+																<?php  echo "<h4 class='labelKey'>Les indices pour le reconnaître</h4>"; ?>
 																<?php if(count($criteres) > 8) { echo "<div class='field-content' id='fieldPersoCriteria2line'>"; } else{echo "<div class='field-content' id='fieldPersoCriteria1line'>";}; ?>
 																																
 																<?php for($j=0; $j < count($criteres); $j++): ?>
