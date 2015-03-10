@@ -1,1 +1,406 @@
-maj la vue "v_affiche_comment" 
+:> maj la vue "v_affiche_comment" {{##  
+
+$view = new view();
+$view->name = 'v_affiche_comment';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'node';
+$view->human_name = 'v_affiche_comment';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = 'Afficher commentaire';
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'perm';
+$handler->display->display_options['cache']['type'] = 'none';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Réinitialiser';
+$handler->display->display_options['pager']['type'] = 'none';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['row_plugin'] = 'fields';
+$handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+/* Relationship: Commentaire: Comments of the node */
+$handler->display->display_options['relationships']['cid']['id'] = 'cid';
+$handler->display->display_options['relationships']['cid']['table'] = 'node';
+$handler->display->display_options['relationships']['cid']['field'] = 'cid';
+$handler->display->display_options['relationships']['cid']['required'] = TRUE;
+/* Relationship: Commentaire: Auteur */
+$handler->display->display_options['relationships']['uid']['id'] = 'uid';
+$handler->display->display_options['relationships']['uid']['table'] = 'comment';
+$handler->display->display_options['relationships']['uid']['field'] = 'uid';
+$handler->display->display_options['relationships']['uid']['relationship'] = 'cid';
+$handler->display->display_options['relationships']['uid']['required'] = TRUE;
+/* Champ: Utilisateur: Image */
+$handler->display->display_options['fields']['picture']['id'] = 'picture';
+$handler->display->display_options['fields']['picture']['table'] = 'users';
+$handler->display->display_options['fields']['picture']['field'] = 'picture';
+$handler->display->display_options['fields']['picture']['relationship'] = 'uid';
+$handler->display->display_options['fields']['picture']['label'] = '';
+$handler->display->display_options['fields']['picture']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['picture']['link_photo_to_profile'] = FALSE;
+/* Champ: Commentaire: Auteur */
+$handler->display->display_options['fields']['name']['id'] = 'name';
+$handler->display->display_options['fields']['name']['table'] = 'comment';
+$handler->display->display_options['fields']['name']['field'] = 'name';
+$handler->display->display_options['fields']['name']['relationship'] = 'cid';
+$handler->display->display_options['fields']['name']['label'] = '';
+$handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['name']['link_to_user'] = FALSE;
+/* Champ: Commentaire: Comment */
+$handler->display->display_options['fields']['comment_body']['id'] = 'comment_body';
+$handler->display->display_options['fields']['comment_body']['table'] = 'field_data_comment_body';
+$handler->display->display_options['fields']['comment_body']['field'] = 'comment_body';
+$handler->display->display_options['fields']['comment_body']['relationship'] = 'cid';
+$handler->display->display_options['fields']['comment_body']['label'] = '';
+$handler->display->display_options['fields']['comment_body']['element_label_colon'] = FALSE;
+/* Champ: Commentaire: Post date */
+$handler->display->display_options['fields']['created']['id'] = 'created';
+$handler->display->display_options['fields']['created']['table'] = 'comment';
+$handler->display->display_options['fields']['created']['field'] = 'created';
+$handler->display->display_options['fields']['created']['relationship'] = 'cid';
+$handler->display->display_options['fields']['created']['label'] = '';
+$handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['created']['date_format'] = 'raw time ago';
+$handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+/* Champ: Commentaire: image */
+$handler->display->display_options['fields']['field_comment_image_1']['id'] = 'field_comment_image_1';
+$handler->display->display_options['fields']['field_comment_image_1']['table'] = 'field_data_field_comment_image';
+$handler->display->display_options['fields']['field_comment_image_1']['field'] = 'field_comment_image';
+$handler->display->display_options['fields']['field_comment_image_1']['relationship'] = 'cid';
+$handler->display->display_options['fields']['field_comment_image_1']['label'] = '';
+$handler->display->display_options['fields']['field_comment_image_1']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_comment_image_1']['hide_empty'] = TRUE;
+$handler->display->display_options['fields']['field_comment_image_1']['empty_zero'] = TRUE;
+$handler->display->display_options['fields']['field_comment_image_1']['hide_alter_empty'] = FALSE;
+$handler->display->display_options['fields']['field_comment_image_1']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_comment_image_1']['type'] = 'colorbox';
+$handler->display->display_options['fields']['field_comment_image_1']['settings'] = array(
+  'colorbox_node_style' => 'thumbnail',
+  'colorbox_node_style_first' => '',
+  'colorbox_image_style' => 'picture_comment',
+  'colorbox_gallery' => 'post',
+  'colorbox_gallery_custom' => '',
+  'colorbox_caption' => 'auto',
+  'colorbox_caption_custom' => '',
+);
+$handler->display->display_options['fields']['field_comment_image_1']['delta_offset'] = '0';
+/* Champ: Commentaire: image */
+$handler->display->display_options['fields']['field_comment_image_e_1']['id'] = 'field_comment_image_e_1';
+$handler->display->display_options['fields']['field_comment_image_e_1']['table'] = 'field_data_field_comment_image_e';
+$handler->display->display_options['fields']['field_comment_image_e_1']['field'] = 'field_comment_image_e';
+$handler->display->display_options['fields']['field_comment_image_e_1']['relationship'] = 'cid';
+$handler->display->display_options['fields']['field_comment_image_e_1']['label'] = '';
+$handler->display->display_options['fields']['field_comment_image_e_1']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_comment_image_e_1']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_comment_image_e_1']['hide_empty'] = TRUE;
+$handler->display->display_options['fields']['field_comment_image_e_1']['empty_zero'] = TRUE;
+$handler->display->display_options['fields']['field_comment_image_e_1']['hide_alter_empty'] = FALSE;
+$handler->display->display_options['fields']['field_comment_image_e_1']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_comment_image_e_1']['type'] = 'colorbox';
+$handler->display->display_options['fields']['field_comment_image_e_1']['settings'] = array(
+  'colorbox_node_style' => 'thumbnail',
+  'colorbox_node_style_first' => '',
+  'colorbox_image_style' => 'picture_comment',
+  'colorbox_gallery' => 'post',
+  'colorbox_gallery_custom' => '',
+  'colorbox_caption' => 'auto',
+  'colorbox_caption_custom' => '',
+);
+$handler->display->display_options['fields']['field_comment_image_e_1']['delta_offset'] = '0';
+/* Champ: Global: Custom text */
+$handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
+$handler->display->display_options['fields']['nothing_1']['table'] = 'views';
+$handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
+$handler->display->display_options['fields']['nothing_1']['label'] = '';
+$handler->display->display_options['fields']['nothing_1']['alter']['text'] = '[field_comment_image_1][field_comment_image_e_1] ';
+$handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['nothing_1']['hide_empty'] = TRUE;
+/* Sort criterion: Contenu: Post date */
+$handler->display->display_options['sorts']['created']['id'] = 'created';
+$handler->display->display_options['sorts']['created']['table'] = 'node';
+$handler->display->display_options['sorts']['created']['field'] = 'created';
+$handler->display->display_options['sorts']['created']['order'] = 'DESC';
+/* Contextual filter: Commentaire: ID */
+$handler->display->display_options['arguments']['cid']['id'] = 'cid';
+$handler->display->display_options['arguments']['cid']['table'] = 'comment';
+$handler->display->display_options['arguments']['cid']['field'] = 'cid';
+$handler->display->display_options['arguments']['cid']['relationship'] = 'cid';
+$handler->display->display_options['arguments']['cid']['exception']['title'] = 'Tout';
+$handler->display->display_options['arguments']['cid']['default_argument_type'] = 'fixed';
+$handler->display->display_options['arguments']['cid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['cid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['cid']['summary_options']['items_per_page'] = '25';
+/* Filter criterion: Commentaire: Approved */
+$handler->display->display_options['filters']['status_1']['id'] = 'status_1';
+$handler->display->display_options['filters']['status_1']['table'] = 'comment';
+$handler->display->display_options['filters']['status_1']['field'] = 'status';
+$handler->display->display_options['filters']['status_1']['relationship'] = 'cid';
+$handler->display->display_options['filters']['status_1']['value'] = '1';
+
+/* Display: Block */
+$handler = $view->new_display('block', 'Block', 'block');
+$handler->display->display_options['metatags'] = array(
+  'und' => array(
+    'title' => array(
+      'value' => '[view:title] | [site:name]',
+      'default' => '[view:title] | [site:name]',
+    ),
+    'description' => array(
+      'value' => '[view:description]',
+      'default' => '[view:description]',
+    ),
+    'abstract' => array(
+      'value' => '',
+    ),
+    'keywords' => array(
+      'value' => 'comment, commentaire, espece, nature, balade, rando, randonnée, faune, flore',
+    ),
+    'robots' => array(
+      'value' => array(
+        'index' => 0,
+        'follow' => 0,
+        'noindex' => 0,
+        'nofollow' => 0,
+        'noarchive' => 0,
+        'nosnippet' => 0,
+        'noodp' => 0,
+        'noydir' => 0,
+        'noimageindex' => 0,
+        'notranslate' => 0,
+      ),
+    ),
+    'news_keywords' => array(
+      'value' => '',
+    ),
+    'standout' => array(
+      'value' => '',
+    ),
+    'rights' => array(
+      'value' => '',
+    ),
+    'image_src' => array(
+      'value' => '',
+    ),
+    'canonical' => array(
+      'value' => '[view:url]',
+      'default' => '[view:url]',
+    ),
+    'shortlink' => array(
+      'value' => '[current-page:url:unaliased]',
+      'default' => '[current-page:url:unaliased]',
+    ),
+    'publisher' => array(
+      'value' => '',
+    ),
+    'author' => array(
+      'value' => '',
+    ),
+    'original-source' => array(
+      'value' => '',
+    ),
+    'revisit-after' => array(
+      'value' => '',
+      'period' => '',
+    ),
+    'content-language' => array(
+      'value' => '',
+    ),
+    'fb:admins' => array(
+      'value' => '',
+    ),
+    'fb:app_id' => array(
+      'value' => '',
+    ),
+    'og:type' => array(
+      'value' => 'article',
+      'default' => 'article',
+    ),
+    'og:url' => array(
+      'value' => '[current-page:url:absolute]',
+      'default' => '[current-page:url:absolute]',
+    ),
+    'og:title' => array(
+      'value' => '[current-page:title]',
+      'default' => '[current-page:title]',
+    ),
+    'og:determiner' => array(
+      'value' => '',
+    ),
+    'og:description' => array(
+      'value' => '',
+    ),
+    'og:updated_time' => array(
+      'value' => '',
+    ),
+    'og:see_also' => array(
+      'value' => '',
+    ),
+    'og:image' => array(
+      'value' => '',
+    ),
+    'og:image:secure_url' => array(
+      'value' => '',
+    ),
+    'og:image:type' => array(
+      'value' => '',
+    ),
+    'og:image:width' => array(
+      'value' => '',
+    ),
+    'og:image:height' => array(
+      'value' => '',
+    ),
+    'og:latitude' => array(
+      'value' => '',
+    ),
+    'og:longitude' => array(
+      'value' => '',
+    ),
+    'og:street-address' => array(
+      'value' => '',
+    ),
+    'og:locality' => array(
+      'value' => '',
+    ),
+    'og:region' => array(
+      'value' => '',
+    ),
+    'og:postal-code' => array(
+      'value' => '',
+    ),
+    'og:country-name' => array(
+      'value' => '',
+    ),
+    'og:email' => array(
+      'value' => '',
+    ),
+    'og:phone_number' => array(
+      'value' => '',
+    ),
+    'og:fax_number' => array(
+      'value' => '',
+    ),
+    'og:locale' => array(
+      'value' => '',
+    ),
+    'og:locale:alternate' => array(
+      'value' => '',
+    ),
+    'article:author' => array(
+      'value' => '',
+    ),
+    'article:publisher' => array(
+      'value' => '',
+    ),
+    'article:section' => array(
+      'value' => '',
+    ),
+    'article:tag' => array(
+      'value' => '',
+    ),
+    'article:published_time' => array(
+      'value' => '',
+    ),
+    'article:modified_time' => array(
+      'value' => '',
+    ),
+    'article:expiration_time' => array(
+      'value' => '',
+    ),
+    'profile:first_name' => array(
+      'value' => '',
+    ),
+    'profile:last_name' => array(
+      'value' => '',
+    ),
+    'profile:username' => array(
+      'value' => '',
+    ),
+    'profile:gender' => array(
+      'value' => '',
+    ),
+    'og:audio' => array(
+      'value' => '',
+    ),
+    'og:audio:secure_url' => array(
+      'value' => '',
+    ),
+    'og:audio:type' => array(
+      'value' => '',
+    ),
+    'book:author' => array(
+      'value' => '',
+    ),
+    'book:isbn' => array(
+      'value' => '',
+    ),
+    'book:release_date' => array(
+      'value' => '',
+    ),
+    'book:tag' => array(
+      'value' => '',
+    ),
+    'og:video' => array(
+      'value' => '',
+    ),
+    'og:video:secure_url' => array(
+      'value' => '',
+    ),
+    'og:video:width' => array(
+      'value' => '',
+    ),
+    'og:video:height' => array(
+      'value' => '',
+    ),
+    'og:video:type' => array(
+      'value' => '',
+    ),
+    'video:actor' => array(
+      'value' => '',
+    ),
+    'video:actor:role' => array(
+      'value' => '',
+    ),
+    'video:director' => array(
+      'value' => '',
+    ),
+    'video:writer' => array(
+      'value' => '',
+    ),
+    'video:duration' => array(
+      'value' => '',
+    ),
+    'video:release_date' => array(
+      'value' => '',
+    ),
+    'video:tag' => array(
+      'value' => '',
+    ),
+    'video:series' => array(
+      'value' => '',
+    ),
+  ),
+);
+$translatables['v_affiche_comment'] = array(
+  t('Master'),
+  t('Afficher commentaire'),
+  t('more'),
+  t('Apply'),
+  t('Réinitialiser'),
+  t('Sort by'),
+  t('Asc'),
+  t('Desc'),
+  t('Commentaires'),
+  t('author'),
+  t('[field_comment_image_1][field_comment_image_e_1] '),
+  t('Tout'),
+  t('Block'),
+);
+
+
+##}} 
