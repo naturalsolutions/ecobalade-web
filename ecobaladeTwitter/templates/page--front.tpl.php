@@ -173,8 +173,7 @@
 	  <a rel="external" id="lien_facebook" href="https://www.facebook.com/EcoBalade" title="Suivez-nous sur Facebook" target="_blank"></a>
 	  <a href="https://twitter.com/ecobalade" title="Suivez-nous sur Twitter" id="lien_twitter" target="_blank" rel="external"></a>
 	  <a href="https://plus.google.com/106878953750776121381/posts" title="Suivez-nous sur Google+" id="lien_google" target="_blank" rel="external"></a>
-	  <a href="http://m.pinterest.com/Ecobalade" title="Suivez-nous sur Pinterest" id="lien_pinterest" target="_blank" rel="external"></a>
-	  <a href="http://www.tumblr.com/blog/ecobalade" title="Suivez-nous sur Tumblr" id="lien_tumblr" target="_blank" rel="external"></a>
+	  <a href="http://m.pinterest.com/Ecobalade" title="Suivez-nous sur Pinterest" id="lien_pinterest" target="_blank" rel="external"></a>	  
 	  <a href="http://instagram.com/ecobalade#" title="Suivez-nous sur Instagram" id="lien_instagram" target="_blank" rel="external"></a>
 	  
 	  

@@ -1,0 +1,12 @@
+:> Ajouter le module popup_onload + FEATURE 
+
+#Footer maj
+
+:> Sur l'url (admin/structure/block) -> Supprimer "Téléchargement de l'application ecoBalade sur les Store"
+:> Sur l'url (admin/structure/block) -> Supprimer "Réseaux sociaux"
+:> Sur l'url (admin/structure/block) -> Supprimer "Encart contact professionels"
+:> Sur l'url (admin/structure/block) -> Supprimer "Présentation de Natural Solutions"
+:> Sur l'url (admin/structure/block) -> Désactiver "Liste des balades"
+:> Sur l'url (admin/structure/block) -> Désactiver "Des questions ?"
+:> Sur l'url (admin/structure/block) -> Désactiver "Partenaires et Mentions légales"
+
