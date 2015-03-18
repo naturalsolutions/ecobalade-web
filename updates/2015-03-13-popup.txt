@@ -9,4 +9,6 @@
 :> Sur l'url (admin/structure/block) -> Désactiver "Liste des balades"
 :> Sur l'url (admin/structure/block) -> Désactiver "Des questions ?"
 :> Sur l'url (admin/structure/block) -> Désactiver "Partenaires et Mentions légales"
+:> Sur l'url (admin/structure/block) -> Ajouter en pied de page "propulsé par drupal"
+
 

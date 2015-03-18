@@ -197,9 +197,9 @@
   </div>
  </div><!-- fin container-node -->
 
-  		<?php print render($page['footer']); ?>
 
 	</div>
+  <?php print render($page['footer']); ?>
 <script type="text/javascript">
 jQuery( document ).ready(function() {
 	

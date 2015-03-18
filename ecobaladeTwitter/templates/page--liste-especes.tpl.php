@@ -85,8 +85,7 @@
 		  </section>
 	  </div>
  </div><!-- fin container-node -->
-  		<?php print render($page['footer']); ?>
-	</div>
+  </div>
 
 <script type="text/javascript">
    $( document ).ready(function() {
@@ -100,3 +99,4 @@
 
      });
   </script>
+  		<?php print render($page['footer']); ?>

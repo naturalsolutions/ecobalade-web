@@ -110,7 +110,6 @@
 
   </div>
  </div> <!--fin container-node--> 
-   <?php print render($page['footer']); ?>
 <script>
 
 jQuery( document ).ready(function() {
@@ -136,6 +135,7 @@ jQuery( document ).ready(function() {
 });
 
 </script>
+   <?php print render($page['footer']); ?>
 </div>
 
 

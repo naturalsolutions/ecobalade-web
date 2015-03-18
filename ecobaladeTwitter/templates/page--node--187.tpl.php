@@ -138,9 +138,8 @@
 
 </div> <!-- FIN .container-mobile -->
   
-  <div id="footerOfMobile">
+  
    <?php print render($page['footer']); ?>
-  </div>
 
 
 	
