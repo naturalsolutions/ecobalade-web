@@ -33,6 +33,9 @@
 				<a href="contact#enseignant" title="">Vous êtes un enseignant ?</a>
 				<a href="contact#office" title="">Vous êtes  un office de tourisme ?</a>
 				<a href="contact#office" title="">Vous êtes une collectivité territoriale ?</a>
+				<br/>
+				<a href="partenaires" title="Présentation des partenaires du service ecoBalade">Nos partenaires</a>
+				<a href="on-en-parle" title="Vers la page &quot;On en parle&quot;, presse">On en parle</a>
 			
 			</div>
 
@@ -60,6 +63,7 @@
 
 				</div>
 
+			
 			</div>
 
 

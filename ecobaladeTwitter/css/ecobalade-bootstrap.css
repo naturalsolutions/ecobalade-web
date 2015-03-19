@@ -3792,9 +3792,7 @@ body.node-type-espece a.back-page:hover{
   footer.footer div#questions {
     padding: 80px 30px;
   }
-  footer.footer div#contact a.linkMap {
-    background-size: 15%;
-  }
+  
 }
 @media (max-width: 390px) {
   .brand{
