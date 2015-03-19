@@ -44,7 +44,7 @@ body.front div.span12 a.btn{
   font-size: 16px;
 }
 
-body.front div.span6 h3{
+body.front div#fold3 h3{
   margin-top: -10px;
 }
 
@@ -3537,6 +3537,9 @@ body.node-type-espece a.back-page:hover{
 }
 
 @media  (max-width: 979px) {
+  body.front div.zoneBtnBalade a:first-of-type{
+      margin-bottom: 10px;
+  }
   /*FOOTER*/
   footer.footer div#questions{
     background: url('../img/footer/question_icon.png') no-repeat 50% 0%;
@@ -3768,6 +3771,16 @@ body.node-type-espece a.back-page:hover{
   }
 }
 @media (max-width: 396px) {
+  body div.miniCarte{
+    margin: 10px 10px 0 0;
+  }
+  body.front div#fold3 h3 {
+    margin-top: 20px;
+    line-height: 1.4em;
+  }
+  a#uvTabLabel{
+    display: none !important;
+  }
   footer.footer .icon_android_store, footer.footer .icon_apple_store{
     color: transparent;
     height: 60px;    
