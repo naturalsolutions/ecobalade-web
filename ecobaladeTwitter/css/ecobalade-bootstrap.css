@@ -3718,18 +3718,9 @@ body.node-type-espece a.back-page:hover{
     position:absolute;
     margin-left:70%;
   }
- #block-block-4,
- .views-field-field-sponsor,
- .views-field-field-difficulte,
- .views-field-field-distance,
- .views-field-field-vote,
- .views-field-view-node,
- .views-slideshow-controls-bottom{
-  display:none;
-     }
-   .view-v-liste-balade .views-row{
-  min-height:150px;
-   }
+  .view-v-liste-balade .views-row{
+   min-height:150px;
+  }
 
    .hero-unit{
   padding:0px;
