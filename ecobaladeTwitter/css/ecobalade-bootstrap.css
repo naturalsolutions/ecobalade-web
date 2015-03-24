@@ -811,6 +811,49 @@ body.page-liste-especes .views-exposed-widgets .form-item-items-per-page {
 
 /***************************************************************************/
 /***************************************************************************/
+/*                              PAGE SITE                                  */
+/*                                                                         */
+/***************************************************************************/
+/*********************************  ****************************************/
+body.node-type-site div#slideshow_site div#caption p{
+  color: #fff;
+}
+/*gallerie*/
+body.node-type-site #galleriffic #caption {
+  position: relative;
+  margin: 0;
+  width: 500px;
+  float: left;
+  top: -67px;
+  border-radius: 0;
+  min-height: 37px;
+}
+body.node-type-site #galleriffic #caption span{
+  display: block;
+  width: 100%;
+  padding-top: 10px;
+  font-weight: normal !important;
+}
+body.node-type-site #gallery{
+  left: 21px !important;
+}
+body.node-type-site div#thumbs ul.thumbs{
+  margin-left: 20px !important;
+}
+
+body.node-type-site div#thumbs a.pageLink.prev{
+  position: absolute;
+  left: 0px;
+   
+}
+body.node-type-site div#thumbs a.pageLink.next{
+  position: absolute;
+  right: 16px;
+
+}
+/*FIN gallerie*/
+/***************************************************************************/
+/***************************************************************************/
 /*                              FOOTER                                     */
 /*                                                                         */
 /***************************************************************************/
@@ -1430,23 +1473,7 @@ div#localisation_site{
 div#slideshow-container, #galleriffic, #galleriffic #thumbs{
   width: 100% !important;
 }
-#galleriffic #caption {
-  position: relative;
-  margin: 0;
-  width: 500px;
-  float: left;
-  top: -67px;
-  border-radius: 0;
-}
-#galleriffic #caption span{
-  display: block;
-  width: 100%;
-  padding-top: 10px;
-  font-weight: normal !important;
-}
-#gallery{
-  left: 21px !important;
-}
+
 div.view-id-v_details_site #thumbs{
   opacity: 1;
   top: 468px;
@@ -2314,20 +2341,7 @@ h1,h2,h3,h4{
   max-width:216px;
 }
 
-div#thumbs ul.thumbs{
-  margin-left: 20px !important;
-}
 
-div#thumbs a.pageLink.prev{
-  position: absolute;
-  left: 0px;
-   
-}
-div#thumbs a.pageLink.next{
-  position: absolute;
-  right: 0px;
-
-}
 
 .btn-primary,#edit-submit-v-liste-balade {
   background-color:  #2E9050;
