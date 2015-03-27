@@ -58,9 +58,6 @@ body.admin-expanded.admin-vertical.admin-sw .navbar {
 div#admin-toolbar {
   z-index: 500;
 }
-div.view-v-slideshow-detail-balade div.views-slideshow-controls-bottom.clearfix{
-  margin-right: 8px !important;
-}
 .submitted {
   margin-bottom: 1em;
   font-style: italic;

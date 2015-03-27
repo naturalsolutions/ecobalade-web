@@ -39,11 +39,6 @@ body.front div.span6 p.ralewaytypo span{
   color : #4DBB74;
 }
 
-body.front div.span12 a.btn{
-  font-family: 'Raleway', sans-serif;
-  font-size: 16px;
-}
-
 body.front div#fold3 h3{
   margin-top: -10px;
 }
@@ -62,7 +57,6 @@ body.front div.span4 p span{
   font-family: 'RalewaySemiBold', sans-serif;
   color : #4DBB74;
 }
-
 
 @font-face {
     font-family: 'RockwellLight';
@@ -115,7 +109,29 @@ body.front div.span4 p span{
 body.logged-in header#navbar{
   top: 28px;
 }
-
+.page-header{
+  padding: 1% 0 1% 1%;
+  margin-bottom: 8px;
+  border-bottom: 0;
+  background-color: #FAFAFA;
+  background-image: -moz-linear-gradient(top, white, #F2F2F2);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#F2F2F2));
+  background-image: -webkit-linear-gradient(top, white, #F2F2F2);
+  background-image: -o-linear-gradient(top, white, #F2F2F2);
+  background-image: linear-gradient(to bottom, white, #F2F2F2);
+  background-repeat: repeat-x;
+  border: 1px solid #D4D4D4;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#F2F2F2', GradientType=0);
+}
+.container-node{
+  background:#E6E6E6;
+  border-radius: 4px ;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+}
 p{
   font-size:16px;
   line-height:27px;
@@ -123,11 +139,6 @@ p{
 a {
    color:#4DBB74;
 }
-/***************************************************************************/
-/*                          FIN DIVERS - Tools                             */
-/*                                                                         */
-/***************************************************************************/
-
 
 #navbar > div > div > div > nav > div:nth-child(1) > div:nth-child(6) > a{
   color: #4DBB74;
@@ -145,12 +156,22 @@ a {
 /***************************************************************************/
 /*********************************  ****************************************/
 /*********************************  ****************************************/
+body.front a#fold1BntAllBalades{
+  color: #fff;
+  margin-left: 22%; 
+  margin-top: 2%;
+}
+body.front div.zoneBtnBalade a.btn{
+    font-size: 1em;
+    border: 3px solid #4DBB74;
+    color: #fff;
+}
 body.front a#hp_button_android span.icon {
   background-position: 0px -35px;
 }
 body.front a#hp_button_android, a#hp_button_apple {
-  float: left;
   margin-top: 1.8%;
+  color: #fff;
   text-shadow: none;
   background: #4DBB74; /* Old browsers */
   background: -moz-linear-gradient(top, #4DBB740%, #2E9050 100%); /* FF3.6+ */
@@ -175,7 +196,6 @@ body.front a#hp_button_android:hover, a#hp_button_apple:hover {
 }
 
 body.front a#hp_button_apple{
-      float: left;
     margin-top: 1.8%;
 }
 /******RESEAUX SOCIAUX************************/
@@ -394,19 +414,88 @@ body.front figure{
 /***************************************************************************/
 /*********************************  ****************************************/
 /*********************************  ****************************************/
+body.node-type-balade .views-slideshow-controls-bottom .views-content-field-image > img{
+  margin: 0px 0px 5px 8px;
+  width: 82px;
+}
+body.node-type-balade .views-field.views-field-field-image-2{
+  background: #000;
+  opacity: 0.75;
+  height: 40px;
+  margin-top: -40px;
+}
+body.node-type-balade div.views-field-field-sponsor img{
+  margin: 8% 0%;
+}
+body.node-type-balade aside.region-sidebar-second h2:first-of-type{
+  margin-top: 12px;
+}
+body.node-type-balade aside.region-sidebar-second h2{
+  
+  background-color: #FAFAFA;
+  background-image: -moz-linear-gradient(top, white, #F2F2F2);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#F2F2F2));
+  background-image: -webkit-linear-gradient(top, white, #F2F2F2);
+  background-image: -o-linear-gradient(top, white, #F2F2F2);
+  background-image: linear-gradient(to bottom, white, #F2F2F2);
+  background-repeat: repeat-x;
+  font-size: 1.1em;
+  margin-top: 23px;
+  text-align: center;
+  margin-bottom: 0;
+    
+  -webkit-border-radius: 4px 4px 0px 0px;
+  -moz-border-radius: 4px 4px 0px 0px;
+  border-radius: 4px 4px 0px 0px;
+    
+}
+body.node-type-balade section#comments{
+  margin-top: 21px;
+}
+body.node-type-balade article.node-balade div.field-name-field-carte div.field-label{
+  background-color: #FAFAFA;
+  padding: 1%;
+  border-radius: 4px 0px;
+  font-family: RockwellReg;
+  font-size: 1.1em;  
+}
+body.node-type-balade article.node-balade{
+  padding: 0 1.5%;
+}
+body.node-type-balade section.span9 {
+  background-color: #fff;
+  border-radius: 4px ;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;  
+  margin: 0 0 13px 40px;
+}
+body.node-type-balade .region-sidebar-second {
+  margin-left: 8px;
+}
+body.node-type-balade .field-name-field-carte{
+  position: relative;
+  top: 10px;
+  color:#4DBB74;
+}
 body.node-type-balade .view-v-informations-pratiques-balade{
   padding: 7%;
+}
+body.node-type-balade .views_slideshow_cycle_main {
+  width: 86%;
+  float: left;
 }
 body.node-type-balade div#descriptionZone > p{
   padding: 20px 15px 20px 15px;
 }
 body.node-type-balade div.view-v-slideshow-detail-balade{
-  margin-bottom: 0 !important;
+  padding-left: 3%;
 }
 body.node-type-balade div#descriptionZone {
   position: relative;
-  top: 20px;
+  top: 35px;
   border: 1px solid #BBB;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
   border-radius: 4px;
   margin: 0px 10px;
 }
@@ -474,12 +563,13 @@ body.node-type-balade div.especes-phares{
   padding: 15px 10px 20px;
 }
 body.node-type-balade div#boutons_partage{
-  margin-left: 15px;
+  margin-left: 24px;
 }
-/*A ajouter*/
-
-body.node-type-balade div.field-content{
-  position:   relative; 
+body.node-type-balade div.view-v-slideshow-detail-balade div.field-content{
+  
+  color: #fff;
+  padding-top: 1.5%;
+  padding-left: 1%;
 }
 body.node-type-balade p.textDescro{
   font-size: 1.2em;
@@ -497,29 +587,13 @@ body.node-type-balade #btn-guide{
   width: 91%;
   border-radius: 0 0 4px 4px;
 }
-body.node-type-balade #btn-esp{
-  padding: 0;
-  margin: 0;
-  width: 99%;
-}
-body.node-type-balade #btn-esp h2{
-  margin: 0;   
-  padding: 0;
-  background: linear-gradient(to top, #2E9050, #4DBB74);
-  color: #ffffff;
+body.node-type-balade a#btn-esp {
   font-size: 1.6em;
-  line-height: 48px;
   border: none;
-  text-shadow:none;
-
-}
-body.node-type-balade #btn-esp h2:hover{
-  background: white;
-  line-height: 46px;
-  border: 1px solid #4DBB74;
-  border-radius: 4px;
-  color: #4DBB74;
-  text-shadow:none;
+  text-shadow: none;
+  padding: 6% 0;
+  width: 100%;
+  color: #fff;
 }
 body.node-type-balade div.field-name-field-difficulte{
   display: none;
@@ -556,9 +630,25 @@ body.node-type-balade section#comments section.collapseComment h2{
   cursor: pointer;
   padding-left: 10%;
 }
+body.node-type-balade ul#myTab a.back-page{
+  text-shadow: none;
+  color: #fff;
+  margin: 0;
+  border: 0;
+  padding: 1%;
+  border-radius: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-border-radius: 4px 4px 0px 0px;
+  -moz-border-radius: 4px 4px 0px 0px;
+  border-radius: 4px 4px 0px 0px;
+}
+body.node-type-balade ul#myTab {
+  position: relative;
+}
 
 /*FIN PAGE BALADE*/
-
 
 /***************************************************************************/
 /***************************************************************************/
@@ -716,12 +806,14 @@ div.view-v-on-en-parle-presse div.imageZonePress, div.view-v-on-en-parle-presse 
 
 /***************************************************************************/
 /***************************************************************************/
-/*                      PAGE LISTE ESPECE - ALL ESPECE                     */
+/*           PAGE LISTE ESPECE - ALL ESPECE -PAGE LES ESPECES              */
 /*                                                                         */
 /***************************************************************************/
 /*********************************  ****************************************/
 /*********************************  ****************************************/
-
+body.page-liste-especes .page-header{
+  margin-bottom: 0;
+}
 body.page-liste-especes body.page-liste-especes .justified-gallery>a>img, body.page-liste-especes .justified-gallery>div>img, body.page-liste-especes .justified-gallery>a>a>img, body.page-liste-especes .justified-gallery>div>a>img{
   top: 0!important;
   left: 0!important;
@@ -755,10 +847,6 @@ body.page-liste-especes .justified-gallery > a > img, body.page-liste-especes .j
     padding: 0px;
     border: 0px none;
 }
-body.page-liste-especes .page-header{
-  margin-bottom: 0px!important;
-}
-
 body.page-liste-especes .form-submit {
 	margin-left: 50px;
 }
@@ -811,7 +899,7 @@ body.page-liste-especes .views-exposed-widgets .form-item-items-per-page {
 
 /***************************************************************************/
 /***************************************************************************/
-/*                          PAGE LISTE BALADE                              */
+/*                PAGE LISTE BALADE - PAGE LES BALADE                      */
 /*                                                                         */
 /***************************************************************************/
 /*********************************  ****************************************/
@@ -825,8 +913,18 @@ body.page-liste-balades .view-v-liste-balade .views-field-field-vote{
   border-right:1px solid #BBBBBB;
   text-align: center;  
 }
+body.page-liste-balades .view-v-liste-balade .views-field-title h1 a{
+  text-decoration: none;
+}
 body.page-liste-balades .view-v-liste-balade .views-field-view-node{
   border: none;
+}
+body.page-liste-balades aside button#edit-submit-v-liste-balade{
+  border: 3px solid #4DBB74;
+}
+body.page-liste-balades aside button#edit-submit-v-liste-balade:hover{
+  background-color: #fff;
+  color: #4DBB74;
 }
 body.page-liste-balades .view-v-liste-balade .views-field-field-vote{
     height: 41px;
@@ -842,12 +940,106 @@ body.page-liste-balades .view-v-liste-balade .views-field-view-node a:hover{
   background-color: #4DBB74;
   
 }
+body.page-liste-balades .view-v-liste-balade .views-field-field-photo-resume {
+  float:left;
+  margin-right:10px;
+  max-width: 20%;
+}
+body.page-liste-balades aside{
+  width: 20%;
+  padding-left: 1.2%;
+}
+body.page-liste-balades div.views-field-field-photo-resume img {
+  
+}
+body.page-liste-balades aside h2{
+  
+  background-color: #FAFAFA;
+  background-image: -moz-linear-gradient(top, white, #F2F2F2);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#F2F2F2));
+  background-image: -webkit-linear-gradient(top, white, #F2F2F2);
+  background-image: -o-linear-gradient(top, white, #F2F2F2);
+  background-image: linear-gradient(to bottom, white, #F2F2F2);
+  background-repeat: repeat-x;
+  font-size: 1.1em;
+  margin-top: 0;
+  text-align: center;
+  margin-bottom: 0;
+    
+  -webkit-border-radius: 4px 4px 0px 0px;
+  -moz-border-radius: 4px 4px 0px 0px;
+  border-radius: 4px 4px 0px 0px;
+    
+}
+/***************************************************************************/
+/***************************************************************************/
+/*                              PAGE LES SITES                             */
+/*                                                                         */
+/***************************************************************************/
+/*********************************  ****************************************/
+body.page-les-sites .page-header{
+  margin-bottom: 0;
+}
+body.page-les-sites div#baniereMessageSite {
+  background: url("../img/close_icon.png") no-repeat 99.5% 8px rgba(0,0,0,0.55);
+  background-size: 2.5%;
+  width: 58%;
+  padding: 18px 35px 10px 30px;
+  position: absolute;
+  top: 135px;
+  z-index: 10;
+  left: 19.4%;
+  color: white;
+  text-shadow: black 0.1em 0.1em 0.2em;
+  border-radius: 0 30px 0 30px;
+}
+body.page-les-sites div#contanierOfBaniereSite{
+  position: relative;
+}
+body.page-les-sites div#btnShowHideMessage{
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 56px;
+  z-index: 9;
+  left: 47%;
+  color: rgba(0,0,0,0.6);
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 100px 125px 0 125px;
+  border-color: rgba(0,0,0,0.6)transparent transparent transparent;  
+}
+body.page-les-sites div#btnShowHideMessage p{
+  font-size: 1.6em;
+  position: absolute;
+  top: -83px;
+  left: -48px;
+  color: #fff;
+  width: 110px;
+}
+body.page-les-sites div#baniereMessageSite p a{
+  color: white;
+}
+body.page-les-sites div#baniereMessageSite p{
+  font-size: 1.4em;
+  line-height: 34px;
+  text-align: justify;
+  
+}
 /***************************************************************************/
 /***************************************************************************/
 /*                              PAGE SITE                                  */
 /*                                                                         */
 /***************************************************************************/
 /*********************************  ****************************************/
+body.node-type-site h1.page-header{
+  margin-top: 0;
+}
+body.node-type-site div.container-node > div.row-fluid{
+  border: 1px solid #e1e1e1;
+  background-color: #fff;
+}
 body.node-type-site div#slideshow_site div#caption p{
   color: #fff;
 }
@@ -1433,16 +1625,6 @@ div#picto_amphibien{
 /****************************************/
 
 /*PAGE DETAILS SITE*/
-
-.node-type-site .span12{
-  background: none repeat scroll 0 0 white;
-    border: 1px solid #BBBBBB;
-    border-radius: 4px ;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-    margin-left: 40px;
-}
-
 .node-type-site .span12 h2{
   padding: 2px;
   margin-top: 0px;
@@ -1487,15 +1669,11 @@ body.node-type-site div#blockSliderPano{
 div#details_site span.views-label-body{
   padding-bottom: 18px;
 }
-body.node-type-site h1.page-header{
-  margin-bottom: -3px;
-}
+
 #galleriffic #thumbs {
   z-index: 2;
 }
-body.node-type-site div.container-node{
-  padding-bottom: 0;
-}
+
 div#localisation_site{
   border: none;
 }
@@ -1628,74 +1806,16 @@ div.view-id-v_details_site #thumbs{
 body.page-les-sites .container-node{
   background: transparent;
 }
-/*body.page-les-sites .container{
-  background: #E6E6E6;
-}*/
+
 div.view-id-the_sites_openlayer .view-filters{
   background: #E6E6E6;
   padding: 0px 0px 2px 1px;
   margin: -15px 0px -16px 0px;
 }
-
-body.page-les-sites .container h1{
-  border-top: 0;
-  border-right: 0;
-  border-left: 0;
-  background: transparent;
-  padding-left: 0;
-}
-/*AJOUT LAST DEV PIER*/
-div#contanierOfBaniereSite{
-  position: relative;
-}
-div#btnShowHideMessage{
-  cursor: pointer;
-  display: none;
-  position: absolute;
-  top: 54px;
-  z-index: 9;
-  left: 47%;
-  color: rgba(0,0,0,0.6);
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 100px 125px 0 125px;
-  border-color: rgba(0,0,0,0.6)transparent transparent transparent;  
-}
-div#btnShowHideMessage p{
-  font-size: 1.6em;
-  
-  position: absolute;
-  top: -83px;
-  left: -48px;
-  color: #fff;
-  width: 110px;
-}
-div#baniereMessageSite p a{
-  color: white;
-}
-div#baniereMessageSite p{
-  font-size: 1.4em;
-  line-height: 34px;
-  text-align: justify;
-  
-}
 body.page-les-sites div.container-fluid{
   padding: 0 !important;
 }
-div#baniereMessageSite {
-  background: url("../img/close_icon.png") no-repeat 99.5% 8px rgba(0,0,0,0.55);
-  background-size: 2.5%;
-  width: 58%;
-  padding: 18px 35px 10px 30px;
-  position: absolute;
-  top: 122px;
-  z-index: 10;
-  left: 19.4%;
-  color: white;
-  text-shadow: black 0.1em 0.1em 0.2em;
-  border-radius: 0 30px 0 30px;
-}
+
 div.view-id-the_sites_openlayer #popup a{
   color: #fff !important;
 }
@@ -1731,11 +1851,6 @@ div.view-the-sites-openlayer h1 a{
 #title_site a{
   color:#4DBB74;
 }
-
-#image_site{
-
-}
-
 #image_site .panoramio-wapi-photolist-h panoramio-wapi-photolist{
   height: 100px;
 }
@@ -2266,11 +2381,7 @@ font-size:18px!important;
   letter-spacing : 3px;
 }
 
-a#fold1BntAllBalades{
-  float: left;
-  margin-left: 22%; 
-  margin-top: 2%;
-}
+
 
 
 section#block-views-e53a7d0ca74eada4a38ca24bbad94594{
@@ -2289,35 +2400,6 @@ display:none;
 }
 /*Petit ajout dans openlayers_style.css : Debug map balade sous IE*/
 /*Fin Rajout*/
-.container-node{
-  background:#E6E6E6;
-  border-radius: 4px ;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  padding-bottom:15px;
-}
-/*---------page aside left---------*/
-.span9 {
-    margin-left: 20px;
-    width: 70%;
-}
-aside.span3 {
-    margin-left: 40px;
-}
-/*---------page aside right----------*/
-.node-type-balade .span9, .page-espece .span9{
-  background: none repeat scroll 0 0 white;
-    border: 1px solid #BBBBBB;
-    border-radius: 4px ;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-    margin-left: 40px;
-    position: relative;
-}
-
-aside.span3.region-sidebar-second{
-    margin-left: 20px;
-}
 
 #admin-menu, #admin-menu .dropdow{
   z-index:2000;
@@ -2375,73 +2457,6 @@ h1,h2,h3,h4{
 }
 
 
-
-.btn-primary,#edit-submit-v-liste-balade {
-  background-color:  #2E9050;
-  background-image: -moz-linear-gradient(center top , #2E9050, #4DBB74);
-  background-repeat: repeat-x;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  color: #FFFFFF;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
- 
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2E9050), to(#4DBB74));
-  background-image: -webkit-linear-gradient(top, #2E9050, #4DBB74);
-  background-image: -o-linear-gradient(top, #2E9050, #4DBB74);
-  background-image: linear-gradient(to top, #2E9050, #4DBB74);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff5e852c', GradientType=0);
-  border-color: #395418 #395418 #395418;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #4DBB74;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-}
-#edit-submit-v-liste-balade,
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary.active,
-.btn-primary.disabled,
-.btn-primary[disabled] {
-  background-color: #4DBB74;
-}
-.btn-important{
-  font-size:18px;
-}
-.btn-primary img{
- margin-top:6px;
-}
-.btn-warning {
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #faa732;
-  background-image: -moz-linear-gradient(top, #E47353, #C84B2B);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#E47353), to(#C84B2B));
-  background-image: -webkit-linear-gradient(top, #E47353, #C84B2B);
-  background-image: -o-linear-gradient(top, #E47353, #C84B2B);
-  background-image: linear-gradient(to bottom, #E47353, #C84B2B);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffbb450', endColorstr='#fff89406', GradientType=0);
-  border-color: #C84B2B #C84B2B #ad6704;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #C84B2B;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-}
-.btn-warning:hover,
-.btn-warning:active,
-.btn-warning.active,
-.btn-warning.disabled,
-.btn-warning[disabled] {
-  color: #ffffff;
-  background-color: #C84B2B;
-  *background-color: #df8505;
-}
-.btn-warning:active,
-.btn-warning.active {
-  background-color: #c67605;
-}
 .navbar .nav > li{
   padding:10px;
 }
@@ -2790,28 +2805,6 @@ div.zoneEspecePhotoBalade{
 div.view-v-caracteristiques-balade div.views-field-field-difficulte div.field-content a{
   color: #fff;
 }
-.page-header{
-min-height: 40px;
-padding-right: 20px;
-padding-left: 20px;
-background-color: #FAFAFA;
-background-image: -moz-linear-gradient(top, white, #F2F2F2);
-background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#F2F2F2));
-background-image: -webkit-linear-gradient(top, white, #F2F2F2);
-background-image: -o-linear-gradient(top, white, #F2F2F2);
-background-image: linear-gradient(to bottom, white, #F2F2F2);
-background-repeat: repeat-x;
-border: 1px solid #D4D4D4;
--webkit-border-radius: 4px;
--moz-border-radius: 4px;
-border-radius: 4px;
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#F2F2F2', GradientType=0);
--webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
--moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
-line-height: 45px;
-margin-bottom:15px;
-}
 /*******************PAGE ESPECE************************/
 .picto-groupe-label{
   margin-left:20px;
@@ -2828,27 +2821,7 @@ margin-left: 1%;
 .views-field.views-field-field-description{
   margin-top:20px;
 }
-/****************SLIDESHOW DETAIL BALADE **********************/
-/*****responsive*****/
-.views_slideshow_cycle_main {
-  width: 85%;
-  float: left;
-}
-.views_slideshow_cycle_main .views-slideshow-cycle-main-frame-row {
-  width: 100% !important;
-  height: auto;
-}
-.views_slideshow_cycle_main .field-content {
-  max-width: 100%;
-  width: 100%;
-}
-.views_slideshow_cycle_main .field-content img {
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
-}
+
 /* ONGLETS PAGE BALADE*/
 li.active a.description, li.active a.espece {
 
@@ -2902,62 +2875,9 @@ max-width: none;
 #views_slideshow_cycle_main_v_slideshow_detail_balade-block_1{
   float:left;
 }
-/*#views_slideshow_cycle_div_v_slideshow_detail_balade-block_0{
-  width:728px;
-}*/
-.views-slideshow-controls-bottom .views-content-field-image > img{
-  margin:0px 0px 5px 5px;
-  width:82px;
-}
-
 .node-type-balade article, .page-espece .views-field-field-description{
     clear: both;
 }
-.region-sidebar-second h2,.region-sidebar-first h2{
-  font-size:24px;
-}
-.views-field.views-field-field-image-2{
-  background: none repeat scroll 0 0 black;
-  /* Theoretically for IE 8 & 9 (more valid) */ 
-  /* ...but not required as filter works too */
-  /* should come BEFORE filter */
-  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
-  
-  /* This works in IE 8 & 9 too */
-  /* ... but also 5, 6, 7 */
-  filter: alpha(opacity=75);
-  
-  /* Older than Firefox 0.9 */
-  -moz-opacity:0.75;
-  
-  /* Safari 1.x (pre WebKit!) */
-  -khtml-opacity: 0.75;
-    
-  /* Modern!
-  /* Firefox 0.9+, Safari 2?, Chrome any?
-  /* Opera 9+, IE 9+ */
-  opacity: 0.75;
-    height: 40px;
-    margin-top: -40px;
-    position: absolute;
-    width: 100%;
-    z-index: 8;
-}
-.views-field.views-field-field-image-2 .field-content{
-  color:white;
-  margin:10px;
-}
-.node-balade .field-label,.views-label{
-  
-}
-.node-balade .field,.node-balade .comment-wrapper, .page-espece .field-content{
-  margin:20px 15px;
-}
-.view-v-slideshow-detail-balade,.view-v-slideshow-detail-taxon{
-  margin: 10px 0px 10px 15px;
-}
-
-
 /***************************************/
 .field-name-field-description-de-la-balade .field-label,.views-label-field-description {
   background: none repeat scroll 0 0 white;
@@ -2978,39 +2898,6 @@ max-width: none;
     top: 10px;
     z-index: 1;
   line-height:24px;
-}
-.field-name-field-carte{
-  position: relative;
-    top: 10px;
-  color:#4DBB74;
-}
-.field-name-field-carte .field-label,
-.field-name-field-detail-balade,
-.region-sidebar-second h2,
-.region-sidebar-first h2{
-  min-height: 30px;
-  padding-left: 10px;
-  background-color: #FAFAFA;
-  background-image: -moz-linear-gradient(top, white, #F2F2F2);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#F2F2F2));
-  background-image: -webkit-linear-gradient(top, white, #F2F2F2);
-  background-image: -o-linear-gradient(top, white, #F2F2F2);
-  background-image: linear-gradient(to bottom, white, #F2F2F2);
-  background-repeat: repeat-x;
-  border: 1px solid #D4D4D4;
-  -webkit-border-radius: 4px 4px 0px 0px;
-  -moz-border-radius: 4px 4px 0px 0px;
-  border-radius: 4px 4px 0px 0px;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#F2F2F2', GradientType=0);
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
-  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
-  line-height: 30px;
-  font-size:18px;
-  margin:23px 0 0;
-}
-#block-views-exp-v-liste-balade-page-1 > h2:nth-child(1){
-  margin:0px; 
 }
 .view-v-caracteristiques-balade,
 .view-v-map-localisation-balade,
@@ -3137,13 +3024,8 @@ margin-top:-5px!important;
   font-size:18px;
   line-height: 12px;
 }
-.view-v-liste-balade .views-field-title h1 a{
-  color:#4DBB74;
-}
-.view-v-liste-balade .views-field-field-photo-resume {
-  float:left;
-  margin-right:10px;
-}
+
+
 
 .view-v-liste-balade .views-field-field-sponsor,
 .view-v-liste-balade .views-field-field-distance,
@@ -3186,11 +3068,6 @@ margin-top:-5px!important;
 }
 .fivestar-average-text{
   font-size:11px
-}
-#block-views-exp-v-liste-balade-page-1 h2{
-  font-size: 21px;
-    line-height: 28px;
-  border-bottom: 1px solid #BBBBBB;
 }
 .page-liste-balades .well{
   padding:0px;
@@ -3274,6 +3151,7 @@ body.front div#img-front span.txt-front p{
 
 }
 body.front div#img-front a#btn-front:hover{
+  border: 0;
   background: rgba(70, 160, 109, 1);
   -webkit-transition: background 1s;
     -moz-transition: background 1s;
@@ -3295,14 +3173,6 @@ body.front div#img-front a#btn-front{
 
 /**fin img-front**/
 
-button#edit-submit-v-liste-balade:hover{
-  -webkit-transition: 0 !important; 
-  background-position: 0 !important;
-  background: #ffffff;
-  border: 3px solid #4DBB74;
-  color: #4DBB74; 
-  max-height: 30px;
-}
 button#edit-submit-the-sites-openlayer:hover{
   -webkit-transition: 0 !important; 
   background-position: 0 !important;
@@ -3319,13 +3189,10 @@ body.front a#fold1BntAllBalades:hover{
 
 
 body.front div.zoneBtnBalade a:hover{
-  -webkit-transition: 0 !important; 
+  -webkit-transition: 0 !important;
   background-position: 0 !important;
   background: #ffffff;
-  border: 3px solid #4DBB74;
-  line-height: 17px;
   color: #4DBB74;
-  text-shadow: none;
 }
 body.front a.email:hover{
   -webkit-transition: 0 !important; 
@@ -3353,9 +3220,7 @@ body.front #fold2 > h2{
 }
 
 /***Sponsort***/
-body.node-type-balade div.views-field-field-sponsor img{
-  margin: 8% 4%;
-}
+
 body.node-type-balade div.views-field-field-sponsort-2 img{
   border-top: 1px dotted #4DBB74;
   border-bottom: 1px dotted #4DBB74;
@@ -3371,22 +3236,6 @@ margin-left: 9%;
 /***FinSponsort***/
 
 
-/***BtnBack***/
-body.node-type-balade ul a.back-page{
-  margin: 0px;
-  line-height: 17px;
-  margin-top: 5px;
-  margin-right: 0.4%;
-  text-shadow: none;
-  font-size: 15px;
-}
-body.node-type-balade ul a.back-page:hover{
-  transition: none;
-}
-body.node-type-espece a.back-page:hover{
-  transition: none;
-}
-/***FinBtnBack***/
 /******************MEDIA QUERIES***************/
 /* Large desktop au dessous de 1235*/
 @media (max-width: 1235px) {
@@ -3395,15 +3244,23 @@ body.node-type-espece a.back-page:hover{
   }
 
 }
-/*Au dessus de 1200*/
-@media (min-width: 1200px) {
-  .views_slideshow_cycle_main{
-    width:88%;
-  }
-
-}
 /*En dessous de 1200*/
 @media (max-width: 1199px){
+  /*PAGE BOUTIQUE*/
+  body.page-boutique div.sideBarBoutique{
+    width: 100%;
+    position: relative;
+    background-size: 40%;
+    text-align: center;
+  }
+  body.page-boutique iframe{
+    width: 100%;
+  }
+  /*PAGE BALADE*/
+  body.node-type-balade section.span9 {
+    margin: 0 0 0 20px;
+    border: 1px solid #e1e1e1;
+  }
   /*FOOTER*/
   footer.footer .icon_android_store, footer.footer .icon_apple_store {
     width: 100%;
@@ -3484,6 +3341,97 @@ body.node-type-espece a.back-page:hover{
 }
 
 @media  (max-width: 979px) {
+  /*PAGE SITE*/
+  body.node-type-site #slideshow_site {
+    margin-top: 51px;
+  }
+  body.node-type-site #gallery {
+    left: 0;
+  }
+  body.node-type-site #galleriffic #caption {
+    position: absolute;
+    top: 397px;
+    width: 500px;
+    left: 0;
+    width: 500px;
+  }
+  /*PAGE LES SITES*/
+  body.page-les-sites div#btnShowHideMessage {
+    left: 40%;
+  }
+  body.page-les-sites  div.panoramio-wapi-photolist {
+      display: inline-block;
+  }
+  body.page-les-sites  div#image_site {
+      text-align: center;
+  }
+  body.page-les-sites #title_site h1 {
+    text-align: center;
+  }
+  /*Divers*/
+  [class*="span"], .row-fluid [class*="span"] {
+    -moz-box-sizing: border-box;
+    display: block;
+    float: none;
+    margin-left: 0;
+    width: 100%;
+  }
+  body .navbar .brand {
+    height: auto;
+  }
+  /*PAGE LES BALADES*/
+  body.page-liste-balades div.container-node > .row > aside, body.page-liste-balades div.container-node > .row > section {
+    width: 97.4%;
+    padding-left: 2.7%;
+  }
+  /*PAGE LISTE ESPECE*/
+  body.page-liste-especes div#image_specie, body.page-liste-especes div#title_specie, body.page-liste-especes div#descro_specie, body.page-liste-especes div#lien_specie{
+    float: left;
+    width: auto;
+  }
+  /*PAGE BALADE*/
+  body.node-type-balade div.view-v-balade-similaire div.views-field-title {
+    font-size: 1em;
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+  body.node-type-balade div#image_specie, body.node-type-balade div#title_specie, body.node-type-balade div#descro_specie, body.node-type-balade div#lien_specie{
+    float: left;
+    width: auto;
+  }
+  body.node-type-balade .region-sidebar-second {
+    width: 97.2%;
+    margin: 0 0 0 20px;
+    border: 1px solid #e1e1e1;
+  }
+  body.node-type-balade aside.region-sidebar-second h2 {
+    margin-top: 0px;
+  }
+  body.node-type-balade aside.region-sidebar-second h2:first-of-type {
+    margin-top: 0;
+  }
+  body.node-type-balade aside{
+    text-align: center;
+  }
+  body.node-type-balade ul#myTab a.back-page {
+    height: 59%;
+  }
+  body.node-type-balade section.span9{
+    width: 97.2%;
+  }
+  body.node-type-balade .views_slideshow_cycle_main {
+    float: none;
+  }
+  body.node-type-balade div#boutons_partage {
+    margin-top: 5px;
+  }
+  body.node-type-balade .views_slideshow_cycle_main {
+    width: 96%;
+  }
+  /*PAGE ACCUEIL - HP */
+  body.front a#fold1BntAllBalades {
+    margin-left: 0;
+  }
   body.front div.zoneBtnBalade a:first-of-type{
       margin-bottom: 10px;
   }
@@ -3563,13 +3511,7 @@ body.node-type-espece a.back-page:hover{
   #navbar > div > div > a.brand > img {
     height: auto;
   }
-  [class*="span"], .row-fluid [class*="span"] {
-    -moz-box-sizing: border-box;
-    display: block;
-    float: none;
-    margin-left: 0;
-    width: 100%;
-  }
+
   .navbar .brand img{
     width:260px;
   } 
@@ -3602,10 +3544,7 @@ body.node-type-espece a.back-page:hover{
     display:none;
    }
    
-  aside.span3,.span9,aside.region-sidebar-second.span3,.node-type-balade .span9,.page-espece .span9{
-    margin-left:20px;
-    width:97%;
-  }
+
   .views_slideshow_cycle_main {
   width: 97.5%;
   }
@@ -3614,6 +3553,25 @@ body.node-type-espece a.back-page:hover{
 
 @media (max-width: 767px) {
 
+  /*PAGE LES BALADES*/
+  body.page-liste-balades div.container-node > .row > aside, body.page-liste-balades div.container-node > .row > section {
+    width: 95.7%;
+  }
+  body.page-liste-balades .view-v-liste-balade .views-field-view-node a {
+    font-size: 2em;
+  }
+  /*PAGE BALADE*/
+  body.node-type-balade div#les_picto_balades div{
+    width: 90px;
+    height: 90px;
+  }
+  body.node-type-balade ul#myTab a.back-page {
+    height: 62%;
+  }
+  body.node-type-balade section.span9, body.node-type-balade aside.region-sidebar-second {
+    width: 100%;
+    margin: 0;
+  }
   /*LISTE BALADE*/
   body.page-liste-balades .view-v-liste-balade .views-field-view-node, 
   body.page-liste-balades .view-v-liste-balade .views-field-field-sponsor, 
@@ -3629,6 +3587,7 @@ body.node-type-espece a.back-page:hover{
     text-align: center;
     margin-right: 0;
     padding-bottom: 12px;
+    max-width: 100%;
   }
   body.page-liste-balades .view-v-liste-balade .views-field-title {
     text-align: center;    
@@ -3730,8 +3689,18 @@ body.node-type-espece a.back-page:hover{
     background: none;  
     display: none;
   }
+  body.node-type-balade ul#myTab a.back-page {
+    display: none;
+  }
 }
 @media (max-width: 396px) {
+  /*HP*/
+  body.front div.friseEspece .span2 {
+    width: 120px;
+  }
+  body.front .img-polaroid {
+    width: 120px;
+  }
   body div.miniCarte{
     margin: 10px 10px 0 0;
   }
@@ -3799,14 +3768,17 @@ body.node-type-espece a.back-page:hover{
 
 
 @media (max-width: 300px) {
-.brand{
-position: relative;
-	top: 0px!important;
-	padding-bottom: 0px!important;
-}
-body {
-  padding-top:20px!important;
-}
+  body.front div.friseEspece, body.front > div.container > div > section > h4{
+    display: none;
+  }
+  .brand{
+  position: relative;
+  	top: 0px!important;
+  	padding-bottom: 0px!important;
+  }
+  body {
+    padding-top:20px!important;
+  }
   div#container-mobile div#titleOfMobileApp p {
     font-size: 2em;
   }

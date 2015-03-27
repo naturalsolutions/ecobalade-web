@@ -25,107 +25,10 @@
     		  <?php endif; ?>
     		</hgroup>
   	  <?php endif; ?>
-	  <!-- PLUGIN SOCIAL TEST
-	  <div id="socialBar" class='shareaholic-canvas' data-shareaholic-widgets='share_buttons'></div>
-	  
-	  <script type="text/javascript">
-		//<![CDATA[
-		  (function() {
-			var shr = document.createElement('script');
-			shr.src = '//dtym7iokkjlif.cloudfront.net/assets/pub/shareaholic.js';
-			shr.type = 'text/javascript';
-			shr.async = 'true';
-			shr.onload = shr.onreadystatechange = function() {
-			  var rs = this.readyState;
-			  if (rs && rs != 'complete' && rs != 'loaded') return;
-			  var apikey = '1fb5267c527c937899cbd172c03ededd'
-			  try { Shareaholic.init(apikey); } catch (e) {}
-			};
-			var s = document.getElementsByTagName('script')[0];
-			s.parentNode.insertBefore(shr, s);
-		  })();
-		//]]>
-		</script>
-  	  -->
   	  <div class="nav-collapse pull-right">
     	  <nav role="navigation">
       		<?php if ($primary_nav): ?>
-      		  <?php //print $primary_nav;  ?>
-			<!-- Personalisation du menu pour la page d'accueil. Pour comportement sans menu deroulant -->
-			<div style='font-size:18px;float:right;padding-top:4%;padding-bottom:4%;'>
-
-				<div style='float:left;'>
-					<a href="" alt="Accueil" style="background: none repeat scroll 0% 0% rgb(77, 187, 116);
-					border-radius: 2px 2px 2px 2px;
-					color: white;
-					display: block;
-					float: none;
-					text-decoration: none;
-					padding: 10px 15px;
-					text-shadow: 0px 1px 0px rgb(46, 144, 80);"
-					class="active">Accueil</a>
-				</div>
-				<div style="float:left;padding-left:15px;"><a href="liste-balades" alt="Liens vers les balades" 
-					style="background: none repeat scroll 0% 0%;
-					border-radius: 2px 2px 2px 2px;
-					color: rgb(119, 119, 119);
-					display: block;
-					float: none;
-					padding: 10px 15px;
-					text-decoration: none;
-					text-shadow: 0px 1px 0px rgb(255, 255, 255);"
-					class="active">Les balades</a>
-				</div>
-				
-				<div style="float:left;padding-left:15px;"><a href="liste-especes" alt="Liens vers les Espèces" 
-					style="background: none repeat scroll 0% 0%;
-					border-radius: 2px 2px 2px 2px;
-					color: rgb(119, 119, 119);
-					display: block;
-					float: none;
-					padding: 10px 15px;
-					text-decoration: none;
-					text-shadow: 0px 1px 0px rgb(255, 255, 255);"
-					class="active">Les espèces</a>
-				</div>
-				
-				<div style="float:left;padding-left:15px;"><a href="les-sites" alt="Liens vers les Sites" 
-					style="background: none repeat scroll 0% 0%;
-					border-radius: 2px 2px 2px 2px;
-					color: rgb(119, 119, 119);
-					display: block;
-					float: none;
-					padding: 10px 15px;
-					text-decoration: none;
-					text-shadow: 0px 1px 0px rgb(255, 255, 255);"
-					class="active">Les sites</a>
-				</div>				
-				
-				<div style="float:left;padding-left:15px;"><a href="content/mobile" alt="Liens vers la page mobile" 
-					style="background: none repeat scroll 0% 0%;
-					border-radius: 2px 2px 2px 2px;
-					color: rgb(119, 119, 119);
-					display: block;
-					float: none;
-					padding: 10px 15px;
-					text-decoration: none;
-					text-shadow: 0px 1px 0px rgb(255, 255, 255);"
-					class="active">Mobile</a>
-				</div>
-				<div style="float:left;padding-left:15px;"><a href="boutique" alt="Liens vers la boutique" 
-					style="background: none repeat scroll 0% 0%;
-					border-radius: 2px 2px 2px 2px;
-					display: block;
-					float: none;
-					padding: 10px 15px;
-					text-decoration: none;
-					text-shadow: 0px 1px 0px rgb(255, 255, 255);"
-					class="active">La boutique</a>
-				</div>
-				
-			</div>
-
-
+      		  <?php print $primary_nav; ?>
       		<?php endif; ?>
       	  
       		<?php if ($search): ?>

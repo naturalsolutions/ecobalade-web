@@ -176,7 +176,7 @@
     <?php if ($page['sidebar_second']): ?>
       <aside class="span3 region-sidebar-second" role="complementary">
        <?php if ($node): ?>  
-	    <a id="btn-esp" class="btn btn-primary" alt="lien vers la liste des espèces" href="#" title="Les espèces a découvrir" ><h2>Espèces à découvrir</h2></a>
+	    <a id="btn-esp" class="btn btn-primary" alt="lien vers la liste des espèces" href="#" title="Les espèces a découvrir" >Espèces à découvrir</a>
 		<h2>Randonner avec un guide ?</h2>
 		<?php print views_embed_view('v_guide_balade','block',$baladenid);?>
 		<?php if($baladenid != '104' && $baladenid != '2387' && $baladenid != '270' && $baladenid != '2237' && $baladenid != '2355' && $baladenid != '269' && $baladenid != '2354' && $baladenid != '2356' && $baladenid != '2353' && $baladenid != '268' && $baladenid != '2416' && $baladenid != '2358' ):?>
