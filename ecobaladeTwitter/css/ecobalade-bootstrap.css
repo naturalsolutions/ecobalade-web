@@ -657,8 +657,31 @@ body.node-type-balade ul#myTab {
 /***************************************************************************/
 /*********************************  ****************************************/
 /*********************************  ****************************************/
-body.node-type-espece div#boutons_partage{
-  padding-left: 13px;
+body.node-type-espece div#blockSlideEsp div.views-field-field-image-2{
+  position: absolute;
+  bottom: 0px;
+  padding: 2%;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  color: #fff;
+}
+body.node-type-espece div#blockSlideEsp{
+  position: relative;
+}
+body.node-type-espece div#views_slideshow_cycle_main_v_slideshow_detail_taxon-block{
+  width: 85%;
+  float: left;
+  padding-left: 3%;
+}
+body.node-type-espece div#views-slideshow-controls-bottom{
+  float: left;
+}
+body.node-type-espece div.views-slideshow-pager-field-item.views_slideshow_pager_field_item{
+  padding-bottom: 8px;
+}
+body.node-type-espece div#boutons_partage {
+  padding-left: 23px;
+  margin-top: 5px;
 }
 body.node-type-espece div.container-node{
   padding-bottom: 0;
