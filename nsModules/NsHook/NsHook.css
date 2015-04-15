@@ -1,0 +1,19 @@
+form#fiche-taxon-node-form div.form-item-field-crit-res-und-1134 input,  form#fiche-taxon-node-form div.form-item-field-crit-res-und-1135 input, form#fiche-taxon-node-form div.form-item-field-crit-res-und-1139 input, form#fiche-taxon-node-form div.form-item-field-crit-res-und-1143 input, form#fiche-taxon-node-form div.form-item-field-crit-res-und-1150 input{
+	visibility:hidden;
+	}
+	 form#fiche-taxon-node-form div#edit-field-crit-res div.form-item.form-type-checkbox{
+	float:left;width:15%;
+	} form#fiche-taxon-node-form div.form-item-field-crit-res-und-1134, form#fiche-taxon-node-form div.form-item-field-crit-res-und-1135, form#fiche-taxon-node-form div.form-item-field-crit-res-und-1139, form#fiche-taxon-node-form div.form-item-field-crit-res-und-1143, form#fiche-taxon-node-form div.form-item-field-crit-res-und-1150{
+	float:left;width:100% !important;margin-top:3%! important;border-bottom:1px dotted !important;
+	}
+	 form#fiche-taxon-node-form div.vertical-tabs.clearfix{
+	float:left;margin-top:4%;width:100%;
+	}
+	 form#fiche-taxon-node-form div#edit-actions{
+	float:right;margin-top:1%;
+	}
+	 form#fiche-taxon-node-form div#edit-field-image-mobile-fiche-esp-ce,  form#fiche-taxon-node-form div#edit-field-image-mobile-minature,  form#fiche-taxon-node-form div#edit-field-image-mobile-diaporama, form#fiche-taxon-node-form div#edit-field-son{
+	float: left;
+	padding-top: 4%;
+	width: 100%;
+	}

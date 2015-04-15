@@ -1,0 +1,10 @@
+name = NsHook
+description =  Module permettant d'alterer le BO lors de l'edition d'une fiche taxon
+package = nsModule
+
+core = 7.x
+version = 7.x-1.0-beta1 
+files[] = NsHook.module
+scripts[] = NsHook.js
+
+;php = 5.2
