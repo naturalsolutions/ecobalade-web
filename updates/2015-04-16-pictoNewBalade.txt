@@ -1,1 +1,234 @@
 ##
+
+:> Maj "v_liste_balade" {## 
+
+$view = new view();
+$view->name = 'v_liste_balade';
+$view->description = 'Liste des balades pour une application ecoBalade';
+$view->tag = 'default';
+$view->base_table = 'node';
+$view->human_name = 'v_liste_balade';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = 'Liste des balades';
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'perm';
+$handler->display->display_options['cache']['type'] = 'none';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['exposed_form']['options']['submit_button'] = 'Recherchez';
+$handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Réinitialiser';
+$handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Trier par';
+$handler->display->display_options['pager']['type'] = 'none';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['row_plugin'] = 'fields';
+/* Champ: Contenu: Titre */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['label'] = '';
+$handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['title']['element_type'] = 'h1';
+$handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+/* Champ: Contenu: Photo Résumé */
+$handler->display->display_options['fields']['field_photo_resume']['id'] = 'field_photo_resume';
+$handler->display->display_options['fields']['field_photo_resume']['table'] = 'field_data_field_photo_resume';
+$handler->display->display_options['fields']['field_photo_resume']['field'] = 'field_photo_resume';
+$handler->display->display_options['fields']['field_photo_resume']['label'] = '';
+$handler->display->display_options['fields']['field_photo_resume']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_photo_resume']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_photo_resume']['settings'] = array(
+  'image_style' => 'mise_echelle_recadrage_400x240',
+  'image_link' => 'content',
+);
+/* Champ: Contenu: texte slideshow */
+$handler->display->display_options['fields']['field_teaser']['id'] = 'field_teaser';
+$handler->display->display_options['fields']['field_teaser']['table'] = 'field_data_field_teaser';
+$handler->display->display_options['fields']['field_teaser']['field'] = 'field_teaser';
+$handler->display->display_options['fields']['field_teaser']['label'] = '';
+$handler->display->display_options['fields']['field_teaser']['element_type'] = 'p';
+$handler->display->display_options['fields']['field_teaser']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_teaser']['element_wrapper_class'] = 'clearfix';
+/* Champ: Contenu: Sponsor */
+$handler->display->display_options['fields']['field_sponsor']['id'] = 'field_sponsor';
+$handler->display->display_options['fields']['field_sponsor']['table'] = 'field_data_field_sponsor';
+$handler->display->display_options['fields']['field_sponsor']['field'] = 'field_sponsor';
+$handler->display->display_options['fields']['field_sponsor']['label'] = '';
+$handler->display->display_options['fields']['field_sponsor']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_sponsor']['empty'] = '<a href=\'http://www.ecobalade.fr/contact#office\' alt=\'\'><img width=\'45%\' src=\'http://www.ecobalade.fr/sites/default/files/votreLogo.jpg\' alt=\'Logo sponsor de la balade\' /></a>';
+$handler->display->display_options['fields']['field_sponsor']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_sponsor']['settings'] = array(
+  'image_style' => 'thumbnail_sponsort',
+  'image_link' => '',
+);
+/* Champ: Contenu: Distance */
+$handler->display->display_options['fields']['field_distance']['id'] = 'field_distance';
+$handler->display->display_options['fields']['field_distance']['table'] = 'field_data_field_distance';
+$handler->display->display_options['fields']['field_distance']['field'] = 'field_distance';
+$handler->display->display_options['fields']['field_distance']['settings'] = array(
+  'thousand_separator' => ',',
+  'decimal_separator' => '.',
+  'scale' => '2',
+  'prefix_suffix' => 1,
+);
+/* Champ: Contenu: Difficulté */
+$handler->display->display_options['fields']['field_difficulte']['id'] = 'field_difficulte';
+$handler->display->display_options['fields']['field_difficulte']['table'] = 'field_data_field_difficulte';
+$handler->display->display_options['fields']['field_difficulte']['field'] = 'field_difficulte';
+$handler->display->display_options['fields']['field_difficulte']['type'] = 'taxonomy_term_reference_plain';
+/* Champ: Contenu: Vote */
+$handler->display->display_options['fields']['field_vote']['id'] = 'field_vote';
+$handler->display->display_options['fields']['field_vote']['table'] = 'field_data_field_vote';
+$handler->display->display_options['fields']['field_vote']['field'] = 'field_vote';
+$handler->display->display_options['fields']['field_vote']['label'] = '';
+$handler->display->display_options['fields']['field_vote']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_vote']['click_sort_column'] = 'rating';
+$handler->display->display_options['fields']['field_vote']['settings'] = array(
+  'widget' => array(
+    'fivestar_widget' => 'sites/all/modules/fivestar/widgets/oxygen/oxygen.css',
+  ),
+  'expose' => 1,
+  'style' => 'average',
+  'text' => 'average',
+);
+/* Champ: Contenu: Lien */
+$handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+$handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+$handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+$handler->display->display_options['fields']['view_node']['label'] = '';
+$handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['view_node']['text'] = 'En savoir +';
+/* Champ: Contenu: Post date */
+$handler->display->display_options['fields']['created']['id'] = 'created';
+$handler->display->display_options['fields']['created']['table'] = 'node';
+$handler->display->display_options['fields']['created']['field'] = 'created';
+$handler->display->display_options['fields']['created']['label'] = '';
+$handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['created']['date_format'] = 'short';
+$handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+$handler->display->display_options['fields']['created']['timezone'] = 'Europe/Paris';
+/* Sort criterion: Contenu: Post date */
+$handler->display->display_options['sorts']['created']['id'] = 'created';
+$handler->display->display_options['sorts']['created']['table'] = 'node';
+$handler->display->display_options['sorts']['created']['field'] = 'created';
+$handler->display->display_options['sorts']['created']['order'] = 'DESC';
+/* Filter criterion: Contenu: Publié */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Contenu: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'balade' => 'balade',
+);
+$handler->display->display_options['filters']['type']['group'] = 1;
+/* Filter criterion: Contenu: Difficulté (field_difficulte) */
+$handler->display->display_options['filters']['field_difficulte_tid']['id'] = 'field_difficulte_tid';
+$handler->display->display_options['filters']['field_difficulte_tid']['table'] = 'field_data_field_difficulte';
+$handler->display->display_options['filters']['field_difficulte_tid']['field'] = 'field_difficulte_tid';
+$handler->display->display_options['filters']['field_difficulte_tid']['group'] = 1;
+$handler->display->display_options['filters']['field_difficulte_tid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_difficulte_tid']['expose']['operator_id'] = 'field_difficulte_tid_op';
+$handler->display->display_options['filters']['field_difficulte_tid']['expose']['label'] = 'Difficulté';
+$handler->display->display_options['filters']['field_difficulte_tid']['expose']['operator'] = 'field_difficulte_tid_op';
+$handler->display->display_options['filters']['field_difficulte_tid']['expose']['identifier'] = 'field_difficulte_tid';
+$handler->display->display_options['filters']['field_difficulte_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_difficulte_tid']['vocabulary'] = 'difficult_';
+/* Filter criterion: Contenu: Distance (field_distance) */
+$handler->display->display_options['filters']['field_distance_value']['id'] = 'field_distance_value';
+$handler->display->display_options['filters']['field_distance_value']['table'] = 'field_data_field_distance';
+$handler->display->display_options['filters']['field_distance_value']['field'] = 'field_distance_value';
+$handler->display->display_options['filters']['field_distance_value']['group'] = 1;
+$handler->display->display_options['filters']['field_distance_value']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_distance_value']['expose']['operator_id'] = 'field_distance_value_op';
+$handler->display->display_options['filters']['field_distance_value']['expose']['label'] = 'Distance (en km)';
+$handler->display->display_options['filters']['field_distance_value']['expose']['operator'] = 'field_distance_value_op';
+$handler->display->display_options['filters']['field_distance_value']['expose']['identifier'] = 'field_distance_value';
+/* Filter criterion: Contenu: Type de circuit (field_type_de_circuit) */
+$handler->display->display_options['filters']['field_type_de_circuit_tid']['id'] = 'field_type_de_circuit_tid';
+$handler->display->display_options['filters']['field_type_de_circuit_tid']['table'] = 'field_data_field_type_de_circuit';
+$handler->display->display_options['filters']['field_type_de_circuit_tid']['field'] = 'field_type_de_circuit_tid';
+$handler->display->display_options['filters']['field_type_de_circuit_tid']['group'] = 1;
+$handler->display->display_options['filters']['field_type_de_circuit_tid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_type_de_circuit_tid']['expose']['operator_id'] = 'field_type_de_circuit_tid_op';
+$handler->display->display_options['filters']['field_type_de_circuit_tid']['expose']['label'] = 'Type de circuit';
+$handler->display->display_options['filters']['field_type_de_circuit_tid']['expose']['operator'] = 'field_type_de_circuit_tid_op';
+$handler->display->display_options['filters']['field_type_de_circuit_tid']['expose']['identifier'] = 'field_type_de_circuit_tid';
+$handler->display->display_options['filters']['field_type_de_circuit_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_type_de_circuit_tid']['vocabulary'] = 'type_de_circuit';
+
+/* Display: Page */
+$handler = $view->new_display('page', 'Page', 'page_1');
+$handler->display->display_options['exposed_block'] = TRUE;
+$handler->display->display_options['metatags'] = array(
+  'description' => array(
+    'value' => 'Liste des balades : Le Pic des Mouches - Montagne Sainte-Victoire, L\'oppidum - Montagne Sainte-Victoire, Le Lac de Bimont - Montagne Sainte-Victoire, Archipel du Frioul, Presqu\'île de Giens, Les Crêtes du Mont Faron, La Belle Pierre, La Mine de Cap Garonne',
+  ),
+  'abstract' => array(
+    'value' => '[view:description]',
+  ),
+  'keywords' => array(
+    'value' => 'balades, balade, rando, randonnée, randonnées, nature, parcours, sentier, application, app, flore, faune, [view:title]',
+  ),
+  'robots' => array(
+    'value' => array(
+      'index' => 'index',
+      'follow' => 'follow',
+      'noindex' => 0,
+      'nofollow' => 0,
+      'noarchive' => 0,
+      'nosnippet' => 0,
+      'noodp' => 0,
+      'noydir' => 0,
+      'noimageindex' => 0,
+      'notranslate' => 0,
+    ),
+  ),
+  'news_keywords' => array(
+    'value' => 'balades, balade, rando, randonnée, randonnées, nature, parcours, sentier, application, app, flore, faune, [view:title]',
+  ),
+  'copyright' => array(
+    'value' => 'natural-solutions',
+  ),
+  'author' => array(
+    'value' => 'https://plus.google.com/106878953750776121381/posts',
+  ),
+);
+$handler->display->display_options['path'] = 'liste-balades';
+$handler->display->display_options['menu']['type'] = 'normal';
+$handler->display->display_options['menu']['title'] = 'Les balades';
+$handler->display->display_options['menu']['description'] = 'Listes des balades';
+$handler->display->display_options['menu']['weight'] = '0';
+$handler->display->display_options['menu']['name'] = 'main-menu';
+$handler->display->display_options['menu']['context'] = 0;
+$translatables['v_liste_balade'] = array(
+  t('Master'),
+  t('Liste des balades'),
+  t('more'),
+  t('Recherchez'),
+  t('Réinitialiser'),
+  t('Trier par'),
+  t('Asc'),
+  t('Desc'),
+  t('<a href=\'http://www.ecobalade.fr/contact#office\' alt=\'\'><img width=\'45%\' src=\'http://www.ecobalade.fr/sites/default/files/votreLogo.jpg\' alt=\'Logo sponsor de la balade\' /></a>'),
+  t('Distance'),
+  t('Difficulté'),
+  t('En savoir +'),
+  t('Distance (en km)'),
+  t('Type de circuit'),
+  t('Page'),
+);
+
+
+##}
