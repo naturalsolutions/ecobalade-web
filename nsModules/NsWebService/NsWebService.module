@@ -97,7 +97,7 @@ function NsWebService_find_balade_information($nitems, $timestamp, $id, $balade,
   
   if ($espece == 'list') {
     
-    //http://192.168.1.102/ecobalade-pierre/data/balade/retrieve?espece=list
+    //http://192.168.1.102/ecobalade-pierre/data/xml/retrieve?espece=list
 
     $query->addField('n', 'title', 'espece');
     $query->addField('n', 'nid', 'nidHide');
@@ -109,7 +109,7 @@ function NsWebService_find_balade_information($nitems, $timestamp, $id, $balade,
   }
   else if ($espece == 'detail') { 
 
-    //http://192.168.1.102/ecobalade-pierre/data/balade/retrieve?espece=detail
+    //http://192.168.1.102/ecobalade-pierre/data/xml/retrieve?espece=detail
 
     //Nom scientifique 
     $query->join('field_revision_field_nom_scientifique', 'j', '(j.revision_id = n.vid)');
@@ -152,7 +152,7 @@ function NsWebService_find_balade_information($nitems, $timestamp, $id, $balade,
   }
   else if ($balade == 'list') { 
 
-    //http://192.168.1.102/ecobalade-pierre/data/balade/retrieve?balade=list
+    // /data/xml/retrieve?balade/retrieve?balade=list
   
     $query->addField('n', 'title', 'balade');
     $query->addField('n', 'nid', 'nidHide');
@@ -162,7 +162,7 @@ function NsWebService_find_balade_information($nitems, $timestamp, $id, $balade,
   
   }else{
 
-    //http://192.168.1.102/ecobalade-pierre/data/balade/retrieve?nitems=5&since=10
+    // /data/xml/retrieve?balade=detail?nitems=5&since=10
   
     //Description 
     $query->join('field_revision_field_description_de_la_balade', 'd', '(d.revision_id = n.vid)');
