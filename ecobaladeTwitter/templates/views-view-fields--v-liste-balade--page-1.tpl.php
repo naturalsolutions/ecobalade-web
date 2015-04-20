@@ -26,12 +26,11 @@
 ?>
 <?php foreach ($fields as $id => $field): ?>
   
-    <?php if ($id == 'created') : ?>
-				<?php if (!empty($field->content)): ?>
-						<?php $created =  $field->content; ?>
-				<?php endif; ?>
-	<?php endif;?>
-
+  <?php if ($id == 'created') : ?>
+    <?php if (!empty($field->content)): ?>
+      <?php $created =  $field->content; ?>
+    <?php endif; ?>
+  <?php endif;?>
 
   <?php if (!empty($field->separator)): ?>
     <?php print $field->separator; ?>
@@ -43,45 +42,29 @@
   <?php print $field->wrapper_suffix; ?>
 <?php endforeach; ?>
 		
-
-<!--
-<?php $today = date("d/m/Y - H:i"); ?>
-<?php $tabOfCreatedDate = explode('/', $created); ?>
-<?php echo 'd:'.$day = $tabOfCreatedDate[0].'<br/>'; ?>
-<?php echo 'm:'.$month = $tabOfCreatedDate[1].'<br/>'; ?>
-<?php $tabOfYearAndTime = explode('-', $created); ?>
-<?php $tempTab1 = explode('/', $str); ?>
-
 <?php 
-	
-	$DateCreated = new DateTime();
-	$DateCreated->setDate(2001, 2, 3);
+date_default_timezone_set('Europe/Paris');
+
+//Date du jour
+$today = new DateTime('NOW');
+
+// On convertie la date de creation en formatDateTime pour diff php
+$tabOfCreatedDate = explode('/', $created); 
+
+$day = $tabOfCreatedDate[1]; 
+$month = strip_tags($tabOfCreatedDate[0]);
+$tabOfCreatedDate1 = explode('-', $tabOfCreatedDate[2]); 
+$year = trim($tabOfCreatedDate1[0]); 
+
+//On creer notre deuxieme dateTime avec les valeur réperer en splitant la date created envioyé par la vue
+$DateCreated = new DateTime();
+$DateCreated->setDate($year, $month, $day);
+
+//Comparaison des deux dates
+$diff = $today->diff($DateCreated);
+$nbDaysDiff = $diff->days; 
+
+//Si le nombre de jour < 60, cad 2 mois alors on affiche le logo nouvelle balade
+if($nbDaysDiff < 60) echo "<p class='newBalade'>Nouveau !</p>";
 
 ?>
-<?php //echo 'today :'.$today.'<br/>'; ?>
-<?php echo 'created: '.$created.'<br/>'; ?>
-
-	<?php 
-
-	    
-    $diff = abs($today - $DateCreated); // abs pour avoir la valeur absolute, ainsi éviter d'avoir une différence négative
-    $retour = array();
- 
-    $tmp = $diff;
-    $retour['second'] = $tmp % 60;
- 
-    $tmp = floor( ($tmp - $retour['second']) /60 );
-    $retour['minute'] = $tmp % 60;
- 
-    $tmp = floor( ($tmp - $retour['minute'])/60 );
-    $retour['hour'] = $tmp % 24;
- 
-    $tmp = floor( ($tmp - $retour['hour'])  /24 );
-    $retour['day'] = $tmp;
- 
-	
-	?>
-	<pre><?php print_r($tabOfYearAndTime); ?></pre>
-	<pre><?php print_r($tempTab1); ?></pre>
-	
--->

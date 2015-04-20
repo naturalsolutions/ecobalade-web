@@ -43,7 +43,36 @@
   	</div>
   </div>
 </header>
-<?php global $base_url; ?>
+
+<?php 
+
+global $base_url; 
+
+date_default_timezone_set('Europe/Paris');
+
+$datePubli = format_date($timestamp = $node->created, $type = 'custom', $format = 'm/d/Y - H:i', $timezone = 'Europe/Paris'); 
+
+//Date du jour
+$today = new DateTime('NOW');
+
+// On convertie la date de creation en formatDateTime pour diff php
+$tabOfCreatedDate = explode('/', $datePubli); 
+
+$day = $tabOfCreatedDate[1]; 
+$month = strip_tags($tabOfCreatedDate[0]);
+$tabOfCreatedDate1 = explode('-', $tabOfCreatedDate[2]); 
+$year = trim($tabOfCreatedDate1[0]); 
+
+//On creer notre deuxieme dateTime avec les valeur réperer en splitant la date created envioyé par la vue
+$DateCreated = new DateTime();
+$DateCreated->setDate($year, $month, $day);
+
+//Comparaison des deux dates
+$diff = $today->diff($DateCreated);
+$nbDaysDiff = $diff->days; 
+
+?>
+
 <div class="container">
 
   <header role="banner" id="page-header">
@@ -60,7 +89,11 @@
 	<div class="container-node">
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
-        <h1 class="page-header"><?php print $title; ?></h1>
+        <h1 class="page-header">
+        	<?php print $title; ?>
+        	<?php //Si le nombre de jour < 60, cad 2 mois alors on affiche le logo nouvelle balade
+			if($nbDaysDiff < 60) echo "<p class='newBalade'>Nouveau !</p>";
+ 	  ?></h1>
       <?php endif; ?>
       <?php print render($title_suffix); ?>
 	  <?php print $messages; ?>

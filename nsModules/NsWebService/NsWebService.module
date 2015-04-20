@@ -210,6 +210,7 @@ function NsWebService_find_balade_information($nitems, $timestamp, $id, $balade,
     $query->addField('n', 'title', 'titre');
     $query->addField('n', 'vid', 'vid');
     $query->addField('n', 'nid', 'nid');
+    $query->addField('n', 'created', 'date_post');
     $query->addField('d', 'field_description_de_la_balade_value', 'description');
     $query->addField('a', 'field_acces_site_value', 'acces');
     $query->addField('t', 'field_duree_value', 'duree');
@@ -341,7 +342,8 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
 
     $this->xml_recurse($doc, $root, $data);
 
-    drupal_add_http_header($name = 'Access-Control-Allow-Origin', $value = '*', $append = FALSE);
+    drupal_add_http_header('Access-Control-Allow-Origin', '*');
+    drupal_add_http_header('Access-Control-Request-Method', 'GET');
 
     return $doc->saveXML();
   }
@@ -393,6 +395,8 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
       
       $itemTaxon = $doc->createElement('item');
       $itemCritere = $doc->createElement('item');
+      
+      $date_post = $doc->createElement('date_post');
       
       
       foreach ($data as $key => $value) {
@@ -629,6 +633,16 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
           //On ajoute un conteneur item à la valeur
           $parent->appendChild($itemTaxon);          
           $this->xml_recurse($doc, $itemTaxon, $value );
+          
+          continue;
+        }
+        else if ($key === "date_post") {      
+
+          $datePubli = format_date($timestamp = $value, $type = 'custom', $format = 'Y-m-d', $timezone = 'Europe/Paris'); 
+          
+          //On ajoute un conteneur item à la valeur
+          $parent->appendChild($date_post);          
+          $this->xml_recurse($doc, $date_post, $datePubli );
           
           continue;
         }

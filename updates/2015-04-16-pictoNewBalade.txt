@@ -232,3 +232,5 @@ $translatables['v_liste_balade'] = array(
 
 
 ##}
+
+:> Vider les caches

@@ -27,6 +27,7 @@ scripts[] = bootstrap/js/bootstrap.js
 scripts[] = js/intense.min.js
 scripts[] = js/jquery.vanillabox-0.1.6.min.js
 scripts[] = js/jquery.justifiedGallery.min.js
+scripts[] = js/script.js
 
 settings[toggle_name] = 0
 settings[toggle_search] = 1
