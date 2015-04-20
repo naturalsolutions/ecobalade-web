@@ -1022,7 +1022,7 @@ body.page-liste-balades .view-v-liste-balade .views-row {
   -moz-border-radius: 4px;
   border-radius: 4px;
   margin-bottom: 15px;
-  min-height:200px;
+  min-height: 230px;
   padding:5px 15px;
     *background-color: #e6e6e6;
   background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
