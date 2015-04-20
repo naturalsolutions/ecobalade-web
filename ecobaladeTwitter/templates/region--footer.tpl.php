@@ -6,6 +6,7 @@
 /***************************************************************************/
 /*********************************  ****************************************/
 /*********************************  ****************************************/
+global $base_url;
 ?>
 
 <footer class="footer container-fluid">
@@ -29,13 +30,13 @@
 			<div id="questions" class="span4">
 				<h4 class="footer-title">Des questions ?</h4>
 				
-				<a href="contact" title="">Vous êtes un ecoBaladeur ?</a>
-				<a href="contact#enseignant" title="">Vous êtes un enseignant ?</a>
-				<a href="contact#office" title="">Vous êtes  un office de tourisme ?</a>
-				<a href="contact#office" title="">Vous êtes une collectivité territoriale ?</a>
+				<a href="<?php echo $base_url; ?>/contact" title="">Vous êtes un ecoBaladeur ?</a>
+				<a href="<?php echo $base_url; ?>/contact#enseignant" title="">Vous êtes un enseignant ?</a>
+				<a href="<?php echo $base_url; ?>/contact#office" title="">Vous êtes  un office de tourisme ?</a>
+				<a href="<?php echo $base_url; ?>/contact#office" title="">Vous êtes une collectivité territoriale ?</a>
 				<br/>
-				<a href="partenaires" title="Présentation des partenaires du service ecoBalade">Nos partenaires</a>
-				<a href="on-en-parle" title="Vers la page &quot;On en parle&quot;, presse">On en parle</a>
+				<a href="<?php echo $base_url; ?>/partenaires" title="Présentation des partenaires du service ecoBalade">Nos partenaires</a>
+				<a href="<?php echo $base_url; ?>/on-en-parle" title="Vers la page &quot;On en parle&quot;, presse">On en parle</a>
 			
 			</div>
 
