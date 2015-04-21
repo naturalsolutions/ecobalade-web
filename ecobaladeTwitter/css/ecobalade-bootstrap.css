@@ -3139,9 +3139,9 @@ margin-top:-5px!important;
   border-right:1px solid #bbbbbb;
 }
 .views-field-field-acces-site{
-    border-top: 1px solid #BBBBBB;
-    clear: left;
-  /*height:80px;*/
+  border-top: 1px solid #BBBBBB;
+  clear: left;
+  padding: 20px 10%;
 }
 
 
