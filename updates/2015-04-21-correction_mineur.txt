@@ -1,4 +1,4 @@
-maj vue "v_all_especes" {
+:> maj vue "v_all_especes" {
 	
 	$view = new view();
 $view->name = 'v_all_especes';
@@ -381,7 +381,7 @@ $translatables['v_all_especes'] = array(
 
 }
 
-maj "v_caracteristiques_balade" {#
+:> maj "v_caracteristiques_balade" {#
 
 $view = new view();
 $view->name = 'v_caracteristiques_balade';
@@ -664,3 +664,5 @@ $translatables['v_caracteristiques_balade'] = array(
 
 
 #}
+
+:> supprimer la vue "v_guide_balade" 

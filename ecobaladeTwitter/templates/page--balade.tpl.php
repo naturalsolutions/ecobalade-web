@@ -204,17 +204,44 @@ $nbDaysDiff = $diff->days;
 	
 		</div>
 	</div>
-	  </section>
+	
+	
+	</section>
 	<!-- *****ASIDE RIGHT****** -->
     <?php if ($page['sidebar_second']): ?>
       <aside class="span3 region-sidebar-second" role="complementary">
        <?php if ($node): ?>  
 	    <a id="btn-esp" class="btn btn-primary" alt="lien vers la liste des espèces" href="#" title="Les espèces a découvrir" >Espèces à découvrir</a>
-		<h2>Randonner avec un guide ?</h2>
-		<?php print views_embed_view('v_guide_balade','block',$baladenid);?>
-		<?php if($baladenid != '104' && $baladenid != '2387' && $baladenid != '270' && $baladenid != '2237' && $baladenid != '2355' && $baladenid != '269' && $baladenid != '2354' && $baladenid != '2356' && $baladenid != '2353' && $baladenid != '268' && $baladenid != '2416' && $baladenid != '2358' ):?>
-		<a id="btn-guide" class="btn btn-primary" target="" rel="" title="Contactez-nous" href="mailto:contact@natural-solutions.eu">Vous êtes guides, rejoignez-nous !</a>
+		
+		<?php 
+
+			//si pas guide
+			if($node->field_lien_guide['und'][0]['value'] == 'mailto:contact@natural-solutions.eu'){
+				
+				echo "<h2>Randonner avec un guide ?</h2>"; 				
+				
+			} 
+			//si guide
+			else {
+
+				echo "<h2>Randonner avec un guide !</h2>"; 
+			}
+
+			$url_image_guide = file_create_url($node->field_img_guide['und'][0]['uri']);
+			$name_image_guide = $node->field_img_guide['und'][0]['filename'];
+			$link_image_guide = $node->field_lien_guide['und'][0]['value'];
+			
+			echo "<a href='$link_image_guide' alt='$name_image_guide'><img alt='$name_image_guide' title='$name_image_guide' src='$url_image_guide' /></a>";
+			
+		?>
+
+		<?php if($node->field_lien_guide['und'][0]['value'] == 'mailto:contact@natural-solutions.eu'): ?>
+			<a id="btn-guide" class="btn btn-primary" target="" rel="" title="Contactez-nous" href="mailto:contact@natural-solutions.eu">Vous êtes guides, rejoignez-nous !</a>
 		<?php endif; ?>
+		
+
+		
+		
 		<?php print views_embed_view('v_caracteristiques_balade','block_1',$baladenid);?>
 		<h2>Localisation</h2>
 		<?php print views_embed_view('v_map_localisation_balade','block',$baladenid);?>

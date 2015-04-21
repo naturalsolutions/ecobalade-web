@@ -597,8 +597,9 @@ body.node-type-balade p.textDescro{
   padding: 15px 10px 20px;
 }
 body.node-type-balade #btn-guide{
-  width: 91%;
-  border-radius: 0 0 4px 4px;
+  width: 89%;
+  border-radius: 0;
+  border: 3px solid #4DBB74;
 }
 body.node-type-balade a#btn-esp {
   font-size: 1.6em;
