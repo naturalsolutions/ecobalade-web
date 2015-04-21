@@ -666,3 +666,9 @@ $translatables['v_caracteristiques_balade'] = array(
 #}
 
 :> supprimer la vue "v_guide_balade" 
+
+:> maj vue "v_liste_Taxon_balade" {#
+
+
+
+#}
