@@ -3432,6 +3432,13 @@ margin-left: 9%;
     float: left;
     width: auto;
   }
+  body.page-liste-especes div#title_specie{    
+    padding-left: 2%;
+  }
+  body.page-liste-especes div#descro_specie{
+    padding: 15px 0%;
+    width: 100%;    
+  }  
   /*PAGE BALADE*/
   body.node-type-balade div.view-v-balade-similaire div.views-field-title {
     font-size: 1em;
@@ -3441,6 +3448,13 @@ margin-left: 9%;
   body.node-type-balade div#image_specie, body.node-type-balade div#title_specie, body.node-type-balade div#descro_specie, body.node-type-balade div#lien_specie{
     float: left;
     width: auto;
+  }
+  body.node-type-balade div#title_specie{    
+    padding-left: 2%;
+  }
+  body.node-type-balade div#descro_specie{
+    padding: 15px 0%;
+    width: 100%;    
   }
   body.node-type-balade .region-sidebar-second {
     width: 97.2%;
