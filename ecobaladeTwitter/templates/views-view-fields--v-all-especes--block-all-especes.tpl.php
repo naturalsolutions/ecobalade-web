@@ -76,19 +76,23 @@
 				</div>
 				<div class='span6' id="descro_specie">
 						
-						<?php $descro_especeTab = explode(' ', $descro_espece); ?>
-						
-						<?php
-						if(count($descro_especeTab) > 30 ){
+				<?php 
+				$descro_espece = drupal_html_to_text($descro_espece); 	
+				
+					//Sin on vient d'un texte brut dans balises
+				if($descro_espece[0] != '<'){
 
-							for($i=0; $i<30; $i++){
+					echo '<p>'.$descro_espece.'</p>';
 
-								echo $descro_especeTab[$i];
-								if($i == 29) echo '...';							
-								else echo ' ';
-							}						
-						}else echo $descro_espece;
-						?>
+				}else{
+
+					//Si on vient d'un plain texte avec wisiwig et balise
+					echo $descro_espece;
+												
+				}
+
+				?>
+
 				</div>
 				<div class='span2' id="lien_specie">
 						<?php echo $lien_espece; ?>
