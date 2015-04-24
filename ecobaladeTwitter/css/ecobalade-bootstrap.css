@@ -2482,7 +2482,7 @@ div#container-mobile {
     width: 100%;
     background: url("../img/background_black.png") repeat-x scroll 0% -7% transparent;
     height: 100%;
-    margin-top: -2%;
+    
 }
 div#container-mobile div#titleOfMobileApp{
   width: 100%;
