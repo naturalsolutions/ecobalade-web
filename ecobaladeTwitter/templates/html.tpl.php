@@ -47,19 +47,20 @@
 <script type="text/javascript">
 $(function () { 
  $.smartbanner({ 
+
     price: 'GRATUIT',
-	author: 'NATURAL SOLUTIONS',
+    author: 'NATURAL SOLUTIONS',
     appStoreLanguage: 'fr',
-	scale: 'auto',
+    scale: 'auto',
     inAppStore: 'Sur App Store', // Text of price for iOS
     inGooglePlay: 'Télécharger sur Google Play', // Text of price for Android
-    title:'ecoBalade',
-	button: 'Voir',
-	speedIn: 300, // Show animation speed of the banner
-	speedOut: 400, // Close animation speed of the banner
-	daysHidden: 0, // Duration to hide the banner after being closed (0 = always show banner)
-	daysReminder: 90 // Duration to hide the banner after "VIEW" is clicked *separate from when the close button is clicked* (0 = always show banner)
- 
+    title:'ecobalade',
+    button: 'Voir',
+    speedIn: 300, // Show animation speed of the banner
+    speedOut: 400, // Close animation speed of the banner
+    daysHidden: 0, // Duration to hide the banner after being closed (0 = always show banner)
+    daysReminder: 90 // Duration to hide the banner after "VIEW" is clicked *separate from when the close button is clicked* (0 = always show banner)
+
   })
 // $.smartbanner({ title: 'kamel', // Remplace le titre par défaut (qui est le tag <title> par défaut) 
 		// author: 'sabri', // Remplace l'auteur par défaut(qui est le <meta name="author">) 

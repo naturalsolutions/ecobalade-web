@@ -232,29 +232,35 @@
 </div>
 <?php print render($page['footer']); ?>
 
-<script>(function() {
+<script>
+jQuery( document ).ready(function() {
 
-	window.init = function() {
 
+	var imagePolaroide = function(){
+
+		// --> Image polaroide
 		jQuery('.img-polaroid').click(function(){
 
 			//affiche loader
 			jQuery( this ).find('.ajaxloader').show();
 				
 		});
-
+		
 		window.onload = function() {
 	
-		    // Intensify all images with the 'intense' classname.
-		    var elements = document.querySelectorAll( '.img-polaroid' );
-		    Intense( elements );
+			// Intensify all images with the 'intense' classname.
+			var elements = document.querySelectorAll( '.img-polaroid' );
+			Intense( elements );
+		
 		}
+		
+	
+	};
+	
 
-	}
-
-}())
-init(); // true
+	imagePolaroide();
 
 
+});
 
 </script>

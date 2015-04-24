@@ -1,0 +1,55 @@
+<?php
+/**
+* @file example_module.module Handles fancy AJAX functionality.
+* 
+*/
+
+/**
+* Example in JS to call this module :
+* function sendMail(email) {
+*
+*     var basePath = window.location.protocol + "//" + window.location.host +  window.location.pathname;        
+*      $.get(basePath+"send_mail_from_js_callback/"+ email);
+* 
+* }
+*/
+
+/**
+* Implementation of hook_menu
+* @see http://api.drupal.org/api/drupal/developer--hooks--core.php/function/hook_menu/6
+*/
+function NsSendMailFromJS_menu() {
+  $items = array();
+
+  $items['send_mail_from_js_callback/%'] = array(
+    'title' => 'My Custom Callback', 
+    'description' => 'Sending mail.', 
+    'page callback' => 'send_mail_from_js_callback', 
+    'page arguments' => array(1),
+    'access arguments' => array('access content'), 
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+}
+
+/**
+* Function that gets called from JQuery asynchronously. 
+*/
+function send_mail_from_js_callback($mail) {
+  
+
+    $to      = $mail;    
+    $subject = 'Gagne un badge !';
+    
+    // Make emails HTML friendly
+    $message['headers']['Content-Type'] = 'text/html; charset=UTF-8; format=flowed';
+    $message = 'Bonjour !';
+    $headers = 'From: contact@natural-solutions.eu' . "\r\n" .'Reply-To: contact@natural-solutions.eu' . "\r\n" .'X-Mailer: PHP/' . phpversion();
+
+    mail($to, $subject, $message, $headers);
+
+
+}
+
+?>

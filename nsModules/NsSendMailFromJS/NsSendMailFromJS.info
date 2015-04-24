@@ -1,0 +1,9 @@
+name = NsSendMailFromJS
+description =  Ce module envoi un mail depuis un appel javascript
+package = nsModule
+
+core = 7.x
+version = 7.x-1.0 
+files[] = NsSendMailFromJS.module
+
+;php = 5.2

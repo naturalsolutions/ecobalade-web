@@ -106,6 +106,9 @@ body.front div.span4 p span{
 /*                          DIVERS - Tools                                 */
 /*                                                                         */
 /***************************************************************************/
+body{
+  position: relative;
+}
 body.logged-in header#navbar{
   top: 28px;
 }
@@ -155,7 +158,120 @@ a {
 /*                                                                         */
 /***************************************************************************/
 /*********************************  ****************************************/
-/*********************************  ****************************************/
+body.front .contenuEtiquette{
+  position:relative;
+  overflow:hidden;
+}
+/*popup*/
+div#cboxOverlay {
+  background: rgba(0,0,0,0.5) !important;
+  position: absolute;
+  width: 100% !important;
+  height: 100% !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+div#cboxLoadedContent, div#cboxContent , div#cboxWrapper{
+  width:  100% !important;
+}
+div#cboxLoadedContent, div#cboxContent, div#cboxWrapper{
+    background-color: transparent;
+    min-height: 300px !important;
+    height: auto !important;
+    overflow: visible !important;
+}
+#cboxLoadedContent > div > div > div > div > div > div:nth-child(2) > div > p:nth-child(2){
+  position: relative;
+}
+div.popup_onload span#star{
+  position: absolute;
+  top: 0;
+  left: -10px;
+  font-size: 2em
+}
+div.popup_onload {
+  width: 34% !important;
+  left: 27.5% !important;
+  top: 222px !important;
+  z-index: 99 !important;
+}
+button#cboxClose {
+  background: url("../img/popup/new-popup-close-button.gif") no-repeat 100% 100%; 
+  background-size: 100% !important;
+
+}
+div.popup_onload div.content h1 span#asterix {
+    position: relative;
+    top: -12px;
+    font-size: 0.6em !important;
+    left: 0.3%;
+}
+div.popup_onload div.content h1{
+  position: relative;
+  width: 92%;
+}
+div.popup_onload div.content h1 span#title{
+  color: #555 !important;
+  font-size: 1.13em !important;
+}
+div#cboxWrapper{
+  /*padding: 3% 3% 3% 4%;*/
+  padding: 21px;
+  background: url("../img/popup/badge_decoup.png") no-repeat 101% 101% #fff;
+  background-size: 31%;
+}
+div#cboxTopRight, div#cboxTopLeft, div#cboxTopCenter, div#cboxMiddleLeft, div#cboxMiddleRight, div#cboxBottomLeft, div#cboxBottomCenter, div#cboxBottomRight{
+    display:  none;
+} 
+div.popup_onload div.content div.row-fluid div.span12 input#mce-EMAIL{
+  border-style: solid;
+  border-color: #BFBFBF !important;
+  font-family: "RalewaySemiBold",sans-serif;
+  font-size: 0.9em !important;
+  letter-spacing: 0.2em;
+  width: auto;
+  height: auto;
+  height: auto;
+  padding: 1% 3%;
+  float: left;
+  width: 30%;
+}
+div.popup_onload div.content div.row-fluid div.span12 input#mce-EMAIL:focus{
+  box-shadow: none !important;
+  border-color: #4DBB74 !important;
+}
+div.popup_onload div.content div.row-fluid div.span12 input#mc-embedded-subscribe{
+  background-color: #4DBB74;
+  color: #FFF;
+  font-family: "RalewaySemiBold",sans-serif;
+  letter-spacing: 0.1em;
+  border-radius: 3px;
+  margin-left: 1.7%;
+  border: 1px solid #4DBB74;
+  width: auto;
+  height: auto;
+  position: relative;  
+  text-shadow: none;
+  padding: 1% 2%;
+  font-size: 1em;
+}
+div.popup_onload div.content div.row-fluid div.span12 input#mc-embedded-subscribe:hover{
+  background-color: #fff;
+  color: #4DBB74;
+}
+div.popup p{
+  max-width: 470px;
+}
+div.popup_onload div.content div.row-fluid div.span12 p{
+  font-size: 1.1em !important;
+}
+div.popup_onload div.content div.row-fluid:nth-child(2){
+  margin-top: 1.7%;
+}
+div.popup_onload div.content div.row-fluid:nth-child(3){
+  margin-top: 2.3%;
+}
+/*fin popup*/
 body.front a#fold1BntAllBalades{
   color: #fff;
   margin-left: 22%; 
@@ -246,7 +362,7 @@ body.front #lien_twitter:hover{
   background-repeat: no-repeat;
 }
 /*POPUP BADGE*/
-body.front.popup_onload-processed div#cboxOverlay{
+body.popup_onload-processed div#cboxOverlay{
   background: none;
 }
 /*IMAGE POLAROID - INTENSE IMAGE ON FRONT*/
@@ -2739,10 +2855,7 @@ width: 100%;
 border: none;
 }
 /*****fold3*****/
-.contenuEtiquette{
-  position:relative;
-  overflow:hidden;
-}
+
 .etiquette,.secondEtiquette{
   text-align:center;
   background-color:#E47353;
@@ -3356,6 +3469,10 @@ margin-left: 9%;
 } 
 /*entre 980px et 1200px*/
 @media (min-width: 980px) and (max-width: 1200px){
+  #navbar > div > div > a.brand > img {
+    height: 67%;
+    padding-top: 9px;
+  }
   .navbar .brand {
     left: 1%;
   }
@@ -3376,6 +3493,10 @@ margin-left: 9%;
   body.front div#img-front {
     height: 754px;
   }
+  div.popup_onload {
+    width: 55% !important;
+    left: 20.5% !important;  
+  }
 }
 @media  (max-width: 1000px) {
   body.front div#img-front {
@@ -3384,6 +3505,26 @@ margin-left: 9%;
 }
 
 @media  (max-width: 979px) {
+  /*HP*/
+  body.not-front > div.container {
+    margin-top: 57px;
+  }
+  header.navbar div.container{
+    min-height: 64px;
+  }
+  header.navbar div.container a.btn.btn-navbar{
+    margin-right: 25px;
+  }
+  .navbar-fixed-top {  
+    position: absolute !important;
+    z-index: 999;
+  }
+  body.popup_onload-processed div#cboxOverlay {
+    top: 74px !important;
+  }
+  body.front .contenuEtiquette {
+    padding-bottom: 70px;
+  }
   /*PAGE SITE*/
   body.node-type-site #slideshow_site {
     margin-top: 51px;
@@ -3491,6 +3632,10 @@ margin-left: 9%;
   }
   body.front div.zoneBtnBalade a:first-of-type{
       margin-bottom: 10px;
+  }
+  div.popup_onload {
+      width: 66% !important;
+    left: 15.5% !important; 
   }
   /*FOOTER*/
   footer.footer div#questions{
@@ -3610,6 +3755,20 @@ margin-left: 9%;
 
 @media (max-width: 767px) {
 
+  /*HOME PAGE - PAGE ACCUEIL*/
+  /*body.front.popup_onload-processed div#cboxOverlay {
+     top: 125px !important;
+  }*/
+  div.popup_onload {
+    width: 75% !important;
+    left: 11.5% !important;
+  }
+  div.popup_onload h1{
+    font-size: 2em;
+  }
+  div#cboxLoadedContent, div#cboxContent, div#cboxWrapper {
+    min-height: inherit !important;
+  }
   /*PAGE LES BALADES*/
   body.page-liste-balades div.container-node > .row > aside, body.page-liste-balades div.container-node > .row > section {
     width: 95.7%;
@@ -3759,24 +3918,79 @@ margin-left: 9%;
   
 }
 @media (max-width: 650px) {
+  div.popup_onload div.content div.row-fluid div.span12 input#mc-embedded-subscribe{
+    float: none;
+    margin: 12px auto;
+    width: 50% !important;
+    text-align: center;
+    padding: 3% 2%;
+  }
+  div.popup_onload span#star {
+    position: relative;
+    top: 6px;
+    left: 0px;
+    font-size: 2em;
+  }
+  div.popup_onload {
+    left: 8.5% !important;
+  }
+  div.popup_onload div.content div.row-fluid div.span12 input#mce-EMAIL{
+    float: none;
+    display: block;
+    margin: 0 auto;
+    width: 44%;
+    margin-top: 21px;
+    padding: 3% 3%;
+  }
   body.node-type-balade h1.page-header {
     padding-top: 50px;
   }
   footer.footer .icon_android_store, footer.footer .icon_apple_store{
     background-image: none;
   }
+  div.popup_onload {
+    top: 130px !important;
+    text-align: center;
+  }
+  div#cboxWrapper {
+    margin-top: 42px;
+    padding-bottom: 88px;
+  }
+  div.popup_onload div.content div.row-fluid div.span12 input[type=text] {
+    width: 70% !important;
+    margin-top: 13px;
+  }
+  div.popup_onload div.content div.row-fluid div.span12 > p {
+    margin-top: 10px;
+  }
+  div.popup_onload div.content div.row-fluid div.span12 input[type=submit] {
+    width: 74% !important;
+    margin-left: 0 !important;
+  }
 }
 @media (max-width: 480px) {
+  body.front div#cboxWrapper {
+    background-size: 131px;
+  }
   body.front div#img-front {
     background: none;  
     display: none;
   }
+  div.popup_onload {
+    left: 5.5% !important;
+  }
   body.node-type-balade ul#myTab a.back-page {
     display: none;
+  }
+  body > div.container {
+    margin-top: 82px
   }
 }
 @media (max-width: 396px) {
   /*HP*/
+  div.popup_onload div.content div.row-fluid div.span12 input[type=submit] {
+    width: 75% !important;
+  }
   body.front div.friseEspece .span2 {
     width: 120px;
   }
@@ -3811,8 +4025,20 @@ margin-left: 9%;
   
 }
 @media (max-width: 390px) {
+  div.popup_onload div.content div.row-fluid div.span12 input#mc-embedded-subscribe {
+    padding: 3% 10px;
+  }
+  div.popup_onload div.content div.row-fluid div.span12 input#mce-EMAIL {
+    padding: 2% 8px;
+  }
+  .navbar .brand img {
+    width: 180px;
+  }
+  body.popup_onload-processed div#cboxOverlay {
+    top: 50px !important;
+  }
   .brand{
-  position: relative;
+    position: relative;
   	top: 0px!important;
   	padding-bottom: 0px!important;
   }
@@ -3850,7 +4076,13 @@ margin-left: 9%;
 
 
 @media (max-width: 300px) {
-  body.front div.friseEspece, body.front > div.container > div > section > h4{
+  div.popup_onload div.content div.row-fluid div.span12 input#mc-embedded-subscribe {
+    width: 75% !important; 
+  }
+  div.popup_onload div.content div.row-fluid div.span12 input#mce-EMAIL {
+    width: 67%;
+  }
+  div.friseEspece, body.front > div.container > div > section > h4{
     display: none;
   }
   .brand{
@@ -3881,6 +4113,13 @@ margin-left: 9%;
   }
 
 }
-
+@media (max-width: 275px) {
+  .navbar .brand img {
+    width: 130px;
+  }
+  /*body.front.popup_onload-processed div#cboxOverlay {
+    top: 93px !important;
+  }*/
+}
 
 

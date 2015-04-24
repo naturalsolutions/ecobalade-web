@@ -1,0 +1,7 @@
+## 
+
+:> Copier les param de la popup (admin/content/popup_onload)
+:> Copier les param de la popup (admin/config/user-interface/popup_onload)
+:> Vider caches serveur & browser
+
+:> 
