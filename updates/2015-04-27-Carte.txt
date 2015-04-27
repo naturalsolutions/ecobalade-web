@@ -1,0 +1,4 @@
+:> Maj carte "depart_balades"
+:> Maj vue "v_map_localisation_balade"
+
+:> Faire un backup & Lancer le secript de mise a jour de la BDD

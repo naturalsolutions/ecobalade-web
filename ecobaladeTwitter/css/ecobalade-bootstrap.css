@@ -106,7 +106,8 @@ body.front div.span4 p span{
 /*                          DIVERS - Tools                                 */
 /*                                                                         */
 /***************************************************************************/
-body{
+/*Pour popup*/
+body.not-logged-in{
   position: relative;
 }
 body.logged-in header#navbar{
