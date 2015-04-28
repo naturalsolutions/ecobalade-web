@@ -1,4 +1,20 @@
-:> Maj carte "depart_balades"
-:> Maj vue "v_map_localisation_balade"
+:> Desinstaller openlayers
+:> Maj better exposed filter (FTP)
+:> Maj OpenLayers.7.x-2.0-beta11 (FTP)
+
+:> Vérifier conf php>=5.5  (pour service container)
+:> Télécharger service container (http://ftp.drupal.org/files/projects/service_container-7.x-1.x-dev.zip) (Pour plus tard, pour openlayers 3...)
+:> Activer les modules openLayers 
 
 :> Faire un backup & Lancer le secript de mise a jour de la BDD
+
+:> Maj vue "v_map_localisation_balade"
+:> Maj carte "depart_balades"
+:> Maj carte "carte_localisation_balade" && desactiver
+:> Maj carte "geofield_formatter_map"
+:> Maj description de "geofield_widget_map" en -> "A Map Used for Geofield Input - Peut être utilisé en input form page balade"
+:> Desactiver "example_osm"
+:> Desactiver "example_kml"
+:> Desactiver "example_google"
+:> Desactiver "example_geojson"
+:> Desactiver "example_bing"

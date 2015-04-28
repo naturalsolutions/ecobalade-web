@@ -107,6 +107,9 @@ body.front div.span4 p span{
 /*                                                                         */
 /***************************************************************************/
 /*Pour popup*/
+/*body div.well{
+  display: none;
+}*/
 body.not-logged-in{
   position: relative;
 }
@@ -1073,6 +1076,28 @@ body.page-liste-balades .view-v-liste-balade .views-field-title h1 a{
 body.page-liste-balades .view-v-liste-balade .views-field-view-node{
   border: none;
 }
+body.page-liste-balades div.olFramedCloudPopupContent div.openlayers-popup-feature{
+  border-bottom: 1px dotted #fff;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+body.page-liste-balades div.olFramedCloudPopupContent div.openlayers-popup-feature div.views-field-title a:hover{
+  text-decoration: none;
+}
+body.page-liste-balades div.olFramedCloudPopupContent div.openlayers-popup-feature div.views-field-title{
+  padding-bottom: 8px;
+  font-size: 0.9em;
+}
+body.page-liste-balades div.olFramedCloudPopupContent div.openlayers-popup-feature.first{
+  padding-top: 0px;
+}
+body.page-liste-balades div.olFramedCloudPopupContent div.openlayers-popup-feature.last{
+  border: 0;
+  padding-bottom: 0;
+}
+/*body.page-liste-balades div.olFramedCloudPopupContent{
+  overflow: hidden;
+}*/
 body.page-liste-balades aside button#edit-submit-v-liste-balade{
   border: 3px solid #4DBB74;
 }
