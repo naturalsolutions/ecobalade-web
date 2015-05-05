@@ -538,6 +538,9 @@ body.node-type-balade .views-slideshow-controls-bottom .views-content-field-imag
   margin: 0px 0px 5px 8px;
   width: 82px;
 }
+body.node-type-balade div.view-id-v_balade_similaire{
+  padding-bottom: 12px ;
+}
 body.node-type-balade .views-field.views-field-field-image-2{
   background: #000;
   opacity: 0.75;

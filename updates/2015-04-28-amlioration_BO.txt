@@ -1,0 +1,18 @@
+:> Supprimer champs "field_c_ft_espece" du type de contenu espece
+:> Supprimer champs "field_c_ft_balade" du type de contenu espece
+:> Supprimer champs "field_titre" du type de contenu balade
+:> Ajouter aux éditeurs le droit de "Créer et modifier des alias d'URL" -> Envoyer un mail aux écologues qu'ils peuvent a présent ajouter cette tâches afin de valider une balade + traiter sur ancienne balade
+:> Desactiver l'apercue pour la page balade
+
+:> Maj étiquette -> "Photo emblématique de la balade" (admin/structure/types/manage/balade/fields/field_photo_resume)
+:> Texte d'aide -> "Sélectionner une jolie photo avec si possible un sentier, des gens en balade ainsi qu'une espèce représentative."
+:> Extensions de fichier autorisées -> jpg, jpeg
+:> Maj Property -> photo
+
+:> Maj étiquette -> "Photos" (admin/structure/types/manage/balade/fields/field_image)
+:> Texte d'aide -> "Autres photos de la balade, ces photos seront affiché dans le diaporama.
+Sélectionner différentes pour mettre en avant l'environnement de la balade, le sentier balisé, les espèces phares, les points d'intérêts s'il y en a, le début du parcours, des randonneurs..."
+:> Extensions de fichier autorisées -> jpg, jpeg
+:> Taille maximale de transfert -> 2Mo
+:> Maj Property -> photos
+

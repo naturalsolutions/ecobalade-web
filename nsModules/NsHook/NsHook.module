@@ -8,32 +8,43 @@
 function NsHook_form_alter(&$form, &$form_state, $form_id) {
 
 
+
+
 	if (isset($form['type']) && $form['type']['#value'] == 'fiche_taxon') { 
 			
+
+
+
+
+	
 		// Nous sommes bien dans l'édition d'une fiche taxon  
 
-		drupal_add_css(drupal_get_path('module', 'NsHook') . '/NsHook.css');  // Import du css 
-		 //drupal_add_js(drupal_get_path('module', 'NsHook') .'/NsHook.js');  Import du js 
+		// drupal_add_css(drupal_get_path('module', 'NsHook') . '/NsHook.css');  // Import du css 
+		//  //drupal_add_js(drupal_get_path('module', 'NsHook') .'/NsHook.js');  Import du js 
 
-		$node = $form['#node'];//Recuperation de l'objet node 
+		// $node = $form['#node'];//Recuperation de l'objet node 
 
-		//Recuperation du groupe taxonomique, si aucun groupe taxo tid = 0 
-		if (isset($node->field_groupe_taxonomique['und'][0]['tid'])) {
-			$tid = $node->field_groupe_taxonomique['und'][0]['tid'];
-		} 
-		else {
-			$tid = 0; 
-		}
+		// //Recuperation du groupe taxonomique, si aucun groupe taxo tid = 0 
+		// if (isset($node->field_groupe_taxonomique['und'][0]['tid'])) {
+		// 	$tid = $node->field_groupe_taxonomique['und'][0]['tid'];
+		// } 
+		// else {
+		// 	$tid = 0; 
+		// }
 
-		//echo $tid; 
-		// print_r($node); 
+		// //echo $tid; 
+		// // print_r($node); 
 
-		 if($tid == 8 || $tid == 9 || $tid == 10 || $tid == 11 || $tid == 12 || $tid == 13 || $tid == 14 || $tid == 9 || $tid == 1210 || $tid == 15 ){ 
+		//  if($tid == 8 || $tid == 9 || $tid == 10 || $tid == 11 || $tid == 12 || $tid == 13 || $tid == 14 || $tid == 9 || $tid == 1210 || $tid == 15 ){ 
 
-				 drupal_add_js('jQuery(document).ready(function () { jQuery("#edit-field-crit-res").hide(); });',	array('type' => 'inline', 'scope' => 'footer', 'weight' => 5));
-				 drupal_add_js('jQuery(document).ready(function () { jQuery("#edit-field-son").hide(); });',	array('type' => 'inline', 'scope' => 'footer', 'weight' => 5));
+		// 		 drupal_add_js('jQuery(document).ready(function () { jQuery("#edit-field-crit-res").hide(); });',	array('type' => 'inline', 'scope' => 'footer', 'weight' => 5));
+		// 		 drupal_add_js('jQuery(document).ready(function () { jQuery("#edit-field-son").hide(); });',	array('type' => 'inline', 'scope' => 'footer', 'weight' => 5));
 
-		}
+		// }
+
+	} else if (isset($form['type']) && $form['type']['#value'] == 'balade') {
+
+		$form['title']['#title'] = 'Titre de la balade';
 
 	} 
 } 

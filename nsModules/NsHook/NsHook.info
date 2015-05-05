@@ -1,5 +1,5 @@
 name = NsHook
-description =  Module permettant d'alterer le BO lors de l'edition d'une fiche taxon
+description =  Module de mise en forme du BO
 package = nsModule
 
 core = 7.x
