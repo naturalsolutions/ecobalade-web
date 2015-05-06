@@ -909,6 +909,7 @@ div.view-v-affiche-comment div.rightZoneOfComment{
 }
 div.view-v-affiche-comment .imageComment img{
   padding-top: 4px;
+  max-width: 33%;
 }
 div.view-v-affiche-comment .views-row{
   padding-bottom: 25px;
