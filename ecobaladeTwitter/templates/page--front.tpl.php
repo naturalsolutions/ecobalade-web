@@ -131,7 +131,7 @@
 	<div class="row" id="fold3">
 		<div class="fleche-balade"><img src="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/balade/fleche-balade.png"/><p>10km<p/></div>
 		<div class="titreBalade">
-			<h2>La balade</h2>
+			<h2>En ce moment</h2>
 			<ul class="filArianeBalade">
 				<li><span class="labelLine">France&nbsp&nbsp&nbsp></span></li>	
 				<li><span class="labelLine">Provence Alpes Côtes d'Azur&nbsp&nbsp&nbsp></span></li>
@@ -161,7 +161,7 @@
 				
 				<div class="span12">
 					<a class="span6 btn btn-primary bnt-large" target="" rel="" title="Détails de la balade" href="<?php echo $base_path;?>balade/balade-de-la-roque-d-antheron-13-les-bords-de-la-durance">Détails de la balade</a> 
-					<a class="span4 btn btn-primary bnt-large offset2" target="" rel="" title="Les balades" href="<?php echo $base_path;?>liste-balades">Toutes les balades</a>
+					<a class="span4 btn btn-primary bnt-large offset2 inverse" target="" rel="" title="Les balades" href="<?php echo $base_path;?>liste-balades">Toutes les balades</a>
 				</div>
 				
 			</div>

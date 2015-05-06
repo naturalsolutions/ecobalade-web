@@ -277,14 +277,29 @@ div.popup_onload div.content div.row-fluid:nth-child(3){
 }
 /*fin popup*/
 body.front a#fold1BntAllBalades{
-  color: #fff;
   margin-left: 22%; 
   margin-top: 2%;
+  background-image: linear-gradient(to bottom, #fff, #fff);
+  color: #4DBB74;
+  border: 3px solid #4DBB74;
+}
+body.front a#fold1BntAllBalades:hover{
+  background-image: linear-gradient(to bottom, #4DBB74, #4DBB74) !important;
+  color: #fff !important;
+  border: 3px solid #4DBB74 !important;
 }
 body.front div.zoneBtnBalade a.btn{
-    font-size: 1em;
-    border: 3px solid #4DBB74;
-    color: #fff;
+  font-size: 1em;
+  border: 3px solid #4DBB74;
+  color: #fff;
+}
+body.front div.zoneBtnBalade a.btn.inverse{
+  background-image: linear-gradient(to bottom, #fff, #fff);
+  color: #4DBB74;
+}
+body.front div.zoneBtnBalade a.btn.inverse:hover{
+  background-image: linear-gradient(to bottom, #4DBB74, #4DBB74);
+  color: #fff;
 }
 body.front a#hp_button_android span.icon {
   background-position: 0px -35px;
@@ -3354,7 +3369,7 @@ body.front div#img-front a#btn-front{
   line-height: 40px;
   font-family: 'Raleway', sans-serif;
   text-shadow: none; 
-}
+} 
 
 
 /**fin img-front**/
@@ -3363,16 +3378,6 @@ button#edit-submit-the-sites-openlayer:hover{
   -webkit-transition: 0 !important; 
   background-position: 0 !important;
 }
-body.front a#fold1BntAllBalades:hover{
-  -webkit-transition: 0 !important; 
-  background-position: 0 !important;
-  color: #4DBB74 ; 
-  background: #ffffff;
-  border: 3px solid #4DBB74;
-  line-height: 14px;
-  text-shadow: none;
-}
-
 
 body.front div.zoneBtnBalade a:hover{
   -webkit-transition: 0 !important;
@@ -3999,6 +4004,9 @@ margin-left: 9%;
   }
 }
 @media (max-width: 480px) {
+  div.view-v-affiche-comment .imageComment img {
+    max-width: 100%;
+  }
   body.front div#cboxWrapper {
     background-size: 131px;
   }
