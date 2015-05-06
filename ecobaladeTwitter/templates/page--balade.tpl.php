@@ -263,7 +263,14 @@ $nbDaysDiff = $diff->days;
 <script type="text/javascript">
 jQuery( document ).ready(function() {
 	
-	if( $('.imageComment').length > 0 ) $('.imageComment').vanillabox();
+	//LightBox pour commentaires
+	if( $('.imageComment').length > 0 ) $('.imageComment').vanillabox({		
+		closeButton: false,
+		loop: true,
+		repositionOnScroll: true,
+		type: 'image',
+		adjustToWindow: 'both'
+    });
 
 	//Click sur bouton commenter
 	$('section#comments section.collapseComment h2').click(function(){
@@ -282,9 +289,11 @@ jQuery( document ).ready(function() {
 
 <script>
   $(function () {
-  var currentUrl = document.URL;
-  var spliter = currentUrl.split("#");
-  if(spliter[1] == 'espece') $('#myTab a:last').tab('show');
+  		
+  		var currentUrl = document.URL;
+  		var spliter = currentUrl.split("#");
+  		if(spliter[1] == 'espece') $('#myTab a:last').tab('show');
+  
   })
 </script>
 

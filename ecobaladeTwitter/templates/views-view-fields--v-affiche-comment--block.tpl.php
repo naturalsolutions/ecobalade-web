@@ -27,9 +27,9 @@
 <?php foreach ($fields as $id => $field): ?>
 
 		<?php if ($id == 'nothing_1') : ?>
-				<?php if (!empty($field->content) && $field->content != ''): ?>
+				<?php if (!empty($field->content)): ?>
 						<?php $image =  $field->content; ?>
-				<?php endif; ?>
+				<?php endif;?>
 		<?php endif;?>
 
 		<?php if ($id == 'picture') : ?>
@@ -69,8 +69,13 @@
 		<div class="arrow-left"></div>
 		<p class='name'><?php echo $name; ?><i class='created'><?php echo $created; ?></i></p>
 		<p class='comment_body'><?php echo $comment_body; ?></p>
+		
 
-		<?php echo $image; ?>
+		<?php 
+		//On test s'il y a des images dans le commentaire
+		$isImage = explode('/', $image);
+		if (count($isImage) != 1) echo "<a href='$image' class='imageComment' title='$name'><img src='$image' alt='' title='' /></a>";		
+		?>
 		
 	</div>
 </div>
