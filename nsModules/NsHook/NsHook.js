@@ -22,7 +22,7 @@
 	   //  });
 
 
-		//Dès qu'il y a une requette ajax sur l'edition de balades
+		//Dès qu'il y a une requette ajax sur l'edition de balades  
 	    $('.node-form.node-balade-form').ajaxComplete(function(event, xhr, settings) {
 		    	
 		    
