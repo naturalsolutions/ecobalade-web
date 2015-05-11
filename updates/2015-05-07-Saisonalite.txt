@@ -1,0 +1,5 @@
+:> Ajouter champs "Saison" recopier la conf
+:> Ajouter champs "Visible" recopier la conf
+
+
+

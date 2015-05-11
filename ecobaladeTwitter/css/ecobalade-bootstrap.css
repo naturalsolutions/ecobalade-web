@@ -15,14 +15,14 @@
 /*                          FONT - POLICE                                  */
 /*                                                                         */
 /***************************************************************************/
-/*VIvien*/
+/*VIvien*/  
 body.front div.hero-unit-teaser h1{
   font-family : 'RockwellLight', serif;
 }
 
 body.front a#fold1BntAllBalades{
   font-family: 'Raleway', sans-serif;
-}
+}   
 
 body.front p.ralewaytypo span{
   font-family: 'RalewaySemiBold', sans-serif;
@@ -856,11 +856,12 @@ body.node-type-espece section#comments section.collapseComment h2{
   padding-left: 10%;
 }
 body.node-type-espece #blockCriteresEspece{
-  padding: 0px 10px 15px 10px;
-  position: relative;
+  padding: 0px 10px 0 10px;
+  position: relative;    
+  margin-top: 18px;
 }
 body.node-type-espece #blockDetailsEspece{
-  margin: 23px 10px 22px 10px;
+  margin: 23px 10px 0px 10px;
   border: 1px solid #BBBBBB;
   padding: 10px 10px 10px 10px;
   width: 97%;
@@ -882,6 +883,104 @@ body.node-type-espece h4.labelKey{
   padding: 0 8px;
   z-index: 999;
   left: 19px;
+}
+body.node-type-espece div#widget_pager_bottom_v_slideshow_detail_taxon-block img{
+  height: 80px;
+}
+body.node-type-espece div#containerOfSaisonalite{
+  padding: 0px 10px 15px 10px;
+  position: relative;
+  margin-top: 18px;
+}
+body.node-type-espece div#containerOfSaisonalite h4{
+  position: absolute;
+  top: -15px;
+  background: #fff;
+  padding: 0 8px;
+  z-index: 999;
+  left: 19px;  
+}
+body.node-type-espece div#containerOfSaisonalite div#lesMois div.saisonOn{
+  background-color: rgba(77, 187, 116,0.8);
+  font-family: RalewaySemiBold;
+  color: #fff;
+}
+body.node-type-espece div#containerOfSaisonalite div#lesMois{
+  border: 1px solid #BBBBBB;
+  margin-top: 10px;
+  min-height: 75px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  padding: 1% 3%;
+}
+body.node-type-espece div#containerOfSaisonalite div#lesMois .span1{
+  margin-top: 20px;
+  text-align: center;
+  background-color: #e1e1e1;
+  padding-top: 1%;
+  border-radius: 3px
+}
+body.node-type-espece div#aussiPresentDansBalade img{
+    border: 4px solid #fff;
+    border-radius: 5px 1px 1px 1px;
+    -webkit-border-radius: 5px 1px 1px 1px;
+    -moz-border-radius: 5px 1px 1px 1px;
+}
+body.node-type-espece div#aussiPresentDansBalade strong.RandomName_taxons_fiche{
+  display: block;
+  margin-top: 20px;
+  font-size: 0.8em;
+  letter-spacing: 3px;
+}
+body.node-type-espece div.view-v-taxon-suivant-precedent{
+  padding-right: 11%;
+  padding-bottom: 20px;
+}
+body.node-type-espece #aussiPresentDansBalade h2{
+  background-color: #FAFAFA;
+  border: 1px solid #D4D4D4;
+  -webkit-border-radius: 4px 4px 0px 0px;
+  -moz-border-radius: 4px 4px 0px 0px;
+  border-radius: 4px 4px 0px 0px;
+  width: 80%;
+  padding: 2% 5%;
+  margin-top: 0;
+}
+body.node-type-espece #blockEspece{
+  padding-bottom: 20px;
+  background-color : #fff;
+  border: 1px solid #BBBBBB;
+  border-radius: 4px ;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+}
+body.node-type-espece div#valueTimeHidden div.matinee{
+  background: url('../img/matin.png') no-repeat 50% 50%;
+  background-size: 100%;
+  height: 75px;
+  width: 75px;
+  margin: 0 auto;
+  float: left;
+}
+body.node-type-espece div#valueTimeHidden div.journee{
+  background: url('../img/aprem.png') no-repeat 50% 50%;
+  background-size: 100%;
+  height: 75px;
+  width: 75px;
+  margin: 0 auto;
+  float: left;
+}
+body.node-type-espece div#valueTimeHidden div.soiree{
+  background: url('../img/soir.png') no-repeat 50% 50%;
+  background-size: 100%;
+  height: 75px;
+  width: 75px;
+  margin: 0 auto;
+  float: left;
+}
+body.node-type-espece div.icon_vivible_now{
+  display: none;
 }
 /***************************************************************************/
 /***************************************************************************/
@@ -1559,13 +1658,7 @@ footer.footer #lien_mail:hover{
 /*********************************  ****************************************/
 
 
-#blockEspece{
-  background: none repeat scroll 0 0 white;
-    border: 1px solid #BBBBBB;
-    border-radius: 4px ;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-}
+
 
 #blockSlideEsp .imgSlideShowDetailTaxon img{
 width: 100%;
@@ -1666,25 +1759,7 @@ width: 100%;
   display: inline-block;
 }
 
-#aussiPresentDansBalade h2{
-  min-height: 30px;
-  padding-left: 10px;
-  background-color: #FAFAFA;
-  background-image: linear-gradient(to bottom,white,#F2F2F2);
-  background-repeat: repeat-x;
-  border: 1px solid #D4D4D4;
-  -webkit-border-radius: 4px 4px 0px 0px;
-  -moz-border-radius: 4px 4px 0px 0px;
-  border-radius: 4px 4px 0px 0px;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#F2F2F2',GradientType=0);
-  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.065);
-  -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.065);
-  box-shadow: 0 1px 4px rgba(0,0,0,0.065);
-  line-height: 30px;
-  font-size: 18px;
-  margin-bottom: 0;
-  margin-right: 20px;
-}
+
 
 #fieldPersoCriteria1line{
   border: 1px solid #BBBBBB;
@@ -2675,15 +2750,7 @@ margin-left:80px;
 font-size:18px!important;
 }
 
-.RandomName_taxons_fiche{
-  margin-left:-12px;
-  display:block;
-  padding-top:20px;
-  
-  font-size:12px;
-  font-style:normal;
-  letter-spacing : 3px;
-}
+
 
 
 
@@ -2693,11 +2760,7 @@ margin-top:-10px;
 margin-right:30px;
 }
 
-span.imgTaxonsRandom img{
-margin-left:-15px;
-border: 4px solid #fff;
-border-radius: 5px 1px 1px 1px;
-}
+
 
 .olLayerGooglePoweredBy.olLayerGoogleV3.gmnoprint{
 display:none;
@@ -3615,6 +3678,16 @@ margin-left: 9%;
     padding: 15px 0%;
     width: 100%;    
   }  
+  /*PAGE ESPECE*/
+  body.node-type-espece div.view-v-taxon-suivant-precedent {
+    padding: 3% 6%;
+  }
+  body.node-type-espece #aussiPresentDansBalade h2 {
+    margin: 0% 0%;
+    text-align: center;
+    padding: 4% 0%;
+    width: 100%;
+  }
   /*PAGE BALADE*/
   body.node-type-balade div.view-v-balade-similaire div.views-field-title {
     font-size: 1em;
