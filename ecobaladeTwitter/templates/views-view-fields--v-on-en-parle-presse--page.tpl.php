@@ -57,6 +57,14 @@
 						<?php $video =  $field->content; ?>
 				<?php endif; ?>
 		<?php endif;?>
+
+		<?php if ($id == 'field_presse_pdf') : ?>
+				<?php if (!empty($field->content)): ?>
+						<?php $pdf =  $field->content; ?>
+				<?php endif; ?>
+		<?php endif;?>
+
+
 <?php endforeach; ?>
 
  
@@ -64,24 +72,32 @@
 <h3><?php echo $title; ?></h3>
 <div class="row-fluid">
 
-	<?php if($image): ?>
+	<?php if($image || $pdf): ?>
 	<div class="span4 imageZonePress">
 		<?php echo $image; ?>
+		<?php if($pdf) echo $body; ?>		
 	</div>
 	<?php endif; ?>
 
 	<div class="span8 textZonePress">
-		<?php echo $body; ?>
-		<br/>
+		
+		<?php if(!$pdf) echo $body; ?>
+		
 		<?php if($audio): ?>
+		<br/>
 		<audio controls="controls">
 		   <source src="<?php echo $audio; ?>" type="audio/mp3" />		   
 		</audio> 
 		<?php endif; ?>
 		
-		<br/>
 		<?php if($video): ?>
+		<br/>
 		<iframe width="100%" height="315" src="<?php echo $video; ?>" frameborder="0" allowfullscreen></iframe>
+		<?php endif; ?>
+
+		<?php if($pdf): ?>
+		<br/>
+		<?php echo $pdf; ?>
 		<?php endif; ?>
 	</div>
 </div>

@@ -167,7 +167,9 @@ body.front .contenuEtiquette{
   overflow:hidden;
 }
 /*popup*/
-div#cboxOverlay {
+body.front div#cboxOverlay,
+body.node-type-balade div#cboxOverlay,
+body.node-type-espece div#cboxOverlay {
   background: rgba(0,0,0,0.5) !important;
   position: absolute;
   width: 100% !important;
@@ -175,10 +177,26 @@ div#cboxOverlay {
   top: 0 !important;
   left: 0 !important;
 }
-div#cboxLoadedContent, div#cboxContent , div#cboxWrapper{
+body.front div#cboxLoadedContent,
+body.node-type-balade div#cboxLoadedContent,
+body.node-type-espece div#cboxLoadedContent,
+body.front div#cboxContent,
+body.node-type-balade div#cboxContent,
+body.node-type-espece div#cboxContent,
+body.front div#cboxWrapper,
+body.node-type-balade div#cboxWrapper,
+body.node-type-espece div#cboxWrapper{
   width:  100% !important;
 }
-div#cboxLoadedContent, div#cboxContent, div#cboxWrapper{
+body.front div#cboxLoadedContent,
+body.node-type-balade div#cboxLoadedContent,
+body.node-type-espece div#cboxLoadedContent,
+body.front div#cboxContent,
+body.node-type-balade div#cboxContent,
+body.node-type-espece div#cboxContent,
+body.front div#cboxWrapper,
+body.node-type-balade div#cboxWrapper,
+body.node-type-espece div#cboxWrapper{ 
     background-color: transparent;
     min-height: 300px !important;
     height: auto !important;
@@ -218,7 +236,7 @@ div.popup_onload div.content h1 span#title{
   color: #555 !important;
   font-size: 1.13em !important;
 }
-div#cboxWrapper{
+body.front div#cboxWrapper, body.node-type-balade div#cboxWrapper, body.node-type-espece div#cboxWrapper{
   /*padding: 3% 3% 3% 4%;*/
   padding: 21px;
   background: url("../img/popup/badge_decoup.png") no-repeat 101% 101% #fff;
@@ -798,6 +816,9 @@ body.node-type-balade ul#myTab a.back-page{
 }
 body.node-type-balade ul#myTab {
   position: relative;
+}
+body.node-type-balade div.field-name-field-detail-balade {
+  margin-top: 30px;
 }
 
 /*FIN PAGE BALADE*/

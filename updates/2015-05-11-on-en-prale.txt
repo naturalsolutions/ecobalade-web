@@ -1,0 +1,11 @@
+:> Ajouter un item "admin/structure/menu/manage/menu-navigation-editeur/add"
+:> titre -> Article
+:> chemin -> node/add/article
+:> Description -> "Le type de contenu pour les article de presse "on-en-parle""
+
+:> Maj affichage de "Détail de la balade" (admin/structure/types/manage/balade/display)
+
+:> Ajout du champs "pdf" (admin/structure/types/manage/article/fields)
+:> Maj affichage du champs pdf (admin/structure/types/manage/article/display)
+
+:> Maj vue "On en parle / Presse"
