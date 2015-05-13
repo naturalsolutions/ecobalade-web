@@ -44,7 +44,19 @@
   </div>
 </header>
 
-<?php global $base_url; ?>
+
+<?php global $base_url; 
+//On test si l'on vient d'une page balade pour proposer un fil d'arianne complet
+if (isset($_GET["idlastbal"])){
+	
+	$nid_bal_last = $_GET["idlastbal"];
+	$node_bal_last = node_load($nid_bal_last);
+	
+	$breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/">Accueil</a> » <a href="'.$base_url.'/node/'.$nid_bal_last.'">'.$node_bal_last->title.'</a> » '.$node->title.'</div>';
+	
+}
+?>
+
 
 <div class="container">
 

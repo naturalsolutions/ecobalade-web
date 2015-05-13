@@ -95,9 +95,8 @@ $nbDaysDiff = $diff->days;
 			if($nbDaysDiff < 60) echo "<p class='newBalade'>Nouveau !</p>";
  	  ?></h1>
       <?php endif; ?>
-      <?php print render($title_suffix); ?>
+      <?php print render($title_suffix); ?>	   
 	  <?php print $messages; ?>
-	   <?php print $messages; ?>
 	<div class="row">
 	  
     <?php if ($page['sidebar_first']): ?>
@@ -162,7 +161,24 @@ $nbDaysDiff = $diff->days;
 			<div class="especes-phares">
 				<h4>Espèces phares&nbsp;:&nbsp;</h4>
 				<?php $especesPhares = field_get_items($entity_type = 'node', $node, $field_name = 'field_esp_ces_phares'); ?>										
-				<?php for($i=0;$i<count($especesPhares);$i++) { print views_embed_view('v_especes_phares','block_2', $especesPhares[$i]['nid']); } ?>
+				<div class="row-fluid">
+				<?php for($i=0;$i<count($especesPhares);$i++) { 
+					
+					$nodeEspecePhare = node_load($especesPhares[$i]['nid']);
+					$TitlePhotoResumeEspecePhare = $nodeEspecePhare->field_photo_resume['und'][0]['title'];
+					$AltPhotoResumeEspecePhare = $nodeEspecePhare->field_photo_resume['und'][0]['alt'];
+					$urlPhotoResumeEspecePhare = file_create_url($nodeEspecePhare->field_photo_resume['und'][0]['uri']);
+					$nidPhotoResumeEspecePhare = $nodeEspecePhare->nid;
+					
+					//$photoResumeEspecePhare = field_get_items($entity_type = 'node', $nodeEspecePhare, $field_name = 'field_photo_resume');
+					
+					//drupal_set_message( "<pre>" . print_r($nodeEspecePhare, TRUE) . "</pre>" ); 
+					//print views_embed_view('v_especes_phares','block_2', $especesPhares[$i]['nid']); 
+					echo "<div class='span4'><a class='imageEspecePhare' href='$urlPhotoResumeEspecePhare' title='$TitlePhotoResumeEspecePhare'><img src='$urlPhotoResumeEspecePhare' title='$TitlePhotoResumeEspecePhare' alt='$AltPhotoResumeEspecePhare'></a><a href='$base_url/node/$nidPhotoResumeEspecePhare?idlastbal=$baladenid'>$TitlePhotoResumeEspecePhare</a></div>";
+
+				} ?>
+				</div>					
+
 			</div>
 
 						
@@ -263,8 +279,17 @@ $nbDaysDiff = $diff->days;
 <script type="text/javascript">
 jQuery( document ).ready(function() {
 	
-	//LightBox pour commentaires
+	//LightBox pour commentaires/*
 	if( $('.imageComment').length > 0 ) $('.imageComment').vanillabox({		
+		closeButton: false,
+		loop: true,
+		repositionOnScroll: true,
+		type: 'image',
+		adjustToWindow: 'both'
+    });
+
+    //LightBox pour especes phares
+	if( $('.imageEspecePhare').length > 0 ) $('.imageEspecePhare').vanillabox({		
 		closeButton: false,
 		loop: true,
 		repositionOnScroll: true,

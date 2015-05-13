@@ -55,6 +55,22 @@
 					<?php endif; ?>
 			<?php endif;?>
 	<?php endforeach; ?>
+
+	<?php foreach ($fields as $id => $field): ?>
+			<?php if ($id == 'nid') : ?>
+					<?php if (!empty($field->content)): ?>
+							<?php $nid_balade =  $field->content; ?>
+					<?php endif; ?>
+			<?php endif;?>
+	<?php endforeach; ?>
+
+	<?php foreach ($fields as $id => $field): ?>
+			<?php if ($id == 'nid_1') : ?>
+					<?php if (!empty($field->content)): ?>
+							<?php $nid_espece =  $field->content; ?>
+					<?php endif; ?>
+			<?php endif;?>
+	<?php endforeach; ?>
 	
 	<?php foreach ($fields as $id => $field): ?>
 			<?php if ($id == 'field_groupe_taxonomique') : ?>
@@ -64,7 +80,7 @@
 			<?php endif;?>
 	<?php endforeach; ?>
 
-	
+	<?php global $base_url; ?>
 	<div class='row-fluid'>
 		<div class='span12' id="containerOf1Specie">
 			<div class='row-fluid'>
@@ -94,7 +110,9 @@
 				?>
 				</div>
 				<div class='span2' id="lien_specie">
-						<?php echo $lien_espece; ?>
+
+						<a href='<?php echo "$base_url/node/".strip_tags($nid_espece."?idlastbal=".$nid_balade); ?>' title='<?php echo strip_tags($title_espece); ?>'>voir</a>
+												
 				</div>
 			
 				<div class='<?php echo($groupe_taxo)?>'></div>

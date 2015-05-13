@@ -36,19 +36,17 @@ function NsSendMailFromJS_menu() {
 /**
 * Function that gets called from JQuery asynchronously. 
 */
-function send_mail_from_js_callback($mail) {
+function send_mail_from_js_callback($mail) {  
+
+  $to      = $mail;    
+  $subject = 'Gagne un badge !';
   
+  // Make emails HTML friendly
+  $message['headers']['Content-Type'] = 'text/html; charset=UTF-8; format=flowed';
+  $message = 'Bonjour !';
+  $headers = 'From: contact@natural-solutions.eu' . "\r\n" .'Reply-To: contact@natural-solutions.eu' . "\r\n" .'X-Mailer: PHP/' . phpversion();
 
-    $to      = $mail;    
-    $subject = 'Gagne un badge !';
-    
-    // Make emails HTML friendly
-    $message['headers']['Content-Type'] = 'text/html; charset=UTF-8; format=flowed';
-    $message = 'Bonjour !';
-    $headers = 'From: contact@natural-solutions.eu' . "\r\n" .'Reply-To: contact@natural-solutions.eu' . "\r\n" .'X-Mailer: PHP/' . phpversion();
-
-    mail($to, $subject, $message, $headers);
-
+  mail($to, $subject, $message, $headers);
 
 }
 

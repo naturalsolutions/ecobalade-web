@@ -1,0 +1,2 @@
+:> maj vue "v_liste_Taxon_balade"
+:> suppr vue "v_especes_phares"
