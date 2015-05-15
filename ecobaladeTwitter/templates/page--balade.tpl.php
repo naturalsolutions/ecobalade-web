@@ -168,6 +168,7 @@ $nbDaysDiff = $diff->days;
 					$TitlePhotoResumeEspecePhare = $nodeEspecePhare->field_photo_resume['und'][0]['title'];
 					$AltPhotoResumeEspecePhare = $nodeEspecePhare->field_photo_resume['und'][0]['alt'];
 					$urlPhotoResumeEspecePhare = file_create_url($nodeEspecePhare->field_photo_resume['und'][0]['uri']);
+
 					$variables = array(
 					        'style_name' => 'espece_phare_250_150',
 					        'path' => $nodeEspecePhare->field_photo_resume['und'][0]['uri'],
@@ -179,7 +180,7 @@ $nbDaysDiff = $diff->days;
 					
 					$imgPhotoResumeEspecePhare = theme( 'image_style', $variables );
 					$nidPhotoResumeEspecePhare = $nodeEspecePhare->nid;
-										
+
 					echo "<div class='span4'><a class='imageEspecePhare' href='$urlPhotoResumeEspecePhare' title='$TitlePhotoResumeEspecePhare'>$imgPhotoResumeEspecePhare</a><a href='$base_url/node/$nidPhotoResumeEspecePhare?idlastbal=$baladenid'>$TitlePhotoResumeEspecePhare</a></div>";
 
 				} ?>

@@ -669,6 +669,9 @@ body.node-type-balade div.especes-phares{
   position: relative;
   padding: 20px 20px 10px 20px;
 }
+body.node-type-balade div.especes-phares div.span4 a:last-of-type{
+  width: 100%;
+}
 body.node-type-balade div.especes-phares a{
   margin-top: 2px;
   display: inline-block;
@@ -3780,6 +3783,13 @@ margin-left: 9%;
     text-align: center;
   } 
   /*PAGE BALADE*/
+ /* body.node-type-balade div.especes-phares [class*="span"],body.node-type-balade div.especes-phares .row-fluid [class*="span"] {
+    -moz-box-sizing: border-box;
+    display: block;
+    float: left;
+    margin-left: 0;
+    width: inherit;
+  }*/
   body.node-type-balade div.view-v-balade-similaire div.views-field-title {
     font-size: 1em;
     padding-top: 2%;

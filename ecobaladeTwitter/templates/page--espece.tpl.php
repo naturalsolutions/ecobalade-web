@@ -419,7 +419,7 @@ if (isset($_GET["idlastbal"])){
 
 										//Affichage	
 										echo '<figure class="effect-zoe">';
-											echo "<a href='$url' title='$nodeTaxon->title' class='imageTaxon'>$imgPhotoResumeTaxon</a>";
+											echo "<a href='$url' title='$nodeTaxon->title' class='imageTaxon'><img src='$url' alt='$alt'/></a>";
 											echo "<figcaption>";
 												echo "<a href='$base_url/node/$nodeTaxon->nid'><h2>$nodeTaxon->title</h2></a>";											
 											echo '</figcaption>';
