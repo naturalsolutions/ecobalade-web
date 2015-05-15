@@ -168,13 +168,19 @@ $nbDaysDiff = $diff->days;
 					$TitlePhotoResumeEspecePhare = $nodeEspecePhare->field_photo_resume['und'][0]['title'];
 					$AltPhotoResumeEspecePhare = $nodeEspecePhare->field_photo_resume['und'][0]['alt'];
 					$urlPhotoResumeEspecePhare = file_create_url($nodeEspecePhare->field_photo_resume['und'][0]['uri']);
+					$variables = array(
+					        'style_name' => 'espece_phare_250_150',
+					        'path' => $nodeEspecePhare->field_photo_resume['und'][0]['uri'],
+					        'width' => $nodeEspecePhare->field_photo_resume['und'][0]['width'],
+					        'height' => $nodeEspecePhare->field_photo_resume['und'][0]['height'],
+					        'title' => $nodeEspecePhare->field_photo_resume['und'][0]['title'],
+							'alt' => $nodeEspecePhare->field_photo_resume['und'][0]['alt']
+					);
+					
+					$imgPhotoResumeEspecePhare = theme( 'image_style', $variables );
 					$nidPhotoResumeEspecePhare = $nodeEspecePhare->nid;
-					
-					//$photoResumeEspecePhare = field_get_items($entity_type = 'node', $nodeEspecePhare, $field_name = 'field_photo_resume');
-					
-					//drupal_set_message( "<pre>" . print_r($nodeEspecePhare, TRUE) . "</pre>" ); 
-					//print views_embed_view('v_especes_phares','block_2', $especesPhares[$i]['nid']); 
-					echo "<div class='span4'><a class='imageEspecePhare' href='$urlPhotoResumeEspecePhare' title='$TitlePhotoResumeEspecePhare'><img src='$urlPhotoResumeEspecePhare' title='$TitlePhotoResumeEspecePhare' alt='$AltPhotoResumeEspecePhare'></a><a href='$base_url/node/$nidPhotoResumeEspecePhare?idlastbal=$baladenid'>$TitlePhotoResumeEspecePhare</a></div>";
+										
+					echo "<div class='span4'><a class='imageEspecePhare' href='$urlPhotoResumeEspecePhare' title='$TitlePhotoResumeEspecePhare'>$imgPhotoResumeEspecePhare</a><a href='$base_url/node/$nidPhotoResumeEspecePhare?idlastbal=$baladenid'>$TitlePhotoResumeEspecePhare</a></div>";
 
 				} ?>
 				</div>					

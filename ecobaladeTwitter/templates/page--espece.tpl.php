@@ -406,9 +406,20 @@ if (isset($_GET["idlastbal"])){
 										$alt = $nodeTaxon->field_photo_resume['und'][0]['alt'];
 										$title = $nodeTaxon->field_photo_resume['und'][0]['title'];
 
+										$variables = array(
+									        'style_name' => 'espece_phare_250_150',
+									        'path' => $nodeTaxon->field_photo_resume['und'][0]['uri'],
+									        'width' => $nodeTaxon->field_photo_resume['und'][0]['width'],
+									        'height' => $nodeTaxon->field_photo_resume['und'][0]['height'],
+									        'title' => $nodeTaxon->field_photo_resume['und'][0]['title'],
+											'alt' => $nodeTaxon->field_photo_resume['und'][0]['alt']
+										);
+
+										$imgPhotoResumeTaxon = theme( 'image_style', $variables );
+
 										//Affichage	
 										echo '<figure class="effect-zoe">';
-											echo "<a href='$url' title='$nodeTaxon->title' class='imageTaxon'><img src='$url' alt='$alt'/></a>";
+											echo "<a href='$url' title='$nodeTaxon->title' class='imageTaxon'>$imgPhotoResumeTaxon</a>";
 											echo "<figcaption>";
 												echo "<a href='$base_url/node/$nodeTaxon->nid'><h2>$nodeTaxon->title</h2></a>";											
 											echo '</figcaption>';

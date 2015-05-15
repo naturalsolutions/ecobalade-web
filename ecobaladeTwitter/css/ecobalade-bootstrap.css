@@ -15,49 +15,6 @@
 /*                          FONT - POLICE                                  */
 /*                                                                         */
 /***************************************************************************/
-/*VIvien*/  
-body.front div.hero-unit-teaser h1{
-  font-family : 'RockwellLight', serif;
-}
-
-body.front a#fold1BntAllBalades{
-  font-family: 'Raleway', sans-serif;
-}   
-
-body.front p.ralewaytypo span{
-  font-family: 'RalewaySemiBold', sans-serif;
-  color : #4DBB74;
-}
-
-body.front div.span6 p.ralewaytypo{
-     font-family: 'Raleway', sans-serif;
-     color: #000;
-}
-
-body.front div.span6 p.ralewaytypo span{
-  font-family: 'RalewaySemiBold', sans-serif;
-  color : #4DBB74;
-}
-
-body.front div#fold3 h3{
-  margin-top: -10px;
-}
-
-body.front div.span4 h3{
-  font-family : 'RockwellLight', serif;
-  color : #4DBB74;
-}
-
-body.front div.span4 p{
-  font-family : 'Raleway', sans-serif;
-  color: #000;
-}
-
-body.front div.span4 p span{
-  font-family: 'RalewaySemiBold', sans-serif;
-  color : #4DBB74;
-}
-
 @font-face {
     font-family: 'RockwellLight';
     src: url('./font/RockwellStd-Light.ttf');
@@ -142,11 +99,15 @@ body.logged-in header#navbar{
 p{
   font-size:16px;
   line-height:27px;
+  font-family : 'Raleway', sans-serif;
 }
 a {
    color:#4DBB74;
 }
-
+h1,h2,h3,h4{
+  font-family : 'RockwellLight', serif;
+  text-rendering: auto;
+}
 #navbar > div > div > div > nav > div:nth-child(1) > div:nth-child(6) > a{
   color: #4DBB74;
   font-family: "Raleway";
@@ -294,6 +255,12 @@ div.popup_onload div.content div.row-fluid:nth-child(3){
   margin-top: 2.3%;
 }
 /*fin popup*/
+body.front div.hero-unit-teaser h1 {
+  font-family: 'RockwellLight',serif;
+}
+body.front div#fold3 h3{
+  margin-top: -10px;
+}
 body.front a#fold1BntAllBalades{
   margin-left: 22%; 
   margin-top: 2%;
@@ -697,6 +664,9 @@ body.node-type-balade div.especes-phares{
 body.node-type-balade div.especes-phares a{
   margin-top: 2px;
   display: inline-block;
+}
+body.node-type-balade div.especes-phares a img{
+  max-height: 200px;
 }
 body.node-type-balade div.especes-phares a:hover{
   text-decoration: none;
