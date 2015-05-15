@@ -343,11 +343,83 @@ if (isset($_GET["idlastbal"])){
 							</div> <!-- fin bloc espece -->
 							
 							<div class="span3" id='aussiPresentDansBalade'>
-								<?php 		 
-								print ("<h2>Aussi présents dans d'autres balades</h2>");
-								print views_embed_view('v_taxon_suivant_precedent','block_vsui',$baladenid);  // affichage du slideshow des especes
-								?>
-							</div>
+								<div class="blocBalade">
+								
+									<h4>A retrouver dans cette balade</h4>
+									<!-- On execute la vue qui nous renvoie la liste des id de balades associé à l'espèce courante -->
+									<?php 		 								
+									$view = views_get_view('v_taxon_suivant_precedent');
+									$view->set_display('block_1');
+									$view->set_arguments(array($espnid));
+									//$view->set_items_per_page(3);
+									$view->pre_execute();
+									$view->execute();
+									$objects = $view->result;
+									//print $view->render();
+
+									//parcour des résultats et affichage
+
+									foreach ($objects as $key => $value) {
+										
+										//Charge node de la balade
+										$nodeBalade = node_load($value->field_esp_ces_node_nid);	
+										
+										//Récuperation des info dans la variable $nodeBalade 
+										$url = file_create_url($nodeBalade->field_photo_resume['und'][0]['uri']);
+										$alt = $nodeBalade->field_photo_resume['und'][0]['alt'];
+										$title = $nodeBalade->field_photo_resume['und'][0]['title'];
+
+										//Affichage		
+										
+										echo '<figure class="effect-zoe">';
+											echo "<a href='$url' title='$nodeBalade->title' class='imageBalade'><img src='$url' alt='$alt'/></a>";
+											echo "<figcaption>";
+												echo "<a title='Voir la page' href='$base_url/node/$nodeBalade->nid'><h2>$nodeBalade->title</h2></a>";											
+											echo '</figcaption>';
+										echo '</figure>';
+
+										//echo "<a href='$base_url/node/$nodeBalade->nid' title='$nodeBalade->title'><p>$nodeBalade->title</p></a>";
+									}
+									
+									?>			
+								</div> <!-- fin blocBalade -->
+									
+								<div class="blocTaxon">
+
+									<h4>A découvrir</h4>
+									<?php 		 
+									$view = views_get_view('v_taxon_suivant_precedent');
+									$view->set_display('block_vsui');
+									$view->set_arguments(array($baladenid));
+									//$view->set_items_per_page(3);
+									$view->pre_execute();
+									$view->execute();
+									$objects = $view->result;
+
+									foreach ($objects as $key => $value) {
+										
+										//Charge node taxon
+										$nodeTaxon = node_load($value->nid);
+
+										//Récuperation des info dans la variable $nodeTaxon 
+										$url = file_create_url($nodeTaxon->field_photo_resume['und'][0]['uri']);
+										$alt = $nodeTaxon->field_photo_resume['und'][0]['alt'];
+										$title = $nodeTaxon->field_photo_resume['und'][0]['title'];
+
+										//Affichage	
+										echo '<figure class="effect-zoe">';
+											echo "<a href='$url' title='$nodeTaxon->title' class='imageTaxon'><img src='$url' alt='$alt'/></a>";
+											echo "<figcaption>";
+												echo "<a href='$base_url/node/$nodeTaxon->nid'><h2>$nodeTaxon->title</h2></a>";											
+											echo '</figcaption>';
+										echo '</figure>';								
+									
+									}
+									
+									?>
+
+								</div> <!-- fin blocTaxon -->
+							</div> <!-- fin aussiPresentDansBalade -->
 
 						</div>		
 						<?php print render($page['content']); ?>
@@ -379,6 +451,24 @@ jQuery( document ).ready(function() {
 
 	//LightBox pour commentaires
 	if( $('.imageComment').length > 0 ) $('.imageComment').vanillabox({		
+		closeButton: false,
+		loop: true,
+		repositionOnScroll: true,
+		type: 'image',
+		adjustToWindow: 'both'
+    });
+
+    //LightBox pour image balade 
+	if( $('.imageBalade').length > 0 ) $('.imageBalade').vanillabox({		
+		closeButton: false,
+		loop: true,
+		repositionOnScroll: true,
+		type: 'image',
+		adjustToWindow: 'both'
+    });
+
+    //LightBox pour image espece
+	if( $('.imageTaxon').length > 0 ) $('.imageTaxon').vanillabox({		
 		closeButton: false,
 		loop: true,
 		repositionOnScroll: true,

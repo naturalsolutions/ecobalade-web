@@ -198,16 +198,18 @@
 .vnbx-title {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
-  color: #555555;
+  color: #fff;
   height: 32px;
   left: 0;
   line-height: 32px;
   overflow: hidden;
   text-align: left;
   text-overflow: ellipsis;
-  top: 0;
+  bottom: 0;
   white-space: nowrap;
   width: 100%;
+  background: rgba(0,0,0,0.5);
+  text-indent: 1%;
 }
 .vnbx-close-button-enabled .vnbx-title {
   padding-right: 32px;
