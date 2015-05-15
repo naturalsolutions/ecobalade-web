@@ -264,12 +264,16 @@ body.front div#fold3 h3{
 body.front a#fold1BntAllBalades{
   margin-left: 22%; 
   margin-top: 2%;
-  background-image: linear-gradient(to bottom, #fff, #fff);
+  background-image: -webkit-linear-gradient(#fff, #fff);
+  background-image: -o-linear-gradient(#fff, #fff);
+  background-image: linear-gradient(#fff, #fff);
   color: #4DBB74;
   border: 3px solid #4DBB74;
 }
 body.front a#fold1BntAllBalades:hover{
-  background-image: linear-gradient(to bottom, #4DBB74, #4DBB74) !important;
+  background-image: -webkit-linear-gradient(#4DBB74, #4DBB74) !important;
+  background-image: -o-linear-gradient(#4DBB74, #4DBB74) !important;
+  background-image: linear-gradient(#4DBB74, #4DBB74) !important;
   color: #fff !important;
   border: 3px solid #4DBB74 !important;
 }
@@ -279,11 +283,15 @@ body.front div.zoneBtnBalade a.btn{
   color: #fff;
 }
 body.front div.zoneBtnBalade a.btn.inverse{
-  background-image: linear-gradient(to bottom, #fff, #fff);
+  background-image: -webkit-linear-gradient(#fff, #fff);
+  background-image: -o-linear-gradient(#fff, #fff);
+  background-image: linear-gradient(#fff, #fff);
   color: #4DBB74;
 }
 body.front div.zoneBtnBalade a.btn.inverse:hover{
-  background-image: linear-gradient(to bottom, #4DBB74, #4DBB74);
+  background-image: -webkit-linear-gradient(#4DBB74, #4DBB74);
+  background-image: -o-linear-gradient(#4DBB74, #4DBB74);
+  background-image: linear-gradient(#4DBB74, #4DBB74);
   color: #fff;
 }
 body.front a#hp_button_android span.icon {
