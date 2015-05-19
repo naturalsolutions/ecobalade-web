@@ -808,6 +808,73 @@ body.node-type-balade div.field-name-field-detail-balade {
 /***************************************************************************/
 /*********************************  ****************************************/
 /*********************************  ****************************************/
+body.node-type-espece div#blockTitleEsp div.pictoGroupeTax{
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+body.node-type-espece #blockEspece #picto_Arbres{
+  background: url("../img/pictos/icone_arbre.png") 50% 50% no-repeat;
+  background-size: 100%;  
+}
+body.node-type-espece #blockEspece #picto_Insectes{
+  background: url("../img/pictos/icone_insectes.png") 50% 50% no-repeat;
+  background-size: 100%;  
+}
+body.node-type-espece #blockEspece #picto_Mollusque{
+  background: url("../img/pictos/icone_escargot.png") 50% 50% no-repeat;
+  background-size: 100%;  
+}
+body.node-type-espece #blockEspece #picto_Oiseaux {
+  background: url("../img/pictos/icone_oiseaux.png") 50% 50% no-repeat;
+  background-size: 100%;  
+}
+body.node-type-espece #blockEspece #picto_Mammifères{
+  background: url("../img/pictos/icone_mammiferes.png") 50% 50% no-repeat;
+  background-size: 100%;  
+}
+body.node-type-espece #blockEspece #picto_Reptiles{
+  background: url("../img/pictos/icone_reptiles.png") 50% 50% no-repeat;
+  background-size: 100%;  
+}
+body.node-type-espece #blockEspece #picto_Arbustes{
+  background: url("../img/pictos/icone_arbuste.png") 50% 50% no-repeat;
+  background-size: 100%;  
+}
+body.node-type-espece #blockEspece #picto_Amphibiens {
+  background: url("../img/pictos/icone_amphibien.png") 50% 50% no-repeat;
+  background-size: 100%;  
+}
+body.node-type-espece p#nom_scf{
+  font-style: italic;
+  position: absolute;
+  left: 55px;
+  top: 15px;
+  font-size: 1em;
+}
+body.node-type-espece a.btn-back-list-espece{
+  border: 1px solid #4DBB74;
+  float: right;
+  margin-right: 1%;
+  width: 200px;
+  padding: 5px 0;
+}
+body.node-type-espece a.btn-back-list-espece:hover{
+  font-family: RalewaySemiBold;
+}
+body.node-type-espece div#blockTitleEsp{
+  padding: 12px 0;
+  position: relative;
+  min-height: 55px;
+}
+body.node-type-espece a.btn-back-list-espece:hover{
+  background-position: 0 !important;
+  background: #ffffff;
+  color: #4DBB74;
+}
 body.node-type-espece div.pictoGroupeTax{
   min-width: 25px;
   float: left;
@@ -822,8 +889,7 @@ body.node-type-espece div#blockDetailsEspece audio{
   cursor: pointer;
 }
 body.node-type-espece img.pictureWhenNoSlider{
-  margin-left: 3%;
-  max-width: 97%;
+  width: 100%;
 }
 body.node-type-espece div#blockSlideEsp div.views-field-field-image-2{
   position: absolute;
@@ -1722,104 +1788,11 @@ footer.footer #lien_mail:hover{
 
 
 
-#blockSlideEsp .imgSlideShowDetailTaxon img{
-width: 100%;
-}
 
-#nom_scf{
-  font-style: italic;
-  display: inline-block;
-  margin-top: 15px;
-}
 
-#blockEspece #picto_Insectes{
-  background: url("../img/pictos/icone_insectes.png") no-repeat scroll center center transparent;
-  float: left;
-  margin-left: 10px;
-  width: 50px;
-  height: 50px;
-  max-width: 100%;
-  vertical-align: middle;
-  background-size: 70%;
-  display: inline-block;
-}
-#blockEspece #picto_Mollusque{
-  background: url("../img/pictos/icone_escargot.png") no-repeat scroll center center transparent;
-  float: left;
-  margin-left: 10px;
-  width: 50px;
-  height: 50px;
-  max-width: 100%;
-  vertical-align: middle;
-  background-size: 70%;
-  display: inline-block;
-}
-#blockEspece #picto_Oiseaux {
-  background: url("../img/pictos/icone_oiseaux.png") no-repeat scroll center center transparent;
-  float: left;
-  margin-left: 10px;
-  width: 50px;
-  height: 50px;
-  max-width: 100%;
-  vertical-align: middle;
-  background-size: 70%;
-  display: inline-block;
-}
-#blockEspece #picto_Mammifères{
-  background: url("../img/pictos/icone_mammiferes.png") no-repeat scroll center center transparent;
-  float: left;
-  margin-left: 10px;
-  width: 50px;
-  height: 50px;
-  max-width: 100%;
-  vertical-align: middle;
-  background-size: 70%;
-  display: inline-block;
-}
-#blockEspece #picto_Reptiles{
-  background: url("../img/pictos/icone_reptiles.png") no-repeat scroll center center transparent;
-  float: left;
-  margin-left: 10px;
-  width: 50px;
-  height: 50px;
-  max-width: 100%;
-  vertical-align: middle;
-  background-size: 70%;
-  display: inline-block;
-}
-#blockEspece #picto_Arbres{
-  background: url("../img/pictos/icone_arbre.png") no-repeat scroll center center transparent;
-  float: left;
-  margin-left: 10px;
-  width: 50px;
-  height: 50px;
-  max-width: 100%;
-  vertical-align: middle;
-  background-size: 70%;
-  display: inline-block;
-}
-#blockEspece #picto_Arbustes{
-  background: url("../img/pictos/icone_arbuste.png") no-repeat scroll center center transparent;
-  float: left;
-  margin-left: 10px;
-  width: 50px;
-  height: 50px;
-  max-width: 100%;
-  vertical-align: middle;
-  background-size: 70%;
-  display: inline-block;
-}
-#blockEspece #picto_Amphibiens {
-  background: url("../img/pictos/icone_amphibien.png") no-repeat scroll center center transparent;
-  float: left;
-  margin-left: 10px;
-  width: 50px;
-  height: 50px;
-  max-width: 100%;
-  vertical-align: middle;
-  background-size: 70%;
-  display: inline-block;
-}
+
+
+
 
 
 
@@ -4111,6 +4084,36 @@ margin-left: 9%;
   
 }
 @media (max-width: 650px) {
+  body.node-type-espece div#blockTitleEsp div.pictoGroupeTax {
+    width: 100%;
+    height: 45px;
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+    background-size: 60px !important;
+  }
+  body.node-type-espece p#nom_scf {
+    font-style: italic;
+    position: relative;
+    left: 0;
+    top: 15px;
+    font-size: 1em;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+  }
+  body.node-type-espece a.btn-back-list-espece {
+    border: 1px solid #4DBB74;
+    position: relative;
+    margin-right: 1%;
+    width: 200px;
+    padding: 5px 0;
+    margin: 10px auto;
+    display: block;
+    float: none;
+  }
   div.popup_onload div.content div.row-fluid div.span12 input#mc-embedded-subscribe{
     float: none;
     margin: 12px auto;

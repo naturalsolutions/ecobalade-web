@@ -20,6 +20,8 @@ stylesheets[all][] = css/ecobalade-bootstrap.css
 stylesheets[all][] = css/theme/sweet/vanillabox.css
 stylesheets[all][] = css/justifiedGallery.min.css
 stylesheets[all][] = css/font.css
+stylesheets[all][] = css/ideal-image-slider.css
+stylesheets[all][] = css/themes/default/default.css
 
 
 
@@ -28,6 +30,9 @@ scripts[] = js/intense.min.js
 scripts[] = js/jquery.vanillabox-0.1.6.min.js
 scripts[] = js/jquery.justifiedGallery.min.js
 scripts[] = js/script.js
+scripts[] = js/ideal-image-slider.min.js
+scripts[] = js/iis-bullet-nav.js
+scripts[] = js/iis-captions.js
 
 settings[toggle_name] = 0
 settings[toggle_search] = 1

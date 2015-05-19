@@ -136,58 +136,65 @@ if (isset($_GET["idlastbal"])){
 													}else{
 														print ("<div class='pictoGroupeTax' title='".$groupe_tax."' id='picto_".$groupe_tax."'></div>");
 													}
-													print ("<div id='nom_scf'>".$nom_scf."</div>");
+													print ("<p id='nom_scf'>".$nom_scf."</p>");
 											?>
-											<a class="btn pull-right back-page btn-primary" target="" rel="" title="Retour à la liste des espèces" href="<?php echo $base_path;?>especes">Retour à la liste des espèces</a>
+											<a class="btn-back-list-espece btn btn-primary" title="Retour à la liste des espèces" href="<?php echo $base_path;?>especes">Retour à la liste des espèces</a>
 										</div>
 									</div>
 									
 									<div class="row-fluid">
 										<div class="span12" id='blockSlideEsp'>
 											<?php 		 
-													
-													$view = views_get_view('v_slideshow_detail_taxon');
-													$view->set_display('block');
-													$view->set_arguments(array($espnid));
-													
-													$view->pre_execute();
-													$view->execute();
-													$objects = $view->result;
+											
+											//On récupere les photos
+											$field_image = field_get_items($entity_type = 'node', $node, $field_name = 'field_image'); 
+																						
+											//Si pas d'image
+											if(empty($field_image)){
+
 												
-													//drupal_set_message( "<pre>" . print_r($objects, TRUE) . "</pre>" ); 
-													
-													//Si pas d'image
-													if($objects[0]->field_data_field_image_delta == ''){
 
+												//On définit notre format
+												$variables = array(
+											        'style_name' => 'slideshow_detail_balade_full',
+											        'path' => $node->field_photo_resume['und'][0]['uri'],
+											        'width' => $node->field_photo_resume['und'][0]['width'],
+											        'height' => $node->field_photo_resume['und'][0]['height'],
+											        'title' => $node->field_photo_resume['und'][0]['title'],
+											        'attributes' => $arrayName = array('class' => 'pictureWhenNoSlider' ),										        
+													'alt' => $node->field_photo_resume['und'][0]['alt'],
+												);
+												
+												$imgPhotoResumeTaxon = theme( 'image_style', $variables );
+												//affiche simple photo
+												echo $imgPhotoResumeTaxon;
 
-														
-														$url = file_create_url($objects[0]->_field_data['nid']['entity']->field_photo_resume['und'][0]['uri']);														
-														$title = $objects[0]->_field_data['nid']['entity']->field_photo_resume['und'][0]['alt'];														
-														$alt = $objects[0]->_field_data['nid']['entity']->field_photo_resume['und'][0]['title'];														
-
-														if($title == '') $title = $node->title;
-														if($alt == '') $alt = $node->title;
-
-														$variables = array(
+											}else{
+												
+												//Affiche slideshow
+												echo '<div id="slider">';
+												    
+												    foreach ($field_image as $key => $value) {
+												    	
+												    	//drupal_set_message( "<pre>" . print_r($value['uri'], TRUE) . "</pre>" ); 
+												    	$variables = array(
 													        'style_name' => 'slideshow_detail_balade_full',
-													        'path' => $objects[0]->_field_data['nid']['entity']->field_photo_resume['und'][0]['uri'],
-													        'width' => $objects[0]->_field_data['nid']['entity']->field_photo_resume['und'][0]['width'],
-													        'height' => $objects[0]->_field_data['nid']['entity']->field_photo_resume['und'][0]['height'],
-													        'title' => $node->title,	
-													        'attributes' => $arrayName = array('class' => 'pictureWhenNoSlider' ),										        
-															'alt' => $node->title
+													        'path' => $value['uri'],
+													        'width' => $value['width'],
+													        'height' => $value['height'],
+													        'title' => $value['title'],
+													        'attributes' => $arrayName = array('class' => 'pictureSlider' ),										        
+															'alt' => $nom_scf
 														);
 
-														$imgPhotoResumeTaxon = theme( 'image_style', $variables );
+												       	$imgPhotoResumeTaxon = theme( 'image_style', $variables );
+												    	echo $imgPhotoResumeTaxon;
 
-														echo $imgPhotoResumeTaxon;
-
-													}else{
-														
-														print views_embed_view('v_slideshow_detail_taxon','block',$espnid);  // affichage du slideshow des especes	
-
-													} 
-													
+												    }
+												    
+												echo '</div>'; //fin slider												
+											
+											} 											
 
 													
 											?>
@@ -504,6 +511,28 @@ if (isset($_GET["idlastbal"])){
 
 <script type="text/javascript">
 jQuery( document ).ready(function() {
+
+
+	//slideshow
+	//new IdealImageSlider.Slider('#slider');
+
+	if( $('.pictureSlider').length > 0 ){
+	
+		var slider = new IdealImageSlider.Slider({
+		    selector: '#slider',
+		    //height: 400, // Required but can be set by CSS
+		    transitionDuration : 300,
+		    effect : 'fade',
+		    interval: 4000,
+		});
+		
+		//slider.addBulletNav();
+		slider.addCaptions();	
+
+		slider.start();
+		
+	}
+
 
 	//Saisonalité - On parcour les 12 mois
 	$('#lesMois .span1').each(function(index, el) {
