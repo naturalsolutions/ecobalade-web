@@ -226,7 +226,7 @@ if (isset($_GET["idlastbal"])){
 												print ("
 												<audio preload='auto' title='Chant du $node->title' controls='controls'>												  
 												  <source src='$son' type='audio/mp3' />
-												  Votre navigateur ne supporte pas la balise AUDIO.
+												  <span style='text-align:center;display:block;'>ø</span>
 												</audio>
 												");
 											
@@ -513,14 +513,13 @@ if (isset($_GET["idlastbal"])){
 jQuery( document ).ready(function() {
 
 
-	//slideshow
-	//new IdealImageSlider.Slider('#slider');
-
+	//slideshow -> http://gilbitron.github.io/Ideal-Image-Slider/
+	
 	if( $('.pictureSlider').length > 0 ){
 	
 		var slider = new IdealImageSlider.Slider({
-		    selector: '#slider',
-		    //height: 400, // Required but can be set by CSS
+		    selector: '#slider',		    
+		    height: 500, // Required but can be set by CSS
 		    transitionDuration : 300,
 		    effect : 'fade',
 		    interval: 4000,

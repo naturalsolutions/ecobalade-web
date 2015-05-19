@@ -881,7 +881,9 @@ body.node-type-espece div.pictoGroupeTax{
   height: 1px;
 }
 body.node-type-espece div#blockDetailsEspece audio{
-  background: #4DBB74;
+  background: #4DBB74;  
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
   border-radius: 10px;
   width: 43px;
   float: left;
@@ -915,7 +917,7 @@ body.node-type-espece div.views-slideshow-pager-field-item.views_slideshow_pager
 }
 body.node-type-espece div#boutons_partage {
   padding-left: 23px;
-  margin-top: 5px;
+  margin-top: 12px;
 }
 body.node-type-espece div.container-node{
   padding-bottom: 0;
