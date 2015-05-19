@@ -150,7 +150,7 @@ if (isset($_GET["idlastbal"])){
 											$field_image = field_get_items($entity_type = 'node', $node, $field_name = 'field_image'); 
 																						
 											//Si pas d'image
-											if(empty($field_image)){
+											if(empty($field_image) || count($field_image) < 2){
 
 												
 
