@@ -211,8 +211,20 @@ if (isset($_GET["idlastbal"])){
 
 
 											<?php $son = field_get_items($entity_type = 'node', $node, $field_name = 'field_son'); ?>
-											<?php $son = $son[0]['value']; ?>	
-											<!-- <pre><?php //print_r($son); ?></pre> -->
+											
+											<?php 
+											if(!empty($son)){
+												
+												$son = file_create_url($son[0]['uri']);												
+												print ("
+												<audio preload='auto' title='Chant du $node->title' controls='controls'>												  
+												  <source src='$son' type='audio/mp3' />
+												  Votre navigateur ne supporte pas la balise AUDIO.
+												</audio>
+												");
+											
+											} 
+											?>
 
 											<?php $description = field_get_items($entity_type = 'node', $node, $field_name = 'field_description'); ?>
 											<?php $description = $description[0]['value']; ?>				

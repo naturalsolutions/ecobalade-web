@@ -813,6 +813,14 @@ body.node-type-espece div.pictoGroupeTax{
   float: left;
   height: 1px;
 }
+body.node-type-espece div#blockDetailsEspece audio{
+  background: #4DBB74;
+  border-radius: 10px;
+  width: 43px;
+  float: left;
+  margin: 8px 20px 0px 15px;
+  cursor: pointer;
+}
 body.node-type-espece img.pictureWhenNoSlider{
   margin-left: 3%;
   max-width: 97%;

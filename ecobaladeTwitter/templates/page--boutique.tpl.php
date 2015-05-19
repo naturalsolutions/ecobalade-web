@@ -99,7 +99,7 @@
         
         
 
-          <a href="mailto:contact@natural-solutions.eu" target='_blank' rel="internal" title='Contactez nous pour commander un livret' alt='Contactez nous pour commander un livret'>         
+          <a href="http://www.natural-solutions.eu/contacts/" rel="internal" title='Contactez nous pour commander un livret' alt='Contactez nous pour commander un livret'>         
             <div class='sideBarBoutique'>
               <span>Livret-balade l'archipel du Frioul: 5€ </span>
             </div>
