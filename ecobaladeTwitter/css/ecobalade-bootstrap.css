@@ -808,6 +808,15 @@ body.node-type-balade div.field-name-field-detail-balade {
 /***************************************************************************/
 /*********************************  ****************************************/
 /*********************************  ****************************************/
+body.node-type-espece div.pictoGroupeTax{
+  min-width: 25px;
+  float: left;
+  height: 1px;
+}
+body.node-type-espece img.pictureWhenNoSlider{
+  margin-left: 3%;
+  max-width: 97%;
+}
 body.node-type-espece div#blockSlideEsp div.views-field-field-image-2{
   position: absolute;
   bottom: 0px;
@@ -959,11 +968,29 @@ body.node-type-espece figure.effect-zoe p.description {
 body.node-type-espece figure.effect-zoe a{
   text-decoration: none;
 }
+body.node-type-espece figure.effect-zoe a.imageBalade, body.node-type-espece figure.effect-zoe a.imageTaxon{
+  position: absolute;
+  display: block;
+  top: -50px;
+  right: -3px;
+  width: 20px;
+  height: 20px;
+  background: url('../img/Zoom.png') 50% 50% no-repeat;
+  background-size: 100%;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(0,100%,0);
+  transform: translate3d(0,100%,0);
+}
+body.node-type-espece figure.effect-zoe:hover a.imageBalade, body.node-type-espece figure.effect-zoe:hover a.imageTaxon{
+  -webkit-transform: translate3d(-3px,53px,0);
+  transform: translate3d(-3px,53px,0);
+}
 body.node-type-espece figure.effect-zoe figcaption {
   position: absolute;
   bottom: 0;
-  width: 94%;
-  padding: 0px 3%;
+  width: 100%;
+  padding: 0;
   background: rgba(255,255,255,0.9);
   color: #3c4a50;
   -webkit-transition: -webkit-transform 0.35s;
@@ -971,8 +998,13 @@ body.node-type-espece figure.effect-zoe figcaption {
   -webkit-transform: translate3d(0,100%,0);
   transform: translate3d(0,100%,0);
 }
+body.node-type-espece figure.effect-zoe:hover figcaption{
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
 body.node-type-espece figure.effect-zoe h2 {
   font-size: 1em;
+  padding: 0 3%;
   line-height: 16px;
   font-family: Raleway;
   color: rgb(51,51,51);
@@ -980,32 +1012,6 @@ body.node-type-espece figure.effect-zoe h2 {
 body.node-type-espece div.blocTaxon figure.effect-zoe h2 {
     text-align: center;
 }
-body.node-type-espece figure.effect-zoe h2
-  -webkit-transition: -webkit-transform 0.35s;
-  transition: transform 0.35s;
-  -webkit-transform: translate3d(0,200%,0);
-  transform: translate3d(0,200%,0);
-}
-body.node-type-espece figure.effect-zoe h2 {
-  display: inline-block;
-}
-body.node-type-espece figure.effect-zoe:hover figcaption,
-body.node-type-espece figure.effect-zoe:hover h2{
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-}
-body.node-type-espece figure.effect-zoe:hover h2 {
-  -webkit-transition-delay: 0.05s;
-  transition-delay: 0.05s;
-}
-/*fin hover*/
-/*
-body.node-type-espece div#aussiPresentDansBalade img{
-    border: 4px solid #fff;
-    border-radius: 5px 1px 1px 1px;
-    -webkit-border-radius: 5px 1px 1px 1px;
-    -moz-border-radius: 5px 1px 1px 1px;
-}*/
 body.node-type-espece div.view-v-taxon-suivant-precedent{
   padding-right: 11%;
   padding-bottom: 20px;
@@ -1028,34 +1034,7 @@ body.node-type-espece #blockEspece{
   border-radius: 4px ;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
-}/*
-body.node-type-espece div#valueTimeHidden div.matinee{
-  background: url('../img/matin.png') no-repeat 50% 50%;
-  background-size: 100%;
-  height: 75px;
-  width: 75px;
-  margin: 0 auto;
-  float: left;
 }
-body.node-type-espece div#valueTimeHidden div.journee{
-  background: url('../img/aprem.png') no-repeat 50% 50%;
-  background-size: 100%;
-  height: 75px;
-  width: 75px;
-  margin: 0 auto;
-  float: left;
-}
-body.node-type-espece div#valueTimeHidden div.soiree{
-  background: url('../img/soir.png') no-repeat 50% 50%;
-  background-size: 100%;
-  height: 75px;
-  width: 75px;
-  margin: 0 auto;
-  float: left;
-}
-body.node-type-espece div.icon_vivible_now{
-  display: none;
-}*/
 /***************************************************************************/
 /***************************************************************************/
 /*                            PAGE BOUTIQUE                                */
@@ -1563,7 +1542,8 @@ body.node-type-site div#thumbs a.pageLink.next{
 /*********************************  ****************************************/
 footer.footer {
   border-top: 2px solid #4DBB74;
-  background: #242424;
+  background: url('../img/footer/footer_fond.jpg') 50% 100% no-repeat #242424;
+  background-size: 100%;
 }
 footer.footer > div.container:first-of-type{
   border-bottom: 1px solid #929292;
@@ -3782,14 +3762,23 @@ margin-left: 9%;
     padding: 4% 5%;
     text-align: center;
   } 
-  /*PAGE BALADE*/
- /* body.node-type-balade div.especes-phares [class*="span"],body.node-type-balade div.especes-phares .row-fluid [class*="span"] {
-    -moz-box-sizing: border-box;
+  body.node-type-espece figure.effect-zoe a.imageBalade, body.node-type-espece figure.effect-zoe a.imageTaxon {
+    position: absolute;
     display: block;
-    float: left;
-    margin-left: 0;
-    width: inherit;
-  }*/
+    top: 8px;
+    right: 8px;
+    width: 25px;
+    height: 25px;  
+     transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+  }
+  body.node-type-espece figure.effect-zoe:hover a.imageBalade, body.node-type-espece figure.effect-zoe:hover a.imageTaxon{
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+  }
+  /*PAGE BALADE*/
   body.node-type-balade div.view-v-balade-similaire div.views-field-title {
     font-size: 1em;
     padding-top: 2%;

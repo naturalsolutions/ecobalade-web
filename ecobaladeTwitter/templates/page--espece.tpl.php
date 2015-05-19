@@ -134,7 +134,7 @@ if (isset($_GET["idlastbal"])){
 													if($groupe_tax == "Arbustes et plantes"){
 														print ("<div title='Arbustes et plantes' id='picto_Arbustes'></div>");
 													}else{
-														print ("<div title='".$groupe_tax."' id='picto_".$groupe_tax."'></div>");
+														print ("<div class='pictoGroupeTax' title='".$groupe_tax."' id='picto_".$groupe_tax."'></div>");
 													}
 													print ("<div id='nom_scf'>".$nom_scf."</div>");
 											?>
@@ -145,7 +145,51 @@ if (isset($_GET["idlastbal"])){
 									<div class="row-fluid">
 										<div class="span12" id='blockSlideEsp'>
 											<?php 		 
-													print views_embed_view('v_slideshow_detail_taxon','block',$espnid);  // affichage du slideshow des especes
+													
+													$view = views_get_view('v_slideshow_detail_taxon');
+													$view->set_display('block');
+													$view->set_arguments(array($espnid));
+													
+													$view->pre_execute();
+													$view->execute();
+													$objects = $view->result;
+												
+													//drupal_set_message( "<pre>" . print_r($objects, TRUE) . "</pre>" ); 
+													
+													//Si pas d'image
+													if($objects[0]->field_data_field_image_delta == ''){
+
+
+														
+														$url = file_create_url($objects[0]->_field_data['nid']['entity']->field_photo_resume['und'][0]['uri']);														
+														$title = $objects[0]->_field_data['nid']['entity']->field_photo_resume['und'][0]['alt'];														
+														$alt = $objects[0]->_field_data['nid']['entity']->field_photo_resume['und'][0]['title'];														
+
+														if($title == '') $title = $node->title;
+														if($alt == '') $alt = $node->title;
+
+														$variables = array(
+													        'style_name' => 'slideshow_detail_balade_full',
+													        'path' => $objects[0]->_field_data['nid']['entity']->field_photo_resume['und'][0]['uri'],
+													        'width' => $objects[0]->_field_data['nid']['entity']->field_photo_resume['und'][0]['width'],
+													        'height' => $objects[0]->_field_data['nid']['entity']->field_photo_resume['und'][0]['height'],
+													        'title' => $node->title,	
+													        'attributes' => $arrayName = array('class' => 'pictureWhenNoSlider' ),										        
+															'alt' => $node->title
+														);
+
+														$imgPhotoResumeTaxon = theme( 'image_style', $variables );
+
+														echo $imgPhotoResumeTaxon;
+
+													}else{
+														
+														print views_embed_view('v_slideshow_detail_taxon','block',$espnid);  // affichage du slideshow des especes	
+
+													} 
+													
+
+													
 											?>
 										</div>
 									</div>	
@@ -163,6 +207,12 @@ if (isset($_GET["idlastbal"])){
 
 									<div class="row-fluid">
 										<div class="span12" id='blockDetailsEspece'>
+
+
+
+											<?php $son = field_get_items($entity_type = 'node', $node, $field_name = 'field_son'); ?>
+											<?php $son = $son[0]['value']; ?>	
+											<!-- <pre><?php //print_r($son); ?></pre> -->
 
 											<?php $description = field_get_items($entity_type = 'node', $node, $field_name = 'field_description'); ?>
 											<?php $description = $description[0]['value']; ?>				
@@ -342,56 +392,54 @@ if (isset($_GET["idlastbal"])){
 									<?php if($isNow) echo "<div class='icon_vivible_now'>Visible en ce moment!!</div>"; ?>
 							</div> <!-- fin bloc espece -->
 							
+							<!-- On execute la vue qui nous renvoie la liste des id de balades associé à l'espèce courante -->
 							<div class="span3" id='aussiPresentDansBalade'>
-								<div class="blocBalade">
 								
-									<h4>A retrouver dans cette balade</h4>
-									<!-- On execute la vue qui nous renvoie la liste des id de balades associé à l'espèce courante -->
-									<?php 		 								
-									$view = views_get_view('v_taxon_suivant_precedent');
-									$view->set_display('block_1');
-									$view->set_arguments(array($espnid));
-									//$view->set_items_per_page(3);
-									$view->pre_execute();
-									$view->execute();
-									$objects = $view->result;
-									//print $view->render();
+								<?php 		 								
+								$view = views_get_view('v_taxon_suivant_precedent');
+								$view->set_display('block_1');
+								$view->set_arguments(array($espnid));
+								//$view->set_items_per_page(3);
+								$view->pre_execute();
+								$view->execute();
+								$objects = $view->result;
+								?>
+								
+								<!-- Test s'il y a des valeurs -->
+								<?php if($objects[0]->field_esp_ces_node_nid): ?>
+									<div class="blocBalade">
+									
+										<h4>A retrouver dans cette balade</h4>
+										<?php 
 
-									//parcour des résultats et affichage
-
-									foreach ($objects as $key => $value) {
-										
 										//Charge node de la balade
-										$nodeBalade = node_load($value->field_esp_ces_node_nid);	
+										$nodeBalade = node_load($objects[0]->field_esp_ces_node_nid);	
 										
 										//Récuperation des info dans la variable $nodeBalade 
 										$url = file_create_url($nodeBalade->field_photo_resume['und'][0]['uri']);
 										$alt = $nodeBalade->field_photo_resume['und'][0]['alt'];
 										$title = $nodeBalade->field_photo_resume['und'][0]['title'];
 
-										//Affichage		
-										
+										//Affichage												
 										echo '<figure class="effect-zoe">';
-											echo "<a href='$url' title='$nodeBalade->title' class='imageBalade'><img src='$url' alt='$alt'/></a>";
+											echo "<a href='$base_url/node/$nodeBalade->nid' title=\"$title\"><img title=\"$nodeBalade->title\" src='$url' alt='$alt'/></a>";
+											echo "<a href='$url' class='imageBalade' title=\"$title\"></a>";
 											echo "<figcaption>";
-												echo "<a title='Voir la page' href='$base_url/node/$nodeBalade->nid'><h2>$nodeBalade->title</h2></a>";											
+												echo "<a class='visitBalade' title=\"$nodeBalade->title\" href='$base_url/node/$nodeBalade->nid'><h2>$nodeBalade->title</h2></a>";											
 											echo '</figcaption>';
 										echo '</figure>';
 
-										//echo "<a href='$base_url/node/$nodeBalade->nid' title='$nodeBalade->title'><p>$nodeBalade->title</p></a>";
-									}
-									
-									?>			
-								</div> <!-- fin blocBalade -->
-									
+																					
+										?>			
+									</div> <!-- fin blocBalade -->
+								<?php endif; ?>
+
 								<div class="blocTaxon">
 
 									<h4>A découvrir</h4>
 									<?php 		 
 									$view = views_get_view('v_taxon_suivant_precedent');
-									$view->set_display('block_vsui');
-									$view->set_arguments(array($baladenid));
-									//$view->set_items_per_page(3);
+									$view->set_display('block_vsui');									
 									$view->pre_execute();
 									$view->execute();
 									$objects = $view->result;
@@ -419,9 +467,10 @@ if (isset($_GET["idlastbal"])){
 
 										//Affichage	
 										echo '<figure class="effect-zoe">';
-											echo "<a href='$url' title='$nodeTaxon->title' class='imageTaxon'><img src='$url' alt='$alt'/></a>";
+											echo "<a href='$base_url/node/$nodeTaxon->nid' title=\"$title\"><img title=\"$nodeTaxon->title\" src='$url' alt='$alt'/></a>";
+											echo "<a href='$url' class='imageTaxon' title=\"$title\"></a>";
 											echo "<figcaption>";
-												echo "<a href='$base_url/node/$nodeTaxon->nid'><h2>$nodeTaxon->title</h2></a>";											
+												echo "<a title='Visiter la page' href='$base_url/node/$nodeTaxon->nid'><h2>$nodeTaxon->title</h2></a>";											
 											echo '</figcaption>';
 										echo '</figure>';								
 									
@@ -460,32 +509,49 @@ jQuery( document ).ready(function() {
 
 	});
 
-	//LightBox pour commentaires
-	if( $('.imageComment').length > 0 ) $('.imageComment').vanillabox({		
-		closeButton: false,
-		loop: true,
-		repositionOnScroll: true,
-		type: 'image',
-		adjustToWindow: 'both'
-    });
 
-    //LightBox pour image balade 
-	if( $('.imageBalade').length > 0 ) $('.imageBalade').vanillabox({		
-		closeButton: false,
-		loop: true,
-		repositionOnScroll: true,
-		type: 'image',
-		adjustToWindow: 'both'
-    });
-
-    //LightBox pour image espece
-	if( $('.imageTaxon').length > 0 ) $('.imageTaxon').vanillabox({		
-		closeButton: false,
-		loop: true,
-		repositionOnScroll: true,
-		type: 'image',
-		adjustToWindow: 'both'
-    });
+    //LightBox pour imageBalade balade     
+	if( $('.imageBalade').length > 0 ){
+		
+		$('.imageBalade').vanillabox({		
+			
+			closeButton: false,
+			loop: true,
+			repositionOnScroll: true,
+			type: 'image',
+			adjustToWindow: 'both'
+    
+    	});	
+	
+	} 
+    //LightBox pour imageTaxon balade     
+	if( $('.imageTaxon').length > 1 ){
+		
+		$('.imageTaxon').vanillabox({		
+			
+			closeButton: false,
+			loop: true,
+			repositionOnScroll: true,
+			type: 'image',
+			adjustToWindow: 'both'
+    	
+    	});	
+	} 
+    //LightBox pour imageComment balade     
+	if( $('.imageComment').length > 1 ){
+		
+		$('.imageComment').vanillabox({		
+		
+			closeButton: false,
+			loop: true,
+			repositionOnScroll: true,
+			type: 'image',
+			adjustToWindow: 'both'
+	    
+	    });
+	
+	} 
+  
 
 	//Click sur bouton commenter
 	$('section#comments section.collapseComment h2').click(function(){
