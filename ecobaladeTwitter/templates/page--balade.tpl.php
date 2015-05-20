@@ -166,11 +166,11 @@ $nbDaysDiff = $diff->days;
 					
 					$nodeEspecePhare = node_load($especesPhares[$i]['nid']);
 					$TitlePhotoResumeEspecePhare = $nodeEspecePhare->field_photo_resume['und'][0]['title'];
-					$AltPhotoResumeEspecePhare = $nodeEspecePhare->field_photo_resume['und'][0]['alt'];
+					//$AltPhotoResumeEspecePhare = $nodeEspecePhare->field_photo_resume['und'][0]['alt'];
 					$urlPhotoResumeEspecePhare = file_create_url($nodeEspecePhare->field_photo_resume['und'][0]['uri']);
 
 					$variables = array(
-					        'style_name' => 'espece_phare_250_150',
+					        'style_name' => 'slideshow_detail_balade_full',
 					        'path' => $nodeEspecePhare->field_photo_resume['und'][0]['uri'],
 					        'width' => $nodeEspecePhare->field_photo_resume['und'][0]['width'],
 					        'height' => $nodeEspecePhare->field_photo_resume['und'][0]['height'],
@@ -181,7 +181,18 @@ $nbDaysDiff = $diff->days;
 					$imgPhotoResumeEspecePhare = theme( 'image_style', $variables );
 					$nidPhotoResumeEspecePhare = $nodeEspecePhare->nid;
 
-					echo "<div class='span4'><a class='imageEspecePhare' href='$urlPhotoResumeEspecePhare' title='$TitlePhotoResumeEspecePhare'>$imgPhotoResumeEspecePhare</a><a href='$base_url/node/$nidPhotoResumeEspecePhare?idlastbal=$baladenid'>$TitlePhotoResumeEspecePhare</a></div>";
+					//Affichage	
+					echo "<div class='span4'>";
+						echo '<figure class="effect-zoe">';
+							echo "<a href='$base_url/node/$nidPhotoResumeEspecePhare' title=\"$TitlePhotoResumeEspecePhare\">$imgPhotoResumeEspecePhare</a>";
+							echo "<a href='$urlPhotoResumeEspecePhare' class='imageTaxon' title=\"$TitlePhotoResumeEspecePhare\"></a>";
+							echo "<figcaption>";
+								echo "<a title='Visiter la page' href='$base_url/node/$nidPhotoResumeEspecePhare'><h3>$nodeEspecePhare->title</h3></a>";											
+							echo '</figcaption>';
+						echo '</figure>';
+					echo "</div>";
+
+					//echo "<a class='imageEspecePhare' href='$urlPhotoResumeEspecePhare' title='$TitlePhotoResumeEspecePhare'>$imgPhotoResumeEspecePhare</a><a href='$base_url/node/$nidPhotoResumeEspecePhare?idlastbal=$baladenid'>$TitlePhotoResumeEspecePhare</a></div>";
 
 				} ?>
 				</div>					
@@ -270,9 +281,60 @@ $nbDaysDiff = $diff->days;
 		<?php print views_embed_view('v_map_localisation_balade','block',$baladenid);?>
 		<h2>Informations pratiques</h2>
 		<?php print views_embed_view('v_informations_pratiques_balade','block',$baladenid);?>
+		
+		<div id="baladeSimilaire">
 		<h2>Balades similaires</h2>
-		<?php $difficulte = $page['content']['system_main']['nodes'][$baladenid]['field_description_de_la_balade']['#object']->field_difficulte['und'][0]['taxonomy_term']->tid; ?>
-		<?php print views_embed_view('v_balade_similaire','block',$difficulte);?>		
+		<?php 
+		
+		//On recupère la difficulté
+		$difficulte = $node->field_difficulte['und'][0]['taxonomy_term']->tid;
+
+		//On charge la vue qui nous renvoie  5 ID balade avec même diffifculté
+		$view = views_get_view('v_balade_similaire');
+		$view->set_display('block');
+		$view->set_arguments(array($difficulte));		
+		$view->pre_execute();
+		$view->execute();
+		$objects = $view->result;
+
+		//Parcour des id balades
+		foreach ($objects as $key => $value) {
+			
+			$nodeBaladeSim = node_load($value->nid);
+			
+			//On get les infos qui nous intéresses (title, image)
+			$title = $nodeBaladeSim->title;			
+			$imgbaladeSim = field_get_items($entity_type = 'node', $nodeBaladeSim, $field_name = 'field_photo_resume');
+			$url = file_create_url($imgbaladeSim[0]['uri']);
+
+			$variables = array(
+			    'style_name' => 'slideshow_detail_balade_full',
+			    'path' => $imgbaladeSim[0]['uri'],
+			    'width' => $imgbaladeSim[0]['width'],
+			    'height' => $imgbaladeSim[0]['height'],
+			    'title' => $imgbaladeSim[0]['title'],
+				'alt' => $imgbaladeSim[0]['alt']
+			);
+
+			//Notre image
+			$imgbaladeSim = theme( 'image_style', $variables );
+
+			
+			//Affichage	
+			echo '<figure class="effect-zoe">';
+				echo "<a href='$base_url/node/$value->nid' title=\"$title\">$imgbaladeSim</a>";
+				echo "<a href='$url' class='imageBaladeSim' title=\"$title\"></a>";
+				echo "<figcaption>";
+					echo "<a title='Visiter la page' href='$base_url/node/$value->nid'><h3>$title</h3></a>";											
+				echo '</figcaption>';
+			echo '</figure>';
+		
+
+		}
+
+		?>
+		</div>
+					
 	<?php endif; ?>
       </aside>  <!-- /#sidebar-second -->
     <?php endif; ?>
@@ -295,14 +357,33 @@ jQuery( document ).ready(function() {
 		adjustToWindow: 'both'
     });
 
-    //LightBox pour especes phares
-	if( $('.imageEspecePhare').length > 0 ) $('.imageEspecePhare').vanillabox({		
-		closeButton: false,
-		loop: true,
-		repositionOnScroll: true,
-		type: 'image',
-		adjustToWindow: 'both'
-    });
+ 	//LightBox pour especes phares
+	if( $('.imageTaxon').length > 1 ){
+		
+		$('.imageTaxon').vanillabox({		
+			
+			closeButton: false,
+			loop: true,
+			repositionOnScroll: true,
+			type: 'image',
+			adjustToWindow: 'both'
+    	
+    	});	
+	} 
+
+	//LightBox pour balades similaire
+	if( $('.imageBaladeSim').length > 1 ){
+		
+		$('.imageBaladeSim').vanillabox({		
+			
+			closeButton: false,
+			loop: true,
+			repositionOnScroll: true,
+			type: 'image',
+			adjustToWindow: 'both'
+    	
+    	});	
+	} 
 
 	//Click sur bouton commenter
 	$('section#comments section.collapseComment h2').click(function(){

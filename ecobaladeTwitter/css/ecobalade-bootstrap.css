@@ -542,12 +542,71 @@ body.front figure{
 /***************************************************************************/
 /*********************************  ****************************************/
 /*********************************  ****************************************/
+body.node-type-balade div#baladeSimilaire figure{
+  margin-bottom: 1px;
+}
+body.node-type-balade div#baladeSimilaire{
+  padding-bottom: 12px;
+}
+/*hover*/
+body.node-type-balade figure.effect-zoe{
+  overflow: hidden;
+  margin: 0;
+  position: relative;
+  margin-left: 1px;
+}
+body.node-type-balade figure.effect-zoe a{
+  text-decoration: none;
+}
+body.node-type-balade figure.effect-zoe a.imageBaladeSim, body.node-type-balade figure.effect-zoe a.imageTaxon{
+  position: absolute;
+  display: block;
+  top: -50px;
+  right: -3px;
+  width: 20px;
+  height: 20px;
+  background: url('../img/Zoom.png') 50% 50% no-repeat;
+  background-size: 100%;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(0,100%,0);
+  transform: translate3d(0,100%,0);
+}
+body.node-type-balade figure.effect-zoe:hover a.imageBaladeSim, body.node-type-balade figure.effect-zoe:hover a.imageTaxon{
+  -webkit-transform: translate3d(-3px,53px,0);
+  transform: translate3d(-3px,53px,0);
+}
+body.node-type-balade figure.effect-zoe figcaption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0;
+  background: rgba(255,255,255,0.9);
+  color: #3c4a50;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(0,100%,0);
+  transform: translate3d(0,100%,0);
+}
+body.node-type-balade figure.effect-zoe:hover figcaption{
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+body.node-type-balade figure.effect-zoe h3 {
+  font-size: 1em;
+  padding: 0 3%;
+  font-family: Raleway;
+  color: rgb(51,51,51);
+  text-align: center;
+  line-height: 20px;
+}
+body.node-type-balade div.blocTaxon figure.effect-zoe h3 {
+    text-align: center;
+}
+/*Fin hover*/
 body.node-type-balade .views-slideshow-controls-bottom .views-content-field-image > img{
   margin: 0px 0px 5px 8px;
   width: 82px;
-}
-body.node-type-balade div.view-id-v_balade_similaire{
-  padding-bottom: 12px ;
 }
 body.node-type-balade .views-field.views-field-field-image-2{
   background: #000;
@@ -657,81 +716,32 @@ body.node-type-balade div.especes-phares > h4{
   color: #4DBB74;
   top: -23px;
   left: -2px;
-  background-color: #FFF
-  ;
+  background-color: #FFF;
 }
 body.node-type-balade div.especes-phares{
+  padding: 20px;
   border: 1px solid #BBBBBB;
   margin: 60px 10px 20px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  position: relative;
-  padding: 20px 20px 10px 20px;
-}
-body.node-type-balade div.especes-phares div.span4 a:last-of-type{
-  width: 100%;
-}
-body.node-type-balade div.especes-phares a{
-  margin-top: 2px;
-  display: inline-block;
-}
-body.node-type-balade div.especes-phares a img{
-  max-height: 200px;
+  position: relative;  
 }
 body.node-type-balade div.especes-phares a:hover{
   text-decoration: none;
 }
-body.node-type-balade div.field-content .view-display-id-block_3 a:first-child{
-  left: 5%;
-}
-body.node-type-balade div.field-content .view-display-id-block_3 a:nth-child(2){
-  left: 37%;
-}
-body.node-type-balade div.field-content .view-display-id-block_3 a:nth-child(3){
-  left: 68%;
-}
-body.node-type-balade div.field-content .view-display-id-block_3 a {
-  
-  position: absolute;
-  z-index: 2;
-  color: #4DBB74;
-  top: -50px;
-}
-body.node-type-balade div.titreDescro{
-  font-size: 17.5px;  
-  
-  position: absolute;
-  z-index: 2;
-  color: #4DBB74;
-  top: 23px;
-  left: 20px;
-  background-color: #FFF;
-}
-
 body.node-type-balade div#boutons_partage{
   margin-left: 24px;
 }
 body.node-type-balade div.view-v-slideshow-detail-balade div.field-content{
-  
   color: #fff;
   padding-top: 1.5%;
   padding-left: 1%;
 }
-body.node-type-balade p.textDescro{
-  font-size: 1.2em;
-  border: 1px solid #BBBBBB;
-  margin: 15px 10px 20px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  position: relative;
-  z-index: 1;
-  line-height: 24px;
-  padding: 15px 10px 20px;
-}
 body.node-type-balade #btn-guide{
   width: 89%;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
   border-radius: 0;
   border: 3px solid #4DBB74;
 }
@@ -745,27 +755,6 @@ body.node-type-balade a#btn-esp {
 }
 body.node-type-balade div.field-name-field-difficulte{
   display: none;
-}
-body.node-type-balade div.view-v-balade-similaire div.views-field-title{
-  position: absolute;
-  bottom: 0;
-  color: #fff;
-  text-align: center;
-  background-color: rgba(0,0,0,0.4);
-  font-size: 0.9em;
-  width: 100%;
-  padding-top: 1px;
-  z-index: 999;
-}
-body.node-type-balade div.view-v-balade-similaire div.views-field-title > span{
-  padding: 2%;
-}
-body.node-type-balade div.view-v-balade-similaire div.views-row{
-  position: relative;
-  border-bottom: 1px dotted #fff;
-}
-body.node-type-balade div.view-v-balade-similaire div.views-row.views-row-first{
-  margin-top: 0;
 }
 body.node-type-balade section#comments section.collapseComment{
   background: url('../img/comment_picto.png') no-repeat 0% 2px #f5f5f5;
@@ -1026,21 +1015,6 @@ body.node-type-espece figure.effect-zoe{
   position: relative;
   margin-left: 1px;
 }
-body.node-type-espece figure.effect-zoe:hover p.description {
-  opacity: 1;
-}
-body.node-type-espece figure.effect-zoe p.description {
-  position: absolute;
-  bottom: 8em;
-  padding: 2em;
-  color: #fff;
-  text-transform: none;
-  font-size: 90%;
-  opacity: 0;
-  -webkit-transition: opacity 0.35s;
-  transition: opacity 0.35s;
-  -webkit-backface-visibility: hidden; /* Fix for Chrome 37.0.2062.120 (Mac) */
-}
 body.node-type-espece figure.effect-zoe a{
   text-decoration: none;
 }
@@ -1088,10 +1062,7 @@ body.node-type-espece figure.effect-zoe h2 {
 body.node-type-espece div.blocTaxon figure.effect-zoe h2 {
     text-align: center;
 }
-body.node-type-espece div.view-v-taxon-suivant-precedent{
-  padding-right: 11%;
-  padding-bottom: 20px;
-}
+/*Fin hover*/
 body.node-type-espece #aussiPresentDansBalade h4{
   background-color: #FAFAFA;
   border: 1px solid #D4D4D4;
@@ -3745,23 +3716,25 @@ margin-left: 9%;
     padding: 4% 5%;
     text-align: center;
   } 
-  body.node-type-espece figure.effect-zoe a.imageBalade, body.node-type-espece figure.effect-zoe a.imageTaxon {
-    position: absolute;
-    display: block;
-    top: 8px;
-    right: 8px;
-    width: 25px;
-    height: 25px;  
-     transform: none;
-    -webkit-transform: none;
-    -moz-transform: none;
-  }
   body.node-type-espece figure.effect-zoe:hover a.imageBalade, body.node-type-espece figure.effect-zoe:hover a.imageTaxon{
     transform: none;
     -webkit-transform: none;
     -moz-transform: none;
   }
   /*PAGE BALADE*/
+  body.node-type-balade figure.effect-zoe figcaption {
+    -webkit-transition: none;
+    transition: none;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+  body.node-type-balade figure.effect-zoe a.imageTaxon, body.node-type-balade figure.effect-zoe a.imageBaladeSim {
+    display: none;
+  }
+  body.node-type-balade figure.effect-zoe h3 {
+    font-size: 1.2em;
+    padding: 1% 3%;
+  }
   body.node-type-balade div.view-v-balade-similaire div.views-field-title {
     font-size: 1em;
     padding-top: 2%;
