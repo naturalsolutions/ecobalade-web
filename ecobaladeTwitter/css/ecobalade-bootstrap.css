@@ -967,6 +967,7 @@ body.node-type-espece div#blockSlideEsp div.views-field-field-image-2{
 }
 body.node-type-espece div#blockSlideEsp{
   position: relative;
+  z-index: 0;
 }
 body.node-type-espece div#views_slideshow_cycle_main_v_slideshow_detail_taxon-block{
   width: 85%;
