@@ -45,8 +45,9 @@
 
 
 <script type="text/javascript">
-$(function () { 
- $.smartbanner({ 
+jQuery( document ).ready(function() {
+
+  jQuery.smartbanner({ 
 
     price: 'GRATUIT',
     author: 'NATURAL SOLUTIONS',
@@ -61,8 +62,9 @@ $(function () {
     daysHidden: 0, // Duration to hide the banner after being closed (0 = always show banner)
     daysReminder: 90 // Duration to hide the banner after "VIEW" is clicked *separate from when the close button is clicked* (0 = always show banner)
 
-  })
- });
+  });
+  
+});
 </script>
 
 
