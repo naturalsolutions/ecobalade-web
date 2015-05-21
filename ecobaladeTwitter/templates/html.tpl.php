@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/css/jquery.fancybox.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/js/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/js/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
-<!-- <link rel="stylesheet" href="<?php //echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/css/jquery.smartbanner.css" type="text/css" media="screen" /> -->
+<link rel="stylesheet" href="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/css/jquery.smartbanner.css" type="text/css" media="screen" />
 
   <?php print $scripts; ?>
 
@@ -19,7 +19,7 @@
 <script type="text/javascript" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/js/helpers/jquery.fancybox-buttons.js"></script>
 <script type="text/javascript" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/js/helpers/jquery.fancybox-media.js"></script>
 <script type="text/javascript" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/js/helpers/jquery.fancybox-thumbs.js"></script>
-<!-- <script type="text/javascript" src="<?php //echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/js/jquery.smartbanner.js"></script> -->
+<script type="text/javascript" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/js/jquery.smartbanner.js"></script>
 
  <script type="text/javascript" src="http://www.panoramio.com/wapi/wapi.js?v=1&amp;hl=fr"></script> 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -46,7 +46,7 @@
 
 <script type="text/javascript">
 $(function () { 
-/* $.smartbanner({ 
+ $.smartbanner({ 
 
     price: 'GRATUIT',
     author: 'NATURAL SOLUTIONS',
@@ -61,22 +61,7 @@ $(function () {
     daysHidden: 0, // Duration to hide the banner after being closed (0 = always show banner)
     daysReminder: 90 // Duration to hide the banner after "VIEW" is clicked *separate from when the close button is clicked* (0 = always show banner)
 
-  })*/
-// $.smartbanner({ title: 'kamel', // Remplace le titre par défaut (qui est le tag <title> par défaut) 
-		// author: 'sabri', // Remplace l'auteur par défaut(qui est le <meta name="author">) 
-		// price: 'Free', // Prix de l'app 
-		// inAppStore: 'In the App Store', // Texte à coté du prix (ios) 
-		// inGooglePlay: 'In Google Play', // Texte à coté du prix (Android) 
-		// icon: null, // URL de l'icone (qui est la balise <link> par défaut) 
-		// iconGloss: null, // Force l'effet gloss (true ou false) 
-		// button: 'VIEW', // Texte sur le bouton d'installation 
-		// speedIn: 300, // Durée de l'animation d'apparition 
-		// speedOut: 400, // Durée de l'animation de disparition 
-		// daysHidden: 15, // Nombre de jours pendant lesquels la bannière sera cachée //après la fermeture(0 = toujours afficher) 
-		// daysReminder: 90, // Nombre de jours pendant lesquels la bannière sera cachée //après le clic sur VIEW(0 = toujours afficher) 
-		// force: null // Force l'affichage de la bannière Android ou iOS 
-		// })
-
+  })
  });
 </script>
 
@@ -94,7 +79,7 @@ $(function () {
 </script>
 
 <!-- A tab to launch the Classic Widget -->
-<script>
+<!--<script>
 UserVoice = window.UserVoice || [];
 UserVoice.push(['showTab', 'classic_widget', {
   mode: 'full',
@@ -107,7 +92,7 @@ UserVoice.push(['showTab', 'classic_widget', {
   tab_position: 'middle-right',
   tab_inverted: false
 }]);
-</script>
+</script> -->
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-37580907-1']);
