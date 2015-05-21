@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/css/jquery.fancybox.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/js/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/js/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/css/jquery.smartbanner.css" type="text/css" media="screen" />
+<!-- <link rel="stylesheet" href="<?php //echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/css/jquery.smartbanner.css" type="text/css" media="screen" /> -->
 
   <?php print $scripts; ?>
 
@@ -19,7 +19,7 @@
 <script type="text/javascript" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/js/helpers/jquery.fancybox-buttons.js"></script>
 <script type="text/javascript" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/js/helpers/jquery.fancybox-media.js"></script>
 <script type="text/javascript" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/js/helpers/jquery.fancybox-thumbs.js"></script>
-<script type="text/javascript" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/js/jquery.smartbanner.js"></script>
+<!-- <script type="text/javascript" src="<?php //echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/js/jquery.smartbanner.js"></script> -->
 
  <script type="text/javascript" src="http://www.panoramio.com/wapi/wapi.js?v=1&amp;hl=fr"></script> 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -43,7 +43,7 @@
 <link rel="apple-touch-icon" sizes="114x114" href="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/btn-launcher114.png" />
 
 
-
+<!-- BUG AVEC SLIDESHOW
 <script type="text/javascript">
 jQuery( document ).ready(function() {
 
@@ -66,7 +66,7 @@ jQuery( document ).ready(function() {
   
 });
 </script>
-
+-->
 
 
 <!-- 
