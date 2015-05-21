@@ -53,6 +53,8 @@
 	</span>
 </div>
 
+<?php global $base_url; ?>
+
 <div class="container">
 
   <header role="banner" id="page-header">
@@ -128,45 +130,138 @@
 	
 	
 	<!-- fold 3 -->
+	<?php 
+	
+	//On get le nid de la balade promu
+	$view = views_get_view('v_hp');
+	$view->set_display('block');	
+	$view->pre_execute();
+	$view->execute();
+	$objects = $view->result;
+
+	//On charge la balade promu
+	$nodeBaladePromu = node_load($objects[0]->nid);
+
+	//On récupère nos champs	
+	$title = $nodeBaladePromu->title;	
+	$nidBaladepromu = $nodeBaladePromu->nid;	
+	$field_distance = $nodeBaladePromu->field_distance['und'][0]['value'];
+	$field_situation = $nodeBaladePromu->field_situation['und'][0]['value'];
+	$field_description_de_la_balade = $nodeBaladePromu->field_balade_teaser['und'][0]['value'];
+
+	//$field_description_de_la_balade = truncate_utf8($field_description_de_la_balade, $max_length = 500, $wordsafe = TRUE, $add_ellipsis = FALSE, $min_wordsafe_length = TRUE);
+	$alter = array(
+  		'max_length' => 500, //Integer
+  		'ellipsis' => TRUE, //Boolean
+  		'word_boundary' => TRUE, //Boolean
+  		'html' => TRUE, //Boolean
+  	);
+
+	//$field_description_de_la_balade = views_trim_text($alter, $field_description_de_la_balade);
+	//$field_description_de_la_balade = text_summary($field_description_de_la_balade, $format = NULL, $size = 500);
+	$field_esp_ces_phares = $nodeBaladePromu->field_esp_ces_phares['und'];
+
+	//Gen image style
+	$variables = array(
+	    'style_name' => 'balade_promu_728_420',
+	    'path' => $nodeBaladePromu->field_photo_resume['und'][0]['uri'],
+	    'width' => $nodeBaladePromu->field_photo_resume['und'][0]['width'],
+	    'height' => $nodeBaladePromu->field_photo_resume['und'][0]['height'],
+	    'title' => $nodeBaladePromu->field_photo_resume['und'][0]['title'],
+		'alt' => $nodeBaladePromu->field_photo_resume['und'][0]['alt']
+	);
+
+	$imgPhotoBaladePromu = theme( 'image_style', $variables );
+	
+
+	?>
+
+	<!-- Affichage -->
 	<div class="row" id="fold3">
-		<div class="fleche-balade"><img src="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/balade/fleche-balade.png"/><p>10km<p/></div>
-		<div class="titreBalade">
+
+		<div class="span12">
+			
+			<div class="fleche-balade"><img src="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/balade/fleche-balade.png"/><p><?php echo $field_distance; ?>km<p/></div>
 			<h2>En ce moment</h2>
-			<ul class="filArianeBalade">
-				<li><span class="labelLine">France&nbsp&nbsp&nbsp></span></li>	
-				<li><span class="labelLine">Provence Alpes Côtes d'Azur&nbsp&nbsp&nbsp></span></li>
-				<li class="filArianeBaladeFin"><span class="labelLine">Roque d'Anthéron</span></li>
-			</ul>
+			<ul class="filArianeBalade">				
+				<?php if($field_situation != '') echo "<li><span class='labelLine'>France&nbsp></span></li><li><span class='labelLine'>$field_situation</span></li>"; ?>				
+			</ul>		
+			
 		</div>
-		<div class="span6 contenuEtiquette  retour-force">
+
+
+
+
+		<!-- Col1 -->
+		<div class="span6 contenuEtiquette colFold3">
 			<div class="etiquette">
 				<p>La balade</p>
 			</div>
 			<div class="secondEtiquette">
 				<p>du mois</p> 
 			</div>
-          <a href="<?php echo $base_path;?>balade/balade-la-roque-d-antheron-13-les-bords-de-la-durance" alt=""><img src="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/balade/bord_de_durance.jpg" alt="La Roque d'Anthéron" title="La Roque d'Anthéron"/></a>
+          <a href="<?php echo $base_path;?>balade/balade-la-roque-d-antheron-13-les-bords-de-la-durance" alt=""><?php echo $imgPhotoBaladePromu; ?></a>
         </div>
-        <div class="span6 ">
-		<div class="miniCarte"><img src="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/balade/miniCarte_toulon.png" alt="" /></div>
-		<h3>La Roque d'Anthéron</h3>
-          <p>La <strong>balade</strong> des bords de la <strong>Durance</strong> prend son départ au cœur du charmant village de la <a HREF="http://www.ville-laroquedantheron.fr/">Roque d’Anthéron</a>, connu comme témoin du rôle des vaudois et des protestants à l’origine du développement du Lubéron au XVIe siècle. Situé au Nord Ouest d’Aix en Provence, la Roque d’Anthéron est entouré de magnifiques paysages sauvages et préservés, à quelques pas du <a HREF="http://www.parcduluberon.fr/">Parc Naturel Régional du Luberon</a>.</p>
-					<p>Cette<strong> randonnée nature</strong> vous emmènera à la découverte de la <strong>faune</strong> typique des milieux d’eau douce ! Vous pourrez observer, le long de la <strong>Durance</strong>, le <a HREF="<?php echo $base_path;?>espece/guepier-d-europe#.VHX03dKG9Gs">Guêpier d’Europe</a>, le <a HREF="<?php echo $base_path;?>espece/heron-pourpre">héron pourpré</a> ou des traces du <a HREF="<?php echo $base_path;?>espece/castor-d-europe#.VHX1Y9KG9Gs">Castor d’Europe</a> ! Cette zone humide est le lieu d’habitat de nombreuse espèces d’oiseaux et notamment d’échassiers. C’est un milieu d’une étonnante richesse !</p>
+
+
+
+        <!-- Col2 -->
+        <div class="span6 contenuDescroEspPhare colFold3">		
+
+		<?php echo "<a href='$base_url/node/$nidBaladepromu' class='titleBaladePromu' title=\"$title\"><h3>$title</h3></a>"; ?>
+          	<div class='descroOfPromuBalade'><?php echo $field_description_de_la_balade; ?></div>
+
 			<div class="row-fluid zoneEspecePhotoBalade">
-				<div class="span4"><a href="<?php echo $base_path;?>espece/guepier-d-europe"><img src="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/balade/guepier-d-europe.jpg" alt="le Guepier d'europe" title="le Guepier d'europe"/></a></div>
-				<div class="span4"><a href="<?php echo $base_path;?>espece/heron-pourpre"><img src="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/balade/heron-pourpre.jpg" alt="le Héron pourpré" title="le Héron pourpré"/></a></div>
-				<div class="span4"><a href="<?php echo $base_path;?>espece/castor-d-europe"><img src="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/balade/castor-d-europe.jpg" alt="le Castor d'europe" title="le Castor d'europe"/></a></div>
+
+				<!-- On parcour les especes phares -->
+				<?php foreach ($field_esp_ces_phares as $key => $value) {
+					echo '<div class="span4">';
+					
+						//Pour chaque on récupère le nid
+						$nidEspecePhare = $value['nid'];
+						
+						//Get info field image
+						$field_photo_resume_espece_phare = field_get_items($entity_type = 'node', node_load($nidEspecePhare), $field_name = 'field_photo_resume'); 
+						
+						//Title image
+						$title = $field_photo_resume_espece_phare[0]['title'];
+						$alt = $field_photo_resume_espece_phare[0]['alt'];
+
+						//Get title taxon
+						$nodeTax = node_load($nidEspecePhare);
+						$titleTax = $nodeTax->title;						
+						
+						//Charge une image par style
+						$variables = array(
+						    'style_name' => 'slideshow_detail_balade_full',
+						    'path' => $field_photo_resume_espece_phare[0]['uri'],
+						    'width' => $field_photo_resume_espece_phare[0]['width'],
+						    'height' => $field_photo_resume_espece_phare[0]['height'],
+						    'title' => $title,
+							'alt' => $alt
+						);
+						//Notre image
+						$field_photo_resume_espece_phare = theme( 'image_style', $variables );						
+												
+						//Affichage
+						echo "<a href='$base_url/node/$nidEspecePhare' title=\"$title\" alt=\"$alt\"><span class='nameEspPhareBaladePromu'>$titleTax</span>$field_photo_resume_espece_phare</a>"; 
+
+					echo '</div>';
+				} ?>
+				
 			</div>
 			<div class="row-fluid zoneBtnBalade">
 				
-				<div class="span12">
-					<a class="span6 btn btn-primary bnt-large" target="" rel="" title="Détails de la balade" href="<?php echo $base_path;?>balade/balade-de-la-roque-d-antheron-13-les-bords-de-la-durance">Détails de la balade</a> 
-					<a class="span4 btn btn-primary bnt-large offset2 inverse" target="" rel="" title="Les balades" href="<?php echo $base_path;?>liste-balades">Toutes les balades</a>
+				<div class="span12">					
+					<a class=" btn btn-primary bnt-large" title="<?php echo $title; ?>" href="<?php echo $base_url."/node/".$nidBaladepromu; ?>">Détails de la balade</a> 
+					<a class=" btn btn-primary bnt-large  inverse" title="Les balades" href="<?php echo $base_path;?>liste-balades">Toutes les balades</a>							
 				</div>
-				
+					
 			</div>
-	  </div>
-    </div>
+	  	</div> <!-- Fin Col2 -->
+
+
+    </div> <!-- Fin fold 3-->
 	<hr>
     <!-- fold 2 -->
     <div class="row" id="fold2">

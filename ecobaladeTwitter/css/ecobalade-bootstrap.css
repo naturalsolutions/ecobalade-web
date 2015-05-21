@@ -123,6 +123,71 @@ h1,h2,h3,h4{
 /*                                                                         */
 /***************************************************************************/
 /*********************************  ****************************************/
+body.front div#fold3 div.zoneBtnBalade{
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+}
+body.front div#fold3 span.nameEspPhareBaladePromu{
+  display: none;
+}
+body.front div#fold3 div.zoneEspecePhotoBalade{
+  margin: 0 auto;
+  position: absolute;
+  bottom: 88px;
+}
+body.front div#fold3 ul.filArianeBalade li{
+  display:inline;
+  float:left;
+  height:33px;
+}
+body.front div#fold3 ul.filArianeBalade{
+  float: left;
+  margin-top: 15px;
+  padding-left: 10px;
+}
+body.front div#fold3 ul.filArianeBalade li a{
+  float:left;
+  margin:0 10px;
+  padding:6px 5px 5px 0;
+  color:#4DBB74;
+}
+body.front div#fold3 h2{
+  float:left;
+}
+body.front div#fold3 div.fleche-balade {
+  position: absolute;
+  right: 0;
+  top: -44px;
+}
+body.front div#fold3 div.fleche-balade p{
+  color:white;
+  font-family:"Raleway", sans-serif;
+  margin-top:-50px;
+  text-align:center;
+  font-size:18px;
+}
+body.front div#fold3 span.labelLine{
+  float:left;
+  padding: 6px 5px 5px 0px;
+  color:#4DBB74;
+}
+body.front div#fold3 h3{
+  margin-top: -10px;
+  width: 66%;
+}
+body.front div#fold3{
+  margin-top: 42px;
+  position: relative;
+  padding-bottom: 42px;
+}
+body.front div#fold3 div.colFold3{
+  position: relative;
+  min-height: 420px;
+}
+body.front div#fold3 a.titleBaladePromu:hover{
+  text-decoration: none;
+}
 body.front .contenuEtiquette{
   position:relative;
   overflow:hidden;
@@ -258,41 +323,51 @@ div.popup_onload div.content div.row-fluid:nth-child(3){
 body.front div.hero-unit-teaser h1 {
   font-family: 'RockwellLight',serif;
 }
-body.front div#fold3 h3{
-  margin-top: -10px;
-}
 body.front a#fold1BntAllBalades{
+  padding: 15px 0px;
   margin-left: 22%; 
   margin-top: 2%;
   background-image: -webkit-linear-gradient(#fff, #fff);
   background-image: -o-linear-gradient(#fff, #fff);
   background-image: linear-gradient(#fff, #fff);
   color: #4DBB74;
-  border: 3px solid #4DBB74;
+  border: 1px solid #4DBB74;
 }
 body.front a#fold1BntAllBalades:hover{
   background-image: -webkit-linear-gradient(#4DBB74, #4DBB74) !important;
   background-image: -o-linear-gradient(#4DBB74, #4DBB74) !important;
   background-image: linear-gradient(#4DBB74, #4DBB74) !important;
   color: #fff !important;
-  border: 3px solid #4DBB74 !important;
+  border: 1px solid #4DBB74 !important;
+  font-family: RalewaySemiBold;
 }
 body.front div.zoneBtnBalade a.btn{
   font-size: 1em;
-  border: 3px solid #4DBB74;
+  border: 1px solid #4DBB74;
   color: #fff;
+  width: 150px;
+  padding: 12px !important;
 }
 body.front div.zoneBtnBalade a.btn.inverse{
   background-image: -webkit-linear-gradient(#fff, #fff);
   background-image: -o-linear-gradient(#fff, #fff);
   background-image: linear-gradient(#fff, #fff);
   color: #4DBB74;
+  float: right;
+}
+body.front div.zoneBtnBalade a:hover{
+  -webkit-transition: 0 !important;
+  background-position: 0 !important;
+  background: #ffffff;
+  color: #4DBB74;
+  font-family: RalewaySemiBold;
 }
 body.front div.zoneBtnBalade a.btn.inverse:hover{
   background-image: -webkit-linear-gradient(#4DBB74, #4DBB74);
   background-image: -o-linear-gradient(#4DBB74, #4DBB74);
   background-image: linear-gradient(#4DBB74, #4DBB74);
   color: #fff;
+  font-family: RalewaySemiBold;
 }
 body.front a#hp_button_android span.icon {
   background-position: 0px -35px;
@@ -2738,12 +2813,7 @@ img#bnt_tt_balade_moving {
   
 }
 
-.labelLine{
-  float:left;
-  margin: 0px 5px;
-  padding: 6px 5px 5px 0px;
-  color:#4DBB74;
-}
+
       
 .bnt_risque_incendie, .bnt_risque_incendie:hover, .bnt_risque_incendie:active, .bnt_risque_incendie:focus {
 color:#fff;
@@ -2949,9 +3019,6 @@ h1,h2,h3,h4{
   background: rgba(255, 255, 255, 0.75);
 }
 
-#fold3 h4{
-  float:left;
-}
 .picto-inline li{
   display:inline;
 }
@@ -3004,52 +3071,14 @@ body.node-type-balade div.view-id-v_note_balade{
   left:-55px;
   width:210px;
 }
-.fleche-balade {
-  float:right;
-  margin:-20px 100px 0 0;
-}
-.fleche-balade p{
-  color:white;
-  font-family:"Raleway", sans-serif;
-  margin-top:-50px;
-  text-align:center;
-  font-size:18px;
-}
-.miniCarte{
-  float:right;
-  margin:-10px 10px 0 0;
-}
-ul.filArianeBalade li{
-  display:inline;
-  float:left;
-  height:33px;
-}
-ul.filArianeBalade{
-  float:left;
-  margin-top:10px;
-  padding-left:10px;
-}
-ul.filArianeBalade li a{
-  float:left;
-  margin:0 10px;
-  padding:6px 5px 5px 0;
-  color:#4DBB74;
-}
 
 
-#fold3 h2{
-  float:left;
-}
-div.zoneBtnBalade{
-  margin-top:40px;
-}
+
 .zoneBtnBalade a.btn-large{
   padding:9px 0px;
   width:100%;
 }
-div.zoneEspecePhotoBalade{
-  margin:25px auto;
-}
+
 #ancre3{
   margin-bottom:60px;
 }
@@ -3450,12 +3479,7 @@ button#edit-submit-the-sites-openlayer:hover{
   background-position: 0 !important;
 }
 
-body.front div.zoneBtnBalade a:hover{
-  -webkit-transition: 0 !important;
-  background-position: 0 !important;
-  background: #ffffff;
-  color: #4DBB74;
-}
+
 body.front a.email:hover{
   -webkit-transition: 0 !important; 
   background-position: 0 !important;
@@ -3508,6 +3532,16 @@ margin-left: 9%;
 }
 /*En dessous de 1200*/
 @media (max-width: 1199px){
+  /*HP*/
+  body.front div#fold3 div.colFold3 {
+    min-height: 353px;
+  }
+  body.front div#fold3 div.colFold3 p{
+    margin-top: -3px;
+  }
+  body.front div#fold3 h3 {   
+    line-height: 30px;
+  }
   /*PAGE BOUTIQUE*/
   body.page-boutique div.sideBarBoutique{
     width: 100%;
@@ -3610,14 +3644,41 @@ margin-left: 9%;
 
 @media  (max-width: 979px) {
   /*HP*/
+
+  body.front div#fold3 h3 {    
+    width: 100%;
+    text-align: center;
+    padding-bottom: 15px;
+  }
+  body.front div#fold3 div.colFold3 p {
+    margin-top: 0;
+    text-align: center;
+  }
+  body.front div#fold3 div.zoneBtnBalade, body.front div#fold3 div.zoneEspecePhotoBalade {
+    position: relative;
+    top: 35px;    
+  }
+  body.front div#fold3 div.zoneEspecePhotoBalade {
+    text-align: center;  
+  }
+  body.front div#fold3 div.zoneEspecePhotoBalade div.span4{
+    height: 170px;
+    width: 200px;
+    display: inline-block;
+    margin-left: 2.7624309392265194%;
+  }
   body.front a#fold1BntAllBalades {
     margin-left: 0;
   }
   body.front div.zoneBtnBalade a:first-of-type{
-      margin-bottom: 10px;
+    margin-bottom: 10px;
+    margin-left: 7.3%;
+  }
+  body.front div.zoneBtnBalade a:nth-child(2){
+    margin-right: 4.5%;
   }
   div.popup_onload {
-      width: 66% !important;
+    width: 66% !important;
     left: 15.5% !important; 
   }
   body.not-front > div.container {
@@ -3902,6 +3963,34 @@ margin-left: 9%;
   /*body.front.popup_onload-processed div#cboxOverlay {
      top: 125px !important;
   }*/
+  body.front div#fold3 span.nameEspPhareBaladePromu {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    padding: 12px 0;
+    font-size: 1.2em;
+    color: #fff;
+  }
+  body.front div#fold3 div.zoneEspecePhotoBalade div.span4 {
+    height: auto;
+    position: relative;
+    width: 100%;
+    display: block;
+    margin-left: 0;    
+  }
+  body.front div#fold3 div.descroOfPromuBalade {
+    padding-bottom: 80px;
+  }
+  body.front div#fold3 div.contenuDescroEspPhare{
+    margin-top: 50px;
+  }
+  body.front div#fold3 div.zoneBtnBalade{
+    top: 110px;
+    min-height: 170px;
+  }
   div.popup_onload {
     width: 75% !important;
     left: 11.5% !important;
@@ -3911,6 +4000,16 @@ margin-left: 9%;
   }
   div#cboxLoadedContent, div#cboxContent, div#cboxWrapper {
     min-height: inherit !important;
+  }
+  body.front div.zoneBtnBalade a:first-of-type {  
+    margin-left: 0;
+    width: 50%;
+    padding: 16px !important;
+  }
+  body.front div.zoneBtnBalade a:nth-child(2) {
+    margin-right: 0;
+    width: 30%;
+    padding: 16px !important;
   }
   /*PAGE LES BALADES*/
   body.page-liste-balades div.container-node > .row > aside, body.page-liste-balades div.container-node > .row > section {
@@ -4140,6 +4239,32 @@ margin-left: 9%;
   }
 }
 @media (max-width: 480px) {
+  /*hp*/
+  body.front div.zoneBtnBalade a:nth-child(2) {
+    width: 88%;
+    float: none !important;
+  }
+  body.front div.zoneBtnBalade a:first-of-type {
+    width: 88%;
+    float: none !important;
+  }
+  body.front div#fold3 div.zoneBtnBalade {   
+    min-height: 180px;
+  }
+  body.front div#fold3 div.contenuDescroEspPhare {
+    margin-top: 40px;
+  }
+  body.front div#fold3 div.descroOfPromuBalade {
+    padding-bottom: 7px
+  }
+  body.front div#fold3 div.colFold3 {
+    min-height: initial;
+    padding-bottom: 0;
+  }
+  body.front div#fold3 h3 {
+    padding-top: 16px;
+  }
+  /**/
   div.view-v-affiche-comment .imageComment img {
     max-width: 100%;
   }
@@ -4170,10 +4295,7 @@ margin-left: 9%;
   }
   body.front .img-polaroid {
     width: 120px;
-  }
-  body div.miniCarte{
-    margin: 10px 10px 0 0;
-  }
+  }  
   body.front div#fold3 h3 {
     margin-top: 20px;
     line-height: 1.4em;
