@@ -343,7 +343,7 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
     $this->xml_recurse($doc, $root, $data);
 
     drupal_add_http_header('Access-Control-Allow-Origin', '*');
-    drupal_add_http_header('Access-Control-Request-Method', 'GET');
+    drupal_add_http_header('Access-Control-Allow-Methods', 'GET, OPTIONS');
 
     return $doc->saveXML();
   }
