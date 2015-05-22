@@ -68,7 +68,7 @@
 	<div class="container-node">
       <?php print render($title_prefix); ?>
       
-      <h1 class="page-header">Page non trouvée</h1>
+      <h1 class="page-header">404 - Page non trouvée</h1>
       
       <?php print render($title_suffix); ?>
       <?php print $messages; ?>
@@ -80,7 +80,7 @@
       </aside>  <!-- /#sidebar-first -->
     <?php endif; ?>  
 	  
-	  <section class="<?php print _twitter_bootstrap_content_span($columns); ?>">  
+	  <section style='min-height: 454px; text-align: center;' class="<?php print _twitter_bootstrap_content_span($columns); ?>">  
       <?php if ($page['highlighted']): ?>
         <div class="highlighted hero-unit"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
@@ -105,7 +105,7 @@
       
       <?php //print render($page['content']); ?>
       <br/><br/><br/><br/><br/>
-      &nbsp;&nbsp;&nbsp;<a href="<?php echo $base_url;?>">Retour accueil</a>
+      &nbsp;&nbsp;&nbsp;<a href="<?php echo $base_url;?>" style='font-size: 2em;  text-align: center;  top: 80px;  position: relative;'>Cliquer pour retourner à l'accueil</a>
 	  </section>
 
     <?php if ($page['sidebar_second']): ?>
