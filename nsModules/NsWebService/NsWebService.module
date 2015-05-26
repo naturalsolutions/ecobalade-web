@@ -232,6 +232,7 @@ function NsWebService_find_balade_information($nitems, $timestamp, $id, $balade,
   }  
  
   $query->condition('n.status', '1', '='); 
+  $query->condition('n.custom_pub_mobile', '1', '='); 
   
   /*
   How many days ago?

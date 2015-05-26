@@ -507,6 +507,8 @@ if (isset($_GET["idlastbal"])){
 										$url = file_create_url($nodeTaxon->field_photo_resume['und'][0]['uri']);
 										$alt = $nodeTaxon->field_photo_resume['und'][0]['alt'];
 										$title = $nodeTaxon->field_photo_resume['und'][0]['title'];
+
+										if($title =='') $title = $nodeTaxon->title;
 										
 
 										//Affichage	
