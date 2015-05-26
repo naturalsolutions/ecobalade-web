@@ -900,12 +900,7 @@ body.node-type-espece .gallery-top {
   width: 98%;
   padding-left: 2%;
   position: relative;
-}/*
-body.node-type-espece .gallery-thumbs {
-  left: -10px;
-  box-sizing: border-box;
-  padding: 0;
-}*/
+}
 body.node-type-espece .gallery-thumbs .swiper-slide {
   width: 92%;
   margin-bottom: 5px;
@@ -4236,6 +4231,10 @@ margin-left: 9%;
     display: inline-block;
     text-align: center;
   }
+  body.node-type-espece h1.page-header {
+    text-align: center;
+    padding: 2% 1%;
+  }
   body.node-type-espece a.btn-back-list-espece {
     border: 1px solid #4DBB74;
     position: relative;
@@ -4422,6 +4421,17 @@ margin-left: 9%;
 
 }
 
+@media (max-width: 350px) {
+  body.front div.fleche-balade{
+    display: none;
+  }
+  body.front div#fold3 ul.filArianeBalade li {
+    height: auto;
+  }
+  body.front div#fold3 ul.filArianeBalade { 
+    margin-top: 0; 
+  }
+}
 
 @media (max-width: 300px) {
   div.popup_onload div.content div.row-fluid div.span12 input#mc-embedded-subscribe {
