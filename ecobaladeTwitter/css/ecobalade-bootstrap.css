@@ -881,12 +881,6 @@ body.node-type-espece div#blockTitleEsp div.pictoGroupeTax{
   left: 5px;
 }
 /*slider*/
-body.node-type-espece div.swiper-button-next.swiper-button-white{
-  right:  30px;
-}
-body.node-type-espece div.swiper-button-prev.swiper-button-white{
-  left:  30px;
-}
 body.node-type-espece .swiper-container {
   margin-left: auto;
   margin-right: auto;
