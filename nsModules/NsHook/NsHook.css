@@ -17,3 +17,15 @@
 	padding-top: 4%;
 	width: 100%;
 	}*/
+
+body.page-node-add-balade div.field-name-field-esp-ces div.form-item.form-type-checkbox{
+  min-width: 300px;
+  display: inline-block;
+}
+body.page-node-add-balade div.field-name-field-esp-ces div.form-item-field-esp-ces-und label{
+  width: auto;
+	display: inline-block;	
+}
+body.page-node-add-balade div.field-name-field-esp-ces div#edit-field-esp-ces-und{
+	padding-top: 12px;
+}

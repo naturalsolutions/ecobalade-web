@@ -20,7 +20,8 @@
 	     	
 
 	   //  });
-
+		
+		$('div.field-name-field-esp-ces > div.form-item-field-esp-ces-und > label').after('<br/><span class="textAide">Voici la liste des espèces présente dans le site ecobalade.fr, il vous suffit de cocher les espèces présente dans votre balade.</span>');
 
 		//Dès qu'il y a une requette ajax sur l'edition de balades  
 	    $('.node-form.node-balade-form').ajaxComplete(function(event, xhr, settings) {
