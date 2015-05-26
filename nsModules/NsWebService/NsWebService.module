@@ -159,6 +159,7 @@ function NsWebService_find_balade_information($nitems, $timestamp, $id, $balade,
     $query->addField('n', 'vid', 'vidHide');
 
     $query->condition('n.type', 'balade', '=');  
+    $query->condition('n.custom_pub_mobile', '1', '='); 
   
   }else{
 
@@ -228,11 +229,12 @@ function NsWebService_find_balade_information($nitems, $timestamp, $id, $balade,
     
       
 
-    $query->condition('n.type', 'balade', '=');  
+    $query->condition('n.type', 'balade', '='); 
+    $query->condition('n.custom_pub_mobile', '1', '=');  
   }  
  
   $query->condition('n.status', '1', '='); 
-  $query->condition('n.custom_pub_mobile', '1', '='); 
+  
   
   /*
   How many days ago?
