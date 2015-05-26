@@ -1879,9 +1879,7 @@ footer.footer #lien_mail:hover{
 
 #fieldPersoCriteria1line{
   border: 1px solid #BBBBBB;
-  margin-top: 10px;
-  *width:99%;
-  height:100px;
+  margin-top: 10px;  
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -1892,7 +1890,6 @@ footer.footer #lien_mail:hover{
   margin-bottom: 10px;
   display: inline-block;
   width:10%;
-  float: left;
   padding: 5px;
   padding-left: 10px;
   text-align: center;
@@ -1907,8 +1904,7 @@ footer.footer #lien_mail:hover{
 
 #fieldPersoCriteria2line{
   border: 1px solid #BBBBBB;
-  margin-top: 10px;
-  *width:99%;
+  margin-top: 10px;  
   height:200px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -4378,6 +4374,13 @@ margin-left: 9%;
   
 }
 @media (max-width: 390px) {
+  body.node-type-espece #fieldPersoCriteria1line div {
+    width: 100%;
+    margin-top: 0;
+  }
+  body.node-type-espece #fieldPersoCriteria1line {
+    padding-top: 50px;
+  }
   div.popup_onload div.content div.row-fluid div.span12 input#mc-embedded-subscribe {
     padding: 3% 10px;
   }
