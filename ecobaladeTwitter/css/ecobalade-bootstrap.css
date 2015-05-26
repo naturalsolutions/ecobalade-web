@@ -899,6 +899,7 @@ body.node-type-espece .gallery-top {
   height: auto;
   width: 98%;
   padding-left: 2%;
+  position: relative;
 }
 body.node-type-espece .gallery-thumbs {
   left: -10px;
