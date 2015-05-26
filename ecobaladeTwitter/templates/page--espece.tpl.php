@@ -132,7 +132,7 @@ if (isset($_GET["idlastbal"])){
 										<div class="span12" id='blockTitleEsp'>
 											<?php 		 
 													if($groupe_tax == "Arbustes et plantes"){
-														print ("<div title='Arbustes et plantes' id='picto_Arbustes'></div>");
+														print ("<div title='Arbustes et plantes' class='pictoGroupeTax' id='picto_Arbustes'></div>");
 													}else{
 														print ("<div class='pictoGroupeTax' title='".$groupe_tax."' id='picto_".$groupe_tax."'></div>");
 													}
@@ -144,6 +144,7 @@ if (isset($_GET["idlastbal"])){
 									
 									<div class="row-fluid">
 										<div class="span12" id='blockSlideEsp'>
+											<div class="row-fluid">
 											<?php 		 
 											
 											//On récupere les photos
@@ -171,33 +172,67 @@ if (isset($_GET["idlastbal"])){
 
 											}else{
 												
-												//Affiche slideshow
-												echo '<div id="slider">';
-												    
-												    foreach ($field_image as $key => $value) {
-												    	
-												    	//drupal_set_message( "<pre>" . print_r($value['uri'], TRUE) . "</pre>" ); 
-												    	$variables = array(
-													        'style_name' => 'slideshow_detail_balade_full',
-													        'path' => $value['uri'],
-													        'width' => $value['width'],
-													        'height' => $value['height'],
-													        'title' => $value['title'],
-													        'attributes' => $arrayName = array('class' => 'pictureSlider' ),										        
-															'alt' => $nom_scf
-														);
+												echo '<div class="span10">';
+													echo "<div class='swiper-container gallery-top'>";
+								 						echo "<div class='swiper-wrapper'>";
+													    
+													//Affiche slideshow
+			
 
-												       	$imgPhotoResumeTaxon = theme( 'image_style', $variables );
-												    	echo $imgPhotoResumeTaxon;
+																									    
+													    foreach ($field_image as $key => $value) {
+													    	
+													    	//drupal_set_message( "<pre>" . print_r($value['uri'], TRUE) . "</pre>" ); 
+													    	$variables = array(
+														        'style_name' => 'slideshow_detail_balade_full',
+														        'path' => $value['uri'],
+														        'width' => $value['width'],
+														        'height' => $value['height'],
+														        'title' => $value['title'],
+														        'attributes' => $arrayName = array('class' => 'pictureSlider' ),										        
+																'alt' => $nom_scf
+															);
 
-												    }
-												    
-												echo '</div>'; //fin slider												
+													       	$imgPhotoResumeTaxon = theme( 'image_style', $variables );
+													    	
+													    	 // Slides
+													        echo "<div class='swiper-slide'>$imgPhotoResumeTaxon</div>";
+													        
+
+													    }
+
+													    echo "</div>"; // fin swiper-wrapper
+													    
+													    echo '<div class="swiper-button-next swiper-button-white"></div>';
+	        											echo '<div class="swiper-button-prev swiper-button-white"></div>';
+
+													echo "</div>"; //fin swiper-container
+												echo "</div>"; 
+
+
+
+												//Thumbnails
+												echo '<div class="span2">';
+							 						echo '<div class="swiper-container gallery-thumbs">';
+												        echo '<div class="swiper-wrapper">';
+												        	foreach ($field_image as $key => $value) {												        		
+
+													    		$imageThumb = file_create_url($value['uri']);
+													    		
+													    		// Slides													        
+												        		echo "<div class='swiper-slide' style='background-image:url($imageThumb)'></div>";
+
+														    }
+
+												        echo '</div>';
+												    echo '</div>';
+											    echo '</div>';
+											    
 											
 											} 											
-
 													
 											?>
+											</div> <!-- fin row-fluid -->
 										</div>
 									</div>	
 											<!-- AddThis Button BEGIN -->
@@ -498,29 +533,70 @@ if (isset($_GET["idlastbal"])){
 	  </div>
  </div><!-- fin container-node -->
   		
+  	
 
 <script type="text/javascript">
 jQuery( document ).ready(function() {
 
+	(function($, viewport){
 
-	//slideshow -> http://gilbitron.github.io/Ideal-Image-Slider/
-	
-	if( $('.pictureSlider').length > 0 ){
-	
-		var slider = new IdealImageSlider.Slider({
-		    selector: '#slider',		    
-		    height: 500, // Required but can be set by CSS
-		    transitionDuration : 300,
-		    effect : 'fade',
-		    interval: 4000,
-		});
-		
-		//slider.addBulletNav();
-		slider.addCaptions();	
+		// Execute code each time window size changes
+	    $(window).resize(
+	        viewport.changed(function(){
 
-		slider.start();
-		
-	}
+	        	console.log($(window).width());
+	        	if($(window).width() < 963) {
+
+	        		if('div.swiper-container.gallery-thumbs.swiper-container-vertical')	$('div.swiper-container.gallery-thumbs').removeClass('swiper-container-vertical').addClass('swiper-container-horizontal');
+
+	        	}
+	        	else {
+	        		if('div.swiper-container.gallery-thumbs.swiper-container-horizontal') $('div.swiper-container.gallery-thumbs').removeClass('swiper-container-horizontal').addClass('swiper-container-vertical');
+	        	}
+
+	        })
+	    )
+
+	})(jQuery, ResponsiveBootstrapToolkit);
+
+	
+	//slideshow 
+	var galleryTop = new Swiper('.gallery-top', {
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',            
+        effect : 'fade'
+    });
+    
+
+    if($(window).width() < 968){    	
+
+    	var galleryThumbs = new Swiper('.gallery-thumbs', {	    	
+	        virtualTranslate : true,	        
+	        direction : 'horizontal',
+	        centeredSlides: true,
+	        slidesPerView: 'auto',
+	        touchRatio: 0.2,
+	        loop: true,    
+	        slideToClickedSlide: true
+	    });	        	
+    	
+    }else{
+
+    	//Au dessus de 968px de large
+    	var galleryThumbs = new Swiper('.gallery-thumbs', {	    	
+	        virtualTranslate : true,	        
+	        direction : 'vertical',
+	        centeredSlides: true,
+	        slidesPerView: 'auto',
+	        touchRatio: 0.2,
+	        loop: true,    
+	        slideToClickedSlide: true
+	   	});
+    }
+
+    
+    galleryTop.params.control = galleryThumbs;
+    galleryThumbs.params.control = galleryTop;
 
 
 	//Saisonalité - On parcour les 12 mois

@@ -44,16 +44,17 @@
   </div>
 </header>
 
+<?php global $base_url; ?>
+
 <div id="img-front">
 	<span class="txt-front">
 		<h2>En balade ou en rando, découvrez la nature pas à pas...</h2>
 		<p>Apprenez à reconnaître la faune et la flore facilement avec ecoBalade</p>
 		
-		<a id="btn-front" class="btn" target="" rel="" title="Les Balades" href="http://www.ecobalade.fr/balade">Trouver une balade</a>
+		<a id="btn-front" class="btn" target="" rel="" title="Les Balades" href="<?php echo $base_url; ?>/liste-balades">Trouver une balade</a>
 	</span>
 </div>
 
-<?php global $base_url; ?>
 
 <div class="container">
 

@@ -880,6 +880,42 @@ body.node-type-espece div#blockTitleEsp div.pictoGroupeTax{
   top: 5px;
   left: 5px;
 }
+/*slider*/
+body.node-type-espece div.swiper-button-next.swiper-button-white{
+  right:  30px;
+}
+body.node-type-espece div.swiper-button-prev.swiper-button-white{
+  left:  30px;
+}
+body.node-type-espece .swiper-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+body.node-type-espece .swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+body.node-type-espece .gallery-top {
+  height: auto;
+  width: 98%;
+  padding-left: 2%;
+}
+body.node-type-espece .gallery-thumbs {
+  left: -10px;
+  box-sizing: border-box;
+  padding: 0;
+}
+body.node-type-espece .gallery-thumbs .swiper-slide {
+  width: 100%;
+  margin-bottom: 10px;
+  height: 77px;
+  opacity: 0.8;
+}
+body.node-type-espece .gallery-thumbs .swiper-slide-active {
+  opacity: 1;
+}
+  
+/**/
 body.node-type-espece #blockEspece #picto_Arbres{
   background: url("../img/pictos/icone_arbre.png") 50% 50% no-repeat;
   background-size: 100%;  
@@ -3553,6 +3589,11 @@ margin-left: 9%;
   body.page-boutique iframe{
     width: 100%;
   }
+  /*PAGE ESPECE*/
+  body.node-type-espece .gallery-thumbs .swiper-slide {  
+    height: 64.5px;  
+    margin-bottom: 5px !important;
+  }
   /*PAGE BALADE*/
   body.node-type-balade section.span9 {
     margin: 0 0 0 20px;
@@ -3757,6 +3798,20 @@ margin-left: 9%;
     width: 100%;    
   }  
   /*PAGE ESPECE*/
+  body.node-type-espece .gallery-top {  
+  width: 100%;
+  padding-left: 0;
+  }
+  body.node-type-espece .gallery-thumbs {
+    left: 0;
+    padding: 6px 0px;
+  }
+  body.node-type-espece .gallery-thumbs .swiper-slide {
+    height: 75.5px;
+    width: 19.2%;
+    margin-bottom: 0 !important;
+    margin-right: 1.1%;
+  }
   body.node-type-espece figure.effect-zoe figcaption {
     text-align: center;
     transform: none;
@@ -4012,6 +4067,7 @@ margin-left: 9%;
     width: 30%;
     padding: 16px !important;
   }
+  /*PAGE ESPECE*/
   /*PAGE LES BALADES*/
   body.page-liste-balades div.container-node > .row > aside, body.page-liste-balades div.container-node > .row > section {
     width: 95.7%;

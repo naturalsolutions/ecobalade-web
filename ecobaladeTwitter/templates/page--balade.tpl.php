@@ -82,7 +82,7 @@ $nbDaysDiff = $diff->days;
 
     <?php print render($page['header']); ?>
   </header> <!-- /#header -->
-	  <?php if ($breadcrumb): echo "<div class='breadcrumb'><a href='".$base_url."'>Accueil</a>&nbsp»&nbsp<a href='".$base_url."/balade' title='Liste des balades'>Balades</a>&nbsp»&nbsp".$title." </div>"; endif;?>
+	  <?php if ($breadcrumb): echo "<div class='breadcrumb'><a href='".$base_url."'>Accueil</a>&nbsp»&nbsp<a href='".$base_url."/liste-balades' title='Liste des balades'>Balades</a>&nbsp»&nbsp".$title." </div>"; endif;?>
 		
 	
       <a id="main-content"></a>
