@@ -900,16 +900,16 @@ body.node-type-espece .gallery-top {
   width: 98%;
   padding-left: 2%;
   position: relative;
-}
+}/*
 body.node-type-espece .gallery-thumbs {
   left: -10px;
   box-sizing: border-box;
   padding: 0;
-}
+}*/
 body.node-type-espece .gallery-thumbs .swiper-slide {
-  width: 100%;
-  margin-bottom: 10px;
-  height: 77px;
+  width: 92%;
+  margin-bottom: 5px;
+  height: 81px;
   opacity: 0.8;
 }
 body.node-type-espece .gallery-thumbs .swiper-slide-active {
