@@ -1,31 +1,24 @@
-/*form#fiche-taxon-node-form div.form-item-field-crit-res-und-1134 input,  form#fiche-taxon-node-form div.form-item-field-crit-res-und-1135 input, form#fiche-taxon-node-form div.form-item-field-crit-res-und-1139 input, form#fiche-taxon-node-form div.form-item-field-crit-res-und-1143 input, form#fiche-taxon-node-form div.form-item-field-crit-res-und-1150 input{
-	visibility:hidden;
-	}
-	 form#fiche-taxon-node-form div#edit-field-crit-res div.form-item.form-type-checkbox{
-	float:left;width:15%;
-	} form#fiche-taxon-node-form div.form-item-field-crit-res-und-1134, form#fiche-taxon-node-form div.form-item-field-crit-res-und-1135, form#fiche-taxon-node-form div.form-item-field-crit-res-und-1139, form#fiche-taxon-node-form div.form-item-field-crit-res-und-1143, form#fiche-taxon-node-form div.form-item-field-crit-res-und-1150{
-	float:left;width:100% !important;margin-top:3%! important;border-bottom:1px dotted !important;
-	}
-	 form#fiche-taxon-node-form div.vertical-tabs.clearfix{
-	float:left;margin-top:4%;width:100%;
-	}
-	 form#fiche-taxon-node-form div#edit-actions{
-	float:right;margin-top:1%;
-	}
-	 form#fiche-taxon-node-form div#edit-field-image-mobile-fiche-esp-ce,  form#fiche-taxon-node-form div#edit-field-image-mobile-minature,  form#fiche-taxon-node-form div#edit-field-image-mobile-diaporama, form#fiche-taxon-node-form div#edit-field-son{
-	float: left;
-	padding-top: 4%;
-	width: 100%;
-	}*/
-
-body.page-node-add-balade div.field-name-field-esp-ces div.form-item.form-type-checkbox{
+/****************************************************************************************************************************************************/
+/*                                                          CE FICHIER REGROUPE TOUT LE CSS CUSTOM DE CE MODULE                                     */ 
+/*                                                                                                                                                  */
+/*                                      !! Veuillez respecter le systeme de selecteur mis en place ( body.) !!                                      */
+/*                                                                                                                                                  */
+/****************************************************************************************************************************************************/
+body.page-node-add-balade div.field-name-field-esp-ces div.form-item.form-type-checkbox, body.node-type-balade div.field-name-field-esp-ces div.form-item.form-type-checkbox{
   min-width: 300px;
   display: inline-block;
 }
-body.page-node-add-balade div.field-name-field-esp-ces div.form-item-field-esp-ces-und label{
+body.page-node-add-balade div.field-name-field-esp-ces div.form-item-field-esp-ces-und label, body.node-type-balade div.field-name-field-esp-ces div.form-item-field-esp-ces-und label{
   width: auto;
-	display: inline-block;	
+  display: inline-block;	
 }
-body.page-node-add-balade div.field-name-field-esp-ces div#edit-field-esp-ces-und{
+body.page-node-add-balade div.field-name-field-esp-ces div#edit-field-esp-ces-und, body.node-type-balade div.field-name-field-esp-ces div#edit-field-esp-ces-und{
 	padding-top: 12px;
+}
+body.page-node-add-balade div.field-name-field-balade-teaser > div.form-item-field-balade-teaser-und-0-value > label, body.node-type-balade div.field-name-field-balade-teaser > div.form-item-field-balade-teaser-und-0-value > label{
+  width: auto;
+  display: inline-block;	
+}
+body.page-node-add-balade span.textAide, body.node-type-balade span.textAide{
+	font-weight: normal !important;
 }
