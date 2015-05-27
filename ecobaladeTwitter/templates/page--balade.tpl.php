@@ -71,6 +71,8 @@ $DateCreated->setDate($year, $month, $day);
 $diff = $today->diff($DateCreated);
 $nbDaysDiff = $diff->days; 
 
+//Get node id pour la suite du template
+$baladenid = $node->nid; 
 ?>
 
 <div class="container">
@@ -118,6 +120,8 @@ $nbDaysDiff = $diff->days;
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
+
+      
      
 		<!--- ONGLETS -->
 		<ul class="nav nav-tabs" id="myTab">
@@ -132,8 +136,7 @@ $nbDaysDiff = $diff->days;
 		<div class="tab-pane active" id="description"> 
 		
 			<!-- *****SLIDESHOW DETAIL BALADE****** -->
-			 <?php 
-			$baladenid = $node->nid; 
+			 <?php 			
 			print views_embed_view('v_slideshow_detail_balade','block',$baladenid); 
 			?> 
 			
@@ -200,38 +203,36 @@ $nbDaysDiff = $diff->days;
 			</div>
 
 						
-
-			<?php print render($page['content']); ?>
+			<?php print render($page['content']); ?>			
 
 		</div>
 
 		<!-- Conteneur de l'onglet Espece -->
-		<div class="tab-pane" id="espece">		
+		<div class="tab-pane" id="espece">					
 			
-			<?php $baladenid = $node->nid;  ?>	
-					<div class="row-fluid">
-						<div class="span12" id='les_picto_balades'>
-							<div title='Toutes les espèces' id='resetAllFilterOnTaxa'>Tout</div>
-							<div title="Les oiseaux" id="picto_oiseaux"></div>
-							<?php if($baladenid != '269' && $baladenid != '9' &&  $baladenid != '2236' && $baladenid != '2292'):?>
-									<div title="Les mammifères" id="picto_mamifere"></div>
-							<?php endif; ?>
-							<?php if($baladenid != '2292'):?>
-								<div title="Les petites bêtes" id="picto_insect"></div>
-							<?php endif; ?>
-							<?php if($baladenid != '2355' && $baladenid != '2292'):?>
-									<div title="Les reptiles" id="picto_reptile"></div>
-							<?php endif; ?>
-							<div title="Les arbres" id="picto_arbre"></div>
-							<div title="Les arbustes" id="picto_arbuste"></div>
-							<?php if($baladenid == '104'):?>
-									<div title="Les mollusques" id="picto_mollusque"></div>
-							<?php endif; ?>
-							<?php if($baladenid == '2236' || $baladenid == '2355' || $baladenid == '2358' || $baladenid == '2353' || $baladenid == '2323' || $baladenid == '2354' || $baladenid == '2292'):?>
-								<div title="Les Amphibiens" id="picto_amphibien"></div>
-							<?php endif; ?>
-						</div>
-					</div>
+			<div class="row-fluid">
+				<div class="span12" id='les_picto_balades'>
+					<div title='Toutes les espèces' id='resetAllFilterOnTaxa'>Tout</div>
+					<div title="Les oiseaux" id="picto_oiseaux"></div>
+					<?php if($baladenid != '269' && $baladenid != '9' &&  $baladenid != '2236' && $baladenid != '2292'):?>
+							<div title="Les mammifères" id="picto_mamifere"></div>
+					<?php endif; ?>
+					<?php if($baladenid != '2292'):?>
+						<div title="Les petites bêtes" id="picto_insect"></div>
+					<?php endif; ?>
+					<?php if($baladenid != '2355' && $baladenid != '2292'):?>
+							<div title="Les reptiles" id="picto_reptile"></div>
+					<?php endif; ?>
+					<div title="Les arbres" id="picto_arbre"></div>
+					<div title="Les arbustes" id="picto_arbuste"></div>
+					<?php if($baladenid == '104'):?>
+							<div title="Les mollusques" id="picto_mollusque"></div>
+					<?php endif; ?>
+					<?php if($baladenid == '2236' || $baladenid == '2355' || $baladenid == '2358' || $baladenid == '2353' || $baladenid == '2323' || $baladenid == '2354' || $baladenid == '2292'):?>
+						<div title="Les Amphibiens" id="picto_amphibien"></div>
+					<?php endif; ?>
+				</div>
+			</div>
 					
 			<?php print views_embed_view('v_liste_taxon_balade','block_list_espece',$baladenid);?>
 			
