@@ -117,9 +117,12 @@ function NsWebService_find_balade_information($nitems, $timestamp, $id, $balade,
     //Description
     $query->join('field_revision_field_description', 'o', '(o.revision_id = n.vid)');
 
+    //Saisonalité
+    //$query->leftJoin('field_revision_field_saison', 'r', '(r.revision_id = n.vid)');
+
     //Audio
     $query->leftJoin('field_revision_field_son', 's', '(s.revision_id = n.vid)');
-    $query->leftJoin('file_managed', 't', '(t.fid = s.field_son_fid)');
+    $query->leftJoin('file_managed', 't', '(t.fid = s.field_son_fid)');    
 
     //Groupe
     $query->join('field_revision_field_groupe_taxonomique', 'f', '(f.revision_id = n.vid)');
@@ -145,6 +148,7 @@ function NsWebService_find_balade_information($nitems, $timestamp, $id, $balade,
     $query->addField('c', 'uri', 'imgEspeceThumb');
     $query->addField('c', 'filesize', 'imgEspeceThumbFilesize');
     $query->addField('t', 'uri', 'audio');
+    //$query->addField('r', 'field_saison_value', 'saison');
 
     $query->condition('n.type', 'espece', '=');
   
@@ -400,7 +404,7 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
       $itemCritere = $doc->createElement('item');
       
       $date_post = $doc->createElement('date_post');
-      
+            
       
       foreach ($data as $key => $value) {
         if ($key === "nid") {
@@ -543,7 +547,7 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
           }
           
           continue;
-        }
+        }           
         else if ($key === "nidHide") { 
 
           
@@ -571,6 +575,35 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
           
           //On profite de parcour les vid pour allez chercher les images des especes
           $vid = $value;
+
+          //On profite de parcour les vid pour allez chercher la saisonalité
+          $query0 = db_select('field_revision_field_saison', 'r'); 
+          $query0->condition('r.revision_id', $vid, '=');            
+          $query0->addField('r', 'field_saison_value', 'moisPesence');
+
+          // Execution
+          $saisons = $query0->execute()->fetchAll();          
+          
+          foreach ($saisons as $i => $val) {
+
+            $this->xml_recurse($doc, $parent, $val );
+
+          }
+
+          //On profite de parcour les vid pour allez chercher la saisonalité
+          $query8 = db_select('field_revision_field_visible', 'c'); 
+          $query8->condition('c.revision_id', $vid, '=');            
+          $query8->addField('c', 'field_visible_value', 'jourPesence');
+
+          // Execution
+          $joursPresences = $query8->execute()->fetchAll();          
+          
+          foreach ($joursPresences as $i => $val) {
+
+            $this->xml_recurse($doc, $parent, $val );
+
+          }
+
           //Requette pour aller chercher les images espece
           $query2 = db_select('field_revision_field_image_mobile_diaporama', 'f');        
           $query2->join('file_managed', 'b', '(b.fid = f.field_image_mobile_diaporama_fid)');
@@ -638,7 +671,7 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
           $this->xml_recurse($doc, $itemTaxon, $value );
           
           continue;
-        }
+        }        
         else if ($key === "date_post") {      
 
           $datePubli = format_date($timestamp = $value, $type = 'custom', $format = 'Y-m-d', $timezone = 'Europe/Paris'); 
@@ -648,7 +681,7 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
           $this->xml_recurse($doc, $date_post, $datePubli );
           
           continue;
-        }
+        }        
         else if ($key === "groupeTaxo") {    
 
           //On ajoute un item "groupe" 
