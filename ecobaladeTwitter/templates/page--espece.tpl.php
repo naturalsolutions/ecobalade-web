@@ -375,75 +375,238 @@ if (isset($_GET["idlastbal"])){
 									<!-- Saisonalité -->
 									<?php 
 									//test si il a des valeurs de saisonalité
-									if(count($TabOfSaisonValue) > 0 || count($TabOfTimeVisibiliteValue) > 20): ?>
-										<div class="row-fluid">
-										    <div class="span12" id="containerOfSaisonalite">
-												<?php 
-												//test si c'est une plante
-												if($groupe_tax == 'Arbustes et plantes' || $groupe_tax == 'Arbres') echo "<h4>Période de floraison</h4>";
-												else echo "<h4>Présence</h4>";																				
-												
-												?>
+									if(count($TabOfSaisonValue) > 0 || count($TabOfTimeVisibiliteValue) > 0): ?>
 
-												<div class='row-fluid'>
-													<div id='lesMois'>
-														<?php if(count($TabOfSaisonValue) > 0 ): ?>
-														<div class="span8">
-															<div class="row-fluid">
-																<div class='span1' id='01'>Jan</div>
-																<div class='span1'  id='02'>Fév</div>
-																<div class='span1'  id='03'>Mar</div>
-																<div class='span1'  id='04'>Avr</div>
-																<div class='span1'  id='05'>Mai</div>
-																<div class='span1'  id='06'>Jui</div>
-																<div class='span1'  id='07'>Jui</div>
-																<div class='span1'  id='08'>Aoû</div>
-																<div class='span1'  id='09'>Sep</div>
-																<div class='span1'  id='10'>Oct</div>
-																<div class='span1'  id='11'>Nov</div>
-																<div class='span1'  id='12'>Dec</div>															
-															</div>														
-														</div>
-														<?php 
-														endif;
-														//Calcul du nombre de valeur pour l'heure de visibilité
-														/*$nbValueVisibiliteValue = count($TabOfTimeVisibiliteValue); 
-														if($nbValueVisibiliteValue == 1) $spanValue = 4;
-														else if($nbValueVisibiliteValue == 2) $spanValue = 4;*/
-														?>		
-														<?php if(count($TabOfTimeVisibiliteValue) > 20 ): ?>												
-														<div class="span4">
-															<?php 															
-															echo "<div id='valueTimeHidden'>";															
-															foreach ($TabOfTimeVisibiliteValue as $key => $value) {
-															
-																echo "<div title='$value[value]' class='$value[value]'></div>";
+									<?php if(count($TabOfSaisonValue) > 0 ): ?>
 
-															}
-															echo "</div>"; // fin valueSaisonHidden 
-															?>
-														</div>		
-														<?php endif; ?>										
-													</div><!-- Fin lesMois -->
-												</div> 
-												
-												<?php 
-												echo "<div id='valueSaisonHidden'>";
-												$currentMonth = date('m');
-												foreach ($TabOfSaisonValue as $key => $value) {
-												
-													if($value['value'] == $currentMonth) $isNow = true;
-													echo "<div class='hidden'>$value[value]</div>";
+									<?php 
+									echo "<div id='valueSaisonHidden'>";
+									$currentMonth = date('m');
+									foreach ($TabOfSaisonValue as $key => $value) {
+									
+										if($value['value'] == $currentMonth) $isNow = true;
+										echo "<div class='hidden'>$value[value]</div>";
 
-												}
-												echo "</div>"; // fin valueSaisonHidden 
-												?>
-
-										</div> <!-- fin containerOfSaisonalite -->									
-									</div> <!-- fin row-fluid Saisonalité -->	 
+									}
+									echo "</div>"; // fin valueSaisonHidden 
+									?>
 									<?php endif; ?>
 
-									<?php if($isNow) echo "<div class='icon_vivible_now'>Visible en ce moment!!</div>"; ?>
+										<div class="row-fluid">
+											    <div class="span12" id="containerOfSaisonalite">												
+													<div class='row-fluid'>
+													
+													<?php if(count($TabOfSaisonValue) > 0 ): ?>
+													<div class="span4">
+
+														<?php 
+														//test si c'est une plante
+														if($groupe_tax == 'Arbustes et plantes' || $groupe_tax == 'Arbres') echo "<h4>Période de floraison</h4>";
+														else echo "<h4>Présence</h4>";																				
+														
+														?>
+														
+														<div class="row-fluid">
+
+															<?php 
+															$currentMonth =  date('m'); 
+
+															switch ($currentMonth) {
+																case '01':
+																	$currentMonth = 'Janvier';
+																break;
+																case '02':
+																	$currentMonth = 'Février';
+																break;
+																case '03':
+																	$currentMonth = 'Mars';
+																break;
+																case '04':
+																	$currentMonth = 'Avril';
+																break;
+																case '05':
+																	$currentMonth = 'Mai';
+																break;
+																case '06':
+																	$currentMonth = 'Juin';
+																break;
+																case '07':
+																	$currentMonth = 'Juillet';
+																break;
+																case '08':
+																	$currentMonth = 'Août';
+																break;
+																case '09':
+																	$currentMonth = 'Septembre';
+																break;
+																case '10':
+																	$currentMonth = 'Octobre';
+																break;
+																case '11':
+																	$currentMonth = 'Novembre';
+																break;
+																case '12':
+																	$currentMonth = 'Décembre';
+																break;
+															
+																default:
+																	# code...
+																	break;
+															}
+															
+															?>
+
+															<div class="row-fluid">
+																<div class="span12">																			
+																	<p class='currentMonth'><?php echo $currentMonth; ?></p>
+																	<?php 
+																	if($groupe_tax == 'Arbustes et plantes' || $groupe_tax == 'Arbres') {
+																		
+																		if($isNow) echo "<p class='labelCurrentMonth'>En fleur en ce mois ci</p>";
+																		else echo "<p class='labelCurrentMonth'>Pas en fleur en ce mois ci</p>";
+																	}
+																	else {
+																		
+																		if($isNow) echo "<p class='labelCurrentMonth'>Visible en ce mois ci</p>";	
+																		else echo "<p class='labelCurrentMonth'>Pas visible en ce mois ci</p>";	
+																	}
+																	?>
+																	<span class='lineSeparator'></span>
+																</div>
+															</div>
+
+															<div class="row-fluid">
+																<div class="row-fluid labelMois">
+																	<div id='01' class="span3">Jan</div>
+																	<div id='02' class="span3">Fév</div>
+																	<div id='03' class="span3">Mar</div>
+																	<div id='04' class="span3">Avr</div>
+																</div>
+
+																<div class="row-fluid labelMois">
+																	<div id='05' class="span3">Mai</div>
+																	<div id='06' class="span3">Jui</div>
+																	<div id='07' class="span3">Juil</div>
+																	<div id='08' class="span3">Aoû</div>
+																</div>
+																
+																<div class="row-fluid labelMois">
+																	<div id='09' class="span3">Sep</div>
+																	<div id='10' class="span3">Oct</div>
+																	<div id='11' class="span3">Nov</div>
+																	<div id='12' class="span3">Dec</div>
+																</div>																																			
+															</div>
+
+														</div> <!--	fin row-fluid -->											
+													</div> <!-- fin span4 -->
+
+													<?php endif; ?>
+													<?php if(count($TabOfTimeVisibiliteValue) > 0): ?>
+
+													<div class="span8">
+														<h4>Présence</h4>
+														<div class="row-fluid">
+															<div class="span6">																
+																<div class="row-fluid">
+																	<?php
+																	$nbitemTimeValue = count($TabOfTimeVisibiliteValue);
+																	switch ($nbitemTimeValue) {
+																		case 1:
+																			$spanNumber = 'span12';
+																			$allstyle = 'background-size: 38%;background-position: 60% 49%;';
+																		break;
+
+																		case 2:
+																			$spanNumber = 'span6';
+																			//$allstyle = 'background-size: 80%;';
+																		break;
+
+																		case 3:
+																			$spanNumber = 'span4';
+																			$allstyle = 'background-position-y:46%;';
+																		break;																		
+																		
+																		default:
+																		# code...
+																		break;
+																	}
+																	foreach ($TabOfTimeVisibiliteValue as $key => $value) {
+																		
+																		$val = $value['value'];																	
+																		$hour = date('H');
+																		$hour = intval($hour);
+
+																		if($hour > 5 && $hour < 8 && $val == 'matinee') $isTime = true;
+																		if($hour >= 8 && $hour < 18 && $val == 'journee') $isTime = true;
+																		if($hour >= 18 && $hour < 22 && $val == 'soiree') $isTime = true;
+																		if($hour >= 22 && $hour < 5 && $val == 'nuit') $isTime = true;
+
+																		if($val == $currenTime) $isTime = true;
+
+																		if($nbitemTimeValue < 4) {	
+
+																			if($nbitemTimeValue == 2 && $val == 'journee') $allstyle = 'background-size: 70%;';
+																			else if($nbitemTimeValue == 2) $allstyle = 'background-size: 80%;';
+
+																			echo "<div style='$allstyle' class='$spanNumber $val' title='$val'>";
+																				switch ($val) {
+																					
+																					case 'matinee':
+																						echo 'A l\'aube';
+																					break;
+
+																					case 'journee':
+																						echo 'En journée';
+																					break;
+
+																					case 'soiree':
+																						echo 'Crépuscule';
+																					break;
+
+																					case 'nuit':
+																						echo 'La nuit';
+																					break;
+																					
+																					default:
+																					# code...
+																					break;
+																				}
+																			echo "</div>";
+
+																		}
+																		else{
+
+																			if($key == 0){
+
+																				echo "<div class='span12 jourNuit' title='jourNuit'>";
+																					echo 'Jour & Nuit';
+																				echo "</div>";																				
+
+																			}
+																		}
+
+																	}
+																	?>																	
+																</div>															
+															</div>															
+															<div class="span6">
+																<?php 
+																																
+																if($isTime && $isNow) echo "<div class='visibleEnCeMoment'>Visible en ce moment</div>";	
+																else echo "<div class='InvisibleEnCeMoment'>Pas visible en ce moment</div>";	
+															
+																?>																
+															</div>
+														</div>
+													</div> <!-- fin span8 -->	
+													<?php endif; ?>											
+												</div> <!-- fin row-fluid -->														
+											</div> <!-- fin containerOfSaisonalite -->									
+										</div> <!-- fin row-fluid Saisonalité -->	 
+									
+									<?php endif; ?>		
+									
 							</div> <!-- fin bloc espece -->
 							
 							<!-- On execute la vue qui nous renvoie la liste des id de balades associé à l'espèce courante -->
@@ -602,7 +765,7 @@ jQuery( document ).ready(function() {
 
 
 	//Saisonalité - On parcour les 12 mois
-	$('#lesMois .span1').each(function(index, el) {
+	$('.labelMois .span3').each(function(index, el) {
 	
 		var monthTotest = $(this).attr('id');
 		var blocMonthTotest = $(this);
@@ -616,6 +779,22 @@ jQuery( document ).ready(function() {
 		});
 
 	});
+
+	//Visibilité  - dev ici
+	//$('.jourPicto, .jourNuitPicto, .nuitPicto').each(function(index, el) {
+	
+		//var monthTotest = $(this).attr('id');
+		//var pictoVisibleTotest = $(this);
+		
+		//pour chaque mois, on va tester s'il existe une valeur dans les champs cachés
+		//$('#valueTimeHidden > div').each(function(index, el) {
+			
+			//console.log( $(this).val() );
+			//if(pictoVisibleTotest == $(this).text()) blocMonthTotest.addClass('saisonOn');
+		
+		//});
+
+	//});
 
 
     //LightBox pour imageBalade balade     
