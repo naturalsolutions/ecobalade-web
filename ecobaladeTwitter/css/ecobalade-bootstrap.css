@@ -15,7 +15,7 @@
 /*                          FONT - POLICE                                  */
 /*                                                                         */
 /***************************************************************************/
-@import url('http://fonts.googleapis.com/css?family=Libre+Baskerville');
+
 @font-face {
     font-family: 'RockwellLight';
     src: url('./font/RockwellStd-Light.ttf');
@@ -60,6 +60,7 @@
     font-style: normal;
 }
 
+@import url('http://fonts.googleapis.com/css?family=Libre+Baskerville');
 /***************************************************************************/
 /*                          DIVERS - Tools                                 */
 /*                                                                         */
@@ -135,7 +136,6 @@ body.front .swiper-slide {
 }
 body.front .galleryLogoOnEnParle {
   padding: 12px 0px 70px 0;
-  overflow: hidden;
 } 
 /**/
 body.front div#foldOnEnParle{
@@ -375,7 +375,7 @@ div.popup_onload div.content div.row-fluid:nth-child(3){
 }
 /*fin popup*/
 body.front div.hero-unit-teaser h1 {
-  font-family: 'RockwellLight',serif;
+  font-family: 'RockwellLight',serif !important;
 }
 body.front a#fold1BntAllBalades{
   padding: 15px 0px;
@@ -933,7 +933,7 @@ body.node-type-espece div#blockTitleEsp div.pictoGroupeTax{
 }
 /*slider*/
 body.node-type-espece div.swiper-button-next.swiper-button-white{
-  right:  30px;
+  right: 20px;
 }
 body.node-type-espece div.swiper-button-prev.swiper-button-white{
   left:  30px;
@@ -948,7 +948,7 @@ body.node-type-espece .swiper-slide {
 }
 body.node-type-espece .gallery-top {
   height: auto;
-  width: 98%;
+  width: 100%;
   padding-left: 2%;
   position: relative;
 }
