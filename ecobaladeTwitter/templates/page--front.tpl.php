@@ -1,4 +1,4 @@
-﻿<header id="navbar" role="banner" class="navbar navbar-fixed-top">
+<header id="navbar" role="banner" class="navbar navbar-fixed-top">
   <div class="navbar-inner">
   	<div class="container">
   	  <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
@@ -312,10 +312,8 @@
 		</div>
 		
 	</div>
-
-	  <hr>
-      <?php //print render($page['content']); ?>
-	  </section>
+	  
+	</section>
 
     <?php if ($page['sidebar_second']): ?>
       <aside class="span3" role="complementary">
@@ -325,11 +323,50 @@
 
   </div>
   
-</div>
-<?php print render($page['footer']); ?>
+</div> <!-- fin container -->
 
-<script>
+<div class="row-fluid" id="foldOnEnParle"> 	
+	
+	<div class="container">
+		<div class="row-fluid">
+			<div class="span12">
+				<h4>On en parle</h4>
+				<span class='lineLabel'></span>
+			</div>
+		</div>
+		<div class="row-fluid">
+			<div class='swiper-container galleryLogoOnEnParle'>
+				<div class='swiper-wrapper'>
+
+					<!-- Slides -->
+					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/logo-Ventilo.jpg" alt="logo du journal Ventilo"></div>
+					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/logo-france-info.jpg" alt="logo de france info"></div>
+					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/logo-lecho.jpg" alt="logo du journal L'Echo"></div>
+					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/Logo-20-Minutes.jpg" alt="logo du journal 20 Minutes"></div>	
+					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/logo-city-post.jpg" alt="logo du blog Citypost"></div>			
+					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/logo-tour-mag.jpg" alt="logo du journal tour mag"></div>	
+					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/france3-paca.jpg" alt="logo du journal de france 3 PACA"></div>	
+					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/logo_hebdo_square.jpg" alt="logo du journal L'Hebdo"></div>	
+					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/logo-la-provence.jpg" alt="logo du journal de la Provence"></div>	
+					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/logo-europe1.jpg" alt="logo du journal d'Europe1"></div>	
+
+				</div>
+			</div> <!-- fin swiper-container -->				
+		</div>
+	</div>
+
+</div><?php print render($page['footer']); ?><script>
 jQuery( document ).ready(function() {
+
+	//slideshow 
+	var galleryLogoOnEnParle = new Swiper('.galleryLogoOnEnParle', {       
+        slidesPerView: 4,
+        spaceBetween : 200,        
+        loopedSlides : 4, 
+        //slideToClickedSlide : true,                
+        autoplay : 2500,
+        loop: true
+    });
 
 
 	var imagePolaroide = function(){

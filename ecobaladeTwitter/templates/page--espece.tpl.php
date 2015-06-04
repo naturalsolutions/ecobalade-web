@@ -462,13 +462,13 @@ if (isset($_GET["idlastbal"])){
 																	<?php 
 																	if($groupe_tax == 'Arbustes et plantes' || $groupe_tax == 'Arbres') {
 																		
-																		if($isNow) echo "<p class='labelCurrentMonth'>En fleur en ce mois ci</p>";
-																		else echo "<p class='labelCurrentMonth'>Pas en fleur en ce mois ci</p>";
+																		if($isNow) echo "<p class='labelCurrentMonth'>En fleur ce mois ci</p>";
+																		else echo "<p class='labelCurrentMonth'>Pas en fleur ce mois ci</p>";
 																	}
 																	else {
 																		
-																		if($isNow) echo "<p class='labelCurrentMonth'>Visible en ce mois ci</p>";	
-																		else echo "<p class='labelCurrentMonth'>Pas visible en ce mois ci</p>";	
+																		if($isNow) echo "<p class='labelCurrentMonth'>Visible ce mois ci</p>";	
+																		else echo "<p class='labelCurrentMonth'>Pas visible ce mois ci</p>";	
 																	}
 																	?>
 																	<span class='lineSeparator'></span>

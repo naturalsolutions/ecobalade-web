@@ -1,4 +1,4 @@
-
+﻿
 /****************************************************************************************************************************************************/
 /*                                                          CE FICHIER REGROUPE TOUT LE CSS CUSTOM                                                  */ 
 /*                                                                                                                                                  */
@@ -15,6 +15,7 @@
 /*                          FONT - POLICE                                  */
 /*                                                                         */
 /***************************************************************************/
+@import url('http://fonts.googleapis.com/css?family=Libre+Baskerville');
 @font-face {
     font-family: 'RockwellLight';
     src: url('./font/RockwellStd-Light.ttf');
@@ -123,6 +124,58 @@ h1,h2,h3,h4{
 /*                                                                         */
 /***************************************************************************/
 /*********************************  ****************************************/
+/*slider*/
+body.front .swiper-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+body.front .swiper-slide {
+  background-size: cover;
+  background-position: center;   
+}
+body.front .galleryLogoOnEnParle {
+  padding: 12px 0px 70px 0;
+} 
+/**/
+body.front div#foldOnEnParle{
+  background-color: #F2F2F2;
+  margin-top: 47px;
+}
+body.front div#foldOnEnParle img{
+ -webkit-filter: grayscale(100%);
+  -webkit-transition: .2s ease-in-out;
+  -moz-filter: grayscale(100%); 
+  -moz-transition: .2s ease-in-out;
+  -o-filter: grayscale(100%); 
+  -o-transition: .2s ease-in-out;
+}
+body.front div#foldOnEnParle img:hover{
+ -webkit-filter: grayscale(0%);
+  -webkit-transition: .2s ease-in-out;
+  -moz-filter: grayscale(0%);
+  -moz-transition: .2s ease-in-out;
+  -o-filter: grayscale(0%);
+  -o-transition: .2s ease-in-out;
+}
+body.front div#foldOnEnParle span.lineLabel{
+  width: 40px;
+  height: 1px;
+  border-top: 1px solid #BBBBBB;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 36px;
+  padding-top: 0px;
+}
+body.front div#foldOnEnParle h4{
+  color: #B2B2B2;
+  font-size: 1.2em;
+  font-family: 'Libre Baskerville', serif;
+  padding-top: 25px;
+  font-weight: normal;
+  font-style: italic;
+  text-align: center;
+  padding-bottom: 8px;
+}
 body.front div#fold3 div.zoneBtnBalade{
   position: absolute;
   bottom: 0;
@@ -906,8 +959,7 @@ body.node-type-espece .gallery-thumbs .swiper-slide {
 }
 body.node-type-espece .gallery-thumbs .swiper-slide-active {
   opacity: 1;
-}
-  
+}  
 /**/
 body.node-type-espece #blockEspece #picto_Arbres{
   background: url("../img/pictos/icone_arbre.png") 50% 50% no-repeat;
@@ -1770,6 +1822,9 @@ body.node-type-site div#thumbs a.pageLink.next{
 /***************************************************************************/
 /*********************************  ****************************************/
 /*********************************  ****************************************/
+body.front footer.footer {
+  margin-top: 0;
+}
 footer.footer {
   border-top: 2px solid #4DBB74;
   background: url('../img/footer/footer_fond.jpg') 50% 100% no-repeat #242424;
@@ -3544,6 +3599,7 @@ body.front div#img-front span.txt-front{
 }
 body.front div#img-front span.txt-front h2{
   font-family: 'Libre Baskerville', serif;
+  font-weight: normal;
   font-style: italic;
   font-size: 2.4em;
   color: #E9E8ED;
@@ -3753,7 +3809,10 @@ margin-left: 9%;
 
 @media  (max-width: 979px) {
   /*HP*/
-
+  body.front .swiper-slide{
+    margin-right: 20% !important;
+    width: 20% !important;
+  }
   body.front div#fold3 h3 {    
     width: 100%;
     text-align: center;
@@ -4086,6 +4145,10 @@ margin-left: 9%;
   /*body.front.popup_onload-processed div#cboxOverlay {
      top: 125px !important;
   }*/
+  body.front div#foldOnEnParle h4 {
+    text-align: center;
+    padding-bottom: 12px;
+  }  
   body.front div#fold3 span.nameEspPhareBaladePromu {
     display: block;
     width: 100%;
