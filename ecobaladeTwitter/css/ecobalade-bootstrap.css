@@ -135,6 +135,7 @@ body.front .swiper-slide {
 }
 body.front .galleryLogoOnEnParle {
   padding: 12px 0px 70px 0;
+  overflow: hidden;
 } 
 /**/
 body.front div#foldOnEnParle{

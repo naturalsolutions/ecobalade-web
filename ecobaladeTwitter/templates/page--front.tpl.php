@@ -325,7 +325,7 @@
   
 </div> <!-- fin container -->
 
-<div class="row-fluid" id="foldOnEnParle"> 	
+<div class="container-fluid" id="foldOnEnParle">
 	
 	<div class="container">
 		<div class="row-fluid">
@@ -355,7 +355,8 @@
 		</div>
 	</div>
 
-</div><?php print render($page['footer']); ?><script>
+</div> <!-- fin foldOnEnParle -->
+<?php print render($page['footer']); ?><script>
 jQuery( document ).ready(function() {
 
 	//slideshow 
