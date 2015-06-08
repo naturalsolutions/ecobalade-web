@@ -340,16 +340,17 @@
 				<div class='swiper-wrapper'>
 
 					<!-- Slides -->
-					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/logo-Ventilo.jpg" alt="logo du journal Ventilo"></div>
+					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/logo-europe1.jpg" alt="logo du journal d'Europe1"></div>	
 					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/logo-france-info.jpg" alt="logo de france info"></div>
 					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/logo-lecho.jpg" alt="logo du journal L'Echo"></div>
+					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/logo-Elle.jpg" alt="logo du journal Elle"></div>
 					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/Logo-20-Minutes.jpg" alt="logo du journal 20 Minutes"></div>	
-					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/logo-city-post.jpg" alt="logo du blog Citypost"></div>			
-					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/logo-tour-mag.jpg" alt="logo du journal tour mag"></div>	
 					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/france3-paca.jpg" alt="logo du journal de france 3 PACA"></div>	
-					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/logo_hebdo_square.jpg" alt="logo du journal L'Hebdo"></div>	
 					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/logo-la-provence.jpg" alt="logo du journal de la Provence"></div>	
-					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/logo-europe1.jpg" alt="logo du journal d'Europe1"></div>	
+					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/logo-Ventilo.jpg" alt="logo du journal Ventilo"></div>
+					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/logo-city-post.jpg" alt="logo du blog Citypost"></div>			
+					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/logo_hebdo_square.jpg" alt="logo du journal L'Hebdo"></div>	
+					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/logo-tour-mag.jpg" alt="logo du journal tour mag"></div>	
 
 				</div>
 			</div> <!-- fin swiper-container -->				
