@@ -32,6 +32,12 @@
 				<?php endif;?>
 		<?php endif;?>
 
+		<?php if ($id == 'nothing') : ?>
+				<?php if (!empty($field->content)): ?>
+						<?php $imageFull =  $field->content; ?>
+				<?php endif;?>
+		<?php endif;?>
+
 		<?php if ($id == 'picture') : ?>
 				<?php if (!empty($field->content)): ?>
 						<?php $picture =  $field->content; ?>
@@ -56,6 +62,12 @@
 				<?php endif; ?>
 		<?php endif;?>
 
+		<?php if ($id == 'nid') : ?>
+				<?php if (!empty($field->content)): ?>
+						<?php $nid =  $field->content; ?>
+				<?php endif; ?>
+		<?php endif;?>
+
 <?php endforeach; ?>
 
 
@@ -74,14 +86,17 @@
 		<?php if( trim($image) !== '' ): ?>			
 
 			<?php 
-			//On test s'il y a +r images
+			
 			$tabOfImage = explode(',', $image);
+			$imageFull = explode(',', $imageFull);
 
 			if(count($tabOfImage) > 0){
 
+				$myNode = node_load($nid);				
+
 				for ($i=0; $i < count($tabOfImage); $i++) { 
 					# code...				
-					echo "<a href='$tabOfImage[$i]' class='imageComment' title='$name'><img src='$tabOfImage[$i]' alt='' title='' /></a>";		
+					echo "<a href='$imageFull[$i]' class='imageComment' title='Commentaire de $name - \"$myNode->title\"'><img src='$tabOfImage[$i]' alt='$myNode->title' title='$myNode->title' /></a>";		
 				}
 
 			}		

@@ -797,7 +797,7 @@ jQuery( document ).ready(function() {
 	//});
 
 
-    //LightBox pour imageBalade balade     
+    //LightBox pour imageBalade espece     
 	if( $('.imageBalade').length > 0 ){
 		
 		$('.imageBalade').vanillabox({		
@@ -811,7 +811,7 @@ jQuery( document ).ready(function() {
     	});	
 	
 	} 
-    //LightBox pour imageTaxon balade     
+    //LightBox pour imageTaxon espece     
 	if( $('.imageTaxon').length > 1 ){
 		
 		$('.imageTaxon').vanillabox({		
@@ -824,20 +824,18 @@ jQuery( document ).ready(function() {
     	
     	});	
 	} 
-    //LightBox pour imageComment balade     
-	if( $('.imageComment').length > 1 ){
-		
-		$('.imageComment').vanillabox({		
-		
-			closeButton: false,
-			loop: true,
-			repositionOnScroll: true,
-			type: 'image',
-			adjustToWindow: 'both'
-	    
-	    });
+    //LightBox pour imageComment espece     
+	$('.imageComment').vanillabox({		
 	
-	} 
+		closeButton: false,
+		loop: true,
+		repositionOnScroll: true,
+		type: 'image',
+		adjustToWindow: 'both'
+    
+    });
+	
+	
   
 
 	//Click sur bouton commenter

@@ -1363,6 +1363,7 @@ div.view-v-affiche-comment .imageComment {
   max-width: 32%;
   padding-right: 1%;
   display: inline-block;
+  padding-bottom: 6px;
 }
 div.view-v-affiche-comment .views-row{
   padding-bottom: 25px;
