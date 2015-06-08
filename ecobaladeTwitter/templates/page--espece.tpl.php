@@ -138,7 +138,7 @@ if (isset($_GET["idlastbal"])){
 													}
 													print ("<p id='nom_scf'>".$nom_scf."</p>");
 											?>
-											<a class="btn-back-list-espece btn btn-primary" title="Retour à la liste des espèces" href="<?php echo $base_path;?>especes">Retour à la liste des espèces</a>
+											<a class="btn-back-list-espece btn btn-primary" title="Retour à la liste des espèces" href="<?php echo $base_path;?>liste-especes">Retour à la liste des espèces</a>
 										</div>
 									</div>
 									

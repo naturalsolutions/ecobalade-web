@@ -70,12 +70,24 @@
 		<p class='name'><?php echo $name; ?><i class='created'><?php echo $created; ?></i></p>
 		<p class='comment_body'><?php echo $comment_body; ?></p>
 		
+		<!-- test s'il existe des valeurs -->
+		<?php if( trim($image) !== '' ): ?>			
 
-		<?php 
-		//On test s'il y a des images dans le commentaire
-		$isImage = explode('/', $image);
-		if (count($isImage) != 1) echo "<a href='$image' class='imageComment' title='$name'><img src='$image' alt='' title='' /></a>";		
-		?>
+			<?php 
+			//On test s'il y a +r images
+			$tabOfImage = explode(',', $image);
+
+			if(count($tabOfImage) > 0){
+
+				for ($i=0; $i < count($tabOfImage); $i++) { 
+					# code...				
+					echo "<a href='$tabOfImage[$i]' class='imageComment' title='$name'><img src='$tabOfImage[$i]' alt='' title='' /></a>";		
+				}
+
+			}		
+			?>
+
+		<?php endif; ?>
 		
 	</div>
 </div>

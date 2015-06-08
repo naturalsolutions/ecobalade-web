@@ -97,6 +97,7 @@ body.logged-in header#navbar{
   border-radius: 4px ;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
+  min-height: 500px;
 }
 p{
   font-size:16px;
@@ -1354,12 +1355,14 @@ body.page-boutique div.sideBarBoutique span{
 div.view-v-affiche-comment div.rightZoneOfComment{
   background-color: #F5F5F5;
   min-height: 100px;
-  padding: 2%;
+  padding: 2% 0% 2% 2%;
   position: relative;
 }
-div.view-v-affiche-comment .imageComment img{
+div.view-v-affiche-comment .imageComment {
   padding-top: 4px;
-  max-width: 33%;
+  max-width: 32%;
+  padding-right: 1%;
+  display: inline-block;
 }
 div.view-v-affiche-comment .views-row{
   padding-bottom: 25px;
@@ -3571,14 +3574,21 @@ margin-top:-5px!important;
 
 body.front div#img-front{
   position: relative;
-  background: url(../img/img-front-light.jpg) no-repeat;
+  background: url('../img/img-front-light.jpg') no-repeat;
   background-position: 84% 23%;
   background-size: 125%;
   margin: 0;
   width: 100%;
   height: 850px;
   text-align: center;
-  top: -50px;
+  top: -50px;  
+}
+body.front div.progressBar{
+  position:   absolute; 
+  bottom:   0;
+  background-color:   #4DBB74;
+  height: 1px;
+  width: 0%;
 }
 body.front div#img-front span.txt-front{
   position: relative;
@@ -4146,6 +4156,9 @@ margin-left: 9%;
   /*body.front.popup_onload-processed div#cboxOverlay {
      top: 125px !important;
   }*/
+  body.page-liste-especes .justified-gallery {  
+    max-height: 390px;
+  }
   body.front div#foldOnEnParle h4 {
     text-align: center;
     padding-bottom: 12px;
@@ -4457,7 +4470,7 @@ margin-left: 9%;
     padding-top: 16px;
   }
   /**/
-  div.view-v-affiche-comment .imageComment img {
+  div.view-v-affiche-comment .imageComment {
     max-width: 100%;
   }
   body.front div#cboxWrapper {

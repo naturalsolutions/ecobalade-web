@@ -53,6 +53,7 @@
 		
 		<a id="btn-front" class="btn" target="" rel="" title="Les Balades" href="<?php echo $base_url; ?>/liste-balades">Trouver une balade</a>
 	</span>
+	<div class='progressBar'></div>
 </div>
 
 
@@ -359,7 +360,22 @@
 <?php print render($page['footer']); ?><script>
 jQuery( document ).ready(function() {
 
-	//slideshow 
+		
+	/*
+		dev ici, intégrer le idangerous swiper. Detecter le loading et ajouter la progressBar custom
+	
+	var lauchProgressBar = function(){
+
+		$('.progressBar').animate({		    
+
+		    width: '100%'
+		  
+		}, 5000, function() {});
+
+	}()*/
+
+		
+	//slideshow on en parle
 	var galleryLogoOnEnParle = new Swiper('.galleryLogoOnEnParle', {       
         slidesPerView: 4,
         spaceBetween : 200,        
