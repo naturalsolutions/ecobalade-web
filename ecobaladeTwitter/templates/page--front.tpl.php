@@ -46,16 +46,33 @@
 
 <?php global $base_url; ?>
 
-<div id="img-front">
+<div class='swiper-container galleryTopHp'>
+	
 	<span class="txt-front">
 		<h2>En balade ou en rando, découvrez la nature pas à pas...</h2>
 		<p>Apprenez à reconnaître la faune et la flore facilement avec ecoBalade</p>
 		
 		<a id="btn-front" class="btn" target="" rel="" title="Les Balades" href="<?php echo $base_url; ?>/liste-balades">Trouver une balade</a>
 	</span>
-	<div class='progressBar'></div>
-</div>
 
+	<div class='swiper-wrapper'>
+
+		<!-- Slides -->
+		<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/fold1HP/img01_700.jpg" title="photo de nature - ecobalade" alt="photo de nature - ecobalade"></div>	
+		<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/fold1HP/img02_700.jpg" title="photo de nature - ecobalade" alt="photo de nature - ecobalade"></div>	
+		<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/fold1HP/img03_700.jpg" title="photo de nature - ecobalade" alt="photo de nature - ecobalade"></div>	
+		
+
+	</div>
+
+	<div class='progressBar'></div>
+</div> <!-- fin swiper-container -->
+
+<!--
+<div id="img-front">
+	
+</div>
+-->
 
 <div class="container">
 
@@ -364,19 +381,29 @@ jQuery( document ).ready(function() {
 		
 	/*
 		dev ici, intégrer le idangerous swiper. Detecter le loading et ajouter la progressBar custom
+	*/
 	
-	var lauchProgressBar = function(){
-
-		$('.progressBar').animate({		    
-
-		    width: '100%'
-		  
-		}, 5000, function() {});
-
-	}()*/
-
-		
 	//slideshow on en parle
+	var galleryTopHp = new Swiper('.galleryTopHp', {       
+        slidesPerView: 1,
+        effect : 'fade',        
+        autoplay : 5000,
+        loopedSlides : 3, 
+        touchRatio : 0,
+        simulateTouch :false,
+        loop: true,
+
+        onSlideChangeStart(galleryTopHp){
+        	
+	  		$('.progressBar').css('width','0');
+        	$('.progressBar').animate({	width : '100%' }, 5000, function(){});
+        }
+        
+    });
+
+	
+	
+    //slideshow on en parle
 	var galleryLogoOnEnParle = new Swiper('.galleryLogoOnEnParle', {       
         slidesPerView: 4,
         spaceBetween : 200,        

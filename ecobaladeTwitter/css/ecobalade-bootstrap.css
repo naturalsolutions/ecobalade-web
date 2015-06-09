@@ -127,6 +127,71 @@ h1,h2,h3,h4{
 /***************************************************************************/
 /*********************************  ****************************************/
 /*slider*/
+body.front > div.container{
+    margin-top: 20px;
+}
+body.front div.progressBar{
+  position:   absolute; 
+  bottom:   0;
+  background-color:   #4DBB74;
+  height: 2px;
+  width: 0%;
+  z-index:  99;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    /* Safari and Chrome, if Chrome rule needed */
+    /*.someClass {
+     color:#c00;
+    }*/
+    /* Safari 5+ ONLY */
+    ::i-block-chrome, body.front div#img-front span.txt-front h2, body.front div#img-front span.txt-front p{ 
+       position: relative;
+      top: 300px;
+    }
+    ::i-block-chrome, .navbar .brand {
+       height: 57px;
+    }
+}
+body.front span.txt-front h2{
+  font-family: 'Libre Baskerville', serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 2.4em;
+  color: #E9E8ED;
+
+}
+body.front span.txt-front p{
+  font-style: italic;
+  font-size: 1.5em;
+  color: #E9E8ED;
+}
+body.front a#btn-front:hover{
+  border: 0;
+  background: rgba(70, 160, 109, 1);
+  -webkit-transition: background 1s;
+    -moz-transition: background 1s;
+    -o-transition: background 1s;
+    transition: background 1s;
+}
+body.front a#btn-front{
+  position: relative;
+  top: 15px;
+  height: 40px;
+  background: rgba(70, 160, 109, 0.75);
+  color: white;
+  font-size: 1.1em;
+  line-height: 40px;
+  font-family: 'Raleway', sans-serif;
+  text-shadow: none; 
+}
+body.front span.txt-front{
+  position: absolute;
+  top: 200px;
+  z-index: 999999;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;  
+}
 body.front .swiper-container {
   margin-left: auto;
   margin-right: auto;
@@ -3584,64 +3649,13 @@ body.front div#img-front{
   text-align: center;
   top: -50px;  
 }
-body.front div.progressBar{
-  position:   absolute; 
-  bottom:   0;
-  background-color:   #4DBB74;
-  height: 1px;
-  width: 0%;
-}
+
 body.front div#img-front span.txt-front{
   position: relative;
   top: 330px;  
 }
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    /* Safari and Chrome, if Chrome rule needed */
-    /*.someClass {
-     color:#c00;
-    }*/
-    /* Safari 5+ ONLY */
-    ::i-block-chrome, body.front div#img-front span.txt-front h2, body.front div#img-front span.txt-front p{ 
-       position: relative;
-      top: 300px;
-    }
-    ::i-block-chrome, .navbar .brand {
-       height: 57px;
-    }
-}
-body.front div#img-front span.txt-front h2{
-  font-family: 'Libre Baskerville', serif;
-  font-weight: normal;
-  font-style: italic;
-  font-size: 2.4em;
-  color: #E9E8ED;
 
-}
-body.front div#img-front span.txt-front p{
-  font-style: italic;
-  font-size: 1.5em;
-  color: #E9E8ED;
-
-}
-body.front div#img-front a#btn-front:hover{
-  border: 0;
-  background: rgba(70, 160, 109, 1);
-  -webkit-transition: background 1s;
-    -moz-transition: background 1s;
-    -o-transition: background 1s;
-    transition: background 1s;
-}
-body.front div#img-front a#btn-front{
-  position: relative;
-  top: 15px;
-  height: 40px;
-  background: rgba(70, 160, 109, 0.75);
-  color: white;
-  font-size: 1.1em;
-  line-height: 40px;
-  font-family: 'Raleway', sans-serif;
-  text-shadow: none; 
-} 
+ 
 
 
 /**fin img-front**/
@@ -3705,6 +3719,9 @@ margin-left: 9%;
 /*En dessous de 1200*/
 @media (max-width: 1199px){
   /*HP*/
+  body.front span.txt-front {
+    top: 63px;
+  }
   body.front div#fold3 div.colFold3 {
     min-height: 353px;
   }
@@ -3821,7 +3838,10 @@ margin-left: 9%;
 
 @media  (max-width: 979px) {
   /*HP*/
-  body.front .swiper-slide{
+  body.front span.txt-front {
+    top: 46px;
+  }
+  body.front div.galleryLogoOnEnParle .swiper-slide{
     margin-right: 20% !important;
     width: 20% !important;
   }
@@ -3869,6 +3889,12 @@ margin-left: 9%;
   }
   header.navbar div.container a.btn.btn-navbar{
     margin-right: 25px;
+  }
+  body.front div.galleryTopHp {
+    top:  15px;
+  }
+  body.front > div.container {
+    margin-top: 35px;
   }
   .navbar-fixed-top {  
     position: absolute !important;
@@ -4188,6 +4214,12 @@ margin-left: 9%;
   body.front div#fold3 div.contenuDescroEspPhare{
     margin-top: 50px;
   }
+  body.front div.galleryTopHp  {
+    display:  none; 
+  }
+  body.front > div.container {
+    margin-top: 99px;
+  }  
   body.front div#fold3 div.zoneBtnBalade{
     top: 110px;
     min-height: 170px;
