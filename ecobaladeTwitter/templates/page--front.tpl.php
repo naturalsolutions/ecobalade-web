@@ -397,8 +397,7 @@ jQuery( document ).ready(function() {
         
     });
 
-	
-	
+		
     //slideshow on en parle
 	var galleryLogoOnEnParle = new Swiper('.galleryLogoOnEnParle', {       
         slidesPerView: 4,

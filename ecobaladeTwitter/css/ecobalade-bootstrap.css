@@ -1892,14 +1892,20 @@ body.node-type-site div#thumbs a.pageLink.next{
 /***************************************************************************/
 /*********************************  ****************************************/
 /*********************************  ****************************************/
-footer.footer div#elevator{
+/*footer.footer div#elevator{
   color: #fff;
   fill: #929292;
   text-align: center;
+}*/
+footer.footer div#elevator{
+  position:   absolute; 
+  fill: #929292;
+  bottom: 0;
+  right: 0;
 }
 footer.footer div#elevator:hover{
   fill: #4DBB74;
- }
+}
 body.front footer.footer {
   margin-top: 0;
 }
@@ -1914,6 +1920,7 @@ footer.footer > div.container:first-of-type{
 }
 footer.footer > div.container:nth-of-type(2){
   margin-top: 30px;
+  position:   relative; 
 }
 footer.footer div#contact a.linkMap{
   background: url('../img/footer/contact_icon.png') no-repeat 50% 50%;
@@ -4191,6 +4198,13 @@ margin-left: 9%;
   /*body.front.popup_onload-processed div#cboxOverlay {
      top: 125px !important;
   }*/
+
+  footer.footer div#elevator {
+    position: relative;
+    fill: #929292;
+    bottom: -15px; 
+    text-align: center;
+  }
   body.page-liste-especes .justified-gallery {  
     max-height: 390px;
   }
