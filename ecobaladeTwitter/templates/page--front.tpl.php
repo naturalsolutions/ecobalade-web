@@ -45,7 +45,7 @@
 </header>
 
 <?php global $base_url; ?>
-
+<a name="top-anchor"></a>
 <div class='swiper-container galleryTopHp'>
 	
 	<span class="txt-front">
@@ -378,10 +378,6 @@
 <?php print render($page['footer']); ?><script>
 jQuery( document ).ready(function() {
 
-		
-	/*
-		dev ici, intégrer le idangerous swiper. Detecter le loading et ajouter la progressBar custom
-	*/
 	
 	//slideshow on en parle
 	var galleryTopHp = new Swiper('.galleryTopHp', {       

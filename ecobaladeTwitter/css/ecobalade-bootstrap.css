@@ -1892,6 +1892,14 @@ body.node-type-site div#thumbs a.pageLink.next{
 /***************************************************************************/
 /*********************************  ****************************************/
 /*********************************  ****************************************/
+footer.footer div#elevator{
+  color: #fff;
+  fill: #929292;
+  text-align: center;
+}
+footer.footer div#elevator:hover{
+  fill: #4DBB74;
+ }
 body.front footer.footer {
   margin-top: 0;
 }
