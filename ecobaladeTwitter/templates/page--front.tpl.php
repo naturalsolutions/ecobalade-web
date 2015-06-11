@@ -164,6 +164,7 @@
 	//On récupère nos champs	
 	$title = $nodeBaladePromu->title;	
 	$nidBaladepromu = $nodeBaladePromu->nid;	
+	$pathBaladePromu = drupal_get_path_alias($path = 'node/'.$nidBaladepromu, $path_language = NULL);
 	$field_distance = $nodeBaladePromu->field_distance['und'][0]['value'];
 	$field_situation = $nodeBaladePromu->field_situation['und'][0]['value'];
 	$field_description_de_la_balade = $nodeBaladePromu->field_balade_teaser['und'][0]['value'];
@@ -219,7 +220,7 @@
 			<div class="secondEtiquette">
 				<p>du mois</p> 
 			</div>
-          <a href="<?php echo $base_path;?>balade/balade-la-roque-d-antheron-13-les-bords-de-la-durance" alt=""><?php echo $imgPhotoBaladePromu; ?></a>
+            <?php echo "<a href='$base_url/$pathBaladePromu' title='$title' alt='$title'>$imgPhotoBaladePromu</a>";  ?>
         </div>
 
 
