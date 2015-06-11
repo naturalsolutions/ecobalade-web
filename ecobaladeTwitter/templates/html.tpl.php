@@ -40,9 +40,12 @@
 
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   
-  <!-- AddThix // Social Plugin -->
+  <!-- AddThix // Social Plugin 
   <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-535e1fe72d9fa867"></script>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-535e1fe72d9fa867"></script> -->
+  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52f11cb3439d368f" async="async"></script>
+
   <div id="fb-root"></div>
   <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
