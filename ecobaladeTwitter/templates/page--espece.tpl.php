@@ -812,7 +812,7 @@ jQuery( document ).ready(function() {
 	
 	} 
     //LightBox pour imageTaxon espece     
-	if( $('.imageTaxon').length > 1 ){
+	if( $('.imageTaxon').length > 0 ){
 		
 		$('.imageTaxon').vanillabox({		
 			
@@ -824,16 +824,19 @@ jQuery( document ).ready(function() {
     	
     	});	
 	} 
-    //LightBox pour imageComment espece     
-	$('.imageComment').vanillabox({		
-	
-		closeButton: false,
-		loop: true,
-		repositionOnScroll: true,
-		type: 'image',
-		adjustToWindow: 'both'
-    
-    });
+
+	if( $('.imageComment').length > 0){
+	    //LightBox pour imageComment espece     
+		$('.imageComment').vanillabox({		
+		
+			closeButton: false,
+			loop: true,
+			repositionOnScroll: true,
+			type: 'image',
+			adjustToWindow: 'both'
+	    
+	    });
+	}
 	
 	
   
