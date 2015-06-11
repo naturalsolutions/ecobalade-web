@@ -124,13 +124,17 @@ jQuery( document ).ready(function() {
 
 	//Pour envoyer en haut de la page
 	var scroll2Top = function(){
+
+
+		var elevator = new Elevator({
+			element: document.querySelector('.elevator-button'),
+			duration: 1000 // milliseconds
+		});
+		
 		
 		$('.elevator-button > svg').click(function () {
 
-			$('body,html').animate({
-				scrollTop: 0
-			}, 2000);
-			return false;
+			elevator.elevate();
 
 		});
 

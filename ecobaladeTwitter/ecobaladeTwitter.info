@@ -31,6 +31,7 @@ scripts[] = js/jquery.justifiedGallery.min.js
 scripts[] = js/script.js
 scripts[] = js/swiper.jquery.min.js
 scripts[] = js/bootstrap-toolkit.min.js
+scripts[] = js/elevator.min.js
 
 
 
