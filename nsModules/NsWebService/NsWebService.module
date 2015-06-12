@@ -94,31 +94,18 @@ function NsWebService_find_balade_information($nitems, $timestamp, $id, $balade,
   //node 
   $query = db_select('node', 'n');
       
-  
-  if ($espece == 'list') {
-    
-    //http://192.168.1.102/ecobalade-pierre/data/xml/retrieve?espece=list
-
-    $query->addField('n', 'title', 'espece');
-    $query->addField('n', 'nid', 'nidHide');
-    $query->addField('n', 'vid', 'vidHide');
-
-    $query->condition('n.type', 'espece', '=');  
-  
-  
-  }
-  else if ($espece == 'detail') { 
+  if ($espece == 'detail') { 
 
     //http://192.168.1.102/ecobalade-pierre/data/xml/retrieve?espece=detail
+
+    //field espece de balade pour filtrer les especes sans balades
+    //$query->join('field_revision_field_esp_ces', 'g', '(g.revision_id = n.vid)');
 
     //Nom scientifique 
     $query->join('field_revision_field_nom_scientifique', 'j', '(j.revision_id = n.vid)');
 
     //Description
     $query->join('field_revision_field_description', 'o', '(o.revision_id = n.vid)');
-
-    //Saisonalité
-    //$query->leftJoin('field_revision_field_saison', 'r', '(r.revision_id = n.vid)');
 
     //Audio
     $query->leftJoin('field_revision_field_son', 's', '(s.revision_id = n.vid)');
@@ -148,7 +135,8 @@ function NsWebService_find_balade_information($nitems, $timestamp, $id, $balade,
     $query->addField('c', 'uri', 'imgEspeceThumb');
     $query->addField('c', 'filesize', 'imgEspeceThumbFilesize');
     $query->addField('t', 'uri', 'audio');
-    //$query->addField('r', 'field_saison_value', 'saison');
+    $query->addField('t', 'filesize', 'filesizeAudio');
+
 
     $query->condition('n.type', 'espece', '=');
   
@@ -761,6 +749,11 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
         else if ($key === "imgEspeceThumbFilesize") { 
                               
           $imgEspeceThumb->setAttribute($attr_name = 'size', $attr_value = $value); 
+          continue;
+        }
+        else if ($key === "filesizeAudio") { 
+                              
+          $audio->setAttribute($attr_name = 'size', $attr_value = $value); 
           continue;
         }
         else if ($key === "espece") { 
