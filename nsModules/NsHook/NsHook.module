@@ -24,26 +24,10 @@ function NsHook_form_alter(&$form, &$form_state, $form_id) {
 		
 		}
 
-		//drupal_set_message( "<pre>" . print_r($form['field_esp_ces']['und']['#options'], TRUE) . "</pre>" ); 
 	
-	} 
-	else if (isset($form['type']) && $form['type']['#value'] == 'espece') {
-
-		
-		if($form['field_groupe_taxonomique']['und'] == '') {
 	
-			drupal_set_message(t('cool'), 'status', FALSE);
-
-		}else{
-
-			
-			drupal_set_message( "<pre>" . print_r($form['field_groupe_taxonomique']['und'], TRUE) . "</pre>" ); 
-
-		}
-		
-
-	
-	} 
+	}
+	 
 } 
   	
   
