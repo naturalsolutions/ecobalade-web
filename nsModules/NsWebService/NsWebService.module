@@ -98,8 +98,8 @@ function NsWebService_find_balade_information($nitems, $timestamp, $id, $balade,
 
     //http://192.168.1.102/ecobalade-pierre/data/xml/retrieve?espece=detail
 
-    //field espece de balade pour filtrer les especes sans balades
-    //$query->join('field_revision_field_esp_ces', 'g', '(g.revision_id = n.vid)');
+    
+    
 
     //Nom scientifique 
     $query->join('field_revision_field_nom_scientifique', 'j', '(j.revision_id = n.vid)');
@@ -122,7 +122,13 @@ function NsWebService_find_balade_information($nitems, $timestamp, $id, $balade,
     //Image miniature
     $query->join('field_revision_field_image_mobile_minature', 'v', '(v.revision_id = n.vid)');
     $query->join('file_managed', 'c', '(c.fid = v.field_image_mobile_minature_fid)');
+
+    //recupération de la liste des NID associés à une balade
+    $subquery = db_select('field_data_field_esp_ces', 'i')->fields('i', array('field_esp_ces_nid'));
     
+    // On ne prends que les espèce qui sont présentes sur une balade
+    $query->condition('n.nid', $subquery, 'IN');
+
     
     $query->addField('n', 'title', 'nom');
     $query->addField('n', 'nid', 'nidEspece');
@@ -184,6 +190,9 @@ function NsWebService_find_balade_information($nitems, $timestamp, $id, $balade,
     //type de circuit
     $query->join('field_revision_field_type_de_circuit', 'f', '(f.revision_id = n.vid)');
     $query->join('taxonomy_term_data', 'e', '(e.tid = f.field_type_de_circuit_tid)');
+
+
+    
 
     //Photos -> Requette execute parallèlement plus loin dans le key === vid
     //trace -> Requette execute parallèlement plus loin dans le key === vid
