@@ -348,6 +348,15 @@ $baladenid = $node->nid;
   <?php print render($page['footer']); ?>
 <script type="text/javascript">
 jQuery( document ).ready(function() {
+
+	//Si on souhaite afficher le form pour le mobile 
+	if(window.location.hash == '#commenter'){
+		$('section#comments section.collapseComment form').show();		
+		
+		$('html, body').animate({
+        	scrollTop: $("#comments").offset().top
+    	}, 0);
+	}
 	
 	//LightBox pour commentaires/*
 	if( $('.imageComment').length > 0 ) $('.imageComment').vanillabox({		

@@ -780,21 +780,14 @@ jQuery( document ).ready(function() {
 
 	});
 
-	//Visibilité  - dev ici
-	//$('.jourPicto, .jourNuitPicto, .nuitPicto').each(function(index, el) {
-	
-		//var monthTotest = $(this).attr('id');
-		//var pictoVisibleTotest = $(this);
+	//Si on souhaite afficher le form pour le mobile 
+	if(window.location.hash == '#commenter'){
+		$('section#comments section.collapseComment form').show();		
 		
-		//pour chaque mois, on va tester s'il existe une valeur dans les champs cachés
-		//$('#valueTimeHidden > div').each(function(index, el) {
-			
-			//console.log( $(this).val() );
-			//if(pictoVisibleTotest == $(this).text()) blocMonthTotest.addClass('saisonOn');
-		
-		//});
-
-	//});
+		$('html, body').animate({
+        	scrollTop: $("#comments").offset().top
+    	}, 0);
+	}
 
 
     //LightBox pour imageBalade espece     
