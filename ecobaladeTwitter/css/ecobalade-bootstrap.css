@@ -979,7 +979,11 @@ body.node-type-balade ul#myTab {
 body.node-type-balade div.field-name-field-detail-balade {
   margin-top: 30px;
 }
-
+body.node-type-balade div.view-v-informations-pratiques-balade div.views-field > span{
+  float:left;
+  font-weight:bold;
+  color:#4DBB74;
+}
 /*FIN PAGE BALADE*/
 
 /***************************************************************************/
@@ -3605,16 +3609,6 @@ body.node-type-balade div.view-v-caracteristiques-balade  .views-field-field-dif
 }
 
 
-.views-field-field-sy-rendre span,
-.views-field-field-situation span,
-.views-field-field-point-arrivee span,
-.views-field-field-parking span,
-.views-field-field-transport span,
-.views-field-field-point-de-depart span{
-  float:left;
-  font-weight:bold;
-  color:#4DBB74;
-}
 .views-field-field-acces-site{
 margin-top:-5px!important;
 }
