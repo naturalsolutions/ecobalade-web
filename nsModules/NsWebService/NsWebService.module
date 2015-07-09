@@ -167,7 +167,7 @@ function NsWebService_find_balade_information($nitems, $timestamp, $id, $balade,
     $query->join('field_revision_field_description_de_la_balade', 'd', '(d.revision_id = n.vid)');
     
     //Acces au site : 
-    $query->join('field_revision_field_acces_site', 'a', '(a.revision_id = n.vid)');
+    $query->leftJoin('field_revision_field_acces_site', 'a', '(a.revision_id = n.vid)');
     
     //Durée
     $query->join('field_revision_field_duree', 't', '(t.revision_id = n.vid)');
