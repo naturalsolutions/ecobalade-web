@@ -1593,7 +1593,7 @@ body.page-liste-balades .view-v-liste-balade .views-field-field-distance,
 body.page-liste-balades .view-v-liste-balade .views-field-field-difficulte,
 body.page-liste-balades .view-v-liste-balade .views-field-field-vote{
   float:left;
-  width:18%;
+  width:18.7%;
   border-right:1px solid #BBBBBB;
   text-align: center;  
 }
@@ -1638,17 +1638,24 @@ body.page-liste-balades .view-v-liste-balade .views-field-field-vote{
 body.page-liste-balades .view-v-liste-balade .views-field-view-node a{
   padding: 7% 0%;
   display: block;
-  background-color: #f5f5f5;
+  width: 100%;
+  color: #fff;
+  font-family: 'Raleway';
+  letter-spacing: 0.05em;
+  background-color: #4DBB74;
 }
 body.page-liste-balades .view-v-liste-balade .views-field-view-node a:hover{
   text-decoration: none;
   color: #f5f5f5;
+  font-family: 'RalewaySemiBold';
+  letter-spacing: 0.0.5em;
   background-color: #4DBB74;  
 }
 body.page-liste-balades .view-v-liste-balade .views-field-field-photo-resume {
-  float:left;
-  margin-right:10px;
-  max-width: 20%;
+    float: left;
+  margin-right: 3%;
+  max-width: 43%;
+  margin-left: -15px;
 }
 body.page-liste-balades aside{
   width: 20%;
@@ -1692,15 +1699,9 @@ body.page-liste-balades .view-v-liste-balade .views-row {
   -moz-border-radius: 4px;
   border-radius: 4px;
   margin-bottom: 15px;
-  min-height: 230px;
+  min-height: 350px;
   padding:5px 15px;
-    *background-color: #e6e6e6;
-  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
-  background-repeat: repeat-x;
+  background-color: #fff;
   border: 1px solid #bbbbbb;
 }
 body.page-liste-balades .view-v-liste-balade .views-field-title h1{
@@ -1713,7 +1714,7 @@ body.page-liste-balades .view-v-liste-balade .views-field-field-distance,
 body.page-liste-balades .view-v-liste-balade .views-field-field-difficulte,
 body.page-liste-balades .view-v-liste-balade .views-field-field-vote,
 body.page-liste-balades .view-v-liste-balade .views-field-view-node{
-    margin:15px 5px 0px;
+    margin:15px 4px 0px;
 }
 body.page-liste-balades .view-v-liste-balade .views-field-field-distance,
 body.page-liste-balades .view-v-liste-balade .views-field-field-difficulte,
@@ -1736,12 +1737,13 @@ body.page-liste-balades #edit-field-distance-value{
   width:60px;
 }
 body.page-liste-balades .view-v-liste-balade .views-field-field-teaser{
-  margin:0px;
+  margin-left:-1.8%;
   background:white;
   border:1px solid #eeeeee;
+  width: 103.4%;
 }
 body.page-liste-balades .view-v-liste-balade .views-field-field-teaser p{
-  margin:10px 10px 0px 0px;
+  margin:1.7% 10px 0px 0px;
 }
 body.page-liste-balades .view-v-liste-balade .fivestar-widget{
   width:110px;
@@ -3846,6 +3848,11 @@ margin-left: 9%;
 }
 
 @media  (max-width: 979px) {
+  /*MENU*/
+  body div.nav-collapse.pull-right.in.collapse{
+    width: 100%;
+    text-align:center;
+  }
   /*HP*/
   body.front span.txt-front {
     top: 46px;

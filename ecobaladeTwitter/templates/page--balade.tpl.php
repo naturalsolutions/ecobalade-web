@@ -350,12 +350,19 @@ $baladenid = $node->nid;
 jQuery( document ).ready(function() {
 
 	//Si on souhaite afficher le form pour le mobile 
-	if(window.location.hash == '#commenter'){
+	if(window.location.pathname.split('&')[1]== 'commenter'){
+		
+		
 		$('section#comments section.collapseComment form').show();		
 		
-		$('html, body').animate({
-        	scrollTop: $("#comments").offset().top
-    	}, 0);
+		//setTimeout(function(){ 
+		
+			$('html, body').animate({
+	        	scrollTop: $("#comment-form-wrapper").offset().top
+	    	}, 0);
+
+		//}, 1000);
+
 	}
 	
 	//LightBox pour commentaires/*

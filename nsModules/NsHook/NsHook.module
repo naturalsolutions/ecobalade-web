@@ -8,6 +8,8 @@ function NsHook_form_alter(&$form, &$form_state, $form_id) {
 	global $base_url;
 
 	if (isset($form['type']) && $form['type']['#value'] == 'balade') {
+	
+		drupal_set_message(t("Nouveau ! <br/> Pour toutes les images (sauf celle Haute qualité) il est possible de réduire le poid des images avec <a href='https://tinypng.com/' target='_blank'>Tiny PNG</a>"), "status");
 
 		//alter title
 		$form['title']['#title'] = 'Titre de la balade';
@@ -25,6 +27,10 @@ function NsHook_form_alter(&$form, &$form_state, $form_id) {
 		}
 
 	
+	
+	}else if (isset($form['type']) && $form['type']['#value'] == 'espece') {
+	
+		drupal_set_message(t("Nouveau ! <br/> Pour toutes les images (sauf celle Haute qualité) il est possible de réduire le poid des images avec <a href='https://tinypng.com/' target='_blank'>Tiny PNG</a>"), "status");	
 	
 	}
 	 
