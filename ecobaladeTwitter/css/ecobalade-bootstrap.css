@@ -3580,11 +3580,9 @@ max-width: none;
   background:#E47353;
 
 }
-.views-field-field-acces-site .field-content a {
-    color: white;
-    font-size: 11px;
-    font-weight: normal;
-    line-height: 10px;
+body.node-type-balade .views-field-field-acces-site .field-content a {
+  color: white;
+  text-decoration: underline;
 }
 body.node-type-balade div.view-v-caracteristiques-balade  .views-field-field-difficulte{
   background: #55BB79;
