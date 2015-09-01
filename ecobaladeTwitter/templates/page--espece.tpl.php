@@ -779,16 +779,7 @@ jQuery( document ).ready(function() {
 		});
 
 	});
-
-	//Si on souhaite afficher le form pour le mobile 
-	if(window.location.pathname.split('&')[1]== 'commenter'){
-		$('section#comments section.collapseComment form').show();		
-		
-		$('html, body').animate({
-        	scrollTop: $("#comment-form-wrapper").offset().top
-    	}, 0);
-	}
-
+	
 
     //LightBox pour imageBalade espece     
 	if( $('.imageBalade').length > 0 ){
