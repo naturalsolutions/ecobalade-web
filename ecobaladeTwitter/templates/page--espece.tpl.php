@@ -356,13 +356,13 @@ if (isset($_GET["idlastbal"])){
 													case "5.3-Vert":
 													echo "<div class='1Crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Vert.png' alt='pictogramme de fleur Jaune' /><span class='labelCrit'>Vert</span></div>";
 													break;
-													case "5.4-Bleu-violace":
+													case "5.4-Bleu_violace":
 													echo "<div class='1Crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Bleu_violace.png' alt='pictogramme de fleur Jaune' /><span class='labelCrit'>Bleu-violacé</span></div>";
 													break;
-													case "5.5-Rose-violace":
+													case "5.5-Rose_violace":
 													echo "<div class='1Crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Rose-violace.png' alt='pictogramme de fleur Jaune' /><span class='labelCrit'>Rose-violacé</span></div>";
 													break;
-													case "5.6-Marron-rouge":
+													case "5.6-Marron_rouge":
 													echo "<div class='1Crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Marron-rouge.png' alt='pictogramme de fleur Jaune' /><span class='labelCrit'>Marron-rouge</span></div>";
 													break;
 													} ?>
