@@ -114,7 +114,7 @@
 						<a href='<?php echo "$base_url/node/".strip_tags($nid_espece."?idlastbal=".$nid_balade); ?>' title='<?php echo strip_tags($title_espece); ?>'>voir</a>
 												
 				</div>
-			
+				<?php if($groupe_taxo == 'Petites bêtes') $groupe_taxo = 'Insectes'; ?>
 				<div class='<?php echo($groupe_taxo)?>'></div>
 			</div>	
 			
