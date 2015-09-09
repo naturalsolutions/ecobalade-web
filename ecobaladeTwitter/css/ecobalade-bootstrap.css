@@ -850,6 +850,14 @@ body.node-type-balade p.newBalade{
   font-family: RockwellReg;
   font-size: 0.6em;
 }
+body.node-type-balade div.googleMap iframe{
+  width: 97%;
+  height: 400px;
+  margin: 0 auto;
+  display: block;
+  padding-bottom: 20px;
+  border: 0;
+}
 body.node-type-balade article.node-balade div.field-name-field-carte div.field-label{
   background-color: #FAFAFA;
   padding: 1%;
