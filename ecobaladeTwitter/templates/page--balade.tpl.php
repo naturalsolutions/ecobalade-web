@@ -223,25 +223,82 @@ $baladenid = $node->nid;
 			
 			<div class="row-fluid">
 				<div class="span12" id='les_picto_balades'>
-					<div title='Toutes les espèces' id='resetAllFilterOnTaxa'>Tout</div>
-					<div title="Les oiseaux" id="picto_oiseaux"></div>
-					<?php if($baladenid != '269' && $baladenid != '9' &&  $baladenid != '2236' && $baladenid != '2292'):?>
-							<div title="Les mammifères" id="picto_mamifere"></div>
-					<?php endif; ?>
-					<?php if($baladenid != '2292'):?>
-						<div title="Les petites bêtes" id="picto_insect"></div>
-					<?php endif; ?>
-					<?php if($baladenid != '2355' && $baladenid != '2292'):?>
-							<div title="Les reptiles" id="picto_reptile"></div>
-					<?php endif; ?>
-					<div title="Les arbres" id="picto_arbre"></div>
-					<div title="Les arbustes" id="picto_arbuste"></div>
-					<?php if($baladenid == '104'):?>
-							<div title="Les mollusques" id="picto_mollusque"></div>
-					<?php endif; ?>
-					<?php if($baladenid == '2236' || $baladenid == '2355' || $baladenid == '2358' || $baladenid == '2353' || $baladenid == '2323' || $baladenid == '2354' || $baladenid == '2292'):?>
-						<div title="Les Amphibiens" id="picto_amphibien"></div>
-					<?php endif; ?>
+				
+
+					<div title='Toutes les espèces' id='resetAllFilterOnTaxa'>Tout</div>					
+
+					<?php
+					//On get la balade courante
+					$currentNode = node_load($baladenid); 
+					//On va y chercher le champs espèces
+					$allEspeceOftheNode = $currentNode->field_esp_ces['und'];
+					//Tableau de tid utilisé plus tard
+					$arrayOfLabelOfGrpTaxo = array();
+
+					//Pour chaque espece
+					foreach ($allEspeceOftheNode as $key => $value) {
+						
+						//Get nid
+						$nidOfEspece = $value['nid'];						
+
+						//Charge espece node
+						$nodeCurrentSpecie = node_load($nidOfEspece);				
+
+						//Get All tid des groupes taxo
+						array_push($arrayOfLabelOfGrpTaxo, taxonomy_term_load($nodeCurrentSpecie->field_groupe_taxonomique['und'][0]['tid'])->name);						
+
+					}
+
+					$arrayOfLabelOfGrpTaxo = array_unique($arrayOfLabelOfGrpTaxo);
+
+					foreach ($arrayOfLabelOfGrpTaxo as $key => $value) {
+												
+						switch ($value) {
+							case 'Amphibiens':
+								$label_picto = 'picto_amphibien';
+							break;
+
+							case 'Araignées':
+								$label_picto = 'picto_insect';
+							break;
+
+							case 'Petites bêtes':
+								$label_picto = 'picto_insect';
+							break;
+
+							case 'Mammifères':
+								$label_picto = 'picto_mamifere';
+							break;
+
+							case 'Reptiles':
+								$label_picto = 'picto_reptile';
+							break;
+
+							case 'Oiseaux':
+								$label_picto = 'picto_oiseaux';
+							break;
+
+							case 'Mollusque':
+								$label_picto = 'picto_mollusque';
+							break;
+
+							case 'Arbres':
+								$label_picto = 'picto_arbre';
+							break;
+
+							case 'Arbustes et plantes':
+								$label_picto = 'picto_arbuste';
+							break;	
+
+							default:							
+							break;
+						}
+						
+						echo "<div title='$value' id='$label_picto'></div>";
+					}
+
+					?>
+
 				</div>
 			</div>
 					
