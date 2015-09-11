@@ -326,10 +326,10 @@ if (isset($_GET["idlastbal"])){
 													case "4.1-Gland":
 													echo "<div class='1Crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Gland.png' alt='pictogramme de fleur Blanche' /><span class='labelCrit'>Gland</span></div>";
 													break;
-													case "4.2-Pomme de pin":
+													case "4.8-Pomme de pin":
 													echo "<div class='1Crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Pomme_de_pin.png' alt='pictogramme de fleur Blanche' /><span class='labelCrit'>Pomme de pin</span></div>";
 													break;
-													case "4.1-Gousse":
+													case "4.7-Gousse":
 													echo "<div class='1Crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Gousse.png' alt='pictogramme de fleur Blanche' /><span class='labelCrit'>Gousse</span></div>";
 													break;
 													case "4.2-Clochette":
