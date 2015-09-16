@@ -19,6 +19,10 @@ body.page-node-add-balade div.field-name-field-balade-teaser > div.form-item-fie
   width: auto;
   display: inline-block;	
 }
+body.page-node-add-balade small.label_title, body.node-type-balade small.label_title{
+	font-weight: normal;
+}
 body.page-node-add-balade span.textAide, body.node-type-balade span.textAide{
 	font-weight: normal !important;
 }
+
