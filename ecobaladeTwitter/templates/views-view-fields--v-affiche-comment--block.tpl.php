@@ -79,30 +79,46 @@
 	</div>
 	<div class="span10 rightZoneOfComment">
 		<div class="arrow-left"></div>
-		<p class='name'><?php echo $name; ?><i class='created'><?php echo $created; ?></i></p>
-		<p class='comment_body'><?php echo $comment_body; ?></p>
 		
-		<!-- test s'il existe des valeurs -->
-		<?php if( trim($image) !== '' ): ?>			
+		<div class="topOfComment">				
+			<p class='name'><?php echo $name; ?><i class='created'><?php echo $created; ?></i></p>
+			<!-- AddThis Button BEGIN -->
+		    <div id="boutons_partage">
+		        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+				<div class="addthis_sharing_toolbox"></div>
+		    </div>
+		    <!-- AddThis Button END -->					
+		</div>
 
-			<?php 
+		<div class="bottomOfComment">
 			
-			$tabOfImage = explode(',', $image);
-			$imageFull = explode(',', $imageFull);
+			<p class='comment_body'><?php echo $comment_body; ?></p>
 
-			if(count($tabOfImage) > 0){
+			
+			<!-- test s'il existe des valeurs -->
+			<?php if( trim($image) !== '' ): ?>			
 
-				$myNode = node_load($nid);				
+				<?php 
+				
+				$tabOfImage = explode(',', $image);
+				$imageFull = explode(',', $imageFull);
 
-				for ($i=0; $i < count($tabOfImage); $i++) { 
-					# code...				
-					echo "<a href='$imageFull[$i]' class='imageComment' title='Commentaire de $name - \"$myNode->title\"'><img src='$tabOfImage[$i]' alt='$myNode->title' title='$myNode->title' /></a>";		
-				}
+				if(count($tabOfImage) > 0){
 
-			}		
-			?>
+					$myNode = node_load($nid);				
 
-		<?php endif; ?>
+					for ($i=0; $i < count($tabOfImage); $i++) { 
+						# code...				
+						echo "<a href='$imageFull[$i]' class='imageComment' title='Commentaire de $name - \"$myNode->title\"'><img src='$tabOfImage[$i]' alt='$myNode->title' title='$myNode->title' /></a>";		
+					}
+
+				}		
+				?>
+
+			<?php endif; ?>
+
+		</div>
+
 		
 	</div>
 </div>

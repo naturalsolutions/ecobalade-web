@@ -1445,13 +1445,25 @@ div.view-v-affiche-comment .imageComment {
 div.view-v-affiche-comment .views-row{
   padding-bottom: 25px;
 }
+div.view-v-affiche-comment div#boutons_partage{
+  margin: 0;
+  display: inline-block;
+  float: right;
+  margin-right: 20px;
+}
+div.view-v-affiche-comment .bottomOfComment{
+  display: inline-block;
+}
 div.view-v-affiche-comment p.name{
   color: #A1B03B;
+  display: inline-block;
+}
+div.view-v-affiche-comment div.topOfComment{
   border-bottom: 2px dotted #fff;
 }
 div.view-v-affiche-comment p.name i{
   font-size: 0.8em;
-  margin-left: 1%;
+  margin-left: 15px;
   background-color: #A1B03B;
   padding: 2px 4px;
   border-radius: 2px;
@@ -1459,7 +1471,6 @@ div.view-v-affiche-comment p.name i{
   -webkit-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
-
   color: #fff;
 }
 div.view-v-affiche-comment .arrow-left {
@@ -4024,8 +4035,12 @@ margin-left: 9%;
     -webkit-transform: none;
     -moz-transform: none;
   }
+  /*COMMENTAIRES*/
+  body.node-type-balade .leftZoneOfComment{
+    display: none;
+  }
   /*PAGE BALADE*/
-  body.node-type-balade figure.effect-zoe figcaption {
+    body.node-type-balade figure.effect-zoe figcaption {
     -webkit-transition: none;
     transition: none;
     -webkit-transform: translate3d(0,0,0);
@@ -4531,10 +4546,16 @@ margin-left: 9%;
   body.front div#fold3 h3 {
     padding-top: 16px;
   }
-  /**/
+  /*Comment*/
   div.view-v-affiche-comment .imageComment {
     max-width: 100%;
   }
+  div.contentOfOneComment div#boutons_partage{
+    float: none;
+    margin-right: 0;
+    width: 100%;    
+  }
+  /*fin comment*/
   body.front div#cboxWrapper {
     background-size: 131px;
   }
