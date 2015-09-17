@@ -62,9 +62,11 @@
       <?php if ($title): ?>
         <h1 class="page-header"><?php print $title; ?></h1>
       <?php endif; ?>
-      <?php print render($title_suffix); ?>
+      <?php print render($title_suffix); ?>	  
 	  <?php print $messages; ?>
-	   <?php print $messages; ?>
+	  <?php if ($tabs): ?>
+        <?php print render($tabs); ?>
+      <?php endif; ?>
 
 		<div class="row-fluid">
 		  
