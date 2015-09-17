@@ -68,8 +68,15 @@
 				<?php endif; ?>
 		<?php endif;?>
 
+		<?php if ($id == 'cid') : ?>
+				<?php if (!empty($field->content)): ?>
+						<?php $cid =  $field->content; ?>
+				<?php endif; ?>
+		<?php endif;?>
+
 <?php endforeach; ?>
 
+<?php echo $base_url; ?>
 
 <div class="row-fluid contentOfOneComment">
 	
@@ -85,7 +92,7 @@
 			<!-- AddThis Button BEGIN -->
 		    <div id="boutons_partage">
 		        <!-- Go to www.addthis.com/dashboard to customize your tools -->
-				<div class="addthis_sharing_toolbox"></div>
+		     	<div class="addthis_sharing_toolbox" data-url="http://www.ecobalade.fr/comment/<?php echo $cid; ?>#comment-<?php echo $cid; ?>" data-title="Mon commentaire sur ecobalade.fr"></div> 
 		    </div>
 		    <!-- AddThis Button END -->					
 		</div>
