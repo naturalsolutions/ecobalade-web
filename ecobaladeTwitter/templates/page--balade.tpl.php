@@ -173,12 +173,12 @@ $baladenid = $node->nid;
 					$urlPhotoResumeEspecePhare = file_create_url($nodeEspecePhare->field_photo_resume['und'][0]['uri']);
 
 					$variables = array(
-					        'style_name' => 'slideshow_detail_balade_full',
-					        'path' => $nodeEspecePhare->field_photo_resume['und'][0]['uri'],
-					        'width' => $nodeEspecePhare->field_photo_resume['und'][0]['width'],
-					        'height' => $nodeEspecePhare->field_photo_resume['und'][0]['height'],
-					        'title' => $nodeEspecePhare->field_photo_resume['und'][0]['title'],
-							'alt' => $nodeEspecePhare->field_photo_resume['und'][0]['alt']
+				        'style_name' => 'slideshow_detail_balade_full',
+				        'path' => $nodeEspecePhare->field_photo_resume['und'][0]['uri'],
+				        'width' => $nodeEspecePhare->field_photo_resume['und'][0]['width'],
+				        'height' => $nodeEspecePhare->field_photo_resume['und'][0]['height'],
+				        'title' => $nodeEspecePhare->field_photo_resume['und'][0]['title'],
+						'alt' => $nodeEspecePhare->field_photo_resume['und'][0]['alt']
 					);
 					
 					$imgPhotoResumeEspecePhare = theme( 'image_style', $variables );
@@ -194,9 +194,7 @@ $baladenid = $node->nid;
 							echo '</figcaption>';
 						echo '</figure>';
 					echo "</div>";
-
-					//echo "<a class='imageEspecePhare' href='$urlPhotoResumeEspecePhare' title='$TitlePhotoResumeEspecePhare'>$imgPhotoResumeEspecePhare</a><a href='$base_url/node/$nidPhotoResumeEspecePhare?idlastbal=$baladenid'>$TitlePhotoResumeEspecePhare</a></div>";
-
+					
 				} ?>
 				</div>					
 

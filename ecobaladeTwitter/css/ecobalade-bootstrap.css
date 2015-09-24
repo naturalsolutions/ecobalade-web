@@ -17,65 +17,78 @@
 /***************************************************************************/
 
 @font-face {
-    font-family: 'RockwellLight';
+    font-family: 'Rockwell-Light';
     src: url('./font/RockwellStd-Light.ttf');
     src: url('./font/RockwellStd-Light.eot') format('embedded-opentype'),
          url('./font/RockwellStd-Light.woff') format('woff'),
          url('./font/RockwellStd-Light.ttf') format('truetype'),
          url('./font/RockwellStd-Light.svg') format('svg');
-    font-weight: bold;
+    font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'RockwellReg';
+    font-family: 'Rockwell-Regular';
     src: url('./font/RockwellStd_reg.ttf');
     src: url('./font/RockwellStd_reg.eot') format('embedded-opentype'),
          url('./font/RockwellStd_reg.woff') format('woff'),
          url('./font/RockwellStd_reg.ttf') format('truetype'),
          url('./font/RockwellStd_reg.svg') format('svg');
-    font-weight: bold;
+    font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'RalewaySemiBold';
+    font-family: 'Raleway-SemiBold';
     src: url('./font/Raleway-SemiBold.ttf');
     src: url('./font/Raleway-SemiBold.eot') format('embedded-opentype'),
          url('./font/Raleway-SemiBold.woff') format('woff'),
          url('./font/Raleway-SemiBold.ttf') format('truetype'),
          url('./font/Raleway-SemiBold.svg') format('svg');
-    font-weight: bold;
+    font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Raleway';
+    font-family: 'Raleway-Light';
     src: url('./font/Raleway-Light.ttf');
     src: url('./font/Raleway-Light.eot') format('embedded-opentype'),
          url('./font/Raleway-Light.woff') format('woff'),
          url('./font/Raleway-Light.ttf') format('truetype'),
          url('./font/Raleway-Light.svg') format('svg');
-    font-weight: bold;
+    font-weight: 300;
     font-style: normal;
 }
 
-@import url('http://fonts.googleapis.com/css?family=Libre+Baskerville');
+@font-face {
+    font-family: 'LibreBaskerville-Regular';
+    src: url('./font/LibreBaskerville-Regular.ttf');
+    src: url('./font/LibreBaskerville-Regular.eot') format('embedded-opentype'),
+         url('./font/LibreBaskerville-Regular.woff') format('woff'),
+         url('./font/LibreBaskerville-Regular.ttf') format('truetype'),
+         url('./font/LibreBaskerville-Regular.svg') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
 /***************************************************************************/
 /*                          DIVERS - Tools                                 */
 /*                                                                         */
 /***************************************************************************/
-/*Pour popup*/
-/*body div.well{
-  display: none;
-}*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #4DBB74;
+}
 body.not-logged-in{
   position: relative;
 }
 body.logged-in header#navbar{
   top: 28px;
 }
-.page-header{
+ .page-header{
   padding: 1% 0 1% 1%;
   margin-bottom: 8px;
   border-bottom: 0;
@@ -99,33 +112,103 @@ body.logged-in header#navbar{
   -moz-border-radius: 4px;
   min-height: 500px;
 }
-p{
-  font-size:16px;
-  line-height:27px;
-  font-family : 'Raleway', sans-serif;
-}
-a {
-   color:#4DBB74;
-}
-h1,h2,h3,h4{
-  font-family : 'RockwellLight', serif;
-  text-rendering: auto;
-}
-#navbar > div > div > div > nav > div:nth-child(1) > div:nth-child(6) > a{
-  color: #4DBB74;
-  font-family: "Raleway";
-  display: block;
-}
-#navbar > div > div > div > nav > div:nth-child(1) > div:nth-child(6) > a:active{
-  color: #fff;
+/***************************************************************************/
+/*                             HEADER - LOGO                               */
+/*                                                                         */
+/***************************************************************************/
+#navbar > div > div > a.brand > img{  
+  height: 58px;
 }
 
+/***************************************************************************/
+/*                          MENU - NAV - NAVIGTAION                        */
+/*                                                                         */
+/***************************************************************************/
+#main-menu .active{
+  background: #4DBB74;
+  color: #fff;
+  text-shadow: none;
+}
 /***************************************************************************/
 /***************************************************************************/
 /*                       PAGE ACCUEIL HOME - HP                            */
 /*                                                                         */
 /***************************************************************************/
 /*********************************  ****************************************/
+body.front .etiquette p,body.front .secondEtiquette p{
+  color:#fff;
+  text-transform:uppercase;
+  font-weight:300;
+  margin:5px 0px 5px 0px;
+}
+/*BNT ACCUEIL*/
+body.front h1{
+  font-family: 'Rockwell-Light';
+}
+body.front a#hp_button_android span.icon {
+  background-position: 0px -35px;
+}
+body.front a.buttonStore{
+  padding: 10px 15px 10px 15px;
+  font-size: 18px;  
+  display: inline-block;
+  width: 48%;
+  text-align: left;  
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  margin-right: 2px;
+  margin-top: 1.8%;
+  color: #fff;
+  text-shadow: none;
+  background: #4DBB74; /* Old browsers */
+  background: -moz-linear-gradient(top, #4DBB740%, #2E9050 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4DBB74), color-stop(100%, #2E9050)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #4DBB740%, #2E9050 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #4DBB740%, #2E9050 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #4DBB740%, #2E9050 100%); /* IE10+ */
+  background: linear-gradient(top, #4DBB740%, #2E9050 100%); /* W3C */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4DBB74', endColorstr='#2E9050', GradientType=0 ); /* IE6-9 */
+}
+body.front a.buttonStore:hover {
+  text-decoration: none;
+  color: #fff;
+  background: #4DBB74; /* Old browsers */
+  background: -moz-linear-gradient(bottom, #4DBB74 0%, #2E9050 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #4DBB74), color-stop(100%, #2E9050)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(bottom, #4DBB74 0%, #2E9050 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(bottom, #4DBB74 0%, #2E9050 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(bottom, #4DBB74 0%, #2E9050 100%); /* IE10+ */
+  background: linear-gradient(bottom, #4DBB74 0%, #2E9050 100%); /* W3C */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4DBB74', endColorstr='#2E9050', GradientType=0 ); /* IE6-9 */
+}
+
+body.front a#hp_button_apple{
+    margin-top: 1.8%;
+}
+body.front .buttonStore span.icon-android {
+  width: 50px;
+  height: 45px;
+  display: block;
+  background: url('../img/Gstore.png') no-repeat top left;
+  float: left;
+  margin-right: 12px;
+}
+body.front .buttonStore span.icon-apple {
+  width: 50px;
+  height: 45px;
+  display: block;
+  background: url('../img/Astore.png') no-repeat top left;
+  float: left;
+  margin-right: 12px;
+}
+body.front .buttonStore em {
+  font-size: 0.5em;
+  display: block;
+  color: #fff;
+  font-style: normal;
+}
 /*slider*/
 body.front > div.container{
     margin-top: 20px;
@@ -181,7 +264,7 @@ body.front a#btn-front{
   color: white;
   font-size: 1.1em;
   line-height: 40px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway-Light', sans-serif;
   text-shadow: none; 
 }
 body.front span.txt-front{
@@ -282,7 +365,7 @@ body.front div#fold3 div.fleche-balade {
 }
 body.front div#fold3 div.fleche-balade p{
   color:white;
-  font-family:"Raleway", sans-serif;
+  font-family:"Raleway-Light", sans-serif;
   margin-top:-50px;
   text-align:center;
   font-size:18px;
@@ -311,6 +394,9 @@ body.front div#fold3 a.titleBaladePromu:hover{
 body.front .contenuEtiquette{
   position:relative;
   overflow:hidden;
+}
+body.front h1{
+  font-size: 2.8em
 }
 /*popup*/
 body.front div#cboxOverlay,
@@ -394,7 +480,7 @@ div#cboxTopRight, div#cboxTopLeft, div#cboxTopCenter, div#cboxMiddleLeft, div#cb
 div.popup_onload div.content div.row-fluid div.span12 input#mce-EMAIL{
   border-style: solid;
   border-color: #BFBFBF !important;
-  font-family: "RalewaySemiBold",sans-serif;
+  font-family: "Raleway-SemiBold",sans-serif;
   font-size: 0.9em !important;
   letter-spacing: 0.2em;
   width: auto;
@@ -411,7 +497,7 @@ div.popup_onload div.content div.row-fluid div.span12 input#mce-EMAIL:focus{
 div.popup_onload div.content div.row-fluid div.span12 input#mc-embedded-subscribe{
   background-color: #4DBB74;
   color: #FFF;
-  font-family: "RalewaySemiBold",sans-serif;
+  font-family: "Raleway-SemiBold",sans-serif;
   letter-spacing: 0.1em;
   border-radius: 3px;
   margin-left: 1.7%;
@@ -440,9 +526,6 @@ div.popup_onload div.content div.row-fluid:nth-child(3){
   margin-top: 2.3%;
 }
 /*fin popup*/
-body.front div.hero-unit-teaser h1 {
-  font-family: 'RockwellLight',serif !important;
-}
 body.front a#fold1BntAllBalades{
   padding: 15px 0px;
   margin-left: 22%; 
@@ -459,7 +542,6 @@ body.front a#fold1BntAllBalades:hover{
   background-image: linear-gradient(#4DBB74, #4DBB74) !important;
   color: #fff !important;
   border: 1px solid #4DBB74 !important;
-  font-family: RalewaySemiBold;
 }
 body.front div.zoneBtnBalade a.btn{
   font-size: 1em;
@@ -480,47 +562,16 @@ body.front div.zoneBtnBalade a:hover{
   background-position: 0 !important;
   background: #ffffff;
   color: #4DBB74;
-  font-family: RalewaySemiBold;
+  font-family: Raleway-SemiBold;
 }
 body.front div.zoneBtnBalade a.btn.inverse:hover{
   background-image: -webkit-linear-gradient(#4DBB74, #4DBB74);
   background-image: -o-linear-gradient(#4DBB74, #4DBB74);
   background-image: linear-gradient(#4DBB74, #4DBB74);
   color: #fff;
-  font-family: RalewaySemiBold;
-}
-body.front a#hp_button_android span.icon {
-  background-position: 0px -35px;
-}
-body.front a#hp_button_android, a#hp_button_apple {
-  margin-top: 1.8%;
-  color: #fff;
-  text-shadow: none;
-  background: #4DBB74; /* Old browsers */
-  background: -moz-linear-gradient(top, #4DBB740%, #2E9050 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4DBB74), color-stop(100%, #2E9050)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #4DBB740%, #2E9050 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #4DBB740%, #2E9050 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #4DBB740%, #2E9050 100%); /* IE10+ */
-  background: linear-gradient(top, #4DBB740%, #2E9050 100%); /* W3C */
- filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4DBB74', endColorstr='#2E9050', GradientType=0 ); /* IE6-9 */
-}
-body.front a#hp_button_android:hover, a#hp_button_apple:hover {
-  text-decoration: none;
-  color: #fff;
-  background: #4DBB74; /* Old browsers */
-  background: -moz-linear-gradient(bottom, #4DBB74 0%, #2E9050 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #4DBB74), color-stop(100%, #2E9050)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(bottom, #4DBB74 0%, #2E9050 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(bottom, #4DBB74 0%, #2E9050 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(bottom, #4DBB74 0%, #2E9050 100%); /* IE10+ */
-  background: linear-gradient(bottom, #4DBB74 0%, #2E9050 100%); /* W3C */
- filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4DBB74', endColorstr='#2E9050', GradientType=0 ); /* IE6-9 */
+  font-family: Raleway-SemiBold;
 }
 
-body.front a#hp_button_apple{
-    margin-top: 1.8%;
-}
 /******RESEAUX SOCIAUX************************/
 body.front #lien_facebook,body.front #lien_twitter,body.front #lien_pinterest,body.front #lien_google,body.front #lien_instagram{
   width: 32px;
@@ -790,7 +841,7 @@ body.node-type-balade figure.effect-zoe:hover figcaption{
 body.node-type-balade figure.effect-zoe h3 {
   font-size: 1em;
   padding: 0 3%;
-  font-family: Raleway;
+  font-family: Raleway-Light;
   color: rgb(51,51,51);
   text-align: center;
   line-height: 20px;
@@ -1107,7 +1158,7 @@ body.node-type-espece a.btn-back-list-espece{
   padding: 5px 0;
 }
 body.node-type-espece a.btn-back-list-espece:hover{
-  font-family: RalewaySemiBold;
+  font-family: Raleway-SemiBold;
 }
 body.node-type-espece div#blockTitleEsp{
   padding: 12px 0;
@@ -1257,14 +1308,14 @@ body.node-type-espece div#containerOfSaisonalite div.visibleEnCeMoment{
   background-size: 37%;
   padding-top: 165px;  
   color:  #4DBB74;
-  font-family: 'RalewaySemiBold';
+  font-family: 'Raleway-SemiBold';
 }
 body.node-type-espece div#containerOfSaisonalite div.InvisibleEnCeMoment{
   background : url('../img/saisonalite/invisible.png') no-repeat  50% 50%;
   background-size: 37%;
   padding-top: 165px;
   color:  #F47193;
-  font-family: 'RalewaySemiBold';
+  font-family: 'Raleway-SemiBold';
 }
 body.node-type-espece div#containerOfSaisonalite div.span8{
   position: relative;
@@ -1318,7 +1369,7 @@ body.node-type-espece span.lineSeparator{
 }*/
 body.node-type-espece div#containerOfSaisonalite div.saisonOn{
   color: rgb(77, 187, 116);
-  font-family: 'RalewaySemiBold';
+  font-family: 'Raleway-SemiBold';
 }
 body.node-type-espece div#containerOfSaisonalite p.currentMonth{
   font-size: 1.8em;
@@ -1390,7 +1441,7 @@ body.node-type-espece figure.effect-zoe h2 {
   font-size: 1em;
   padding: 0 3%;
   line-height: 16px;
-  font-family: Raleway;
+  font-family: Raleway-Light;
   color: rgb(51,51,51);
 }
 body.node-type-espece div.blocTaxon figure.effect-zoe h2 {
@@ -1680,14 +1731,14 @@ body.page-liste-balades .view-v-liste-balade .views-field-view-node a{
   display: block;
   width: 100%;
   color: #fff;
-  font-family: 'Raleway';
+  font-family: 'Raleway-Light';
   letter-spacing: 0.05em;
   background-color: #4DBB74;
 }
 body.page-liste-balades .view-v-liste-balade .views-field-view-node a:hover{
   text-decoration: none;
   color: #f5f5f5;
-  font-family: 'RalewaySemiBold';
+  font-family: 'Raleway-SemiBold';
   letter-spacing: 0.0.5em;
   background-color: #4DBB74;  
 }
@@ -1928,7 +1979,182 @@ body.node-type-site div#thumbs a.pageLink.prev{
 body.node-type-site div#thumbs a.pageLink.next{
   position: absolute;
   right: 16px;
+}
+/***************************************************************************/
+/***************************************************************************/
+/*                              PAGE MOBILE                                */
+/*                                                                         */
+/***************************************************************************/
+/*********************************  ****************************************/
+body.page-node-187 .vnbx-container, body.page-node-187 .vnbx-label.vnbx-title{
+  background: none;
+}
+div#container-mobile div#l5 a.imgMockup > div{
+  display: inline-block;
+  -webkit-background-size: contain; /* Safari and Chrome */
+  -moz-background-size: contain; /* Firefox */
+  -ms-background-size: contain; /* Internet Explorer */
+  -o-background-size: contain; /* Opera */
+  background-size: contain;
+  width: 15%;
+  height: 250px;  
+}
+div#container-mobile div#screen_iphone1 {  
+  background: url("../img/screen/carte_des_balades.png") no-repeat center center ;  
+}
+div#container-mobile div#screen_iphone2{  
+  background: url("../img/screen/balades.png") no-repeat center center;  
+}
+div#container-mobile div#screen_iphone3{
+  background: url("../img/screen/liste.png") no-repeat center center;  
+}
+div#container-mobile div#screen_iphone4{  
+  background: url("../img/screen/arbousier.png") no-repeat center center;  
+}
+div#container-mobile div#screen_iphone5{
+  background: url("../img/screen/espece.png") no-repeat center center;
+}
+div#container-mobile div#screen_iphone6{  
+  background: url("../img/screen/bravo.png") no-repeat center center;
+}
+div#container-mobile div#blocResSociaux {
+    border-top: 1px solid rgb(227, 227, 227);
+    border-bottom: 1px solid rgb(227, 227, 227);
+    height: 47px;
+    padding: 2% 0% 0% 0%;
+    float: right;
+    width: 73%;
+}
+div#container-mobile div#blocResSociaux p {
+    font-size: 1em;
 
+}
+div#container-mobile div#blocResSociaux a {
+  color: #000;
+  font-weight: bold;
+  font-size: 0.9em;
+  text-decoration: none;
+}
+div#container-mobile div#blocResSociaux div#twt_ico{
+  float: left;
+  background: url('../img/ico_twt.png') no-repeat 0% 0% transparent;
+  width: 25px;
+  height: 25px;
+  padding-right: 4%;
+}
+div#container-mobile div#blocResSociaux div#fb_ico {
+    float: left;
+    background: url("../img/ico_fb.png") no-repeat scroll 0% 0% transparent;
+    width: 25px;
+    height: 25px;
+    padding-right: 4%;
+    margin-left: 17%;
+}
+div#container-mobile span.GreenColor{
+  color: #4DBB74;
+}
+div#container-mobile div#blok_twt,div#container-mobile div#blok_fb{
+  float: left;  
+  width: 50%;
+}
+
+div#container-mobile div#l6 p{
+  color: rgb(119, 119, 119);
+  font-size: 0.8em;
+  float: left;
+  padding-right: 4%;
+  line-height: 16px;
+}
+div#container-mobile div#l6 p#copyR {
+    color: rgb(119, 119, 119);
+    font-size: 0.8em;
+    float: left;
+    padding-left: 0;
+    padding-right: 0%;
+}
+div#container-mobile div#l6{
+    padding-bottom: 10%;
+    border-top: 1px solid rgb(227, 227, 227);
+    padding-top: 1%;
+    text-align: right;
+    width: 84%;
+    margin: 0 auto;
+}
+div#container-mobile div#l2 {
+  background: url("../img/gabian.png") no-repeat 31% 22px;
+  background-size: 18%;
+  text-align: right;  
+  padding-top: 54px;
+}
+div#container-mobile div#l5{
+  text-align: center;
+  padding: 0 6% 60px 6%;
+}
+div#container-mobile div#l5 a{}
+div#container-mobile div#l4 {
+  margin-top: 60px;
+}
+div#container-mobile div#l3 p{
+  float: right;
+  width: 73%;
+}
+div#container-mobile {
+  width: 100%;
+  background: url("../img/background_black.png") repeat-x scroll 0% -7% transparent;
+  height: 100%;    
+}
+div#container-mobile div#titleOfMobileApp p {
+  color: #fff;
+  font-size: 4em;    
+  margin-left: 25%;
+}
+div#container-mobile div#description {
+  color: #fff;
+  padding: 2% 2% 2% 2%;
+  border: 1px solid rgb(43, 43, 43);
+  width: 70%;
+  margin-left: 25%;
+  box-shadow: 0px 0px 10px #000;
+}
+div#container-mobile div#description p{
+  display: inline-block;
+  width: 75%;
+  padding-left: 5%;
+  text-align: justify;
+}
+div#container-mobile div#blocGauche{
+    margin-top: 40px;
+}
+div#container-mobile div#pitcoEco {
+  background: url("../img/AppIcon192x192.png") no-repeat scroll 0% 0% transparent;
+  background-size: 100%;
+  width: 15%;
+  height: 72px;
+  display: inline-block;
+}
+div#container-mobile div#iphonePresenter {
+    background: url("../img/screen/iphone.png") no-repeat scroll 15% 77% transparent;    
+    width: 100%;
+    height: 700px;
+    float: left;
+}
+div#container-mobile div#badge4GooglePlay {
+    background: url("../img/badgeGooglePlay.png") no-repeat scroll 100% 0% transparent;
+    width: 25%;
+    height: 80px;
+    background-size: 85%;
+    display: inline-block;
+}
+div#container-mobile div#badge4AppStore {
+  background: url("../img/badgeAppStore.png") no-repeat scroll 90% 0% transparent;
+  width: 25%;
+  height: 80px;
+  background-size: 85%;
+  display: inline-block;
+}
+div#container-mobile div.bloc_partage{
+  display: inline-block;
+  padding-right: 25px;
 }
 /*FIN gallerie*/
 /***************************************************************************/
@@ -2031,7 +2257,7 @@ footer.footer div#social h4{
 }
 footer.footer div#questions a:hover, footer.footer div#contact a:hover{
   color: #4DBB74;
-  font-family: 'RalewaySemiBold';
+  font-family: 'Raleway-SemiBold';
 }
 footer.footer h4{
   color: #fff;
@@ -2040,7 +2266,7 @@ footer.footer .icon_android_store:hover, footer.footer .icon_apple_store:hover{
   background-color: #4DBB74;
 }
 footer.footer .icon_android_store, footer.footer .icon_apple_store{
-  font-family: 'RalewaySemiBold';
+  font-family: 'Raleway-SemiBold';
   background-size: 100%;
   text-decoration: none;
   text-indent: 20%;
@@ -2753,227 +2979,7 @@ div#les_picto_balades {
 	border: none!important;
 }
 /* FIN PARTIE FILTRES ON LISTE TAXON BALADES*/
-/*CSS OF PAGE MOBILE*/
-div#container-mobile div#screen_iphone1 {
-  float: left;
-  background: url("../img/screen/balades.png") no-repeat scroll center center transparent;
-  -webkit-background-size: contain; /* Safari and Chrome */
-  -moz-background-size: contain; /* Firefox */
-  -ms-background-size: contain; /* Internet Explorer */
-  -o-background-size: contain; /* Opera */
-  background-size: contain;
-  width: 15%;
-  height: 250px;    
-}
-div#container-mobile div#screen_iphone2{
-  float: left;
-  background: url("../img/screen/key.png") no-repeat scroll center center transparent;
-  -webkit-background-size: contain; /* Safari and Chrome */
-  -moz-background-size: contain; /* Firefox */
-  -ms-background-size: contain; /* Internet Explorer */
-  -o-background-size: contain; /* Opera */
-  background-size: contain;
-  width: 15%;
-  height: 250px;    
-}
-div#container-mobile div#screen_iphone3{
-  float: left;
-  background: url("../img/screen/liste.png") no-repeat scroll center center transparent;
-  -webkit-background-size: contain; /* Safari and Chrome */
-  -moz-background-size: contain; /* Firefox */
-  -ms-background-size: contain; /* Internet Explorer */
-  -o-background-size: contain; /* Opera */
-  background-size: contain;
-  width: 15%;
-  height: 250px;    
-}
-div#container-mobile div#screen_iphone4{
-  float: left;
-  background: url("../img/screen/arbousier.png") no-repeat scroll center center transparent;
-  -webkit-background-size: contain; /* Safari and Chrome */
-  -moz-background-size: contain; /* Firefox */
-  -ms-background-size: contain; /* Internet Explorer */
-  -o-background-size: contain; /* Opera */
-  background-size: contain;
-  width: 15%;
-  height: 250px;    
-}
-div#container-mobile div#screen_iphone5{
-  float: left;
-  background: url("../img/screen/mesange.png") no-repeat scroll center center transparent;
-  -webkit-background-size: contain; /* Safari and Chrome */
-  -moz-background-size: contain; /* Firefox */
-  -ms-background-size: contain; /* Internet Explorer */
-  -o-background-size: contain; /* Opera */
-  background-size: contain;
-  width: 15%;
-  height: 250px;    
-}
-div#container-mobile div#screen_iphone6{
-  float: left;
-  background: url("../img/screen/bravo.png") no-repeat scroll center center transparent;
-  -webkit-background-size: contain; /* Safari and Chrome */
-  -moz-background-size: contain; /* Firefox */
-  -ms-background-size: contain; /* Internet Explorer */
-  -o-background-size: contain; /* Opera */
-  background-size: contain;
-  width: 15%;
-  height: 250px;  
-}
-div#container-mobile div#blocResSociaux {
-    border-top: 1px solid rgb(227, 227, 227);
-    border-bottom: 1px solid rgb(227, 227, 227);
-    height: 47px;
-    padding: 2% 0% 0% 0%;
-    float: right;
-    width: 73%;
-}
-div#container-mobile div#blocResSociaux p {
-    font-size: 1em;
 
-}
-div#container-mobile div#blocResSociaux a {
-  color: #000;
-  font-weight: bold;
-  font-size: 0.9em;
-  text-decoration: none;
-}
-div#container-mobile div#blocResSociaux div#twt_ico{
-  float: left;
-  background: url('../img/ico_twt.png') no-repeat 0% 0% transparent;
-  width: 25px;
-  height: 25px;
-  padding-right: 4%;
-}
-div#container-mobile div#blocResSociaux div#fb_ico {
-    float: left;
-    background: url("../img/ico_fb.png") no-repeat scroll 0% 0% transparent;
-    width: 25px;
-    height: 25px;
-    padding-right: 4%;
-    margin-left: 17%;
-}
-div#container-mobile span.GreenColor{
-  color: #4DBB74;
-}
-div#container-mobile div#blok_twt,div#container-mobile div#blok_fb{
-  float: left;  
-  width: 50%;
-}
-
-div#container-mobile div#l6 p{
-  color: rgb(119, 119, 119);
-  font-size: 0.8em;
-  float: left;
-  padding-right: 4%;
-  line-height: 16px;
-}
-div#container-mobile div#l6 p#copyR {
-    color: rgb(119, 119, 119);
-    font-size: 0.8em;
-    float: left;
-    padding-left: 0;
-    padding-right: 0%;
-}
-div#container-mobile div#l6{
-    padding-bottom: 10%;
-    border-top: 1px solid rgb(227, 227, 227);
-    padding-top: 1%;
-    text-align: right;
-    width: 84%;
-    margin-left: 10%;
-}
-div#container-mobile div#l2 {
-    background: url("/sites/all/themes/ecobaladeTwitter/img/gabian.png") no-repeat scroll 31% 74% transparent;
-    background-size: 18% auto;
-    width: 100%;
-    float: left;
-    height: 153px;
-}
-div#container-mobile div#l5{
-  padding-bottom: 6%;
-  padding-left: 7%;
-}
-div#container-mobile div#l4 {
-   
-    margin-top: 9%;
-    
-}
-div#container-mobile div#l3 p{
-  float: right;
-  width: 73%;
-}
-div#container-mobile div#l1, div#l3, div#l4, div#l5, div#l6{
-  width: 100%;
-  float: left;
-}
-div#container-mobile {
-    width: 100%;
-    background: url("../img/background_black.png") repeat-x scroll 0% -7% transparent;
-    height: 100%;
-    
-}
-div#container-mobile div#titleOfMobileApp{
-  width: 100%;
-  float: left;
-  height: 23px;
-}
-div#container-mobile div#titleOfMobileApp p {
-    
-    color: rgb(255, 255, 255);
-    font-size: 4em;
-    float: left;
-    margin-left: 25%;
-}
-div#container-mobile div#description {
-    color: rgb(255, 255, 255);
-    line-height: 24px;
-    padding: 2% 0% 0% 0%;
-    border-top: 1px solid rgb(43, 43, 43);
-    border-bottom: 1px solid rgb(27, 27, 27);
-    margin-top: 5%;
-    width: 75%;
-    float: right;
-}
-div#container-mobile div#blocGauche{
-  float: left;
-  margin-top: 10%;
-}
-div#container-mobile div#pitcoEco {
-    background: url("../img/btn-launcher.png") no-repeat scroll 0% 0% transparent;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
-    float: left;
-    width: 12%;
-    height: 72px;
-    padding-right: 6%;
-    margin-top: 1%;
-}
-
-div#container-mobile div#iphonePresenter {
-    background: url("../img/iphone.png") no-repeat scroll 15% 77% transparent;
-    width: 100%;
-    height: 700px;
-    float: left;
-}
-div#container-mobile div#badge4GooglePlay {
-    float: right;
-    background: url("../img/badgeGooglePlay.png") no-repeat scroll 0% 0% transparent;
-    width: 149px;
-    height: 83px;
-    margin-top: 8%;
-}
-div#container-mobile div#badge4AppStore {
-  float: right;
-  background: url("/sites/all/themes/ecobaladeTwitter/img/badgeAppStore.png") no-repeat scroll 0% 0% transparent;
-  width: 149px;
-  height: 83px;
-  margin-top: 8%;
-  padding-right: 7%;
-}
-/*FIN CSS OF PAGE MOBILE*/
 /*AFFICHE CRITERES FICHE TAXON */
 div.view-id-v_taxon_balade div#fieldPersoCriteria2line{
   border:1px solid rgb(187,187,187);
@@ -3050,9 +3056,7 @@ float:left!important;
 margin-left:80px;
 }
 
-.navbar .nav > li > a {
-font-size:18px!important;
-}
+
 
 
 
@@ -3076,12 +3080,7 @@ display:none;
   z-index:2000;
 }
 
-#main-menu .active{
-  background:#4DBB74;
-  border-radius:2px;
-  color: white;
-text-shadow: 0 1px 0 #2E9050;
-}
+
 .hero-unit p{
   font-size:18px;
   line-height:30px;
@@ -3108,15 +3107,6 @@ a,a:hover, a:active, a:focus {
 
 .hero-unit p{
   margin: 1em 0;
-}
-.hero-unit h1{
-  font-size:50px;
-  margin-bottom:10px;
-  font-family:"RockwellReg";
-}
-h1,h2,h3,h4{
-    color:#4DBB74;
-    font-family:"RockwellReg";
 }
 .brand{
   position:absolute;
@@ -3274,12 +3264,7 @@ border: none;
   -o-transform:rotate(-45deg);
   transform:rotate(-45deg);
 }
-.etiquette p,.secondEtiquette p{
-  color:white;
-  text-transform:uppercase;
-  font-weight:bold;
-  margin:5px 0px 5px 0px;
-}
+
 
 /******************* PAGE BALADE  ***********************/
 body.node-type-balade div.view-id-v_note_balade{
@@ -3312,51 +3297,12 @@ body.node-type-balade div.view-id-v_note_balade{
   margin-bottom:80px;
 }
 
-/*BNT ACCUEIL*/
-.button {
-  padding: 10px 15px 10px 15px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  display: inline-block;
-  width: 140px;
-  text-align: left;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.85);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  margin-bottom: 5px;
-  margin-right: 2px;
-}
-.button span.icon-android {
-  width: 50px;
-  height: 45px;
-  display: block;
-  background: url('../img/Gstore.png') no-repeat top left;
-  float: left;
-  margin-right: 12px;
-}
-.button span.icon-apple {
-  width: 50px;
-  height: 45px;
-  display: block;
-  background: url('../img/Astore.png') no-repeat top left;
-  float: left;
-  margin-right: 12px;
-}
-.button em {
-  font-size: 10px;
-  font-weight: bold;
-  display: block;
-  color: #fff;
-  text-shadow: 0px 1px rgba(255, 255, 255, 0.65);
-  font-style: normal;
-}
-.button:active {
+
+/* .button:active {
   -webkit-box-shadow: inset 0px 0px 7px #333;
   -moz-box-shadow: inset 0px 0px 7px #333;
   box-shadow: inset 0px 0px 7px #333;
-}
+} */
 
 
 
@@ -3669,9 +3615,7 @@ body.front a.email{
   padding-top: 1.3%!important;
   padding-bottom: 1.3%!important;
 }
-#navbar > div > div > a.brand > img{
-  height:100%;
-}
+
 body.front #fold2 > h2{
   color: #333333;
 }
@@ -3749,40 +3693,11 @@ margin-left: 9%;
     height: 821px;
   }
   /*PAGE MOBILE*/
-  div#containerOf1Site #descro_site p {
-    margin: 10px 10px 0px 50px;
-  }
-  div#container-mobile div#badge4AppStore {   
-    background: url("../img/badgeAppStore_medium.png") no-repeat scroll 0% 0% transparent;
-    width: 120px;
-    height: 67px;
-    margin-top: 13%;
-  }
-  div#container-mobile div#badge4GooglePlay {
-    background: url("../img/badgeGooglePlay_medium.png") no-repeat scroll 0% 0% transparent;
-    width: 120px;
-    height: 67px;
-    margin-top: 13%;
+  div#container-mobile div#titleOfMobileApp p{
+    margin: 0;
+    text-align: center;
   }
 
-  div#container-mobile div#blok_fb{
-    width: 55%;
-  }
-  div#container-mobile div#blok_twt {
-    width: 45%;
-  }
-  div#container-mobile div#blocResSociaux div#fb_ico {
-    margin-left: 5%;
-  }
-  div#container-mobile div#pitcoEco {
-    padding-right: 9%;
-  }
-  div#container-mobile div#l2 {
-    background-position: 31% 100%;
-    padding-top: 2.7%;
-  }
-  
-/*FIN PAGE MOBILE*/
 } 
 /*entre 980px et 1200px*/
 @media (min-width: 980px) and (max-width: 1200px){
@@ -3952,6 +3867,15 @@ margin-left: 9%;
     width: 100%;    
   }  
   /*PAGE ESPECE*/
+  body.node-type-espece div#containerOfSaisonalite div.span6 div.row-fluid > div, body.node-type-espece div.InvisibleEnCeMoment, body.node-type-espece div.visibleEnCeMoment{
+    height: 200px;
+    padding: 0!important;
+    background-position: 50% 50% !important;
+    background-size: 15% !important;
+  }
+  body.node-type-espece div#aussiPresentDansBalade{
+    display: none;
+  }
   body.node-type-espece .gallery-top {  
   width: 100%;
   padding-left: 0;
@@ -4104,30 +4028,62 @@ margin-left: 9%;
     position: relative;
     margin-left: 0;
   }
-    /*PAGE APP MOBILE*/
+  /*PAGE APP MOBILE*/
+  div#container-mobile div#description{
+    margin:0 auto; 
+  }
   div#container-mobile div#iphonePresenter {
     background-position: center center;
-    }
+  }
+  div#container-mobile div#blocResSociaux {
+    padding: 24px 0px 0px 0;
+    float: none;
+    width: 75%;
+    margin: 0 auto;
+  }
+  div#container-mobile div#blocGauche {
+    margin-top: 19px;
+  }
   div#container-mobile div#l2 {
-  background-position: 31% 78%;
-  margin-top: -5%;
-  padding-top: 0%;
-  background-size: 12%;
+    position: relative;
+    background-position: 10% 40px;
+    padding-top: 0%;
+    background-size: 12%;
+    text-align: center;
+    height: 126px;
+  }
+  div#container-mobile div#l5 {
+    text-align: center;
+    padding: 0 0% 10px 0%;
+  }
+  div#container-mobile div#l6 {
+    width: 90%;  
+  }
+  div#container-mobile div#l4 {
+    margin-top: 60px;
+    padding-bottom: 60px;
+  }
+  div#container-mobile div#badge4GooglePlay {  
+    width: 100%;  
+    background-size: 40%; 
+    background-position: 95% 0; 
+  }
+  div#container-mobile div#badge4AppStore {  
+    width: 100%;  
+    background-size: 40%;  
+    background-position: 5% 0;
+  }
+  div#container-mobile div#l2 > a:nth-child(2){
+    margin-left: 50%;
+  }
+  div#container-mobile div#l2 a{
+    height: 90px;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 50%;
   }
   /* FIN PAGE APP MOBILE */
-
-  div#container-mobile div#badge4AppStore {   
-    background: url("../img/badgeAppStore_medium.png") no-repeat scroll 0% 0% transparent;
-    width: 120px;
-    height: 67px;
-    margin-top: 8%;
-  }
-  div#container-mobile div#badge4GooglePlay {
-    background: url("../img/badgeGooglePlay_medium.png") no-repeat scroll 0% 0% transparent;
-    width: 120px;
-    height: 67px;
-    margin-top: 8%;
-  }
   #navbar > div > div > a.brand > img {
     height: auto;
   }
@@ -4288,6 +4244,7 @@ margin-left: 9%;
     border-right: 0;
   }
   body.page-liste-balades .view-v-liste-balade .views-field-field-photo-resume {
+    margin: 0 auto;
     float: none;
     text-align: center;
     margin-right: 0;
@@ -4345,19 +4302,21 @@ margin-left: 9%;
     left: -3%;
   }
   /*PAGE MOBILE*/
-  div#container-mobile div#blocResSociaux{
-  height: 75px;
+  div#container-mobile div#l5 a.imgMockup > div {    
+    height: 167px;
   }
+  div#container-mobile{
+    background-position: 0 -1%; 
+  }
+  div#container-mobile div#blocGauche {
+    margin-top: 65px;
+  } 
   div#container-mobile div#l2 {
-  background: none ;
+    background-image: none;
   }
   div#container-mobile div#blocResSociaux div#fb_ico {
-  margin-left: 0%;
-  }
-  div#container-mobile div#blok_twt, div#container-mobile div#blok_fb{
-  width: 100%;
-
-  }
+    margin-left: 0%;
+  } 
   /*FIN PAGE MOBILE*/
   ul.filArianeBalade{
     margin:10px 0px 0px;
@@ -4393,6 +4352,28 @@ margin-left: 9%;
   
 }
 @media (max-width: 650px) {
+  /*Page mobile*/
+  div#container-mobile div#blocResSociaux div#blok_twt, div#container-mobile div#blocResSociaux div#blok_fb{
+    width: 100%;
+    float: none;
+    padding-left: 30%;
+  }
+  div#container-mobile div#blocResSociaux div#twt_ico, div#container-mobile div#blocResSociaux div#fb_ico{
+    float: none;
+    display: inline-block;    
+  }
+  div#container-mobile div#blocResSociaux {
+    padding: 24px 0;  
+    height: auto;
+  }
+  div#container-mobile div#blocResSociaux p {  
+    display: inline-block;
+    vertical-align: super;
+  }
+  div#container-mobile div#blocResSociaux a {
+    display: block;
+  }
+  /*fin page mobile*/
   body.node-type-espece div#blockTitleEsp div.pictoGroupeTax {
     width: 100%;
     height: 45px;
@@ -4407,7 +4388,7 @@ margin-left: 9%;
     font-style: italic;
     position: relative;
     left: 0;
-    top: 15px;
+    top: 0;
     font-size: 1em;
     width: 100%;
     display: inline-block;
@@ -4503,6 +4484,13 @@ margin-left: 9%;
   body.front div#fold3 h3 {
     padding-top: 16px;
   }
+  /*page espece*/
+  body.node-type-espece div#containerOfSaisonalite div.span6 div.row-fluid > div, body.node-type-espece div.InvisibleEnCeMoment, body.node-type-espece div.visibleEnCeMoment{
+    height: 200px;
+    padding: 0!important;
+    background-position: 50% 50% !important;
+    background-size: 35% !important;
+  }
   /*Comment*/
   div.view-v-affiche-comment .imageComment {
     max-width: 100%;
@@ -4528,6 +4516,51 @@ margin-left: 9%;
   }
   body > div.container {
     margin-top: 82px
+  }
+  /*PAGE MOBILE*/
+  div#container-mobile {
+    background-position: 0 0;
+  }
+  div#container-mobile div#l4{
+    margin-top: 90px;
+  }
+  div#container-mobile div#l2 a {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+  div#container-mobile div#l5 a.imgMockup > div {    
+    height: 120px;
+  }
+  div#container-mobile div#blocResSociaux div#blok_twt, div#container-mobile div#blocResSociaux div#blok_fb {  
+    padding-left: 20%;
+  }
+  div#container-mobile div#l2 > a:nth-child(2){
+    margin-left:  0;
+  }
+  div#container-mobile div#l2 a, div#container-mobile div#l2 > a:nth-child(2) {
+    width: 100%;    
+  }
+  div#container-mobile div#badge4GooglePlay {
+    background-position: 50% 20px;
+    height: 100px;
+    background-size: 100px;
+  }
+  div#container-mobile div#badge4AppStore {
+    background-position: 50% 0px;
+    height: 100px;
+    background-size: 100px;
+  }
+  div#container-mobile div#pitcoEco{
+    display:  none; 
+  }
+  div#container-mobile div#description{
+    width: 90%;
+    padding: 1%;
+  }
+  div#container-mobile div#description p{
+    width:  90%;
   }
 }
 @media (max-width: 396px) {
@@ -4593,13 +4626,14 @@ margin-left: 9%;
   body {
     padding-top:20px!important;
   }
-  div#container-mobile {
-    background-position: 0% -3%;
-  }
+  /*Page mobile*/
   div#container-mobile div#titleOfMobileApp p {
     font-size: 3em;
   }
-  
+  div#container-mobile div#blocResSociaux div#blok_twt, div#container-mobile div#blocResSociaux div#blok_fb {
+    padding-left: 15%;
+  }
+  /*Page balade*/
   body.node-type-balade div.field-content .view-display-id-block_3 a{
     left: 25px!important;
   }
@@ -4626,6 +4660,13 @@ margin-left: 9%;
   body.front div#fold3 ul.filArianeBalade { 
     margin-top: 0; 
   }
+  /*Page mobile*/
+  div#container-mobile div#iphonePresenter{
+    background-size: 80%;
+    background-position: 50% 0;
+    height: 520px;
+  }
+  /*fin page mobile*/
 }
 
 @media (max-width: 300px) {
@@ -4646,24 +4687,24 @@ margin-left: 9%;
   body {
     padding-top:20px!important;
   }
-  div#container-mobile div#titleOfMobileApp p {
-    font-size: 2em;
-  }
-    div#container-mobile div#badge4AppStore {   
-    background: url("../img/badgeAppStore_medium.png") no-repeat scroll 0% 0% transparent;
-    width: 120px;
-    height: 67px;
-    margin-top: 0px;
-    margin-right: 10%;
-  }
-  div#container-mobile div#badge4GooglePlay {
-    background: url("../img/badgeGooglePlay_medium.png") no-repeat scroll 0% 0% transparent;
-    width: 120px;
-    height: 67px;
-    margin-top: 7%;
-    padding-bottom: 2%;
-    margin-right: 17%;
-  }
+/*   div#container-mobile div#titleOfMobileApp p {
+  font-size: 2em;
+}
+  div#container-mobile div#badge4AppStore {   
+  background: url("../img/badgeAppStore_medium.png") no-repeat scroll 0% 0% transparent;
+  width: 120px;
+  height: 67px;
+  margin-top: 0px;
+  margin-right: 10%;
+}
+div#container-mobile div#badge4GooglePlay {
+  background: url("../img/badgeGooglePlay_medium.png") no-repeat scroll 0% 0% transparent;
+  width: 120px;
+  height: 67px;
+  margin-top: 7%;
+  padding-bottom: 2%;
+  margin-right: 17%;
+} */
 
 }
 @media (max-width: 275px) {

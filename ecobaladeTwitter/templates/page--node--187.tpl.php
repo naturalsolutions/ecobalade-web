@@ -44,6 +44,7 @@
   </div>
 </header>
 
+
 <div id="container-mobile">
 
   <header role="banner" id="page-header">
@@ -71,19 +72,11 @@
               <p>Avec l'application ecoBalade, arpentez les chemins et amusez-vous à reconnaître les arbres, les oiseaux et les petites bêtes!</p>
             </div>
           </div>
-
           
-          <!--<div id="gabian"></div>-->
           <div id='l2'>
             <a target="_blank" title="Télécharger l'application ecoBalade sur GooglePlay" href='https://play.google.com/store/apps/details?id=com.ns.ecoBalade&feature=search_result#?t=W251bGwsMSwyLDEsImNvbS5ucy5lY29CYWxhZGUiXQ..'><div id='badge4GooglePlay'></div></a>
             <a target="_blank" title="Télécharger l'application sur l'appleStore" href='https://itunes.apple.com/fr/app/ecobalade/id674569147?l=fr&ls=1&mt=8'><div id='badge4AppStore'></div></a>
           </div>
-
-
-
-          <!--<div id='l3'>
-            <p><span class='GreenColor'>EcoBalade</span> est également disponible pour votre navigateur. Assurez-vous de vérifier notre application web pour obtenir le meilleur des deux mondes.</p>
-          </div>-->
 
           <div id='l4'>
             <div id='blocResSociaux'>
@@ -105,24 +98,24 @@
 
   <div class="span12">
 
-      <div id='l5'>
-        <center>
-        <a class="fancybox" rel="group" href="../sites/all/themes/ecobaladeTwitter/img/screen/balades.png"><div id='screen_iphone1'></div></a>
-        <a class="fancybox" rel="group" href="../sites/all/themes/ecobaladeTwitter/img/screen/key.png"><div id='screen_iphone2'></div></a>
-        <a class="fancybox" rel="group" href="../sites/all/themes/ecobaladeTwitter/img/screen/liste.png"><div id='screen_iphone3'></div></a>
-        <a class="fancybox" rel="group" href="../sites/all/themes/ecobaladeTwitter/img/screen/arbousier.png"><div id='screen_iphone4'></div></a>
-        <a class="fancybox" rel="group" href="../sites/all/themes/ecobaladeTwitter/img/screen/mesange.png"><div id='screen_iphone5'></div></a>
-        <a class="fancybox" rel="group" href="../sites/all/themes/ecobaladeTwitter/img/screen/bravo.png"><div id='screen_iphone6'></div></a>
-        </center>
+      <div id='l5'>        
+        <a class="imgMockup" rel="group" href="../sites/all/themes/ecobaladeTwitter/img/screen/carte_des_balades.png"><div id='screen_iphone1'></div></a>
+        <a class="imgMockup" rel="group" href="../sites/all/themes/ecobaladeTwitter/img/screen/balades.png"><div id='screen_iphone2'></div></a>
+        <a class="imgMockup" rel="group" href="../sites/all/themes/ecobaladeTwitter/img/screen/liste.png"><div id='screen_iphone3'></div></a>        
+        <a class="imgMockup" rel="group" href="../sites/all/themes/ecobaladeTwitter/img/screen/arbousier.png"><div id='screen_iphone4'></div></a>
+        <a class="imgMockup" rel="group" href="../sites/all/themes/ecobaladeTwitter/img/screen/espece.png"><div id='screen_iphone5'></div></a>
+        <a class="imgMockup" rel="group" href="../sites/all/themes/ecobaladeTwitter/img/screen/bravo.png"><div id='screen_iphone6'></div></a>        
       </div>
 
       <div id='l6'>
           <p id='copyR'>© 2007-2013 Natural-Solutions - ecoBalade</p>
           <!-- <p>Aidez-nous à passer le mot:</p> -->
+          
+          <div class="bloc_partage">
+            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+            <div class="addthis_native_toolbox"></div>
+          </div>          
 
-          <div style='float:right;' class="fb-like" data-href="https://www.facebook.com/EcoBalade" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
-          <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://twitter.com/Nat_Solutions" data-via="Nat_Solutions" data-lang="fr" data-related="Nat_Solutions" data-hashtags="Nat_Solutions">Tweeter</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
       </div>
   </div>
 
@@ -140,6 +133,23 @@
   
   
    <?php print render($page['footer']); ?>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+//LightBox pour balades similaire
+if( $('.imgMockup').length > 1 ){
+
+    $('.imgMockup').vanillabox({   
+      loop: true,
+      repositionOnScroll: true,
+      type: 'image',
+      adjustToWindow: 'both'
+    }); 
+  } 
+});
+
+</script>
 
 
 	
