@@ -903,7 +903,7 @@ body.node-type-balade p.newBalade{
   position: absolute;
   top: 17px;
   right: 1.6%;
-  font-family: RockwellReg;
+  font-family: Rockwell-Regular;
   font-size: 0.6em;
 }
 body.node-type-balade div.googleMap iframe{
@@ -918,7 +918,7 @@ body.node-type-balade article.node-balade div.field-name-field-carte div.field-l
   background-color: #FAFAFA;
   padding: 1%;
   border-radius: 4px 0px;
-  font-family: RockwellReg;
+  font-family: Rockwell-Regular;
   font-size: 1.1em;  
 }
 body.node-type-balade article.node-balade{
@@ -1763,7 +1763,7 @@ body.page-liste-balades p.newBalade{
   position: absolute;
   top: 7px;
   right: 2%;
-  font-family: RockwellReg;
+  font-family: Rockwell-Regular;
 }
 body.page-liste-balades .views-field.views-field-created {
   display: none;
