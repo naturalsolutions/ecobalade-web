@@ -369,6 +369,8 @@
 					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/logo-city-post.jpg" alt="logo du blog Citypost"></div>			
 					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/logo_hebdo_square.jpg" alt="logo du journal L'Hebdo"></div>	
 					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/logo-tour-mag.jpg" alt="logo du journal tour mag"></div>	
+					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/Logo_La_Voix_du_Nord.jpg" alt="logo du journal La voix du Nord"></div>	
+					<div class='swiper-slide'><img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/logo_fold_on_en_parle/logo_var_matin.jpg" alt="logo du journal Var Matin"></div>	
 
 				</div>
 			</div> <!-- fin swiper-container -->				
