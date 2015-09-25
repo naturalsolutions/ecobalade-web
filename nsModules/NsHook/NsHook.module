@@ -12,7 +12,7 @@ function NsHook_form_alter(&$form, &$form_state, $form_id) {
 		drupal_set_message(t("Nouveau ! <br/> Pour toutes les images (sauf celle Haute qualité) il est possible de réduire le poid des images avec <a href='https://tinypng.com/' target='_blank'>Tiny PNG</a>"), "status");
 
 		//alter title
-		$form['title']['#title'] = 'Titre de la balade <small class="label_title">(conserver le caractère séparateur "-" pour l\'affichage de la deuxième ligne sur mobile, voir <a target="_blank" href="'.$base_url.'/sites/all/modules/nsModules/NsHook/img/screen_tuto_second_line.jpg" alt="voir exemple" title="voir exemple">exemple.)</small>';
+		$form['title']['#title'] = 'Titre de la balade <small class="label_title">(conserver le caractère séparateur "-" pour l\'affichage de la deuxième ligne sur mobile, voir <a target="_blank" href="'.$base_url.'/sites/all/modules/nsModules/NsHook/img/screen_tuto_second_line.jpg" alt="voir exemple" title="voir exemple">exemple</a>.)</small>';
 
 		//alter field_balade_teaser 
 		$form['field_balade_teaser']['und'][0]['#title'] = 'Ancienne description <span class="textAide">( Assurez-vous de saisir de champs sous le format Plain text )</span>';
