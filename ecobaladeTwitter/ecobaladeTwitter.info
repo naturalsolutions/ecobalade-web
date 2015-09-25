@@ -19,7 +19,6 @@ stylesheets[all][] = css/twitter_bootstrap.css
 stylesheets[all][] = css/ecobalade-bootstrap.css
 stylesheets[all][] = css/theme/sweet/vanillabox.css
 stylesheets[all][] = css/justifiedGallery.min.css
-stylesheets[all][] = css/font.css
 stylesheets[all][] = css/swiper.min.css
 
 

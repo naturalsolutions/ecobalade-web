@@ -17,6 +17,10 @@
 /***************************************************************************/
 
 @font-face {
+    font-family: 'test';    
+} 
+
+@font-face {
     font-family: 'Rockwell-Light';
     src: url('./font/RockwellStd-Light.ttf');
     src: url('./font/RockwellStd-Light.eot') format('embedded-opentype'),
@@ -143,6 +147,7 @@ body.front .etiquette p,body.front .secondEtiquette p{
 }
 /*BNT ACCUEIL*/
 body.front h1{
+  font-size: 2.8em;
   font-family: 'Rockwell-Light';
 }
 body.front a#hp_button_android span.icon {
@@ -213,9 +218,10 @@ body.front .buttonStore em {
 body.front > div.container{
     margin-top: 20px;
 }
-body.front div.progressBar{
+body.front div.progressBar{  
   position:   absolute; 
   bottom:   0;
+  left: 0;
   background-color:   #4DBB74;
   height: 2px;
   width: 0%;
@@ -236,6 +242,7 @@ body.front div.progressBar{
     }
 }
 body.front span.txt-front h2{
+
   font-family: 'Libre Baskerville', serif;
   font-weight: normal;
   font-style: italic;
@@ -268,6 +275,7 @@ body.front a#btn-front{
   text-shadow: none; 
 }
 body.front span.txt-front{
+  display: inherit;
   position: absolute;
   top: 200px;
   z-index: 999999;
@@ -275,9 +283,8 @@ body.front span.txt-front{
   margin: 0 auto;
   width: 100%;  
 }
-body.front .swiper-container {
-  margin-left: auto;
-  margin-right: auto;
+body.front .swiper-container {  
+  text-align:   center; 
 }
 body.front .swiper-slide {
   background-size: cover;
@@ -290,6 +297,7 @@ body.front .galleryLogoOnEnParle {
 body.front div#foldOnEnParle{
   background-color: #F2F2F2;
   margin-top: 47px;
+  overflow: hidden;
 }
 body.front div#foldOnEnParle img{
  -webkit-filter: grayscale(100%);
@@ -394,9 +402,6 @@ body.front div#fold3 a.titleBaladePromu:hover{
 body.front .contenuEtiquette{
   position:relative;
   overflow:hidden;
-}
-body.front h1{
-  font-size: 2.8em
 }
 /*popup*/
 body.front div#cboxOverlay,
