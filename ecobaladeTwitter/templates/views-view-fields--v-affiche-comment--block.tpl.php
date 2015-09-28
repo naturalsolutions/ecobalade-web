@@ -116,7 +116,8 @@
 
 					for ($i=0; $i < count($tabOfImage); $i++) { 
 						# code...				
-						echo "<a href='$imageFull[$i]' class='imageComment' title='Commentaire de $name - \"$myNode->title\"'><img src='$tabOfImage[$i]' alt='$myNode->title' title='$myNode->title' /></a>";		
+						$titreCaption = str_replace("'",' ', $myNode->title);
+						echo "<a href='$imageFull[$i]' class='imageComment' title='$name : $titreCaption'><img src='$tabOfImage[$i]' alt='$myNode->title' title='$myNode->title' /></a>";		
 					}
 
 				}		

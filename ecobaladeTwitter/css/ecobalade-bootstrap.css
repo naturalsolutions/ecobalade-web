@@ -1513,7 +1513,7 @@ div.view-v-affiche-comment div.rightZoneOfComment{
 }
 div.view-v-affiche-comment .imageComment {
   padding-top: 4px;
-  max-width: 32%;
+  max-width: 175px;
   padding-right: 1%;
   display: inline-block;
   padding-bottom: 6px;
@@ -1530,6 +1530,9 @@ div.view-v-affiche-comment div#boutons_partage{
 }
 div.view-v-affiche-comment .bottomOfComment{
   display: inline-block;
+}
+div.view-v-affiche-comment .bottomOfComment p.comment_body{
+  padding-right: 8px; 
 }
 div.view-v-affiche-comment p.name{
   color: #A1B03B;
@@ -4494,9 +4497,9 @@ margin-left: 9%;
     background-size: 35% !important;
   }
   /*Comment*/
-  div.view-v-affiche-comment .imageComment {
+  /* div.view-v-affiche-comment .imageComment {
     max-width: 100%;
-  }
+  } */
   div.contentOfOneComment div#boutons_partage{
     float: none;
     margin-right: 0;
