@@ -11,6 +11,73 @@ body.page-comment-reply div.container-node h1.page-header{
     padding: 20px 20px;
 }
 
+body.node-type-espece div.alert.alert-block.alert-status h4, body.node-type-balade div.alert.alert-block.alert-status h4{
+	display: none;
+}
+body.node-type-espece div.alert.alert-block.alert-status, body.node-type-balade div.alert.alert-block.alert-status{
+    background-color: #A29F9F;
+    color: #fff;
+    width: 80%;
+    text-shadow: none;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 0 auto;
+    padding: 36px 10%;
+    z-index: 9999999;
+    line-height: 24px;
+    margin-bottom: 10px;
+    border: none;
+}
+
+body.node-type-espece div.alert.alert-block.alert-status a.close, body.node-type-balade div.alert.alert-block.alert-status a.close {    
+    top: -32px;
+    right: -11%;    
+    color: #fff;
+    opacity: 1;
+}
+
+#heart {
+    position: relative;
+    width: 50px;
+    height: 45px;
+    margin: 0 auto;
+}
+#heart:before,
+#heart:after {
+    position: absolute;
+    content: "";
+    left: 25px;
+    top: 0;
+    width: 25px;
+    height: 40px;
+    background: #000;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+#heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+
 @media (max-width: 767px) {
 	
 	body.page-comment-reply div#edit-field-comment-image-e div.image-widget-data input[type='text'], body.page-comment-reply div#edit-field-comment-image div.image-widget-data input[type='text']{

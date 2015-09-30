@@ -6,11 +6,40 @@ function NsHookComment_form_alter(&$form, &$form_state, $form_id) {
 	$currentPath = explode('/', $currentPath);
 
 	//Test if in it's in alone comment form only for specific content type
-	if ( $currentPath[0] == 'comment' && ($form_id == 'comment_node_balade_form' ||  $form_id == 'comment_node_espece_form')) {
+	if ( $form_id == 'comment_node_balade_form' ||  $form_id == 'comment_node_espece_form') {
 		
-		//Set title
-		drupal_set_title("Poster une photo ou un commentaire"); 
+		//Get current node id
+		$nodeID = $currentPath[ count($currentPath) - 1];
+		
+		//get title of node
+		$currentNode = node_load($nodeID);
+		$titleOfNode = $currentNode->title;
 
+		//if we stay in form edit page only, set title of the form		
+		if($currentPath[0] == 'comment') drupal_set_title("Poster une photo ou un commentaire"); 
+		
+		//hook after submit
+		$form['#submit'][] = 'NsHookComment_submit_function'; 
+
+		return $form;
 	}	
 	 
+}
+function NsHookComment_submit_function($form, &$form_state) {
+  
+	//RAZ message	
+	drupal_get_messages(null, true);
+
+	//Test if content type is espece
+	if($form_state['build_info']['args'][0]->node_type == 'comment_node_espece'){
+		
+		//Get title in form_state
+		$title = $form_state['complete form']['#node']->title;	
+		
+		//Set a new custom message
+		drupal_set_message($title.' vous remercie infiniment, votre contribution est précieuse pour nous tous. Nous publierons prochainement votre commentaire avec amour <3.');
+
+	} //Set a new custom message
+	else drupal_set_message('Merci infiniment, votre contribution est précieuse pour nous tous. Nous publierons prochainement votre commentaire avec amour <3.');
+
 }

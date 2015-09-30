@@ -6,7 +6,7 @@
 (function ($) {
   Drupal.behaviors.autoUpload = {
     attach: function(context, settings) {
-      $('.field-type-image button[type=submit]', context).hide();
+      $('.field-type-image button[value=Transférer]', context).hide();
       $('.field-type-image input[type=file]', context).change(function() {
       
       
