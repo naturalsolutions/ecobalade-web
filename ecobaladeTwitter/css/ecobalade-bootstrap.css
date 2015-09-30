@@ -991,6 +991,7 @@ body.node-type-balade div.especes-phares a:hover{
 }
 body.node-type-balade div#boutons_partage{
   margin-left: 24px;
+  margin-top: 3px;
 }
 body.node-type-balade div.view-v-slideshow-detail-balade div.field-content{
   color: #fff;
@@ -1218,7 +1219,7 @@ body.node-type-espece div.views-slideshow-pager-field-item.views_slideshow_pager
 }
 body.node-type-espece div#boutons_partage {
   padding-left: 12px;
-  margin-top: 12px;
+  margin-top: 3px;
 }
 body.node-type-espece div.container-node{
   padding-bottom: 0;

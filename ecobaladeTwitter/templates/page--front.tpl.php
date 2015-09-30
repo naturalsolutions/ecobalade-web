@@ -315,19 +315,19 @@
 			<div data-image="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/lapinou2.jpg" class="img-polaroid" data-title="<a href='espece/lapin-de-garenne' title='voir la fiche espèce'>Lapin de garenne</a>" data-caption="Présent dans la balade de <a href='balade/balade-de-la-seyne-sur-mer-83-foret-de-janas-la-belle-pierre' title='Voir la page balade'>la Belle Pierre</a>" id='lapinou'><div class="ajaxloader"></div></div>
 		</div>
 		<div class="span2">
-			<div data-image="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/gabian1.jpg" data-title="Goéland argenté" data-caption="Présent dans la balade du Cap Sizun (prochainement)" class="img-polaroid" id='gabian'><div class="ajaxloader"></div></div>
+			<div data-image="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/gabian1.jpg" data-title="<a href='espece/goeland-argente' title='Goéland argenté'>Goéland argenté</a>" data-caption="Présent dans la balade du <a href='balade/balade-en-bretagne-la-reserve-du-cap-sizun-29' title='Voir la page balade du Cap Sizun'>Cap Sizun</a>" class="img-polaroid" id='gabian'><div class="ajaxloader"></div></div>
 		</div>
 		<div class="span2">
-			<div data-image="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/cerisier.jpg" data-title="<a href='espece/cerisier-de-sainte-lucie' title='voir la fiche espèce'>Cerisier de sainte Lucie</a>" data-caption="Présent dans la balade de <a href='balade/balade-du-parc-des-grottes-d-aze' title='Voir la page balade'>du parc des grottes d'Azé</a>" class="img-polaroid" id="cerisier"><div class="ajaxloader"></div></div>
+			<div data-image="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/cerisier.jpg" data-title="<a href='espece/cerisier-de-sainte-lucie' title='voir la fiche espèce'>Cerisier de sainte Lucie</a>" data-caption="Présent dans la balade de <a href='balade/balade-du-parc-des-grottes-d-aze-71' title='Voir la page balade'>du parc des grottes d'Azé</a>" class="img-polaroid" id="cerisier"><div class="ajaxloader"></div></div>
 		</div>
 		<div class="span2">
 			<div data-image="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/Vergerette2.jpg" data-title="Vergerette" data-caption="Présentes en régions chaudes et tempérées" class="img-polaroid" id='vergerette'><div class="ajaxloader"></div></div>
 		</div>
 		<div class="span2">
-			<div data-image="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/moineau.jpg" data-title="<a href='espece/moineau-domestique' title='voir la fiche espèce'>Moineau domestique</a>" data-caption="Présent dans la balade de <a href='balade/balade-de-la-mine-de-cap-garonne' title='Voir la page balade'>la Mine de Cap Garonne</a>" class="img-polaroid" id="moineau"><div class="ajaxloader"></div></div>
+			<div data-image="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/moineau.jpg" data-title="<a href='espece/moineau-domestique' title='voir la fiche espèce'>Moineau domestique</a>" data-caption="Présent dans la balade de <a href='balade/balade-du-pradet-83-mine-de-cap-garonne' title='Voir la page balade'>la Mine de Cap Garonne</a>" class="img-polaroid" id="moineau"><div class="ajaxloader"></div></div>
 		</div>
 		<div class="span2">
-			<div data-image="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/citron2.jpg" data-title="<a href='espece/citron-0' title='voir la fiche espèce'>Citron</a>" data-caption="Présent dans la balade de <a href='balade/balade-de-l-oppidum-montagne-sainte-victoire' title='Voir la page balade'>l'oppidum - Montagne Sainte-Victoire</a>" class="img-polaroid" id="citron"><div class="ajaxloader"></div></div>
+			<div data-image="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/citron2.jpg" data-title="<a href='espece/citron' title='voir la fiche espèce'>Citron</a>" data-caption="Présent dans la balade de <a href='balade/balade-montagne-sainte-victoire-balade-saint-antonin-13-sur-l-oppidum' title='Voir la page balade'>l'oppidum - Montagne Sainte-Victoire</a>" class="img-polaroid" id="citron"><div class="ajaxloader"></div></div>
 		</div>
 		
 	</div>
