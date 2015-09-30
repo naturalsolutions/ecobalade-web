@@ -1,0 +1,16 @@
+<?php 
+function NsHookComment_form_alter(&$form, &$form_state, $form_id) {
+
+	//Get current path
+	$currentPath = current_path();
+	$currentPath = explode('/', $currentPath);
+
+	//Test if in it's in alone comment form only for specific content type
+	if ( $currentPath[0] == 'comment' && ($form_id == 'comment_node_balade_form' ||  $form_id == 'comment_node_espece_form')) {
+		
+		//Set title
+		drupal_set_title("Poster une photo ou un commentaire"); 
+
+	}	
+	 
+}

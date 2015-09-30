@@ -1,0 +1,9 @@
+name = NsAutoUpload
+description = Automatically upload a file without needing to push the upload button on the comment form only
+package = nsModule
+core = 7.x
+version = 7.x-1.0 
+scripts[] = js/autoupload.js
+
+
+

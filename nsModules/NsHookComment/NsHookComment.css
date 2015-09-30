@@ -1,0 +1,20 @@
+/****************************************************************************************************************************************************/
+/*                                                          CE FICHIER REGROUPE TOUT LE CSS CUSTOM DE CE MODULE                                     */ 
+/*                                                                                                                                                  */
+/*                                      !! Veuillez respecter le systeme de selecteur mis en place ( body.) !!                                      */
+/*                                                                                                                                                  */
+/****************************************************************************************************************************************************/
+body.page-comment-reply div.container-node form.comment-form, body.page-comment-reply article h2{
+	padding: 0 20px;
+}
+body.page-comment-reply div.container-node h1.page-header{
+    padding: 20px 20px;
+}
+
+@media (max-width: 767px) {
+	
+	body.page-comment-reply div#edit-field-comment-image-e div.image-widget-data input[type='text']{
+		width: 100%;
+	}
+
+}

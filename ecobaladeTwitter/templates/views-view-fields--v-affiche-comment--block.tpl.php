@@ -74,9 +74,15 @@
 				<?php endif; ?>
 		<?php endif;?>
 
+		<?php if ($id == 'nothing_3') : ?>
+				<?php if (!empty($field->content)): ?>
+						<?php $imgTitle =  $field->content; ?>
+				<?php endif; ?>
+		<?php endif;?>
+
+
 <?php endforeach; ?>
 
-<?php echo $base_url; ?>
 
 <div class="row-fluid contentOfOneComment">
 	
@@ -109,15 +115,29 @@
 				
 				$tabOfImage = explode(',', $image);
 				$imageFull = explode(',', $imageFull);
+				$imgTitle = explode(',', $imgTitle);
+
+				
 
 				if(count($tabOfImage) > 0){
 
 					$myNode = node_load($nid);				
 
+					//Parcour photos dans un commentaires
 					for ($i=0; $i < count($tabOfImage); $i++) { 
-						# code...				
-						$titreCaption = str_replace("'",' ', $myNode->title);
-						echo "<a href='$imageFull[$i]' class='imageComment' title='$name : $titreCaption'><img src='$tabOfImage[$i]' alt='$myNode->title' title='$myNode->title' /></a>";		
+						# code...	
+						//S'il n'y a pas de titre alors :
+						if(str_replace(" ",'', $imgTitle[$i]) == '') {
+
+							$titreCaption = str_replace("'",' ', $myNode->title);									
+							echo "<a href='$imageFull[$i]' class='imageComment' title='$name : $titreCaption'><img src='$tabOfImage[$i]' alt='$myNode->title' title='$myNode->title' /></a>";		
+								
+						}else{
+
+							$imgTitle = str_replace("'",' ', $imgTitle[$i]);	
+							echo "<a href='$imageFull[$i]' class='imageComment' title='$imgTitle'><img src='$tabOfImage[$i]' alt='$myNode->title' title='$myNode->title' /></a>";		
+						
+						}
 					}
 
 				}		

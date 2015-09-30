@@ -312,7 +312,7 @@
 		
 		
 		<div class="span2">
-			<div data-image="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/lapinou2.jpg" class="img-polaroid" data-title="<a href='espece/lapin-de-garenne' title='voir la fiche espèce'>Lapin de garenne</a>" data-caption="Présent dans la balade de <a href='balade/balade-de-la-belle-pierre' title='Voir la page balade'>la Belle Pierre</a>" id='lapinou'><div class="ajaxloader"></div></div>
+			<div data-image="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/lapinou2.jpg" class="img-polaroid" data-title="<a href='espece/lapin-de-garenne' title='voir la fiche espèce'>Lapin de garenne</a>" data-caption="Présent dans la balade de <a href='balade/balade-de-la-seyne-sur-mer-83-foret-de-janas-la-belle-pierre' title='Voir la page balade'>la Belle Pierre</a>" id='lapinou'><div class="ajaxloader"></div></div>
 		</div>
 		<div class="span2">
 			<div data-image="<?php echo $base_path;?>sites/all/themes/ecobaladeTwitter/img/gabian1.jpg" data-title="Goéland argenté" data-caption="Présent dans la balade du Cap Sizun (prochainement)" class="img-polaroid" id='gabian'><div class="ajaxloader"></div></div>
