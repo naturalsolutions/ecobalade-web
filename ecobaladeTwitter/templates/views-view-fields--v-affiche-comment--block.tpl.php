@@ -130,12 +130,12 @@
 						if(str_replace(" ",'', $imgTitle[$i]) == '') {
 
 							$titreCaption = str_replace("'",' ', $myNode->title);									
-							echo "<a href='$imageFull[$i]' class='imageComment' title='$name : $titreCaption'><img src='$tabOfImage[$i]' alt='$myNode->title' title='$myNode->title' /></a>";		
+							echo "<a href='$imageFull[$i]' class='imageComment' title='$name : $titreCaption'><img src='$tabOfImage[$i]' alt='$titreCaption' title='$titreCaption' /></a>";		
 								
 						}else{
 
 							$imgTitle = str_replace("'",' ', $imgTitle[$i]);	
-							echo "<a href='$imageFull[$i]' class='imageComment' title='$imgTitle'><img src='$tabOfImage[$i]' alt='$myNode->title' title='$myNode->title' /></a>";		
+							echo "<a href='$imageFull[$i]' class='imageComment' title='$imgTitle'><img src='$tabOfImage[$i]' alt='$imgTitle' title='$imgTitle' /></a>";		
 						
 						}
 					}
