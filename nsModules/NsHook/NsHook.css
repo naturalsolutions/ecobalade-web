@@ -25,4 +25,6 @@ body.page-node-add-balade small.label_title, body.node-type-balade small.label_t
 body.page-node-add-balade span.textAide, body.node-type-balade span.textAide{
 	font-weight: normal !important;
 }
-
+body.page-node-add-espece #edit-field-son div.form-item-field-son-und-0-description div.description, body.node-type-espece #edit-field-son div.form-item-field-son-und-0-description div.description{
+	display: none;
+}
