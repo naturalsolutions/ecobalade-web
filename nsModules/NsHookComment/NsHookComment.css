@@ -13,7 +13,7 @@ body.page-comment-reply div.container-node h1.page-header{
 
 @media (max-width: 767px) {
 	
-	body.page-comment-reply div#edit-field-comment-image-e div.image-widget-data input[type='text']{
+	body.page-comment-reply div#edit-field-comment-image-e div.image-widget-data input[type='text'], body.page-comment-reply div#edit-field-comment-image div.image-widget-data input[type='text']{
 		width: 100%;
 	}
 
