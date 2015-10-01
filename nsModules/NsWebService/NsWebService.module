@@ -142,6 +142,9 @@ function NsWebService_find_balade_information($nitems, $timestamp, $id, $balade,
     $query->addField('c', 'filesize', 'imgEspeceThumbFilesize');
     $query->addField('t', 'uri', 'audio');
     $query->addField('t', 'filesize', 'filesizeAudio');
+    $query->addField('m', 'field_image_mobile_fiche_esp_ce_title', 'titleImgEspeceFirst');
+    $query->addField('v', 'field_image_mobile_minature_title', 'titleImgEspeceThumb');
+    $query->addField('s', 'field_son_description', 'titleAudioEspece');
 
 
     $query->condition('n.type', 'espece', '=');
@@ -175,11 +178,11 @@ function NsWebService_find_balade_information($nitems, $timestamp, $id, $balade,
     //Distance
     $query->join('field_revision_field_distance', 'y', '(y.revision_id = n.vid)');
 
-    //Vignettes especes phares
+    //Vignettes de presentation
     $query->leftJoin('field_revision_field_vignette_presentation', 'p', '(p.revision_id = n.vid)');
     $query->leftJoin('file_managed', 'b', '(b.fid = p.field_vignette_presentation_fid)');
 
-    //Vignettes de presentation
+    //Vignettes especes phares
     $query->leftJoin('field_revision_field_vignette_espece_phares', 'k', '(k.revision_id = n.vid)');
     $query->leftJoin('file_managed', 'c', '(c.fid = k.field_vignette_espece_phares_fid)');
 
@@ -224,6 +227,7 @@ function NsWebService_find_balade_information($nitems, $timestamp, $id, $balade,
 
     $query->addField('b', 'uri', 'imgBaladePresentation');
     $query->addField('b', 'filesize', 'imgBaladePresentationFilesize');
+    $query->addField('p', 'field_vignette_presentation_title', 'titleImgBaladePresentation');
     
     $query->addField('y', 'field_distance_value', 'distance');
 
@@ -608,6 +612,7 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
           $query2->condition('f.revision_id', $vid, '=');  
           $query2->addField('b', 'uri', 'imgEspeceFull');
           $query2->addField('b', 'filesize', 'imgEspeceFullFilesize');
+          $query2->addField('f', 'field_image_mobile_diaporama_title', 'titleImgEspeceFull');
 
           // Execution
           $photos = $query2->execute()->fetchAll();          
@@ -745,9 +750,19 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
           $imgBaladePresentation->setAttribute($attr_name = 'size', $attr_value = $value); 
           continue;
         }
+        else if ($key === "titleImgBaladePresentation") { 
+                              
+          $imgBaladePresentation->setAttribute($attr_name = 'title', $attr_value = $value); 
+          continue;
+        }
         else if ($key === "imgEspeceFullFilesize") { 
                               
           $imgEspeceFull->setAttribute($attr_name = 'size', $attr_value = $value); 
+          continue;
+        }
+        else if ($key === "titleImgEspeceFull") { 
+                              
+          $imgEspeceFull->setAttribute($attr_name = 'title', $attr_value = $value); 
           continue;
         }
         else if ($key === "imgEspeceFirstFilesize") { 
@@ -755,14 +770,29 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
           $imgEspeceFirst->setAttribute($attr_name = 'size', $attr_value = $value); 
           continue;
         }
+        else if ($key === "titleImgEspeceFirst") { 
+                              
+          $imgEspeceFirst->setAttribute($attr_name = 'title', $attr_value = $value); 
+          continue;
+        }
         else if ($key === "imgEspeceThumbFilesize") { 
                               
           $imgEspeceThumb->setAttribute($attr_name = 'size', $attr_value = $value); 
           continue;
         }
+        else if ($key === "titleImgEspeceThumb") { 
+                              
+          $imgEspeceThumb->setAttribute($attr_name = 'title', $attr_value = $value); 
+          continue;
+        }
         else if ($key === "filesizeAudio") { 
                               
           $audio->setAttribute($attr_name = 'size', $attr_value = $value); 
+          continue;
+        }
+        else if ($key === "titleAudioEspece") { 
+                              
+          $audio->setAttribute($attr_name = 'title', $attr_value = $value); 
           continue;
         }
         else if ($key === "espece") { 
