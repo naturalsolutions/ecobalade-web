@@ -1111,7 +1111,10 @@ body.node-type-espece .gallery-top p.swiper-caption{
   position: absolute;
   bottom: 0;
   color: #fff;
-  left: 4px;  
+  left: 0;
+  width: 96%;
+  background-color: rgba(0,0,0,0.6);
+  padding: 2px 1%;
 }
 body.node-type-espece .gallery-thumbs .swiper-slide {
   width: 92%;
@@ -3878,6 +3881,9 @@ margin-left: 9%;
     width: 100%;    
   }  
   /*PAGE ESPECE*/
+  body.node-type-espece div.gallery-top p.swiper-caption{
+    width: 100%;
+  }
   body.node-type-espece div#containerOfSaisonalite div.span6 div.row-fluid > div, body.node-type-espece div.InvisibleEnCeMoment, body.node-type-espece div.visibleEnCeMoment{
     height: 200px;
     padding: 0!important;
@@ -4591,6 +4597,12 @@ margin-left: 9%;
   }
   a#uvTabLabel{
     display: none !important;
+  }
+  /*Page espece*/
+  body.node-type-espece div.gallery-top p.swiper-caption {
+    width: 98%;
+    font-size: 1em;
+    text-align: center;
   }
   footer.footer .icon_android_store, footer.footer .icon_apple_store{
     color: transparent;
