@@ -1107,6 +1107,12 @@ body.node-type-espece .gallery-top {
   padding-left: 2%;
   position: relative;
 }
+body.node-type-espece .gallery-top p.swiper-caption{
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  left: 4px;  
+}
 body.node-type-espece .gallery-thumbs .swiper-slide {
   width: 92%;
   margin-bottom: 6.1px;

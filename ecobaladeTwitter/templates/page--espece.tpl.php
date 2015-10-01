@@ -193,9 +193,12 @@ if (isset($_GET["idlastbal"])){
 															);
 
 													       	$imgPhotoResumeTaxon = theme( 'image_style', $variables );
+
+													       	//Store title image for crédits
+													       	$titleImg = $value['title'];
 													    	
 													    	 // Slides
-													        echo "<div class='swiper-slide'>$imgPhotoResumeTaxon</div>";
+													        echo "<div class='swiper-slide'>$imgPhotoResumeTaxon<p class='swiper-caption'>$titleImg</p></div>";
 													        
 
 													    }
@@ -256,9 +259,10 @@ if (isset($_GET["idlastbal"])){
 											<?php 
 											if(!empty($son)){
 												
-												$son = file_create_url($son[0]['uri']);												
+												$titleOfSon = $son[0]['description'];
+												$son = file_create_url($son[0]['uri']);	
 												print ("
-												<audio preload='auto' title='Chant du $node->title' controls='controls'>												  
+												<audio preload='auto' title='Chant du $node->title | crédit : $titleOfSon' controls='controls'>												  
 												  <source src='$son' type='audio/mp3' />
 												  <span style='text-align:center;display:block;'>ø</span>
 												</audio>
