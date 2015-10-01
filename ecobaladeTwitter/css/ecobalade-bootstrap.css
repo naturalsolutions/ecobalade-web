@@ -1109,9 +1109,8 @@ body.node-type-espece .gallery-top {
 }
 body.node-type-espece .gallery-thumbs .swiper-slide {
   width: 92%;
-  margin-bottom: 5px;
-  height: 81px;
-  opacity: 0.8;
+  margin-bottom: 6.1px;
+  height: 81px;  
 }
 body.node-type-espece .gallery-thumbs .swiper-slide-active {
   opacity: 1;
