@@ -188,7 +188,10 @@ body.front a.buttonStore:hover {
   background: linear-gradient(bottom, #4DBB74 0%, #2E9050 100%); /* W3C */
  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4DBB74', endColorstr='#2E9050', GradientType=0 ); /* IE6-9 */
 }
-
+body.front div.galleryFold2 p{
+  text-align: center;
+  font-size: 0.8em;
+}
 body.front a#hp_button_apple{
     margin-top: 1.8%;
 }

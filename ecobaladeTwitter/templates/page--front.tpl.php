@@ -138,9 +138,55 @@
 				</p>
 
 			</div>
-			<div class="span6">
-				<?php $slideshow = views_embed_view('v_slideshow_accueil', 'block');?>
-				<?php print render($slideshow);?>
+			<div class="span6">				
+				
+				<div class='swiper-container galleryFold2'>
+					<div class='swiper-wrapper'>
+
+						<!-- Slides -->
+						<div class='swiper-slide'>
+							<img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/slideshow-accueil/scenario-1_0.jpg" title="Envie de nature…" alt="Illustration partir en balade">							 
+				            <div class="text" data-swiper-parallax="-100%" data-swiper-parallax-duration="600">
+				              <p>Envie de nature…</p>
+				            </div>
+						</div>	
+
+						<div class='swiper-slide'>
+							<img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/slideshow-accueil/scenario-2_0.jpg" title="…essayer quelque chose de nouveau ?" alt="Illustration partir en balade">
+							<div class="text" data-swiper-parallax="-100%" data-swiper-parallax-duration="600">
+				              <p>…essayer quelque chose de nouveau ?</p>
+				            </div>
+						</div>	
+
+						<div class='swiper-slide'>
+							<img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/slideshow-accueil/scenario-3_0.jpg" title="Découvrez les trésors cachés de la nature, chez vous ou en vacances," alt="Illustration partir en balade">
+							<div class="text" data-swiper-parallax="-100%" data-swiper-parallax-duration="600">
+				              <p>Découvrez les trésors cachés de la nature, chez vous ou en vacances,</p>
+				            </div>
+						</div>	
+						
+						<div class='swiper-slide'>
+							<img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/slideshow-accueil/scenario-4_0.jpg" title="Avec ecoBalade, rencontrez les espèces, leurs histoires, et devenez le champion du parcours !" alt="Illustration partir en balade">
+							<div class="text" data-swiper-parallax="-100%" data-swiper-parallax-duration="600">
+				              <p>Avec ecoBalade, rencontrez les espèces, leurs histoires, et devenez le champion du parcours !</p>
+				            </div>
+						</div>	
+						
+						<div class='swiper-slide'>
+							<img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/slideshow-accueil/scenario-5_0.jpg" title="Sortez, la nature vous attend…" alt="Illustration partir en balade">
+							<div class="text" data-swiper-parallax="-100%" data-swiper-parallax-duration="600">
+				              <p>Sortez, la nature vous attend…</p>
+				            </div>
+						</div>							
+
+					</div>
+
+					<!-- If we need pagination -->
+					<div class="swiper-pagination"></div>
+
+				</div> <!-- fin swiper-container -->		
+
+
 			</div>
 		</div> 
 		</div>
@@ -399,7 +445,6 @@ jQuery( document ).ready(function() {
         }
         
     });
-
 		
     //slideshow on en parle
 	var galleryLogoOnEnParle = new Swiper('.galleryLogoOnEnParle', {       
@@ -408,6 +453,18 @@ jQuery( document ).ready(function() {
         loopedSlides : 4, 
         //slideToClickedSlide : true,                
         autoplay : 2500,
+        loop: true
+    });
+
+    //slideshow illustration fold2
+	var galleryLogoOnEnParle = new Swiper('.galleryFold2', {       
+        slidesPerView: 1,
+        effect : 'fade',        
+        loopedSlides : 5,        
+        paginationClickable : true, 
+        parallax : true,
+        autoplay : 2500,        
+        pagination : '.galleryFold2 .swiper-pagination',        
         loop: true
     });
 
