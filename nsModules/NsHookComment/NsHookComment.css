@@ -41,5 +41,12 @@ body.node-type-espece div.alert.alert-block.alert-status a.close, body.node-type
 	body.page-comment-reply div#edit-field-comment-image-e div.image-widget-data input[type='text'], body.page-comment-reply div#edit-field-comment-image div.image-widget-data input[type='text']{
 		width: 100%;
 	}
+    body.page-comment-reply input#edit-name{
+        width: 98%;
+    }
+    body.page-comment-reply div.form-type-managed-file input[type='file']{
+        width: 100%;
+    }
+
 
 }
