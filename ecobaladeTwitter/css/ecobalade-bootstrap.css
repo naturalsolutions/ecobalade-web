@@ -296,6 +296,9 @@ body.front .swiper-slide {
 body.front .galleryLogoOnEnParle {
   padding: 12px 0px 70px 0;
 } 
+body.front div.galleryFold2 span.swiper-pagination-bullet-active{
+  background: #4dbb74 !important;
+}
 /**/
 body.front div#foldOnEnParle{
   background-color: #F2F2F2;
