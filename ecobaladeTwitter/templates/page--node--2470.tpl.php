@@ -67,7 +67,7 @@
 	<div class="container-node">
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
-        <h1 class="page-header">403 - <?php print $title; ?></h1>
+        <h1 class="page-header">403 - Accès refusé</h1>
       <?php endif; ?>
       <?php print render($title_suffix); ?>
       <?php print $messages; ?>
@@ -79,7 +79,7 @@
       </aside>  <!-- /#sidebar-first -->
     <?php endif; ?>  
 	  
-	  <section class="<?php print _twitter_bootstrap_content_span($columns); ?>">  
+	  <section style='min-height: 454px; text-align: center;' class="<?php print _twitter_bootstrap_content_span($columns); ?>">  
       <?php if ($page['highlighted']): ?>
         <div class="highlighted hero-unit"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
@@ -101,7 +101,9 @@
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
       
-      <?php print render($page['content']); ?>
+      <?php //print render($page['content']); ?>
+      <br/><br/><br/><br/><br/>
+      &nbsp;&nbsp;&nbsp;<a href="<?php echo $base_url;?>" style='font-size: 2em;  text-align: center;  top: 80px;  position: relative;'>Cliquer pour retourner à l'accueil</a>
 	  </section>
 
     <?php if ($page['sidebar_second']): ?>
