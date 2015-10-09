@@ -694,7 +694,7 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
           if($value == 'Arbres') $id = 1;
           else if($value == 'Arbustes et plantes') $id = 2;
           else if($value == 'Oiseaux') $id = 3;
-          else if($value == 'Insectes') $id = 4;
+          else if($value == 'Petites bêtes') $id = 4;
           else if($value == 'Mammifères') $id = 5;
           else if($value == 'Reptiles') $id = 6;
           else if($value == 'Amphibiens') $id = 7;
