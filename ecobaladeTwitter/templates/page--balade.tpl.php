@@ -202,13 +202,8 @@ $baladenid = $node->nid;
 
 			<?php
 
-			//Si connecté
-			if($user->uid){
-								
-				$field_balade_google_map‎ = field_get_items($entity_type = 'node', $node, $field_name = 'field_balade_google_map');
-				echo "<div class='row-fluid googleMap'><div class='span12'>".$field_balade_google_map‎[0]['value']."</div></div>";
-			
-			}
+			$field_balade_google_map‎ = field_get_items($entity_type = 'node', $node, $field_name = 'field_balade_google_map');
+			echo "<div class='row-fluid googleMap'><div class='span12'>".$field_balade_google_map‎[0]['value']."</div></div>";
 
 			//Affichage du reste du node
 			print render($page['content']); 
