@@ -11,6 +11,9 @@
   <script type="text/javascript" src="http://www.panoramio.com/wapi/wapi.js?v=1&amp;hl=fr"></script> 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+  <!-- PUB -->
+  <meta name="verification" content="cd6b4fd75088374c31c969917b0ee717" />
+
   <!-- Google+ - utilisateurs depuis un mobile -->
   <script type="text/javascript">
     (function() {
@@ -33,7 +36,8 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
   </script>
-
+  
+  <!-- TradeDoubler site verification 2794210 -->
 </head>
 
 
