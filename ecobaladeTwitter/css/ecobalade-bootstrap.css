@@ -4780,7 +4780,7 @@ div#container-mobile div#badge4GooglePlay {
 /*                                                                         */
 /***************************************************************************/
 /*********************************  ****************************************/
-body.page-node-2818 div.view-v-liste-article,
+body.page-node-2843 div.view-v-liste-article,
 body.node-type-blogosphere  div.view-v-liste-article{
   background: #fff;
   height: 100%;
@@ -4788,16 +4788,16 @@ body.node-type-blogosphere  div.view-v-liste-article{
   margin:0; 
 }
 
-body.page-node-2818 div.container-node div.row section.span12{
+body.page-node-2843 div.container-node div.row section.span12{
   background: #fff;
 }
 
-body.page-node-2818 div.container-node,
+body.page-node-2843 div.container-node,
 body.node-type-blogosphere div.container-node {
   background: #fff;
 }
 
-body.page-node-2818 div.blog-banner,
+body.page-node-2843 div.blog-banner,
 body.node-type-blogosphere div.blog-banner{
   position: relative;
   width: 100%;
@@ -4807,12 +4807,12 @@ body.node-type-blogosphere div.blog-banner{
   margin: 0;
 }
 
-body.page-node-2818  div.blog-banner img,
+body.page-node-2843  div.blog-banner img,
 body.node-type-blogosphere  div.blog-banner img{
   height: 170px;
 }
 
-body.page-node-2818  div.blog-banner p,
+body.page-node-2843  div.blog-banner p,
 body.node-type-blogosphere  div.blog-banner p{
   position: absolute;
   top: 40px;
@@ -4822,7 +4822,7 @@ body.node-type-blogosphere  div.blog-banner p{
   font-size: 3em;
 }
 
-body.page-node-2818  div.blog-banner #subtxt,
+body.page-node-2843  div.blog-banner #subtxt,
 body.node-type-blogosphere  div.blog-banner #subtxt{
   position: absolute;
   top: 110px;
@@ -4831,7 +4831,7 @@ body.node-type-blogosphere  div.blog-banner #subtxt{
   font-variant: small-caps;
 }
 
-body.page-node-2818  div.container div.row div.view-v-liste-article div.blog-image-article img{
+body.page-node-2843  div.container div.row div.view-v-liste-article div.blog-image-article img{
   height: 350px;
   width: 85%;
 }
@@ -4839,7 +4839,7 @@ body.page-node-2818  div.container div.row div.view-v-liste-article div.blog-ima
 /*------------*/
 /*--- Nav ----*/
 /*------------*/
-body.page-node-2818 div.navbarBlog nav.navbar-inner,
+body.page-node-2843 div.navbarBlog nav.navbar-inner,
 body.node-type-blogosphere div.navbarBlog nav.navbar-inner{
   border: 0px;
   margin: 0 auto;
@@ -4849,18 +4849,18 @@ body.node-type-blogosphere div.navbarBlog nav.navbar-inner{
   justify-content: center;
 }
 
-body.page-node-2818 div.navbarBlog nav.navigationBlog ul.navBlog,
+body.page-node-2843 div.navbarBlog nav.navigationBlog ul.navBlog,
 body.node-type-blogosphere div.navbarBlog nav.navigationBlog ul.navBlog{
   list-style-type: none;
   float: none;
 }
 
-body.page-node-2818 div.navbarBlog nav.navigationBlog ul.navBlog li,
+body.page-node-2843 div.navbarBlog nav.navigationBlog ul.navBlog li,
 body.node-type-blogosphere div.navbarBlog nav.navigationBlog ul.navBlog li{
   padding-top: 1em;
 }
 
-body.page-node-2818 div.navbarBlog nav.navigationBlog ul.navBlog a,
+body.page-node-2843 div.navbarBlog nav.navigationBlog ul.navBlog a,
 body.node-type-blogosphere div.navbarBlog nav.navigationBlog ul.navBlog a{
   font-family: 'Nunito', sans-serif;
   text-transform: lowercase;
@@ -4876,7 +4876,7 @@ body.node-type-blogosphere div.navbarBlog nav.navigationBlog ul.navBlog a{
   border-bottom: 1px solid #fff;
 }
 
-body.page-node-2818 div.navbarBlog nav.navigationBlog ul.navBlog a:hover,
+body.page-node-2843 div.navbarBlog nav.navigationBlog ul.navBlog a:hover,
 body.node-type-blogosphere div.navbarBlog nav.navigationBlog ul.navBlog a:hover{
   border-bottom: 1px solid #A08977;
   color: #A08977;
@@ -4885,13 +4885,13 @@ body.node-type-blogosphere div.navbarBlog nav.navigationBlog ul.navBlog a:hover{
 /*------------*/
 /*-- SWIPER --*/
 /*------------*/
-body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12{
+body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12{
   width: 100%;
   height: auto;
   position: relative;
 }
 
-body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-prev{
+body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-prev{
   border: 1px solid #fff;
   border-radius: 5px 0 0 5px;
   padding: 5px 8px;
@@ -4902,7 +4902,7 @@ body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row
   background-image: none;
 }
 
-body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-next{
+body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-next{
   border: 1px solid #fff;
   border-left-color: transparent;
   border-radius: 0 5px 5px 0;
@@ -4914,7 +4914,7 @@ body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row
   background-image: none;
 }
 
-body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-prev a{
+body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-prev a{
   position: absolute;
   margin-top: 0.3em;
   margin-left: 0.3em;
@@ -4923,7 +4923,7 @@ body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row
   text-decoration: none;
 }
 
-body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-next a{
+body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-next a{
   position: absolute;
   margin-top: 0.3em;
   margin-left: 0.3em;
@@ -4932,12 +4932,12 @@ body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row
   text-decoration: none;
 }
 
-body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-next:hover,
-body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-prev:hover{
+body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-next:hover,
+body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-prev:hover{
  background: #A08977;
 }
 
-body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog{
+body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog{
   right: 0;
   width: 40%;
   height: 100%;
@@ -4945,7 +4945,7 @@ body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row
   background-color: rgba(160,137,119,0.8);
 }
 
-body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog h1{
+body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog h1{
   margin-left: 1em;
   padding-top: 2em;
   font-family: 'neythalregular';
@@ -4953,20 +4953,20 @@ body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row
   font-size: 3em;
 }
 
-body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog h2{
+body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog h2{
   margin-left: 2em;
   font-family: 'neythalregular';
   color: #fff;
   font-size: 1.5em;
 }
 
-body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog i{
+body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog i{
   margin-left: 3em;
   color: #fff;
   font-size: 1em;
 }
 
-body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog p{
+body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog p{
   margin-left: 3em;
   margin-top: 2em;
   width: 50%;
@@ -4975,20 +4975,20 @@ body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row
   font-family: 'Nunito', sans-serif;
 }
 
-body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > a{
+body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > a{
   margin-left: 1em;
   margin-top: 2em;  
 }
 
-body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > .likeShareComment{
+body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > .likeShareComment{
   margin-left: 3em;
 }
 
-body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > .likeShareComment a{
+body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > .likeShareComment a{
   padding: .2em;
 }
 
-body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > .lirePlus{
+body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > .lirePlus{
   margin-left: 3em;
   margin-top: 3em;
   padding: 10px 25px;
@@ -5001,15 +5001,15 @@ body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row
 /*--- Blog ---*/
 /*------------*/
 
-body.page-node-2818 div.span9 div.enteteBlog,
-body.page-node-2818 div.span9 div.enteteArticleAssocies{
+body.page-node-2843 div.span9 div.enteteBlog,
+body.page-node-2843 div.span9 div.enteteArticleAssocies{
   font-variant: small-caps;
   max-width: 850px;
   text-align: center;
   padding-bottom: 2em;
 }
 
-body.page-node-2818 div.span9 div.enteteBlog > h5{
+body.page-node-2843 div.span9 div.enteteBlog > h5{
   width: 150px;
   font-family: 'Nunito', sans-serif;
   margin-left: 42%;
@@ -5021,7 +5021,7 @@ body.page-node-2818 div.span9 div.enteteBlog > h5{
 }
 
 
-body.page-node-2818 div.span9 div.enteteArticleAssocies > h5{
+body.page-node-2843 div.span9 div.enteteArticleAssocies > h5{
   width: 250px;
   font-family: 'Nunito', sans-serif;
   margin-left: 35%;
@@ -5032,8 +5032,8 @@ body.page-node-2818 div.span9 div.enteteArticleAssocies > h5{
   position: relative;
 }
 
-body.page-node-2818 div.span9 div.enteteBlog div,
-body.page-node-2818 div.span9 div.enteteArticleAssocies div{
+body.page-node-2843 div.span9 div.enteteBlog div,
+body.page-node-2843 div.span9 div.enteteArticleAssocies div{
   margin-top: -15px;
   border-top: 1px solid #ADADAD;
   border-bottom: 1px solid #ADADAD;
@@ -5046,7 +5046,7 @@ body.page-node-2818 div.span9 div.enteteArticleAssocies div{
                         inset  0 -2px 1px -1px #ADADAD;
 }
 
-body.page-node-2818 div.span9 h1{
+body.page-node-2843 div.span9 h1{
   font-size:3em;
   margin-bottom: 0;
   font-family: 'neythalregular';
@@ -5054,7 +5054,7 @@ body.page-node-2818 div.span9 h1{
   padding-bottom: .2em;
 }
 
-body.page-node-2818 div.span9 h2{
+body.page-node-2843 div.span9 h2{
   font-size:2em;
   margin-bottom: 0;
   font-family: 'neythalregular';
@@ -5062,59 +5062,59 @@ body.page-node-2818 div.span9 h2{
   padding-bottom: .2em;
 }
 
-body.page-node-2818 div.row-fluid div.span9 div.row-fluid div.span4 h2 {
+body.page-node-2843 div.row-fluid div.span9 div.row-fluid div.span4 h2 {
   font-size: 1.2em;
   margin: 0;
   color: #545454;
 }
 
-body.page-node-2818 div.span9 a img{
+body.page-node-2843 div.span9 a img{
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
-body.page-node-2818 div.row-fluid div.span9 div.span4 a{
+body.page-node-2843 div.row-fluid div.span9 div.span4 a{
   margin-bottom: 1em;
 }
 
-body.page-node-2818 div.row-fluid div.span9 div.span4 a:first-child > img{
+body.page-node-2843 div.row-fluid div.span9 div.span4 a:first-child > img{
   height: 150px;
   width: 100%;
 }
 
-body.page-node-2818 div.row-fluid div.span9 div.span4 h1{
+body.page-node-2843 div.row-fluid div.span9 div.span4 h1{
   font-size: 1.7em;
   margin-bottom: -.5em;
 }
 
-body.page-node-2818 div.row-fluid div.span9 div.span4 h2{
+body.page-node-2843 div.row-fluid div.span9 div.span4 h2{
   margin-left: 2em;
   font-family: 'neythalregular';
   color: #fff;
   font-size: 1.5em;
 }
 
-body.page-node-2818 div.row-fluid div.span9 div.span4 p{
+body.page-node-2843 div.row-fluid div.span9 div.span4 p{
   padding-top: 1em;
   font-size: 1em;
 }
-body.page-node-2818 div.row-fluid div.span9 div.span4 i{
+body.page-node-2843 div.row-fluid div.span9 div.span4 i{
   font-size: .8em;
 }
 
-body.page-node-2818 div.span9 a.lirePlus{
+body.page-node-2843 div.span9 a.lirePlus{
   color:#A08977;
   text-decoration: none;
   font-weight: bold;
 }
 
-body.page-node-2818 div.span9 div.row-fluid div.span4 a.lirePlus{
+body.page-node-2843 div.span9 div.row-fluid div.span4 a.lirePlus{
   color:#A08977;
   text-decoration: none;
   font-weight: bold;
 }
 
-body.page-node-2818 div.row-fluid div.span9 div.likeShareCommentActu a{
+body.page-node-2843 div.row-fluid div.span9 div.likeShareCommentActu a{
   margin-right: .5%;
 }
 
@@ -5123,13 +5123,13 @@ body.page-node-2818 div.row-fluid div.span9 div.likeShareCommentActu a{
 /*--- Blocs --*/
 /*----Blog----*/
 /*------------*/
-body.page-node-2818 div.span3 div.tagsBlog iframe,
+body.page-node-2843 div.span3 div.tagsBlog iframe,
 body.node-type-blogosphere div.span3 div.tagsBlog iframe{ 
   margin-left: .8em;
 }
 
-body.page-node-2818 div.span3 div.tagsBlog,
-body.page-node-2818 div.span3 div.baladeBlog,
+body.page-node-2843 div.span3 div.tagsBlog,
+body.page-node-2843 div.span3 div.baladeBlog,
 body.node-type-blogosphere div.span3 div.tagsBlog,
 body.node-type-blogosphere div.span3 div.baladeBlog
 {
@@ -5137,8 +5137,8 @@ body.node-type-blogosphere div.span3 div.baladeBlog
   margin: 2em auto;
 }
 
-body.page-node-2818 div.span3 div.tagsBlog h4,
-body.page-node-2818 div.span3 div.baladeBlog h4,
+body.page-node-2843 div.span3 div.tagsBlog h4,
+body.page-node-2843 div.span3 div.baladeBlog h4,
 body.node-type-blogosphere div.span3 div.tagsBlog h4,
 body.node-type-blogosphere div.span3 div.baladeBlog h4
 {
@@ -5156,19 +5156,19 @@ body.node-type-blogosphere div.span3 div.baladeBlog h4
   color: #616161;
 }
 
-body.page-node-2818 div.span3 div.tagsBlog ul,
+body.page-node-2843 div.span3 div.tagsBlog ul,
 body.node-type-blogosphere div.span3 div.tagsBlog ul{
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
 }
 
-body.page-node-2818 div.span3 div.tagsBlog li,
+body.page-node-2843 div.span3 div.tagsBlog li,
 body.node-type-blogosphere div.span3 div.tagsBlog li{
   padding: .5em;
 }
 
-body.page-node-2818 div.span3 div.tagsBlog a,
+body.page-node-2843 div.span3 div.tagsBlog a,
 body.node-type-blogosphere div.span3 div.tagsBlog a{
   padding: .5em;
   background: #E6E6E6;
@@ -5176,7 +5176,7 @@ body.node-type-blogosphere div.span3 div.tagsBlog a{
   text-decoration: none;
 }
 
-body.page-node-2818 div.span3 div.tagsBlog a:hover
+body.page-node-2843 div.span3 div.tagsBlog a:hover
 body.node-type-blogosphere div.span3 div.tagsBlog a:hover{
   color: #fff;
   background: #A08977;
@@ -5186,7 +5186,7 @@ body.node-type-blogosphere div.span3 div.tagsBlog a:hover{
 /*--- Bloc ---*/
 /*-- Balade --*/
 /*------------*/
-body.page-node-2818 div.span3 div.baladeBlog h5 > a,
+body.page-node-2843 div.span3 div.baladeBlog h5 > a,
 body.node-type-blogosphere div.span3 div.baladeBlog h5 > a{
   text-align: left;
   color: #545454;
@@ -5197,14 +5197,14 @@ body.node-type-blogosphere div.span3 div.baladeBlog h5 > a{
   margin-right: 10%;
 }
 
-body.page-node-2818 div.span3 div.baladeBlog p,
+body.page-node-2843 div.span3 div.baladeBlog p,
 body.node-type-blogosphere div.span3 div.baladeBlog p{
   font-size: .9em;
   margin-left: 10%;
   margin-right: 10%;
 }
 
-body.page-node-2818 div.span3 div.baladeBlog a > img,
+body.page-node-2843 div.span3 div.baladeBlog a > img,
 body.node-type-blogosphere div.span3 div.baladeBlog a > img{
   text-align: center;
   margin-left: 10%;
@@ -5214,33 +5214,33 @@ body.node-type-blogosphere div.span3 div.baladeBlog a > img{
 /*****************blog_media_queries*********************/
 /********************************************************/
 /*@media (max-width: 320px){
-  body.page-node-2818 div.span3 div.tagsBlog iframe {
+  body.page-node-2843 div.span3 div.tagsBlog iframe {
     margin-left:1.2em; 
   }
 } 
 
 
 @media (min-width: 321px) and (max-width: 375px){
-  body.page-node-2818 div.span3 div.tagsBlog iframe {
+  body.page-node-2843 div.span3 div.tagsBlog iframe {
     margin-left: 3em; 
   }
-  body.page-node-2818 div.span3 div.baladeBlog a{
+  body.page-node-2843 div.span3 div.baladeBlog a{
     margin-left: 2em; 
   }
 
-  body.page-node-2818 div.span3 div.tagsBlog h4,
-  body.page-node-2818 div.span3 div.baladeBlog h4 {
+  body.page-node-2843 div.span3 div.tagsBlog h4,
+  body.page-node-2843 div.span3 div.baladeBlog h4 {
     margin-left: 7em;
   } 
 
 
 @media (min-width: 376px) and (max-width: 414px){
-  body.page-node-2818 div.span3 div.tagsBlog iframe {
+  body.page-node-2843 div.span3 div.tagsBlog iframe {
     margin-left:4em; 
   }
 
-  body.page-node-2818 div.span3 div.tagsBlog h4,
-  body.page-node-2818 div.span3 div.baladeBlog h4 {
+  body.page-node-2843 div.span3 div.tagsBlog h4,
+  body.page-node-2843 div.span3 div.baladeBlog h4 {
     margin-left: 8em;
   }
 }
@@ -5248,19 +5248,19 @@ body.node-type-blogosphere div.span3 div.baladeBlog a > img{
 
 
 @media (min-width: 320px) and (max-width: 499px){
-  body.page-node-2818  div.swiper-blog {
+  body.page-node-2843  div.swiper-blog {
     display: none;
   }
 
-  body.page-node-2818 div.listeArticle{
+  body.page-node-2843 div.listeArticle{
     margin:0;  
   }
 
-  body.page-node-2818 div.navbarBlog{
+  body.page-node-2843 div.navbarBlog{
     margin: 0;
   }
 
-  body.page-node-2818 div.navbarBlog nav.navbar-inner ul{
+  body.page-node-2843 div.navbarBlog nav.navbar-inner ul{
     margin: 0;
     background: #fff;
     max-width: 315px; 
@@ -5269,142 +5269,142 @@ body.node-type-blogosphere div.span3 div.baladeBlog a > img{
     flex-wrap: nowrap;
   }
 
-  body.page-node-2818 div.span9 h2{
+  body.page-node-2843 div.span9 h2{
     font-size: 1.5em;
   }
 
-  body.page-node-2818 div.row-fluid div.span9 div.row-fluid div.span4 h2 {
+  body.page-node-2843 div.row-fluid div.span9 div.row-fluid div.span4 h2 {
    text-align: center;
   }
 
-  body.page-node-2818 div.span9 i{
+  body.page-node-2843 div.span9 i{
     font-size: .7em;
   }
 
-  body.page-node-2818 div.navbarBlog nav.navigationBlog ul.navBlog li{
+  body.page-node-2843 div.navbarBlog nav.navigationBlog ul.navBlog li{
     padding: 0;
   }
 
-  body.page-node-2818 div.navbarBlog nav.navigationBlog ul.navBlog a{
+  body.page-node-2843 div.navbarBlog nav.navigationBlog ul.navBlog a{
     font-size: 12px; 
     margin-left: 0px;
     margin-right: 0px;
   }
 
 
-  body.page-node-2818 div.span9 div.enteteBlog div,
-  body.page-node-2818 div.span9 div.enteteArticleAssocies div{
+  body.page-node-2843 div.span9 div.enteteBlog div,
+  body.page-node-2843 div.span9 div.enteteArticleAssocies div{
     margin-top: -5px;
   }
 
-  body.page-node-2818 div.span9 div.enteteBlog > h5{
+  body.page-node-2843 div.span9 div.enteteBlog > h5{
     width: 70px;
     font-family: 'Nunito', sans-serif;
     margin: 0 auto;
     font-size: 1em;
   }
 
-  body.page-node-2818 div.span9 div.enteteArticleAssocies > h5{
+  body.page-node-2843 div.span9 div.enteteArticleAssocies > h5{
     width: 125px;
     font-family: 'Nunito', sans-serif;
     margin: 0 auto ;
     font-size: 1em;
   }
 
-  body.page-node-2818 div.span3 div.tagsBlog,
-  body.page-node-2818 div.span3 div.baladeBlog
+  body.page-node-2843 div.span3 div.tagsBlog,
+  body.page-node-2843 div.span3 div.baladeBlog
   {
     border: solid #E3E3E3 1px;
     margin: 2em auto;
   }
 
-  body.page-node-2818 div.row-fluid div.span9 div.span4 h1{
+  body.page-node-2843 div.row-fluid div.span9 div.span4 h1{
     font-size: 1.7em;
     text-align: center;
   }
 
-  body.page-node-2818 div.span9 div.row-fluid div.span4 a{
+  body.page-node-2843 div.span9 div.row-fluid div.span4 a{
     margin: 0 auto;
   }
 }
 
 @media (min-width: 500px) and (max-width: 770px){
-  body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-next,
-  body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-prev{
+  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-next,
+  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-prev{
     display: none;
   }
 
-  body.page-node-2818 div.navbarBlog nav.navigationBlog ul.navBlog a{
+  body.page-node-2843 div.navbarBlog nav.navigationBlog ul.navBlog a{
     font-size: 14px; 
     margin-left: 2%;
     margin-right: 2%;
   }
 
-  body.page-node-2818 div.row-fluid div.span9 div.span4 h1{
+  body.page-node-2843 div.row-fluid div.span9 div.span4 h1{
     font-size: 1.7em;
     text-align: center;
   }
 
-  body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog{
+  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog{
     height: 250px;
     margin-top: -250px;
     font-size: .5em;
   }
 
-  body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog h1{
+  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog h1{
     height: 20px;
     margin-bottom: 0; 
     padding-top: 0;
   }
 
-  body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog i{
+  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog i{
     margin-bottom: 0; 
     padding-top: 0;
   }
 
-  body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog p{
+  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog p{
     width: 90%;
     margin-top: 1em;
   }
 
-  body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > .lirePlus{
+  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > .lirePlus{
     margin-left: 2em;
     padding: 5px 12px;
   }
 
-  body.page-node-2818 div.row-fluid div.span9 div.row-fluid div.span4 h2 {
+  body.page-node-2843 div.row-fluid div.span9 div.row-fluid div.span4 h2 {
    text-align: center;
   }
 
-  body.page-node-2818 div.span9 div.enteteBlog > h5{
+  body.page-node-2843 div.span9 div.enteteBlog > h5{
     width: 150px;
     margin: 0 auto;
     font-size: 2em;
   }
 
 
-  body.page-node-2818 div.span9 div.enteteArticleAssocies > h5{
+  body.page-node-2843 div.span9 div.enteteArticleAssocies > h5{
     width: 250px;
     margin: 0 auto;
     font-size: 2em;
   }
 
-  body.page-node-2818 div.span9 div.enteteBlog div,
-  body.page-node-2818 div.span9 div.enteteArticleAssocies div{
+  body.page-node-2843 div.span9 div.enteteBlog div,
+  body.page-node-2843 div.span9 div.enteteArticleAssocies div{
     margin-top: -5px;
   }
 
-  body.page-node-2818 div.span9 div.row-fluid div.span4 a{
+  body.page-node-2843 div.span9 div.row-fluid div.span4 a{
     margin: 0 auto;
   }
 }
 
 /*@media(max-width: 1024px){
-  body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-prev{  
+  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-prev{  
     left: 49.4%;  
   }
 
-  body.page-node-2818  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-next{
+  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-next{
     right: 44.2%;
   }
 }*/*/
