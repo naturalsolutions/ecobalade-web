@@ -39,7 +39,7 @@
       		  <?php print $secondary_nav; ?>
       		<?php endif; ?>
     		</nav>
-  	  </div>         
+  	  </div>      
   	</div>
   </div>
 </header>
@@ -68,7 +68,7 @@
       <aside class="span3" role="complementary">
         <?php print render($page['sidebar_first']); ?>
       </aside>  <!-- /#sidebar-first -->
-    <?php endif; ?>  
+    <?php endif; ?> 
 	  
 	  <section class="<?php print _twitter_bootstrap_content_span($columns); ?>">  
       <?php if ($page['highlighted']): ?>
