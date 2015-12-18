@@ -3,6 +3,8 @@
 Template d'un article de blog
 
 -->
+<link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+
 <header id="navbar" role="banner" class="navbar navbar-fixed-top">
   <div class="navbar-inner">
   	<div class="container">
@@ -50,6 +52,7 @@ Template d'un article de blog
 </header>
 
 <?php global $base_url, $node; ?>
+
 <?php 
   if(isset($_GET['cat']) && $_GET['cat'] != '') $categorie = $_GET['cat']; 
   else $categorie = '';
@@ -112,38 +115,161 @@ Template d'un article de blog
     <div class="container-node span9">
       <!-- début coprs de l'article -->
       <section class="<?php print _twitter_bootstrap_content_span($columns); ?>">  
-        <?php           
-          $nodeId = arg(1);
-          // echo $nodeId;
-         //$titre = field_view_value($entity_type  = 'node', $entity = $node, $field_name = 'title', $item, $display = array(), $langcode = NULL);
-          //$titre = field_get_items($entity_type = 'node', $node, $field_name = 'title'); 
-          drupal_set_message("<pre>".print_r("aaaa".$nodeId,TRUE)."</pre>");
-          //drupal_set_message("<pre>".print_r("bbb".$titre,TRUE)."</pre>");
-        ?>
-        <h1><?php echo $title; ?>555556</h1>  
-        <?php if ($page['highlighted']): ?>
-          <!-- <div class="highlighted hero-unit"><?php print render($page['highlighted']); ?></div> -->
-        <?php endif; ?>
-        <?php //if ($breadcrumb): print $breadcrumb; endif;?>
-        <!--<a id="main-content"></a>-->
-        <?php //print render($title_prefix); ?>
-        <?php //if ($title): ?>
-          <!--<h1 class="page-header">--><?php //print $title; ?></h1>
-        <?php //endif; ?>
-        <?php //print render($title_suffix); ?>
-        <?php print $messages; ?>
         <?php if ($tabs): ?>
           <?php print render($tabs); ?>
         <?php endif; ?>
-        <?php if ($page['help']): ?> 
-          <div class="well"><?php print render($page['help']); ?></div>
-        <?php endif; ?>
-        <?php if ($action_links): ?>
-          <ul class="action-links"><?php print render($action_links); ?></ul>
-        <?php endif; ?>
-        <?php print render($page['content']); ?>
 
+        <?php           
+          $nodeId = arg(1);
+          $node = node_load($nid = $nodeId);
+        ?>
+        <?php //drupal_set_message( "<pre>" . print_r($page['content']['system_main']['nodes'][$nodeId]['body'][''], TRUE) . "</pre>" ); ?>
+
+       <?php 
+          $currentArticle = node_load($nid=$nodeId);
+          $title = $currentArticle->title;
+          $created = format_date($currentArticle->created, $type = 'medium');              
+          $blogCategorie = taxonomy_term_load($currentArticle->field_cat_gorie['und'][0]['tid'])->name;
+          $blogResume = $currentArticle->body['und'][0]['safe_summary'];
+          $content = $currentArticle->body['und'][0]['value'];
+
+          $variables = array(
+            'style_name' => 'image_page_article',
+            'path' => $currentArticle->field_blog_image['und'][0]['uri'],
+            'alt' => $title
+          );
+          $blogImage = theme( 'image_style', $variables ); 
+        ?>
+
+        <?php echo $blogImage; ?>
+        <div class="likeShareCommentActu">
+          <a href="#"><img id="imgLike" src=" <?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-like.png" 
+                            onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-likehover$-.png'" 
+                            onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-like.png'"></a>
+          <a href="#"><img id="imgShare" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/share.png"
+                            onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/sharehover.png'" 
+                            onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/share.png'"></a>
+          <a href="#"><img id="imgComment" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png"
+                            onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubulehover.png'" 
+                            onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png'"></a>
+        </div>
+        
+        <h1><?php echo $title; ?></h1>  
+        <?php echo "<p class='created'>&Eacutecrit par ".$currentArticle->name." le ".$created."</p>"; ?>
+        <div class="separatorPageArticle"></div>
+
+        <div class="contentArticle">
+          <?php echo $content; ?>
+
+          <?php if ($page['highlighted']): ?>
+            <!-- <div class="highlighted hero-unit"><?php print render($page['highlighted']); ?></div> -->
+          <?php endif; ?>
+          <?php //if ($breadcrumb): print $breadcrumb; endif;?>
+          <!--<a id="main-content"></a>-->
+          <?php //print render($title_prefix); ?>
+          <?php //if ($title): ?>
+            <!--<h1 class="page-header">--><?php //print $title; ?></h1>
+          <?php //endif; ?>
+          <?php //print render($title_suffix); ?>
+          <?php print $messages; ?>
+          
+          <?php if ($page['help']): ?> 
+            <div class="well"><?php //print render($page['help']); ?></div>
+          <?php endif; ?>
+          <?php if ($action_links): ?>
+            <ul class="action-links"><?php //print render($action_links); ?></ul>
+          <?php endif; ?>
+          <?php print render($page['content']); ?>
+        </div>
   	  </section>
+
+      <div class="likeShareCommentActu">
+        <a href="#"><img id="imgLike" src=" <?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-like.png" 
+                          onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-likehover$-.png'" 
+                          onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-like.png'"></a>
+
+        <a href="#"><img id="imgShare" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/share.png"
+                          onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/sharehover.png'" 
+                          onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/share.png'"></a> 
+
+        <a href="#"><img id="imgComment" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png"
+                          onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubulehover.png'" 
+                          onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png'"></a>
+      </div>
+      
+       <div class="enteteArticleAssocies">
+        <h5>articles associés</h5>
+        <div></div>
+      </div>
+
+      <div class="row-fluid">
+        <!-- mise en page 3 autre articles --> 
+
+        <?php
+          $query = db_select('node', 'n');
+          $query->fields('n', array('nid'));
+          $query->condition('n.type', 'blogosphere');
+          $query->orderRandom();
+          $query->range(0, 3);
+          $items = $query->execute()->fetchAll();
+          foreach ($items as $key => $value) { ?>
+          <?php
+            $value->nid;
+
+            //On charger notre article
+            $currentArticle = node_load($value->nid);
+            
+            //get title
+            $title = $currentArticle->title;
+            $created = format_date($currentArticle->created, $type = 'medium');              
+            $blogCategorie = taxonomy_term_load($currentArticle->field_cat_gorie['und'][0]['tid'])->name;
+            $blogResume = $currentArticle->body['und'][0]['safe_summary'];
+
+            $variables = array(
+              'style_name' => 'article_du_blog',
+              'path' => $currentArticle->field_blog_image['und'][0]['uri'],
+              'alt' => $title
+            );
+
+            $blogImage = theme( 'image_style', $variables );
+          ?>
+
+          <div class="span4">
+            <a href="<?php echo $base_url.'/node/'.$value->nid; ?>"><?php echo $blogImage; ?></a>
+            <br>
+
+            <h1><?php echo $title ?></h1>
+            <?php 
+              // if ($currentArticle->field_sous_titre_blog != '') {
+              //   $subTitle = $currentArticle->field_sous_titre_blog['und'][0]['value'];
+              //   echo "<h2>".$subTitle."</h2>";
+              // } 
+            ?>
+            <i><?php echo "Posté dans ".$blogCategorie." le ".$created ?></i>
+            <p><?php echo $blogResume ?></p>
+            <br/><a class="lirePlus" href="<?php echo $base_url.'/node/'.$value->nid; ?>"> > Continuer de lire</a>
+      
+          </div>
+
+          <?php } ?>
+
+          <div class="commentBlocs">
+          <?php 
+            // $query = db_select('comment', 'c');
+            // $query->fields('n', array('nid'));
+            // $query->fields('c', array('nid', 'cid'));
+            // $query->join('node', 'n', 'n.nid = c.nid AND n.type = :n_type', array(':n_type' => 'blogosphere'));
+            // $items = $query->execute()->fetchAll();
+            
+          ?>
+            
+
+          </div>
+      </div>
+      <hr>
+      <h3>Ajouter un commentaire</h3>
+      <?php $comment_view = drupal_get_form("comment_node_blogosphere_form", (object) array('nid' => $nodeId)); ?> 
+      <?php print drupal_render($comment_view); ?>  
 
       <!-- fin coprs de l'article -->
     </div> <!--fin container-node-->
@@ -172,14 +298,14 @@ Template d'un article de blog
       </div>
       <!-- fin bloc tags -->
       <!-- debut bloc insta -->
-      <!-- <div class="tagsBlog">
+      <div class="tagsBlog">
         <h4>instagram</h4>
         <iframe src="http://snapwidget.com/in/?u=ZWNvYmFsYWRlfGlufDgwfDN8M3x8bm98M3xmYWRlT3V0fG9uU3RhcnR8eWVzfG5v&ve=101215" title="Instagram Widget" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:249px; height:249px;"></iframe>
-      </div> -->
+      </div>
       <!-- fin bloc insta -->
 
       <!-- debut bloc FB -->
-      <!-- <div class="tagsBlog">
+      <div class="tagsBlog">
         <h4>facebook</h4>
         <div class="fb-page" data-href="https://www.facebook.com/EcoBalade/" data-width="250" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
           <div class="fb-xfbml-parse-ignore">
@@ -188,10 +314,10 @@ Template d'un article de blog
             </blockquote>
           </div>
         </div>
-      </div> -->
+      </div>
       <!-- fin bloc FB -->
       <!-- debut bloc balade du mois -->
-      <!-- <div class="baladeBlog">
+      <div class="baladeBlog">
         <h4>la balade du mois</h4>
         <?php 
           $query = db_select('node', 'n');
@@ -213,7 +339,7 @@ Template d'un article de blog
         <a href="<?php echo $base_url.'/node/'.$value->nid;?>"><?php echo $blogImageBalade; ?></a>
         <h5><a href="<?php echo $base_url.'/node/'.$value->nid;?>"><?php echo $titreBalade; ?></a></h5>
         <p><?php echo$resumeBalade; ?></p>
-      </div> -->
+      </div>
       <!-- fin bloc balade du mois -->
     </div> <!-- fin sidebarre droite -->
   </div>

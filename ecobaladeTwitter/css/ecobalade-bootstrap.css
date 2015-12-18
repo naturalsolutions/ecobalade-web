@@ -4813,9 +4813,9 @@ body.node-type-blogosphere  div.blog-banner img{
 }
 
 body.page-node-2843  div.blog-banner p,
-body.node-type-blogosphere  div.blog-banner p{
+body.node-type-blogosphere  div.blog-banner p{ 
   position: absolute;
-  top: 40px;
+  top: 20%;
   left: 0;
   right: 0;
   color: #fff;
@@ -4825,7 +4825,7 @@ body.node-type-blogosphere  div.blog-banner p{
 body.page-node-2843  div.blog-banner #subtxt,
 body.node-type-blogosphere  div.blog-banner #subtxt{
   position: absolute;
-  top: 110px;
+  top: 50%;
   color: #fff;
   font-size: 1em;
   font-variant: small-caps;
@@ -4878,8 +4878,8 @@ body.node-type-blogosphere div.navbarBlog nav.navigationBlog ul.navBlog a{
 
 body.page-node-2843 div.navbarBlog nav.navigationBlog ul.navBlog a:hover,
 body.node-type-blogosphere div.navbarBlog nav.navigationBlog ul.navBlog a:hover{
-  border-bottom: 1px solid #A08977;
-  color: #A08977;
+  border-bottom: 1px solid #a08a77;
+  color: #a08a77;
 }
 
 /*------------*/
@@ -4891,118 +4891,122 @@ body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row
   position: relative;
 }
 
-body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-prev{
-  border: 1px solid #fff;
-  border-radius: 5px 0 0 5px;
-  padding: 5px 8px;
+body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.blocLeftSwiper{
+  position: relative;
+  width: 60%;
+  float: left;
+}
+
+body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.buttonSwiper{
   position: absolute;
-  left: 50.4%;
-  top: 90%;
-  height: 40px;
+  height: 35px;
+  width: 77px;
+  right: 30px;
+  bottom: 30px;
+}
+
+body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-prev{
+  height: 30px;
+  border: 1px solid #fff;
+  border-radius: 3px;
   background-image: none;
+  text-align: center;
+  border-right: 1px solid #fff;
 }
 
 body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-next{
+  height: 30px;
   border: 1px solid #fff;
-  border-left-color: transparent;
-  border-radius: 0 5px 5px 0;
-  padding: 5px 8px;
-  position: absolute;
-  right: 44.2%;
-  top: 90%;
-  height: 40px;
+  border-radius: 3px;
   background-image: none;
+  text-align: center;
 }
 
 body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-prev a{
-  position: absolute;
-  margin-top: 0.3em;
-  margin-left: 0.3em;
-  font-size: 20px;
+  font-size: 16px;
   color: white;
   text-decoration: none;
 }
 
 body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-next a{
-  position: absolute;
-  margin-top: 0.3em;
-  margin-left: 0.3em;
-  font-size: 20px;
+  font-size: 16px;
   color: white;
   text-decoration: none;
 }
 
-body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-next:hover,
-body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-prev:hover{
- background: #A08977;
-}
-
 body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog{
   right: 0;
-  width: 40%;
   height: 100%;
-  position: absolute;
-  background-color: rgba(160,137,119,0.8);
+  background-color: rgba(160,138,119,0.8);
 }
 
 body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog h1{
+  margin: 0;
   margin-left: 1em;
-  padding-top: 2em;
+  padding-top: 2vw;
   font-family: 'neythalregular';
   color: #fff;
-  font-size: 3em;
+  font-size: 3vw;
 }
 
 body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog h2{
+  margin: 0;
   margin-left: 2em;
   font-family: 'neythalregular';
   color: #fff;
-  font-size: 1.5em;
+  font-size: 1.5vw;
 }
 
 body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog i{
-  margin-left: 3em;
+  margin-left: 3vw;
   color: #fff;
-  font-size: 1em;
+  font-size: 1vw;
 }
 
 body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog p{
   margin-left: 3em;
-  margin-top: 2em;
-  width: 50%;
+  margin-top: 1.5vw;
+  width: 20vw;
   color: #fff;
-  font-size: 1em;
+  font-size: 1vw;
   font-family: 'Nunito', sans-serif;
 }
 
 body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > a{
-  margin-left: 1em;
-  margin-top: 2em;  
+  margin-left: 1vw;
+  margin-top: 2vw;  
 }
 
 body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > .likeShareComment{
-  margin-left: 3em;
+  margin-left: 3vw;
+  margin-bottom: .5vw;
 }
 
 body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > .likeShareComment a{
-  padding: .2em;
+  padding: .2vw;
 }
 
-body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > .lirePlus{
-  margin-left: 3em;
-  margin-top: 3em;
-  padding: 10px 25px;
-  border-radius: 5px;
+body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > a.lirePlus{
+  margin-left: 3vw;
+  padding-top: .6vw;
+  padding-right: 1.40vw;
+  padding-bottom: .6vw;
+  padding-left: 1.40vw;
+  border-radius: 2px;
   border: 1px solid #fff;
   color: #fff;
+  font-size: 1vw;
   text-decoration: none;
+  display: block;
+  width: 4em;
 }
 /*------------*/
 /*--- Blog ---*/
 /*------------*/
 
 body.page-node-2843 div.span9 div.enteteBlog,
-body.page-node-2843 div.span9 div.enteteArticleAssocies{
+body.page-node-2843 div.span9 div.enteteArticleAssocies,
+body.node-type-blogosphere div.span9 div.enteteArticleAssocies{
   font-variant: small-caps;
   max-width: 850px;
   text-align: center;
@@ -5012,28 +5016,33 @@ body.page-node-2843 div.span9 div.enteteArticleAssocies{
 body.page-node-2843 div.span9 div.enteteBlog > h5{
   width: 150px;
   font-family: 'Nunito', sans-serif;
-  margin-left: 42%;
+  margin-left: auto;
+  margin-right: auto;
   height: 30px;
   font-size: 2em;
   background: #fff;
-  color: #616161;
+  color: #494949;
   position: relative;
 }
 
 
-body.page-node-2843 div.span9 div.enteteArticleAssocies > h5{
+body.page-node-2843 div.span9 div.enteteArticleAssocies > h5,
+body.node-type-blogosphere div.span9 div.enteteArticleAssocies > h5{
   width: 250px;
   font-family: 'Nunito', sans-serif;
-  margin-left: 35%;
+  margin-left: auto;
+  margin-right: auto;
   height: 30px;
   font-size: 2em;
   background: #fff;
-  color: #616161;
+  color: #494949;
   position: relative;
+  z-index: 999;
 }
 
 body.page-node-2843 div.span9 div.enteteBlog div,
-body.page-node-2843 div.span9 div.enteteArticleAssocies div{
+body.page-node-2843 div.span9 div.enteteArticleAssocies div,
+body.node-type-blogosphere div.enteteArticleAssocies div{
   margin-top: -15px;
   border-top: 1px solid #ADADAD;
   border-bottom: 1px solid #ADADAD;
@@ -5062,7 +5071,8 @@ body.page-node-2843 div.span9 h2{
   padding-bottom: .2em;
 }
 
-body.page-node-2843 div.row-fluid div.span9 div.row-fluid div.span4 h2 {
+body.page-node-2843 div.row-fluid div.span9 div.row-fluid div.span4 h2,
+body.node-type-blogosphere div.row-fluid div.span9 div.row-fluid div.span4 h2{
   font-size: 1.2em;
   margin: 0;
   color: #545454;
@@ -5073,43 +5083,52 @@ body.page-node-2843 div.span9 a img{
   margin-bottom: 30px;
 }
 
-body.page-node-2843 div.row-fluid div.span9 div.span4 a{
+body.page-node-2843 div.row-fluid div.span9 div.span4 a,
+body.node-type-blogosphere div.row-fluid div.span9 div.span4 a{
   margin-bottom: 1em;
 }
 
-body.page-node-2843 div.row-fluid div.span9 div.span4 a:first-child > img{
+body.page-node-2843 div.row-fluid div.span9 div.span4 a:first-child > img,
+body.node-type-blogosphere div.row-fluid div.span9 div.span4 a:first-child > img{
   height: 150px;
   width: 100%;
 }
 
-body.page-node-2843 div.row-fluid div.span9 div.span4 h1{
+body.page-node-2843 div.row-fluid div.span9 div.span4 h1,
+body.node-type-blogosphere div.row-fluid div.span9 div.span4 h1{
   font-size: 1.7em;
   margin-bottom: -.5em;
+  color: #545454;
 }
 
-body.page-node-2843 div.row-fluid div.span9 div.span4 h2{
+body.page-node-2843 div.row-fluid div.span9 div.span4 h2,
+body.node-type-blogosphere div.row-fluid div.span9 div.span4 h2{
   margin-left: 2em;
   font-family: 'neythalregular';
   color: #fff;
   font-size: 1.5em;
 }
 
-body.page-node-2843 div.row-fluid div.span9 div.span4 p{
+body.page-node-2843 div.row-fluid div.span9 div.span4 p,
+body.node-type-blogosphere div.row-fluid div.span9 div.span4 p{
   padding-top: 1em;
   font-size: 1em;
 }
-body.page-node-2843 div.row-fluid div.span9 div.span4 i{
+body.page-node-2843 div.row-fluid div.span9 div.span4 i,
+body.node-type-blogosphere div.row-fluid div.span9 div.span4 i{
   font-size: .8em;
 }
 
-body.page-node-2843 div.span9 a.lirePlus{
-  color:#A08977;
+body.page-node-2843 div.span9 a.lirePlus,
+body.node-type-blogosphere div.span9 a.lirePlus{
+  color:#a08a77;
   text-decoration: none;
   font-weight: bold;
 }
 
-body.page-node-2843 div.span9 div.row-fluid div.span4 a.lirePlus{
-  color:#A08977;
+body.page-node-2843 div.span9 div.row-fluid div.span4 a.lirePlus,
+body.node-type-blogosphere div.span9 div.row-fluid div.span4 a.lirePlus{
+  color:#a08a77;
   text-decoration: none;
   font-weight: bold;
 }
@@ -5125,8 +5144,15 @@ body.page-node-2843 div.row-fluid div.span9 div.likeShareCommentActu a{
 /*------------*/
 body.page-node-2843 div.span3 div.tagsBlog iframe,
 body.node-type-blogosphere div.span3 div.tagsBlog iframe{ 
-  margin-left: .8em;
+  margin-left: 4%;
 }
+
+body.page-node-2843 div.span3 div.tagsBlog iframe.smallScreen,
+body.page-node-2843 div.span3 div.tagsBlog div.smallScreen
+{
+  display: none;
+}
+
 
 body.page-node-2843 div.span3 div.tagsBlog,
 body.page-node-2843 div.span3 div.baladeBlog,
@@ -5143,17 +5169,16 @@ body.node-type-blogosphere div.span3 div.tagsBlog h4,
 body.node-type-blogosphere div.span3 div.baladeBlog h4
 {
   font-size: 1em;
-  /*font-family: 'Montserrat', sans-serif;*/
   font-family: 'Nunito', sans-serif;
-
   font-weight: bold;
   font-variant: small-caps;
   width: 130px;
-  margin-left: 4em;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   margin-top: -.9em;
   background: #fff;  
-  color: #616161;
+  color: #494949;
 }
 
 body.page-node-2843 div.span3 div.tagsBlog ul,
@@ -5176,10 +5201,10 @@ body.node-type-blogosphere div.span3 div.tagsBlog a{
   text-decoration: none;
 }
 
-body.page-node-2843 div.span3 div.tagsBlog a:hover
+body.page-node-2843 div.span3 div.tagsBlog a:hover,
 body.node-type-blogosphere div.span3 div.tagsBlog a:hover{
   color: #fff;
-  background: #A08977;
+  background: #a08a77;
 }
 
 /*------------*/
@@ -5210,201 +5235,307 @@ body.node-type-blogosphere div.span3 div.baladeBlog a > img{
   margin-left: 10%;
   margin-right: 10%;
 }
+
+/***************************************************************************/
+/***************************************************************************/
+/*                           PAGE ARTCILE                                  */
+/*                                                                         */
+/***************************************************************************/
+/*********************************  ****************************************/
+body.node-type-blogosphere div.container div.row-fluid div.span9 section div.user-picture{
+  display: none; 
+}
+
+body.node-type-blogosphere div.container span.submitted{
+  display: none; 
+}
+
+body.node-type-blogosphere div.container div.row-fluid div.span9 section div.likeShareCommentActu{
+  margin-top: 1em;
+}
+
+body.node-type-blogosphere div.container div.row-fluid div.span9 section > h1{
+  font-size:3em;
+  margin-bottom: 0;
+  font-family: 'neythalregular';
+  color: #a08a77;
+  padding-bottom: .2em;
+  text-align: center;
+}
+
+body.node-type-blogosphere div.container div.row-fluid div.span9 section div.contentArticle{
+  max-width: 800px;
+}
+
+body.node-type-blogosphere div.container div.row-fluid div.span9 section div.contentArticle h3{
+  font-size: 1.5em;
+  color: #858585;
+  font-family: 'Nunito', sans-serif;
+}
+body.node-type-blogosphere div.container div.row-fluid div.span9 section div.contentArticle h3::after{
+  content: "" ;
+  width: 80px;
+  height: 1px;
+  display: block;
+  border-top: 1px solid #dedede;
+}
+
+body.node-type-blogosphere div.container div.row-fluid div.span9 section p.created{
+  font-family: 'Nunito', sans-serif;
+  color: #707070;
+  font-size: 1em;
+  text-align: center;
+}
+
+body.node-type-blogosphere div.container div.row-fluid div.span9 div.separatorPageArticle{
+  margin-top: 1em;
+  margin-bottom: 2em;
+  width: 100px;
+  border-top: 1px solid #dedede;
+  opacity: 0.5;
+  margin-left: auto;
+  margin-right: auto;
+}
+body.node-type-blogosphere div.container div.row-fluid div.span9 section p{
+  color: #707070;
+  font-size: 1em;
+}
+
+body.node-type-blogosphere div.field-item{display: none;}
+body.node-type-blogosphere article footer{display: none;}
+
+
 /********************************************************/
 /*****************blog_media_queries*********************/
 /********************************************************/
-/*@media (max-width: 320px){
-  body.page-node-2843 div.span3 div.tagsBlog iframe {
-    margin-left:1.2em; 
-  }
-} 
-
-
-@media (min-width: 321px) and (max-width: 375px){
-  body.page-node-2843 div.span3 div.tagsBlog iframe {
-    margin-left: 3em; 
-  }
-  body.page-node-2843 div.span3 div.baladeBlog a{
-    margin-left: 2em; 
-  }
-
-  body.page-node-2843 div.span3 div.tagsBlog h4,
-  body.page-node-2843 div.span3 div.baladeBlog h4 {
-    margin-left: 7em;
-  } 
-
-
-@media (min-width: 376px) and (max-width: 414px){
-  body.page-node-2843 div.span3 div.tagsBlog iframe {
-    margin-left:4em; 
-  }
-
-  body.page-node-2843 div.span3 div.tagsBlog h4,
-  body.page-node-2843 div.span3 div.baladeBlog h4 {
-    margin-left: 8em;
-  }
-}
-
-
-
-@media (min-width: 320px) and (max-width: 499px){
-  body.page-node-2843  div.swiper-blog {
-    display: none;
-  }
-
-  body.page-node-2843 div.listeArticle{
-    margin:0;  
-  }
-
-  body.page-node-2843 div.navbarBlog{
-    margin: 0;
-  }
-
-  body.page-node-2843 div.navbarBlog nav.navbar-inner ul{
-    margin: 0;
-    background: #fff;
-    max-width: 315px; 
-    display: flex;
-    align-content: center;
-    flex-wrap: nowrap;
-  }
-
-  body.page-node-2843 div.span9 h2{
-    font-size: 1.5em;
-  }
-
-  body.page-node-2843 div.row-fluid div.span9 div.row-fluid div.span4 h2 {
-   text-align: center;
-  }
-
-  body.page-node-2843 div.span9 i{
-    font-size: .7em;
-  }
-
-  body.page-node-2843 div.navbarBlog nav.navigationBlog ul.navBlog li{
-    padding: 0;
-  }
-
-  body.page-node-2843 div.navbarBlog nav.navigationBlog ul.navBlog a{
-    font-size: 12px; 
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-
-
-  body.page-node-2843 div.span9 div.enteteBlog div,
-  body.page-node-2843 div.span9 div.enteteArticleAssocies div{
-    margin-top: -5px;
-  }
-
-  body.page-node-2843 div.span9 div.enteteBlog > h5{
-    width: 70px;
-    font-family: 'Nunito', sans-serif;
-    margin: 0 auto;
-    font-size: 1em;
-  }
-
-  body.page-node-2843 div.span9 div.enteteArticleAssocies > h5{
-    width: 125px;
-    font-family: 'Nunito', sans-serif;
-    margin: 0 auto ;
-    font-size: 1em;
-  }
-
-  body.page-node-2843 div.span3 div.tagsBlog,
-  body.page-node-2843 div.span3 div.baladeBlog
-  {
-    border: solid #E3E3E3 1px;
-    margin: 2em auto;
-  }
-
-  body.page-node-2843 div.row-fluid div.span9 div.span4 h1{
-    font-size: 1.7em;
-    text-align: center;
-  }
-
-  body.page-node-2843 div.span9 div.row-fluid div.span4 a{
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 500px) and (max-width: 770px){
-  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-next,
-  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-prev{
-    display: none;
-  }
-
-  body.page-node-2843 div.navbarBlog nav.navigationBlog ul.navBlog a{
-    font-size: 14px; 
-    margin-left: 2%;
-    margin-right: 2%;
-  }
-
-  body.page-node-2843 div.row-fluid div.span9 div.span4 h1{
-    font-size: 1.7em;
-    text-align: center;
-  }
-
+@media (min-width: 980px){
   body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog{
-    height: 250px;
-    margin-top: -250px;
-    font-size: .5em;
+    position: absolute;
+    width: 40%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px){
+  body.page-node-2843  div.blog-banner img,
+  body.node-type-blogosphere  div.blog-banner img{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+/********************************************************/
+/********************************************************/
+/********************************************************/
+/********************************************************/
+@media (min-width: 320px) and (max-width: 470px){
+ body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog{
+    height: 350px;
   }
 
+}
+@media (min-width: 471px) and (max-width: 615px){
+  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog{
+    height: 330px;
+  }
+}
+
+@media (max-width: 979px){
+  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog{
+    text-align: center;
+  }
   body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog h1{
-    height: 20px;
-    margin-bottom: 0; 
-    padding-top: 0;
+      margin-top: -20px;
+      font-size: 24px;
+  }
+
+  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog h2{
+    font-size: 20px; 
+    line-height: 20px;
   }
 
   body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog i{
-    margin-bottom: 0; 
-    padding-top: 0;
+    font-size: 12px;
   }
 
-  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog p{
+  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.blocLeftSwiper{
+    width: 100%;
+  }
+
+  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.buttonSwiper{
+    position: absolute;
+    height: 35px;
+    width: 77px;
+    right: 5px;
+    bottom: 5px;
+  }
+
+  body.page-node-2843 div.row-fluid div.span9 div.span4 a:first-child > img,
+  body.node-type-blogosphere div.row-fluid div.span9 div.span4 a:first-child > img{
+    height: 260px;
+  }
+
+   body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog p{
     width: 90%;
-    margin-top: 1em;
+    font-size: 12px;
+    text-align: center;
   }
 
-  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > .lirePlus{
-    margin-left: 2em;
-    padding: 5px 12px;
+ body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > a.lirePlus{
+    display: inline-block;
+    width: 80px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 12px;
   }
 
-  body.page-node-2843 div.row-fluid div.span9 div.row-fluid div.span4 h2 {
-   text-align: center;
+  body.page-node-2843 div.span3 div.tagsBlog iframe.smallScreen,
+  body.node-type-blogosphere div.span3 div.tagsBlog iframe.smallScreen{
+    display: none;
   }
 
-  body.page-node-2843 div.span9 div.enteteBlog > h5{
-    width: 150px;
-    margin: 0 auto;
-    font-size: 2em;
+  body.page-node-2843 div.span3 div.tagsBlog iframe.largeScreen,
+  body.node-type-blogosphere div.span3 div.tagsBlog iframe.largeScreen{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-
-  body.page-node-2843 div.span9 div.enteteArticleAssocies > h5{
+  body.page-node-2843 div.span3 div.tagsBlog div.largeScreen,
+  body.node-type-blogosphere div.span3 div.tagsBlog iframe.largeScreen{
+    display: block;
     width: 250px;
-    margin: 0 auto;
-    font-size: 2em;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  body.page-node-2843 div.span9 div.enteteBlog div,
-  body.page-node-2843 div.span9 div.enteteArticleAssocies div{
-    margin-top: -5px;
+  body.page-node-2843 div.span3 div.tagsBlog div.smallScreen,
+  body.node-type-blogosphere div.span3 div.tagsBlog iframe.smallScreen{
+    display: none;
+  }
+  
+  body.page-node-2843 div.span3 div.baladeBlog h5 > a,
+  body.node-type-blogosphere div.span3 div.baladeBlog h5 > a,
+  body.page-node-2843 div.span3 div.baladeBlog h5,
+  body.node-type-blogosphere div.span3 div.baladeBlog h5{
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  body.page-node-2843 div.span9 div.row-fluid div.span4 a{
-    margin: 0 auto;
+  body.page-node-2843 div.span3 div.baladeBlog p,
+  body.node-type-blogosphere div.span3 div.baladeBlog p{
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  body.page-node-2843 div.span3 div.baladeBlog div,
+  body.node-type-blogosphere div.span3 div.baladeBlog div{
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+@media (min-width: 980px) and (max-width: 1199px){
+  body.page-node-2843 div.span3 div.tagsBlog iframe.smallScreen,
+  body.node-type-blogosphere div.span3 div.tagsBlog iframe.smallScreen  {
+    display: block;
+    width: 400px;
+  }
+
+  body.page-node-2843 div.span3 div.tagsBlog iframe.largeScreen,
+  body.node-type-blogosphere div.span3 div.tagsBlog iframe.largeScreen{
+    display: none;
+  }
+
+  body.page-node-2843 div.span3 div.tagsBlog div.largeScreen,
+  body.node-type-blogosphere div.span3 div.tagsBlog div.largeScreen{
+  {
+    display: none;
+  }
+
+  body.page-node-2843 div.span3 div.tagsBlog div.smallScreen,
+  body.node-type-blogosphere div.span3 div.tagsBlog div.smallScreen{
+  {
+    display: block;
   }
 }
 
-/*@media(max-width: 1024px){
-  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-prev{  
-    left: 49.4%;  
+/********************************************************/
+@media (max-width: 1000px){
+  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > a.lirePlus{
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 
-  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-next{
-    right: 44.2%;
+  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > .likeShareComment{
+    margin-left: 3vw;
+    margin-bottom: 0;
+  } 
+}
+
+@media (min-width: 1199px){
+  body.page-node-2843 div.span3 div.tagsBlog iframe.smallScreen,
+  body.node-type-blogosphere div.span3 div.tagsBlog iframe.smallScreen{
+    display: none;
+    width: 400px;
   }
-}*/*/
+  body.page-node-2843 div.span3 div.tagsBlog iframe.largeScreen,
+  body.node-type-blogosphere div.span3 div.tagsBlog iframe.largeScreen{
+    display: block;
+  }
+  body.page-node-2843 div.span3 div.tagsBlog div.largeScreen,
+  body.node-type-blogosphere div.span3 div.tagsBlog div.largeScreen{
+    display: block;
+  }
+  body.page-node-2843 div.span3 div.tagsBlog div.smallScreen,
+  body.node-type-blogosphere div.span3 div.tagsBlog div.smallScreen{
+    display: none;
+  }
+
+}
+/********************************************************/
+@media (max-width: 767px){
+  body.page-node-2843,
+  body.node-type-blogosphere{
+    width: 100%; 
+    padding: 0;
+    margin: 0;
+  }
+
+  body.page-node-2843  div.blog-banner p,
+  body.node-type-blogosphere  div.blog-banner p{ 
+    font-size: 2em;
+    top: 50%;
+    padding: 0;
+    margin: 0;
+  }
+
+  body.page-node-2843  div.blog-banner #subtxt,
+  body.node-type-blogosphere  div.blog-banner #subtxt{
+    top: 70%;
+    font-size: .8em;
+
+
+  }
+
+}
+
+/********************************************************/
+@media (max-width: 480px){
+  body.page-node-2843,
+  body.node-type-blogosphere{
+    width: auto; 
+    padding: 0;
+  }
+
+  body.page-node-2843 div.blog-banner p,
+  body.node-type-blogosphere div.blog-banner{
+    font-size: 1em;
+  }
+
+
+}
