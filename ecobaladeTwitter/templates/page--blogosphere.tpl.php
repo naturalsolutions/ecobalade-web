@@ -267,9 +267,9 @@ Template d'un article de blog
           </div>
       </div>
       <hr>
-      <h3>Ajouter un commentaire</h3>
-      <?php $comment_view = drupal_get_form("comment_node_blogosphere_form", (object) array('nid' => $nodeId)); ?> 
-      <?php print drupal_render($comment_view); ?>  
+      <!-- <h3>Ajouter un commentaire</h3> -->
+      <?//php $comment_view = drupal_get_form("comment_node_blogosphere_form", (object) array('nid' => $nodeId)); ?> 
+      <?//php print drupal_render($comment_view); ?>  
 
       <!-- fin coprs de l'article -->
     </div> <!--fin container-node-->
