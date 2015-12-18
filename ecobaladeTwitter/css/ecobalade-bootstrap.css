@@ -5452,14 +5452,12 @@ body.node-type-blogosphere article footer{display: none;}
   }
 
   body.page-node-2843 div.span3 div.tagsBlog div.largeScreen,
-  body.node-type-blogosphere div.span3 div.tagsBlog div.largeScreen{
-  {
+  body.node-type-blogosphere div.span3 div.tagsBlog div.largeScreen{  
     display: none;
   }
 
   body.page-node-2843 div.span3 div.tagsBlog div.smallScreen,
-  body.node-type-blogosphere div.span3 div.tagsBlog div.smallScreen{
-  {
+  body.node-type-blogosphere div.span3 div.tagsBlog div.smallScreen{  
     display: block;
   }
 }
