@@ -98,10 +98,11 @@ Template de la page liste des articles
           
         }else {
 
-          drupal_set_title($title = 'Articles du blog : '.$categorie, $output = CHECK_PLAIN);          
 
           $nameCategorie = str_replace('-',' ', $categorie);
           $term = taxonomy_get_term_by_name($nameCategorie, $vocabulary = 'cat_gories_du_blog');           
+          
+          drupal_set_title($title = 'Articles du blog : '.$nameCategorie, $output = CHECK_PLAIN);          
 
           $categorieID = $term->tid;          
           foreach ($term as $key => $value) {
