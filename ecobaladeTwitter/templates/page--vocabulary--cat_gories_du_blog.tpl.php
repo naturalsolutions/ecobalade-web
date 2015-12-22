@@ -355,6 +355,7 @@ Template de la page liste des articles
                 $query = db_select('node', 'n');
                 $query->fields('n', array('nid'));
                 $query->condition('n.type', 'blogosphere');
+                $query->condition('n.status', '1');
                 $query->orderRandom();
                 $query->range(0, 3);
                 $items = $query->execute()->fetchAll();
