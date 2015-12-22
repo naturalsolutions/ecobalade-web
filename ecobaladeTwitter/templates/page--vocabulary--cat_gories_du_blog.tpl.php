@@ -3,7 +3,6 @@
 Template de la page liste des articles
 
 -->
-<link href='https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
 <!-- Debut Widget Facebook -->
 <div id="fb-root"></div>
@@ -65,19 +64,6 @@ Template de la page liste des articles
 
 <?php global $base_url; ?>
 
-<?php 
-  if(isset($_GET['cat']) && $_GET['cat'] != '') $categorie = $_GET['cat']; 
-  else $categorie = '';
-?>
-
-<?php 
-  if(isset($_GET['tag']) && $_GET['tag'] != '') $tags = $_GET['tag'];
-  else $tags = '';
-?>
-
-<?php 
-  if($categorie == '' && $tags == '') $categorie = 'all';
-?>
 
 
   <div class="blog-banner">
@@ -92,6 +78,39 @@ Template de la page liste des articles
   <div class="navbarBlog navbar ">
     <nav class="navigationBlog navbar-inner">
       <ul class="navBlog nav">
+      <?php 
+        //Get current categorie
+        $page_url = $_SERVER['REQUEST_URI'];
+        $url = parse_url($page_url);
+        $tab = $url['path'];
+        $tabFinal = explode("/", $tab);
+        $categorie = end($tabFinal);
+      
+        //set tags per GET for display per tags
+        if(isset($_GET['tag']) && $_GET['tag'] != '') $tags = $_GET['tag'];
+        else $tags = '';
+
+        //Set categorie ID for display per categorie
+        if($categorie == 'blog') {
+
+          drupal_set_title($title = 'Tous les articles du blog', $output = CHECK_PLAIN);
+          $categorieID = 'all';
+          
+        }else {
+
+          drupal_set_title($title = 'Articles du blog : '.$categorie, $output = CHECK_PLAIN);          
+
+          $nameCategorie = str_replace('-',' ', $categorie);
+          $term = taxonomy_get_term_by_name($nameCategorie, $vocabulary = 'cat_gories_du_blog');           
+
+          $categorieID = $term->tid;          
+          foreach ($term as $key => $value) {
+            $categorieID = $value->tid;              
+          } 
+
+        }
+
+      ?>
         <?php
           //Les catégories
           $query = db_select('taxonomy_term_data', 't');
@@ -102,18 +121,15 @@ Template de la page liste des articles
           
           // Execution
           $items = $query->execute()->fetchAll();
-
+ 
           echo "<li><a href='$base_url/blog'>Accueil</a></li>";
           foreach ($items as $key => $value) {
 
             $nameCategorie = $value->name;
+            $urlCategorie = strtolower(str_replace(' ', '-', $nameCategorie));
             $tid = $value->tid;
-            echo "<li><a href='$base_url/blog?cat=$tid'>$nameCategorie</a></li>";       
+            echo "<li><a href='$base_url/blog/categorie/$urlCategorie'>$nameCategorie</a></li>";       
           }    
-          
-          //Article mis en avant slider
-          if ($categorie == '') $res = views_get_view_result("v_liste_article", $display_id = "block_5", $tags);
-          else $res = views_get_view_result("v_liste_article", $display_id = "block_1", $categorie);
           
         ?>
         </ul>
@@ -125,6 +141,10 @@ Template de la page liste des articles
     <div class="swiper-wrapper">
         <!-- Slides -->
         <?php  
+          //Article mis en avant slider     
+          if ($tags != '') $res = views_get_view_result("v_liste_article", $display_id = "block_5", $tags);
+          else $res = views_get_view_result("v_liste_article", $display_id = "block_1", $categorieID);
+
           foreach ($res as $key => $value) { ?>
             <?php
               
@@ -143,16 +163,13 @@ Template de la page liste des articles
                 $blogResume = $currentArticle->body['und'][0]['safe_summary'];
                 $blogContinuerLire = $currentArticle->view_node;
                 
-                // drupal_set_message( "<pre>" . print_r($currentArticle, TRUE) . "</pre>" );
-                
-                 $variables = array(
+                $variables = array(
                   'style_name' => 'article_mis_en_avant_dans_slider',
                   'path' => $currentArticle->field_blog_image['und'][0]['uri'],
                   'alt' => $title
                 );
 
                 $blogImage = theme( 'image_style', $variables );
-                //drupal_set_message( "<pre>" . print_r($blogImage, TRUE) . "</pre>" ); 
               }
             ?>
 
@@ -160,6 +177,7 @@ Template de la page liste des articles
               <div class='row-fluid'>
                 <div class="span12">
                   <a href="<?php echo $base_url.'/node/'.$value->nid; ?>"><?php echo $blogImage; ?></a>
+                  <!-- a modifier pour la réécriture d'url -->
                   <div class="blocLeftSwiper">
                     <div class="buttonSwiper">
                       <div class="swiper-button-prev"><a href="#"><</a></div>
@@ -167,6 +185,7 @@ Template de la page liste des articles
                     </div>
                   </div>
                 </div>
+
                 <div class=" infoArticleBlog">
                   <h1><?php echo $title ?></h1>
                   <?php 
@@ -176,22 +195,23 @@ Template de la page liste des articles
                     } ?>
                   <i><?php echo "Posté dans ".$blogCategorie." le ".$created ?></i>
                   <?php echo $blogResume ?>
-                  <div class="likeShareComment">
-                    <a href="#"><img id="imgLike" src=" <?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-like.png" 
-                             onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-likehover$-.png'" 
-                             onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-like.png'"></a>
-
-                    <a href="#"><img id="imgShare" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/share.png"
-                             onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/sharehover.png'" 
-                             onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/share.png'"></a> 
-
-                    <a href="#"><img id="imgComment" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png"
-                             onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubulehover.png'" 
-                             onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png'"></a>
-                  </div>
+                 <!--  <div class="likeShareComment">
+                   <a href="#"><img id="imgLike" src=" <?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-like.png" 
+                            onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-likehover$-.png'" 
+                            onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-like.png'"></a>
+                 
+                   <a href="#"><img id="imgShare" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/share.png"
+                            onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/sharehover.png'" 
+                            onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/share.png'"></a> 
+                 
+                   <a href="#"><img id="imgComment" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png"
+                            onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubulehover.png'" 
+                            onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png'"></a>
+                 </div> -->
                   
                   
                   <a class="lirePlus" href="<?php echo $base_url.'/node/'.$value->nid; ?>"> Lire plus</a>
+                  <!-- <a class="lirePlus" href="<?php echo $base_url.'/'.$title; ?>">Lire plus</a> -->
                 </div>
 
               </div>
@@ -242,7 +262,7 @@ Template de la page liste des articles
         <!--<h1 class="page-header">--><?php //print $title; ?></h1>
       <?php //endif; ?>
       <?php //print render($title_suffix); ?>
-      <?php //print $messages; ?>
+      <?php print $messages; ?>
       <?php if ($tabs): ?>
         <?php //print render($tabs); ?>
       <?php endif; ?>
@@ -252,19 +272,7 @@ Template de la page liste des articles
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
-      
-        <?php 
-          // 3 derniers articles
-          if ($categorie == ''){
-            $res = views_get_view_result("v_liste_article", $display_id = "block_4", $tags);
-          }
-          else $res = views_get_view_result("v_liste_article", $display_id = "block_2", $categorie);
-          /*******************************************************************************/
-          // drupal_set_message( "<pre>" . print_r(taxonomy_term_load($currentArticle->field_cat_gorie[und][0][name]), TRUE) . "</pre>" );
-          /*******************************************************************************/
-
-        ?>
-      
+            
         <div class="listeArticleBlog">
         <div class="row-fluid">
           <div class="span9"> <!-- debut 3 derniers articles -->
@@ -273,13 +281,19 @@ Template de la page liste des articles
               <div></div>
             </div>
             <?php  
-              foreach ($res as $key => $value) { ?>
-                <?php
+              
+              // 3 derniers articles
+              if ($tags != '') $res = views_get_view_result("v_liste_article", $display_id = "block_4", $tags);          
+              else $res = views_get_view_result("v_liste_article", $display_id = "block_2", $categorieID);     
+
+              //Pour chaque artiles
+              foreach ($res as $key => $value) { 
+                
+                  //Get nid
                   $value->nid;
 
                   //On charger notre article
                   $currentArticle = node_load($value->nid);
-                  // drupal_set_message( "<pre>" . print_r($currentArticle, TRUE) . "</pre>" ); 
                   
                   //get title
                   $title = $currentArticle->title;
@@ -287,6 +301,7 @@ Template de la page liste des articles
                   $blogCategorie = taxonomy_term_load($currentArticle->field_cat_gorie['und'][0]['tid'])->name;
                   $blogResume = $currentArticle->body['und'][0]['safe_summary'];
 
+                  //Get images
                   $variables = array(
                     'style_name' => 'article_du_blog',
                     'path' => $currentArticle->field_blog_image['und'][0]['uri'],
@@ -294,32 +309,34 @@ Template de la page liste des articles
                   );
 
                   $blogImage = theme( 'image_style', $variables );
+
                 ?>
 
-                
+                <!-- Display Article -->
                 <h1><?php echo $title ?></h1>
                 <?php 
-                  if ($currentArticle->field_sous_titre_blog != '') {
-                    $subTitle = $currentArticle->field_sous_titre_blog['und'][0]['value'];
-                    echo "<h2>".$subTitle."</h2>";
-                  } ?>
+                if ($currentArticle->field_sous_titre_blog != '') {
+                  $subTitle = $currentArticle->field_sous_titre_blog['und'][0]['value'];
+                  echo "<h2>".$subTitle."</h2>";
+                } 
+                ?>
                 <i><?php echo "Posté dans ".$blogCategorie." le ".$created ?></i>
                 <br>
                 <a href="<?php echo $base_url.'/node/'.$value->nid; ?>"><?php echo $blogImage; ?></a>
                 <p><?php echo $blogResume ?></p>
-                <div class="likeShareCommentActu">
-                  <a href="#"><img id="imgLike" src=" <?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-like.png" 
-                                    onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-likehover$-.png'" 
-                                    onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-like.png'"></a>
-
-                  <a href="#"><img id="imgShare" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/share.png"
-                                    onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/sharehover.png'" 
-                                    onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/share.png'"></a> 
-
-                  <a href="#"><img id="imgComment" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png"
-                                    onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubulehover.png'" 
-                                    onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png'"></a>
-                </div>
+               <!--  <div class="likeShareCommentActu">
+                 <a href="#"><img id="imgLike" src=" <?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-like.png" 
+                                   onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-likehover$-.png'" 
+                                   onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-like.png'"></a>
+               
+                 <a href="#"><img id="imgShare" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/share.png"
+                                   onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/sharehover.png'" 
+                                   onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/share.png'"></a> 
+               
+                 <a href="#"><img id="imgComment" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png"
+                                   onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubulehover.png'" 
+                                   onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png'"></a>
+               </div> -->
                 <br/>
                 <a class="lirePlus" href="<?php echo $base_url.'/node/'.$value->nid; ?>"> > Continuer de lire</a>
                 <hr>
@@ -334,7 +351,6 @@ Template de la page liste des articles
 
             <div class="row-fluid">
               <!-- mise en page 3 autre articles --> 
-
               <?php
                 $query = db_select('node', 'n');
                 $query->fields('n', array('nid'));
@@ -402,8 +418,8 @@ Template de la page liste des articles
                   $items = $query->execute()->fetchAll();
                   foreach ($items as $key => $value) {
                     $nameTag = $value->name;
-                    $tid = $value->tid;
-                    echo "<li><a href='$base_url/blog?tag=$tid'>$nameTag</a></li>";       
+                    $tid = $value->tid;      
+                    echo "<li><a href='$base_url/blog?tag=$tid'>$nameTag</a></li>";
                   }
                 ?>
               </ul>
@@ -417,17 +433,16 @@ Template de la page liste des articles
             <!-- fin bloc liens sponso -->
 
             <!-- debut bloc insta -->
-            <div class="tagsBlog">
+            <div class="tagsBlog" id="instaBloc">
               <h4>instagram</h4>
               <!-- SnapWidget -->
               <iframe src="http://snapwidget.com/in/?u=ZWNvYmFsYWRlfGlufDgwfDN8M3x8bm98M3xmYWRlT3V0fG9uU3RhcnR8eWVzfG5v&ve=101215" title="Instagram Widget" class="snapwidget-widget largeScreen" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:249px; height:249px;"></iframe>
               <iframe src="http://snapwidget.com/sc/?u=ZWNvYmFsYWRlfGlufDgwfDN8M3x8eWVzfDIwfG5vbmV8b25TdGFydHx5ZXN8bm8=&ve=171215" title="Instagram Widget" class="snapwidget-widget smallScreen" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:200px; height:80px"></iframe>
-
             </div>
             <!-- fin bloc insta -->
 
             <!-- debut bloc FB -->
-            <div class="tagsBlog">
+            <div class="tagsBlog" id="facebookBloc">
               <h4>facebook</h4>
               <div class="largeScreen">
                 <div class="fb-page" data-href="https://www.facebook.com/EcoBalade/" data-width="250" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">

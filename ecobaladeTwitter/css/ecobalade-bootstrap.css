@@ -4743,33 +4743,11 @@ margin-left: 9%;
   body {
     padding-top:20px!important;
   }
-/*   div#container-mobile div#titleOfMobileApp p {
-  font-size: 2em;
-}
-  div#container-mobile div#badge4AppStore {   
-  background: url("../img/badgeAppStore_medium.png") no-repeat scroll 0% 0% transparent;
-  width: 120px;
-  height: 67px;
-  margin-top: 0px;
-  margin-right: 10%;
-}
-div#container-mobile div#badge4GooglePlay {
-  background: url("../img/badgeGooglePlay_medium.png") no-repeat scroll 0% 0% transparent;
-  width: 120px;
-  height: 67px;
-  margin-top: 7%;
-  padding-bottom: 2%;
-  margin-right: 17%;
-} */
-
 }
 @media (max-width: 275px) {
   .navbar .brand img {
     width: 130px;
-  }
-  /*body.front.popup_onload-processed div#cboxOverlay {
-    top: 93px !important;
-  }*/
+  }  
 }
 
 
@@ -4780,24 +4758,21 @@ div#container-mobile div#badge4GooglePlay {
 /*                                                                         */
 /***************************************************************************/
 /*********************************  ****************************************/
-body.page-node-2843 div.view-v-liste-article,
+body.page-taxonomy-term div.view-v-liste-article,
 body.node-type-blogosphere  div.view-v-liste-article{
   background: #fff;
   height: 100%;
   padding: 0;
   margin:0; 
 }
-
-body.page-node-2843 div.container-node div.row section.span12{
+body.page-taxonomy-term div.container-node div.row section.span12{
   background: #fff;
 }
-
-body.page-node-2843 div.container-node,
+body.page-taxonomy-term div.container-node,
 body.node-type-blogosphere div.container-node {
   background: #fff;
 }
-
-body.page-node-2843 div.blog-banner,
+body.page-taxonomy-term div.blog-banner,
 body.node-type-blogosphere div.blog-banner{
   position: relative;
   width: 100%;
@@ -4806,13 +4781,11 @@ body.node-type-blogosphere div.blog-banner{
   padding: 0;
   margin: 0;
 }
-
-body.page-node-2843  div.blog-banner img,
+body.page-taxonomy-term div.blog-banner img,
 body.node-type-blogosphere  div.blog-banner img{
   height: 170px;
 }
-
-body.page-node-2843  div.blog-banner p,
+body.page-taxonomy-term div.blog-banner p,
 body.node-type-blogosphere  div.blog-banner p{ 
   position: absolute;
   top: 20%;
@@ -4821,8 +4794,7 @@ body.node-type-blogosphere  div.blog-banner p{
   color: #fff;
   font-size: 3em;
 }
-
-body.page-node-2843  div.blog-banner #subtxt,
+body.page-taxonomy-term div.blog-banner #subtxt,
 body.node-type-blogosphere  div.blog-banner #subtxt{
   position: absolute;
   top: 50%;
@@ -4830,16 +4802,14 @@ body.node-type-blogosphere  div.blog-banner #subtxt{
   font-size: 1em;
   font-variant: small-caps;
 }
-
-body.page-node-2843  div.container div.row div.view-v-liste-article div.blog-image-article img{
+body.page-taxonomy-term div.container div.row div.view-v-liste-article div.blog-image-article img{
   height: 350px;
   width: 85%;
 }
-
 /*------------*/
 /*--- Nav ----*/
 /*------------*/
-body.page-node-2843 div.navbarBlog nav.navbar-inner,
+body.page-taxonomy-term div.navbarBlog nav.navbar-inner,
 body.node-type-blogosphere div.navbarBlog nav.navbar-inner{
   border: 0px;
   margin: 0 auto;
@@ -4848,19 +4818,16 @@ body.node-type-blogosphere div.navbarBlog nav.navbar-inner{
   display: flex;
   justify-content: center;
 }
-
-body.page-node-2843 div.navbarBlog nav.navigationBlog ul.navBlog,
+body.page-taxonomy-term div.navbarBlog nav.navigationBlog ul.navBlog,
 body.node-type-blogosphere div.navbarBlog nav.navigationBlog ul.navBlog{
   list-style-type: none;
   float: none;
 }
-
-body.page-node-2843 div.navbarBlog nav.navigationBlog ul.navBlog li,
+body.page-taxonomy-term div.navbarBlog nav.navigationBlog ul.navBlog li,
 body.node-type-blogosphere div.navbarBlog nav.navigationBlog ul.navBlog li{
   padding-top: 1em;
 }
-
-body.page-node-2843 div.navbarBlog nav.navigationBlog ul.navBlog a,
+body.page-taxonomy-term div.navbarBlog nav.navigationBlog ul.navBlog a,
 body.node-type-blogosphere div.navbarBlog nav.navigationBlog ul.navBlog a{
   font-family: 'Nunito', sans-serif;
   text-transform: lowercase;
@@ -4875,8 +4842,7 @@ body.node-type-blogosphere div.navbarBlog nav.navigationBlog ul.navBlog a{
   text-shadow: 0 1px 0 #ffffff;
   border-bottom: 1px solid #fff;
 }
-
-body.page-node-2843 div.navbarBlog nav.navigationBlog ul.navBlog a:hover,
+body.page-taxonomy-term div.navbarBlog nav.navigationBlog ul.navBlog a:hover,
 body.node-type-blogosphere div.navbarBlog nav.navigationBlog ul.navBlog a:hover{
   border-bottom: 1px solid #a08a77;
   color: #a08a77;
@@ -4885,27 +4851,24 @@ body.node-type-blogosphere div.navbarBlog nav.navigationBlog ul.navBlog a:hover{
 /*------------*/
 /*-- SWIPER --*/
 /*------------*/
-body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12{
+body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12{
   width: 100%;
   height: auto;
   position: relative;
 }
-
-body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.blocLeftSwiper{
+body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.blocLeftSwiper{
   position: relative;
   width: 60%;
   float: left;
 }
-
-body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.buttonSwiper{
+body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.buttonSwiper{
   position: absolute;
   height: 35px;
   width: 77px;
   right: 30px;
   bottom: 30px;
 }
-
-body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-prev{
+body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-prev{
   height: 30px;
   border: 1px solid #fff;
   border-radius: 3px;
@@ -4913,34 +4876,29 @@ body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row
   text-align: center;
   border-right: 1px solid #fff;
 }
-
-body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-next{
+body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-next{
   height: 30px;
   border: 1px solid #fff;
   border-radius: 3px;
   background-image: none;
   text-align: center;
 }
-
-body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-prev a{
+body.page-taxonomy-term  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-prev a{
   font-size: 16px;
   color: white;
   text-decoration: none;
 }
-
-body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-next a{
+body.page-taxonomy-term  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-next a{ 
   font-size: 16px;
   color: white;
   text-decoration: none;
 }
-
-body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog{
+body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog{
   right: 0;
   height: 100%;
   background-color: rgba(160,138,119,0.8);
 }
-
-body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog h1{
+body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog h1{
   margin: 0;
   margin-left: 1em;
   padding-top: 2vw;
@@ -4948,22 +4906,19 @@ body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row
   color: #fff;
   font-size: 3vw;
 }
-
-body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog h2{
+body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog h2{
   margin: 0;
-  margin-left: 2em;
-  font-family: 'neythalregular';
+  margin-left: 2.5em;
+  font-family: 'Nunito', sans-serif;
   color: #fff;
-  font-size: 1.5vw;
+  font-size: 1.2vw;
 }
-
-body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog i{
+body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog i{
   margin-left: 3vw;
   color: #fff;
   font-size: 1vw;
 }
-
-body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog p{
+body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog p{
   margin-left: 3em;
   margin-top: 1.5vw;
   width: 20vw;
@@ -4971,22 +4926,18 @@ body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row
   font-size: 1vw;
   font-family: 'Nunito', sans-serif;
 }
-
-body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > a{
+body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > a{
   margin-left: 1vw;
   margin-top: 2vw;  
 }
-
-body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > .likeShareComment{
+body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > .likeShareComment{
   margin-left: 3vw;
   margin-bottom: .5vw;
 }
-
-body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > .likeShareComment a{
+body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > .likeShareComment a{
   padding: .2vw;
 }
-
-body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > a.lirePlus{
+body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > a.lirePlus{
   margin-left: 3vw;
   padding-top: .6vw;
   padding-right: 1.40vw;
@@ -5003,17 +4954,15 @@ body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row
 /*------------*/
 /*--- Blog ---*/
 /*------------*/
-
-body.page-node-2843 div.span9 div.enteteBlog,
-body.page-node-2843 div.span9 div.enteteArticleAssocies,
+body.page-taxonomy-term div.span9 div.enteteBlog,
+body.page-taxonomy-term div.span9 div.enteteArticleAssocies,
 body.node-type-blogosphere div.span9 div.enteteArticleAssocies{
   font-variant: small-caps;
   max-width: 850px;
   text-align: center;
   padding-bottom: 2em;
 }
-
-body.page-node-2843 div.span9 div.enteteBlog > h5{
+body.page-taxonomy-term div.span9 div.enteteBlog > h5{
   width: 150px;
   font-family: 'Nunito', sans-serif;
   margin-left: auto;
@@ -5024,10 +4973,8 @@ body.page-node-2843 div.span9 div.enteteBlog > h5{
   color: #494949;
   position: relative;
 }
-
-
-body.page-node-2843 div.span9 div.enteteArticleAssocies > h5,
-body.node-type-blogosphere div.span9 div.enteteArticleAssocies > h5{
+body.node-type-blogosphere div.span9 div.enteteArticleAssocies > h5,
+body.page-taxonomy-term div.span9 div.enteteArticleAssocies > h5{
   width: 250px;
   font-family: 'Nunito', sans-serif;
   margin-left: auto;
@@ -5039,10 +4986,10 @@ body.node-type-blogosphere div.span9 div.enteteArticleAssocies > h5{
   position: relative;
   z-index: 999;
 }
-
-body.page-node-2843 div.span9 div.enteteBlog div,
-body.page-node-2843 div.span9 div.enteteArticleAssocies div,
-body.node-type-blogosphere div.enteteArticleAssocies div{
+body.node-type-blogosphere div.span9 div.enteteBlog div,
+body.node-type-blogosphere div.span9 div.enteteArticleAssocies div,
+body.page-taxonomy-term div.span9 div.enteteArticleAssocies div,
+body.page-taxonomy-term div.span9 div.enteteBlog div{
   margin-top: -15px;
   border-top: 1px solid #ADADAD;
   border-bottom: 1px solid #ADADAD;
@@ -5054,119 +5001,102 @@ body.node-type-blogosphere div.enteteArticleAssocies div{
      box-shadow:        inset  0  2px 1px -1px #ADADAD, 
                         inset  0 -2px 1px -1px #ADADAD;
 }
-
-body.page-node-2843 div.span9 h1{
+body.page-taxonomy-term div.span9 h1{
   font-size:3em;
   margin-bottom: 0;
   font-family: 'neythalregular';
   color: #545454;
   padding-bottom: .2em;
 }
-
-body.page-node-2843 div.span9 h2{
-  font-size:2em;
+body.page-taxonomy-term div.span9 h2{
+  font-size:1.8em;
   margin-bottom: 0;
-  font-family: 'neythalregular';
+  font-family: 'Nunito', sans-serif;
+  font-variant: small-caps;
   color: #545454;
   padding-bottom: .2em;
 }
-
-body.page-node-2843 div.row-fluid div.span9 div.row-fluid div.span4 h2,
-body.node-type-blogosphere div.row-fluid div.span9 div.row-fluid div.span4 h2{
+body.node-type-blogosphere div.row-fluid div.span9 div.row-fluid div.span4 h2,
+body.page-taxonomy-term div.row-fluid div.span9 div.row-fluid div.span4 h2{
   font-size: 1.2em;
   margin: 0;
   color: #545454;
 }
-
-body.page-node-2843 div.span9 a img{
+body.page-taxonomy-term div.span9 a img{
   margin-top: 30px;
   margin-bottom: 30px;
 }
-
-body.page-node-2843 div.row-fluid div.span9 div.span4 a,
-body.node-type-blogosphere div.row-fluid div.span9 div.span4 a{
+body.node-type-blogosphere div.row-fluid div.span9 div.span4 a,
+body.page-taxonomy-term div.row-fluid div.span9 div.span4 a{
   margin-bottom: 1em;
 }
-
-body.page-node-2843 div.row-fluid div.span9 div.span4 a:first-child > img,
-body.node-type-blogosphere div.row-fluid div.span9 div.span4 a:first-child > img{
+body.node-type-blogosphere div.row-fluid div.span9 div.span4 a:first-child > img,
+body.page-taxonomy-term div.row-fluid div.span9 div.span4 a:first-child > img{
   height: 150px;
   width: 100%;
 }
-
-body.page-node-2843 div.row-fluid div.span9 div.span4 h1,
-body.node-type-blogosphere div.row-fluid div.span9 div.span4 h1{
+body.node-type-blogosphere div.row-fluid div.span9 div.span4 h1,
+body.page-taxonomy-term div.row-fluid div.span9 div.span4 h1{
   font-size: 1.7em;
   margin-bottom: -.5em;
   color: #545454;
 }
-
-body.page-node-2843 div.row-fluid div.span9 div.span4 h2,
-body.node-type-blogosphere div.row-fluid div.span9 div.span4 h2{
+body.node-type-blogosphere div.row-fluid div.span9 div.span4 h2,
+body.page-taxonomy-term div.row-fluid div.span9 div.span4 h2{
   margin-left: 2em;
   font-family: 'neythalregular';
   color: #fff;
   font-size: 1.5em;
 }
-
-body.page-node-2843 div.row-fluid div.span9 div.span4 p,
-body.node-type-blogosphere div.row-fluid div.span9 div.span4 p{
+body.node-type-blogosphere div.row-fluid div.span9 div.span4 p,
+body.page-taxonomy-term div.row-fluid div.span9 div.span4 p{
   padding-top: 1em;
   font-size: 1em;
 }
-body.page-node-2843 div.row-fluid div.span9 div.span4 i,
-body.node-type-blogosphere div.row-fluid div.span9 div.span4 i{
+body.node-type-blogosphere div.row-fluid div.span9 div.span4 i,
+body.page-taxonomy-term div.row-fluid div.span9 div.span4 i{
   font-size: .8em;
 }
-
-body.page-node-2843 div.span9 a.lirePlus,
-body.node-type-blogosphere div.span9 a.lirePlus{
+body.node-type-blogosphere div.span9 a.lirePlus,
+body.page-taxonomy-term div.span9 a.lirePlus{
   color:#a08a77;
   text-decoration: none;
   font-weight: bold;
 }
-
-body.page-node-2843 div.span9 div.row-fluid div.span4 a.lirePlus,
-body.node-type-blogosphere div.span9 div.row-fluid div.span4 a.lirePlus{
+body.node-type-blogosphere div.span9 div.row-fluid div.span4 a.lirePlus,
+body.page-taxonomy-term div.span9 div.row-fluid div.span4 a.lirePlus{
   color:#a08a77;
   text-decoration: none;
   font-weight: bold;
 }
-
-body.page-node-2843 div.row-fluid div.span9 div.likeShareCommentActu a{
+body.page-taxonomy-term div.row-fluid div.span9 div.likeShareCommentActu a{
   margin-right: .5%;
 }
-
-
 /*------------*/
 /*--- Blocs --*/
 /*----Blog----*/
 /*------------*/
-body.page-node-2843 div.span3 div.tagsBlog iframe,
-body.node-type-blogosphere div.span3 div.tagsBlog iframe{ 
+body.node-type-blogosphere div.span3 div.tagsBlog iframe,
+body.page-taxonomy-term div.span3 div.tagsBlog iframe{ 
   margin-left: 4%;
 }
-
-body.page-node-2843 div.span3 div.tagsBlog iframe.smallScreen,
-body.page-node-2843 div.span3 div.tagsBlog div.smallScreen
+body.page-taxonomy-term div.span3 div.tagsBlog div.smallScreen,
+body.page-taxonomy-term div.span3 div.tagsBlog iframe.smallScreen
 {
   display: none;
 }
-
-
-body.page-node-2843 div.span3 div.tagsBlog,
-body.page-node-2843 div.span3 div.baladeBlog,
 body.node-type-blogosphere div.span3 div.tagsBlog,
-body.node-type-blogosphere div.span3 div.baladeBlog
+body.node-type-blogosphere div.span3 div.baladeBlog,
+body.page-taxonomy-term div.span3 div.baladeBlog,
+body.page-taxonomy-term div.span3 div.tagsBlog
 {
   border: solid #E3E3E3 1px;
   margin: 2em auto;
 }
-
-body.page-node-2843 div.span3 div.tagsBlog h4,
-body.page-node-2843 div.span3 div.baladeBlog h4,
 body.node-type-blogosphere div.span3 div.tagsBlog h4,
-body.node-type-blogosphere div.span3 div.baladeBlog h4
+body.node-type-blogosphere div.span3 div.baladeBlog h4,
+body.page-taxonomy-term div.span3 div.baladeBlog h4,
+body.page-taxonomy-term div.span3 div.tagsBlog h4
 {
   font-size: 1em;
   font-family: 'Nunito', sans-serif;
@@ -5180,39 +5110,34 @@ body.node-type-blogosphere div.span3 div.baladeBlog h4
   background: #fff;  
   color: #494949;
 }
-
-body.page-node-2843 div.span3 div.tagsBlog ul,
-body.node-type-blogosphere div.span3 div.tagsBlog ul{
+body.node-type-blogosphere div.span3 div.tagsBlog ul,
+body.page-taxonomy-term div.span3 div.tagsBlog ul{
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
 }
-
-body.page-node-2843 div.span3 div.tagsBlog li,
-body.node-type-blogosphere div.span3 div.tagsBlog li{
+body.node-type-blogosphere div.span3 div.tagsBlog li,
+body.page-taxonomy-term div.span3 div.tagsBlog li{
   padding: .5em;
 }
-
-body.page-node-2843 div.span3 div.tagsBlog a,
-body.node-type-blogosphere div.span3 div.tagsBlog a{
+body.node-type-blogosphere div.span3 div.tagsBlog a,
+body.page-taxonomy-term div.span3 div.tagsBlog a{
   padding: .5em;
   background: #E6E6E6;
   color: black;
   text-decoration: none;
 }
-
-body.page-node-2843 div.span3 div.tagsBlog a:hover,
-body.node-type-blogosphere div.span3 div.tagsBlog a:hover{
+body.node-type-blogosphere div.span3 div.tagsBlog a:hover,
+body.page-taxonomy-term div.span3 div.tagsBlog a:hover{
   color: #fff;
   background: #a08a77;
 }
-
 /*------------*/
 /*--- Bloc ---*/
 /*-- Balade --*/
 /*------------*/
-body.page-node-2843 div.span3 div.baladeBlog h5 > a,
-body.node-type-blogosphere div.span3 div.baladeBlog h5 > a{
+body.node-type-blogosphere div.span3 div.baladeBlog h5 > a,
+body.page-taxonomy-term div.span3 div.baladeBlog h5 > a{
   text-align: left;
   color: #545454;
   font-size: 1.1em;
@@ -5221,21 +5146,18 @@ body.node-type-blogosphere div.span3 div.baladeBlog h5 > a{
   margin-left: 10%;
   margin-right: 10%;
 }
-
-body.page-node-2843 div.span3 div.baladeBlog p,
-body.node-type-blogosphere div.span3 div.baladeBlog p{
+body.node-type-blogosphere div.span3 div.baladeBlog p,
+body.page-taxonomy-term div.span3 div.baladeBlog p{
   font-size: .9em;
   margin-left: 10%;
   margin-right: 10%;
 }
-
-body.page-node-2843 div.span3 div.baladeBlog a > img,
-body.node-type-blogosphere div.span3 div.baladeBlog a > img{
+body.node-type-blogosphere div.span3 div.baladeBlog a > img,
+body.page-taxonomy-term div.span3 div.baladeBlog a > img{
   text-align: center;
   margin-left: 10%;
   margin-right: 10%;
 }
-
 /***************************************************************************/
 /***************************************************************************/
 /*                           PAGE ARTCILE                                  */
@@ -5309,130 +5231,128 @@ body.node-type-blogosphere article footer{display: none;}
 /*****************blog_media_queries*********************/
 /********************************************************/
 @media (min-width: 980px){
-  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog{
+  body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog{
     position: absolute;
     width: 40%;
   }
 }
-
 @media (min-width: 320px) and (max-width: 768px){
-  body.page-node-2843  div.blog-banner img,
-  body.node-type-blogosphere  div.blog-banner img{
+  body.node-type-blogosphere div.blog-banner img,
+  body.page-taxonomy-term div.blog-banner img{
     width: 100%;
     padding: 0;
     margin: 0;
   }
 }
-
-/********************************************************/
-/********************************************************/
-/********************************************************/
-/********************************************************/
 @media (min-width: 320px) and (max-width: 470px){
- body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog{
+ body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog{
     height: 350px;
   }
-
 }
+
 @media (min-width: 471px) and (max-width: 615px){
-  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog{
+  body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog{
     height: 330px;
   }
 }
 
 @media (max-width: 979px){
-  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog{
+  body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog{
     text-align: center;
   }
-  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog h1{
+  body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog h1{
       margin-top: -20px;
       font-size: 24px;
   }
-
-  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog h2{
+  body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog h2{
     font-size: 20px; 
     line-height: 20px;
   }
-
-  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog i{
+  body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog i{
     font-size: 12px;
   }
-
-  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.blocLeftSwiper{
+  body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.blocLeftSwiper{
     width: 100%;
-  }
-
-  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.buttonSwiper{
+  }  
+  body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.buttonSwiper{
     position: absolute;
     height: 35px;
     width: 77px;
     right: 5px;
     bottom: 5px;
   }
-
-  body.page-node-2843 div.row-fluid div.span9 div.span4 a:first-child > img,
-  body.node-type-blogosphere div.row-fluid div.span9 div.span4 a:first-child > img{
+  body.node-type-blogosphere div.row-fluid div.span9 div.span4 a:first-child > img,
+  body.page-taxonomy-term div.row-fluid div.span9 div.span4 a:first-child > img{
     height: 260px;
   }
-
-   body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog p{
+  body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog p{
     width: 90%;
     font-size: 12px;
     text-align: center;
   }
-
- body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > a.lirePlus{
+  body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > a.lirePlus{
     display: inline-block;
     width: 80px;
     margin-right: auto;
     margin-left: auto;
     font-size: 12px;
   }
-
-  body.page-node-2843 div.span3 div.tagsBlog iframe.smallScreen,
-  body.node-type-blogosphere div.span3 div.tagsBlog iframe.smallScreen{
+  body.node-type-blogosphere div.span3 div.tagsBlog iframe.smallScreen,
+  body.page-taxonomy-term div.span3 div.tagsBlog iframe.smallScreen{
     display: none;
   }
-
-  body.page-node-2843 div.span3 div.tagsBlog iframe.largeScreen,
-  body.node-type-blogosphere div.span3 div.tagsBlog iframe.largeScreen{
+  body.node-type-blogosphere div.span3 div.tagsBlog iframe.largeScreen,
+  body.page-taxonomy-term div.span3 div.tagsBlog iframe.largeScreen{
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
-
-  body.page-node-2843 div.span3 div.tagsBlog div.largeScreen,
-  body.node-type-blogosphere div.span3 div.tagsBlog iframe.largeScreen{
+  body.node-type-blogosphere div.span3 div.tagsBlog div.largeScreen,
+  body.page-taxonomy-term div.span3 div.tagsBlog div.largeScreen{
     display: block;
     width: 250px;
     margin-left: auto;
     margin-right: auto;
   }
-
-  body.page-node-2843 div.span3 div.tagsBlog div.smallScreen,
-  body.node-type-blogosphere div.span3 div.tagsBlog iframe.smallScreen{
+  body.node-type-blogosphere div.span3 div.tagsBlog div.smallScreen,
+  body.page-taxonomy-term div.span3 div.tagsBlog div.smallScreen{
     display: none;
   }
-  
-  body.page-node-2843 div.span3 div.baladeBlog h5 > a,
   body.node-type-blogosphere div.span3 div.baladeBlog h5 > a,
-  body.page-node-2843 div.span3 div.baladeBlog h5,
-  body.node-type-blogosphere div.span3 div.baladeBlog h5{
+  body.page-taxonomy-term div.span3 div.baladeBlog h5 > a,
+  body.node-type-blogosphere div.span3 div.baladeBlog h5,
+  body.page-taxonomy-term div.span3 div.baladeBlog h5{
     width: 300px;
     margin-left: auto;
     margin-right: auto;
   }
-
-  body.page-node-2843 div.span3 div.baladeBlog p,
-  body.node-type-blogosphere div.span3 div.baladeBlog p{
+  body.node-type-blogosphere div.span3 div.baladeBlog p,
+  body.page-taxonomy-term div.span3 div.baladeBlog p{
     width: 300px;
     margin-left: auto;
     margin-right: auto;
   }
-
-  body.page-node-2843 div.span3 div.baladeBlog div,
-  body.node-type-blogosphere div.span3 div.baladeBlog div{
+  body.node-type-blogosphere div.span3 div.baladeBlog,
+  body.page-taxonomy-term div.span3 div.baladeBlog{
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body.node-type-blogosphere div.span3 div.baladeBlog div,
+  body.page-taxonomy-term div.span3 div.baladeBlog div{
     width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body.node-type-blogosphere div.span3 div#facebookBloc,
+  body.page-taxonomy-term div.span3 div#facebookBloc{
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body.node-type-blogosphere div.span3 div#instaBloc,
+  body.page-taxonomy-term div.span3 div#instaBloc{
+    width: 300px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -5440,100 +5360,97 @@ body.node-type-blogosphere article footer{display: none;}
 }
 
 @media (min-width: 980px) and (max-width: 1199px){
-  body.page-node-2843 div.span3 div.tagsBlog iframe.smallScreen,
-  body.node-type-blogosphere div.span3 div.tagsBlog iframe.smallScreen  {
+
+  body.node-type-blogosphere div.span3 div.tagsBlog iframe.smallScreen,
+  body.page-taxonomy-term div.span3 div.tagsBlog iframe.smallScreen{
     display: block;
     width: 400px;
   }
-
-  body.page-node-2843 div.span3 div.tagsBlog iframe.largeScreen,
-  body.node-type-blogosphere div.span3 div.tagsBlog iframe.largeScreen{
+  body.node-type-blogosphere div.span3 div.tagsBlog iframe.largeScreen,
+  body.page-taxonomy-term div.span3 div.tagsBlog iframe.largeScreen{
     display: none;
   }
-
-  body.page-node-2843 div.span3 div.tagsBlog div.largeScreen,
-  body.node-type-blogosphere div.span3 div.tagsBlog div.largeScreen{  
+  body.node-type-blogosphere div.span3 div.tagsBlog div.largeScreen,
+  body.page-taxonomy-term div.span3 div.tagsBlog div.largeScreen{
     display: none;
   }
-
-  body.page-node-2843 div.span3 div.tagsBlog div.smallScreen,
-  body.node-type-blogosphere div.span3 div.tagsBlog div.smallScreen{  
+  body.node-type-blogosphere div.span3 div.tagsBlog div.smallScreen,
+  body.page-taxonomy-term div.span3 div.tagsBlog div.smallScreen{
     display: block;
+  }
+  body.page-taxonomy-term div.span3 div.baladeBlog a > img,
+  body.node-type-blogosphere div.span3 div.baladeBlog a > img{
+    margin:0;
+    padding:0;
   }
 }
 
 /********************************************************/
 @media (max-width: 1000px){
-  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > a.lirePlus{
+  body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > a.lirePlus,
+  body.node-type-blogosphere div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > a.lirePlus{
     padding-top: 5px;
     padding-bottom: 5px;
   }
-
-  body.page-node-2843  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > .likeShareComment{
+  body.node-type-blogosphere div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > .likeShareComment
+  body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > .likeShareComment{
     margin-left: 3vw;
     margin-bottom: 0;
   } 
 }
 
 @media (min-width: 1199px){
-  body.page-node-2843 div.span3 div.tagsBlog iframe.smallScreen,
-  body.node-type-blogosphere div.span3 div.tagsBlog iframe.smallScreen{
+  body.node-type-blogosphere div.span3 div.tagsBlog iframe.smallScreen,
+  body.page-taxonomy-term div.span3 div.tagsBlog iframe.smallScreen {
     display: none;
     width: 400px;
   }
-  body.page-node-2843 div.span3 div.tagsBlog iframe.largeScreen,
-  body.node-type-blogosphere div.span3 div.tagsBlog iframe.largeScreen{
+  body.node-type-blogosphere div.span3 div.tagsBlog iframe.largeScreen,
+  body.page-taxonomy-term div.span3 div.tagsBlog iframe.largeScreen{
     display: block;
   }
-  body.page-node-2843 div.span3 div.tagsBlog div.largeScreen,
-  body.node-type-blogosphere div.span3 div.tagsBlog div.largeScreen{
+  body.node-type-blogosphere div.span3 div.tagsBlog div.largeScreen,
+  body.page-taxonomy-term div.span3 div.tagsBlog div.largeScreen{
     display: block;
   }
-  body.page-node-2843 div.span3 div.tagsBlog div.smallScreen,
-  body.node-type-blogosphere div.span3 div.tagsBlog div.smallScreen{
+  body.node-type-blogosphere div.span3 div.tagsBlog div.smallScreen,
+  body.page-taxonomy-term div.tagsBlog div.smallScreen{
     display: none;
   }
 
 }
 /********************************************************/
 @media (max-width: 767px){
-  body.page-node-2843,
-  body.node-type-blogosphere{
+  body.node-type-blogosphere,
+  body.page-taxonomy-term {
     width: 100%; 
     padding: 0;
     margin: 0;
   }
-
-  body.page-node-2843  div.blog-banner p,
-  body.node-type-blogosphere  div.blog-banner p{ 
+  body.node-type-blogosphere  div.blog-banner p,
+  body.page-taxonomy-term div.blog-banner p{ 
     font-size: 2em;
     top: 50%;
     padding: 0;
     margin: 0;
   }
-
-  body.page-node-2843  div.blog-banner #subtxt,
-  body.node-type-blogosphere  div.blog-banner #subtxt{
+  body.node-type-blogosphere  div.blog-banner #subtxt,
+  body.page-taxonomy-term div.blog-banner #subtxt{
     top: 70%;
     font-size: .8em;
-
-
   }
 
 }
 
 /********************************************************/
 @media (max-width: 480px){
-  body.page-node-2843,
-  body.node-type-blogosphere{
+  body.node-type-blogosphere,
+  body.page-taxonomy-term {
     width: auto; 
     padding: 0;
   }
-
-  body.page-node-2843 div.blog-banner p,
-  body.node-type-blogosphere div.blog-banner{
+  body.node-type-blogosphere div.blog-banner,
+  body.page-taxonomy-term div.blog-banner{
     font-size: 1em;
   }
-
-
 }

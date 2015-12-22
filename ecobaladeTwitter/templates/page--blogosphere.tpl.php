@@ -99,12 +99,14 @@ Template d'un article de blog
 
             $nameCategorie = $value->name;
             $tid = $value->tid;
-            echo "<li><a href='$base_url/blog?cat=$tid'>$nameCategorie</a></li>";       
+            // echo "<li><a href='$base_url/blog?cat=$tid'>$nameCategorie</a></li>";
+            echo "<li><a href='$base_url/blog/categorie/$nameCategorie'>$nameCategorie</a></li>";       
+
           }    
           
           //Article mis en avant slider
-          if ($categorie == '') $res = views_get_view_result("v_liste_article", $display_id = "block_5", $tags);
-          else $res = views_get_view_result("v_liste_article", $display_id = "block_1", $categorie);
+          if ($categorie == '') $res = views_get_view_result("v_liste_article", $display_id = "block_5", $nameTag);
+          else $res = views_get_view_result("v_liste_article", $display_id = "block_1", $nameCategorie);
         ?>
         </ul>
     </nav>
@@ -123,7 +125,6 @@ Template d'un article de blog
           $nodeId = arg(1);
           $node = node_load($nid = $nodeId);
         ?>
-        <?php //drupal_set_message( "<pre>" . print_r($page['content']['system_main']['nodes'][$nodeId]['body'][''], TRUE) . "</pre>" ); ?>
 
        <?php 
           $currentArticle = node_load($nid=$nodeId);
@@ -142,7 +143,7 @@ Template d'un article de blog
         ?>
 
         <?php echo $blogImage; ?>
-        <div class="likeShareCommentActu">
+        <!-- <div class="likeShareCommentActu">
           <a href="#"><img id="imgLike" src=" <?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-like.png" 
                             onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-likehover$-.png'" 
                             onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-like.png'"></a>
@@ -152,7 +153,7 @@ Template d'un article de blog
           <a href="#"><img id="imgComment" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png"
                             onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubulehover.png'" 
                             onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png'"></a>
-        </div>
+        </div> -->
         
         <h1><?php echo $title; ?></h1>  
         <?php echo "<p class='created'>&Eacutecrit par ".$currentArticle->name." le ".$created."</p>"; ?>
@@ -179,7 +180,7 @@ Template d'un article de blog
           <?php if ($action_links): ?>
             <ul class="action-links"><?php //print render($action_links); ?></ul>
           <?php endif; ?>
-          <?php print render($page['content']); ?>
+          <?php // print render($page['content']); ?>
         </div>
   	  </section>
 
@@ -239,12 +240,6 @@ Template d'un article de blog
             <br>
 
             <h1><?php echo $title ?></h1>
-            <?php 
-              // if ($currentArticle->field_sous_titre_blog != '') {
-              //   $subTitle = $currentArticle->field_sous_titre_blog['und'][0]['value'];
-              //   echo "<h2>".$subTitle."</h2>";
-              // } 
-            ?>
             <i><?php echo "Posté dans ".$blogCategorie." le ".$created ?></i>
             <p><?php echo $blogResume ?></p>
             <br/><a class="lirePlus" href="<?php echo $base_url.'/node/'.$value->nid; ?>"> > Continuer de lire</a>
@@ -267,9 +262,7 @@ Template d'un article de blog
           </div>
       </div>
       <hr>
-      <!-- <h3>Ajouter un commentaire</h3> -->
-      <?//php $comment_view = drupal_get_form("comment_node_blogosphere_form", (object) array('nid' => $nodeId)); ?> 
-      <?//php print drupal_render($comment_view); ?>  
+ 
 
       <!-- fin coprs de l'article -->
     </div> <!--fin container-node-->
@@ -291,27 +284,42 @@ Template d'un article de blog
             foreach ($items as $key => $value) {
               $nameTag = $value->name;
               $tid = $value->tid;
-              echo "<li><a href='$base_url/blog?tag=$tid'>$nameTag</a></li>";       
+              // echo "<li><a href='$base_url/blog?tag=$tid'>$nameTag</a></li>";
+              echo "<li><a href='$base_url/blog/tags/$nameTag'>$nameTag</a></li>";       
+
             }
           ?>
         </ul>
       </div>
       <!-- fin bloc tags -->
       <!-- debut bloc insta -->
-      <div class="tagsBlog">
+      <div class="tagsBlog" id="instaBloc">
         <h4>instagram</h4>
-        <iframe src="http://snapwidget.com/in/?u=ZWNvYmFsYWRlfGlufDgwfDN8M3x8bm98M3xmYWRlT3V0fG9uU3RhcnR8eWVzfG5v&ve=101215" title="Instagram Widget" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:249px; height:249px;"></iframe>
+        <!-- SnapWidget -->
+        <iframe src="http://snapwidget.com/in/?u=ZWNvYmFsYWRlfGlufDgwfDN8M3x8bm98M3xmYWRlT3V0fG9uU3RhcnR8eWVzfG5v&ve=101215" title="Instagram Widget" class="snapwidget-widget largeScreen" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:249px; height:249px;"></iframe>
+        <iframe src="http://snapwidget.com/sc/?u=ZWNvYmFsYWRlfGlufDgwfDN8M3x8eWVzfDIwfG5vbmV8b25TdGFydHx5ZXN8bm8=&ve=171215" title="Instagram Widget" class="snapwidget-widget smallScreen" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:200px; height:80px"></iframe>
       </div>
       <!-- fin bloc insta -->
 
       <!-- debut bloc FB -->
-      <div class="tagsBlog">
+      <div class="tagsBlog" id="facebookBloc">
         <h4>facebook</h4>
-        <div class="fb-page" data-href="https://www.facebook.com/EcoBalade/" data-width="250" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-          <div class="fb-xfbml-parse-ignore">
-            <blockquote cite="https://www.facebook.com/EcoBalade/">
-              <a href="https://www.facebook.com/EcoBalade/">EcoBalade</a>
-            </blockquote>
+        <div class="largeScreen">
+          <div class="fb-page" data-href="https://www.facebook.com/EcoBalade/" data-width="250" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+            <div class="fb-xfbml-parse-ignore">
+              <blockquote cite="https://www.facebook.com/EcoBalade/">
+                <a href="https://www.facebook.com/EcoBalade/">EcoBalade</a>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="smallScreen">
+          <div class="fb-page" data-href="https://www.facebook.com/EcoBalade/" data-width="200" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+            <div class="fb-xfbml-parse-ignore">
+              <blockquote cite="https://www.facebook.com/EcoBalade/">
+                <a href="https://www.facebook.com/EcoBalade/">EcoBalade</a>
+              </blockquote>
+            </div>
           </div>
         </div>
       </div>
@@ -319,26 +327,28 @@ Template d'un article de blog
       <!-- debut bloc balade du mois -->
       <div class="baladeBlog">
         <h4>la balade du mois</h4>
-        <?php 
-          $query = db_select('node', 'n');
-          $query->fields('n', array('nid'));
-          $query->condition('n.type', 'balade');
-          $query->condition('n.promote', 0, '<>');
-          $items = $query->execute()->fetchAll();
-          $monNode = node_load($items[0]->nid);
-          $photoBalade = $monNode->field_photo_resume['und'][0]['uri'];
-          $titreBalade = $monNode->title;
-          $resumeBalade = $monNode->field_teaser['und'][0]['value'];
-           $variables = array(
-              'style_name' => 'medium',
-              'path' => $photoBalade,
-              'alt' => $titreBalade
-            );
-            $blogImageBalade = theme( 'image_style', $variables );
-         ?>
-        <a href="<?php echo $base_url.'/node/'.$value->nid;?>"><?php echo $blogImageBalade; ?></a>
-        <h5><a href="<?php echo $base_url.'/node/'.$value->nid;?>"><?php echo $titreBalade; ?></a></h5>
-        <p><?php echo$resumeBalade; ?></p>
+        <div>
+          <?php 
+            $query = db_select('node', 'n');
+            $query->fields('n', array('nid'));
+            $query->condition('n.type', 'balade');
+            $query->condition('n.promote', 0, '<>');
+            $items = $query->execute()->fetchAll();
+            $monNode = node_load($items[0]->nid);
+            $photoBalade = $monNode->field_photo_resume['und'][0]['uri'];
+            $titreBalade = $monNode->title;
+            $resumeBalade = $monNode->field_teaser['und'][0]['value'];
+             $variables = array(
+                'style_name' => 'medium',
+                'path' => $photoBalade,
+                'alt' => $titreBalade
+              );
+              $blogImageBalade = theme( 'image_style', $variables );
+           ?>
+          <a href="<?php echo $base_url.'/node/'.$value->nid;?>"><?php echo $blogImageBalade; ?></a>
+          <h5><a href="<?php echo $base_url.'/node/'.$value->nid;?>"><?php echo $titreBalade; ?></a></h5>
+          <p><?php echo$resumeBalade; ?></p>
+        </div>
       </div>
       <!-- fin bloc balade du mois -->
     </div> <!-- fin sidebarre droite -->

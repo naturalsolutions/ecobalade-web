@@ -8,6 +8,19 @@ function  ecobaladeTwitter_preprocess_page(&$vars) {
 		$vars['comment_form'] =drupal_get_form("comment_node_{$vars['node']->type}_form", (object) array('nid' => $vars['node']->nid));
 	}
   }
+  //Pour avoir un tpl de page pour tous les termes de taxo (notament le blog)
+  if (arg(0) == 'taxonomy' && arg(1) == 'term' && is_numeric(arg(2))) {
+    $tid = arg(2);
+    $vid = db_query("SELECT vid FROM {taxonomy_term_data} WHERE tid = :tid", array(':tid' => $tid))->fetchField();
+    
+    $query = db_select('taxonomy_vocabulary', 't');
+    $query->fields('t', array('machine_name'));
+    $query->condition('vid', $vid);    
+    $items = $query->execute()->fetchAll();    
+    foreach ($items as $key => $value) $machineNameVacabulary = $value->machine_name;
+    
+    $vars['theme_hook_suggestions'][] = 'page__vocabulary__' . $machineNameVacabulary;
+  }
 }
 
 function ecobaladeTwitter_preprocess_region(&$variables, $hook) {
