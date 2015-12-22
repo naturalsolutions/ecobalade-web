@@ -4817,6 +4817,11 @@ body.node-type-blogosphere div.navbarBlog nav.navbar-inner{
   max-width: 850px;
   display: flex;
   justify-content: center;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  -ms-box-shadow: none;
 }
 body.page-taxonomy-term div.navbarBlog nav.navigationBlog ul.navBlog,
 body.node-type-blogosphere div.navbarBlog nav.navigationBlog ul.navBlog{
