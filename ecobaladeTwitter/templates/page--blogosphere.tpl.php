@@ -94,15 +94,14 @@ Template d'un article de blog
           // Execution
           $items = $query->execute()->fetchAll();
 
-          echo "<li><a href='$base_url/blog'>Accueil</a></li>";
+         echo "<li><a href='$base_url/blog'>Accueil</a></li>";
           foreach ($items as $key => $value) {
 
             $nameCategorie = $value->name;
+            $urlCategorie = strtolower(str_replace(' ', '-', $nameCategorie));
             $tid = $value->tid;
-            // echo "<li><a href='$base_url/blog?cat=$tid'>$nameCategorie</a></li>";
-            echo "<li><a href='$base_url/blog/categorie/$nameCategorie'>$nameCategorie</a></li>";       
-
-          }    
+            echo "<li><a href='$base_url/blog/categorie/$urlCategorie'>$nameCategorie</a></li>";       
+          }       
           
           //Article mis en avant slider
           if ($categorie == '') $res = views_get_view_result("v_liste_article", $display_id = "block_5", $nameTag);
@@ -210,6 +209,7 @@ Template d'un article de blog
           $query = db_select('node', 'n');
           $query->fields('n', array('nid'));
           $query->condition('n.type', 'blogosphere');
+          $query->condition('n.status', '1');
           $query->orderRandom();
           $query->range(0, 3);
           $items = $query->execute()->fetchAll();
@@ -278,14 +278,17 @@ Template d'un article de blog
             $query->fields('t', array('name'));
             $query->fields('t', array('tid'));
             $query->join('field_data_field_cat_gorie_secondaire', 'c', 't.tid = c.field_cat_gorie_secondaire_tid');
+            $query->join('taxonomy_index', 'd', 't.tid = d.tid');
+            $query->join('node', 'n', 'n.nid = d.nid');
+            $query->condition('n.status', '1');
             
             // Execution
             $items = $query->execute()->fetchAll();
             foreach ($items as $key => $value) {
               $nameTag = $value->name;
               $tid = $value->tid;
-              // echo "<li><a href='$base_url/blog?tag=$tid'>$nameTag</a></li>";
-              echo "<li><a href='$base_url/blog/tags/$nameTag'>$nameTag</a></li>";       
+              echo "<li><a href='$base_url/blog?tag=$tid'>$nameTag</a></li>";
+              //echo "<li><a href='$base_url/blog/tags/$nameTag'>$nameTag</a></li>";       
 
             }
           ?>

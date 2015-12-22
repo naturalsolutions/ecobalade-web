@@ -347,6 +347,12 @@ Template de la page liste des articles
 
 
                 <?php } ?>
+                <div class="nextArticles"> <p id ="test">
+                  
+                </p></div>
+
+                <!-- <input type="submit" class="btn btn-success" id="more" value="Plus d'Articles" /> -->
+
 
             <div class="enteteArticleAssocies">
               <h5>articles associés</h5>
@@ -532,7 +538,7 @@ Template de la page liste des articles
    <?php print render($page['footer']); ?>
 
 <script type="text/javascript">
-  
+
 var galleryLogoOnEnParle = new Swiper('.swiper-blog', {       
         slidesPerView: 1,
         loopedSlides : 1, 
@@ -542,5 +548,27 @@ var galleryLogoOnEnParle = new Swiper('.swiper-blog', {
         autoplay : 3500,
         loop: true
     });
+  
+/*var urlService = "<?php echo $base_url.'/blog/allblogarticle' ;?>";
+var blog = "<?php echo $base_url.'/blog' ;?>";
+var currentUrl = window.location.href;
+$("#more").click(function(){ 
+  console.log(currentUrl);
+  if(currentUrl == blog)
+  {
+    $.getJSON(urlService, function(data){
+      for (i = 3; i < data.length; i++){
+
+        $('p.#test').prepend('<p>'+ data[i].corps +'</p>');
+        $('p.#test').prepend('<i> Posté dans '+ data[i].cat +' le '+data[i].date+'</i>');
+        $('p.#test').prepend('<h2>'+ data[i].subtitle +'</h2>');
+        $('p.#test').prepend('<h1>'+ data[i].title +'</h1>');
+      }
+    });
+  }
+
+});*/
+  
+
 </script>
 

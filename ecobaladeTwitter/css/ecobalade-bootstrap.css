@@ -15,11 +15,6 @@
 /*                          FONT - POLICE                                  */
 /*                                                                         */
 /***************************************************************************/
-
-@font-face {
-    font-family: 'test';    
-} 
-
 @font-face {
     font-family: 'Rockwell-Light';
     src: url('./font/RockwellStd-Light.ttf');
@@ -76,7 +71,7 @@
 }
 
 /*Font pour le blog*/
-@font-face {
+/* @font-face {
     font-family: 'neythalbold';
     src: url('./font/neythal-bold-webfont.eot');
     src: url('./font/neythal-bold-webfont.eot?#iefix') format('embedded-opentype'),
@@ -84,10 +79,10 @@
          url('./font/neythal-bold-webfont.woff') format('woff'),
          url('./font/neythal-bold-webfont.ttf') format('truetype'),
          url('./font/neythal-bold-webfont.svg#neythalbold') format('svg');
-    font-weight: normal;
+    font-weight: 800;
     font-style: normal;
 
-}
+} */
 
 @font-face {
     font-family: 'neythalregular';
@@ -97,7 +92,7 @@
          url('./font/neythal-regular-webfont.woff') format('woff'),
          url('./font/neythal-regular-webfont.ttf') format('truetype'),
          url('./font/neythal-regular-webfont.svg#neythalregular') format('svg');
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
 
 }
@@ -3686,6 +3681,13 @@ margin-left: 9%;
 
 /******************MEDIA QUERIES***************/
 /* Large desktop au dessous de 1235*/
+@media (max-width: 1300px) {
+  .navbar .brand {
+    left: 3%;  
+  }
+
+}
+/* Large desktop au dessous de 1235*/
 @media (max-width: 1235px) {
   body.front div#img-front {
     background-position: 84% 0%;
@@ -3747,13 +3749,19 @@ margin-left: 9%;
 
 } 
 /*entre 980px et 1200px*/
-@media (min-width: 980px) and (max-width: 1200px){
+@media (min-width: 980px) and (max-width: 1199px){
   #navbar > div > div > a.brand > img {
     height: 67%;
     padding-top: 9px;
+    display: none;
   }
   .navbar .brand {
-    left: 1%;
+    background: url('../img/logo_soft.png') no-repeat 50% 50% transparent;
+    background-size: 100%;
+    padding: 0;
+    height: 100%;
+    width: 53px;
+    margin: 0;
   }
   .hero-unit h1{
   font-size:50px;
@@ -3776,6 +3784,10 @@ margin-left: 9%;
     width: 55% !important;
     left: 20.5% !important;  
   }
+  .navbar .brand {  
+    width: 44px;
+    margin-left: -28px;
+  }
 }
 @media  (max-width: 1000px) {
   body.front div#img-front {
@@ -3785,9 +3797,10 @@ margin-left: 9%;
 
 @media  (max-width: 979px) {
   /*MENU*/
-  body div.nav-collapse.pull-right.in.collapse{
+  div.nav-collapse.pull-right.in.collapse{
     width: 100%;
     text-align:center;
+    padding-top: 24px;
   }
   /*HP*/
   body.front span.txt-front {
@@ -3893,8 +3906,10 @@ margin-left: 9%;
     margin-left: 0;
     width: 100%;
   }
-  body .navbar .brand {
+  .navbar .brand {
     height: auto;
+    width: auto;
+    margin: 0;
   }
   /*PAGE LES BALADES*/
   body.page-liste-balades div.container-node > .row > aside, body.page-liste-balades div.container-node > .row > section {
@@ -4746,7 +4761,7 @@ margin-left: 9%;
 }
 @media (max-width: 275px) {
   .navbar .brand img {
-    width: 130px;
+    width: 190px;
   }  
 }
 
@@ -5039,6 +5054,7 @@ body.node-type-blogosphere div.row-fluid div.span9 div.span4 a:first-child > img
 body.page-taxonomy-term div.row-fluid div.span9 div.span4 a:first-child > img{
   height: 150px;
   width: 100%;
+  object-fit: cover;
 }
 body.node-type-blogosphere div.row-fluid div.span9 div.span4 h1,
 body.page-taxonomy-term div.row-fluid div.span9 div.span4 h1{
@@ -5169,6 +5185,9 @@ body.page-taxonomy-term div.span3 div.baladeBlog a > img{
 /*                                                                         */
 /***************************************************************************/
 /*********************************  ****************************************/
+body.node-type-blogoshpere div.contentArticle img{
+  padding: 0px 10px 10px 0px;
+}
 body.node-type-blogosphere div.container div.row-fluid div.span9 section div.user-picture{
   display: none; 
 }
