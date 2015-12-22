@@ -121,7 +121,7 @@ Template de la page liste des articles
           $query->join('taxonomy_index', 'd', 't.tid = d.tid');
           $query->join('node', 'n', 'n.nid = d.nid');
           $query->condition('n.status', '1');
-          
+
           // Execution
           $items = $query->execute()->fetchAll();
  
@@ -417,6 +417,9 @@ Template de la page liste des articles
                   $query->fields('t', array('name'));
                   $query->fields('t', array('tid'));
                   $query->join('field_data_field_cat_gorie_secondaire', 'c', 't.tid = c.field_cat_gorie_secondaire_tid');
+                  $query->join('taxonomy_index', 'd', 't.tid = d.tid');
+                  $query->join('node', 'n', 'n.nid = d.nid');
+                  $query->condition('n.status', '1');
                   
                   // Execution
                   $items = $query->execute()->fetchAll();
