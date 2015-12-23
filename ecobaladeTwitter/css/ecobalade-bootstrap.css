@@ -16,6 +16,9 @@
 /*                                                                         */
 /***************************************************************************/
 @font-face {
+    font-family: 'Anti_bug_font';
+}
+@font-face {
     font-family: 'Rockwell-Light';
     src: url('./font/RockwellStd-Light.ttf');
     src: url('./font/RockwellStd-Light.eot') format('embedded-opentype'),
@@ -96,6 +99,8 @@
     font-style: normal;
 
 }
+
+/* @import url(https://fonts.googleapis.com/css?family=Nunito:400,300,700); */
 /***************************************************************************/
 /*                          DIVERS - Tools                                 */
 /*                                                                         */
@@ -4852,7 +4857,7 @@ body.node-type-blogosphere div.navbarBlog nav.navigationBlog ul.navBlog a{
   font-family: 'Nunito', sans-serif;
   text-transform: lowercase;
   font-variant: small-caps;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
   font-size: 1.2em;
   margin: 15px 20px 10px;
@@ -4930,6 +4935,7 @@ body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.
   margin: 0;
   margin-left: 2.5em;
   font-family: 'Nunito', sans-serif;
+  font-weight: 300;
   color: #fff;
   font-size: 1.2vw;
 }
@@ -4945,6 +4951,7 @@ body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.
   color: #fff;
   font-size: 1vw;
   font-family: 'Nunito', sans-serif;
+  font-weight: 300;
 }
 body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > a{
   margin-left: 1vw;
@@ -4998,6 +5005,7 @@ body.page-taxonomy-term div.span9 div.enteteArticleAssocies > h5{
   width: 250px;
   font-family: 'Nunito', sans-serif;
   margin-left: auto;
+  font-weight: 300;
   margin-right: auto;
   height: 30px;
   font-size: 2em;
@@ -5032,6 +5040,7 @@ body.page-taxonomy-term div.span9 h2{
   font-size:1.8em;
   margin-bottom: 0;
   font-family: 'Nunito', sans-serif;
+  font-weight: 300;
   font-variant: small-caps;
   color: #545454;
   padding-bottom: .2em;
@@ -5121,7 +5130,7 @@ body.page-taxonomy-term div.span3 div.tagsBlog h4
 {
   font-size: 1em;
   font-family: 'Nunito', sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   font-variant: small-caps;
   width: 130px;
   margin-left: auto;
@@ -5217,6 +5226,7 @@ body.node-type-blogosphere div.container div.row-fluid div.span9 section div.con
   font-size: 1.5em;
   color: #858585;
   font-family: 'Nunito', sans-serif;
+  font-weight: 300;
 }
 body.node-type-blogosphere div.container div.row-fluid div.span9 section div.contentArticle h3::after{
   content: "" ;
@@ -5228,6 +5238,7 @@ body.node-type-blogosphere div.container div.row-fluid div.span9 section div.con
 
 body.node-type-blogosphere div.container div.row-fluid div.span9 section p.created{
   font-family: 'Nunito', sans-serif;
+  font-weight: 300;
   color: #707070;
   font-size: 1em;
   text-align: center;

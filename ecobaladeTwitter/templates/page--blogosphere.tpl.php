@@ -3,8 +3,6 @@
 Template d'un article de blog
 
 -->
-<link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
-
 <header id="navbar" role="banner" class="navbar navbar-fixed-top">
   <div class="navbar-inner">
   	<div class="container">
