@@ -340,7 +340,7 @@ $baladenid = $node->nid;
 		
 		<?php print views_embed_view('v_caracteristiques_balade','block_1',$baladenid);?>
 		<br/>
-		<a href="https://clk.tradedoubler.com/click?p=117553&a=2794210&g=21636760" target="_BLANK"><img src="https://impfr.tradedoubler.com/imp?type(img)g(21636760)a(2794210)" border=0></a>
+		<!-- <a href="https://clk.tradedoubler.com/click?p=117553&a=2794210&g=21636760" rel="nofollow" target="_BLANK"><img src="https://impfr.tradedoubler.com/imp?type(img)g(21636760)a(2794210)" border=0></a> -->
 		<h2>Localisation</h2>
 		<?php print views_embed_view('v_map_localisation_balade','block',$baladenid);?>
 		<h2>Informations pratiques</h2>
