@@ -25,6 +25,11 @@
 
 
   <!-- Tracker Google Analitycs -->
+  <?php 
+  global $base_url;  
+  // Desactivate for instance de demo et de dev
+  if($base_url == 'http://www.ecobalade.fr'):
+  ?>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-37580907-1']);
@@ -36,7 +41,7 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
   </script>
-  
+  <?php endif; ?>
   <!-- TradeDoubler site verification 2794210 -->
 </head>
 
