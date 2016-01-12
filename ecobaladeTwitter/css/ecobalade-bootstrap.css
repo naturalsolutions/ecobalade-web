@@ -826,6 +826,9 @@ body.front figure{
 /***************************************************************************/
 /*********************************  ****************************************/
 /*********************************  ****************************************/
+body.node-type-balade section#comments section.collapseComment{
+  background-position:  0 0 !important;  
+}
 body.node-type-balade div#baladeSimilaire figure{
   margin-bottom: 1px;
 }
@@ -923,9 +926,9 @@ body.node-type-balade aside.region-sidebar-second h2{
   border-radius: 4px 4px 0px 0px;
     
 }
-body.node-type-balade section#comments{
+/* section#comments{
   margin-top: 21px;
-}
+} */
 body.node-type-balade h1.page-header{
   position: relative;  
   padding-right: 20%;
@@ -1046,16 +1049,25 @@ body.node-type-balade a#btn-esp {
   width: 100%;
   color: #fff;
 }
-body.node-type-balade section#comments section.collapseComment{
-  background: url('../img/comment_picto.png') no-repeat 0% 2px #f5f5f5;
+section#comments section.collapseComment{
+  background: url('../img/comment_picto.png') no-repeat 0% -21px #f5f5f5;
   background-size: 13%;
 }
-body.node-type-balade section#comments section.collapseComment form{
+section#comments section.collapseComment form{
   display: none;
 }
-body.node-type-balade section#comments section.collapseComment h2{
+section#comments section.collapseComment p.title{
+  padding-bottom: 15px;
   cursor: pointer;
   padding-left: 10%;
+  display: block;
+  color: #4dbb74;
+  font-size: 31.5px;
+  line-height: 40px;
+  margin: 10px 0;
+  font-family: 'Rockwell-Regular';
+  font-weight: 400;
+  text-rendering: auto;
 }
 body.node-type-balade ul#myTab a.back-page{
   text-shadow: none;
@@ -1270,17 +1282,6 @@ body.node-type-espece article.node-espece > div, body.page-comment-reply article
 }
 body.node-type-espece article.node-espece{
   background-color: #fff;
-}
-body.node-type-espece section#comments section.collapseComment{
-  background: url('../img/comment_picto.png') no-repeat 0% -27px #f5f5f5;
-  background-size: 13%;
-}
-body.node-type-espece section#comments section.collapseComment form{
-  display: none;
-}
-body.node-type-espece section#comments section.collapseComment h2{
-  cursor: pointer;
-  padding-left: 10%;
 }
 body.node-type-espece #blockCriteresEspece{
   padding: 0px 10px 0 10px;
@@ -4775,6 +4776,22 @@ margin-left: 9%;
 /*                                                                         */
 /***************************************************************************/
 /*********************************  ****************************************/
+body.page-taxonomy-term div.boutons_partage,
+body.node-type-blogosphere div.boutons_partage{
+      display: inline-block;
+}
+body.page-taxonomy-term a.commentButton,
+body.node-type-blogosphere a.commentButton{
+  display: inline-block;
+  margin-left: 3px;
+}
+body.page-taxonomy-term div.likeShareCommentActu.inSlider{
+  margin-left: 4em;
+}
+body.node-type-blogosphere article.node-blogosphere header span.submitted, body.node-type-blogosphere fieldset.filter-wrapper.form-wrapper{display:  none; }
+body.node-type-blogosphere section#comments section.collapseComment{
+  background-position:  0 0 !important;  
+}
 body.page-taxonomy-term div.view-v-liste-article,
 body.node-type-blogosphere  div.view-v-liste-article{
   background: #fff;
@@ -4782,10 +4799,10 @@ body.node-type-blogosphere  div.view-v-liste-article{
   padding: 0;
   margin:0; 
 }
-body.page-taxonomy-term div.container-node div.row section.span12{
+body.page-taxonomy-term  div.listeArticle div.container-node div.row section.span12{
   background: #fff;
 }
-body.page-taxonomy-term div.container-node,
+body.page-taxonomy-term div.listeArticle div.container-node,
 body.node-type-blogosphere div.container-node {
   background: #fff;
 }
@@ -4909,11 +4926,15 @@ body.page-taxonomy-term  div.swiper-blog div.swiper-wrapper div.swiper-slide div
   font-size: 16px;
   color: white;
   text-decoration: none;
+  margin-top: 4px;
+  display: block;
 }
 body.page-taxonomy-term  div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12 div.swiper-button-next a{ 
   font-size: 16px;
   color: white;
   text-decoration: none;
+  margin-top: 4px;
+  display: block;
 }
 body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog{
   right: 0;
@@ -4978,15 +4999,14 @@ body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.
 /*------------*/
 /*--- Blog ---*/
 /*------------*/
-body.page-taxonomy-term div.span9 div.enteteBlog,
-body.page-taxonomy-term div.span9 div.enteteArticleAssocies,
-body.node-type-blogosphere div.span9 div.enteteArticleAssocies{
+body.page-taxonomy-term div.enteteBlog,
+body.page-taxonomy-term div.enteteArticleAssocies,
+body.node-type-blogosphere div.enteteArticleAssocies{
   font-variant: small-caps;
-  max-width: 850px;
   text-align: center;
   padding-bottom: 2em;
 }
-body.page-taxonomy-term div.span9 div.enteteBlog > h5{
+body.page-taxonomy-term div.enteteBlog > p.class.littleTitle{
   width: 150px;
   font-family: 'Nunito', sans-serif;
   margin-left: auto;
@@ -4997,25 +5017,27 @@ body.page-taxonomy-term div.span9 div.enteteBlog > h5{
   color: #494949;
   position: relative;
 }
-body.node-type-blogosphere div.span9 div.enteteArticleAssocies > h5,
-body.page-taxonomy-term div.span9 div.enteteArticleAssocies > h5{
+body.node-type-blogosphere div.enteteArticleAssocies > p.title_article_associe,
+body.page-taxonomy-term div.enteteArticleAssocies > p.title_article_associe,
+body.node-type-blogosphere p.titre_actu,
+body.page-taxonomy-term div.listeArticle p.titre_actu{
   width: 250px;
   font-family: 'Nunito', sans-serif;
   margin-left: auto;
   font-weight: 300;
   margin-right: auto;
-  height: 30px;
+  height: 40px;
   font-size: 2em;
   background: #fff;
   color: #494949;
   position: relative;
   z-index: 999;
 }
-body.node-type-blogosphere div.span9 div.enteteBlog div,
-body.node-type-blogosphere div.span9 div.enteteArticleAssocies div,
-body.page-taxonomy-term div.span9 div.enteteArticleAssocies div,
-body.page-taxonomy-term div.span9 div.enteteBlog div{
-  margin-top: -15px;
+body.node-type-blogosphere div.enteteBlog div.line,
+body.node-type-blogosphere div.enteteArticleAssocies div.line,
+body.page-taxonomy-term div.listeArticle div.enteteArticleAssocies div.line,
+body.page-taxonomy-term div.listeArticle div.enteteBlog div.line{
+  margin-top: -5px;
   border-top: 1px solid #ADADAD;
   border-bottom: 1px solid #ADADAD;
   height: 5px;
@@ -5026,14 +5048,16 @@ body.page-taxonomy-term div.span9 div.enteteBlog div{
      box-shadow:        inset  0  2px 1px -1px #ADADAD, 
                         inset  0 -2px 1px -1px #ADADAD;
 }
-body.page-taxonomy-term div.span9 h1{
+body.page-taxonomy-term div.listeArticle h1,
+body.node-type-blogosphere h1{
   font-size:3em;
   margin-bottom: 0;
   font-family: 'neythalregular';
   color: #545454;
   padding-bottom: .2em;
 }
-body.page-taxonomy-term div.span9 h2{
+/* body.page-taxonomy-term div.listeArticle h2,
+body.node-type-blogosphere h2{
   font-size:1.8em;
   margin-bottom: 0;
   font-family: 'Nunito', sans-serif;
@@ -5041,121 +5065,156 @@ body.page-taxonomy-term div.span9 h2{
   font-variant: small-caps;
   color: #545454;
   padding-bottom: .2em;
-}
-body.node-type-blogosphere div.row-fluid div.span9 div.row-fluid div.span4 h2,
-body.page-taxonomy-term div.row-fluid div.span9 div.row-fluid div.span4 h2{
+} */
+/* body.node-type-blogosphere h2,
+body.page-taxonomy-term div.listeArticle h2{
   font-size: 1.2em;
   margin: 0;
   color: #545454;
-}
-body.page-taxonomy-term div.span9 a img{
+} */
+/* body.page-taxonomy-term div.listeArticle a img{
   margin-top: 30px;
   margin-bottom: 30px;
-}
-body.node-type-blogosphere div.row-fluid div.span9 div.span4 a,
-body.page-taxonomy-term div.row-fluid div.span9 div.span4 a{
+} */
+/* body.node-type-blogosphere a,
+body.page-taxonomy-term a{
   margin-bottom: 1em;
-}
-body.node-type-blogosphere div.row-fluid div.span9 div.span4 a:first-child > img,
-body.page-taxonomy-term div.row-fluid div.span9 div.span4 a:first-child > img{
+} */
+/* body.node-type-blogosphere img,
+body.page-taxonomy-term img{
   height: 150px;
   width: 100%;
   object-fit: cover;
+} */
+body.node-type-blogosphere h2.subtitle{
+  font-size: 1.2em;
+  margin-bottom: 0;
+  font-family: 'neythalregular';
+  color: #a08a77;
+  padding-bottom: .2em;
+  margin-top: 0;
+  text-align: center;
 }
-body.node-type-blogosphere div.row-fluid div.span9 div.span4 h1,
-body.page-taxonomy-term div.row-fluid div.span9 div.span4 h1{
+body.page-taxonomy-term div.listeArticle h2.subtitle{
+  font-size: 1.4em;
+  margin-bottom: 0;
+  font-family: 'neythalregular';
+  color: #a08a77;
+  padding-bottom: .2em;
+  margin-top: 0;
+  text-align: left;
+}
+body.node-type-blogosphere div.lesArticlesAssocie h3,
+body.page-taxonomy-term div.listeArticle div.lesArticlesAssocie h3{
   font-size: 1.7em;
   margin-bottom: -.5em;
   color: #545454;
-}
-body.node-type-blogosphere div.row-fluid div.span9 div.span4 h2,
-body.page-taxonomy-term div.row-fluid div.span9 div.span4 h2{
-  margin-left: 2em;
   font-family: 'neythalregular';
-  color: #fff;
-  font-size: 1.5em;
 }
-body.node-type-blogosphere div.row-fluid div.span9 div.span4 p,
-body.page-taxonomy-term div.row-fluid div.span9 div.span4 p{
+/* body.node-type-blogosphere p,
+body.page-taxonomy-term p{
   padding-top: 1em;
   font-size: 1em;
-}
-body.node-type-blogosphere div.row-fluid div.span9 div.span4 i,
-body.page-taxonomy-term div.row-fluid div.span9 div.span4 i{
+} */
+body.node-type-blogosphere i,
+body.page-taxonomy-term i{
   font-size: .8em;
 }
-body.node-type-blogosphere div.span9 a.lirePlus,
-body.page-taxonomy-term div.span9 a.lirePlus{
+body.node-type-blogosphere a.lirePlus,
+body.page-taxonomy-term div.listeArticle a.lirePlus{
   color:#a08a77;
   text-decoration: none;
   font-weight: bold;
 }
-body.node-type-blogosphere div.span9 div.row-fluid div.span4 a.lirePlus,
-body.page-taxonomy-term div.span9 div.row-fluid div.span4 a.lirePlus{
+body.node-type-blogosphere a.lirePlus,
+body.page-taxonomy-term div.listeArticle a.lirePlus{
   color:#a08a77;
   text-decoration: none;
   font-weight: bold;
 }
-body.page-taxonomy-term div.row-fluid div.span9 div.likeShareCommentActu a{
+/* body.page-taxonomy-term div.listeArticle div.likeShareCommentActu a{
   margin-right: .5%;
-}
+} */
 /*------------*/
 /*--- Blocs --*/
 /*----Blog----*/
 /*------------*/
-body.node-type-blogosphere div.span3 div.tagsBlog iframe,
-body.page-taxonomy-term div.span3 div.tagsBlog iframe{ 
+body.node-type-blogosphere div.tagsBlog iframe,
+body.page-taxonomy-term div.listeArticle div.tagsBlog iframe{ 
   margin-left: 4%;
 }
-body.page-taxonomy-term div.span3 div.tagsBlog div.smallScreen,
-body.page-taxonomy-term div.span3 div.tagsBlog iframe.smallScreen
+body.page-taxonomy-term div.listeArticle div.tagsBlog div.smallScreen,
+body.page-taxonomy-term div.listeArticle div.tagsBlog iframe.smallScreen
 {
   display: none;
 }
-body.node-type-blogosphere div.span3 div.tagsBlog,
-body.node-type-blogosphere div.span3 div.baladeBlog,
-body.page-taxonomy-term div.span3 div.baladeBlog,
-body.page-taxonomy-term div.span3 div.tagsBlog
+body.node-type-blogosphere div.tagsBlog,
+body.node-type-blogosphere div.baladeBlog,
+body.page-taxonomy-term div.listeArticle div.baladeBlog,
+body.page-taxonomy-term div.listeArticle div.tagsBlog
 {
   border: solid #E3E3E3 1px;
   margin: 2em auto;
+  position: relative;
 }
-body.node-type-blogosphere div.span3 div.tagsBlog h4,
-body.node-type-blogosphere div.span3 div.baladeBlog h4,
-body.page-taxonomy-term div.span3 div.baladeBlog h4,
-body.page-taxonomy-term div.span3 div.tagsBlog h4
+body.node-type-blogosphere div.tagsBlog p.littleTitle,
+body.node-type-blogosphere div.baladeBlog p.littleTitle,
+body.page-taxonomy-term div.listeArticle div.baladeBlog p.littleTitle,
+body.page-taxonomy-term div.listeArticle div.tagsBlog p.littleTitle
 {
   font-size: 1em;
   font-family: 'Nunito', sans-serif;
   font-weight: 700;
   font-variant: small-caps;
-  width: 130px;
+  background-color: #fff;
   margin-left: auto;
   margin-right: auto;
+  margin-top: -12px;
+  width: 120px;
+  display: block;
   text-align: center;
-  margin-top: -.9em;
-  background: #fff;  
-  color: #494949;
 }
-body.node-type-blogosphere div.span3 div.tagsBlog ul,
-body.page-taxonomy-term div.span3 div.tagsBlog ul{
+body.node-type-blogosphere div.baladeBlog p.nameBaladeDuMois,
+body.page-taxonomy-term div.baladeBlog p.nameBaladeDuMois{
+  margin-top: 10px;
+  padding-bottom: 6px;
+  font-size: 1em;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-variant: small-caps;
+  display: block;
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+body.node-type-blogosphere div.baladeBlog p.nameBaladeDuMois > a,
+body.page-taxonomy-term div.baladeBlog p.nameBaladeDuMois > a{
+  color: #545454;
+}
+body.node-type-blogosphere div.baladeBlog p.nameBaladeDuMois > a:hover,
+body.page-taxonomy-term div.baladeBlog p.nameBaladeDuMois > a:hover{
+  text-decoration: none;
+}
+body.node-type-blogosphere div.tagsBlog ul,
+body.page-taxonomy-term div.listeArticle div.tagsBlog ul{
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
 }
-body.node-type-blogosphere div.span3 div.tagsBlog li,
-body.page-taxonomy-term div.span3 div.tagsBlog li{
+body.node-type-blogosphere div.tagsBlog li,
+body.page-taxonomy-term div.listeArticle div.tagsBlog li{
   padding: .5em;
 }
-body.node-type-blogosphere div.span3 div.tagsBlog a,
-body.page-taxonomy-term div.span3 div.tagsBlog a{
+body.node-type-blogosphere div.tagsBlog a,
+body.page-taxonomy-term div.listeArticle div.tagsBlog a{
   padding: .5em;
   background: #E6E6E6;
   color: black;
   text-decoration: none;
 }
-body.node-type-blogosphere div.span3 div.tagsBlog a:hover,
-body.page-taxonomy-term div.span3 div.tagsBlog a:hover{
+body.node-type-blogosphere div.tagsBlog a:hover,
+body.page-taxonomy-term div.listeArticle div.tagsBlog a:hover{
   color: #fff;
   background: #a08a77;
 }
@@ -5163,24 +5222,23 @@ body.page-taxonomy-term div.span3 div.tagsBlog a:hover{
 /*--- Bloc ---*/
 /*-- Balade --*/
 /*------------*/
-body.node-type-blogosphere div.span3 div.baladeBlog h5 > a,
-body.page-taxonomy-term div.span3 div.baladeBlog h5 > a{
-  text-align: left;
+body.node-type-blogosphere div.baladeBlog p.littleTitle > a,
+body.page-taxonomy-term div.listeArticle div.baladeBlog p.littleTitle > a{
+  text-align: center;
   color: #545454;
   font-size: 1.1em;
-  font-variant: small-caps;
   text-decoration: none;
-  margin-left: 10%;
-  margin-right: 10%;
+  width: 100%;
 }
-body.node-type-blogosphere div.span3 div.baladeBlog p,
-body.page-taxonomy-term div.span3 div.baladeBlog p{
+body.node-type-blogosphere div.baladeBlog p.textBaladeDuMois,
+body.page-taxonomy-term div.listeArticle div.baladeBlog p.textBaladeDuMois{
   font-size: .9em;
   margin-left: 10%;
   margin-right: 10%;
+  padding-bottom: 14px;
 }
-body.node-type-blogosphere div.span3 div.baladeBlog a > img,
-body.page-taxonomy-term div.span3 div.baladeBlog a > img{
+body.node-type-blogosphere div.baladeBlog a > img,
+body.page-taxonomy-term div.listeArticle div.baladeBlog a > img{
   text-align: center;
   margin-left: 10%;
   margin-right: 10%;
@@ -5194,38 +5252,42 @@ body.page-taxonomy-term div.span3 div.baladeBlog a > img{
 body.node-type-blogosphere div.contentArticle img{
   padding: 0px 10px 10px 0px;
 }
-body.node-type-blogosphere div.container div.row-fluid div.span9 section div.user-picture{
+/* body.node-type-blogosphere div.user-picture, body.node-type-blogosphere span.submitted{
   display: none; 
-}
-
-body.node-type-blogosphere div.container span.submitted{
-  display: none; 
-}
-
-body.node-type-blogosphere div.container div.row-fluid div.span9 section div.likeShareCommentActu{
+} */
+body.node-type-blogosphere div.likeShareCommentActu{
   margin-top: 1em;
 }
 
-body.node-type-blogosphere div.container div.row-fluid div.span9 section > h1{
+body.node-type-blogosphere h1{
   font-size:3em;
+  padding-bottom: 0;
   margin-bottom: 0;
   font-family: 'neythalregular';
   color: #a08a77;
   padding-bottom: .2em;
   text-align: center;
 }
-
-body.node-type-blogosphere div.container div.row-fluid div.span9 section div.contentArticle{
+body.node-type-blogosphere div.contentArticle{
   max-width: 800px;
 }
+body.node-type-blogosphere div.contentArticle h2{
+  font-size: 1.2em;
+  margin-bottom: 0;
+  font-family: 'neythalregular';
+  color: #a08a77;
+  padding-bottom: .2em;
+  margin-top: 0;
+  text-align: center;
+}
 
-body.node-type-blogosphere div.container div.row-fluid div.span9 section div.contentArticle h3{
+
+body.node-type-blogosphere div.contentArticle h3{
   font-size: 1.5em;
   color: #858585;
   font-family: 'Nunito', sans-serif;
-  font-weight: 300;
 }
-body.node-type-blogosphere div.container div.row-fluid div.span9 section div.contentArticle h3::after{
+body.node-type-blogosphere div.contentArticle h3::after{
   content: "" ;
   width: 80px;
   height: 1px;
@@ -5233,7 +5295,7 @@ body.node-type-blogosphere div.container div.row-fluid div.span9 section div.con
   border-top: 1px solid #dedede;
 }
 
-body.node-type-blogosphere div.container div.row-fluid div.span9 section p.created{
+body.node-type-blogosphere p.created{
   font-family: 'Nunito', sans-serif;
   font-weight: 300;
   color: #707070;
@@ -5241,7 +5303,7 @@ body.node-type-blogosphere div.container div.row-fluid div.span9 section p.creat
   text-align: center;
 }
 
-body.node-type-blogosphere div.container div.row-fluid div.span9 div.separatorPageArticle{
+body.node-type-blogosphere div.separatorPageArticle{
   margin-top: 1em;
   margin-bottom: 2em;
   width: 100px;
@@ -5250,9 +5312,10 @@ body.node-type-blogosphere div.container div.row-fluid div.span9 div.separatorPa
   margin-left: auto;
   margin-right: auto;
 }
-body.node-type-blogosphere div.container div.row-fluid div.span9 section p{
+body.node-type-blogosphere div.contentArticle p{
   color: #707070;
-  font-size: 1em;
+  line-height: 1.8em;
+  font-size: 1.2em;
 }
 
 body.node-type-blogosphere div.field-item{display: none;}
@@ -5329,61 +5392,61 @@ body.node-type-blogosphere article footer{display: none;}
     margin-left: auto;
     font-size: 12px;
   }
-  body.node-type-blogosphere div.span3 div.tagsBlog iframe.smallScreen,
-  body.page-taxonomy-term div.span3 div.tagsBlog iframe.smallScreen{
+  body.node-type-blogosphere div.tagsBlog iframe.smallScreen,
+  body.page-taxonomy-term div.listeArticle div.tagsBlog iframe.smallScreen{
     display: none;
   }
-  body.node-type-blogosphere div.span3 div.tagsBlog iframe.largeScreen,
-  body.page-taxonomy-term div.span3 div.tagsBlog iframe.largeScreen{
+  body.node-type-blogosphere div.tagsBlog iframe.largeScreen,
+  body.page-taxonomy-term div.listeArticle div.tagsBlog iframe.largeScreen{
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
-  body.node-type-blogosphere div.span3 div.tagsBlog div.largeScreen,
-  body.page-taxonomy-term div.span3 div.tagsBlog div.largeScreen{
+  body.node-type-blogosphere div.tagsBlog div.largeScreen,
+  body.page-taxonomy-term div.listeArticle div.tagsBlog div.largeScreen{
     display: block;
     width: 250px;
     margin-left: auto;
     margin-right: auto;
   }
-  body.node-type-blogosphere div.span3 div.tagsBlog div.smallScreen,
-  body.page-taxonomy-term div.span3 div.tagsBlog div.smallScreen{
+  body.node-type-blogosphere div.tagsBlog div.smallScreen,
+  body.page-taxonomy-term div.listeArticle div.tagsBlog div.smallScreen{
     display: none;
   }
-  body.node-type-blogosphere div.span3 div.baladeBlog h5 > a,
-  body.page-taxonomy-term div.span3 div.baladeBlog h5 > a,
-  body.node-type-blogosphere div.span3 div.baladeBlog h5,
-  body.page-taxonomy-term div.span3 div.baladeBlog h5{
+  body.node-type-blogosphere div.baladeBlog h5 > a,
+  body.page-taxonomy-term div.listeArticle div.baladeBlog h5 > a,
+  body.node-type-blogosphere div.baladeBlog h5,
+  body.page-taxonomy-term div.listeArticle div.baladeBlog h5{
     width: 300px;
     margin-left: auto;
     margin-right: auto;
   }
-  body.node-type-blogosphere div.span3 div.baladeBlog p,
-  body.page-taxonomy-term div.span3 div.baladeBlog p{
+  body.node-type-blogosphere div.baladeBlog p,
+  body.page-taxonomy-term div.listeArticle div.baladeBlog p{
     width: 300px;
     margin-left: auto;
     margin-right: auto;
   }
-  body.node-type-blogosphere div.span3 div.baladeBlog,
-  body.page-taxonomy-term div.span3 div.baladeBlog{
+  body.node-type-blogosphere div.baladeBlog,
+  body.page-taxonomy-term div.listeArticle div.baladeBlog{
     width: 300px;
     margin-left: auto;
     margin-right: auto;
   }
-  body.node-type-blogosphere div.span3 div.baladeBlog div,
-  body.page-taxonomy-term div.span3 div.baladeBlog div{
+  body.node-type-blogosphere div.baladeBlog div,
+  body.page-taxonomy-term div.listeArticle div.baladeBlog div{
     width: 250px;
     margin-left: auto;
     margin-right: auto;
   }
-  body.node-type-blogosphere div.span3 div#facebookBloc,
-  body.page-taxonomy-term div.span3 div#facebookBloc{
+  body.node-type-blogosphere div#facebookBloc,
+  body.page-taxonomy-term div.listeArticle div#facebookBloc{
     width: 300px;
     margin-left: auto;
     margin-right: auto;
   }
-  body.node-type-blogosphere div.span3 div#instaBloc,
-  body.page-taxonomy-term div.span3 div#instaBloc{
+  body.node-type-blogosphere div#instaBloc,
+  body.page-taxonomy-term div.listeArticle div#instaBloc{
     width: 300px;
     margin-left: auto;
     margin-right: auto;
@@ -5393,25 +5456,25 @@ body.node-type-blogosphere article footer{display: none;}
 
 @media (min-width: 980px) and (max-width: 1199px){
 
-  body.node-type-blogosphere div.span3 div.tagsBlog iframe.smallScreen,
-  body.page-taxonomy-term div.span3 div.tagsBlog iframe.smallScreen{
+  body.node-type-blogosphere div.tagsBlog iframe.smallScreen,
+  body.page-taxonomy-term div.listeArticle div.tagsBlog iframe.smallScreen{
     display: block;
     width: 400px;
   }
-  body.node-type-blogosphere div.span3 div.tagsBlog iframe.largeScreen,
-  body.page-taxonomy-term div.span3 div.tagsBlog iframe.largeScreen{
+  body.node-type-blogosphere div.tagsBlog iframe.largeScreen,
+  body.page-taxonomy-term div.listeArticle div.tagsBlog iframe.largeScreen{
     display: none;
   }
-  body.node-type-blogosphere div.span3 div.tagsBlog div.largeScreen,
-  body.page-taxonomy-term div.span3 div.tagsBlog div.largeScreen{
+  body.node-type-blogosphere div.tagsBlog div.largeScreen,
+  body.page-taxonomy-term div.listeArticle div.tagsBlog div.largeScreen{
     display: none;
   }
-  body.node-type-blogosphere div.span3 div.tagsBlog div.smallScreen,
-  body.page-taxonomy-term div.span3 div.tagsBlog div.smallScreen{
+  body.node-type-blogosphere div.tagsBlog div.smallScreen,
+  body.page-taxonomy-term div.listeArticle div.tagsBlog div.smallScreen{
     display: block;
   }
-  body.page-taxonomy-term div.span3 div.baladeBlog a > img,
-  body.node-type-blogosphere div.span3 div.baladeBlog a > img{
+  body.page-taxonomy-term div.baladeBlog a > img,
+  body.node-type-blogosphere div.listeArticle div.baladeBlog a > img{
     margin:0;
     padding:0;
   }
@@ -5432,21 +5495,21 @@ body.node-type-blogosphere article footer{display: none;}
 }
 
 @media (min-width: 1199px){
-  body.node-type-blogosphere div.span3 div.tagsBlog iframe.smallScreen,
-  body.page-taxonomy-term div.span3 div.tagsBlog iframe.smallScreen {
+  body.node-type-blogosphere div.tagsBlog iframe.smallScreen,
+  body.page-taxonomy-term div.listeArticle div.tagsBlog iframe.smallScreen {
     display: none;
     width: 400px;
   }
-  body.node-type-blogosphere div.span3 div.tagsBlog iframe.largeScreen,
-  body.page-taxonomy-term div.span3 div.tagsBlog iframe.largeScreen{
+  body.node-type-blogosphere div.tagsBlog iframe.largeScreen,
+  body.page-taxonomy-term div.listeArticle div.tagsBlog iframe.largeScreen{
     display: block;
   }
-  body.node-type-blogosphere div.span3 div.tagsBlog div.largeScreen,
-  body.page-taxonomy-term div.span3 div.tagsBlog div.largeScreen{
+  body.node-type-blogosphere div.tagsBlog div.largeScreen,
+  body.page-taxonomy-term div.listeArticle div.tagsBlog div.largeScreen{
     display: block;
   }
-  body.node-type-blogosphere div.span3 div.tagsBlog div.smallScreen,
-  body.page-taxonomy-term div.tagsBlog div.smallScreen{
+  body.node-type-blogosphere div.tagsBlog div.smallScreen,
+  body.page-taxonomy-term div.listeArticle div.tagsBlog div.smallScreen{
     display: none;
   }
 
@@ -5454,20 +5517,20 @@ body.node-type-blogosphere article footer{display: none;}
 /********************************************************/
 @media (max-width: 767px){
   body.node-type-blogosphere,
-  body.page-taxonomy-term {
+  body.page-taxonomy-term div.listeArticle{
     width: 100%; 
     padding: 0;
     margin: 0;
   }
-  body.node-type-blogosphere  div.blog-banner p,
-  body.page-taxonomy-term div.blog-banner p{ 
+  body.node-type-blogosphere div.blog-banner p,
+  body.page-taxonomy-term div.listeArticle div.blog-banner p{ 
     font-size: 2em;
     top: 50%;
     padding: 0;
     margin: 0;
   }
   body.node-type-blogosphere  div.blog-banner #subtxt,
-  body.page-taxonomy-term div.blog-banner #subtxt{
+  body.page-taxonomy-term div.listeArticle div.blog-banner #subtxt{
     top: 70%;
     font-size: .8em;
   }
@@ -5477,12 +5540,12 @@ body.node-type-blogosphere article footer{display: none;}
 /********************************************************/
 @media (max-width: 480px){
   body.node-type-blogosphere,
-  body.page-taxonomy-term {
+  body.page-taxonomy-term div.listeArticle {
     width: auto; 
     padding: 0;
   }
   body.node-type-blogosphere div.blog-banner,
-  body.page-taxonomy-term div.blog-banner{
+  body.page-taxonomy-term div.listeArticle div.blog-banner{
     font-size: 1em;
   }
 }

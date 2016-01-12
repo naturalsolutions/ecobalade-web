@@ -48,7 +48,7 @@ Template d'un article de blog
   	</div>
   </div>
 </header>
-
+<?php print $messages; ?>
 <?php global $base_url, $node; ?>
 
 <?php 
@@ -116,24 +116,21 @@ Template d'un article de blog
   <div class="row-fluid">
     <div class="container-node span9">
       <!-- début coprs de l'article -->
-      <section class="<?php print _twitter_bootstrap_content_span($columns); ?>">  
+      <section class="content <?php print _twitter_bootstrap_content_span($columns); ?>">  
         <?php if ($tabs): ?>
           <?php print render($tabs); ?>
         <?php endif; ?>
 
         <?php           
-          $nodeId = arg(1);
-          $node = node_load($nid = $nodeId);
-        ?>
-
-       <?php 
-          $currentArticle = node_load($nid=$nodeId);
+          $nodeId = arg(1);       
+          $currentArticle = node_load($nodeId);
           $title = $currentArticle->title;
+          $sous_titre = $currentArticle->field_sous_titre_blog['und'][0]['value'];
           $created = format_date($currentArticle->created, $type = 'medium');              
           $blogCategorie = taxonomy_term_load($currentArticle->field_cat_gorie['und'][0]['tid'])->name;
           $blogResume = $currentArticle->body['und'][0]['safe_summary'];
           $content = $currentArticle->body['und'][0]['value'];
-
+          
           $variables = array(
             'style_name' => 'image_page_article',
             'path' => $currentArticle->field_blog_image['und'][0]['uri'],
@@ -143,19 +140,30 @@ Template d'un article de blog
         ?>
 
         <?php echo $blogImage; ?>
-        <!-- <div class="likeShareCommentActu">
-          <a href="#"><img id="imgLike" src=" <?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-like.png" 
+        <div class="likeShareCommentActu">
+        <!-- AddThis Button BEGIN -->
+        <div class="boutons_partage">
+          <div class="addthis_toolbox addthis_default_style addthis_16x16_style" >
+              <a class="addthis_button_facebook"></a>
+              <a class="addthis_button_twitter"></a>
+              <a class="addthis_button_google_plusone_share"></a>
+              <a class="addthis_counter addthis_bubble_style"></a>
+          </div>
+        </div>
+        <!-- AddThis Button END -->   
+          <!-- <a href="#"><img id="imgLike" src=" <?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-like.png" 
                             onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-likehover$-.png'" 
                             onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-like.png'"></a>
           <a href="#"><img id="imgShare" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/share.png"
                             onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/sharehover.png'" 
-                            onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/share.png'"></a>
-          <a href="#"><img id="imgComment" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png"
+                            onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/share.png'"></a> -->
+          <a class="commentButton" href="#comment-form-wrapper"><img id="imgComment" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png"
                             onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubulehover.png'" 
                             onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png'"></a>
-        </div> -->
+        </div>
         
         <h1><?php echo $title; ?></h1>  
+        <h2 class='subtitle'><?php echo $sous_titre; ?></h2>
         <?php echo "<p class='created'>&Eacutecrit par ".$currentArticle->name." le ".$created."</p>"; ?>
         <div class="separatorPageArticle"></div>
 
@@ -172,7 +180,7 @@ Template d'un article de blog
             <!--<h1 class="page-header">--><?php //print $title; ?></h1>
           <?php //endif; ?>
           <?php //print render($title_suffix); ?>
-          <?php print $messages; ?>
+          
           
           <?php if ($page['help']): ?> 
             <div class="well"><?php //print render($page['help']); ?></div>
@@ -185,25 +193,35 @@ Template d'un article de blog
   	  </section>
 
       <div class="likeShareCommentActu">
-        <a href="#"><img id="imgLike" src=" <?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-like.png" 
+        <!-- AddThis Button BEGIN -->
+        <div class="boutons_partage">
+          <div class="addthis_toolbox addthis_default_style addthis_16x16_style" >
+              <a class="addthis_button_facebook"></a>
+              <a class="addthis_button_twitter"></a>
+              <a class="addthis_button_google_plusone_share"></a>
+              <a class="addthis_counter addthis_bubble_style"></a>
+          </div>
+        </div>
+        <!-- AddThis Button END -->
+        <!-- <a href="#"><img id="imgLike" src=" <?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-like.png" 
                           onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-likehover$-.png'" 
                           onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-like.png'"></a>
-
+        
         <a href="#"><img id="imgShare" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/share.png"
                           onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/sharehover.png'" 
-                          onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/share.png'"></a> 
+                          onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/share.png'"></a>  -->
 
-        <a href="#"><img id="imgComment" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png"
+        <a class="commentButton" href="#comment-form-wrapper"><img id="imgComment" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png"
                           onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubulehover.png'" 
                           onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png'"></a>
       </div>
       
        <div class="enteteArticleAssocies">
-        <h5>articles associés</h5>
-        <div></div>
+        <p class='title_article_associe'>articles associés</p>
+        <div class="line"></div>
       </div>
 
-      <div class="row-fluid">
+      <div class="row-fluid lesArticlesAssocie">
         <!-- mise en page 3 autre articles --> 
 
         <?php
@@ -214,22 +232,22 @@ Template d'un article de blog
           $query->orderRandom();
           $query->range(0, 3);
           $items = $query->execute()->fetchAll();
-          foreach ($items as $key => $value) { ?>
-          <?php
+          foreach ($items as $key => $value) : 
+          
             $value->nid;
 
             //On charger notre article
-            $currentArticle = node_load($value->nid);
+            $articleAssocie = node_load($value->nid);
             
             //get title
-            $title = $currentArticle->title;
-            $created = format_date($currentArticle->created, $type = 'medium');              
-            $blogCategorie = taxonomy_term_load($currentArticle->field_cat_gorie['und'][0]['tid'])->name;
-            $blogResume = $currentArticle->body['und'][0]['safe_summary'];
+            $title = $articleAssocie->title;
+            $created = format_date($articleAssocie->created, $type = 'medium');              
+            $blogCategorie = taxonomy_term_load($articleAssocie->field_cat_gorie['und'][0]['tid'])->name;
+            $blogResume = $articleAssocie->body['und'][0]['safe_summary'];
 
             $variables = array(
               'style_name' => 'article_du_blog',
-              'path' => $currentArticle->field_blog_image['und'][0]['uri'],
+              'path' => $articleAssocie->field_blog_image['und'][0]['uri'],
               'alt' => $title
             );
 
@@ -240,37 +258,25 @@ Template d'un article de blog
             <a href="<?php echo $base_url.'/node/'.$value->nid; ?>"><?php echo $blogImage; ?></a>
             <br>
 
-            <h1><?php echo $title ?></h1>
+            <h3><?php echo $title ?></h3>
             <i><?php echo "Posté dans ".$blogCategorie." le ".$created ?></i>
             <p><?php echo $blogResume ?></p>
             <br/><a class="lirePlus" href="<?php echo $base_url.'/node/'.$value->nid; ?>"> > Continuer de lire</a>
       
           </div>
 
-          <?php } ?>
-
-          <div class="commentBlocs">
-          <?php 
-            // $query = db_select('comment', 'c');
-            // $query->fields('n', array('nid'));
-            // $query->fields('c', array('nid', 'cid'));
-            // $query->join('node', 'n', 'n.nid = c.nid AND n.type = :n_type', array(':n_type' => 'blogosphere'));
-            // $items = $query->execute()->fetchAll();
-            
-          ?>
-            
-
-          </div>
+          <?php endforeach; ?>          
       </div>
       <hr>
- 
+      <?php print render($page['content']); ?>
+      
 
       <!-- fin coprs de l'article -->
     </div> <!--fin container-node-->
     <div class="span3"> <!-- debut sidebarre droite -->
     <!-- debut bloc tags -->
       <div class="tagsBlog">
-        <h4>catégories / tags</h4>
+        <p class='littleTitle'>catégories / tags</p>
         <ul>
           <?php                
             //Les catégories_secondaire
@@ -298,7 +304,7 @@ Template d'un article de blog
       <!-- fin bloc tags -->
       <!-- debut bloc insta -->
       <div class="tagsBlog" id="instaBloc">
-        <h4>instagram</h4>
+        <p class='littleTitle'>instagram</p>
         <!-- SnapWidget -->
         <iframe src="http://snapwidget.com/in/?u=ZWNvYmFsYWRlfGlufDgwfDN8M3x8bm98M3xmYWRlT3V0fG9uU3RhcnR8eWVzfG5v&ve=101215" title="Instagram Widget" class="snapwidget-widget largeScreen" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:249px; height:249px;"></iframe>
         <iframe src="http://snapwidget.com/sc/?u=ZWNvYmFsYWRlfGlufDgwfDN8M3x8eWVzfDIwfG5vbmV8b25TdGFydHx5ZXN8bm8=&ve=171215" title="Instagram Widget" class="snapwidget-widget smallScreen" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:200px; height:80px"></iframe>
@@ -307,7 +313,7 @@ Template d'un article de blog
 
       <!-- debut bloc FB -->
       <div class="tagsBlog" id="facebookBloc">
-        <h4>facebook</h4>
+        <p class='littleTitle'>facebook</p>
         <div class="largeScreen">
           <div class="fb-page" data-href="https://www.facebook.com/EcoBalade/" data-width="250" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
             <div class="fb-xfbml-parse-ignore">
@@ -330,7 +336,7 @@ Template d'un article de blog
       <!-- fin bloc FB -->
       <!-- debut bloc balade du mois -->
       <div class="baladeBlog">
-        <h4>la balade du mois</h4>
+        <p class='littleTitle titleBaladeDuMois'>la balade du mois</p>
         <div>
           <?php 
             $query = db_select('node', 'n');
@@ -349,20 +355,23 @@ Template d'un article de blog
               );
               $blogImageBalade = theme( 'image_style', $variables );
            ?>
-          <a href="<?php echo $base_url.'/node/'.$value->nid;?>"><?php echo $blogImageBalade; ?></a>
-          <h5><a href="<?php echo $base_url.'/node/'.$value->nid;?>"><?php echo $titreBalade; ?></a></h5>
-          <p><?php echo$resumeBalade; ?></p>
+          <a href="<?php echo $base_url.'/node/'.$monNode->nid;?>"><?php echo $blogImageBalade; ?></a>
+          <p class='nameBaladeDuMois'><a href="<?php echo $base_url.'/node/'.$monNode->nid;?>"><?php echo $titreBalade; ?></a></p>
+          <p class='textBaladeDuMois'><?php echo$resumeBalade; ?></p>
         </div>
       </div>
       <!-- fin bloc balade du mois -->
     </div> <!-- fin sidebarre droite -->
   </div>
+  
 </div>
    <?php print render($page['footer']); ?>
 
 <script type="text/javascript">
-	
-var galleryLogoOnEnParle = new Swiper('.swiper-blog', {       
+jQuery( document ).ready(function() {
+
+  //slider
+  var galleryLogoOnEnParle = new Swiper('.swiper-blog', {       
         slidesPerView: 1,
         loopedSlides : 1, 
         nextButton: '.swiper-button-next',
@@ -372,4 +381,23 @@ var galleryLogoOnEnParle = new Swiper('.swiper-blog', {
         loop: true
     });
 
+
+  //LightBox pour commentaires/*
+  if( $('.imageComment').length > 0 ) $('.imageComment').vanillabox({   
+    closeButton: false,
+    loop: true,
+    repositionOnScroll: true,
+    type: 'image',
+    adjustToWindow: 'both'
+    });
+
+ 
+  //Click sur bouton commenter
+  $('section#comments section.collapseComment p.title, .commentButton').click(function(){
+    if ($('section#comments section.collapseComment form').is(':visible')) $('section#comments section.collapseComment form').hide();
+    else $('section#comments section.collapseComment form').show();
+  });
+
+
+});
 </script>

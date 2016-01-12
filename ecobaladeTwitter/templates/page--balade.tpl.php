@@ -451,7 +451,7 @@ jQuery( document ).ready(function() {
 	} 
 
 	//Click sur bouton commenter
-	$('section#comments section.collapseComment h2').click(function(){
+	$('section#comments section.collapseComment .title').click(function(){
 		if ($('section#comments section.collapseComment form').is(':visible')) $('section#comments section.collapseComment form').hide();
 		else $('section#comments section.collapseComment form').show();
 	});
