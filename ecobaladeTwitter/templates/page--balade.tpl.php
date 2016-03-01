@@ -208,7 +208,15 @@ $baladenid = $node->nid;
 			//Affichage du reste du node
 			print render($page['content']); 
 			?>			
-
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- Test2 -->
+		<ins class="adsbygoogle"
+		     style="display:inline-block;width:728px;height:90px"
+		     data-ad-client="ca-pub-4110701213934425"
+		     data-ad-slot="5564062399"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
 		</div>
 
 		<!-- Conteneur de l'onglet Espece -->
@@ -340,6 +348,18 @@ $baladenid = $node->nid;
 		
 		<?php print views_embed_view('v_caracteristiques_balade','block_1',$baladenid);?>
 		<br/>
+		<div align="center" class='pubAdsens'>
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- Annonce logement balade -->
+			<ins class="adsbygoogle"
+			     style="display:block"
+			     data-ad-client="ca-pub-4110701213934425"
+			     data-ad-slot="1589691194"
+			     data-ad-format="auto"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
 		<!-- <a href="https://clk.tradedoubler.com/click?p=117553&a=2794210&g=21636760" rel="nofollow" target="_BLANK"><img src="https://impfr.tradedoubler.com/imp?type(img)g(21636760)a(2794210)" border=0></a> -->
 		<h2>Localisation</h2>
 		<?php print views_embed_view('v_map_localisation_balade','block',$baladenid);?>
