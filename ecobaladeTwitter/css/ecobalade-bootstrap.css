@@ -1722,7 +1722,9 @@ body.page-liste-especes .views-exposed-widgets.clearfix{
 body.page-liste-especes .views-exposed-widgets .form-item-items-per-page {
 	text-align: center;
 }
-
+body.page-liste-especes div#edit-field-groupe-taxonomique-tid-wrapper p.help-block{
+  display: none;
+}
 /***************************************************************************/
 /***************************************************************************/
 /*                PAGE LISTE BALADE - PAGE LES BALADE                      */
@@ -1738,6 +1740,10 @@ body.page-liste-balades .view-v-liste-balade .views-field-field-vote{
   width:18.7%;
   border-right:1px solid #BBBBBB;
   text-align: center;  
+}
+body.page-liste-balades div#edit-field-difficulte-tid-wrapper p.help-block,
+body.page-liste-balades div#edit-field-type-de-circuit-tid-wrapper p.help-block{
+  display: none;
 }
 body.page-liste-balades .view-v-liste-balade .views-field-title h1 a{
   text-decoration: none;
