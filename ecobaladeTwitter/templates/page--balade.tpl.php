@@ -208,15 +208,7 @@ $baladenid = $node->nid;
 			//Affichage du reste du node
 			print render($page['content']); 
 			?>			
-		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<!-- Test2 -->
-		<ins class="adsbygoogle"
-		     style="display:inline-block;width:728px;height:90px"
-		     data-ad-client="ca-pub-4110701213934425"
-		     data-ad-slot="5564062399"></ins>
-		<script>
-		(adsbygoogle = window.adsbygoogle || []).push({});
-		</script>
+		
 		</div>
 
 		<!-- Conteneur de l'onglet Espece -->
