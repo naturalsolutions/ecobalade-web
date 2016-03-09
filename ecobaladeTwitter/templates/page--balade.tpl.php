@@ -307,9 +307,17 @@ $baladenid = $node->nid;
     <?php if ($page['sidebar_second']): ?>
       <aside class="span3 region-sidebar-second" role="complementary">
        <?php if ($node): ?>  
-	    <a id="btn-esp" class="btn btn-primary" alt="lien vers la liste des espèces" href="#" title="Les espèces a découvrir" >Espèces à découvrir</a>
+	    <a id="btn-esp" class="btn btn-primary" alt="lien vers la liste des espèces" href="#" title="Les espèces a découvrir" >Pour découvrir les espèces de cette balade</a>
 		
 		<?php 
+
+		echo "
+			<div class='blocConseil'>
+				<p>1/ Préparer la balade sur le site ecobalade.fr</p>
+				<p>2/ Télécharger l'app gratuitement</p>
+				<p>3/ L'ouvrir et télécharger votre balade</p>
+			</div>
+			";
 
 			//si pas guide
 			if($node->field_lien_guide['und'][0]['value'] == 'mailto:contact@natural-solutions.eu'){

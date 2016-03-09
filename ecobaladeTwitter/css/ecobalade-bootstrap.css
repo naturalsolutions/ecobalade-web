@@ -1042,12 +1042,13 @@ body.node-type-balade #btn-guide{
   border: 3px solid #4DBB74;
 }
 body.node-type-balade a#btn-esp {
-  font-size: 1.6em;
+  font-size: 1.4em;
   border: none;
   text-shadow: none;
   padding: 6% 0;
   width: 100%;
   color: #fff;
+  line-height: 27px;
 }
 section#comments section.collapseComment{
   background: url('../img/comment_picto.png') no-repeat 0% -21px #f5f5f5;
@@ -1093,6 +1094,12 @@ body.node-type-balade div.view-v-informations-pratiques-balade div.views-field >
   float:left;
   font-weight:bold;
   color:#4DBB74;
+}
+body.node-type-balade div.blocConseil{
+  text-align: center;
+  background-color: #fff;
+  padding: 17px 2%;
+  margin-top: 10px;
 }
 /*FIN PAGE BALADE*/
 
