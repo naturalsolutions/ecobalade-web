@@ -609,6 +609,19 @@ if (isset($_GET["idlastbal"])){
 										</div> <!-- fin row-fluid Saisonalité -->	 
 									
 									<?php endif; ?>		
+								<div class="row-fluid pub">
+									<div class="span12">
+										<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+										<!-- bas de page espece -->
+										<ins class="adsbygoogle"
+										     style="display:inline-block;width:728px;height:90px"
+										     data-ad-client="ca-pub-4110701213934425"
+										     data-ad-slot="5764794793"></ins>
+										<script>
+										(adsbygoogle = window.adsbygoogle || []).push({});
+										</script>										
+									</div>
+								</div>
 									
 							</div> <!-- fin bloc espece -->
 							
@@ -693,7 +706,8 @@ if (isset($_GET["idlastbal"])){
 								</div> <!-- fin blocTaxon -->
 							</div> <!-- fin aussiPresentDansBalade -->
 
-						</div>		
+						</div>										
+						
 						<?php print render($page['content']); ?>
 				
 		  </section>

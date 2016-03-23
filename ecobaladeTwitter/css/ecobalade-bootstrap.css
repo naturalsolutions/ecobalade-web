@@ -1117,6 +1117,10 @@ body.node-type-espece div#blockCriteresEspece div#fieldPersoCriteria1line{
   border-radius: 4px;
   padding: 30px 3% 10px 3%;
 }
+body.node-type-espece div.pub{
+  text-align: center;
+  padding: 13px 0px;
+}
 body.node-type-espece div#blockCriteresEspece div.crit{
   display: inline-block;
   width: 20%;
@@ -1754,6 +1758,9 @@ body.page-liste-balades div#edit-field-type-de-circuit-tid-wrapper p.help-block{
 }
 body.page-liste-balades .view-v-liste-balade .views-field-title h1 a{
   text-decoration: none;
+}
+body.page-liste-balades section#block-block-10{
+  margin-top: 30px;
 }
 body.page-liste-balades .view-v-liste-balade .views-field-view-node{
   border: none;
