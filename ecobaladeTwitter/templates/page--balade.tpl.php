@@ -43,7 +43,7 @@
   	</div>
   </div>
 </header>
-
+<!-- // fin TOP header -->
 <?php 
 
 global $base_url, $user; 
@@ -129,7 +129,14 @@ $baladenid = $node->nid;
 				<a  class="description" href="#description" data-toggle="tab" >Description</a>
 			<!---	<a  data-toggle="tab" data-target="#description">Description</a> -->
 			</li>
-			<li><a class="espece" href="#espece" data-toggle="tab" >Espèces</a></li>
+
+			<?php if ($title == "Test balade"): ?>
+			<li><a class="espece" href="#espece" data-toggle="tab">A decouvrir</a></li>
+
+			<?php else: ?>
+			<li><a class="espece" href="#espece" data-toggle="tab">Espèces</a></li>
+			<?php endif; ?>
+
 			<a class="btn pull-right back-page btn-primary" target="" rel="" title="Retour à la liste des balades" href="<?php echo $base_path;?>liste-balades">Retour à la liste des balades</a>
 		</ul> 
 		<div class="tab-content">
@@ -218,7 +225,7 @@ $baladenid = $node->nid;
 				<div class="span12" id='les_picto_balades'>
 				
 
-					<div title='Toutes les espèces' id='resetAllFilterOnTaxa'>Tout</div>					
+					<div title='Toutes les espèces' id='resetAllFilterOnTaxa'>Tout</div>				
 
 					<?php
 					//On get la balade courante
@@ -242,8 +249,34 @@ $baladenid = $node->nid;
 
 					}
 
+					//distinct value of tab
 					$arrayOfLabelOfGrpTaxo = array_unique($arrayOfLabelOfGrpTaxo);
 
+					//set geo to null
+					$geologie = '';
+					$patrimoine = '';
+					//To store geologie and patrimoine at the end of tab of label
+					foreach ($arrayOfLabelOfGrpTaxo as $key => $value) {
+						# code...
+						if($value == 'Géologique') {
+
+							$geologie = $arrayOfLabelOfGrpTaxo[$key];
+							unset($arrayOfLabelOfGrpTaxo[$key]);
+
+						}
+						if($value == 'Patrimoine') {
+
+							$patrimoine = $arrayOfLabelOfGrpTaxo[$key];
+							unset($arrayOfLabelOfGrpTaxo[$key]);
+
+						}
+					}
+
+					//push at the end of tab
+					if($geologie != '') array_push($arrayOfLabelOfGrpTaxo, $geologie);
+					if($patrimoine != '') array_push($arrayOfLabelOfGrpTaxo, $patrimoine);
+
+					//display
 					foreach ($arrayOfLabelOfGrpTaxo as $key => $value) {
 												
 						switch ($value) {
@@ -252,7 +285,7 @@ $baladenid = $node->nid;
 							break;
 
 							case 'Araignées':
-								$label_picto = 'picto_insect';
+								$label_picto = 'picto_escargot';
 							break;
 
 							case 'Petites bêtes':
@@ -281,7 +314,15 @@ $baladenid = $node->nid;
 
 							case 'Arbustes et plantes':
 								$label_picto = 'picto_arbuste';
-							break;	
+							break;
+
+							case 'Géologique':
+								$label_picto = 'picto_géologique';
+							break;
+
+							case 'Patrimoine':
+								$label_picto = 'picto_patrimoine';
+							break;
 
 							default:							
 							break;
@@ -294,9 +335,8 @@ $baladenid = $node->nid;
 
 				</div>
 			</div>
-					
+				
 			<?php print views_embed_view('v_liste_taxon_balade','block_list_espece',$baladenid);?>
-			
 	
 		</div>
 	</div>
@@ -306,9 +346,17 @@ $baladenid = $node->nid;
 	<!-- *****ASIDE RIGHT****** -->
     <?php if ($page['sidebar_second']): ?>
       <aside class="span3 region-sidebar-second" role="complementary">
-       <?php if ($node): ?>  
-	    <a id="btn-esp" class="btn btn-primary" alt="lien vers la liste des espèces" href="#" title="Les espèces a découvrir" >Pour découvrir les espèces de cette balade</a>
-		
+       
+	<?php if ($node): ?>  
+       
+       <?php if ($title == "Test balade"): ?>  
+	    <a id="btn-esp" class="btn btn-primary" alt="lien vers la liste des espèces" href="#" title="Les espèces a découvrir">A découvrir dans<br/>cette balade</a>
+
+	    <?php else: ?>
+	    <a id="btn-esp" class="btn btn-primary" alt="lien vers la liste des espèces" href="#" title="Les espèces a découvrir">Pour découvrir les espèces de cette balade</a>
+
+		<?php endif; ?>
+
 		<?php 
 
 		echo "
@@ -506,6 +554,8 @@ jQuery( document ).ready(function() {
     $(".Arbustes.et.plantes").parent().parent().show();
     $(".Mollusque").parent().parent().show();
 	$(".Amphibiens").parent().parent().show();
+	$(".Géologique").parent().parent().show;
+	$(".Patrimoine").parent().parent().show;
 	
 	$("#picto_oiseaux").css("border","none");
 	$("#picto_mamifere").css("border","none");
@@ -515,6 +565,8 @@ jQuery( document ).ready(function() {
 	$("#picto_arbuste").css("border","none");
 	$("#picto_mollusque").css("border","none");
 	$("#picto_amphibien").css("border","none");
+	$("#picto_géologique").css("border","none");
+	$("#picto_patrimoine").css("border", "none");	
 });
 </script>
 <!-- FILTRE ANIMAUX -->
@@ -528,8 +580,10 @@ jQuery( document ).ready(function() {
     $(".Arbustes.et.plantes").parent().parent().hide();
     $(".Mollusque").parent().parent().hide();
 	$(".Amphibiens").parent().parent().hide();
+	$(".Géologique").parent().parent().hide();
+	$(".Patrimoine").parent().parent().hide();
 	
-	$("#resetAllFilterOnTaxa").css("border","none");
+		$("#resetAllFilterOnTaxa").css("border","none");
 	$("#picto_oiseaux").css("border-bottom","1px solid #55BB79");
 		
 	
@@ -540,7 +594,8 @@ jQuery( document ).ready(function() {
 	$("#picto_arbuste").css("border","none");
 	$("#picto_mollusque").css("border","none");
 	$("#picto_amphibien").css("border","none");
-	
+	$("#picto_géologique").css("border","none");
+	$("#picto_patrimoine").css("border", "none");	
 });  
 </script>
 <script>
@@ -553,8 +608,10 @@ jQuery( document ).ready(function() {
     $(".Arbustes.et.plantes").parent().parent().hide();
     $(".Mollusque").parent().parent().hide();
 	$(".Amphibiens").parent().parent().hide();
-	
-	$("#resetAllFilterOnTaxa").css("border","none");
+	$(".Géologique").parent().parent().hide();
+	$(".Patrimoine").parent().parent().hide();
+
+		$("#resetAllFilterOnTaxa").css("border","none");
 	$("#picto_oiseaux").css("border","none");
 	$("#picto_mamifere").css("border-bottom","1px solid #55BB79");
 			
@@ -564,6 +621,8 @@ jQuery( document ).ready(function() {
 	$("#picto_arbuste").css("border","none");
 	$("#picto_mollusque").css("border","none");
 	$("#picto_amphibien").css("border","none");
+	$("#picto_géologique").css("border","none");
+	$("#picto_patrimoine").css("border", "none");
 });  
 </script>
 <script>
@@ -576,6 +635,8 @@ jQuery( document ).ready(function() {
     $(".Arbustes.et.plantes").parent().parent().hide();
     $(".Mollusque").parent().parent().hide();
 	$(".Amphibiens").parent().parent().hide();
+	$(".Géologique").parent().parent().hide();
+	$(".Patrimoine").parent().parent().hide();
 	
 		$("#resetAllFilterOnTaxa").css("border","none");
 	$("#picto_oiseaux").css("border","none");
@@ -587,6 +648,8 @@ jQuery( document ).ready(function() {
 	$("#picto_arbuste").css("border","none");
 	$("#picto_mollusque").css("border","none");
 	$("#picto_amphibien").css("border","none");
+	$("#picto_géologique").css("border","none");
+	$("#picto_patrimoine").css("border", "none");
 });  
 </script>
 <script>
@@ -599,6 +662,8 @@ jQuery( document ).ready(function() {
     $(".Arbustes.et.plantes").parent().parent().hide();
     $(".Mollusque").parent().parent().hide();
 	$(".Amphibiens").parent().parent().hide();
+	$(".Géologique").parent().parent().hide();
+	$(".Patrimoine").parent().parent().hide();
 	
 		$("#resetAllFilterOnTaxa").css("border","none");
 	$("#picto_oiseaux").css("border","none");
@@ -610,6 +675,8 @@ jQuery( document ).ready(function() {
 	$("#picto_arbuste").css("border","none");
 	$("#picto_mollusque").css("border","none");
 	$("#picto_amphibien").css("border","none");
+	$("#picto_géologique").css("border","none");
+	$("#picto_patrimoine").css("border", "none");
 }); 
 </script>
 <script>
@@ -622,6 +689,8 @@ jQuery( document ).ready(function() {
     $(".Arbres").parent().parent().hide();
     $(".Arbustes.et.plantes").parent().parent().hide();
 	$(".Amphibiens").parent().parent().hide();
+	$(".Géologique").parent().parent().hide();
+	$(".Patrimoine").parent().parent().hide();
 	
 		$("#resetAllFilterOnTaxa").css("border","none");
 	$("#picto_oiseaux").css("border","none");
@@ -633,6 +702,8 @@ jQuery( document ).ready(function() {
 	$("#picto_mollusque").css("border-bottom","1px solid #55BB79");
 	
 	$("#picto_amphibien").css("border","none");
+	$("#picto_géologique").css("border","none");
+	$("#picto_patrimoine").css("border", "none");
 }); 
 </script>
 <script>
@@ -645,6 +716,8 @@ jQuery( document ).ready(function() {
     $(".Reptiles").parent().parent().hide();
     $(".Arbres").parent().parent().hide();
     $(".Arbustes.et.plantes").parent().parent().hide();
+	$(".Géologique").parent().parent().hide();
+	$(".Patrimoine").parent().parent().hide();
 	
 		$("#resetAllFilterOnTaxa").css("border","none");
 	$("#picto_oiseaux").css("border","none");
@@ -655,8 +728,8 @@ jQuery( document ).ready(function() {
 	$("#picto_arbuste").css("border","none");
 	$("#picto_mollusque").css("border","none");
 	$("#picto_amphibien").css("border-bottom","1px solid #55BB79");
-		
-	
+	$("#picto_géologique").css("border","none");
+	$("#picto_patrimoine").css("border", "none");
 }); 
 </script>
 
@@ -671,6 +744,8 @@ jQuery( document ).ready(function() {
     $(".Arbustes.et.plantes").parent().parent().hide();
     $(".Mollusque").parent().parent().hide();
 	$(".Amphibiens").parent().parent().hide();
+	$(".Géologique").parent().parent().hide();
+	$(".Patrimoine").parent().parent().hide();
 	
 		$("#resetAllFilterOnTaxa").css("border","none");
 	$("#picto_oiseaux").css("border","none");
@@ -683,6 +758,8 @@ jQuery( document ).ready(function() {
 	$("#picto_arbuste").css("border","none");
 	$("#picto_mollusque").css("border","none");
 	$("#picto_amphibien").css("border","none");
+	$("#picto_géologique").css("border","none");
+	$("#picto_patrimoine").css("border", "none");
 }); 
 </script>
 <script>
@@ -695,6 +772,8 @@ jQuery( document ).ready(function() {
     $(".Arbres").parent().parent().hide();
     $(".Mollusque").parent().parent().hide();
 	$(".Amphibiens").parent().parent().hide();
+	$(".Géologique").parent().parent().hide();
+	$(".Patrimoine").parent().parent().hide();
 	
 		$("#resetAllFilterOnTaxa").css("border","none");
 	$("#picto_oiseaux").css("border","none");
@@ -707,7 +786,64 @@ jQuery( document ).ready(function() {
 	
 	$("#picto_mollusque").css("border","none");
 	$("#picto_amphibien").css("border","none");
+	$("#picto_géologique").css("border","none");
+	$("#picto_patrimoine").css("border", "none");
 }); 
 </script>
 <!-- FILTRE CHAMPIGNON -->
-
+<!-- FILTRE CHAILLOUX -->
+<script>
+    $('#picto_géologique').click(function() {
+	$(".Géologique").parent().parent().show();
+    $(".Arbustes.et.plantes").parent().parent().hide();
+    $(".Insectes").parent().parent().hide();
+    $(".Mammifères").parent().parent().hide();
+    $(".Oiseaux").parent().parent().hide();
+    $(".Reptiles").parent().parent().hide();
+    $(".Arbres").parent().parent().hide();
+    $(".Mollusque").parent().parent().hide();
+	$(".Amphibiens").parent().parent().hide();
+	$(".Patrimoine").parent().parent().hide();
+	
+		$("#resetAllFilterOnTaxa").css("border","none");
+	$("#picto_oiseaux").css("border","none");
+	$("#picto_mamifere").css("border","none");
+	$("#picto_insect").css("border","none");
+	$("#picto_reptile").css("border","none");
+	$("#picto_arbre").css("border","none");
+	$("#picto_arbuste").css("border","none");
+	$("#picto_mollusque").css("border","none");
+	$("#picto_amphibien").css("border","none");
+	$("#picto_géologique").css("border-bottom","1px solid #55BB79");
+	$("#picto_patrimoine").css("border", "none");
+}); 
+</script>
+<!-- FILTRE PATRIMOINE -->
+<script>
+    $('#picto_patrimoine').click(function() {
+	$(".Patrimoine").parent().parent().show();
+    $(".Arbustes.et.plantes").parent().parent().hide();
+    $(".Insectes").parent().parent().hide();
+    $(".Mammifères").parent().parent().hide();
+    $(".Oiseaux").parent().parent().hide();
+    $(".Reptiles").parent().parent().hide();
+    $(".Arbres").parent().parent().hide();
+    $(".Mollusque").parent().parent().hide();
+	$(".Amphibiens").parent().parent().hide();
+	$(".Géologique").parent().parent().hide();
+	
+		$("#resetAllFilterOnTaxa").css("border","none");
+	$("#picto_oiseaux").css("border","none");
+	$("#picto_mamifere").css("border","none");
+	$("#picto_insect").css("border","none");
+	$("#picto_reptile").css("border","none");
+	$("#picto_arbre").css("border","none");
+	$("#picto_arbuste").css("border","none");
+		
+	
+	$("#picto_mollusque").css("border","none");
+	$("#picto_amphibien").css("border","none");
+	$("#picto_géologique").css("border", "none");
+	$("#picto_patrimoine").css("border-bottom","1px solid #55BB79");
+}); 
+</script>
