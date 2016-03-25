@@ -165,6 +165,19 @@ $baladenid = $node->nid;
 			<?php $description = field_get_items($entity_type = 'node', $node, $field_name = 'field_description_de_la_balade'); ?>
 			<?php $description = $description[0]['value']; ?>				
 			<?php echo $description; ?>
+			
+			<div align="center" class='pubAdsens'>
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<!-- Bas de page balade -->
+				<ins class="adsbygoogle"
+				     style="display:inline-block;width:728px;height:90px"
+				     data-ad-client="ca-pub-4110701213934425"
+				     data-ad-slot="5564062399"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
+			
 			</div>
 
 			<!-- Boc espece phare de la balade -->
@@ -470,6 +483,9 @@ $baladenid = $node->nid;
 	<?php endif; ?>
       </aside>  <!-- /#sidebar-second -->
     <?php endif; ?>
+	
+
+
 
   </div>
  </div><!-- fin container-node -->
