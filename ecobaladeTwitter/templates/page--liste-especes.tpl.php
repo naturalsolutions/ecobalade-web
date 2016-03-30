@@ -77,9 +77,15 @@
 				</div>				
 				<div class="row-fluid">
 					<div class="span12" id='blockAllEspeces'>
-						<?php 		 
+						
+            <?php
+            if(isset($titre)){
+                print views_embed_view('v_all_especes','block_all_especes', $titre);
+            } else {		 
 								print views_embed_view('v_all_especes','block_all_especes');  // affichage liste des especes
+              };
 						?>
+
 					</div>
 				</div>			
 		  </section>
