@@ -169,8 +169,10 @@ else $nidBalade = 'all';
           pathname = pathname.split('?balade=');
           var currentBalade = pathname[1];
 
+          if(pathname.length == 1) currentBalade = 'all';
+
           //Si la balade courante est différente que celle selectionnée dans le 'select' alors => changement
-          if(currentBalade != null && (currentBalade != choixBalade)) selectBaladeIsChange = true; 
+          if((currentBalade != choixBalade && currentBalade == 'all') || currentBalade != choixBalade) selectBaladeIsChange = true; 
           else selectBaladeIsChange = false;
 
           //Si on a selectionné une autre balade
