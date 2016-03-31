@@ -124,6 +124,11 @@ $baladenid = $node->nid;
       
      
 		<!--- ONGLETS -->
+		<?php 
+		$currentPath = drupal_get_path_alias($path = current_path());
+		$currentPath = explode('/', $currentPath);
+		$currentPath = $currentPath[1];		
+		?>
 		<ul class="nav nav-tabs" id="myTab">
 			<li class="active">
 				<a  class="description" href="#description" data-toggle="tab" >Description</a>
@@ -131,10 +136,11 @@ $baladenid = $node->nid;
 			</li>
 
 			<?php if ($title == "Test balade"): ?>
-			<li><a class="espece" href="#espece" data-toggle="tab">A decouvrir</a></li>
+			<li><a class="espece" href="<?php echo $base_url; ?>/especes?balade=<?php echo $currentPath; ?>" data-toggle="tab">A decouvrir</a></li>
 
 			<?php else: ?>
-			<li><a class="espece" href="#espece" data-toggle="tab">Espèces</a></li>
+
+			<li><a class="espece" href="<?php echo $base_url; ?>/especes?balade=<?php echo $currentPath; ?>" >Espèces</a></li>
 			<?php endif; ?>
 
 			<a class="btn pull-right back-page btn-primary" target="" rel="" title="Retour à la liste des balades" href="<?php echo $base_path;?>liste-balades">Retour à la liste des balades</a>
