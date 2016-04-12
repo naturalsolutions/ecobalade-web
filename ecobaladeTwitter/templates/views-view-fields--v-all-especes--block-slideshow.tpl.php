@@ -35,7 +35,6 @@
 		<?php endif;?>
 <?php endforeach; ?>
 
-
 <?php foreach ($fields as $id => $field): ?>	
 		<?php if ($id == 'path') : ?>
 				<?php if (!empty($field->content)): ?>
@@ -44,8 +43,6 @@
 				<?php endif; ?>
 		<?php endif;?>
 <?php endforeach; ?>
-
-
 
 <?php foreach ($fields as $id => $field): ?>
 		<?php if ($id == 'field_photo_resume') : ?>
@@ -56,11 +53,34 @@
 		<?php endif;?>
 <?php endforeach; ?>
 
+<?php
+global $base_url;
+if(isset($_GET['balade']) && $_GET['balade'] != '') {
+	$isFilterBaladeSlideshow = true;
 
+}else{
+	$isFilterBaladeSlideshow = false;
+} ;
+?>
 
+<?php
+// On récupère le titre de la balade dans le URL
+$titleBalade = $_GET['balade'];
 
+//On récupère le titre d'espèce du $path
+$path_url = explode ('/', $path);
+$path_url = $path_url[3];
+?>
 
-	<a title="<?php print $title ?>" href="<?php print $path ?>">
-		<img alt="<?php print $title ?>" src="<?php print $field_photo_resume ?>">
+<?php if($isFilterBaladeSlideshow) { ;?>
+	<a title="<?php print $title ;?>" href="<?php echo $base_url.'/espece/'.$path_url.'?balade='.$titleBalade ;?>">
+		<img alt="<?php print $title ;?>" src="<?php print $field_photo_resume ;?>">
 	</a>
+<?php }else{ ;?>
+	<a title="<?php print $title ?>" href="<?php print $path ?>">
+		<img alt="<?php print $title ;?>" src="<?php print $field_photo_resume ;?>">
+	</a>
+
+<?php } ;?>
+
 

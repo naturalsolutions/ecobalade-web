@@ -50,16 +50,20 @@ $isFilterBalade = false;
 
 if(isset($_GET['balade']) && $_GET['balade'] != '') {
   $isFilterBalade = true;
-  $titleBalade = $_GET['balade'];                
+  
+  $titleBalade = $_GET['balade'];
+  $titleBaladeMachine = $titleBalade;
   $titleBalade = 'balade/'.$titleBalade;
   $titleBalade = drupal_get_normal_path($titleBalade);
   $titleBalade = explode('/', $titleBalade);
   $nidBalade = $titleBalade[1];
   $titleBalade = node_load($nidBalade);
   $titleBalade = $titleBalade->title;
-  drupal_set_title($title = $title.' - '.$titleBalade);
+  //drupal_set_title($title = $title.' - '.$titleBalade);
 }
+
 else $nidBalade = 'all';
+
 ?>
 
 <div class="container">
@@ -71,78 +75,95 @@ else $nidBalade = 'all';
 
     <?php print render($page['header']); ?>
   </header> <!-- /#header -->
-	 <?php if ($breadcrumb): print $breadcrumb; endif;?>
-      <a id="main-content"></a>
-	<div class="container-node">
-      <?php print render($title_prefix); ?>
-      <?php if ($title): ?>
-        <h1 class="page-header"><?php echo $title; ?></h1>
-      <?php endif; ?>
-      <?php print render($title_suffix); ?>
-	  <?php print $messages; ?>
-	   <?php print $messages; ?>
 
-		<div class="row-fluid">	
-			<section class="span12">
-      
-        <div class="row-fluid">
-          <div class="span12" id='slideShowAllEspeces'>
-            <?php 
-                print views_embed_view('v_all_especes','block_slideshow', $nidBalade);  
-            ?>
-          </div>
-        </div>
+        <?php
+          //on a définit un drupal_set_title pour ajouter le nom du balade, il faut les sépérer ici
+          //$titleBreadcrumb = explode('-', $title, 2);
+         // echo $titleBreadcrumb[0];
 
-        <?php 
-        //Liste des balades publiés        
-        try {
+            //$listeEspeces = $titleBreadcrumb[0];
 
-          $query = db_select('node', 'n');
-          $query->innerjoin('url_alias', 'ua', "ua.source = CONCAT('node/', n.nid)");
-          $query->condition('n.status', 1, '=')
-          ->condition('n.type', 'balade', '=')
-          ->fields('n', array('title', 'nid'))
-          ->fields('ua', array('alias'))
-          ->orderBy('created', 'DESC');
-                    
-          $result = $query->execute();
-
-        } catch (Exception $e) {
-          
-          drupal_set_message(t("Sorry, they are an error in the query."), 'error');          
-        
-        } 
-          
-
-        echo '<select id="selectBalade" name="select">';
-        echo "<option value='balade/all'>Toutes</option>"; 
-        while($record = $result->fetchAssoc()) {
-          
-          if($nidBalade == $record['nid']) echo "<option selected='selected' value='".$record['alias']."'>".$record['title']."</option>";          
-          else echo "<option value='".$record['alias']."'>".$record['title']."</option>";          
-        
-        } 
-        echo "</select>";
-       
-        
-
+           if ($breadcrumb && $_GET['balade'] != ''){ echo "<div class='breadcrumb'><a href='".$base_url."'>Accueil</a> »
+            <a href='".$base_url."/balade/".$titleBaladeMachine."'>".$titleBalade."</a> » ".$title."</div>";
+            
+           } else {
+            print $breadcrumb;
+          };
         ?>
 
-				<div class="row-fluid">
-					<div class="span12" id='blockAllEspeces'>
-						
-            <?php
+      <a id="main-content"></a>
+	<div class="container-node">
+        <?php print render($title_prefix); ?>
+        <?php if($title && $titleBalade): ?>
+          <h1 class="page-header"><?php echo $title; ?><br /><span><?php echo $titleBalade; ?></span></h1>
+        <?php elseif($title): ?>
+          <h1 class="page-header"><?php echo $title; ?></h1>
+        <?php endif; ?>
+        <?php print render($title_suffix); ?>
+  	  <?php print $messages; ?>
+  	   <?php print $messages; ?>
+
+
+    		<div class="row-fluid">	
+    			<section class="span12">
+          
+            <div class="row-fluid">
+              <div class="span12" id='slideShowAllEspeces'>
+                <?php 
+                    print views_embed_view('v_all_especes','block_slideshow', $nidBalade);  
+                ?>
+              </div>
+            </div>
+
+            <?php 
+            //Liste des balades publiés        
+            try {
+              
+              $query = db_select('node', 'n');
+              $query->innerjoin('url_alias', 'ua', "ua.source = CONCAT('node/', n.nid)");
+              $query->condition('n.status', 1, '=')
+              ->condition('n.type', 'balade', '=')
+              ->fields('n', array('title', 'nid'))
+              ->fields('ua', array('alias'))
+              ->orderBy('created', 'DESC');
                         
-            print views_embed_view('v_all_especes','block_all_especes', $nidBalade);
+              $result = $query->execute();
 
-						?>
+            } catch (Exception $e) {
+              
+              drupal_set_message(t("Sorry, they are an error in the query."), 'error');          
+            
+            } ;?>
+              
+            <div id="filterBalade" class="selectBalade views-exposed-widget views-exposed-form">
+            <label for="selectBalade">Toutes les balades</label>
+              <select id="selectBalade" name="select">
+                  <option value='balade/all'>Toutes</option> 
+              
+                  <?php while($record = $result->fetchAssoc()) {
+                    
+                    if($nidBalade == $record['nid']) echo "<option selected='selected' value='".$record['alias']."'>".$record['title']."</option>";          
+                    else echo "<option value='".$record['alias']."'>".$record['title']."</option>";          
+                  
+                  } ?>
+             </select>
+           </div>
 
-					</div>
-				</div>			
-		  </section>
-	  </div>
- </div><!-- fin container-node -->
-  </div>
+
+    				<div class="row-fluid">
+    					<div class="span12" id='blockAllEspeces'>
+    						
+                <?php
+                if($nidBalade == 'all') print views_embed_view('v_all_especes','block_1');
+                else print views_embed_view('v_all_especes','block_all_especes', $nidBalade);
+    						?>
+
+    					</div>
+    				</div>			
+    		  </section>
+    	  </div>
+  </div><!-- fin container-node -->
+</div><!-- fin container -->
 
 <script type="text/javascript">
    $( document ).ready(function() {
@@ -187,11 +208,16 @@ else $nidBalade = 'all';
               if(choixBalade == 'all') window.location.href = base_url+"/especes";
               else window.location.href = base_url+"/especes?balade="+choixBalade;
 
+              });
+
+              }else $('#edit-submit-v-all-especes').unbind();
             });
 
-          }else $('#edit-submit-v-all-especes').unbind();
 
-        });
+            // var title = document.getElementById('page-title').innerHTML;
+              
+            //   console.log(title);
+            
 
      });
   </script>

@@ -129,6 +129,7 @@ $baladenid = $node->nid;
 		$currentPath = explode('/', $currentPath);
 		$currentPath = $currentPath[1];		
 		?>
+		
 		<ul class="nav nav-tabs" id="myTab">
 			<li class="active">
 				<a  class="description" href="#description" data-toggle="tab" >Description</a>
@@ -136,7 +137,7 @@ $baladenid = $node->nid;
 			</li>
 
 			<?php if ($title == "Test balade"): ?>
-			<li><a class="espece" href="<?php echo $base_url; ?>/especes?balade=<?php echo $currentPath; ?>" data-toggle="tab">A decouvrir</a></li>
+			<li><a class="espece" href="<?php echo $base_url; ?>/especes?balade=<?php echo $currentPath; ?>" >A decouvrir</a></li>
 
 			<?php else: ?>
 
@@ -209,14 +210,15 @@ $baladenid = $node->nid;
 					
 					$imgPhotoResumeEspecePhare = theme( 'image_style', $variables );
 					$nidPhotoResumeEspecePhare = $nodeEspecePhare->nid;
+					$nidPhotoResumeEspecePhare = drupal_get_path_alias('node/'.$nidPhotoResumeEspecePhare);
 
 					//Affichage	
 					echo "<div class='span4'>";
 						echo '<figure class="effect-zoe">';
-							echo "<a href='$base_url/node/$nidPhotoResumeEspecePhare' title=\"$TitlePhotoResumeEspecePhare\">$imgPhotoResumeEspecePhare</a>";
+							echo "<a href='$base_url/$nidPhotoResumeEspecePhare' title=\"$TitlePhotoResumeEspecePhare\">$imgPhotoResumeEspecePhare</a>";
 							echo "<a href='$urlPhotoResumeEspecePhare' class='imageTaxon' title=\"$TitlePhotoResumeEspecePhare\"></a>";
 							echo "<figcaption>";
-								echo "<a title='Visiter la page' href='$base_url/node/$nidPhotoResumeEspecePhare'><h3>$nodeEspecePhare->title</h3></a>";											
+								echo "<a title='Visiter la page' href='$base_url/$nidPhotoResumeEspecePhare'><h3>$nodeEspecePhare->title</h3></a>";											
 							echo '</figcaption>';
 						echo '</figure>';
 					echo "</div>";
@@ -435,7 +437,7 @@ $baladenid = $node->nid;
 		
 		<div id="baladeSimilaire">
 		<h2>Balades similaires</h2>
-		<?php 
+		<?php
 		
 		//On recupère la difficulté
 		$difficulte = $node->field_difficulte['und'][0]['taxonomy_term']->tid;
@@ -470,13 +472,15 @@ $baladenid = $node->nid;
 			//Notre image
 			$imgbaladeSim = theme( 'image_style', $variables );
 
+			//remplacer le node par le alias
+			$loadPathBalade = drupal_get_path_alias('node/'.$value->nid);
 			
 			//Affichage	
 			echo '<figure class="effect-zoe">';
-				echo "<a href='$base_url/node/$value->nid' title=\"$title\">$imgbaladeSim</a>";
+				echo "<a href='$base_url/$loadPathBalade' title=\"$title\">$imgbaladeSim</a>";
 				echo "<a href='$url' class='imageBaladeSim' title=\"$title\"></a>";
 				echo "<figcaption>";
-					echo "<a title='Visiter la page' href='$base_url/node/$value->nid'><h3>$title</h3></a>";											
+					echo "<a title='Visiter la page' href='$base_url/$loadPathBalade'><h3>$title</h3></a>";											
 				echo '</figcaption>';
 			echo '</figure>';
 		

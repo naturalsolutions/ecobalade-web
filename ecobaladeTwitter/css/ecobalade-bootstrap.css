@@ -136,7 +136,7 @@ body.logged-in header#navbar{
   border-radius: 4px;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#F2F2F2', GradientType=0);
 }
-.container-node{
+.container-node {
   background:#E6E6E6;
   border-radius: 4px ;
   -webkit-border-radius: 4px;
@@ -1141,6 +1141,7 @@ body.node-type-espece div#blockTitleEsp div.pictoGroupeTax{
   position: absolute;
   top: 5px;
   left: 5px;
+  cursor: default;
 }
 /*slider*/
 body.node-type-espece div.swiper-button-next.swiper-button-white{
@@ -1185,9 +1186,10 @@ body.node-type-espece #blockEspece #picto_Arbres{
   background: url("../img/pictos/icone_arbre.png") 50% 50% no-repeat;
   background-size: 100%;  
 }
-body.node-type-espece #blockEspece #picto_Insectes{
+body.node-type-espece #blockEspece #picto_Petites_betes{
   background: url("../img/pictos/icone_insectes.png") 50% 50% no-repeat;
-  background-size: 100%;  
+  background-size: 100%; 
+  top: 17px;
 }
 body.node-type-espece #blockEspece #picto_Mollusque{
   background: url("../img/pictos/icone_escargot.png") 50% 50% no-repeat;
@@ -1213,7 +1215,7 @@ body.node-type-espece #blockEspece #picto_Amphibiens {
   background: url("../img/pictos/icone_amphibien.png") 50% 50% no-repeat;
   background-size: 100%;  
 }
-body.node-type-espece #blockEspece #picto_Géologique {
+body.node-type-espece #blockEspece #picto_Géologie {
   background: url("../img/pictos/icone_geologique.png") 50% 50% no-repeat;
   background-size: 100%;  
 }
@@ -1697,6 +1699,7 @@ body.page-liste-especes .form-submit {
 }
 body.page-liste-especes button#edit-submit-v-all-especes{
 	padding: 8%;
+  float: left;
 }
 body.page-liste-especes form {
 	margin: 0px!important; 
@@ -1720,6 +1723,7 @@ body.page-liste-especes .views-field.views-field-field-photo-resume-1 .field-con
 
 body.page-liste-especes .views-exposed-form{
 	margin-top: 20px;
+  vertical-align: bottom;
 }
 
 body.page-liste-especes .views-field.views-field-field-photo-resume-1 {
@@ -1737,6 +1741,8 @@ body.page-liste-especes .views-field.views-field-field-photo-resume-1 {
 }
 body.page-liste-especes .views-exposed-widgets.clearfix{
 	padding-left: 15px;
+  display: inline-block;
+  float: left;
 }
 body.page-liste-especes .views-exposed-widgets .form-item-items-per-page {
 	text-align: center;
@@ -1744,6 +1750,21 @@ body.page-liste-especes .views-exposed-widgets .form-item-items-per-page {
 body.page-liste-especes div#edit-field-groupe-taxonomique-tid-wrapper p.help-block{
   display: none;
 }
+body.page-liste-especes select#selectBalade {
+  width: 425px;
+  height: 30px;
+  padding: 4px 6px;
+}
+body.page-liste-especes div.selectBalade {
+  padding: 0 15px;
+}
+body.page-liste-especes div.views-exposed-form:nth-of-type(1){
+  margin-top: 3px; 
+}
+body.page-liste-especes h1>span{
+  font-size: 30px;
+}
+
 /***************************************************************************/
 /***************************************************************************/
 /*                PAGE LISTE BALADE - PAGE LES BALADE                      */
@@ -2527,12 +2548,12 @@ float:right;
 }
 /*********FILTRE TAXO******/
 div#resetAllFilterOnTaxa{
-   float: left;
+  float: left;
   cursor: pointer;
   width: 80px;
   height: 50px;
 }
-div#picto_insect{
+div#picto_Petites_betes{
   float: left;
   background: url("../img/pictos/icone_insectes.png") no-repeat scroll center center transparent;
   width: 80px;
@@ -2598,7 +2619,7 @@ div#picto_amphibien{
   cursor: pointer;
   background-size: 66%;
 }
-div#picto_géologique{
+div#picto_géologie{
   background: url("../img/pictos/icone_geologique.png") no-repeat scroll center center transparent;
   float: left;
   width: 80px;
@@ -5496,7 +5517,12 @@ body.node-type-blogosphere article footer{display: none;}
     margin-left: auto;
     margin-right: auto;
   }
-
+  body.page-liste-especes div.views-exposed-widgets{
+    background:#E6E6E6;
+    border-bottom: 1px solid #D4D4D4;
+    min-height: 100px;
+    padding-bottom: 10px;
+  }
 }
 
 @media (min-width: 980px) and (max-width: 1199px){
@@ -5583,6 +5609,51 @@ body.node-type-blogosphere article footer{display: none;}
 }
 
 /********************************************************/
+@media (min-width: 710px) and (max-width: 979px){
+  body.page-liste-especes button#edit-submit-v-all-especes {
+    width: 97.594;
+    height: 43.594;
+    margin-left: 40%;
+    margin-top: 0;
+    padding: 2%;
+  }
+
+  body.page-liste-especes .views-submit-button{
+    display: block;
+    width: 100%;
+  }
+}
+
+/********************************************************/
+@media (max-width: 512px){
+  body.page-liste-especes button#edit-submit-v-all-especes {
+    width: 97.594;
+    height: 43.594;
+    margin-left: 0;
+    margin-top: 0;
+    padding: 4%;
+  }
+
+  body.page-liste-especes .views-submit-button{
+    display: block;
+    width: 100%;
+  }
+  body.page-liste-especes select#selectBalade{
+    width: 100%;
+  }
+  body.page-liste-especes div#edit-title-wrapper{
+    width: 100%;
+  }
+  
+  body.page-liste-especes input#edit-title{
+    width: 100%;
+    /*border: 1px solid red;*/
+  }
+  body.page-liste-especes .views-exposed-widgets {
+   padding-right: 29px;
+  }
+}
+/********************************************************/
 @media (max-width: 480px){
   body.node-type-blogosphere,
   body.page-taxonomy-term div.listeArticle {
@@ -5593,4 +5664,14 @@ body.node-type-blogosphere article footer{display: none;}
   body.page-taxonomy-term div.listeArticle div.blog-banner{
     font-size: 1em;
   }
+  body.page-liste-especes h1 {
+    font-size: 2.5em;
+    line-height: 0.8em;
+  }
+  body.page-liste-especes h1 span {
+    font-size: 0.7em;
+  }
+}
+
+
 }

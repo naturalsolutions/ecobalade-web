@@ -44,19 +44,27 @@
   </div>
 </header>
 
+<?php
+//On test si l'on vient d'une page balade pour proposer un fil d'ariane complet
 
-<?php global $base_url; 
-//On test si l'on vient d'une page balade pour proposer un fil d'arianne complet
-if (isset($_GET["idlastbal"])){
-	
-	$nid_bal_last = $_GET["idlastbal"];
-	$node_bal_last = node_load($nid_bal_last);
-	
-	$breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/">Accueil</a> » <a href="'.$base_url.'/node/'.$nid_bal_last.'">'.$node_bal_last->title.'</a> » '.$node->title.'</div>';
-	
-}
+global $base_url; 
+$isFilterBalade = false;
+
+if(isset($_GET['balade']) && $_GET['balade'] != '') {
+  $isFilterBalade = true;
+  $titleBaladeMachine = $_GET['balade'];
+  $titleBalade = 'balade/'.$titleBaladeMachine;
+  $titleBalade = drupal_get_normal_path($titleBalade);
+  $titleBalade = explode('/', $titleBalade);
+  $nidBalade = $titleBalade[1];
+  $titleBalade = node_load($nidBalade);
+  $titleBalade = $titleBalade->title;
+
+
+$breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/">Accueil</a> » <a href="'.$base_url.'/balade/'.$titleBaladeMachine.'">'.$titleBalade.'</a> » <a href="'.$base_url.'/especes?balade='.$titleBaladeMachine.'">Liste des espèces</a> » '.$node->title.'</div>';
+
+} else $nidBalade = 'all';
 ?>
-
 
 <div class="container">
 
@@ -67,6 +75,7 @@ if (isset($_GET["idlastbal"])){
 
     <?php print render($page['header']); ?>
   </header> <!-- /#header -->
+
 	 <?php if ($breadcrumb): print $breadcrumb; endif;?>
       <a id="main-content"></a>
 	<div class="container-node">
@@ -127,15 +136,21 @@ if (isset($_GET["idlastbal"])){
 						<div class="row-fluid">
 							<div class="span9" id='blockEspece'>
 							
+									<!-- ici on définit le nom de taxo -->
 									<div class="row-fluid">
 										<div class="span12" id='blockTitleEsp'>
-											<?php 		 
+
+											<?php
 													if($groupe_tax == "Arbustes et plantes"){
 														print ("<div title='Arbustes et plantes' class='pictoGroupeTax' id='picto_Arbustes'></div>");
+													}elseif($groupe_tax == "Petites bêtes"){
+														print ("<div title='Petites bêtes' class='pictoGroupeTax' id='picto_Petites_betes'></div>");
 													}else{
 														print ("<div class='pictoGroupeTax' title='".$groupe_tax."' id='picto_".$groupe_tax."'></div>");
 													}
+
 													print ("<p id='nom_scf'>".$nom_scf."</p>");
+													print $tid;
 											?>
 											<a class="btn-back-list-espece btn btn-primary" title="Retour à la liste des espèces" href="<?php echo $base_path;?>liste-especes">Retour à la liste des espèces</a>
 										</div>
@@ -653,12 +668,17 @@ if (isset($_GET["idlastbal"])){
 										$alt = $nodeBalade->field_photo_resume['und'][0]['alt'];
 										$title = $nodeBalade->field_photo_resume['und'][0]['title'];
 
+										//remplacer le node par le alias
+										$loadPathBalade = drupal_get_path_alias('node/'.$nodeBalade->nid);
+										$loadPathBalade = explode("/", $loadPathBalade);
+										$loadPathBalade = $loadPathBalade[1];
+
 										//Affichage												
 										echo '<figure class="effect-zoe">';
-											echo "<a href='$base_url/node/$nodeBalade->nid' title=\"$title\"><img title=\"$nodeBalade->title\" src='$url' alt='$alt'/></a>";
+											echo "<a href='$base_url/balade/$loadPathBalade' title=\"$title\"><img title=\"$nodeBalade->title\" src='$url' alt='$alt'/></a>";
 											echo "<a href='$url' class='imageBalade' title=\"$title\"></a>";
 											echo "<figcaption>";
-												echo "<a class='visitBalade' title=\"$nodeBalade->title\" href='$base_url/node/$nodeBalade->nid'><h2>$nodeBalade->title</h2></a>";											
+												echo "<a class='visitBalade' title=\"$nodeBalade->title\" href='$base_url/balade/$loadPathBalade'><h2>$nodeBalade->title</h2></a>";											
 											echo '</figcaption>';
 										echo '</figure>';
 
@@ -688,14 +708,18 @@ if (isset($_GET["idlastbal"])){
 										$title = $nodeTaxon->field_photo_resume['und'][0]['title'];
 
 										if($title =='') $title = $nodeTaxon->title;
-										
 
+										//remplacer le node par le alias
+										$loadPathAnimal = drupal_get_path_alias('node/'.$nodeTaxon->nid);
+										$loadPathAnimal = explode("/", $loadPathAnimal);
+										$loadPathAnimal = $loadPathAnimal[1];
+												
 										//Affichage	
 										echo '<figure class="effect-zoe">';
-											echo "<a href='$base_url/node/$nodeTaxon->nid' title=\"$title\"><img title=\"$nodeTaxon->title\" src='$url' alt='$alt'/></a>";
+											echo "<a href='$base_url/espece/$loadPathAnimal' title=\"$title\"><img title=\"$nodeTaxon->title\" src='$url' alt='$alt'/></a>";
 											echo "<a href='$url' class='imageTaxon' title=\"$title\"></a>";
 											echo "<figcaption>";
-												echo "<a title='Visiter la page' href='$base_url/node/$nodeTaxon->nid'><h2>$nodeTaxon->title</h2></a>";											
+												echo "<a title='Visiter la page' href='$base_url/espece/$loadPathAnimal'><h2>$nodeTaxon->title</h2></a>";											
 											echo '</figcaption>';
 										echo '</figure>';								
 									
