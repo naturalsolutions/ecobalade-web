@@ -56,31 +56,32 @@
 <?php
 global $base_url;
 if(isset($_GET['balade']) && $_GET['balade'] != '') {
-	$isFilterBaladeSlideshow = true;
 
-}else{
-	$isFilterBaladeSlideshow = false;
-} ;
+	$isFilterBaladeSlideshow = true;
+	$titleBalade = $_GET['balade'];
+	$path_url = explode ('/espece/', $path);
+	$path_url = $path_url[1];
+
+}else $isFilterBaladeSlideshow = false;
 ?>
 
 <?php
-// On récupère le titre de la balade dans le URL
-$titleBalade = $_GET['balade'];
 
 //On récupère le titre d'espèce du $path
-$path_url = explode ('/', $path);
-$path_url = $path_url[3];
 ?>
 
-<?php if($isFilterBaladeSlideshow) { ;?>
+<?php if($isFilterBaladeSlideshow) : ?>
+	
 	<a title="<?php print $title ;?>" href="<?php echo $base_url.'/espece/'.$path_url.'?balade='.$titleBalade ;?>">
 		<img alt="<?php print $title ;?>" src="<?php print $field_photo_resume ;?>">
 	</a>
-<?php }else{ ;?>
+
+<?php else: ?>
+
 	<a title="<?php print $title ?>" href="<?php print $path ?>">
 		<img alt="<?php print $title ;?>" src="<?php print $field_photo_resume ;?>">
 	</a>
 
-<?php } ;?>
+<?php endif; ?>
 
 

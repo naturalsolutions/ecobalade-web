@@ -49,7 +49,7 @@
 	<?php endforeach; ?>
 	
 	<?php foreach ($fields as $id => $field): ?>
-			<?php if ($id == 'view_node') : ?>
+			<?php if ($id == 'path_1') : ?>
 					<?php if (!empty($field->content)): ?>
 							<?php $lien_espece =  $field->content; ?>
 					<?php endif; ?>
@@ -74,31 +74,28 @@
 
 				<?php
 				global $base_url;
-				// On récupère le titre de la balade et le nom machine de l'espèces du URL
-				$titleBalade = $_GET['balade'];
+				// On récupère le titre de la balade et le nom machine de l'espèces du URL								
+				$lien_espece_url = explode ('/espece/', $lien_espece);
+				$lien_espece_url = $lien_espece_url[1];
 				
-				$lien_espece_url = explode ('/', $lien_espece);
-				$lien_espece_url = $lien_espece_url[3];
-				$lien_espece_url = explode ('"', $lien_espece_url);
-				$lien_espece_url = $lien_espece_url[0];
 
 				if(isset($_GET['balade']) && $_GET['balade'] != '') {
 				  $isFilterBalade = true;
-
+				  $titleBalade = $_GET['balade'];
 				}else{
 					$isFilterBalade = false;
-				};
+				}
 				?>
 	
 	<div class='row-fluid'>
 		<div class='span12' id="containerOf1Specie">
 			<div class='row-fluid'>
 				<div class='span2' id="image_specie">
-					<?php if($isFilterBalade) { ;?>
+					<?php if($isFilterBalade) { ?>
 	  					<a href="<?php echo $base_url.'/espece/'.$lien_espece_url.'?balade='.$titleBalade;?>"><?php echo $image_espece; ?></a>
-					<?php }else{ ;?>
-						<a href="<?php echo $base_url.'/espece/'.$lien_espece_url ;?>"><?php echo $image_espece ;?></a>
-					<?php } ;?>
+					<?php }else{ ?> 
+						<a href="<?php echo $base_url.'/espece/'.$lien_espece_url; ?>"><?php echo $image_espece; ?></a>
+					<?php } ?>
 				
 				</div>
 				<div class='span2' id="title_specie">
@@ -123,10 +120,16 @@
 
 				</div>
 				<div class='span2' id="lien_specie">
-					<?php if($isFilterBalade) { ;?>
+					<?php if($isFilterBalade) : ?>
+				
 	  					<a href="<?php echo $base_url.'/espece/'.$lien_espece_url.'?balade='.$titleBalade;?>">voir</a>
-					<?php }else{
-						echo $lien_espece; } ;?>
+					
+					<?php else : ?>
+					
+						<a href="<?php echo $base_url.'/espece/'.$lien_espece_url; ?>">voir</a>
+
+					<?php endif; ?>
+
 				</div>
 			
 				<div class='<?php echo($groupe_taxo)?>'></div>
