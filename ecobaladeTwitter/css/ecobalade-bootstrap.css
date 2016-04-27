@@ -845,7 +845,7 @@ body.node-type-balade figure.effect-zoe{
 body.node-type-balade figure.effect-zoe a{
   text-decoration: none;
 }
-body.node-type-balade figure.effect-zoe a.imageBaladeSim, body.node-type-balade figure.effect-zoe a.imageTaxon{
+body.node-type-balade figure.effect-zoe a.imageBaladeSim, body.node-type-balade figure.effect-zoe a.imageTaxon, body.node-type-balade figure.effect-zoe a.imagePatrimoine {
   position: absolute;
   display: block;
   top: -50px;
@@ -859,9 +859,19 @@ body.node-type-balade figure.effect-zoe a.imageBaladeSim, body.node-type-balade 
   -webkit-transform: translate3d(0,100%,0);
   transform: translate3d(0,100%,0);
 }
-body.node-type-balade figure.effect-zoe:hover a.imageBaladeSim, body.node-type-balade figure.effect-zoe:hover a.imageTaxon{
+body.node-type-balade figure.effect-zoe a.imagePatrimoine {
+  right: 8px;
+}
+body.node-type-balade figure.effect-zoe:hover a.imageBaladeSim, body.node-type-balade figure.effect-zoe:hover a.imageTaxon, body.node-type-balade figure.effect-zoe:hover a.imagePatrimoine{
   -webkit-transform: translate3d(-3px,53px,0);
   transform: translate3d(-3px,53px,0);
+}
+body.node-type-balade figure.effect-zoe a.imagePatrimoine{
+    width: 100%;
+    height: 100%;
+    background: none;
+    top: -55px;
+    left: 1px;
 }
 body.node-type-balade figure.effect-zoe figcaption {
   position: absolute;
@@ -1005,6 +1015,46 @@ body.node-type-balade div#descriptionZone h4{
   left: 10px;
   background-color: #FFF;
 }
+
+
+/********************************************/
+
+body.node-type-balade div#patrimoineZone {
+    padding: 20px 15px 20px 15px;
+    position: relative;
+    border: 1px solid #BBB;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin: 10px 10px 25px 10px;
+}
+
+body.node-type-balade div#patrimoineZone h1,
+body.node-type-balade div#patrimoineZone h2,
+body.node-type-balade div#patrimoineZone h3 {
+    font-family: 'Raleway-Light';
+    font-weight: 300;
+    line-height: 1.6em;
+    font-size: 1.2em;
+  }
+body.node-type-balade div#patrimoineZone figcaption h3 {
+  font-size: 1em;
+}
+
+body.node-type-balade div#patrimoine h4{
+    position: absolute;
+    color: #4DBB74;
+    top: -23px;
+    left: 10px;
+    background-color: #FFF;
+}
+
+
+
+body.node-type-balade div.lesPatrimoinesImages {
+    margin-top: 15px;
+}
+
 body.node-type-balade div.especes-phares > h4{
   position: absolute;
    z-index: 2;
@@ -1025,6 +1075,7 @@ body.node-type-balade div.especes-phares{
 body.node-type-balade div.especes-phares a:hover{
   text-decoration: none;
 }
+
 body.node-type-balade div#boutons_partage{
   margin-left: 24px;
   margin-top: 3px;
@@ -1041,15 +1092,43 @@ body.node-type-balade #btn-guide{
   border-radius: 0;
   border: 3px solid #4DBB74;
 }
-body.node-type-balade a#btn-esp {
-  font-size: 1.4em;
+body.node-type-balade div#btn-esp-full {
   border: none;
-  text-shadow: none;
-  padding: 6% 0;
+  padding: 9% 0;
   width: 100%;
-  color: #fff;
-  line-height: 27px;
 }
+body.node-type-balade div.liste-espece-teaser {
+  display: block;
+  font-size: 1.3em;
+  color: #4DBB74;
+  text-align: center;
+  font-weight: bold;
+  margin: 7px 0 16px 0;
+  padding: 0 6%;
+}
+body.node-type-balade div.icones_liste {
+  background: url("../img/pictos/icones_liste.png") 50% 50% no-repeat;
+  background-size: 90%;
+}
+body.node-type-balade a#btn-esp {
+    font-size: 1.2em;
+    border: 1px solid  #4DBB74;
+    text-shadow: none;
+    padding: 7px;
+    width: 150px;
+    color: #fff;
+    line-height: 27px;
+    display: block;
+    margin: auto;
+    margin-bottom: 16px;
+}
+body.node-type-balade a#btn-esp:hover {
+    color: #4DBB74;
+    background-color: #fff;
+    font-weight: bold;
+    border: 1px solid  #4DBB74;
+}
+
 section#comments section.collapseComment{
   background: url('../img/comment_picto.png') no-repeat 0% -21px #f5f5f5;
   background-size: 13%;
@@ -1216,7 +1295,7 @@ body.node-type-espece #blockEspece #picto_Amphibiens {
   background-size: 100%;  
 }
 body.node-type-espece #blockEspece #picto_Géologie {
-  background: url("../img/pictos/icone_geologique.png") 50% 50% no-repeat;
+  background: url("../img/pictos/icone_geologie.png") 50% 50% no-repeat;
   background-size: 100%;  
 }
 body.node-type-espece #blockEspece #picto_Patrimoine {
@@ -2620,7 +2699,7 @@ div#picto_amphibien{
   background-size: 66%;
 }
 div#picto_géologie{
-  background: url("../img/pictos/icone_geologique.png") no-repeat scroll center center transparent;
+  background: url("../img/pictos/icone_geologie.png") no-repeat scroll center center transparent;
   float: left;
   width: 80px;
   height: 50px;
@@ -4061,7 +4140,7 @@ margin-left: 9%;
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
   }
-  body.node-type-balade figure.effect-zoe a.imageTaxon, body.node-type-balade figure.effect-zoe a.imageBaladeSim {
+  body.node-type-balade figure.effect-zoe a.imageTaxon, body.node-type-balade figure.effect-zoe a.imageBaladeSim, body.node-type-balade figure.effect-zoe a.imagePatrimoine {
     display: none;
   }
   body.node-type-balade figure.effect-zoe h3 {
@@ -5523,6 +5602,9 @@ body.node-type-blogosphere article footer{display: none;}
     min-height: 100px;
     padding-bottom: 10px;
   }
+  body.node-type-balade div.icones_liste {
+    background-size: 70%;
+  }
 }
 
 @media (min-width: 980px) and (max-width: 1199px){
@@ -5652,6 +5734,9 @@ body.node-type-blogosphere article footer{display: none;}
   body.page-liste-especes .views-exposed-widgets {
    padding-right: 29px;
   }
+  body.node-type-balade div.icones_liste {
+    background-size: 90%;
+  }
 }
 /********************************************************/
 @media (max-width: 480px){
@@ -5671,6 +5756,7 @@ body.node-type-blogosphere article footer{display: none;}
   body.page-liste-especes h1 span {
     font-size: 0.7em;
   }
+
 }
 
 

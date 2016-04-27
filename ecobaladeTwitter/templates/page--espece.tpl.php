@@ -152,7 +152,7 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/">Accueil</a> » <
 													print ("<p id='nom_scf'>".$nom_scf."</p>");
 													print $tid;
 											?>
-											<a class="btn-back-list-espece btn btn-primary" title="Retour à la liste des espèces" href="<?php echo $base_path;?>liste-especes">Retour à la liste des espèces</a>
+											<a class="btn-back-list-espece btn btn-primary" title="Retour à la liste des espèces" href="<?php echo $base_url.'/especes?balade='.$titleBaladeMachine; ?>">Retour à la liste des espèces</a>
 										</div>
 									</div>
 									

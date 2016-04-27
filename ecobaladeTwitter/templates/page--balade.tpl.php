@@ -129,257 +129,143 @@ $baladenid = $node->nid;
 		$currentPath = explode('/', $currentPath);
 		$currentPath = $currentPath[1];		
 		?>
-		
 		<ul class="nav nav-tabs" id="myTab">
 			<li class="active">
-				<a  class="description" href="#description" data-toggle="tab" >Description</a>
-			<!---	<a  data-toggle="tab" data-target="#description">Description</a> -->
+				<a class="description" href="#description" data-toggle="tab">Description</a>			
 			</li>
 
-			<?php if ($title == "Test balade"): ?>
-			<li><a class="espece" href="<?php echo $base_url; ?>/especes?balade=<?php echo $currentPath; ?>" >A decouvrir</a></li>
+			<!--
+			<li><a class="espece" href="<?php echo $base_url; ?>/especes?balade=<?php echo $currentPath; ?>">Espèces</a></li>
+			-->
 
-			<?php else: ?>
-
-			<li><a class="espece" href="<?php echo $base_url; ?>/especes?balade=<?php echo $currentPath; ?>" >Espèces</a></li>
+			<?php $result=views_get_view_result('v_all_patrimoine','patrimoine_block', $baladenid);
+			if (isset($result[0])): ?>
+			  <li>
+				<a class="description" href="#patrimoine" data-toggle="tab">Patrimoine</a>
+			</li>
 			<?php endif; ?>
-
+			
 			<a class="btn pull-right back-page btn-primary" target="" rel="" title="Retour à la liste des balades" href="<?php echo $base_path;?>liste-balades">Retour à la liste des balades</a>
-		</ul> 
+		</ul>
+
+		<div>
+		</div>
+			
 		<div class="tab-content">
 		<div class="tab-pane active" id="description"> 
 		
-			<!-- *****SLIDESHOW DETAIL BALADE****** -->
-			 <?php 			
-			print views_embed_view('v_slideshow_detail_balade','block',$baladenid); 
-			?> 
-			
-			<!-- AddThis Button BEGIN -->
-		    <div id="boutons_partage">
-		      <div class="addthis_toolbox addthis_default_style addthis_32x32_style" >
-		          <a class="addthis_button_facebook"></a>
-		          <a class="addthis_button_twitter"></a>
-		          <a class="addthis_button_google_plusone_share"></a>
-		          <a class="addthis_counter addthis_bubble_style"></a>
-		      </div>
-		    </div>
-		    <!-- AddThis Button END -->							
+			<div class="slideshow">
+				<!-- *****SLIDESHOW DETAIL BALADE****** -->
+				 <?php 			
+				print views_embed_view('v_slideshow_detail_balade','block',$baladenid); 
+				?> 
+				
+				<!-- AddThis Button BEGIN -->
+			    <div id="boutons_partage">
+			      <div class="addthis_toolbox addthis_default_style addthis_32x32_style" >
+			          <a class="addthis_button_facebook"></a>
+			          <a class="addthis_button_twitter"></a>
+			          <a class="addthis_button_google_plusone_share"></a>
+			          <a class="addthis_counter addthis_bubble_style"></a>
+			      </div>
+			    </div>
+			    <!-- AddThis Button END -->
+		    </div>				
 				
 				
-			<!-- Boc texte description de la balade -->
-			<div id="descriptionZone">	
-			<h4>Description de la balade&nbsp;:&nbsp;</h4>
-			<?php $description = field_get_items($entity_type = 'node', $node, $field_name = 'field_description_de_la_balade'); ?>
-			<?php $description = $description[0]['value']; ?>				
-			<?php echo $description; ?>
-			
-			<div align="center" class='pubAdsens'>
-				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-				<!-- Bas de page balade -->
-				<ins class="adsbygoogle"
-				     style="display:inline-block;width:728px;height:90px"
-				     data-ad-client="ca-pub-4110701213934425"
-				     data-ad-slot="5564062399"></ins>
-				<script>
-				(adsbygoogle = window.adsbygoogle || []).push({});
-				</script>
-			</div>
-			
-			</div>
-
-			<!-- Boc espece phare de la balade -->
-			<div class="especes-phares">
-				<h4>Espèces phares&nbsp;:&nbsp;</h4>
-				<?php $especesPhares = field_get_items($entity_type = 'node', $node, $field_name = 'field_esp_ces_phares'); ?>										
-				<div class="row-fluid">
-				<?php for($i=0;$i<count($especesPhares);$i++) { 
-					
-					$nodeEspecePhare = node_load($especesPhares[$i]['nid']);
-					$TitlePhotoResumeEspecePhare = $nodeEspecePhare->field_photo_resume['und'][0]['title'];
-					//$AltPhotoResumeEspecePhare = $nodeEspecePhare->field_photo_resume['und'][0]['alt'];
-					$urlPhotoResumeEspecePhare = file_create_url($nodeEspecePhare->field_photo_resume['und'][0]['uri']);
-
-					$variables = array(
-				        'style_name' => 'slideshow_detail_balade_full',
-				        'path' => $nodeEspecePhare->field_photo_resume['und'][0]['uri'],
-				        'width' => $nodeEspecePhare->field_photo_resume['und'][0]['width'],
-				        'height' => $nodeEspecePhare->field_photo_resume['und'][0]['height'],
-				        'title' => $nodeEspecePhare->field_photo_resume['und'][0]['title'],
-						'alt' => $nodeEspecePhare->field_photo_resume['und'][0]['alt']
-					);
-					
-					$imgPhotoResumeEspecePhare = theme( 'image_style', $variables );
-					$nidPhotoResumeEspecePhare = $nodeEspecePhare->nid;
-					$nidPhotoResumeEspecePhare = drupal_get_path_alias('node/'.$nidPhotoResumeEspecePhare);
-
-					//Affichage	
-					echo "<div class='span4'>";
-						echo '<figure class="effect-zoe">';
-							echo "<a href='$base_url/$nidPhotoResumeEspecePhare' title=\"$TitlePhotoResumeEspecePhare\">$imgPhotoResumeEspecePhare</a>";
-							echo "<a href='$urlPhotoResumeEspecePhare' class='imageTaxon' title=\"$TitlePhotoResumeEspecePhare\"></a>";
-							echo "<figcaption>";
-								echo "<a title='Visiter la page' href='$base_url/$nidPhotoResumeEspecePhare'><h3>$nodeEspecePhare->title</h3></a>";											
-							echo '</figcaption>';
-						echo '</figure>';
-					echo "</div>";
-					
-				} ?>
-				</div>					
-
-			</div>
-
-			<?php
-
-			$field_balade_google_map‎ = field_get_items($entity_type = 'node', $node, $field_name = 'field_balade_google_map');
-			echo "<div class='row-fluid googleMap'><div class='span12'>".$field_balade_google_map‎[0]['value']."</div></div>";
-
-			//Affichage du reste du node
-			print render($page['content']); 
-			?>			
-		
-		</div>
-
-		<!-- Conteneur de l'onglet Espece -->
-		<div class="tab-pane" id="espece">					
-			
-			<div class="row-fluid">
-				<div class="span12" id='les_picto_balades'>
-				
-
-					<div title='Toutes les espèces' id='resetAllFilterOnTaxa'>Tout</div>				
-
-					<?php
-					//On get la balade courante
-					$currentNode = node_load($baladenid); 
-					//On va y chercher le champs espèces
-					$allEspeceOftheNode = $currentNode->field_esp_ces['und'];
-					//Tableau de tid utilisé plus tard
-					$arrayOfLabelOfGrpTaxo = array();
-
-					//Pour chaque espece
-					foreach ($allEspeceOftheNode as $key => $value) {
+					<!-- Boc texte description de la balade -->
+					<div id="descriptionZone">	
+						<h4>Description de la balade&nbsp;:&nbsp;</h4>
+						<?php $description = field_get_items($entity_type = 'node', $node, $field_name = 'field_description_de_la_balade'); ?>
+						<?php $description = $description[0]['value']; ?>				
+						<?php echo $description; ?>
 						
-						//Get nid
-						$nidOfEspece = $value['nid'];						
+						<div align="center" class='pubAdsens'>
+							<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+							<!-- Bas de page balade -->
+							<ins class="adsbygoogle"
+							     style="display:inline-block;width:728px;height:90px"
+							     data-ad-client="ca-pub-4110701213934425"
+							     data-ad-slot="5564062399"></ins>
+							<script>
+							(adsbygoogle = window.adsbygoogle || []).push({});
+							</script>
+						</div>
+					</div>
 
-						//Charge espece node
-						$nodeCurrentSpecie = node_load($nidOfEspece);				
+					<!-- Boc espece phare de la balade -->
+					<div class="especes-phares">
+						<h4>Espèces phares&nbsp;:&nbsp;</h4>
+						<?php $especesPhares = field_get_items($entity_type = 'node', $node, $field_name = 'field_esp_ces_phares'); ?>
 
-						//Get All tid des groupes taxo
-						array_push($arrayOfLabelOfGrpTaxo, taxonomy_term_load($nodeCurrentSpecie->field_groupe_taxonomique['und'][0]['tid'])->name);						
 
-					}
+						<div class="row-fluid">
+						<?php for($i=0;$i<count($especesPhares);$i++) { 
+							
+							$nodeEspecePhare = node_load($especesPhares[$i]['nid']);
+							$TitlePhotoResumeEspecePhare = $nodeEspecePhare->field_photo_resume['und'][0]['title'];
+							//$AltPhotoResumeEspecePhare = $nodeEspecePhare->field_photo_resume['und'][0]['alt'];
+							$urlPhotoResumeEspecePhare = file_create_url($nodeEspecePhare->field_photo_resume['und'][0]['uri']);
 
-					//distinct value of tab
-					$arrayOfLabelOfGrpTaxo = array_unique($arrayOfLabelOfGrpTaxo);
+							$variables = array(
+						        'style_name' => 'slideshow_detail_balade_full',
+						        'path' => $nodeEspecePhare->field_photo_resume['und'][0]['uri'],
+						        'width' => $nodeEspecePhare->field_photo_resume['und'][0]['width'],
+						        'height' => $nodeEspecePhare->field_photo_resume['und'][0]['height'],
+						        'title' => $nodeEspecePhare->field_photo_resume['und'][0]['title'],
+								'alt' => $nodeEspecePhare->field_photo_resume['und'][0]['alt']
+							);
+							
+							$imgPhotoResumeEspecePhare = theme( 'image_style', $variables );
+							$nidPhotoResumeEspecePhare = $nodeEspecePhare->nid;
+							$nidPhotoResumeEspecePhare = drupal_get_path_alias('node/'.$nidPhotoResumeEspecePhare);
 
-					//set geo to null
-					$geologie = '';
-					$patrimoine = '';
-					//To store geologie and patrimoine at the end of tab of label
-					foreach ($arrayOfLabelOfGrpTaxo as $key => $value) {
-						# code...
-						if($value == 'Géologique') {
+							//Affichage	
+							echo "<div class='span4'>";
+								echo '<figure class="effect-zoe">';
+									echo "<a href='$base_url/$nidPhotoResumeEspecePhare' title=\"$TitlePhotoResumeEspecePhare\">$imgPhotoResumeEspecePhare</a>"; 
+									echo "<a href='$urlPhotoResumeEspecePhare' class='imageTaxon' title=\"$TitlePhotoResumeEspecePhare\"></a>";
 
-							$geologie = $arrayOfLabelOfGrpTaxo[$key];
-							unset($arrayOfLabelOfGrpTaxo[$key]);
+									echo "<figcaption>";
+										echo "<a title='Visiter la page' href='$base_url/$nidPhotoResumeEspecePhare'><h3>$nodeEspecePhare->title</h3></a>";											
+									echo '</figcaption>';
+								echo '</figure>';
+							echo "</div>";
+							
+						} ?>
+						</div>					
+					</div> <!-- fin especes-phares -->
+						<?php
 
-						}
-						if($value == 'Patrimoine') {
+						$field_balade_google_map‎ = field_get_items($entity_type = 'node', $node, $field_name = 'field_balade_google_map');
+						echo "<div class='row-fluid googleMap'><div class='span12'>".$field_balade_google_map‎[0]['value']."</div></div>";
 
-							$patrimoine = $arrayOfLabelOfGrpTaxo[$key];
-							unset($arrayOfLabelOfGrpTaxo[$key]);
+						//Affichage du reste du node
+						print render($page['content']); 
+						?>
+		</div> <!-- Fin active -->	
+			
 
-						}
-					}
+			<!-- Conteneur de l'onglet Patrimoine -->
+			<div class="tab-pane" id="patrimoine"> 
 
-					//push at the end of tab
-					if($geologie != '') array_push($arrayOfLabelOfGrpTaxo, $geologie);
-					if($patrimoine != '') array_push($arrayOfLabelOfGrpTaxo, $patrimoine);
+                  		<?php print views_embed_view('v_all_patrimoine','patrimoine_block', $baladenid); ?>
 
-					//display
-					foreach ($arrayOfLabelOfGrpTaxo as $key => $value) {
-												
-						switch ($value) {
-							case 'Amphibiens':
-								$label_picto = 'picto_amphibien';
-							break;
-
-							case 'Araignées':
-								$label_picto = 'picto_escargot';
-							break;
-
-							case 'Petites bêtes':
-								$label_picto = 'picto_insect';
-							break;
-
-							case 'Mammifères':
-								$label_picto = 'picto_mamifere';
-							break;
-
-							case 'Reptiles':
-								$label_picto = 'picto_reptile';
-							break;
-
-							case 'Oiseaux':
-								$label_picto = 'picto_oiseaux';
-							break;
-
-							case 'Mollusque':
-								$label_picto = 'picto_mollusque';
-							break;
-
-							case 'Arbres':
-								$label_picto = 'picto_arbre';
-							break;
-
-							case 'Arbustes et plantes':
-								$label_picto = 'picto_arbuste';
-							break;
-
-							case 'Géologique':
-								$label_picto = 'picto_géologique';
-							break;
-
-							case 'Patrimoine':
-								$label_picto = 'picto_patrimoine';
-							break;
-
-							default:							
-							break;
-						}
-						
-						echo "<div title='$value' id='$label_picto'></div>";
-					}
-
-					?>
-
-				</div>
-			</div>
-				
-			<?php print views_embed_view('v_liste_taxon_balade','block_list_espece',$baladenid);?>
-	
-		</div>
-	</div>
+			</div> <!-- fin #patrimoine -->
+	</div> <!-- Fin tab-content -->
 	
 	
 	</section>
 	<!-- *****ASIDE RIGHT****** -->
     <?php if ($page['sidebar_second']): ?>
       <aside class="span3 region-sidebar-second" role="complementary">
-       
-	<?php if ($node): ?>  
-       
-       <?php if ($title == "Test balade"): ?>  
-	    <a id="btn-esp" class="btn btn-primary" alt="lien vers la liste des espèces" href="#" title="Les espèces a découvrir">A découvrir dans<br/>cette balade</a>
+        
+        <div id="btn-esp-full" class="icones_liste"></div>
+	    <div class="liste-espece-teaser">Espèces à découvrir dans cette balade</div>
+	    <a id="btn-esp" class="btn btn-primary" alt="lien vers la liste des espèces" href="<?php echo $base_url; ?>/especes?balade=<?php echo $currentPath; ?>" title="Les espèces a découvrir">Liste des espèces</a>
 
-	    <?php else: ?>
-	    <a id="btn-esp" class="btn btn-primary" alt="lien vers la liste des espèces" href="#" title="Les espèces a découvrir">Pour découvrir les espèces de cette balade</a>
-
-		<?php endif; ?>
-
+	
 		<?php 
-
 		echo "
 			<div class='blocConseil'>
 				<p>1/ Préparer la balade sur le site ecobalade.fr</p>
@@ -411,10 +297,7 @@ $baladenid = $node->nid;
 		<?php if($node->field_lien_guide['und'][0]['value'] == 'mailto:contact@natural-solutions.eu'): ?>
 			<a id="btn-guide" class="btn btn-primary" target="" rel="" title="Contactez-nous" href="mailto:contact@natural-solutions.eu">Vous êtes guides, rejoignez-nous !</a>
 		<?php endif; ?>
-		
-
-		
-		
+				
 		<?php print views_embed_view('v_caracteristiques_balade','block_1',$baladenid);?>
 		<br/>
 		<div align="center" class='pubAdsens'>
@@ -490,7 +373,7 @@ $baladenid = $node->nid;
 		?>
 		</div>
 					
-	<?php endif; ?>
+	
       </aside>  <!-- /#sidebar-second -->
     <?php endif; ?>
 	
@@ -542,6 +425,20 @@ jQuery( document ).ready(function() {
 			adjustToWindow: 'both'
     	
     	});	
+	}
+
+	//LightBox pour patrimoines
+	if( $('.imagePatrimoine').length > 1 ){
+		
+		$('.imagePatrimoine').vanillabox({		
+			
+			closeButton: false,
+			loop: true,
+			repositionOnScroll: true,
+			type: 'image',
+			adjustToWindow: 'both',
+    	
+    	});	
 	} 
 
 	//Click sur bouton commenter
@@ -549,14 +446,9 @@ jQuery( document ).ready(function() {
 		if ($('section#comments section.collapseComment form').is(':visible')) $('section#comments section.collapseComment form').hide();
 		else $('section#comments section.collapseComment form').show();
 	});
-
-
-	//Lors clic sur bouton espece a decouvrir
-	$('#btn-esp').click(function(){
-		$('a.espece').trigger('click');
-	});
-
+	
 });
+
 </script>
 
 <script>
@@ -566,310 +458,9 @@ jQuery( document ).ready(function() {
   		var spliter = currentUrl.split("#");
   		if(spliter[1] == 'espece') $('#myTab a:last').tab('show');
   
-  })
+  });
 </script>
-
-<!-- FILTRE ALL ESPECE -->
+<!-- N'AFFICHE PAS LA LISTE DES "PATRIMOINES" -->
 <script>
-  $('#resetAllFilterOnTaxa').click(function() {
-    $(".Insectes").parent().parent().show();
-    $(".Mammifères").parent().parent().show();
-    $(".Reptiles").parent().parent().show();
-    $(".Oiseaux").parent().parent().show();
-    $(".Arbres").parent().parent().show();
-    $(".Arbustes.et.plantes").parent().parent().show();
-    $(".Mollusque").parent().parent().show();
-	$(".Amphibiens").parent().parent().show();
-	$(".Géologique").parent().parent().show;
-	$(".Patrimoine").parent().parent().show;
-	
-	$("#picto_oiseaux").css("border","none");
-	$("#picto_mamifere").css("border","none");
-	$("#picto_insect").css("border","none");
-	$("#picto_reptile").css("border","none");
-	$("#picto_arbre").css("border","none");
-	$("#picto_arbuste").css("border","none");
-	$("#picto_mollusque").css("border","none");
-	$("#picto_amphibien").css("border","none");
-	$("#picto_géologique").css("border","none");
-	$("#picto_patrimoine").css("border", "none");	
-});
-</script>
-<!-- FILTRE ANIMAUX -->
-<script>
-  $('#picto_oiseaux').click(function() {
-    $(".Oiseaux").parent().parent().show();
-    $(".Insectes").parent().parent().hide();
-    $(".Mammifères").parent().parent().hide();
-    $(".Reptiles").parent().parent().hide();
-    $(".Arbres").parent().parent().hide();
-    $(".Arbustes.et.plantes").parent().parent().hide();
-    $(".Mollusque").parent().parent().hide();
-	$(".Amphibiens").parent().parent().hide();
-	$(".Géologique").parent().parent().hide();
-	$(".Patrimoine").parent().parent().hide();
-	
-		$("#resetAllFilterOnTaxa").css("border","none");
-	$("#picto_oiseaux").css("border-bottom","1px solid #55BB79");
-		
-	
-	$("#picto_mamifere").css("border","none");
-	$("#picto_insect").css("border","none");
-	$("#picto_reptile").css("border","none");
-	$("#picto_arbre").css("border","none");
-	$("#picto_arbuste").css("border","none");
-	$("#picto_mollusque").css("border","none");
-	$("#picto_amphibien").css("border","none");
-	$("#picto_géologique").css("border","none");
-	$("#picto_patrimoine").css("border", "none");	
-});  
-</script>
-<script>
- $('#picto_mamifere').click(function() {
-    $(".Mammifères").parent().parent().show();
-    $(".Insectes").parent().parent().hide();
-    $(".Reptiles").parent().parent().hide();
-    $(".Oiseaux").parent().parent().hide();
-    $(".Arbres").parent().parent().hide();
-    $(".Arbustes.et.plantes").parent().parent().hide();
-    $(".Mollusque").parent().parent().hide();
-	$(".Amphibiens").parent().parent().hide();
-	$(".Géologique").parent().parent().hide();
-	$(".Patrimoine").parent().parent().hide();
-
-		$("#resetAllFilterOnTaxa").css("border","none");
-	$("#picto_oiseaux").css("border","none");
-	$("#picto_mamifere").css("border-bottom","1px solid #55BB79");
-			
-	$("#picto_insect").css("border","none");
-	$("#picto_reptile").css("border","none");
-	$("#picto_arbre").css("border","none");
-	$("#picto_arbuste").css("border","none");
-	$("#picto_mollusque").css("border","none");
-	$("#picto_amphibien").css("border","none");
-	$("#picto_géologique").css("border","none");
-	$("#picto_patrimoine").css("border", "none");
-});  
-</script>
-<script>
-  $('#picto_reptile').click(function() {
-    $(".Reptiles").parent().parent().show();
-    $(".Insectes").parent().parent().hide();
-    $(".Mammifères").parent().parent().hide();
-    $(".Oiseaux").parent().parent().hide();
-    $(".Arbres").parent().parent().hide();
-    $(".Arbustes.et.plantes").parent().parent().hide();
-    $(".Mollusque").parent().parent().hide();
-	$(".Amphibiens").parent().parent().hide();
-	$(".Géologique").parent().parent().hide();
-	$(".Patrimoine").parent().parent().hide();
-	
-		$("#resetAllFilterOnTaxa").css("border","none");
-	$("#picto_oiseaux").css("border","none");
-	$("#picto_mamifere").css("border","none");
-	$("#picto_insect").css("border","none");
-	$("#picto_reptile").css("border-bottom","1px solid #55BB79");		
-	
-	$("#picto_arbre").css("border","none");
-	$("#picto_arbuste").css("border","none");
-	$("#picto_mollusque").css("border","none");
-	$("#picto_amphibien").css("border","none");
-	$("#picto_géologique").css("border","none");
-	$("#picto_patrimoine").css("border", "none");
-});  
-</script>
-<script>
- $('#picto_insect').click(function() {
-    $(".Insectes").parent().parent().show();
-    $(".Reptiles").parent().parent().hide();
-    $(".Mammifères").parent().parent().hide();
-    $(".Oiseaux").parent().parent().hide();
-    $(".Arbres").parent().parent().hide();
-    $(".Arbustes.et.plantes").parent().parent().hide();
-    $(".Mollusque").parent().parent().hide();
-	$(".Amphibiens").parent().parent().hide();
-	$(".Géologique").parent().parent().hide();
-	$(".Patrimoine").parent().parent().hide();
-	
-		$("#resetAllFilterOnTaxa").css("border","none");
-	$("#picto_oiseaux").css("border","none");
-	$("#picto_mamifere").css("border","none");
-	$("#picto_insect").css("border-bottom","1px solid #55BB79");
-	
-	$("#picto_reptile").css("border","none");
-	$("#picto_arbre").css("border","none");
-	$("#picto_arbuste").css("border","none");
-	$("#picto_mollusque").css("border","none");
-	$("#picto_amphibien").css("border","none");
-	$("#picto_géologique").css("border","none");
-	$("#picto_patrimoine").css("border", "none");
-}); 
-</script>
-<script>
-    $('#picto_mollusque').click(function() {
-    $(".Mollusque").parent().parent().show();
-    $(".Insectes").parent().parent().hide();
-    $(".Mammifères").parent().parent().hide();
-    $(".Oiseaux").parent().parent().hide();
-    $(".Reptiles").parent().parent().hide();
-    $(".Arbres").parent().parent().hide();
-    $(".Arbustes.et.plantes").parent().parent().hide();
-	$(".Amphibiens").parent().parent().hide();
-	$(".Géologique").parent().parent().hide();
-	$(".Patrimoine").parent().parent().hide();
-	
-		$("#resetAllFilterOnTaxa").css("border","none");
-	$("#picto_oiseaux").css("border","none");
-	$("#picto_mamifere").css("border","none");
-	$("#picto_insect").css("border","none");
-	$("#picto_reptile").css("border","none");
-	$("#picto_arbre").css("border","none");
-	$("#picto_arbuste").css("border","none");
-	$("#picto_mollusque").css("border-bottom","1px solid #55BB79");
-	
-	$("#picto_amphibien").css("border","none");
-	$("#picto_géologique").css("border","none");
-	$("#picto_patrimoine").css("border", "none");
-}); 
-</script>
-<script>
-    $('#picto_amphibien').click(function() {
-	$(".Amphibiens").parent().parent().show();
-    $(".Mollusque").parent().parent().hide();
-    $(".Insectes").parent().parent().hide();
-    $(".Mammifères").parent().parent().hide();
-    $(".Oiseaux").parent().parent().hide();
-    $(".Reptiles").parent().parent().hide();
-    $(".Arbres").parent().parent().hide();
-    $(".Arbustes.et.plantes").parent().parent().hide();
-	$(".Géologique").parent().parent().hide();
-	$(".Patrimoine").parent().parent().hide();
-	
-		$("#resetAllFilterOnTaxa").css("border","none");
-	$("#picto_oiseaux").css("border","none");
-	$("#picto_mamifere").css("border","none");
-	$("#picto_insect").css("border","none");
-	$("#picto_reptile").css("border","none");
-	$("#picto_arbre").css("border","none");
-	$("#picto_arbuste").css("border","none");
-	$("#picto_mollusque").css("border","none");
-	$("#picto_amphibien").css("border-bottom","1px solid #55BB79");
-	$("#picto_géologique").css("border","none");
-	$("#picto_patrimoine").css("border", "none");
-}); 
-</script>
-
-<!-- FILTRE VEGETAUX -->
-<script>
-  $('#picto_arbre').click(function() {
-    $(".Arbres").parent().parent().show();
-    $(".Insectes").parent().parent().hide();
-    $(".Mammifères").parent().parent().hide();
-    $(".Oiseaux").parent().parent().hide();
-    $(".Reptiles").parent().parent().hide();
-    $(".Arbustes.et.plantes").parent().parent().hide();
-    $(".Mollusque").parent().parent().hide();
-	$(".Amphibiens").parent().parent().hide();
-	$(".Géologique").parent().parent().hide();
-	$(".Patrimoine").parent().parent().hide();
-	
-		$("#resetAllFilterOnTaxa").css("border","none");
-	$("#picto_oiseaux").css("border","none");
-	$("#picto_mamifere").css("border","none");
-	$("#picto_insect").css("border","none");
-	$("#picto_reptile").css("border","none");
-	$("#picto_arbre").css("border-bottom","1px solid #55BB79");
-		
-	
-	$("#picto_arbuste").css("border","none");
-	$("#picto_mollusque").css("border","none");
-	$("#picto_amphibien").css("border","none");
-	$("#picto_géologique").css("border","none");
-	$("#picto_patrimoine").css("border", "none");
-}); 
-</script>
-<script>
-    $('#picto_arbuste').click(function() {
-    $(".Arbustes.et.plantes").parent().parent().show();
-    $(".Insectes").parent().parent().hide();
-    $(".Mammifères").parent().parent().hide();
-    $(".Oiseaux").parent().parent().hide();
-    $(".Reptiles").parent().parent().hide();
-    $(".Arbres").parent().parent().hide();
-    $(".Mollusque").parent().parent().hide();
-	$(".Amphibiens").parent().parent().hide();
-	$(".Géologique").parent().parent().hide();
-	$(".Patrimoine").parent().parent().hide();
-	
-		$("#resetAllFilterOnTaxa").css("border","none");
-	$("#picto_oiseaux").css("border","none");
-	$("#picto_mamifere").css("border","none");
-	$("#picto_insect").css("border","none");
-	$("#picto_reptile").css("border","none");
-	$("#picto_arbre").css("border","none");
-	$("#picto_arbuste").css("border-bottom","1px solid #55BB79");
-		
-	
-	$("#picto_mollusque").css("border","none");
-	$("#picto_amphibien").css("border","none");
-	$("#picto_géologique").css("border","none");
-	$("#picto_patrimoine").css("border", "none");
-}); 
-</script>
-<!-- FILTRE CHAMPIGNON -->
-<!-- FILTRE CHAILLOUX -->
-<script>
-    $('#picto_géologique').click(function() {
-	$(".Géologique").parent().parent().show();
-    $(".Arbustes.et.plantes").parent().parent().hide();
-    $(".Insectes").parent().parent().hide();
-    $(".Mammifères").parent().parent().hide();
-    $(".Oiseaux").parent().parent().hide();
-    $(".Reptiles").parent().parent().hide();
-    $(".Arbres").parent().parent().hide();
-    $(".Mollusque").parent().parent().hide();
-	$(".Amphibiens").parent().parent().hide();
-	$(".Patrimoine").parent().parent().hide();
-	
-		$("#resetAllFilterOnTaxa").css("border","none");
-	$("#picto_oiseaux").css("border","none");
-	$("#picto_mamifere").css("border","none");
-	$("#picto_insect").css("border","none");
-	$("#picto_reptile").css("border","none");
-	$("#picto_arbre").css("border","none");
-	$("#picto_arbuste").css("border","none");
-	$("#picto_mollusque").css("border","none");
-	$("#picto_amphibien").css("border","none");
-	$("#picto_géologique").css("border-bottom","1px solid #55BB79");
-	$("#picto_patrimoine").css("border", "none");
-}); 
-</script>
-<!-- FILTRE PATRIMOINE -->
-<script>
-    $('#picto_patrimoine').click(function() {
-	$(".Patrimoine").parent().parent().show();
-    $(".Arbustes.et.plantes").parent().parent().hide();
-    $(".Insectes").parent().parent().hide();
-    $(".Mammifères").parent().parent().hide();
-    $(".Oiseaux").parent().parent().hide();
-    $(".Reptiles").parent().parent().hide();
-    $(".Arbres").parent().parent().hide();
-    $(".Mollusque").parent().parent().hide();
-	$(".Amphibiens").parent().parent().hide();
-	$(".Géologique").parent().parent().hide();
-	
-		$("#resetAllFilterOnTaxa").css("border","none");
-	$("#picto_oiseaux").css("border","none");
-	$("#picto_mamifere").css("border","none");
-	$("#picto_insect").css("border","none");
-	$("#picto_reptile").css("border","none");
-	$("#picto_arbre").css("border","none");
-	$("#picto_arbuste").css("border","none");
-		
-	
-	$("#picto_mollusque").css("border","none");
-	$("#picto_amphibien").css("border","none");
-	$("#picto_géologique").css("border", "none");
-	$("#picto_patrimoine").css("border-bottom","1px solid #55BB79");
-}); 
+ 	$('.field.field-name-field-reference-patrimoine.field-type-node-reference.field-label-above').hide();  	
 </script>

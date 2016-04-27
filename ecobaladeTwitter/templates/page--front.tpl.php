@@ -307,10 +307,16 @@
 							'alt' => $alt
 						);
 						//Notre image
-						$field_photo_resume_espece_phare = theme( 'image_style', $variables );						
+						$field_photo_resume_espece_phare = theme( 'image_style', $variables );
+
+						//remplacer le node par le alias
+						$loadPathEspecePhare = drupal_get_path_alias('node/'.$nidEspecePhare);
+						$loadPathEspecePhare = explode("/", $loadPathEspecePhare);
+						$loadPathEspecePhare = $loadPathEspecePhare[1];			
 												
 						//Affichage
-						echo "<a href='$base_url/node/$nidEspecePhare' title=\"$title\" alt=\"$alt\"><span class='nameEspPhareBaladePromu'>$titleTax</span>$field_photo_resume_espece_phare</a>"; 
+						echo "<a href='$base_url/espece/$loadPathEspecePhare' title=\"$title\" alt=\"$alt\"><span class='nameEspPhareBaladePromu'>$titleTax</span>$field_photo_resume_espece_phare</a>";
+						echo $loadPathBalade;
 
 					echo '</div>';
 				} ?>
@@ -319,7 +325,7 @@
 			<div class="row-fluid zoneBtnBalade">
 				
 				<div class="span12">					
-					<a class=" btn btn-primary bnt-large" title="<?php echo $title; ?>" href="<?php echo $base_url."/node/".$nidBaladepromu; ?>">Détails de la balade</a> 
+					<a class=" btn btn-primary bnt-large" title="<?php echo $title; ?>" href="<?php echo $base_url."/".$pathBaladePromu; ?>">Détails de la balade</a> 
 					<a class=" btn btn-primary bnt-large  inverse" title="Les balades" href="<?php echo $base_path;?>liste-balades">Toutes les balades</a>							
 				</div>
 					
