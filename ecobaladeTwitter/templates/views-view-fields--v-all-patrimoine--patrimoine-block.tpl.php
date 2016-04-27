@@ -34,49 +34,15 @@
 					<?php endif; ?>
 			<?php endif;?>
 	<?php endforeach; ?>
-
-	<?php foreach ($fields as $id => $field): ?>
-			<?php if ($id == 'field_image') : ?>
-					<?php if (!empty($field->content)): ?>
-							<?php $field_image =  $field->content; ?>
-					<?php endif;?>
-			<?php endif; ?>
-	<?php endforeach; ?>
-
-	<?php foreach ($fields as $id => $field): ?>
-			<?php if ($id == 'field_image_1') : ?>
-					<?php if (!empty($field->content)): ?>
-							<?php $field_image_1 =  $field->content; ?>
-					<?php endif;?>
-			<?php endif; ?>
-	<?php endforeach; ?>
 	
 	<?php foreach ($fields as $id => $field): ?>
-			<?php if ($id == 'field_description') : ?>
+			<?php if ($id == 'field_description_patrimoine') : ?>
 					<?php if (!empty($field->content)): ?>
-							<?php $descro_patrimoine =  $field->content; ?>
+							<?php $field_description_patrimoine =  $field->content; ?>
 					<?php endif; ?>
 			<?php endif;?>
 	<?php endforeach; ?>
-	
-	<?php foreach ($fields as $id => $field): ?>
-			<?php if ($id == 'path') : ?>
-					<?php if (!empty($field->content)): ?>
-							<?php $lien_patrimoine =  $field->content; ?>
-					<?php endif; ?>
-			<?php endif;?>
-	<?php endforeach; ?>
-	<?php echo $lien_patrimoine; ?>
-	
-
-	<?php foreach ($fields as $id => $field): ?>
-			<?php if ($id == 'uri') : ?>
-					<?php if (!empty($field->content)): ?>
-							<?php $uri = $field->content; ?>
-					<?php endif; ?>
-			<?php endif;?>
-	<?php endforeach; ?>
-
+			
 	<?php foreach ($fields as $id => $field): ?>
 			<?php if ($id == 'nid') : ?>
 					<?php if (!empty($field->content)): ?>
@@ -100,17 +66,17 @@
 			<div class='row-fluid descriptionPatrimoine'> 
 				<div class='span12'>							
 					<?php 
-					$descro_patrimoine = drupal_html_to_text($descro_patrimoine); 	
+					$field_description_patrimoine = drupal_html_to_text($field_description_patrimoine); 	
 					
 						//Si on vient d'un texte brut dans balises
-					if($descro_patrimoine[0] != '<'){
+					if($field_description_patrimoine[0] != '<'){
 
-						echo '<p>'.$descro_patrimoine.'</p>';
+						echo '<p>'.$field_description_patrimoine.'</p>';
 
 					}else{
 
 						//Si on vient d'un plain texte avec wisiwig et balise
-						echo $descro_patrimoine;												
+						echo $field_description_patrimoine;												
 					}
 					?>
 				</div>
@@ -118,49 +84,49 @@
 		</div>				
 	</div>
 
-			<div class='row-fluid lesPatrimoinesImages'>			
-  					<?php 
-  					$imagesPatrimoines = field_get_items($entity_type = 'node', $monPatrimoine, $field_name = 'field_image');
+	<div class='row-fluid lesPatrimoinesImages'>			
+				<?php 
+				$imagesPatrimoines = field_get_items($entity_type = 'node', $monPatrimoine, $field_name = 'field_images_patrimoine');
 
-  					//limiter le lightbox
-  					if(!empty($imagesPatrimoines)) :
+				//limiter le lightbox
+				if(!empty($imagesPatrimoines)) :
 
-						for($i=0;$i<count($imagesPatrimoines);$i++) {
+				for($i=0;$i<count($imagesPatrimoines);$i++) {
 
-							$variables = array(
-						        'style_name' => 'slideshow_detail_balade_full',
-						        'path' => $imagesPatrimoines[$i]['uri'],
-						        'width' => $imagesPatrimoines[$i]['width'],
-						        'height' => $imagesPatrimoines[$i]['height'],
-						        'title' => $imagesPatrimoines[$i]['title'],
-								'alt' => $imagesPatrimoines[$i]['alt']
-							);
+					$variables = array(
+				        'style_name' => 'slideshow_detail_balade_full',
+				        'path' => $imagesPatrimoines[$i]['uri'],
+				        'width' => $imagesPatrimoines[$i]['width'],
+				        'height' => $imagesPatrimoines[$i]['height'],
+				        'title' => $imagesPatrimoines[$i]['title'],
+						'alt' => $imagesPatrimoines[$i]['alt']
+					);
 
-							$titlePatrimoine = $variables['title'];
-							$urlPatrimoine = file_create_url($variables['path']);
-							// echo $urlPatrimoine;
-						
+					$titlePatrimoine = $variables['title'];
+					$urlPatrimoine = file_create_url($variables['path']);
+					// echo $urlPatrimoine;
+				
 
-							$imagePatrimoine = theme('image_style', $variables );
-							
+					$imagePatrimoine = theme('image_style', $variables );
+					
 
-								echo "<div class='span4'>";
-									echo '<figure class="patrimoine effect-zoe">';
-										echo $imagePatrimoine; 
-										echo "<a href='$urlPatrimoine' class='imagePatrimoine' title=\"$titlePatrimoine\"></a>";
+						echo "<div class='span4'>";
+							echo '<figure class="patrimoine effect-zoe">';
+								echo $imagePatrimoine; 
+								echo "<a href='$urlPatrimoine' class='imagePatrimoine' title=\"$titlePatrimoine\"></a>";
 
-										echo "<figcaption>";
-											echo "<h3>$titlePatrimoine</h3>";											
-										echo '</figcaption>';
-									echo '</figure>';
-								echo "</div>";
-							
-						 };
-					 endif;
-					 ?>
+								echo "<figcaption>";
+									echo "<h3>$titlePatrimoine</h3>";											
+								echo '</figcaption>';
+							echo '</figure>';
+						echo "</div>";
+					
+				 };
+			 endif;
+			 ?>
 
 
-			</div> <!-- fin lesPatrimoines -->
+	</div> <!-- fin lesPatrimoines -->
 </div> <!-- fin patrimoineZone -->
 	
 
