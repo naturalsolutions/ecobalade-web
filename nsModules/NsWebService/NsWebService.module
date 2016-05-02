@@ -134,7 +134,7 @@ function NsWebService_find_balade_information($nitems, $timestamp, $id, $balade,
     $query->addField('n', 'nid', 'nidEspece');
     $query->addField('n', 'vid', 'vidEspece');
     $query->addField('j', 'field_nom_scientifique_value', 'nom_scientifique');
-    $query->addField('o', 'field_description_value', 'description');
+    $query->addField('o', 'field_description_value', 'description');    
     $query->addField('z', 'name', 'groupeTaxo');    
     $query->addField('b', 'uri', 'imgEspeceFirst');
     $query->addField('b', 'filesize', 'imgEspeceFirstFilesize');
@@ -167,7 +167,7 @@ function NsWebService_find_balade_information($nitems, $timestamp, $id, $balade,
     // /data/xml/retrieve?balade=detail?nitems=5&since=10
   
     //Description 
-    $query->join('field_revision_field_description_de_la_balade', 'd', '(d.revision_id = n.vid)');
+    $query->join('field_revision_field_description_de_la_balade', 'd', '(d.revision_id = n.vid)');    
     
     //Acces au site : 
     $query->leftJoin('field_revision_field_acces_site', 'a', '(a.revision_id = n.vid)');
@@ -215,7 +215,7 @@ function NsWebService_find_balade_information($nitems, $timestamp, $id, $balade,
     $query->addField('n', 'title', 'titre');
     $query->addField('n', 'vid', 'vid');
     $query->addField('n', 'nid', 'nid');
-    $query->addField('n', 'created', 'date_post');
+    $query->addField('n', 'created', 'date_post');    
     $query->addField('d', 'field_description_de_la_balade_value', 'description');
     $query->addField('a', 'field_acces_site_value', 'acces');
     $query->addField('t', 'field_duree_value', 'duree');
@@ -405,6 +405,7 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
       $itemCritere = $doc->createElement('item');
       
       $date_post = $doc->createElement('date_post');
+      $patrimoine = $doc->createElement('patrimoines');
             
       
       foreach ($data as $key => $value) {
@@ -429,8 +430,32 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
 
           }
 
-          //ajout attribut id à balade
-          $parent->setAttribute($attr_name = 'id', $attr_value = $value);          
+          //Requette pour aller chercher les patrimoines
+          $query4 = db_select('field_revision_field_description_patrimoine', 'g');                  
+          $query4->join('field_data_field_lien_balade', 'l', '(l.entity_id = g.entity_id)');
+
+          $query4->condition('l.field_lien_balade_nid', $value, '=');  
+          $query4->addField('g', 'field_description_patrimoine_value', 'patrimoine');          
+
+          // Execution
+          $patrimoines = $query4->execute()->fetchAll();
+
+          if($patrimoines){
+
+            //Ajout du media au parent
+            $parent->appendChild($patrimoine); 
+
+            foreach ($patrimoines as $i => $vals) {
+              
+              $this->xml_recurse($doc, $patrimoine, $vals );
+
+            }
+
+            //ajout attribut id à balade
+            $parent->setAttribute($attr_name = 'id', $attr_value = $value);          
+            
+          }
+
           continue;
         }
         else if ($key === "vid") {
@@ -548,7 +573,7 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
           }
           
           continue;
-        }           
+        }         
         else if ($key === "nidHide") { 
 
           
@@ -673,7 +698,15 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
           $this->xml_recurse($doc, $itemTaxon, $value );
           
           continue;
-        }        
+        }
+        /*else if ($key === "patrimoine") {           
+          
+          //On ajoute un conteneur item à la valeur
+          $parent->appendChild($patrimoine);          
+          $this->xml_recurse($doc, $patrimoine, $value );
+          
+          continue;
+        }*/        
         else if ($key === "date_post") {      
 
           $datePubli = format_date($timestamp = $value, $type = 'custom', $format = 'Y-m-d', $timezone = 'Europe/Paris'); 
@@ -683,7 +716,7 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
           $this->xml_recurse($doc, $date_post, $datePubli );
           
           continue;
-        }        
+        }               
         else if ($key === "groupeTaxo") {    
 
           //On ajoute un item "groupe" 
