@@ -405,7 +405,9 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
       $itemCritere = $doc->createElement('item');
       
       $date_post = $doc->createElement('date_post');
-      $patrimoine = $doc->createElement('patrimoines');
+      $patrimoine = $doc->createElement('patrimoine');
+      $patrimoines = $doc->createElement('patrimoines');
+      $descriptionPatrimoine = $doc->createElement('description');
             
       
       foreach ($data as $key => $value) {
@@ -433,28 +435,30 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
           //Requette pour aller chercher les patrimoines
           $query4 = db_select('field_revision_field_description_patrimoine', 'g');                  
           $query4->join('field_data_field_lien_balade', 'l', '(l.entity_id = g.entity_id)');
+          //$query4->leftJoin('field_revision_field_images_patrimoine', 'i', '(i.entity_id = g.entity_id)');
 
           $query4->condition('l.field_lien_balade_nid', $value, '=');  
-          $query4->addField('g', 'field_description_patrimoine_value', 'patrimoine');          
+          $query4->addField('g', 'field_description_patrimoine_value', 'descriptionPatrimoine');          
 
           // Execution
-          $patrimoines = $query4->execute()->fetchAll();
+          $resQueryPatrimoines = $query4->execute()->fetchAll();
 
-          if($patrimoines){
+          if($resQueryPatrimoines){
 
             //Ajout du media au parent
-            $parent->appendChild($patrimoine); 
+            $parent->appendChild($patrimoines); 
 
-            foreach ($patrimoines as $i => $vals) {
+            foreach ($resQueryPatrimoines as $i => $vals) {
               
-              $this->xml_recurse($doc, $patrimoine, $vals );
+              $this->xml_recurse($doc, $patrimoines, $vals );
 
             }
 
-            //ajout attribut id à balade
-            $parent->setAttribute($attr_name = 'id', $attr_value = $value);          
             
           }
+
+          //ajout attribut id à balade
+          $parent->setAttribute($attr_name = 'id', $attr_value = $value);          
 
           continue;
         }
@@ -699,14 +703,28 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
           
           continue;
         }
-        /*else if ($key === "patrimoine") {           
+        else if ($key === "descriptionPatrimoine") {           
           
           //On ajoute un conteneur item à la valeur
           $parent->appendChild($patrimoine);          
-          $this->xml_recurse($doc, $patrimoine, $value );
+          //$patrimoines->appendChild($patrimoine);          
+
+          //Ajout de la description au patrimoine
+          $patrimoine->appendChild($descriptionPatrimoine);          
+
+          //Ajout de la valeur de la descro dans la description
+          $this->xml_recurse($doc, $descriptionPatrimoine, $value );
           
           continue;
-        }*/        
+        } 
+        /*else if ($key === "patrimoines") {           
+          
+          //On ajoute un conteneur item à la valeur
+          $parent->appendChild($patrimoines);          
+          $this->xml_recurse($doc, $patrimoines, $value );
+          
+          continue;
+        } */       
         else if ($key === "date_post") {      
 
           $datePubli = format_date($timestamp = $value, $type = 'custom', $format = 'Y-m-d', $timezone = 'Europe/Paris'); 
