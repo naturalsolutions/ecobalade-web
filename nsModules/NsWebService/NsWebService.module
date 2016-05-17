@@ -405,12 +405,8 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
       $itemCritere = $doc->createElement('item');
       
       $date_post = $doc->createElement('date_post');
-      //$patrimoine = $doc->createElement('patrimoine');
-      $ArrayPatrimoine = array();
-      $ArrayDescriptionPatrimoine = array();
-      $patrimoines = $doc->createElement('patrimoines');     
       
-     
+      $patrimoines = $doc->createElement('patrimoines');                
             
       
       foreach ($data as $key => $value) {
@@ -438,17 +434,18 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
           //Requette pour aller chercher les patrimoines
           $query4 = db_select('field_revision_field_description_patrimoine', 'g');                  
           $query4->join('field_data_field_lien_balade', 'l', '(l.entity_id = g.entity_id)');          
+          $query4->join('node', 'n', '(n.nid = g.entity_id)');          
           $query4->condition('l.field_lien_balade_nid', $value, '=');  
+          $query4->condition('n.status', 1, '=');  
           $query4->addField('g', 'field_description_patrimoine_value', 'descriptionPat');          
           $query4->addField('g', 'entity_id', 'idpatrimoine');          
+          $query4->addField('n', 'title', 'titrePat');          
           
 
           // Execution
           $resQueryPatrimoines = $query4->execute()->fetchAll();
 
-          if($resQueryPatrimoines){
-
-            //drupal_set_message( "<pre>" . print_r($resQueryPatrimoines, TRUE) . "</pre>" ); 
+          if($resQueryPatrimoines){            
             
             //Si on a des patrimoine, on les ajoutes au document
             $parent->appendChild($patrimoines);  
@@ -457,47 +454,63 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
             foreach ($resQueryPatrimoines as $i => $vals) {
 
               //Creation d'un patrimoine
-              $ArrayPatrimoine[$i] = $doc->createElement('patrimoine');
+              $patrimoine = $doc->createElement('patrimoine');
 
               //Creation d'une description
-              $ArrayDescriptionPatrimoine[$i] = $doc->createElement('description');
+              $descriptionPatrimoine = $doc->createElement('description');
 
-              //Set id to patrimoine
-              $ArrayPatrimoine[$i]->setAttribute($attr_name = 'id', $attr_value = $vals->idpatrimoine);
+              //Creation d'un titre
+              $titrePatrimoine = $doc->createElement('titre');
+
+              $patrimoine->appendChild($titrePatrimoine);
+
+              $this->xml_recurse($doc, $titrePatrimoine, $vals->titrePat );              
 
               //Add current description to current patrimoine
-              $ArrayPatrimoine[$i]->appendChild($ArrayDescriptionPatrimoine[$i]);
+              $patrimoine->appendChild($descriptionPatrimoine);
 
               //Add value in current description patrimoine
-              $this->xml_recurse($doc, $ArrayDescriptionPatrimoine[$i], $vals->descriptionPat );
-
+              $this->xml_recurse($doc, $descriptionPatrimoine, $vals->descriptionPat );
 
               //Query --> requete pour aller chercher les images des patrimoines              
               $query5 = db_select('field_revision_field_images_patrimoine', 'i');                  
               $query5->join('file_managed', 'm', '(m.fid = i.field_images_patrimoine_fid)');          
               $query5->condition('i.entity_id', $vals->idpatrimoine, '=');                              
-              $query5->addField('m', 'uri', 'imagePat');
+              $query5->addField('m', 'uri', 'img');
+              $query5->addField('m', 'filesize', 'imgFileSize');
               $resQueryImagesPatrimoines = $query5->execute()->fetchAll();
 
               //Creation d'un noeud images
-              $imagesPatrimoine = $doc->createElement('images');
+              $imagesPatrimoine = $doc->createElement('media');              
               
               //Ajout du noeuf images au noeud patrimoine courant
-              $ArrayPatrimoine[$i]->appendChild($imagesPatrimoine);
+              $patrimoine->appendChild($imagesPatrimoine);
               
               //Pour chaque image de patrimoine : 
-              foreach ($resQueryImagesPatrimoines as $j => $imgVals) {                
+              foreach ($resQueryImagesPatrimoines as $j => $imgVals) {   
+
+                //Creation d'un noeuf image
+                $imagesPat = $doc->createElement('img');             
+
+                //Ajout du noeud image dans noeud images
+                $imagesPatrimoine->appendChild($imagesPat);
+
+                //Set attribute type
+                $imagesPat->setAttribute($attr_name = 'type', $attr_value = 'patrimoine');
+
+                //set size attribute
+                $imagesPat->setAttribute($attr_name = 'size', $attr_value = $imgVals->imgFileSize);
                 
                 //Convert in url
-                $imgVals->imagePat = file_create_url($imgVals->imagePat);
+                $imgVals->img = file_create_url($imgVals->img);
 
-                //Ajout au noeud images des résultats                
-                $this->xml_recurse($doc, $imagesPatrimoine, $imgVals );
+                //Ajout de la valeur img directement dans l'image courante, du patrimoine courant           
+                $this->xml_recurse($doc, $imagesPat, $imgVals->img );
 
               }
 
               //Add current patrimoine to patrimoines
-              $patrimoines->appendChild($ArrayPatrimoine[$i]);            
+              $patrimoines->appendChild($patrimoine);            
             }           
 
                      
