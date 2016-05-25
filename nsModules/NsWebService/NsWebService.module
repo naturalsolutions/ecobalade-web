@@ -434,12 +434,15 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
           //Requette pour aller chercher les patrimoines
           $query4 = db_select('field_revision_field_description_patrimoine', 'g');                  
           $query4->join('field_data_field_lien_balade', 'l', '(l.entity_id = g.entity_id)');          
-          $query4->join('node', 'n', '(n.nid = g.entity_id)');          
+          $query4->join('node', 'n', '(n.vid = g.revision_id)');          
           $query4->condition('l.field_lien_balade_nid', $value, '=');  
           $query4->condition('n.status', 1, '=');  
           $query4->addField('g', 'field_description_patrimoine_value', 'descriptionPat');          
           $query4->addField('g', 'entity_id', 'idpatrimoine');          
+          $query4->addField('g', 'revision_id', 'vidpatrimoine');          
           $query4->addField('n', 'title', 'titrePat');          
+          $query4->addField('n', 'nid', 'nidPat');          
+          $query4->addField('n', 'vid', 'vidPat');          
           
 
           // Execution
@@ -455,6 +458,11 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
 
               //Creation d'un patrimoine
               $patrimoine = $doc->createElement('patrimoine');
+
+              //Ajout du nid et revision du patrimoine
+              $patrimoine->setAttribute($attr_name = 'id', $attr_value = $vals->nidPat);              
+              
+              $patrimoine->setAttribute($attr_name = 'version', $attr_value = $vals->vidPat);              
 
               //Creation d'une description
               $descriptionPatrimoine = $doc->createElement('description');
@@ -475,7 +483,8 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
               //Query --> requete pour aller chercher les images des patrimoines              
               $query5 = db_select('field_revision_field_images_patrimoine', 'i');                  
               $query5->join('file_managed', 'm', '(m.fid = i.field_images_patrimoine_fid)');          
-              $query5->condition('i.entity_id', $vals->idpatrimoine, '=');                              
+              $query5->condition('i.revision_id', $vals->vidpatrimoine, '=');                              
+              $query5->addField('i', 'field_images_patrimoine_title', 'titleImagePat');
               $query5->addField('m', 'uri', 'img');
               $query5->addField('m', 'filesize', 'imgFileSize');
               $resQueryImagesPatrimoines = $query5->execute()->fetchAll();
@@ -500,6 +509,9 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
 
                 //set size attribute
                 $imagesPat->setAttribute($attr_name = 'size', $attr_value = $imgVals->imgFileSize);
+
+                //Set attribute title
+                $imagesPat->setAttribute($attr_name = 'title', $attr_value = $imgVals->titleImagePat);
                 
                 //Convert in url
                 $imgVals->img = file_create_url($imgVals->img);
