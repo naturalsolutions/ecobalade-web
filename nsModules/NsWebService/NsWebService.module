@@ -442,7 +442,7 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
           $query4->addField('g', 'revision_id', 'vidpatrimoine');          
           $query4->addField('n', 'title', 'titrePat');          
           $query4->addField('n', 'nid', 'nidPat');          
-          $query4->addField('n', 'vid', 'vidPat');          
+          //$query4->addField('n', 'vid', 'vidPat');          
           
 
           // Execution
@@ -462,7 +462,7 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
               //Ajout du nid et revision du patrimoine
               $patrimoine->setAttribute($attr_name = 'id', $attr_value = $vals->nidPat);              
               
-              $patrimoine->setAttribute($attr_name = 'version', $attr_value = $vals->vidPat);              
+              //$patrimoine->setAttribute($attr_name = 'version', $attr_value = $vals->vidPat);              
 
               //Creation d'une description
               $descriptionPatrimoine = $doc->createElement('description');
