@@ -53,73 +53,31 @@
   </div>
 </header>
 
+<!-- <div class="bg_404"> -->
 
-<div class="container">
 
-  <header role="banner" id="page-header">
-    <?php if ( $site_slogan ): ?>
-      <p class="lead"><?php print $site_slogan; ?></p>
-    <?php endif; ?>
+  <div class="container-fluid section404">
+    
+    <div class="row-fluid monTitle">
+      <div class="span12">          
+          <h1 class="page-header">404 - Page non trouvée</h1>
+      </div>
+    </div>
 
-    <?php print render($page['header']); ?>
-  </header> <!-- /#header -->
-	<?php if ($breadcrumb): print $breadcrumb; endif;?>
-      <a id="main-content"></a>
-	<div class="container-node">
-      <?php print render($title_prefix); ?>
-      
-      <h1 class="page-header">404 - Page non trouvée</h1>
-      
-      <?php print render($title_suffix); ?>
-      <?php print $messages; ?>
-	<div class="row">
-	  
-    <?php if ($page['sidebar_first']): ?>
-      <aside class="span3" role="complementary">
-        <?php print render($page['sidebar_first']); ?>
-      </aside>  <!-- /#sidebar-first -->
-    <?php endif; ?>  
-	  
-	  <section style='min-height: 454px; text-align: center;' class="<?php print _twitter_bootstrap_content_span($columns); ?>">  
-      <?php if ($page['highlighted']): ?>
-        <div class="highlighted hero-unit"><?php print render($page['highlighted']); ?></div>
-      <?php endif; ?>
-      <?php //if ($breadcrumb): print $breadcrumb; endif;?>
-      <!--<a id="main-content"></a>-->
-      <?php //print render($title_prefix); ?>
-      <?php //if ($title): ?>
-        <!--<h1 class="page-header">--><?php //print $title; ?></h1>
-      <?php //endif; ?>
-      <?php //print render($title_suffix); ?>
-      <?php //print $messages; ?>
-      <?php if ($tabs): ?>
-        <?php print render($tabs); ?>
-      <?php endif; ?>
-      <?php if ($page['help']): ?> 
-        <div class="well"><?php print render($page['help']); ?></div>
-      <?php endif; ?>
-      <?php if ($action_links): ?>
-        <ul class="action-links"><?php print render($action_links); ?></ul>
-      <?php endif; ?>
-      
-      
-      <?php //print render($page['content']); ?>
-      <br/><br/><br/><br/><br/>
-      &nbsp;&nbsp;&nbsp;<a href="<?php echo $base_url;?>" style='font-size: 2em;  text-align: center;  top: 80px;  position: relative;'>Cliquer pour retourner à l'accueil</a>
-	  </section>
+    
+    <div class="row-fluid button">  
+      <div class="span4 offset1">                    
+          <a  class="btn btn_baladeterre" target="" rel="" title="Les Balades" href="http://www.ecobalade.fr/balade">Retour aux balades <span id="terre">terrestres</span></a>
+      </div>
+    </div>
 
-    <?php if ($page['sidebar_second']): ?>
-      <aside class="span3" role="complementary">
-        <?php print render($page['sidebar_second']); ?>
-      </aside>  <!-- /#sidebar-second -->
-    <?php endif; ?>
+  </div> <!--fin container -->
+<!--</div> <!--fin div bg404 -->
 
-  </div>
- </div> <!--fin container-node--> 
-
-</div>
    <?php print render($page['footer']); ?>
 
 
-	
+
+
+
 

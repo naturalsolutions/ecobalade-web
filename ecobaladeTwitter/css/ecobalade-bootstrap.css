@@ -3836,6 +3836,9 @@ margin-left: 9%;
   .navbar .brand {
     left: 3%;  
   }
+  body.page-node-2469 div.section404{
+    min-height: 800px;
+  }
 
 }
 /* Large desktop au dessous de 1235*/
@@ -5467,6 +5470,125 @@ body.node-type-blogosphere div.field-item{display: none;}
 body.node-type-blogosphere article footer{display: none;}
 
 
+
+/***************************************************************************/
+/*                          MODIF VIVIEN                                */
+/*                                                                         */
+/***************************************************************************/
+
+/******************************************************************************/
+/*                                                                            */
+/*                                  404                                       */
+/*                                                                            */
+/******************************************************************************/
+
+
+
+body.page-node-2469 div.section404{
+    min-height: 700px;
+    background-image: url('../img/404/404_maxsize.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 100% 22%;
+}
+body.page-node-2469 footer{
+  margin-top: 0;
+}
+ 
+
+@media (max-width: 1477px) {  
+  /*en dessous de 14000*/
+  body.page-node-2469 div.section404{
+    min-height: 600px;
+  }
+}
+
+
+
+
+body.page-node-2469 a.btn_baladeterre{
+  position: relative;
+  background: rgba(70,160,109,0.85);
+  color: white;
+  font-size: 1.1em;
+  line-height: 57px;
+  letter-spacing: 2px;
+  font-family: 'Raleway-SemiBold',sans-serif;
+  text-shadow: none;
+  width: 72%;
+  margin-left: 33%;
+  text-transform: uppercase;
+}
+
+body.page-node-2469 a.btn_baladeterre:hover {
+    border: 0;
+    background: rgba(70,160,109,1);
+    text-decoration:none;    
+}
+
+body.page-node-2469 div.row-fluid.monTitle{
+  visibility: hidden;
+  margin-top: 337px;
+
+}
+
+
+@media (max-width: 1503px) {  
+  body.page-node-2469 a.btn_baladeterre #terre{
+    display:none;
+  }
+}
+
+@media (max-width: 1266px) {  
+  body.page-node-2469 div.section404{
+    min-height: 450px;
+  }
+   body.page-node-2469 div.container-fluid div.row-fluid.monTitle{
+    padding-bottom:50px;
+  }
+  body.page-node-2469 div.row-fluid.monTitle{
+    visibility: hidden;
+    margin-top: 132px;
+  }
+}
+
+@media (max-width: 979px) {  
+  body.page-node-2469 a.btn_baladeterre #terre{
+    display:inline;
+  }
+  body.page-node-2469 a.btn_baladeterre{
+    margin-left:5%;
+    margin-top: 65px;
+  }
+  body.page-node-2469 div.section404{
+    min-height: 650px;    
+    background-image: url('../img/404/404_smallscreen.jpg');
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -ms-background-size: cover;
+  }
+  body.page-node-2469 div.row-fluid.monTitle{
+    margin-top: 280px;
+  }  
+}
+
+
+
+@media (max-width: 767px) {  
+  body.page-node-2469 a.btn_baladeterre #terre{
+    display:none;
+  }
+  body.page-node-2469 a.btn_baladeterre{
+    margin-left:12%;
+    margin-top: 120px;
+  }
+  body.page-node-2469 div.container-fluid div.row-fluid.monTitle{
+      padding-bottom:0px;  
+  }
+}
+
+
 /********************************************************/
 /*****************blog_media_queries*********************/
 /********************************************************/
@@ -5761,3 +5883,5 @@ body.node-type-blogosphere article footer{display: none;}
 
 
 }
+
+
