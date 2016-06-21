@@ -102,7 +102,7 @@ function NsWebService_find_balade_information($nitems, $timestamp, $id, $balade,
     
 
     //Nom scientifique 
-    $query->join('field_revision_field_nom_scientifique', 'j', '(j.revision_id = n.vid)');
+    $query->leftJoin('field_revision_field_nom_scientifique', 'j', '(j.revision_id = n.vid)');
 
     //Description
     $query->join('field_revision_field_description', 'o', '(o.revision_id = n.vid)');
