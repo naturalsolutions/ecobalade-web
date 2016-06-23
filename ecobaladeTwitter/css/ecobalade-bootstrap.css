@@ -15,6 +15,8 @@
 /*                          FONT - POLICE                                  */
 /*                                                                         */
 /***************************************************************************/
+
+
 @font-face {
     font-family: 'Anti_bug_font';
 }
@@ -1737,6 +1739,9 @@ div.view-v-on-en-parle-presse div.imageZonePress, div.view-v-on-en-parle-presse 
 /***************************************************************************/
 /*********************************  ****************************************/
 /*********************************  ****************************************/
+body.page-liste-especes div.container{
+  margin-bottom: 45px;
+}  
 body.page-liste-especes .page-header{
   margin-bottom: 0;
 }
@@ -1850,6 +1855,15 @@ body.page-liste-especes h1>span{
 /*                                                                         */
 /***************************************************************************/
 /*********************************  ****************************************/
+
+body.page-liste-balades .container-node{
+  padding-bottom: 45px;
+}
+body.page-liste-balades div.container{
+  margin-bottom: 45px;
+}
+
+
 body.page-liste-balades .view-v-liste-balade .views-field-view-node,
 body.page-liste-balades .view-v-liste-balade .views-field-field-sponsor,
 body.page-liste-balades .view-v-liste-balade .views-field-field-distance,
@@ -2058,6 +2072,14 @@ body.page-liste-balades .critere-form-aside{
 /*                                                                         */
 /***************************************************************************/
 /*********************************  ****************************************/
+
+
+body.page-les-sites div.view-display-id-block_2{
+  margin-bottom:45px;
+}
+
+
+
 body.page-les-sites .page-header{
   margin-bottom: 0;
 }
@@ -2354,7 +2376,7 @@ footer.footer div#elevator{
 footer.footer div#elevator:hover{
   fill: #4DBB74;
 }
-body.front footer.footer {
+footer.footer {
   margin-top: 0;
 }
 footer.footer {
@@ -4062,12 +4084,26 @@ margin-left: 9%;
     width: auto;
     margin: 0;
   }
+
+
+
   /*PAGE LES BALADES*/
   body.page-liste-balades div.container-node > .row > aside, body.page-liste-balades div.container-node > .row > section {
     width: 97.4%;
     padding-left: 2.7%;
   }
+
+  
+
+
+
+
+
+
   /*PAGE LISTE ESPECE*/
+   
+
+
   body.page-liste-especes div#image_specie, body.page-liste-especes div#title_specie, body.page-liste-especes div#descro_specie, body.page-liste-especes div#lien_specie{
     float: left;
     width: auto;
@@ -4419,6 +4455,9 @@ margin-left: 9%;
   }
   /*PAGE ESPECE*/
   /*PAGE LES BALADES*/
+
+
+
   body.page-liste-balades div.container-node > .row > aside, body.page-liste-balades div.container-node > .row > section {
     width: 95.7%;
   }
@@ -5589,6 +5628,63 @@ body.page-node-2469 div.row-fluid.monTitle{
 }
 
 
+
+
+/******************************************************************************/
+/*                                                                            */
+/*                                  subfooter                                 */
+/*                                                                            */
+/******************************************************************************/
+div.subfooter{
+  background-color: #353535;
+  min-height:200px;
+  position: relative;
+}
+div.subfooter div.myZone{
+  margin-top:69px;
+}
+div.subfooter div.zoneTextSubFooter{
+  color: #fff;
+  text-align: right;  
+}
+div.subfooter p.subFooterTitle{
+  font-family: 'Raleway-SemiBold', sans-serif;
+}
+div.subfooter p.subFooterSubtitle{
+  font-size:0.97em;
+}
+div.subfooter input.styleinputSubFooter:focus{
+  border-color: #4dbb74;
+}
+div.subfooter input.styleinputSubFooter::-webkit-input-placeholder{ color: #c5c5c5; }
+div.subfooter input.styleinputSubFooter:-moz-placeholder{ color: #c5c5c5; }
+div.subfooter input.styleinputSubFooter::-moz-placeholder{ color: #c5c5c5; }
+div.subfooter input.styleinputSubFooter:-ms-input-placeholder{ color: #c5c5c5; }
+div.subfooter input.styleinputSubFooter{
+  padding-top: 13px;
+  padding-bottom: 12px;
+  padding-right: 20%;
+  margin-right: 6px;
+  text-indent: 7%;
+}
+div.subfooter input.styleSubmitSubfooter{
+  padding: 12px 6%;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  background: transparent;
+  border: 1px solid #fff ;
+  color: #fff;
+  font-family: 'Raleway-SemiBold', sans-serif;
+}
+div.subfooter input.styleSubmitSubfooter:hover,
+div.subfooter input.styleSubmitSubfooter:active,
+div.subfooter input.styleSubmitSubfooter:focus {
+  border: 1px solid #4AB36F;
+  color: #4AB36F;
+  outline: none;
+}
 /********************************************************/
 /*****************blog_media_queries*********************/
 /********************************************************/
@@ -5619,6 +5715,16 @@ body.page-node-2469 div.row-fluid.monTitle{
 }
 
 @media (max-width: 979px){
+  div.subfooter div.myZone{
+    margin-top:40px;
+  }
+  div.subfooter div.zoneTextSubFooter{
+    text-align: center;
+  }
+  div.subfooter div.inputSubFooter{
+    padding-top: 19px;
+    text-align: center;
+  }
   body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog{
     text-align: center;
   }

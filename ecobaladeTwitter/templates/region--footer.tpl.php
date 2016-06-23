@@ -5,9 +5,50 @@
 /*                                                                         */
 /***************************************************************************/
 /*********************************  ****************************************/
+
 /*********************************  ****************************************/
 global $base_url;
 ?>
+
+
+
+
+
+
+<div class="subfooter container-fluid">
+	<div class="container">
+		
+		<div class="row-fluid myZone">
+
+			<div class="span6 zoneTextSubFooter">
+				<p class="subFooterTitle">Restez dans le sens de la marche ! ;)</p>
+				<p class="subFooterSubtitle">Tenez vous informez des nouvelles ecobalades !</p>
+			</div>
+
+	<!--		<div class="arrowsubfooter">
+			</div>-->
+
+			<div class="span6 inputSubFooter">
+
+				<form action="//natural-solutions.us7.list-manage.com/subscribe/post?u=1a9b21fb9d9d31564dd16e46e&amp;id=92410d0fa0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+					<input type="email" name="user_email" placeholder="Votre email" class="required email styleinputSubFooter" >
+					<input type="hidden" value="subfooter" name="ORIG" id="ORIG">
+      				<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      				<div style="position: absolute; left: -5000px;"><input type="text" name="b_1a9b21fb9d9d31564dd16e46e_92410d0fa0" tabindex="-1" value=""></div>
+					<input type="submit" value="Envoyer" id="mc-embedded-subscribe" class="button styleSubmitSubfooter">
+				</form>
+
+			</div>
+
+
+
+		</div>
+
+	</div>
+</div> 
+
+
+
 
 <footer class="footer container-fluid">
 
