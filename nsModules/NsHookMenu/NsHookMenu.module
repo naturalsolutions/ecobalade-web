@@ -1,0 +1,37 @@
+<?php 
+//MODULE DE HOOK MENU 
+
+
+function NsHookMenu_menu(){
+    // path location (<a href="http://www.url.com/foo/bar" title="http://www.url.com/foo/bar">http://www.url.com/foo/bar</a> )
+    $items['pro'] = array(
+        // page title
+        'title' => 'Page pro',
+        // describe the page for the menu system.  site visitors will not see this
+        'description' => 'Simple custom hook_menu() implementation.',
+        // function that is called when visiting the new path
+        'page callback' => 'my_page_function',
+        // permissions required to view page
+        'access arguments' => array('access content'),
+    );  
+    return $items;
+}
+/*
+ * Returns custom content to Drupal
+ */
+function my_page_function(){
+	// Call theme() function, so that Drupal includes the custom-page.tpl.php template
+    return theme('page_pro');
+}
+/*
+ * Implement hook_theme().
+ */
+function NsHookMenu_theme(){
+    return array(
+        'page_pro' => array(
+            // file name will be custom-page.tpl.php
+            'template' => 'page-pro',
+        ),
+    );
+}
+  

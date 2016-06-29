@@ -1,0 +1,11 @@
+name = NsHookMenu
+description =  Module pour créer des routes spécifiques
+package = nsModule
+
+core = 7.x
+version = 7.x-1.0-beta1 
+files[] = NsHookMenu.module
+;scripts[] = NsHookMenu.js
+;stylesheets[all][] = NsHookMenu.css
+
+;php = 5.2
