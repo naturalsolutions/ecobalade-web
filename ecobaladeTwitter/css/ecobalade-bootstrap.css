@@ -5627,6 +5627,20 @@ body.page-node-2469 div.row-fluid.monTitle{
   }
 }
 
+@media (max-width: 674px) {  
+  body.page-node-2469 div.section404{
+    background-position: 42% 22%;
+  }
+}
+
+
+@media (max-width: 570px) {  
+  body.page-node-2469 div.section404{ 
+    background-image: url('../img/404/404_xxs.jpg');
+    background-position: 42% 5%;
+  }
+}
+
 
 
 
