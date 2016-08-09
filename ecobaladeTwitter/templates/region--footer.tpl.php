@@ -16,7 +16,7 @@ global $base_url;
 
 
 <div class="subfooter container-fluid">
-	<div class="container">
+	<div class="container mycontainersubfooter">
 		
 		<div class="row-fluid myZone">
 

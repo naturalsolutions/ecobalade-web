@@ -500,6 +500,7 @@ jQuery( document ).ready(function() {
 	imagePolaroide();
 
 
+
 });
 
 </script>

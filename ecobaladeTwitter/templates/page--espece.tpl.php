@@ -43,7 +43,13 @@
   	</div>
   </div>
 </header>
+<div class="usageCookie">
+  <p>En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de cookies pour vous proposer des services et des offres adaptés à vos centres d’intérêts. <span class='closeBtn'>Fermer</span></p>
+</div>
 
+<div class="fakeDivheightUsageCookie">
+  <p>En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de cookies pour vous proposer des services et des offres adaptés à vos centres d’intérêts. <span class='closeBtn'>Fermer</span></p>
+</div>
 <?php
 //On test si l'on vient d'une page balade pour proposer un fil d'ariane complet
 
@@ -871,6 +877,57 @@ jQuery( document ).ready(function() {
 		if ($('section#comments section.collapseComment form').is(':visible')) $('section#comments section.collapseComment form').hide();
 		else $('section#comments section.collapseComment form').show();
 	});
+
+
+  function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+  }
+  
+  function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+  }
+
+  $('span.closeBtn').click(function(event) {
+    
+    /* Act on the event */
+    setCookie('cookieIsClosed','true', 1);
+    $('div.usageCookie, span.closeBtn, div.fakeDivheightUsageCookie').animate({
+      height: "0px",
+      padding : "0"
+    }, function(){
+      $(this).css('display','none');
+    });
+  
+  });  
+  
+  if(getCookie('cookieIsClosed') == 'false' || getCookie('cookieIsClosed') == ''){
+
+    $('div.usageCookie, div.fakeDivheightUsageCookie').animate({
+      height: "auto",
+      padding : "5px 0%"      
+    }, function(){
+      $(this).css('display','block');      
+    });
+
+  } 
+  
+
+
+
 
 	
 });
