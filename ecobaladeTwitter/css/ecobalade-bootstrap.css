@@ -212,11 +212,14 @@ body.logged-in header#navbar{
 body:not(.front) > div.container{
   margin-top: 60px;
 }
-/* body:not(.admin-menu) > div.container.isBarCookieBig{
-  margin-top: 123px;
-} */
+body.admin-menu:not(.front) > div.container {
+    margin-top: 128px;
+}
+html body.admin-menu {
+  margin-top: -28px !important;
+}
 body.admin-menu .usageCookie{
- display: none !important;
+ visibility: hidden !important;
 }
 .usageCookie{
   position: fixed;
