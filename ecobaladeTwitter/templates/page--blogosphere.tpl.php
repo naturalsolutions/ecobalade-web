@@ -252,16 +252,17 @@ Template d'un article de blog
             );
 
             $blogImage = theme( 'image_style', $variables );
+            $cleanUrlArticle = drupal_get_path_alias('node/'.$value->nid);
           ?>
 
           <div class="span4">
-            <a href="<?php echo $base_url.'/node/'.$value->nid; ?>"><?php echo $blogImage; ?></a>
+            <a href="<?php echo $base_url.'/'.$cleanUrlArticle; ?>"><?php echo $blogImage; ?></a>
             <br>
 
             <h3><?php echo $title ?></h3>
             <i><?php echo "Posté dans ".$blogCategorie." le ".$created ?></i>
             <p><?php echo $blogResume ?></p>
-            <br/><a class="lirePlus" href="<?php echo $base_url.'/node/'.$value->nid; ?>"> > Continuer de lire</a>
+            <br/><a class="lirePlus" href="<?php echo $base_url.'/'.$cleanUrlArticle; ?>"> > Continuer de lire</a>
       
           </div>
 
@@ -353,10 +354,11 @@ Template d'un article de blog
                 'path' => $photoBalade,
                 'alt' => $titreBalade
               );
-              $blogImageBalade = theme( 'image_style', $variables );
+            $blogImageBalade = theme( 'image_style', $variables );
+            $cleanUrlArticle = drupal_get_path_alias('node/'.$monNode->nid);
            ?>
-          <a href="<?php echo $base_url.'/node/'.$monNode->nid;?>"><?php echo $blogImageBalade; ?></a>
-          <p class='nameBaladeDuMois'><a href="<?php echo $base_url.'/node/'.$monNode->nid;?>"><?php echo $titreBalade; ?></a></p>
+          <a href="<?php echo $base_url.'/'.$cleanUrlArticle;?>"><?php echo $blogImageBalade; ?></a>
+          <p class='nameBaladeDuMois'><a href="<?php echo $base_url.'/'.$cleanUrlArticle;?>"><?php echo $titreBalade; ?></a></p>
           <p class='textBaladeDuMois'><?php echo$resumeBalade; ?></p>
         </div>
       </div>

@@ -174,13 +174,15 @@ Template de la page liste des articles
                 );
 
                 $blogImage = theme( 'image_style', $variables );
+
               }
+              $cleanUrlArticle = drupal_get_path_alias('node/'.$value->nid);
             ?>
 
             <div class="swiper-slide ">
               <div class='row-fluid'>
                 <div class="span12">
-                  <a href="<?php echo $base_url.'/node/'.$value->nid; ?>"><?php echo $blogImage; ?></a>
+                  <a href="<?php echo $base_url.'/'.$cleanUrlArticle; ?>"><?php echo $blogImage; ?></a>
                   <!-- a modifier pour la réécriture d'url -->
                   <div class="blocLeftSwiper">
                     <div class="buttonSwiper">
@@ -209,6 +211,7 @@ Template de la page liste des articles
                         <a class="addthis_counter addthis_bubble_style"></a>
                     </div>
                   </div>
+                  <?php $cleanUrl = drupal_get_path_alias('node/'.$value->nid); ?>
                   <!-- AddThis Button END -->   
                     <!-- <a href="#"><img id="imgLike" src=" <?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-like.png" 
                                       onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-likehover$-.png'" 
@@ -216,13 +219,13 @@ Template de la page liste des articles
                     <a href="#"><img id="imgShare" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/share.png"
                                       onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/sharehover.png'" 
                                       onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/share.png'"></a> -->
-                    <a class="commentButton" href="<?php echo $base_url.'/node/'.$value->nid; ?>#comment-form-wrapper"><img id="imgComment" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png"
+                    <a class="commentButton" href="<?php echo $base_url.'/'.$cleanUrl; ?>#comment-form-wrapper"><img id="imgComment" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png"
                                       onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubulehover.png'" 
                                       onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png'"></a>
                   </div>
                   
                   
-                  <a class="lirePlus" href="<?php echo $base_url.'/node/'.$value->nid; ?>"> Lire plus</a>
+                  <a class="lirePlus" href="<?php echo $base_url.'/'.$cleanUrl; ?>"> Lire plus</a>
                   <!-- <a class="lirePlus" href="<?php echo $base_url.'/'.$title; ?>">Lire plus</a> -->
                 </div>
 
@@ -321,6 +324,7 @@ Template de la page liste des articles
                   );
 
                   $blogImage = theme( 'image_style', $variables );
+                  $cleanUrlArticle = drupal_get_path_alias('node/'.$value->nid);
 
                 ?>
 
@@ -333,7 +337,7 @@ Template de la page liste des articles
                 ?>
                 <i><?php echo "Posté dans ".$blogCategorie." le ".$created ?></i>
                 <br>
-                <a href="<?php echo $base_url.'/node/'.$value->nid; ?>"><?php echo $blogImage; ?></a>
+                <a href="<?php echo $base_url.'/'.$cleanUrlArticle; ?>"><?php echo $blogImage; ?></a>
                 <p><?php echo $blogResume ?></p>
                <div class="likeShareCommentActu">
                 <!-- AddThis Button BEGIN -->
@@ -352,12 +356,12 @@ Template de la page liste des articles
                   <a href="#"><img id="imgShare" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/share.png"
                                     onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/sharehover.png'" 
                                     onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/share.png'"></a> -->
-                  <a class="commentButton" href="<?php echo $base_url.'/node/'.$value->nid; ?>#comment-form-wrapper"><img id="imgComment" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png"
+                  <a class="commentButton" href="<?php echo $base_url.'/'.$cleanUrlArticle; ?>#comment-form-wrapper"><img id="imgComment" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png"
                                     onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubulehover.png'" 
                                     onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png'"></a>
                 </div>
                 <br/>
-                <a class="lirePlus" href="<?php echo $base_url.'/node/'.$value->nid; ?>"> > Continuer de lire</a>
+                <a class="lirePlus" href="<?php echo $base_url.'/'.$cleanUrlArticle; ?>"> > Continuer de lire</a>
                 <hr>
 
 
@@ -404,16 +408,18 @@ Template de la page liste des articles
                   );
 
                   $blogImage = theme( 'image_style', $variables );
+
+                  $cleanUrlArticle = drupal_get_path_alias('node/'.$value->nid);
                 ?>
 
                 <div class="span4">
-                  <a href="<?php echo $base_url.'/node/'.$value->nid; ?>"><?php echo $blogImage; ?></a>
+                  <a href="<?php echo $base_url.'/'.$cleanUrlArticle; ?>"><?php echo $blogImage; ?></a>
                   <br>
 
                   <h3><?php echo $title ?></h3>
                   <i><?php echo "Posté dans ".$blogCategorie." le ".$created ?></i>
                   <p><?php echo $blogResume ?></p>
-                  <br/><a class="lirePlus" href="<?php echo $base_url.'/node/'.$value->nid; ?>"> > Continuer de lire</a>
+                  <br/><a class="lirePlus" href="<?php echo $base_url.'/'.$cleanUrlArticle; ?>"> > Continuer de lire</a>
             
                 </div>
 
@@ -519,10 +525,11 @@ Template de la page liste des articles
                       'path' => $photoBalade,
                       'alt' => $titreBalade
                     );
-                    $blogImageBalade = theme( 'image_style', $variables );
+                  $blogImageBalade = theme( 'image_style', $variables );
+                  $cleanUrlArticle = drupal_get_path_alias('node/'.$monNode->nid);
                  ?>
-                <a href="<?php echo $base_url.'/node/'.$monNode->nid;?>"><?php echo $blogImageBalade; ?></a>
-                <p class='nameBaladeDuMois'><a href="<?php echo $base_url.'/node/'.$monNode->nid;?>"><?php echo $titreBalade; ?></a></p>
+                <a href="<?php echo $base_url.'/'.$cleanUrlArticle;?>"><?php echo $blogImageBalade; ?></a>
+                <p class='nameBaladeDuMois'><a href="<?php echo $base_url.'/'.$cleanUrlArticle;?>"><?php echo $titreBalade; ?></a></p>
                 <p class='textBaladeDuMois'><?php echo$resumeBalade; ?></p>
               </div>
             </div>
