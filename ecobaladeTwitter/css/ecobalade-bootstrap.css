@@ -1139,7 +1139,7 @@ body.node-type-balade div#descriptionZone {
   border-radius: 4px;
   margin: 0px 10px;
 }
-body.node-type-balade div#descriptionZone h2{
+body.node-type-balade h2{
   position: absolute;
   z-index: 2;
   color: #4DBB74;
@@ -1190,7 +1190,7 @@ body.node-type-balade div.lesPatrimoinesImages {
     margin-top: 15px;
 }
 
-body.node-type-balade div.especes-phares > h2{
+/* body.node-type-balade div.especes-phares > h2{
   position: absolute;
    z-index: 2;
   color: #4DBB74;
@@ -1200,7 +1200,7 @@ body.node-type-balade div.especes-phares > h2{
   font-size: 17.5px;
   line-height: 20px;
   padding: 0 6px;
-}
+} */
 body.node-type-balade div.especes-phares{
   padding: 20px;
   border: 1px solid #BBBBBB;
