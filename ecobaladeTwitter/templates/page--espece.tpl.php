@@ -294,7 +294,7 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/">Accueil</a> » <
 
 											<?php $description = field_get_items($entity_type = 'node', $node, $field_name = 'field_description'); ?>
 											<?php $description = $description[0]['value']; ?>				
-											<h4>Description : </h4>
+											<h2>Description</h2>
 											<p><?php echo $description; ?></p>											
 										</div>
 									</div>	
@@ -302,7 +302,7 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/">Accueil</a> » <
 									<?php if(count($criteres) > 1) : ?>
 									<div class="row-fluid">
 										<div class="span12" id='blockCriteresEspece'>
-													<?php  echo "<h4 class='labelKey'>Les indices pour le reconnaître</h4>"; ?>
+													<?php  echo "<h2>Les indices pour le reconnaître</h2>"; ?>
 													<?php echo "<div class='field-content' id='fieldPersoCriteria1line'>"; //if(count($criteres) > 8) { echo "<div class='field-content' id='fieldPersoCriteria2line'>"; } else{echo "<div class='field-content' id='fieldPersoCriteria1line'>";}; ?>
 																													
 													<?php for($j=0; $j < count($criteres); $j++): ?>
@@ -425,8 +425,8 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/">Accueil</a> » <
 
 														<?php 
 														//test si c'est une plante
-														if($groupe_tax == 'Arbustes et plantes' || $groupe_tax == 'Arbres') echo "<h4>Période de floraison</h4>";
-														else echo "<h4>Présence</h4>";																				
+														if($groupe_tax == 'Arbustes et plantes' || $groupe_tax == 'Arbres') echo "<h2>Période de floraison</h2>";
+														else echo "<h2>Présence</h2>";																				
 														
 														?>
 														
@@ -663,7 +663,7 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/">Accueil</a> » <
 								<?php if($objects[0]->field_esp_ces_node_nid): ?>
 									<div class="blocBalade">
 									
-										<h4>A retrouver dans cette balade</h4>
+										<h3>A retrouver dans cette balade</h3>
 										<?php 
 
 										//Charge node de la balade
@@ -684,7 +684,7 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/">Accueil</a> » <
 											echo "<a href='$base_url/balade/$loadPathBalade' title=\"$title\"><img title=\"$nodeBalade->title\" src='$url' alt='$alt'/></a>";
 											echo "<a href='$url' class='imageBalade' title=\"$title\"></a>";
 											echo "<figcaption>";
-												echo "<a class='visitBalade' title=\"$nodeBalade->title\" href='$base_url/balade/$loadPathBalade'><h2>$nodeBalade->title</h2></a>";											
+												echo "<a class='visitBalade' title=\"$nodeBalade->title\" href='$base_url/balade/$loadPathBalade'><p>$nodeBalade->title</p></a>";											
 											echo '</figcaption>';
 										echo '</figure>';
 
@@ -695,7 +695,7 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/">Accueil</a> » <
 
 								<div class="blocTaxon">
 
-									<h4>A découvrir</h4>
+									<h3>A découvrir</h3>
 									<?php 		 
 									$view = views_get_view('v_taxon_suivant_precedent');
 									$view->set_display('block_vsui');									
@@ -725,7 +725,7 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/">Accueil</a> » <
 											echo "<a href='$base_url/espece/$loadPathAnimal' title=\"$title\"><img title=\"$nodeTaxon->title\" src='$url' alt='$alt'/></a>";
 											echo "<a href='$url' class='imageTaxon' title=\"$title\"></a>";
 											echo "<figcaption>";
-												echo "<a title='Visiter la page' href='$base_url/espece/$loadPathAnimal'><h2>$nodeTaxon->title</h2></a>";											
+												echo "<a title='Visiter la page' href='$base_url/espece/$loadPathAnimal'><p>$nodeTaxon->title</p></a>";											
 											echo '</figcaption>';
 										echo '</figure>';								
 									

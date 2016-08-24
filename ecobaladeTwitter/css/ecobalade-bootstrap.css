@@ -1524,7 +1524,7 @@ body.node-type-espece article.node-espece{
 body.node-type-espece #blockCriteresEspece{
   padding: 0px 10px 0 10px;
   position: relative;    
-  margin-top: 18px;
+  margin-top: 30px;
 }
 body.node-type-espece #blockDetailsEspece{
   margin: 23px 10px 0px 10px;
@@ -1536,19 +1536,13 @@ body.node-type-espece #blockDetailsEspece{
   border-radius: 5px;  
   position: relative;
 }
-body.node-type-espece #blockDetailsEspece h4{
+body.node-type-espece h2{
   position: absolute;
-  top: -26px;
-  background: #fff;
-  padding: 0 8px
-}
-body.node-type-espece h4.labelKey{
-  position: absolute;
-  top: -15px;
+  top: -20px;
   background: #fff;
   padding: 0 8px;
-  z-index: 99;
-  left: 19px;
+  font-size: 17.5px;
+  line-height: 20px;
 }
 body.node-type-espece div#widget_pager_bottom_v_slideshow_detail_taxon-block img{
   height: 80px;
@@ -1557,7 +1551,7 @@ body.node-type-espece div#containerOfSaisonalite{
   padding: 0px 10px 15px 10px;
   position: relative;
   text-align: center;
-  margin-top: 18px;
+  margin-top: 30px;
 }
 body.node-type-espece div#containerOfSaisonalite > div.row-fluid > div.span4:first-of-type{
   border: 1px solid #BBBBBB;
@@ -1723,26 +1717,27 @@ body.node-type-espece figure.effect-zoe:hover figcaption{
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
 }
-body.node-type-espece figure.effect-zoe h2 {
+body.node-type-espece figure.effect-zoe p {
   font-size: 1em;
-  padding: 0 3%;
+  padding: 5px 3%;
   line-height: 16px;
-  font-family: Raleway-Light;
+  font-family: "Raleway-Light";
   color: rgb(51,51,51);
-}
-body.node-type-espece div.blocTaxon figure.effect-zoe h2 {
-    text-align: center;
+  text-align: center;
+
 }
 /*Fin hover*/
-body.node-type-espece #aussiPresentDansBalade h4{
+body.node-type-espece h3{
   background-color: #FAFAFA;
   border: 1px solid #D4D4D4;
   -webkit-border-radius: 4px 4px 0px 0px;
   -moz-border-radius: 4px 4px 0px 0px;
   border-radius: 4px 4px 0px 0px;
   width: 80%;
-  padding: 2% 5%;
+  padding: 10px 5%;
   margin-top: 0;
+  font-size: 17.5px;
+  line-height: 20px;
   margin-bottom: 0;
 }
 body.node-type-espece #blockEspece{
