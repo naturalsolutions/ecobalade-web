@@ -1164,9 +1164,7 @@ body.node-type-balade div#patrimoineZone {
     margin: 10px 10px 25px 10px;
 }
 
-body.node-type-balade div#patrimoineZone h1,
-body.node-type-balade div#patrimoineZone h2,
-body.node-type-balade div#patrimoineZone h3 {
+body.node-type-balade div#patrimoineZone h1{
     font-family: 'Raleway-Light';
     font-weight: 300;
     line-height: 1.6em;
