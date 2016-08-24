@@ -116,7 +116,7 @@
 								echo "<a href='$urlPatrimoine' class='imagePatrimoine' title=\"$titlePatrimoine\"></a>";
 
 								echo "<figcaption>";
-									echo "<h3>$titlePatrimoine</h3>";											
+									echo "<p>$titlePatrimoine</p>";											
 								echo '</figcaption>';
 							echo '</figure>';
 						echo "</div>";
