@@ -1,5 +1,5 @@
 <?php 
-//MODULE DE HOOK MENU 
+//MODULE DE HOOK MENU PAS UTILISE
 
 
 function NsHookMenu_menu(){

@@ -59,7 +59,16 @@
 	<div class="container-node">
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
-        <h1 class="page-header"><?php print $title; ?></h1>
+        <h1 class="page-header"><?php print $title; ?></h1> 
+        
+        <div class="intro">
+          <h2>Notre sélection</h2> 
+          <p>
+          Préparez-vous à partir en <strong>rando</strong>. Ici nous vous proposons notre sélection de produits, cartes etc.<br/>
+          Cette boutique est relié à <a href="https://www.amazon.fr/" title='vers le site amazon.fr' alt='vers le site amazon.fr'>Amazon</a>, la plateforme d'achat et vente en ligne préféré des français.</p>     
+        </div>
+        
+        
       <?php endif; ?>
       <?php print render($title_suffix); ?>
       <?php print $messages; ?>
@@ -79,7 +88,7 @@
       <!--<a id="main-content"></a>-->
       <?php //print render($title_prefix); ?>
       <?php //if ($title): ?>
-        <!--<h1 class="page-header">--><?php //print $title; ?></h1>
+        <!--<h1 class="page-header">--><?php //print $title; ?><!-- </h1> -->
       <?php //endif; ?>
       <?php //print render($title_suffix); ?>
       <?php //print $messages; ?>
@@ -95,15 +104,20 @@
       
 
       <div id="boutique">
-    	  <iframe src="http://astore.amazon.fr/ecobalade-21" width="70%" height="900" frameborder="0" scrolling="no"></iframe>
+    	  <iframe src="http://astore.amazon.fr/ecobalade-21" width="100%" height="900" frameborder="0" scrolling="no"></iframe>
         
         
 
-          <a href="http://www.natural-solutions.eu/contacts/" rel="internal" title='Contactez nous pour commander un livret' alt='Contactez nous pour commander un livret'>         
-            <div class='sideBarBoutique'>
-              <span>Livret-balade l'archipel du Frioul: 5€ </span>
-            </div>
-          </a>
+          <!-- <a href="http://www.natural-solutions.eu/contacts/" rel="internal" title='Contactez nous pour commander un livret' alt='Contactez nous pour commander un livret'>          -->
+          <!-- </a> -->
+        <div class='sideBarBoutique'>
+          <h3>Guides papiers</h3>
+          <p>Ce sont des livrets élaborés par nos soins. Ils présentent les parcours et les espèces avec à travers de belles illustrations.<br/> <a href="http://www.natural-solutions.eu/contacts/">Contactez-nous</a> pour toute commande.</p>
+          <a href="balade/balade-de-marseille-13-l-archipel-du-frioul"><span class='frioul'>De l'archipel du Frioul: 5€ </span></a>
+          <a href="balade/balade-en-bretagne-la-reserve-du-cap-sizun-29"><span class='cap'>Du Cap Sizun</span></a>
+          <a href="balade/Balade-de-l-Epine-Sentier-Decouverte-Serrois"><span class='serrois'>Du Serrois</span></a>
+        </div>
+
       </div>
        
 

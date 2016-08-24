@@ -212,6 +212,12 @@ body.logged-in header#navbar{
 body:not(.front) > div.container{
   margin-top: 60px;
 }
+body.cookieBar:not(.front) > div#container-mobile{
+  margin-top: 100px;
+}
+body:not(.front) > div#container-mobile{
+  margin-top: 60px;
+}
 body.admin-menu:not(.front) > div.container {
     margin-top: 128px;
 }
@@ -281,9 +287,15 @@ body.front .etiquette p,body.front .secondEtiquette p{
   margin:5px 0px 5px 0px;
 }
 /*BNT ACCUEIL*/
-body.front h1{
+/* body.front h1{
   font-size: 2.8em;
   font-family: 'Rockwell-Light';
+} */
+body.front div#accueil h2{
+  font-size: 2.8em;
+  font-family: 'Rockwell-Light';
+  color: rgb(51, 51, 51);
+  line-height: 50.4px;
 }
 body.front a#hp_button_android span.icon {
   background-position: 0px -35px;
@@ -379,8 +391,15 @@ body.front div.progressBar{
        height: 57px;
     }
 }
-body.front span.txt-front h2{
+/* body.front span.txt-front h2{
+  font-family: 'Libre Baskerville', serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 2.4em;
+  color: #E9E8ED;
 
+} */
+body.front span.txt-front h1{
   font-family: 'Libre Baskerville', serif;
   font-weight: normal;
   font-style: italic;
@@ -1001,15 +1020,16 @@ body.node-type-balade figure.effect-zoe:hover figcaption{
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
 }
-body.node-type-balade figure.effect-zoe h3 {
+body.node-type-balade figure.effect-zoe p {
   font-size: 1em;
   padding: 0 3%;
   font-family: Raleway-Light;
   color: rgb(51,51,51);
   text-align: center;
   line-height: 20px;
+  padding: 5px 0;
 }
-body.node-type-balade div.blocTaxon figure.effect-zoe h3 {
+body.node-type-balade div.blocTaxon figure.effect-zoe p {
     text-align: center;
 }
 /*Fin hover*/
@@ -1026,11 +1046,11 @@ body.node-type-balade .views-field.views-field-field-image-2{
 body.node-type-balade div.views-field-field-sponsor img{
   margin: 8% 0%;
 }
-body.node-type-balade aside.region-sidebar-second h2:first-of-type{
+body.node-type-balade aside.region-sidebar-second h3:first-of-type{
   margin-top: 12px;
 }
-body.node-type-balade aside.region-sidebar-second h2{
-  
+body.node-type-balade aside.region-sidebar-second h3{  
+  padding: 12px 0;
   background-color: #FAFAFA;
   background-image: -moz-linear-gradient(top, white, #F2F2F2);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#F2F2F2));
@@ -1119,13 +1139,16 @@ body.node-type-balade div#descriptionZone {
   border-radius: 4px;
   margin: 0px 10px;
 }
-body.node-type-balade div#descriptionZone h4{
+body.node-type-balade div#descriptionZone h2{
   position: absolute;
   z-index: 2;
   color: #4DBB74;
   top: -23px;
   left: 10px;
   background-color: #FFF;
+  font-size: 17.5px;
+  line-height: 20px;
+  padding: 0 6px;
 }
 
 
@@ -1167,13 +1190,16 @@ body.node-type-balade div.lesPatrimoinesImages {
     margin-top: 15px;
 }
 
-body.node-type-balade div.especes-phares > h4{
+body.node-type-balade div.especes-phares > h2{
   position: absolute;
    z-index: 2;
   color: #4DBB74;
   top: -23px;
   left: -2px;
   background-color: #FFF;
+  font-size: 17.5px;
+  line-height: 20px;
+  padding: 0 6px;
 }
 body.node-type-balade div.especes-phares{
   padding: 20px;
@@ -1734,17 +1760,35 @@ body.node-type-espece #blockEspece{
 /***************************************************************************/
 /*********************************  ****************************************/
 /*********************************  ****************************************/
+body.page-boutique div.intro {
+  padding-left: 1%;
+}
+body.page-boutique div.sideBarBoutique {
+  text-align: center;
+}
 body.page-boutique div.container-node {
   background: none;
 }
-body.page-boutique div.sideBarBoutique {
-  margin-top: 35px;
+body.page-boutique div.sideBarBoutique span.frioul,
+body.page-boutique div.sideBarBoutique span.serrois,
+body.page-boutique div.sideBarBoutique span.cap{
+    min-height: 788px;
+    display: inline-block;
+    min-width: 330px;
+}
+body.page-boutique div.sideBarBoutique span.frioul {
   background: url(../img/livret_ecobalade.jpg) no-repeat 50% 50% transparent;
   background-size: 100%;
-  height: 900px;
-  width: 30%;
-  float: right;
 }
+body.page-boutique div.sideBarBoutique span.serrois {  
+  background: url(../img/guide_serrois.jpg) no-repeat 50% 50% transparent;  
+  background-size: 100%;
+}
+body.page-boutique div.sideBarBoutique span.cap {  
+  background: url(../img/Guide_Cap.jpg) no-repeat 50% 50% transparent;
+  background-size: 100%;  
+}
+
 
 body.page-boutique div.sideBarBoutique span{
   background: #8FB03B;
@@ -1852,7 +1896,16 @@ div.view-v-on-en-parle-presse div.imageZonePress, div.view-v-on-en-parle-presse 
 body.page-liste-especes div.mycontainersubfooter{
   margin-bottom: 45px;
 }  
+body.page-liste-especes h2{
+  padding-left: 1%;
+}
+body.page-liste-especes div#title_specie h3{
+  color: rgb(51,51,51);
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Raleway-Light", Arial, sans-serif;
 
+}  
 body.page-liste-especes .page-header{
   margin-bottom: 0;
 }
@@ -1990,7 +2043,7 @@ body.page-liste-balades div#edit-field-difficulte-tid-wrapper p.help-block,
 body.page-liste-balades div#edit-field-type-de-circuit-tid-wrapper p.help-block{
   display: none;
 }
-body.page-liste-balades .view-v-liste-balade .views-field-title h1 a{
+body.page-liste-balades .view-v-liste-balade .views-field-title h3 a{
   text-decoration: none;
 }
 body.page-liste-balades section#block-block-10{
@@ -2097,7 +2150,7 @@ body.page-liste-balades .view-v-liste-balade .views-row {
   background-color: #fff;
   border: 1px solid #bbbbbb;
 }
-body.page-liste-balades .view-v-liste-balade .views-field-title h1{
+body.page-liste-balades .view-v-liste-balade .views-field-title h3{
   font-size: 1.2em;
   padding-right: 12%;
 }
@@ -2413,10 +2466,18 @@ div#container-mobile {
   background: url("../img/background_black.png") repeat-x scroll 0% -7% transparent;
   height: 100%;    
 }
-div#container-mobile div#titleOfMobileApp p {
+/* div#container-mobile div#titleOfMobileApp p {
   color: #fff;
   font-size: 4em;    
   margin-left: 25%;
+} */
+div#container-mobile div#titleOfMobileApp h1 {
+    color: #fff;
+    font-size: 4em;
+    margin-left: 25%;
+    font-family: 'Raleway-Light';
+    padding-top: 3px;
+    padding-bottom: 11px;
 }
 div#container-mobile div#description {
   color: #fff;
@@ -2426,11 +2487,24 @@ div#container-mobile div#description {
   margin-left: 25%;
   box-shadow: 0px 0px 10px #000;
 }
-div#container-mobile div#description p{
+div#container-mobile div#description div.lesTitres h2,
+div#container-mobile div#description div.lesTitres h3{
+  color : rgb(255, 255, 255);
+  font-family: "Raleway-Light";
+  font-size: 16.8px;
+  line-height: 26.88px;
+  margin: 0;
+}
+div#container-mobile div#description div.lesTitres{
   display: inline-block;
   width: 75%;
   padding-left: 5%;
   text-align: justify;
+  color: rgb(255, 255, 255);
+  font-family: "Raleway-Light";
+  font-size: 16.8px;
+  line-height: 26.88px;
+  margin: 0;
 }
 div#container-mobile div#blocGauche{
     margin-top: 40px;
@@ -5516,6 +5590,13 @@ margin-left: 9%;
   }
 }
 @media  (max-width: 979px) {
+  /* page mobile */
+  body:not(.front) > div#container-mobile {
+    margin-top: -20px;
+  }
+  body.cookieBar:not(.front) > div#container-mobile {
+    margin-top: -20px;
+  }
   /* nav */
   header.navbar-fixed-top{
     margin-top: 0px;

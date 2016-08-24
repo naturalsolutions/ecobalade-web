@@ -175,7 +175,7 @@ $baladenid = $node->nid;
 				
 					<!-- Boc texte description de la balade -->
 					<div id="descriptionZone">	
-						<h4>Description de la balade&nbsp;:&nbsp;</h4>
+						<h2>Description de la balade</h2>
 						<?php $description = field_get_items($entity_type = 'node', $node, $field_name = 'field_description_de_la_balade'); ?>
 						<?php $description = $description[0]['value']; ?>				
 						<?php echo $description; ?>
@@ -195,7 +195,7 @@ $baladenid = $node->nid;
 
 					<!-- Boc espece phare de la balade -->
 					<div class="especes-phares">
-						<h4>Espèces phares&nbsp;:&nbsp;</h4>
+						<h2>Espèces phares</h2>
 						<?php $especesPhares = field_get_items($entity_type = 'node', $node, $field_name = 'field_esp_ces_phares'); ?>
 
 
@@ -227,7 +227,7 @@ $baladenid = $node->nid;
 									echo "<a href='$urlPhotoResumeEspecePhare' class='imageTaxon' title=\"$TitlePhotoResumeEspecePhare\"></a>";
 
 									echo "<figcaption>";
-										echo "<a title='Visiter la page' href='$base_url/$nidPhotoResumeEspecePhare'><h3>$nodeEspecePhare->title</h3></a>";											
+										echo "<a title='Visiter la page' href='$base_url/$nidPhotoResumeEspecePhare'><p>$nodeEspecePhare->title</p></a>";
 									echo '</figcaption>';
 								echo '</figure>';
 							echo "</div>";
@@ -277,13 +277,13 @@ $baladenid = $node->nid;
 			//si pas guide
 			if($node->field_lien_guide['und'][0]['value'] == 'mailto:contact@natural-solutions.eu'){
 				
-				echo "<h2>Randonner avec un guide ?</h2>"; 				
+				echo "<h3>Randonner avec un guide ?</h3>"; 				
 				
 			} 
 			//si guide
 			else {
 
-				echo "<h2>Randonner avec un guide !</h2>"; 
+				echo "<h3>Randonner avec un guide !</h3>"; 
 			}
 
 			$url_image_guide = file_create_url($node->field_img_guide['und'][0]['uri']);
@@ -314,11 +314,11 @@ $baladenid = $node->nid;
 		</div>
 		<!-- <a href="https://clk.tradedoubler.com/click?p=117553&a=2794210&g=21636760" rel="nofollow" target="_BLANK"><img src="https://impfr.tradedoubler.com/imp?type(img)g(21636760)a(2794210)" border=0></a> -->
 		
-		<h2>Informations pratiques</h2>
+		<h3>Informations pratiques</h3>
 		<?php print views_embed_view('v_informations_pratiques_balade','block',$baladenid);?>
 		
 		<div id="baladeSimilaire">
-		<h2>Balades similaires</h2>
+		<h3>Balades similaires</h3>
 		<?php
 		
 		//On recupère la difficulté
@@ -362,7 +362,7 @@ $baladenid = $node->nid;
 				echo "<a href='$base_url/$loadPathBalade' title=\"$title\">$imgbaladeSim</a>";
 				echo "<a href='$url' class='imageBaladeSim' title=\"$title\"></a>";
 				echo "<figcaption>";
-					echo "<a title='Visiter la page' href='$base_url/$loadPathBalade'><h3>$title</h3></a>";											
+					echo "<a title='Visiter la page' href='$base_url/$loadPathBalade'><p>$title</p></a>";											
 				echo '</figcaption>';
 			echo '</figure>';
 		

@@ -64,12 +64,12 @@
       <div class="span7">
 
         <div id='blocGauche'>    
-          <div id='titleOfMobileApp'><p>ecoBalade</p></div>
+          <div id='titleOfMobileApp'><h1>ecoBalade</h1></div>
           
           <div id='l1'>       
             <div id='description'>
               <div id='pitcoEco'></div>
-              <p>Avec l'application ecoBalade, arpentez les chemins et amusez-vous à reconnaître les arbres, les oiseaux et les petites bêtes!</p>
+              <div class="lesTitres"><h2>Avec l'application ecoBalade</h2> Arpentez les chemins et <h3> Amusez-vous à reconnaître les arbres, les oiseaux et les petites bêtes!</h3></div>
             </div>
           </div>
           

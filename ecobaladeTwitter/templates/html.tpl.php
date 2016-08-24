@@ -152,14 +152,16 @@
                 currentwidthScreen = window.innerWidth,
                 marginToApply = parseInt(baseMarginTop) - parseInt(myDiff);
 
+                /*
                 console.log('myDiff : '+myDiff);
                 console.log('heightCookie : '+heightCookie);
                 console.log('baseHeightCookieBar : '+baseHeightCookieBar);
                 console.log('myCurrentMarginValue : '+myCurrentMarginValue);
+                */
                 
                 if($('body').hasClass('cookieBar')){
                 //Cookie bar ON
-                console.log('Cookie bar ON');
+                /*console.log('Cookie bar ON');*/
                   
                   if(currentwidthScreen > 979){
                     
@@ -168,7 +170,7 @@
                       }, function(){                                                                 
                         
                           $('body:not(.admin-menu) > div.container').css('margin-top', marginToApply+'px');
-                          console.log('heightCookie -> '+heightCookie+' px && marginToApply -> '+marginToApply);                      
+                          /*console.log('heightCookie -> '+heightCookie+' px && marginToApply -> '+marginToApply);                      */
 
                       }
                     );
@@ -181,14 +183,14 @@
 
                 }else{
                 //Cookie bar OFF
-                  console.log('Cookie bar OFF');
+                  /*console.log('Cookie bar OFF');*/
                   if(currentwidthScreen > 979) $('body:not(.admin-menu) > div.container').css('margin-top', '60px');
                   else $('body:not(.admin-menu) > div.container').css('margin-top', 'auto');
 
                 }
 
 
-                console.log('------------------------');
+                /*console.log('------------------------');*/
 
 
 

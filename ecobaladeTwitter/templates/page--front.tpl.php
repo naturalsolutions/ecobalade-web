@@ -49,7 +49,7 @@
 <div class='swiper-container galleryTopHp'>
 	
 	<span class="txt-front">
-		<h2>En balade ou en rando, découvrez la nature pas à pas...</h2>
+		<h1>En balade ou en rando, découvrez la nature pas à pas...</h1>
 		<p>Apprenez à reconnaître la faune et la flore facilement avec ecoBalade</p>
 		
 		<a id="btn-front" class="btn" target="" rel="" title="Les Balades" href="<?php echo $base_url; ?>/liste-balades">Trouver une balade</a>
@@ -128,7 +128,7 @@
       <div class="hero-unit" id="accueil">
 	  <div class="row-fluid">
 			<div class="span6 hero-unit-teaser">
-				<h1>En balade ou en rando, découvrez la nature pas à pas...</h1>
+				<h2>En balade ou en rando, découvrez la nature pas à pas...</h2>
 				<p style="text-align:left;">En <strong>randonnée</strong>, apprenez à reconnaître la <strong>faune</strong> et la <strong>flore</strong> facilement avec <strong>ecoBalade</strong>. Partagez vos découvertes et sortez ressourcés de cette aventure! Une nouvelle façon de vivre une <strong>balade</strong> dans la <strong>nature</strong></p>
 					<div>
 						<a class="span5 buttonStore" id='hp_button_android' target="_blank" rel="external" title="Télécharger l'application ecoBalade sur GooglePlay" href="https://play.google.com/store/apps/details?id=com.ns.ecoBalade&feature=search_result#?t=W251bGwsMSwyLDEsImNvbS5ucy5lY29CYWxhZGUiXQ.."><span class="icon-android"></span><em>ANDROID APP ON</em>Google play</a>

@@ -99,7 +99,7 @@
 				
 				</div>
 				<div class='span2' id="title_specie">
-						<?php echo $title_espece; ?>
+						<h3><?php echo $title_espece; ?></h3>
 				</div>
 				<div class='span6' id="descro_specie">
 						

@@ -58,7 +58,7 @@
 
 	<!-- Bloc texte description de la patrimoine -->
 
-	<h4><?php echo $title_patrimoine."&nbsp;:&nbsp"; ?></h4>	
+	<h2><?php echo $title_patrimoine; ?></h2>	
 				
 	<div class='row-fluid'>
 		<div class='span12'>

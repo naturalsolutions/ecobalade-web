@@ -1,6 +1,6 @@
 <?php 
 /*permet de de créer une template de type page pour un type de contenu*/
-function  ecobaladeTwitter_preprocess_page(&$vars) {
+function ecobaladeTwitter_preprocess_page(&$vars) {
   if (isset($vars['node']->type)) {
     $vars['theme_hook_suggestions'][] = 'page__' . $vars['node']->type;
 	 if (module_exists('comment')) {
@@ -21,6 +21,10 @@ function  ecobaladeTwitter_preprocess_page(&$vars) {
     
     $vars['theme_hook_suggestions'][] = 'page__vocabulary__' . $machineNameVacabulary;
   }
+  
+  // Custom Primary nav - Remove h2 element to clean DOM for SEO
+  if ($vars['main_menu']) $vars['primary_nav'] = str_replace('<h2 class="element-invisible">Menu principal</h2>', "", $vars['primary_nav']);      
+  
 }
 
 function ecobaladeTwitter_preprocess_region(&$variables, $hook) {
@@ -92,9 +96,9 @@ function ecobaladeTwitter_breadcrumb($variables) {
     
     // Provide a navigational heading to give context for breadcrumb links to
     // screen-reader users. Make the heading invisible with .element-invisible.
-    $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
+    //$output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
 
-    $output .= '<div class="breadcrumb">' . implode(' » ', $breadcrumb) . '</div>';
+    $output = '<div class="breadcrumb">' . implode(' » ', $breadcrumb) . '</div>';
     return $output;
   }
 }

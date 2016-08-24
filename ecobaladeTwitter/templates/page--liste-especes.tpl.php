@@ -101,9 +101,9 @@ else $nidBalade = 'all';
 	<div class="container-node">
         <?php print render($title_prefix); ?>
         <?php if($title && $titleBalade): ?>
-          <h1 class="page-header"><?php echo $title; ?><br /><span><?php echo $titleBalade; ?></span></h1>
+          <h1 class="page-header"><?php echo $title; ?></h1><h2><?php echo 'Présentes dans la '.$titleBalade; ?></h2>
         <?php elseif($title): ?>
-          <h1 class="page-header"><?php echo $title; ?></h1>
+          <h1 class="page-header"><?php echo $title; ?></h1><h2>Présentes dans toutes les balades</h2>
         <?php endif; ?>
         <?php print render($title_suffix); ?>
   	  <?php print $messages; ?>
@@ -142,7 +142,8 @@ else $nidBalade = 'all';
             } ;?>
               
             <div id="filterBalade" class="selectBalade views-exposed-widget views-exposed-form">
-            <label for="selectBalade">Toutes les balades</label>
+            <p>Rechercher ici votre espèce</p><br/>
+            <label for="selectBalade">Par balade</label>
               <select id="selectBalade" name="select">
                   <option value='balade/all'>Toutes</option> 
               
