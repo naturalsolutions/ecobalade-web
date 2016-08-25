@@ -40,7 +40,7 @@ function ecobaladeTwitter_preprocess_region(&$variables, $hook) {
 
 /***************CUSTOM CONTACT FORM MODULE**************************/
 function ecobaladeTwitter_form_contact_site_form_alter(&$form, &$form_state) {
-  drupal_set_title('Nous contacter');
+  drupal_set_title('Questions & Contact');
 }
 /**
  * Add theme call to define the contact form template and path

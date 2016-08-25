@@ -2538,6 +2538,43 @@ div#container-mobile div.bloc_partage{
 /*FIN gallerie*/
 /******************************************************************************/
 /*                                                                            */
+/*                                  Page contact                              */
+/*                                                                            */
+/******************************************************************************/
+body.page-contact div.second{
+  margin-top: 48px;
+}
+body.page-contact h2.bottom{
+  margin-bottom: 40px;
+}
+body.page-contact h2{
+  font-size: 1.2em;
+  background-color: #fff;
+  display: inline-block;
+  padding: 4px 2%;
+  box-shadow: 3px 4px 10px rgba(0,0,0,0.5);
+}
+body.page-contact div#contactez-nous{
+  padding-bottom: 50px;
+}
+body.page-contact li.line{
+  margin: 30px 0;
+}
+body.page-contact a.btn-primary{
+  border: 2px solid #4DBB74;
+}
+body.page-contact a.btn-primary:hover{
+  font-weight: bold;
+}
+body.page-contact h2.formContact{
+  width: 90%;
+  margin-bottom: 38px;
+}
+body.page-contact h1{
+  margin-bottom: 33px;
+}
+/******************************************************************************/
+/*                                                                            */
 /*                                  subfooter                                 */
 /*                                                                            */
 /******************************************************************************/
