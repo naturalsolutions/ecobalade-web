@@ -69,7 +69,7 @@ Template de la page liste des articles
   <div class="blog-banner">
     <img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/ecoblog_header_banner.png">
     <p>ecoblog</p>
-    <p id="subtxt">Bienvenue sur le blog d'ecobalade</p>
+    <h1 id="subtxt">Bienvenue sur le blog d'ecobalade</h1>
   </div>
 
   <!--******************************************************-->
@@ -292,7 +292,7 @@ Template de la page liste des articles
         <div class="row-fluid">
           <div class="span9"> <!-- debut 3 derniers articles -->
             <div class="enteteBlog">
-              <p class='littleTitle titre_actu'>actualités</p>
+              <h2 class='littleTitle titre_actu'>actualités</h2>
               <div class="line"></div>
             </div>
             <?php  
@@ -329,10 +329,10 @@ Template de la page liste des articles
                 ?>
 
                 <!-- Display Article -->
-                <h1><?php echo $title ?></h1>
+                <h2><?php echo $title ?></h2>
                 <?php if ($currentArticle->field_sous_titre_blog != '') {
                   $subTitle = $currentArticle->field_sous_titre_blog['und'][0]['value'];
-                  echo "<h2 class='subtitle'>".$subTitle."</h2>";
+                  echo "<strong class='subtitle'>".$subTitle."</strong>";
                 } 
                 ?>
                 <i><?php echo "Posté dans ".$blogCategorie." le ".$created ?></i>
@@ -374,7 +374,7 @@ Template de la page liste des articles
 
 
             <div class="enteteArticleAssocies">
-               <p class='title_article_associe'>articles associés</p>
+               <h3 class='title_article_associe'>articles associés</h3>
               <div class="line"></div>
             </div>
 
@@ -571,8 +571,8 @@ var galleryLogoOnEnParle = new Swiper('.swiper-blog', {
         loop: true
     });
   
-/*var urlService = "<?php echo $base_url.'/blog/allblogarticle' ;?>";
-var blog = "<?php echo $base_url.'/blog' ;?>";
+/*var urlService = "<?php //echo $base_url.'/blog/allblogarticle' ;?>";
+var blog = "<?php //echo $base_url.'/blog' ;?>";
 var currentUrl = window.location.href;
 $("#more").click(function(){ 
   console.log(currentUrl);

@@ -66,7 +66,7 @@ Template d'un article de blog
   <div class="blog-banner">
     <img src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/ecoblog_header_banner.png">
     <p>ecoblog</p>
-    <p id="subtxt">Bienvenue sur le blog d'ecobalade</p>
+    <h1 id="subtxt">Bienvenue sur le blog d'ecobalade</h1>
   </div>
   
   <?php 
@@ -162,8 +162,8 @@ Template d'un article de blog
                             onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png'"></a>
         </div>
         
-        <h1><?php echo $title; ?></h1>  
-        <h2 class='subtitle'><?php echo $sous_titre; ?></h2>
+        <h2><?php echo $title; ?></h2>  
+        <h3 class='subtitle'><?php echo $sous_titre; ?></h3>
         <?php echo "<p class='created'>&Eacutecrit par ".$currentArticle->name." le ".$created."</p>"; ?>
         <div class="separatorPageArticle"></div>
 
