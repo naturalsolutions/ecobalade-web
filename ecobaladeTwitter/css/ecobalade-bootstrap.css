@@ -1867,6 +1867,8 @@ div.view-v-on-en-parle-presse div.views-row{
   border-bottom: 2px dotted #fff;
   padding-bottom: 40px;
   padding-top: 30px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 div.view-v-on-en-parle-presse div.views-row.views-row-last{
   border-bottom: 0;
@@ -2575,10 +2577,17 @@ body.page-contact h1{
 }
 /******************************************************************************/
 /*                                                                            */
+/*                                  Page partenaire                           */
+/*                                                                            */
+/******************************************************************************/
+body.page-partenaires section{
+  padding-bottom: 40px;
+}
+/******************************************************************************/
+/*                                                                            */
 /*                                  subfooter                                 */
 /*                                                                            */
 /******************************************************************************/
-
 div.subfooter{
   background-color: #353535;
   min-height:200px;

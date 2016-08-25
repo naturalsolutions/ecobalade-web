@@ -69,7 +69,7 @@
 
  
 <!-- 1 Article -->
-<h3><?php echo $title; ?></h3>
+<h2><?php echo $title; ?></h2>
 <div class="row-fluid">
 
 	<?php if($image || $pdf): ?>
