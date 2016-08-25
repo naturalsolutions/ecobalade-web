@@ -126,7 +126,7 @@ Template de la page liste des articles
           // Execution
           $items = $query->execute()->fetchAll();
  
-          echo "<li><a href='$base_url/blog'>Accueil</a></li>";
+          echo "<li><a href='$base_url/blog'>Récents</a></li>";
           foreach ($items as $key => $value) {
 
             $nameCategorie = $value->name;
@@ -193,13 +193,15 @@ Template de la page liste des articles
                 </div>
 
                 <div class=" infoArticleBlog">
-                  <h1><?php echo $title ?></h1>
+                  <h2><?php echo $title ?></h2>
                   <?php 
+                    // Si on a un sous titre on affiche
                     if ($currentArticle->field_sous_titre_blog != '') {
-                    $subTitle = $currentArticle->field_sous_titre_blog['und'][0]['value'];
-                    echo "<h2>".$subTitle."</h2>";
-                    } ?>
-                  <i><?php echo "Posté dans ".$blogCategorie." le ".$created ?></i>
+                      $subTitle = $currentArticle->field_sous_titre_blog['und'][0]['value'];
+                      echo "<p class='subtitle'>".$subTitle."</p>";
+                    } 
+                  ?>
+                  <!-- <i><?php //echo "Posté dans ".$blogCategorie." le ".$created ?><!-- </i> -->
                   <?php echo $blogResume ?>
                  <div class="likeShareCommentActu inSlider">
                   <!-- AddThis Button BEGIN -->
@@ -219,14 +221,13 @@ Template de la page liste des articles
                     <a href="#"><img id="imgShare" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/share.png"
                                       onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/sharehover.png'" 
                                       onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/share.png'"></a> -->
-                    <a class="commentButton" href="<?php echo $base_url.'/'.$cleanUrl; ?>#comment-form-wrapper"><img id="imgComment" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png"
-                                      onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubulehover.png'" 
-                                      onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png'"></a>
+                    <a class="commentButton" href="<?php echo $base_url.'/'.$cleanUrl; ?>#comment-form-wrapper">                    
+                      <img id="imgComment" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png" onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubulehover.png'" onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png'" />
+                    </a>
                   </div>
                   
                   
-                  <a class="lirePlus" href="<?php echo $base_url.'/'.$cleanUrl; ?>"> Lire plus</a>
-                  <!-- <a class="lirePlus" href="<?php echo $base_url.'/'.$title; ?>">Lire plus</a> -->
+                  <a class="lirePlus" href="<?php echo $base_url.'/'.$cleanUrl; ?>"> Lire plus</a>                  
                 </div>
 
               </div>
@@ -332,7 +333,7 @@ Template de la page liste des articles
                 <h2><?php echo $title ?></h2>
                 <?php if ($currentArticle->field_sous_titre_blog != '') {
                   $subTitle = $currentArticle->field_sous_titre_blog['und'][0]['value'];
-                  echo "<strong class='subtitle'>".$subTitle."</strong>";
+                  echo "<p class='subtitle'>".$subTitle."</p>";
                 } 
                 ?>
                 <i><?php echo "Posté dans ".$blogCategorie." le ".$created ?></i>

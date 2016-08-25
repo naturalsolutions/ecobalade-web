@@ -3378,6 +3378,7 @@ body.page-pro div.preniumTitleFormule h3{
   font-family: 'ProximaNova-Bold', sans-serif;
   font-size: 5em;
   color: #505050;
+  padding-bottom: 11px;
 }
 body.page-pro div.preniumTitleFormule p{
   font-family: 'ProximaNova-Semibold', sans-serif;
@@ -3615,15 +3616,24 @@ body.page-pro div.formButtonRadio p.paragrapheRadioButton{
 /*                                                                         */
 /***************************************************************************/
 /*********************************  ****************************************/
+body.page-taxonomy-term div.likeShareCommentActu,
+body.node-type-blogosphere div.likeShareCommentActu{
+  margin-top: 9px;
+}
 body.page-taxonomy-term div.boutons_partage,
 body.node-type-blogosphere div.boutons_partage{
-      display: inline-block;
+  display: inline-block;
 }
 body.page-taxonomy-term a.commentButton,
 body.node-type-blogosphere a.commentButton{
   display: inline-block;
   margin-left: 3px;
+  width: 100%;
+  color: #c5c5c5;
+  font-family: 'neythalregular';
+  font-size: 22px;
 }
+
 body.page-taxonomy-term div.likeShareCommentActu.inSlider{
   margin-left: 4em;
 }
@@ -3791,12 +3801,12 @@ body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.
   font-size: 3vw;
 }
 body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog h2{
-  margin: 0;
-  margin-left: 2.5em;
-  font-family: 'Nunito', sans-serif;
+  margin-left: 7%;
   font-weight: 300;
   color: #fff;
-  font-size: 1.2vw;
+  font-size: 3em;
+  font-family: 'neythalregular';
+  margin-top: 30px;
 }
 body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog i{
   margin-left: 3vw;
@@ -3808,9 +3818,18 @@ body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.
   margin-top: 1.5vw;
   width: 20vw;
   color: #fff;
-  font-size: 1vw;
-  font-family: 'Nunito', sans-serif;
+  font-size: 1vw;  
   font-weight: 300;
+}
+body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog p.subtitle{
+  margin-left: 7%;
+  margin-top: -6px;
+  width: 20vw;
+  color: #e8e8e8;
+  font-size: 1.2em;
+  font-family: 'Nunito', sans-serif;
+  line-height: 20px;
+  font-weight: 300;  
 }
 body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > a{
   margin-left: 1vw;
@@ -3855,8 +3874,8 @@ body.page-taxonomy-term div.enteteBlog > p.class.littleTitle{
   color: #494949;
   position: relative;
 }
-body.node-type-blogosphere h2,
-body.page-taxonomy-term h2{
+body.node-type-blogosphere h2.littleTitle,
+body.page-taxonomy-term h2.littleTitle{
   width: 250px;
   font-family: 'Nunito', sans-serif;
   margin-left: auto;
@@ -3868,6 +3887,18 @@ body.page-taxonomy-term h2{
   color: #494949;
   position: relative;
   z-index: 999;
+}
+body.node-type-blogosphere div.lesArticlesAssocie,
+body.page-taxonomy-term div.lesArticlesAssocie{
+  padding-bottom: 82px;
+}
+body.node-type-blogosphere h2,
+body.page-taxonomy-term h2{
+  font-size: 3em;
+  margin-bottom: 0;
+  font-family: 'neythalregular';
+  color: #545454;
+  padding-bottom: .2em;
 }
 body.node-type-blogosphere h3.title_article_associe,
 body.page-taxonomy-term h3.title_article_associe{
@@ -3892,9 +3923,10 @@ body.page-taxonomy-term h3{
   font-family: 'neythalregular';
   line-height: 45px;
 }
+
 body.node-type-blogosphere div.enteteBlog div.line,
 body.page-taxonomy-term div.listeArticle div.enteteBlog div.line{
-  margin-top: -15px;
+  margin-top: -4px;
   border-top: 1px solid #ADADAD;
   border-bottom: 1px solid #ADADAD;
   height: 5px;
@@ -3937,6 +3969,7 @@ body.node-type-blogosphere h3.subtitle{
 }
 body.page-taxonomy-term div.listeArticle .subtitle{
   font-size: 1.4em;
+  line-height: 30px;
   margin-bottom: 0;
   font-family: 'neythalregular';
   color: #a08a77;
@@ -3949,6 +3982,10 @@ body.page-taxonomy-term div.listeArticle .subtitle{
 body.node-type-blogosphere i,
 body.page-taxonomy-term i{
   font-size: .8em;
+  width: 100%;
+  display: block;
+  margin-top: 10px;
+  padding-bottom: 13px;
 }
 body.node-type-blogosphere a.lirePlus,
 body.page-taxonomy-term div.listeArticle a.lirePlus{
@@ -4089,6 +4126,14 @@ body.page-taxonomy-term div.listeArticle div.tagsBlog div.smallScreen{
 /*********************************  ****************************************/
 body.node-type-blogosphere div.contentArticle img{
   padding: 0px 10px 10px 0px;
+}
+body.node-type-blogosphere div.lesArticlesAssocie h4{
+  font-size: 1.7em;
+  margin-bottom: -.5em;
+  color: #545454;
+  font-family: 'neythalregular';
+  line-height: 30px;
+  padding-top: 12px;
 }
 body.node-type-blogosphere div.likeShareCommentActu{
   margin-top: 1em;

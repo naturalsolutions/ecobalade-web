@@ -95,7 +95,7 @@ Template d'un article de blog
           // Execution
           $items = $query->execute()->fetchAll();
 
-         echo "<li><a href='$base_url/blog'>Accueil</a></li>";
+         echo "<li><a href='$base_url/blog'>Récents</a></li>";
           foreach ($items as $key => $value) {
 
             $nameCategorie = $value->name;
@@ -259,7 +259,7 @@ Template d'un article de blog
             <a href="<?php echo $base_url.'/'.$cleanUrlArticle; ?>"><?php echo $blogImage; ?></a>
             <br>
 
-            <h3><?php echo $title ?></h3>
+            <h4><?php echo $title ?></h4>
             <i><?php echo "Posté dans ".$blogCategorie." le ".$created ?></i>
             <p><?php echo $blogResume ?></p>
             <br/><a class="lirePlus" href="<?php echo $base_url.'/'.$cleanUrlArticle; ?>"> > Continuer de lire</a>
