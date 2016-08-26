@@ -77,6 +77,7 @@ global $base_url;
 					$query->join('field_revision_field_espece_en_footer', 'f', 'f.entity_id = n.nid');
 					$query->condition('f.field_espece_en_footer_value', 1);
 					$query->orderRandom();
+					$query->range(0,5);
 					$query->execute();
 					$result = $query->execute();
 					
