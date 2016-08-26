@@ -53,20 +53,48 @@ global $base_url;
 	<div class='container'>
 			
 		
-		<!-- les trois colones -->
+		<!-- les 4 colones -->
 		<div class="row-fluid">
-
-
-			<div id="store" class="span4">
+	
+			<div id="store" class="span3">
 			
 				<a class="icon_android_store" rel="external" title="Télécharger l'application ecoBalade sur GooglePlay" href="https://play.google.com/store/apps/details?id=com.ns.ecoBalade&hl=fr_FR">Disponible sur Google Play</a>
 				<a class="icon_apple_store" rel="external" title="Télécharger l'application ecoBalade sur l'appleStore" href="https://itunes.apple.com/fr/app/ecobalade/id674569147?mt=8">Disponible sur Apple Store</a>
 			
 			</div>
 
+			
 
 
-			<div id="questions" class="span4">
+			<div class="espece span3">
+				
+				<h4 class="footer-title">Top 5 espèces</h4>				
+				
+					<?php 
+					//$query = "SELECT n.nid, n.title FROM node n JOIN field_revision_field_espece_en_footer f ON f.entity_id = n.nid where f.field_espece_en_footer_value = 1;";
+					$query = db_select('node', 'n');
+					$query->fields('n', array('nid', 'title'));
+					$query->join('field_revision_field_espece_en_footer', 'f', 'f.entity_id = n.nid');
+					$query->condition('f.field_espece_en_footer_value', 1);
+					$query->orderRandom();
+					$query->execute();
+					$result = $query->execute();
+					
+					foreach ($result as $record) {						
+						$cleanUrl = drupal_get_path_alias('node/'.$record->nid);
+						echo "<a href='".$cleanUrl."' title='".$record->title."' alt='".$record->title."'>".$record->title."</a>";
+					}
+					?>
+								
+					
+				
+				
+			</div>
+
+
+
+
+			<div id="questions" class="span3">
 				<h4 class="footer-title">Des questions ?</h4>
 				
 				<a href="<?php echo $base_url; ?>/contact" title="">Vous êtes un ecoBaladeur ?</a>
@@ -80,7 +108,7 @@ global $base_url;
 			</div>
 
 
-			<div id="contact" class="span4">
+			<div id="contact" class="span3">
 				
 				
 				<div class="row-fluid">

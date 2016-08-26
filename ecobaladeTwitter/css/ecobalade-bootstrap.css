@@ -2650,6 +2650,19 @@ div.subfooter input.styleSubmitSubfooter:focus {
   fill: #929292;
   text-align: center;
 }*/
+footer.footer div.espece{
+  padding-left: 60px;
+}
+footer.footer div.espece a{
+  color: #8b8b8b;  
+  font-size: 0.9em;
+  width: 100%;
+  display: inline-block;
+}
+footer.footer div.espece a:hover{
+  color: #4DBB74;  
+  text-decoration: none;
+}
 footer.footer div#elevator{
   position:   absolute; 
   fill: #929292;
@@ -2690,7 +2703,7 @@ footer.footer div#contact p{
   margin-left: 2px;
 }
 footer.footer div#contact {
-  padding: 0 0 0 112px;
+  padding: 0 0 0 80px;
 }
 footer.footer div#contact a{
   color: #8b8b8b;  
@@ -2698,7 +2711,7 @@ footer.footer div#contact a{
 }
 
 footer.footer div#store{
-  padding: 20px 0px 0px 30px;
+  padding: 20px 0px 0px 0px;
 }
 footer.footer div#questions a{
   color: #8b8b8b;
@@ -2711,7 +2724,7 @@ footer.footer div#social{
   text-align: center;
 }
 footer.footer div#questions{
-  padding-left: 100px;
+  padding-left: 31px;
 }
 footer.footer div#copyright{
   text-align: center;
@@ -2753,11 +2766,9 @@ footer.footer .icon_android_store, footer.footer .icon_apple_store{
   text-indent: 20%;
   display: block;
   color: #FFF;
-  font-size: 1em;
-  padding: 3% 0%;
-  width: 80%;
-
-
+  font-size: 0.9em;
+  padding: 15px 0%;
+  width: 100%;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -6144,9 +6155,11 @@ margin-left: 9%;
   }
   footer div#contact > div.row-fluid > div.row-fluid > div.span2{
     position: absolute;
-    top: 71%;
+    bottom: 140px;
   }
-  footer.footer div#questions, footer.footer div#contact {
+  footer.footer div#questions, 
+  footer.footer div#contact, 
+  footer.footer div.espece {
     text-align: center;
     margin-top: 85px;
     padding: 0 ;
