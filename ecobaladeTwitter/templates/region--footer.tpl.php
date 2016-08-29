@@ -74,7 +74,7 @@ global $base_url;
 					//$query = "SELECT n.nid, n.title FROM node n JOIN field_revision_field_espece_en_footer f ON f.entity_id = n.nid where f.field_espece_en_footer_value = 1;";
 					$query = db_select('node', 'n');
 					$query->fields('n', array('nid', 'title'));
-					$query->join('field_revision_field_espece_en_footer', 'f', 'f.entity_id = n.nid');
+					$query->join('field_revision_field_espece_en_footer', 'f', 'f.revision_id = n.vid');
 					$query->condition('f.field_espece_en_footer_value', 1);
 					$query->condition('n.status', 1);
 					$query->orderRandom();
