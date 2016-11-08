@@ -2884,6 +2884,17 @@ body.page-node-2469 div.row-fluid.monTitle{
 /*                                                                         */
 /*                                                                         */   
 /***************************************************************************/
+/* MENU */
+body.page-pro div.navProStyle a.btn.btn-navbar{
+  padding: 15px 15px;
+  margin-top: -37px;
+}
+body.page-pro div.navProStyle a.btn.btn-navbar span.icon-bar{
+  background-color: #4DBB74;
+}
+body.page-pro div.navProStyle a.btn.btn-navbar:hover{
+  border: none;
+}
 /* FOLD1 */
 body.page-pro p{
     line-height: 1.6em;
@@ -2920,7 +2931,7 @@ body.page-pro div.scrollDown {
   text-align: center;
   margin-top: 206px;
 }
-body.page-pro div.scrollDown a.txtscroll{
+body.page-pro div.scrollDown p.txtScroll{
   font-size: 1em;
   letter-spacing: 4px;
   font-family: 'ProximaNova-Semibold', sans-serif;
@@ -2936,13 +2947,13 @@ body.page-pro div.navProStyle li a{
   color: #fff;
   letter-spacing: 1px;
   text-shadow:none;
+  padding: 11px 0 10px 1%;
+  border-bottom: 1px transparent solid;  
 }
 body.page-pro div.navProStyle li a:hover{
   text-shadow:none;
   color:#4DBB73;
-  border-bottom: 1px #4DBB73 solid;
-  padding: 11px 0 10px 0;
-  height: 18px;
+  border-bottom: 1px #4DBB73 solid;  
 }
 body.page-pro div.navProStyle a.navProActive{
   border-bottom: 1px #4DBB73 solid;
@@ -2975,7 +2986,7 @@ body.page-pro a.btnRetourSite{
   text-align:center;
 }
 body.page-pro a.btnRetourSite:hover{
-  border: none;
+  border: 1px solid transparent;
   background: #4dbb74; /* Old browsers */
   background: -moz-linear-gradient(left, #4dbb74 0%, #4dbb8e 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(left, #4dbb74 0%,#4dbb8e 100%); /* Chrome10-25,Safari5.1-6 */
@@ -2986,7 +2997,7 @@ body.page-pro div.marginBtnRetour{
   margin-top:21px;
 }
 body.page-pro div.marginRowHeader{
-  padding-top: 37px;
+  padding-top: 48px;
 }
 /* FOLD2 */
 body.page-pro div.imgApportClient{
@@ -3002,19 +3013,23 @@ body.page-pro div.bgIcon{
   background-repeat:  no-repeat;
 }
 body.page-pro div.iconDecouvrir{
-  background-image: url('../img/pro/iconDecouvrir.png');
+  background: url(../img/pro/iconDecouvrir.png) no-repeat 50% 50% transparent;  
+  background-size: auto;  
   height:117px;
 }
 body.page-pro div.iconActivite{
-  background-image: url('../img/pro/iconActivite.png');
+  background: url(../img/pro/iconActivite.png) no-repeat 50% 50% transparent;  
+  background-size: auto;
   height:171px;
 }
 body.page-pro div.iconValoriser{
-  background-image: url('../img/pro/iconValoriser.png');
+  background: url(../img/pro/iconValoriser.png) no-repeat 50% 50% transparent;  
+  background-size: auto;  
   height:89px;
 }
 body.page-pro div.iconSensibiliser{
-  background-image: url('../img/pro/iconSensibiliser.png');
+  background: url(../img/pro/iconSensibiliser.png) no-repeat 50% 50% transparent;  
+  background-size: auto;    
   height:111px;
 }
 body.page-pro div.styleTxtFold2 h3{
@@ -3100,6 +3115,7 @@ body.page-pro div.txtFold3 p{
   font-family: 'ProximaNova-Light', sans-serif !important;
   padding-top: 30px;
   padding-bottom: 30px;
+  text-align: justify;
 }
 body.page-pro div.txtFold3 h2{
   font-family: 'ProximaNova-Thin', sans-serif !important;
@@ -3128,9 +3144,11 @@ body.page-pro a.btnVoirLeSiteFold4:hover{
 body.page-pro div.imgFold4{
   background-image: url('../img/pro/imgFold4');
   height: 953px;
-  background-position: center center;
-  background-repeat:  no-repeat;
-  background-size: cover;
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */  
+  background-size: cover;  
+
 }
 body.page-pro div.bgVert{
   background: #4dbb74; /* Old browsers */
@@ -3145,6 +3163,7 @@ body.page-pro div.txtFold4 p{
   padding-bottom: 73px;
   color: #fff;
   padding-right: 19%;
+  text-align: justify;
 }
 body.page-pro div.txtFold4 h2{
   font-family: 'ProximaNova-Thin', sans-serif !important;
@@ -3189,11 +3208,13 @@ body.page-pro div.txtFold5 p{
   font-family: 'ProximaNova-Light', sans-serif !important;
   padding-top: 30px;
   padding-bottom: 60px;
+  text-align: justify;
 }
 body.page-pro div.txtFold5 h2{
   font-family: 'ProximaNova-Thin', sans-serif !important;
   font-size:5em;
   color: #505050;
+  line-height: 72px;
 }
 body.page-pro div.txtFold5{
   margin-top:270px;
@@ -3236,6 +3257,7 @@ body.page-pro div.imgCarteFold6{
   background-repeat: no-repeat;
   background-position: center center;
   margin: 130px 0 130px 0;
+  background-size: 100%;
 }
 body.page-pro div.txtFold6 p{
   font-family: 'ProximaNova-Light', sans-serif !important;
@@ -3247,6 +3269,7 @@ body.page-pro div.txtFold6 h2{
   font-family: 'ProximaNova-Thin', sans-serif !important;
   font-size:5em;
   color: #505050;
+  line-height: 60px;
 }
 body.page-pro div.txtFold6{
   margin-top: 363px;
@@ -3264,6 +3287,7 @@ body.page-pro div.txtTitleFold7 h2{
   font-size:5em;
   color: #505050;
   margin-top: 100px;
+  line-height: 60px;
 }
 /* Basic formule */
 body.page-pro div.basicTitleFormule h3{
@@ -3564,6 +3588,7 @@ body.page-pro div.separateurProRecapitulatif{
 body.page-pro div.paddindFormulePreniumRecap{
   padding-bottom: 55px;
 }
+body.page-pro input.btnDevisRecap,
 body.page-pro a.btnDevisRecap{
   background:none;
   border: 1px solid #46b973;
@@ -3575,6 +3600,7 @@ body.page-pro a.btnDevisRecap{
   letter-spacing: 1px;
   font-size:1.2em;
 }
+body.page-pro input.btnDevisRecap:hover,
 body.page-pro a.btnDevisRecap:hover{
   background: #4dbb74; /* Old browsers */
   background: -moz-linear-gradient(left, #4dbb74 0%, #4dbb8e 100%); /* FF3.6-15 */
@@ -3588,11 +3614,19 @@ body.page-pro div.placementBtnRecap{
   text-align: center;
 }
 /* FOLD TEMOIGNAGE */
+body.page-pro div.imgTemoignage p{
+  text-align: center;
+  color: #fff;
+  font-family: 'ProximaNova-Thin', sans-serif !important;  
+  font-size: 2em;
+  padding: 0 10%;
+}
 body.page-pro div.imgTemoignage{
   background-image: url('../img/pro/fond_temoignage.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   height: 540px;
+  padding-top: 200px;
 }
 /* FOLD FORM CONTACT */
 body.page-pro div.formContactPro{
@@ -3600,24 +3634,31 @@ body.page-pro div.formContactPro{
   text-align: center;
 }
 body.page-pro div.formContactPro input[type="text"]{
-  padding: 13px 2%;
+  padding: 13px 6%;
   border-radius: 45px;
   margin-top: 20px;
   background-color: #eaeaea;
   border: none;
-  box-shadow: none;
-  margin-left: 2%;
+  box-shadow: none;  
+  width: 88%;
+}
+body.page-pro div.formContactPro input.large[type="text"]{
+  padding: 13px 2%;
+  width: 96%;
 }
 body.page-pro div.formContactPro div.grandInput input[type="text"]{
   padding: 13px 23% 13px 2%;
 }
 body.page-pro div.formContactPro textarea{
-  padding: 20px 24% 100px 2%;
+  padding: 20px 50% 100px 2%;
   border-radius: 30px;
   margin-top: 20px;
   background-color: #eaeaea;
   border: none;
-  box-shadow: none; 
+  box-shadow: none;
+}
+body.page-pro div.formButtonRadio{
+  text-align: center;
 }
 body.page-pro div.formButtonRadio p{
   font-family: 'ProximaNova-Light', sans-serif;
@@ -3654,6 +3695,12 @@ body.page-pro div.formButtonRadio label:before {
   bottom: 1px;
   background-color: #cacaca;
 }
+body.page-pro div.buttonRow {
+  width: 100%;
+  height: 57px;
+  margin-top: 51px;
+  margin-bottom: 40px;
+}
 body.page-pro .radio label:before {
   border-radius: 8px;
 }
@@ -3662,10 +3709,13 @@ body.page-pro div.formButtonRadio input[type=radio]:checked + label:before {
   color: #f3f3f3;
   font-size: 30px;
   text-align: center;
-  line-height: 10px;
+  line-height: 15px;
 }
-body.page-pro div.formButtonRadio p.paragrapheRadioButton{
+body.page-pro div.formButtonRadio div.blocRadioButtons{
   margin-bottom: 50px;
+  text-align: left;
+  margin: 0 auto;
+  display: inline-block;
 }
 /***************************************************************************/
 /***************************************************************************/
@@ -5569,12 +5619,28 @@ margin-left: 9%;
   body.front div#img-front {
     background-position: 84% 0%;
   }
+  body.page-pro.cookieBar{
+    padding-top: 25px; 
+  }
 }
 /*En dessous de 1200*/
 @media (max-width: 1199px){  
-  /* ul#main-menu li{
-     padding: 10px 0;
-   }     */ 
+  /* Pro */
+  body.page-pro div.img2BasicFormule,
+  body.page-pro div.img2PreniumFormule,
+  body.page-pro div.img2StandartFormule {
+    display: none;
+  }
+  body.page-pro div.espaceRowFormule {
+    margin-top: 0px;
+  }
+  body.page-pro div.txtFold3 h2 {  
+    font-size: 4em;
+    white-space: nowrap;
+  }
+  body.page-pro div.imgFold4 {    
+    background-position: 70% 50%;
+  }
   /*HP*/
   body.front span.txt-front {
     top: 63px;
@@ -5721,6 +5787,138 @@ margin-left: 9%;
   }
 }
 @media  (max-width: 979px) {
+  /* pro */
+  body.page-pro div.divAppDedie {    
+    margin-top: 50px;
+  }
+  body.page-pro div.borderRecapFormuleStandart {    
+    padding: 10px 0;
+  }
+  body.page-pro div.img1StandartFormule {
+    display: inline-block;
+    width: 46%;
+    background-size: 100%;
+    height: 455px;
+    vertical-align: top;
+  }
+  body.page-pro div.preniumRowFluid {
+    margin-top: -37px;
+  }
+  body.page-pro div.positionTxtFormulePrenium h3 {
+    padding-left: 0;
+  }
+  body.page-pro div.preniumTitleFormule {    
+    margin-left: 0%;
+  }
+  body.page-pro div.detailFormuleBasic ul {
+    margin-left: 0;
+  }
+  body.page-pro div.positionPreniumFormuleDetail {
+    margin-left: 0;
+  }
+  body.page-pro div.positionTxtFormulePrenium {
+    margin-left: 0;
+    text-align: center;
+    padding: 0 3%;
+  }
+  body.page-pro div.img1PreniumFormule {   
+    height: 345px;
+    background-position: center;
+    background-size: 76%;
+  } 
+  body.page-pro div.standartTitleFormule {  
+    margin-left: -38%;
+  }
+  body.page-pro div.otherTwo {
+    display: inline-block;
+    width: 53%;
+    vertical-align: top;
+  }
+  body.page-pro div.espaceRowFormule {
+    margin-top: 0px;
+    margin-bottom: 95px;
+  }
+  body.page-pro div#formules div.otherOne{
+    display: inline-block;
+    width: 53%;
+  }    
+  body.page-pro div.imgCarteFold6 {    
+    margin: 130px 0 10px 0;
+    background-size: 87%;
+  }
+  body.page-pro div.img1BasicFormule {  
+    height: 500px;  
+    background-position: 0 0;
+    background-size: 100%;
+    display: inline-block;
+    width: 46%;
+    vertical-align: top;
+  }
+  body.page-pro div.txtTitleFold7 {
+    text-align: center;
+    padding-bottom: 50px;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  body.page-pro div.txtFold6 {
+    margin-top: 50px;
+    padding: 0 5%;
+    text-align: center;
+  }
+  body.page-pro div.imgFold5 {   
+    height: 1902px;
+  }
+  body.page-pro div.txtFold6 p {    
+    padding-right: 0;
+  }
+  body.page-pro div.zoneStat {
+    margin-top: 59px;
+  }
+  body.page-pro div.zoneStat div.oneStat{
+    width: 49%;
+    float: none;
+    display: inline-block;
+    padding-bottom: 65px;
+  }
+  body.page-pro div.txtFold4 {
+    margin-top: 0;
+    padding: 80px 17%;
+  }    
+  body.page-pro div.txtFold4 p {    
+    padding-right: 0%;
+  }
+  body.page-pro div.txtFold5 { 
+    margin-top: 130px;
+    padding: 0 7%;
+  }   
+  body.page-pro div.placeBtnFold3 {    
+    text-align: center;
+  }
+  body.page-pro div.imgFold4 {    
+    background-position: 100% 50%;
+  }  
+  body.page-pro.cookieBar {
+    padding-top: 0px;
+  }
+  body.page-pro div.styleTxtFold2 div.rowHaut{
+    margin-top: 0;
+  }
+  body.page-pro div.styleTxtFold2 div.alignBlocHaut {
+    margin-bottom: 54px;
+  }
+  body.page-pro div.styleTxtFold2 div.rowBas {
+    margin-top: 0;
+  }
+  body.page-pro div.styleTxtFold2 div.alignBlocBas {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  body.page-pro div.txtFold3 {
+    margin-top: 90px;
+  }
+  body.page-pro div.borderBottomFold2 {  
+    padding-bottom: 100px;
+  }
   /* page mobile */
   body:not(.front) > div#container-mobile {
     margin-top: -20px;
@@ -6286,7 +6484,41 @@ margin-left: 9%;
   }
   
 }
+@media (max-width: 850px){
+  body.page-pro div.imgFold4 {
+    background-position: 77% 50%;
+  }
+}
 @media (max-width: 767px) {  
+  /* Pro */
+  body.page-pro div#devis{
+    padding: 0 3%;
+  }
+  body.page-pro div.txtTitleFold7 h2 {   
+    font-size: 4em;
+  }
+  body.page-pro div.img1PreniumFormule {      
+      background-size: 100%;
+  }
+  body.page-pro div.imgCarteFold6 {
+    margin: 51px 0 0px 0;
+    height: 640px;
+  }
+  body.page-pro div.imgFold5 {   
+    height: 2000px;
+  }
+  body.page-pro div.imgLivretFold5 {    
+    margin-top: 57px;
+  }
+  body.page-pro div.zoneStat {
+    margin-top: 160px;
+  }
+  body.page-pro div.txtFold3{
+    padding: 0px 10%;
+  }
+  body.page-pro div.imgFold4 {
+    background-position: 71% 50%;
+  }
   /* nav */
   header.navbar-fixed-top{
     margin-top: -20px;
@@ -6545,6 +6777,15 @@ margin-left: 9%;
   }
 }
 @media (max-width: 650px) {
+  /* Pro */
+  body.page-pro div.imgFold4 {
+    background-position: -142px 50%;
+    background-size: 126%;
+    height: 544px;
+  }
+  body.page-pro div.txtFold4 p {   
+    padding-right: 0;
+  }
   /*Page mobile*/
   div#container-mobile div#blocResSociaux div#blok_twt, div#container-mobile div#blocResSociaux div#blok_fb{
     width: 100%;
@@ -6656,6 +6897,12 @@ margin-left: 9%;
     background-image: url('../img/404/404_xxs.jpg');
     background-position: 42% 5%;
   }
+  body.page-pro div.imgFold4 {
+    background-position: 87% 0%;
+  }
+  body.page-pro div.imgLivretFold5 {
+    margin-top: 22px;
+  }
 }
 @media (max-width: 512px){
   body.page-liste-especes button#edit-submit-v-all-especes {
@@ -6688,6 +6935,81 @@ margin-left: 9%;
   }
 }
 @media (max-width: 480px) {
+  /* Pro */
+  body.page-pro div.txtTitleFold7 h2 {   
+    font-size: 3.5em;
+  }
+  body.page-pro div.preniumTitleFormule {
+    margin-top: 0;
+    margin-left: 0;
+  }
+  body.page-pro div.positionPreniumFormuleDetail {
+    margin-left: 0%;
+  }
+  body.page-pro div.preniumTitleFormule p,    
+  body.page-pro div.standartTitleFormule p {    
+    display: none;
+  }
+  body.page-pro div.positionTxtFormulePrenium {
+    padding: 0 3%;
+    margin-bottom: 60px;
+    text-align: left;
+    margin-top: 30px;
+  }
+  body.page-pro div.preniumTitleFormule h3,  
+  body.page-pro div.basicTitleFormule h3,  
+  body.page-pro div.standartTitleFormule h3 {   
+    font-size: 4em;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  body.page-pro div.img1PreniumFormule,  
+  body.page-pro div.img1StandartFormule,  
+  body.page-pro div.img1BasicFormule {   
+    width: 100%;   
+    height: 240px;
+    background-position: center;
+    background-size: 100%;
+  }
+  body.page-pro div.img1BasicFormule {   
+    background-position: center 29%;
+  }
+  body.page-pro div#formules div.otherTwo{
+    margin-bottom: 30px;
+  }
+  body.page-pro div#formules div.otherOne,   
+  body.page-pro div#formules div.otherTwo, 
+  body.page-pro div#formules div.positionTxtFormulePrenium {   
+    width: 100%;
+    padding: 28px 3% 28px 3%;
+  }    
+  body.page-pro div.zoneStat {
+    margin-top: 120px;
+  }
+  body.page-pro div.basicTitleFormule,
+  body.page-pro div.standartTitleFormule {
+    margin-top: 0;
+    margin-left: 0;
+  }  
+  body.page-pro div.imgFold5 {
+    height: 1400px;
+  }
+  body.page-pro div#presence {
+    margin-top: 1060px;
+  }
+  body.page-pro div.zoneStat div.oneStat {
+    width: 100%;
+  }
+  body.page-pro div.txtFold4 h2 {
+    font-size: 4em;
+    line-height: 60px;
+  }
+  body.page-pro div.imgFold4 {   
+    height: 521px;
+  }
+  body.page-pro div.txtFold4 {
+    margin-top: -58px;
+  }
   /*Blog*/
   body.node-type-blogosphere,
   body.page-taxonomy-term div.listeArticle {
@@ -6805,6 +7127,10 @@ margin-left: 9%;
   }
 }
 @media (max-width: 396px) {
+  /* Pro */
+  body.page-pro div.imgFold4 {
+    height: 439px;
+  }
   /*HP*/
   div.popup_onload div.content div.row-fluid div.span12 input[type=submit] {
     width: 75% !important;
@@ -6846,6 +7172,10 @@ margin-left: 9%;
   
 }
 @media (max-width: 390px) {
+  /* Pro */
+  body.page-pro div.txtFold3 h2 {
+    font-size: 3em;
+  }
   body.node-type-espece #fieldPersoCriteria1line div {
     width: 100%;
     margin-top: 0;
@@ -6898,6 +7228,10 @@ margin-left: 9%;
 }
 
 @media (max-width: 350px) {
+  /* Pro */
+  body.page-pro div.imgFold4 {
+    height: 367px;
+  }
   body.front div.fleche-balade{
     display: none;
   }

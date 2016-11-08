@@ -15,7 +15,7 @@
              
                       <!-- .btn-navbar affiche le burger -->
                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                     <span class="icon-bar"></span>v
+                     <span class="icon-bar"></span>
                      <span class="icon-bar"></span>
                      <span class="icon-bar"></span>
                    </a>
@@ -26,13 +26,13 @@
                         <!-- .nav, .navbar-search, .navbar-form, etc -->
                         <ul class="nav">
                           <li class="active"><a class="navProActive" href="#">ACCUEIL</a></li>
-                          <li><a href="#">APPLICATION</a></li>
-                          <li><a href="#">SITE WEB</a></li>
-                          <li><a href="#">LIVRETS PAPIER</a></li>
-                          <li><a href="#">PR&Eacute;SENCE NATIONAL</a></li>
-                          <li><a href="#">FORMULES</a></li>
-                          <li><a href="#">T&Eacute;MOIGNAGES</a></li>
-                          <li><a href="#">DEVIS</a></li>
+                          <li><a href="#app">APPLICATION</a></li>
+                          <li><a href="#web">SITE WEB</a></li>
+                          <li><a href="#livret">LIVRETS PAPIER</a></li>
+                          <li><a href="#presence">PR&Eacute;SENCE NATIONAL</a></li>
+                          <li><a href="#formules">FORMULES</a></li>
+                          <li><a href="#temoignages">T&Eacute;MOIGNAGES</a></li>
+                          <li><a href="#devis">DEVIS</a></li>
                         </ul>
                     </div>
              
@@ -52,7 +52,7 @@
 
         <div class="row-fluid rowScrollFold1">
             <div class="span12 scrollDown">
-                <a href="#" class="txtscroll">SCROLL DOWN</a>
+                <p href="#" class="txtScroll">SCROLL DOWN</p>
                 <p>&darr;</p>
             </div>
         </div>
@@ -63,20 +63,20 @@
 
   <!-- Début fold 2 apport pour le client -->
     
-    <div class="row-fluid borderBottomFold2">
+    <div class="row-fluid borderBottomFold2" id="">
         <div class="span4 imgApportClient">
         </div>
 
         <div class="span8 styleTxtFold2">
             <div class="row-fluid rowHaut">
 
-                <div class="span6 alignBlocHaut">
+                <div class="span6 alignBlocHaut bloc-un">
                   <div class="iconDecouvrir bgIcon"></div>
                   <h3>D&Eacute;COUVRIR LA FAUNE &amp; LA FLORE</h3>
                   <p>In at metus quis nunc varius pulvinar id a nunc. In pellentesque Maecenas at egestas ex. Donec id nisl tempor, dapibus.</p>
                 </div>
 
-                <div class="span6">
+                <div class="span6 bloc-deux">
                   <div class="iconActivite bgIcon"></div>
                   <h3>NOUVELLE ACTIVIT&Eacute; DE PLEINE NATURE</h3>
                   <p>In at metus quis nunc varius pulvinar id a nunc. In pellentesque Maecenas at egestas ex. Donec id nisl tempor, dapibus.</p>
@@ -86,14 +86,14 @@
 
             <div class="row-fluid rowBas">
 
-                <div class="span6 alignBlocBas">
+                <div class="span6 alignBlocBas bloc-trois">
                   <div class="iconValoriser bgIcon"></div>
                   <h3>VALORISER LE TERRITOIRE</h3>
                   <p>In at metus quis nunc varius pulvinar id a nunc. In pellentesque Maecenas at egestas ex. Donec id nisl tempor, dapibus.</p>
                 </div>
 
               
-                <div class="span6">
+                <div class="span6 bloc-quatres">
                   <div class="iconSensibiliser bgIcon"></div>
                   <h3>SENSIBILISER</h3>
                   <p>In at metus quis nunc varius pulvinar id a nunc. In pellentesque Maecenas at egestas ex. Donec id nisl tempor, dapibus.</p>
@@ -107,7 +107,7 @@
 <!-- Fin fold 2 -->
 
 <!-- Début fold 3 l'application -->
-  <div class="container">
+  <div class="container" id="app">
     <div class="row-fluid">
         <div class="span6 txtFold3">
             <h2>L' APPLICATION</h2>
@@ -127,25 +127,25 @@
 
 <!-- Début fold 4 le site web -->
 
-	<div class="row-fluid bgVert">
+	<div class="row-fluid bgVert" id="web">
 		<div class="span7 imgFold4">
 		</div>
 		<div class="span5 txtFold4">
 			<h2>LE SITE WEB</h2>
             <p>In at metus quis nunc varius pulvinar id a nunc. Maecenas at egestas ex. Donec id nisl tempor, dapibus. Phasellus mattis in eros sit amet volutpat. Proin sit amet tincidunt nunc. Cras laoreet massa vitae nibh tempor, a tincidunt enim tristique. Aliquam interdum vitae felis fermentum tempor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras in consequat urna. Quisque pellentesque felis est, nec accumsan ipsum laoreet ut. In rhoncus nulla lorem, in sagittis ipsum euismod a. Nullam nec ullamcorper elit. Donec ex nibh, cursus sed ex eu, dictum dapibus orci. </p>
-			<a class="btnVoirLeSiteFold4" href="https://itunes.apple.com/fr/app/ecobalade/id674569147" target="blank">Voir le site web</a>
+			<a class="btnVoirLeSiteFold4" href="http://www.ecobalade.fr/" target="blank">Voir le site web</a>
 		</div>
 	</div>
 
 <!-- fin fold 4 le site web -->
 
 <!-- Début fold 5 -->
-    <div class="row-fluid imgFold5"> 
+    <div class="row-fluid imgFold5" id="livret"> 
         <div class="container">  <!-- livret papier -->
             <div class="span6 txtFold5"> 
               <h2>LE LIVRET PAPIER</h2>
                     <p>In at metus quis nunc varius pulvinar id a nunc. Maecenas at egestas ex. Donec id nisl tempor, dapibus. Phasellus mattis in eros sit amet volutpat. Proin sit amet tincidunt nunc. Cras laoreet massa vitae nibh tempor, a tincidunt enim tristique. Aliquam interdum vitae felis fermentum tempor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-              <a class="btnVoirLivret" href="#" target="blank">Voir plus</a>
+              <a class="btnVoirLivret" href="sites/all/themes/ecobaladeTwitter/img/livrets/Guide_CapSizun_web.pdf" target="blank">Voir plus</a>
             </div>
             <div class="span6 imgLivretFold5">
             </div>
@@ -153,22 +153,22 @@
 
         <div class="row-fluid zoneStat">  <!-- statistiques -->
             <div class="container">
-                <div class="span3">
+                <div class="span3 oneStat">
                     <div class="bgIcon iconEmerveillement"></div>
                     <h4>400</h4>
                     <p>KM &Eacute;MERVEILLEMENT</p>
                 </div>
-                <div class="span3">
+                <div class="span3 oneStat">
                     <div class="bgIcon iconConnexion"></div>
                     <h4>50.000</h4>
                     <p>CONNEXION / AN</p>
                 </div>
-                <div class="span3">
+                <div class="span3 oneStat">
                     <div class="bgIcon iconTelechargement"></div>
                     <h4>20.000+</h4>
                     <p>T&Eacute;L&Eacute;CHARGEMENT</p>        
                 </div>
-                <div class="span3">
+                <div class="span3 oneStat">
                     <div class="bgIcon iconLike"></div>
                     <h4>4.600+</h4>
                     <p>LIKE FACEBOOK</p>      
@@ -179,17 +179,17 @@
     </div><!-- fin fold 5 le livret papier et stat-->
 
 <!-- Début fold 6 presence national -->
-    <div class="row-fluid borderBottomFold2">
+    <div class="row-fluid borderBottomFold2" id="presence">
         <div class="span6 imgCarteFold6"></div>
         <div class="span6 txtFold6">
             <h2>PR&Eacute;SENCE NATIONALE</h2>
                       <p>In at metus quis nunc varius pulvinar id a nunc. Maecenas at egestas ex. Donec id nisl tempor, dapibus. Phasellus mattis in eros sit amet volutpat. Proin sit amet tincidunt nunc. Cras laoreet massa vitae nibh tempor, a tincidunt enim tristique. Aliquam interdum vitae felis fermentum tempor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-            <a class="btnVoirLivret" href="#" target="blank">Contact</a>
+            <a class="btnVoirLivret" href="http://www.natural-solutions.eu/contacts/" target="blank">Contact</a>
         </div>
     </div> <!-- Fin fold 6 presence national -->
 
 <!-- début fold 7 les formules-->    
-    <div class="container">
+    <div class="container" id="formules">
         <div class="row txtTitleFold7">
             <div class="span12">
                 <h2>NOS FORMULES</h2>
@@ -199,7 +199,7 @@
 
         <div class="row zindexHaut espaceRowFormule"> <!-- formule basic -->
              <div class="span4 img1BasicFormule" id="formuleBasicItem"></div>
-             <div class="span8">
+             <div class="span8 otherOne">
                 <div class="basicTitleFormule">
                     <h3>BASIC</h3>
                     <p>FORMULE</p>
@@ -214,7 +214,7 @@
                         <li>- Soutient en <span class="txtFormuleBold">communication auprès des médias</span> (radios, TV, presse) et sur les <span class="txtFormuleBold">réseaux sociaux</span></li>
                         <li>- Envoi d’un <span class="txtFormuleBold">fichier d’impression</span> d’affiches et de flyers</li>
                     </ul>
-                    <a class="btnDevisFormule" href="#">Demander un devis</a>
+                    <a class="btnDevisFormule" href="#devis">Demander un devis</a>
                 </div>
             </div> 
        </div>
@@ -227,7 +227,7 @@
        
        <div class="row zindexHaut espaceRowFormule" id="formuleStandartItem">
             <div class="span8 img1StandartFormule"></div>
-             <div class="span4">
+             <div class="span4 otherTwo">
                 <div class="standartTitleFormule">
                     <h3>STANDART</h3>
                     <p>FORMULE</p>
@@ -238,7 +238,7 @@
                         <li>- Le <span class="txtFormuleBold">relevé naturaliste</span> pour la création d'une ecobalade</li>
                         <li>- <span class="txtFormuleBold">Prise de photos</span> de la balade</li>
                     </ul>
-                    <a class="btnDevisFormule" href="#">Demander un devis</a>
+                    <a class="btnDevisFormule" href="#devis">Demander un devis</a>
                 </div>
             </div> 
        </div>
@@ -266,7 +266,7 @@
                     <li>- La création <span class="txtFormuleBold">graphique</span> du livret</li>
                     <li>- La mise à disposition d'un <span class="txtFormuleBold">fichier numérique</span> pour l'impression du livret par le client</li>
                 </ul>
-                <a class="btnDevisFormule" href="#">Demander un devis</a>
+                <a class="btnDevisFormule" href="#devis">Demander un devis</a>
             </div>
        </div>
      </div> 
@@ -323,8 +323,8 @@
                           <li>La présence de <span class="txtFormuleBold">votre logo</span></li>
                           <li>Soutient en <span class="txtFormuleBold">communication auprès des médias</span> (radios, TV, presse) et sur les <span class="txtFormuleBold">réseaux sociaux</span></li>
                           <li>Envoi d’un <span class="txtFormuleBold">fichier d’impression</span> d’affiches et de flyers</li>
-                          <li class="hoverVert">Le <span class="txtFormuleBold">relevé naturaliste</span> pour la création d'une ecobalade</li>
-                          <li class="hoverVert"><span class="txtFormuleBold">Prise de photos</span> de la balade</li>
+                          <li>Le <span class="txtFormuleBold">relevé naturaliste</span> pour la création d'une ecobalade</li>
+                          <li><span class="txtFormuleBold">Prise de photos</span> de la balade</li>
                       </ul>
                       <!-- <a class="btnDevisFormule" href="#">Demander un devis</a> -->
                   </div>
@@ -346,10 +346,10 @@
                           <li>Envoi d’un <span class="txtFormuleBold">fichier d’impression</span> d’affiches et de flyers</li>
                           <li>Le <span class="txtFormuleBold">relevé naturaliste</span> pour la création d'une ecobalade</li>
                           <li><span class="txtFormuleBold">Prise de photos</span> de la balade</li>
-                          <li class="hoverVert">La création des <span class="txtFormuleBold">illustration</span> du livret</li>
-                          <li class="hoverVert">La création du <span class="txtFormuleBold">contenu des fiches</span> du livret</li>
-                          <li class="hoverVert">La création <span class="txtFormuleBold">graphique</span> du livret</li>
-                          <li class="hoverVert">La mise à disposition d'un <span class="txtFormuleBold">fichier numérique</span> pour l'impression du livret par le client</li>
+                          <li>La création des <span class="txtFormuleBold">illustration</span> du livret</li>
+                          <li>La création du <span class="txtFormuleBold">contenu des fiches</span> du livret</li>
+                          <li>La création <span class="txtFormuleBold">graphique</span> du livret</li>
+                          <li>La mise à disposition d'un <span class="txtFormuleBold">fichier numérique</span> pour l'impression du livret par le client</li>
                       </ul>
                       <!-- <a class="btnDevisFormule" href="#">Demander un devis</a> -->
                   </div>
@@ -368,22 +368,23 @@
 
         <div class="row placementBtnRecap">
             <div class="span12">
-                  <a class="btnDevisRecap" href="#">Demander un devis</a>
+                  <a class="btnDevisRecap" href="#devis">Demander un devis</a>
             </div>
         </div> 
   </div> <!-- fin row ensemble de recapitulatif-->
 
 <!-- témoignages -->
 
-  <div class="row-fluid">
+  <div class="row-fluid" id="temoignages">
     <div class="span12 imgTemoignage">
+      <p>(Normalement ici témoignage) In at metus quis nunc varius pulvinar id a nunc. Maecenas at egestas ex. Donec id nisl tempor, dapibus. Phasellus mattis in eros sit amet volutpat. Proin sit amet tincidunt nunc.</p>
     </div>
   </div>
 
 <!-- formulaire de contact
  -->
 
-    <div class="container">
+    <div class="container" id="devis">
           
 
 
@@ -400,35 +401,75 @@
 
         <div class="row">
            <div class="span12 formContactPro">
-                <form method="post" action="">
-                      <div>
-                          <input type="text" placeholder="Nom*"/>
-                          <input type="text" placeholder="Prénom"/>
+                <form method="post" action="mailto:p.delaunay1@gmail.com" enctype="text/plain">
+                      
+                      <div class="row">                        
+                        <div class="span4 offset2">
+                        
+                          <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Nom *">                            
+                          </div>
+
+                        </div>
+                        <div class="span4">
+                        
+                          <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Prénom">
+                          </div>
+
+                        </div>
                       </div>
-                      <div class="grandInput">
-                          <input type="text" placeholder="Territoire"/>
+        
+                      <div class="row">
+                          <div class="span8 offset2">
+                            <input type="text" class="large" placeholder="Territoire"/>                            
+                          </div>                        
                       </div>
-                      <div>
-                          <input type="text" placeholder="Email*"/>
-                          <input type="text" placeholder="Téléphone"/>
+
+                      <div class="row">                        
+                        <div class="span4 offset2">
+                        
+                          <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Email *">                            
+                          </div>
+
+                        </div>
+                        <div class="span4">
+                        
+                          <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Téléphone">
+                          </div>
+
+                        </div>
                       </div>
-                      <div>
-                          <textarea placeholder="Votre message..."></textarea>
-                      </div>
-                </form>
-           </div>
+                      
+                      <div class="row">
+                          <div class="span12">                            
+                            <textarea placeholder="Votre message..."></textarea>
+                          </div>                        
+                      </div>                      
+                      
+                
+            </div>
           
-          <div class="row">
+            <div class="row">
               <div class="span12 formButtonRadio">
-                      <p class="titleBtnRadioFormContact">Vous êtes :</p>
-                      <p class="paragrapheRadioButton">
-                          <input type="radio" name="OT" value="UnOT" id="unOT" /> <label for="unOT"> Un office de tourisme</label></br>
-                          <input type="radio" name="CT" value="unCT" id="unCT" /> <label for="unCT"> Une collectivité territoriale</label></br>
-                          <input type="radio" name="PA" value="UnPA" id="unPA"/> <label for="unPA"> Un particulier</label></br>
-                      </p>
-                      <a class="btnDevisRecap" href="#">Demander un devis gratuit</a>
+                <p class="titleBtnRadioFormContact">Vous êtes :</p>
+                
+                <div class="blocRadioButtons">
+                    <input type="radio" name="whoIs" value="UnOT" id="unOT" /> <label for="unOT"> Un office de tourisme</label></br>
+                    <input type="radio" name="whoIs" value="unCT" id="unCT" /> <label for="unCT"> Une collectivité territoriale</label></br>
+                    <input type="radio" name="whoIs" value="UnPA" id="unPA"/> <label for="unPA"> Un particulier</label></br>
+                </div>
+
+                <div class="buttonRow">
+                  <input  type="submit" value="Demander un devis gratuit" class="btnDevisRecap" />                
+                </div>
+
               </div>
-          </div>
+            </div>
+          </form>
+
     </div> <!-- fin container form de contact -->
 
 
@@ -437,6 +478,7 @@
 </div> <!-- fin container-fluid.pro -->
 
 <?php print render($page['footer']); ?>
+
 
 <!-- 
 ctrl+shift+: -> commentaire
