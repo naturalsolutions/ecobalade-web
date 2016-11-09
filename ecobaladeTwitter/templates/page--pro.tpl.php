@@ -52,7 +52,7 @@
 
         <div class="row-fluid rowScrollFold1">
             <div class="span12 scrollDown">
-                <p href="#" class="txtScroll">SCROLL DOWN</p>
+                <p href="#" class="txtScroll">DÉFILER VERS LE BAS</p>
                 <p>&darr;</p>
             </div>
         </div>
@@ -73,13 +73,13 @@
                 <div class="span6 alignBlocHaut bloc-un">
                   <div class="iconDecouvrir bgIcon"></div>
                   <h3>D&Eacute;COUVRIR LA FAUNE &amp; LA FLORE</h3>
-                  <p>In at metus quis nunc varius pulvinar id a nunc. In pellentesque Maecenas at egestas ex. Donec id nisl tempor, dapibus.</p>
+                  <p>Ecobalade est une <strong>application mobile</strong> qui offre une <strong>découverte</strong> de la faune et de la flore, lors de balades ou de randonnées.</p>
                 </div>
 
                 <div class="span6 bloc-deux">
                   <div class="iconActivite bgIcon"></div>
                   <h3>NOUVELLE ACTIVIT&Eacute; DE PLEINE NATURE</h3>
-                  <p>In at metus quis nunc varius pulvinar id a nunc. In pellentesque Maecenas at egestas ex. Donec id nisl tempor, dapibus.</p>
+                  <p>Téléchargeable gratuitement et utilisable off line, <strong>Ecobalade transforme les balades</strong> en nouvelle activité <strong>ludique</strong> de pleine nature,  où <bstrong>la biodiversité et le patrimoine<strong/> sont à la portée de tous.</p>
                 </div>
 
             </div>
@@ -89,14 +89,14 @@
                 <div class="span6 alignBlocBas bloc-trois">
                   <div class="iconValoriser bgIcon"></div>
                   <h3>VALORISER LE TERRITOIRE</h3>
-                  <p>In at metus quis nunc varius pulvinar id a nunc. In pellentesque Maecenas at egestas ex. Donec id nisl tempor, dapibus.</p>
+                  <p>Ecobalade a pour objectif <strong>la promotion</strong> et <strong>la valorisation des territoires</strong>, via la découverte de leur biodiversité et de leur nature.</p>
                 </div>
 
               
                 <div class="span6 bloc-quatres">
                   <div class="iconSensibiliser bgIcon"></div>
                   <h3>SENSIBILISER</h3>
-                  <p>In at metus quis nunc varius pulvinar id a nunc. In pellentesque Maecenas at egestas ex. Donec id nisl tempor, dapibus.</p>
+                  <p>A destination des familles, des scolaires, Ecobalade est <strong>un outil pédagogique</strong>. Elle permet d’aborder les thématiques de <strong>la biodiversité</strong>, de la protection de l’environnement, de <strong>l’éco-citoyenneté</strong>…</p>
                 </div>
 
             </div>
@@ -111,7 +111,12 @@
     <div class="row-fluid">
         <div class="span6 txtFold3">
             <h2>L' APPLICATION</h2>
-            <p>In at metus quis nunc varius pulvinar id a nunc. Maecenas at egestas ex. Donec id nisl tempor, dapibus. Phasellus mattis in eros sit amet volutpat. Proin sit amet tincidunt nunc. Cras laoreet massa vitae nibh tempor, a tincidunt enim tristique. Aliquam interdum vitae felis fermentum tempor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras in consequat urna. Quisque pellentesque felis est, nec accumsan ipsum laoreet ut. In rhoncus nulla lorem, in sagittis ipsum euismod a. Nullam nec ullamcorper elit. Donec ex nibh, cursus sed ex eu, dictum dapibus orci. </p>
+            <p>
+            Téléchargeable gratuitement sur Play Store (Androïd) et Apple Store, l’application Ecobalade permet de sélectionner et d’enregistrer une ou plusieurs balades sur son smartphone, en prévision des parcours qu’on souhaite effectuer. Une fois téléchargées, elles sont alors consultables en autonomie totale, même <strong>sans connexion internet</strong>.
+            <br/>
+            <br/>
+            L’application propose, pour chaque balade, une liste d’espèces potentiellement visibles (oiseaux, plantes…) dans son environnement immédiat. Chaque espèce est illustrée de photos et d’une infographie permettant d’enrichir et d’approfondir ses connaissances. Une clé de détermination facilite quant à elle <strong>la reconnaissance des espèces</strong> végétales. Arbres ou fleurs observés, sont ainsi facilement identifiables en quelques clics. Les observations recueillies lors des balades peuvent enfin être enregistrées dans un carnet de terrain, afin d’être consultées ultérieurement.
+            </p>
             <div class="row-fluid">
                 <div class="span12 placeBtnFold3">
                     <a class="btnAppStore" href="https://itunes.apple.com/fr/app/ecobalade/id674569147" target="blank">App Store</a>
@@ -132,7 +137,9 @@
 		</div>
 		<div class="span5 txtFold4">
 			<h2>LE SITE WEB</h2>
-            <p>In at metus quis nunc varius pulvinar id a nunc. Maecenas at egestas ex. Donec id nisl tempor, dapibus. Phasellus mattis in eros sit amet volutpat. Proin sit amet tincidunt nunc. Cras laoreet massa vitae nibh tempor, a tincidunt enim tristique. Aliquam interdum vitae felis fermentum tempor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras in consequat urna. Quisque pellentesque felis est, nec accumsan ipsum laoreet ut. In rhoncus nulla lorem, in sagittis ipsum euismod a. Nullam nec ullamcorper elit. Donec ex nibh, cursus sed ex eu, dictum dapibus orci. </p>
+            <p>
+            <a href="http://www.ecobalade.fr/" alt='vers le site ecobalade' title='vers le site ecobalade'>www.ecobalade.fr</a> est le principal point d’entrée pour la découverte du service Ecobalade. Sur le site, le visiteur peut sélectionner et préparer une balade en effectuant un tri par type de circuit, difficulté, distance à parcourir ou <strong>localisation géographique</strong>. Il a également accès à toutes les randonnées et balades, mais aussi à l’ensemble des <strong>fiches espèces</strong> (plus de 1500). Les utilisateurs peuvent aussi poster des <strong>commentaires</strong> ou des <strong>photos</strong> de leurs balades.
+            </p>
 			<a class="btnVoirLeSiteFold4" href="http://www.ecobalade.fr/" target="blank">Voir le site web</a>
 		</div>
 	</div>
@@ -144,7 +151,9 @@
         <div class="container">  <!-- livret papier -->
             <div class="span6 txtFold5"> 
               <h2>LE LIVRET PAPIER</h2>
-                    <p>In at metus quis nunc varius pulvinar id a nunc. Maecenas at egestas ex. Donec id nisl tempor, dapibus. Phasellus mattis in eros sit amet volutpat. Proin sit amet tincidunt nunc. Cras laoreet massa vitae nibh tempor, a tincidunt enim tristique. Aliquam interdum vitae felis fermentum tempor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                    <p>
+                    Nous vous proposons l’édition d’un guide papier, dans le prolongement du site internet et de l’application. Il présente <strong>les parcours de promenades et de randonnées</strong> et informe sur les <strong>espèces emblématiques</strong> susceptibles d’être rencontrées lors de la balade, grâce à des fiches très complètes. Un système de <strong>QR codes</strong> renvoie vers le site internet <a href="http://www.ecobalade.fr/" alt='vers le site ecobalade' title='vers le site ecobalade'>www.ecobalade.fr</a> pour obtenir des informations complémentaires et aller plus loin, avant, pendant ou après la balade.
+                    </p>
               <a class="btnVoirLivret" href="sites/all/themes/ecobaladeTwitter/img/livrets/Guide_CapSizun_web.pdf" target="blank">Voir plus</a>
             </div>
             <div class="span6 imgLivretFold5">
@@ -160,17 +169,17 @@
                 </div>
                 <div class="span3 oneStat">
                     <div class="bgIcon iconConnexion"></div>
-                    <h4>50.000</h4>
+                    <h4>150.000</h4>
                     <p>CONNEXION / AN</p>
                 </div>
                 <div class="span3 oneStat">
                     <div class="bgIcon iconTelechargement"></div>
-                    <h4>20.000+</h4>
+                    <h4>30.000+</h4>
                     <p>T&Eacute;L&Eacute;CHARGEMENT</p>        
                 </div>
                 <div class="span3 oneStat">
                     <div class="bgIcon iconLike"></div>
-                    <h4>4.600+</h4>
+                    <h4>5.000+</h4>
                     <p>LIKE FACEBOOK</p>      
                 </div>
             </div>
@@ -183,7 +192,21 @@
         <div class="span6 imgCarteFold6"></div>
         <div class="span6 txtFold6">
             <h2>PR&Eacute;SENCE NATIONALE</h2>
-                      <p>In at metus quis nunc varius pulvinar id a nunc. Maecenas at egestas ex. Donec id nisl tempor, dapibus. Phasellus mattis in eros sit amet volutpat. Proin sit amet tincidunt nunc. Cras laoreet massa vitae nibh tempor, a tincidunt enim tristique. Aliquam interdum vitae felis fermentum tempor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                      <p>
+                      <strong>Solution innovante</strong>, Ecobalade s’adresse aux gestionnaires d’espaces naturels, aux responsables de collectivités territoriales, aux offices de tourisme... désireux de promouvoir <strong>l’écotourisme</strong> sur leur territoire.
+                      <br/>
+                      <br/>
+                      Elle constitue un outil de communication performant, dans le cadre d’une stratégie de <strong>marketing territorial</strong>, et un moyen de promouvoir efficacement les actions entreprises dans le domaine du <strong>développement durable</strong>, de la protection de la biodiversité…
+                      <br/>
+                      <br/>
+                      En proposant aux visiteurs une <strong>découverte instantanée de la nature</strong> via des parcours de randonnées « enrichies » et réalisés sur mesure par des naturalistes, Ecobalade contribue à la <strong>mise en valeur du patrimoine des territoires</strong>. Elle renforce aussi leur attractivité auprès d’une clientèle à la recherche de destinations <strong>« écotouristique »</strong>.  
+                      <br/>
+                      <br/>
+                      L’application fonctionne comme un <strong>sentier d’interprétation numérique et interactif</strong>, utilisable en complément de vos panneaux d’information existants.
+                      <br/>
+                      <br/>
+                      Complémentaire de l’application, le site <a href="http://www.ecobalade.fr/" alt='vers le site ecobalade' title='vers le site ecobalade'>www.ecobalade.fr</a> apporte une visibilité supplémentaire (150 000 visiteurs / an) au territoire et la possibilité de promouvoir des offres de séjours (hébergement, restauration, activités nature…), dans une optique de <strong>développement économique</strong>.
+                      </p>
             <a class="btnVoirLivret" href="http://www.natural-solutions.eu/contacts/" target="blank">Contact</a>
         </div>
     </div> <!-- Fin fold 6 presence national -->
@@ -260,8 +283,8 @@
             </div>
             <div class="detailFormuleBasic positionPreniumFormuleDetail"> <!-- même class que la liste de la formule basic -->
                 <ul>
-                    <li><a href="#formuleStandartItem"><span class="txtFormuleBold">- LA FORMULE STANDART +</span></a></li>
-                    <li>- La création des <span class="txtFormuleBold">illustration</span> du livret</li>
+                    <li><a href="#formuleStandartItem"><span class="txtFormuleBold">- LA FORMULE STANDART + le Livret papier</span></a></li>
+                    <li>- La création des <span class="txtFormuleBold">illustrations</span> du livret</li>
                     <li>- La création du <span class="txtFormuleBold">contenu des fiches</span> du livret</li>
                     <li>- La création <span class="txtFormuleBold">graphique</span> du livret</li>
                     <li>- La mise à disposition d'un <span class="txtFormuleBold">fichier numérique</span> pour l'impression du livret par le client</li>
@@ -361,8 +384,9 @@
             <div class="span8 divAppDedie">
                  <h4>APPLICATION D&Eacute;DI&Eacute;E</h4>
                  <h3>SUR MESURE</h3>
-                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mauris lorem, bibendum a sapien et, cursus fringilla mauris. 
-                 Fusce blandit cursus lacus.</p>
+                 <p>
+                 APPLICATION SPÉCIALEMENT CONSTRUITE POUR VOUS ET PERSONNALISÉE (SELON VOTRE CAHIER DES CHARGES, AVEC ATELIERS CRÉATIFS DE CO-CONCEPTION)
+                 </p>
             </div>
         </div>
 
@@ -377,7 +401,35 @@
 
   <div class="row-fluid" id="temoignages">
     <div class="span12 imgTemoignage">
-      <p>(Normalement ici témoignage) In at metus quis nunc varius pulvinar id a nunc. Maecenas at egestas ex. Donec id nisl tempor, dapibus. Phasellus mattis in eros sit amet volutpat. Proin sit amet tincidunt nunc.</p>
+
+      <div class="oneTemoignage">
+        <p>
+          <b>Communauté d'agglomération du Pays d'Aix</b>
+          <i>"Je voulais vous féliciter car votre travail correspond parfaitement à notre demande !"</i> 
+        </p>        
+      </div>
+
+      <div class="oneTemoignage">
+        <p>
+          <b>Communauté Concarneau Agglomération</b>
+          <i>"Nous sommes totalement satisfaits du travail réalisé et personnellement j'ai apprécié notre collaboration."</i>
+        </p>        
+      </div>
+
+      <div class="oneTemoignage">
+        <p>
+          <b>Réserve naturelle nationale du cap Sizun - Bretagne Vivante</b>
+          <i>"Un concept innovant vraiment au service de la découverte de la nature! Une bonne paire de chaussure, l'appli EcoBalade, et c'est parti!"</i>
+        </p>        
+      </div>
+
+      <div class="oneTemoignage">
+        <p>
+          <b>Département du Nord</b>
+          <i>"Le Département du Nord et le Comité de Randonnée pédestre sont fiers de proposer aux nordistes de nouveaux moyens de découverte innovants et ludiques."</i>
+        </p>        
+      </div>      
+      
     </div>
   </div>
 
@@ -397,17 +449,15 @@
         </div>
 
 
-
-
         <div class="row">
            <div class="span12 formContactPro">
-                <form method="post" action="mailto:p.delaunay1@gmail.com" enctype="text/plain">
+                <form method="POST" action="pro" >
                       
                       <div class="row">                        
                         <div class="span4 offset2">
                         
                           <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Nom *">                            
+                            <input type="text" class="form-control" name="name" placeholder="Nom *">                            
                           </div>
 
                         </div>
@@ -474,7 +524,23 @@
 
 
 
-<?php //print render($page['content']); ?> 
+<?php 
+if( isset($_POST['name']) ){
+  
+  $params = array(
+    'subject' => 'test email',
+    'body' => "<p>Hello World</p>"
+  );
+
+  // Send out the e-mail.
+  drupal_mail('NsHook', 'mymail', "p.delaunay1@gmail.com", language_default(), $params);
+  
+  
+  echo "<p>cool</p>";
+
+}else echo "<p>PAS cool</p>";
+
+?> 
 </div> <!-- fin container-fluid.pro -->
 
 <?php print render($page['footer']); ?>

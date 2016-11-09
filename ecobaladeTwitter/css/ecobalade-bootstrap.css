@@ -3165,6 +3165,10 @@ body.page-pro div.txtFold4 p{
   padding-right: 19%;
   text-align: justify;
 }
+body.page-pro div.txtFold4 p a{
+  color: #fff;
+}
+
 body.page-pro div.txtFold4 h2{
   font-family: 'ProximaNova-Thin', sans-serif !important;
   font-size:5em;
@@ -3203,6 +3207,9 @@ body.page-pro div.imgLivretFold5{
   height:780px;
   background-size: 100%;
   margin-top:155px;
+}
+body.page-pro div.txtFold5 p a{
+  color: rgb(51, 51, 51);
 }
 body.page-pro div.txtFold5 p{
   font-family: 'ProximaNova-Light', sans-serif !important;
@@ -3257,7 +3264,10 @@ body.page-pro div.imgCarteFold6{
   background-repeat: no-repeat;
   background-position: center center;
   margin: 130px 0 130px 0;
-  background-size: 100%;
+  background-size: 90%;
+}
+body.page-pro div.txtFold6 p a{
+  color: rgb(51,51,51);
 }
 body.page-pro div.txtFold6 p{
   font-family: 'ProximaNova-Light', sans-serif !important;
@@ -3272,7 +3282,7 @@ body.page-pro div.txtFold6 h2{
   line-height: 60px;
 }
 body.page-pro div.txtFold6{
-  margin-top: 363px;
+  margin-top: 230px;
 }
 /* FOLD7 */
 body.page-pro div.txtTitleFold7{
@@ -3614,19 +3624,34 @@ body.page-pro div.placementBtnRecap{
   text-align: center;
 }
 /* FOLD TEMOIGNAGE */
+body.page-pro div.imgTemoignage div.oneTemoignage{
+  display: inline-block;
+  width: 20%;
+  vertical-align: top;
+  padding: 0 2%;
+}
+body.page-pro div.imgTemoignage p b{
+  margin-top: 75px;
+  display: inline-block;
+  min-height: 66px;
+  vertical-align: bottom;
+}
+body.page-pro div.imgTemoignage p i{
+  padding-top: 30px;
+  border-top: 1px solid #fff;
+  display: inline-block;
+}
 body.page-pro div.imgTemoignage p{
   text-align: center;
-  color: #fff;
-  font-family: 'ProximaNova-Thin', sans-serif !important;  
-  font-size: 2em;
-  padding: 0 10%;
+  color: #fff;    
 }
 body.page-pro div.imgTemoignage{
   background-image: url('../img/pro/fond_temoignage.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   height: 540px;
-  padding-top: 200px;
+  padding: 125px 2% 0 2%;
+  text-align: center;
 }
 /* FOLD FORM CONTACT */
 body.page-pro div.formContactPro{
@@ -5626,6 +5651,9 @@ margin-left: 9%;
 /*En dessous de 1200*/
 @media (max-width: 1199px){  
   /* Pro */
+  body.page-pro div.imgTemoignage {   
+    padding: 100px 2% 0 2%;
+  }
   body.page-pro div.img2BasicFormule,
   body.page-pro div.img2PreniumFormule,
   body.page-pro div.img2StandartFormule {
@@ -5788,6 +5816,15 @@ margin-left: 9%;
 }
 @media  (max-width: 979px) {
   /* pro */
+  body.page-pro div.imgApportClient {
+    display: none;
+  }
+  body.page-pro div.imgTemoignage {
+    padding: 60px 2% 0 2%;
+  }
+  body.page-pro div.imgTemoignage p b {   
+    min-height: 105px;
+  }
   body.page-pro div.divAppDedie {    
     margin-top: 50px;
   }
@@ -6491,6 +6528,24 @@ margin-left: 9%;
 }
 @media (max-width: 767px) {  
   /* Pro */
+  body.page-pro div#temoignages {
+    padding: 35px 2% 0 2%;
+  }
+  body.page-pro div.imgTemoignage {   
+    height: 738px;
+    padding: 40px 2% 0 2%;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;    
+    -ms-background-size: cover;
+  }
+  body.page-pro div.imgTemoignage p b {
+    min-height: 67px;
+  }
+  body.page-pro div.imgTemoignage div.oneTemoignage {   
+    width: 40%;
+    padding-bottom: 55px;
+  }
   body.page-pro div#devis{
     padding: 0 3%;
   }
@@ -6897,11 +6952,15 @@ margin-left: 9%;
     background-image: url('../img/404/404_xxs.jpg');
     background-position: 42% 5%;
   }
+  /* Pro */
   body.page-pro div.imgFold4 {
     background-position: 87% 0%;
   }
   body.page-pro div.imgLivretFold5 {
     margin-top: 22px;
+  }
+  body.page-pro div.imgTemoignage {   
+    padding: 8px 2% 0 2%;
   }
 }
 @media (max-width: 512px){
@@ -6933,9 +6992,22 @@ margin-left: 9%;
   body.node-type-balade div.icones_liste {
     background-size: 90%;
   }
+  /* Pro */
+  body.page-pro div.imgTemoignage {
+    padding: 0px 2% 0 2%;
+  }
 }
 @media (max-width: 480px) {
   /* Pro */
+  body.page-pro div.imgTemoignage div.oneTemoignage {  
+    padding-bottom: 0px;
+  }
+  body.page-pro div.imgTemoignage {
+    height: 1150px;
+  }
+  body.page-pro div.imgTemoignage div.oneTemoignage {
+    width: 72%;
+  }
   body.page-pro div.txtTitleFold7 h2 {   
     font-size: 3.5em;
   }
