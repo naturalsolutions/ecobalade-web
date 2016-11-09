@@ -528,17 +528,14 @@
 if( isset($_POST['name']) ){
   
   $params = array(
-    'subject' => 'test email',
-    'body' => "<p>Hello World</p>"
+    'subject' => '[#ecobalade] Demande de devis - Page Pro',
+    'body' => "<p>body</p>"
   );
 
   // Send out the e-mail.
-  drupal_mail('NsHook', 'mymail', "p.delaunay1@gmail.com", language_default(), $params);
-  
-  
-  echo "<p>cool</p>";
+  drupal_mail('NsHook', 'NsHook_mail_page_pro', "p.delaunay1@gmail.com", language_default(), $params);  
 
-}else echo "<p>PAS cool</p>";
+}
 
 ?> 
 </div> <!-- fin container-fluid.pro -->

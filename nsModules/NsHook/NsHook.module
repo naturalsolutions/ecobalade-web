@@ -36,7 +36,7 @@ function NsHook_form_alter(&$form, &$form_state, $form_id) {
 	 
 } 
 
-
+/*
 function NsHook_mail ($key, &$message, $params) {
   switch ($key) {
     	
@@ -50,8 +50,8 @@ function NsHook_mail ($key, &$message, $params) {
       break;
   }
 }
+*/
 
-/*
 function NsHook_mail($key, &$message, $params){
 
   // Set the mail content type to html to send an html e-mail (optional).
@@ -63,12 +63,12 @@ function NsHook_mail($key, &$message, $params){
   //$message['body'] = $params['body']; // Drupal 6, I think
 
   switch ($key) {
-    case "NsHook_mail_example":
+    case "NsHook_mail_page_pro":
       // Make other changes here if desired...
       break;
   }
 
-  drupal_set_message("Sent e-mail to p.delaunay1@gmail.com from module 2");
+  //drupal_set_message("Sent e-mail to p.delaunay1@gmail.com from module 3");
 
-}*/
+}
   
