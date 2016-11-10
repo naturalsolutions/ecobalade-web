@@ -1,3 +1,4 @@
+<script src="https://www.google.com/recaptcha/api.js?hl=fr" async="async" defer="defer"></script>
 <div class="container-fluid containerNoMargin">
 
   <!-- Début fold 1 -->
@@ -46,6 +47,19 @@
     <div class="container">
 
         <div class="row-fluid rowLogoFold1">
+            <?php //simulation de  drupal_set_message
+            if( isset($_POST['name']) && isset($_POST['email']) ){ 
+                
+                echo '
+                  <div class="alert alert-block alert-status">
+                    <a class="close" data-dismiss="alert" href="#">x</a>
+                    <h4 class="alert-heading">Email envoyé</h4>
+                    Merci pour l\'intérêt que vous portez à notre projet, nous vous répondrons au plus vite.
+                  </div>
+                ';
+
+            }
+            ?>
             <div class="span12 logo">
             </div>
         </div>
@@ -452,7 +466,7 @@
         <div class="row">
            <div class="span12 formContactPro">
                 <form method="POST" action="pro" class='formContact'>
-                      
+                                            
                       <div class="row">                        
                         <div class="span4 offset2">
                         
@@ -507,14 +521,17 @@
                 <p class="titleBtnRadioFormContact">Vous êtes :</p>
                 
                 <div class="blocRadioButtons">
-                    <input type="radio" name="whoIs" value="UnOT" id="unOT" /> <label for="unOT"> Un office de tourisme</label></br>
-                    <input type="radio" name="whoIs" value="unCT" id="unCT" /> <label for="unCT"> Une collectivité territoriale</label></br>
-                    <input type="radio" name="whoIs" value="UnPA" id="unPA"/> <label for="unPA"> Un particulier</label></br>
+                    <input type="radio" name="whoIs" value="Office de tourisme" id="unOT" /> <label for="unOT"> Un office de tourisme</label></br>
+                    <input type="radio" name="whoIs" value="Collectivité territoriale" id="unCT" /> <label for="unCT"> Une collectivité territoriale</label></br>
+                    <input type="radio" name="whoIs" value="Particulier" id="unPA"/> <label for="unPA"> Un particulier</label></br>
                 </div>
 
                 <div class="buttonRow">
                   <input  type="submit" value="Demander un devis gratuit" class="btnDevisRecap" />                
                 </div>
+
+                <div id='recaptcha' data-sitekey='6LdH9wsTAAAAAMQj9bKngiwwbIwU9WpdCD2WC1X_' class="g-recaptcha"></div>
+
 
               </div>
             </div>
@@ -525,7 +542,7 @@
 
 
 <?php 
-if( isset($_POST['name']) && isset($_POST['email']) ){
+if( isset($_POST['name']) && isset($_POST['email']) ){  
 
   $name = $_POST['name'];
   $firstname = $_POST['firstname'];
@@ -533,10 +550,17 @@ if( isset($_POST['name']) && isset($_POST['email']) ){
   $email = $_POST['email'];
   $phone = $_POST['phone'];
   $comment = $_POST['comment'];
+  $whoIs = $_POST['whoIs'];
   
   $params = array(
     'subject' => '[#ecobalade] Demande de devis - Formulaire page Pro',
-    'body' => "<p>Nom : ".$name." <br/> Prénom : ".$firstname." <br/> Territoire : ".$country." <br/> Email : ".$email." <br/> Téléphone : ".$phone." <br/> Message : ".$comment." <br/> </p>"
+    'body' =>"<p> Nom : ".$name." <p/>
+              <p> Prénom : ".$firstname."  <p/> 
+              <p> Fonction : ".$whoIs." <p/> 
+              <p> Territoire : ".$country." <p/>
+              <p> Email : ".$email." <p/>
+              <p> Téléphone : ".$phone." <p/>
+              <p> Message : ".$comment."<p/>" 
   );
 
   // Send out the e-mail.
@@ -562,7 +586,19 @@ jQuery( document ).ready(function() {
 
       if(name == '') alert('Veuillez inscrire votre nom pour soumettre le formulaire');
       else if(email == '') alert('Veuillez inscrire votre email pour soumettre le formulaire');
-      else if(name != '' && email != '') form.submit();
+      else if(name != '' && email != '') {
+      
+
+        var v = grecaptcha.getResponse();
+
+        if(v.length != 0) {
+
+          form[0].submit();
+
+        }else{
+          alert("Veuillez répondre aux question Google pour vérifier que vous n'êtes pas un robot.");
+        }
+      }
 
 
     });

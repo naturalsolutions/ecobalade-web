@@ -3675,12 +3675,14 @@ body.page-pro div.formContactPro div.grandInput input[type="text"]{
   padding: 13px 23% 13px 2%;
 }
 body.page-pro div.formContactPro textarea{
-  padding: 20px 50% 100px 2%;
+  padding: 20px 3% 20px 3%;
   border-radius: 30px;
   margin-top: 20px;
   background-color: #eaeaea;
   border: none;
   box-shadow: none;
+  width: 60%;
+  min-height: 100px;
 }
 body.page-pro div.formButtonRadio{
   text-align: center;
@@ -3719,6 +3721,10 @@ body.page-pro div.formButtonRadio label:before {
   left: 0;
   bottom: 1px;
   background-color: #cacaca;
+}
+body.page-pro div.g-recaptcha {
+  display: inline-block;
+  padding-bottom: 30px;
 }
 body.page-pro div.buttonRow {
   width: 100%;
