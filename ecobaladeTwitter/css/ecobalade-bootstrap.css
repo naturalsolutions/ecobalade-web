@@ -5822,6 +5822,9 @@ margin-left: 9%;
 }
 @media  (max-width: 979px) {
   /* pro */
+  body.page-pro div.formContactPro textarea {
+    width: 94%;
+  }
   body.page-pro div.imgApportClient {
     display: none;
   }

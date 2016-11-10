@@ -564,7 +564,7 @@ if( isset($_POST['name']) && isset($_POST['email']) ){
   );
 
   // Send out the e-mail.
-  drupal_mail('NsHook', 'NsHook_mail_page_pro', "p.delaunay1@gmail.com", language_default(), $params);  
+  drupal_mail('NsHook', 'NsHook_mail_page_pro', "ecobalade@natural-solutions.eu", language_default(), $params);  
 
 }
 
