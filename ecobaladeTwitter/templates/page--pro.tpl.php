@@ -79,7 +79,7 @@
                 <div class="span6 bloc-deux">
                   <div class="iconActivite bgIcon"></div>
                   <h3>NOUVELLE ACTIVIT&Eacute; DE PLEINE NATURE</h3>
-                  <p>Téléchargeable gratuitement et utilisable off line, <strong>Ecobalade transforme les balades</strong> en nouvelle activité <strong>ludique</strong> de pleine nature,  où <bstrong>la biodiversité et le patrimoine<strong/> sont à la portée de tous.</p>
+                  <p>Téléchargeable gratuitement et utilisable off line, <strong>Ecobalade transforme les balades</strong> en nouvelle activité de pleine nature,  où <bstrong>la biodiversité et le patrimoine<strong/> sont à la portée de tous.</p>
                 </div>
 
             </div>
@@ -216,7 +216,7 @@
         <div class="row txtTitleFold7">
             <div class="span12">
                 <h2>NOS FORMULES</h2>
-                <p>In at metus quis nunc varius pulvinar id a nunc. Maecenas at egestas ex. Donec id nisl tempor, dapibus. Phasellus mattis in eros sit amet volutpat. Proin sit amet tincidunt nunc. Cras laoreet  massa vitae nibh tempor, a tincidunt enim tristique. Aliquam interdum vitae felis fermentum tempor.</p> 
+                <!-- <p>In at metus quis nunc varius pulvinar id a nunc. Maecenas at egestas ex. Donec id nisl tempor, dapibus. Phasellus mattis in eros sit amet volutpat. Proin sit amet tincidunt nunc. Cras laoreet  massa vitae nibh tempor, a tincidunt enim tristique. Aliquam interdum vitae felis fermentum tempor.</p>  -->
             </div>
         </div>
 
@@ -309,7 +309,7 @@
         <div class="row txtTitleFold7">
             <div class="span12">
                 <h2>R&Eacute;CAPITULATIF</h2>
-                <p>In at metus quis nunc varius pulvinar id a nunc. Maecenas at egestas ex. Donec id nisl tempor, dapibus. Phasellus mattis in eros sit amet volutpat. Proin sit amet tincidunt nunc. Cras laoreet  massa vitae nibh tempor, a tincidunt enim tristique. Aliquam interdum vitae felis fermentum tempor.</p> 
+                <!-- <p>In at metus quis nunc varius pulvinar id a nunc. Maecenas at egestas ex. Donec id nisl tempor, dapibus. Phasellus mattis in eros sit amet volutpat. Proin sit amet tincidunt nunc. Cras laoreet  massa vitae nibh tempor, a tincidunt enim tristique. Aliquam interdum vitae felis fermentum tempor.</p>  -->
             </div>
         </div>
     
@@ -451,20 +451,20 @@
 
         <div class="row">
            <div class="span12 formContactPro">
-                <form method="POST" action="pro" >
+                <form method="POST" action="pro" class='formContact'>
                       
                       <div class="row">                        
                         <div class="span4 offset2">
                         
                           <div class="input-group">
-                            <input type="text" class="form-control" name="name" placeholder="Nom *">                            
+                            <input type="text" class="form-control name" name="name" placeholder="Nom *">                            
                           </div>
 
                         </div>
                         <div class="span4">
                         
                           <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Prénom">
+                            <input type="text" class="form-control" name="firstname" placeholder="Prénom">
                           </div>
 
                         </div>
@@ -472,7 +472,7 @@
         
                       <div class="row">
                           <div class="span8 offset2">
-                            <input type="text" class="large" placeholder="Territoire"/>                            
+                            <input type="text" class="large" name="country" placeholder="Territoire"/>                            
                           </div>                        
                       </div>
 
@@ -480,14 +480,14 @@
                         <div class="span4 offset2">
                         
                           <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Email *">                            
+                            <input type="text" class="form-control email" name="email" placeholder="Email *">                            
                           </div>
 
                         </div>
                         <div class="span4">
                         
                           <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Téléphone">
+                            <input type="text" class="form-control" name="phone" placeholder="Téléphone">
                           </div>
 
                         </div>
@@ -495,7 +495,7 @@
                       
                       <div class="row">
                           <div class="span12">                            
-                            <textarea placeholder="Votre message..."></textarea>
+                            <textarea name="comment" placeholder="Votre message..."></textarea>
                           </div>                        
                       </div>                      
                       
@@ -525,11 +525,18 @@
 
 
 <?php 
-if( isset($_POST['name']) ){
+if( isset($_POST['name']) && isset($_POST['email']) ){
+
+  $name = $_POST['name'];
+  $firstname = $_POST['firstname'];
+  $country = $_POST['country'];
+  $email = $_POST['email'];
+  $phone = $_POST['phone'];
+  $comment = $_POST['comment'];
   
   $params = array(
-    'subject' => '[#ecobalade] Demande de devis - Page Pro',
-    'body' => "<p>body</p>"
+    'subject' => '[#ecobalade] Demande de devis - Formulaire page Pro',
+    'body' => "<p>Nom : ".$name." <br/> Prénom : ".$firstname." <br/> Territoire : ".$country." <br/> Email : ".$email." <br/> Téléphone : ".$phone." <br/> Message : ".$comment." <br/> </p>"
   );
 
   // Send out the e-mail.
@@ -540,21 +547,35 @@ if( isset($_POST['name']) ){
 ?> 
 </div> <!-- fin container-fluid.pro -->
 
+<script>
+jQuery( document ).ready(function() {
+
+  var checkForm = function(){
+
+    $('form.formContact').submit(function(event) {
+      /* Act on the event */
+      var form = $(this);
+      event.preventDefault();
+
+      var name = form.find("input.name").val();
+      var email = form.find("input.email").val();
+
+      if(name == '') alert('Veuillez inscrire votre nom pour soumettre le formulaire');
+      else if(email == '') alert('Veuillez inscrire votre email pour soumettre le formulaire');
+      else if(name != '' && email != '') form.submit();
+
+
+    });
+    
+  };
+
+  window.init = function() {
+    checkForm();
+  }
+
+  init(); // true 
+
+});
+</script>
 <?php print render($page['footer']); ?>
-
-
-<!-- 
-ctrl+shift+: -> commentaire
-ctrl+e
-<div class="row"></div> div.row
-<p id="monParagraphe"></p> div#monParagraphe
-
-div.row-fluid>div.span6*2
-<div class="row-fluid">
-    <div class="span6"></div>
-    <div class="span6"></div>
-</div>
- -->
-
-	
 
