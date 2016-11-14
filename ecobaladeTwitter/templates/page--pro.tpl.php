@@ -30,7 +30,7 @@
                           <li><a href="#app">APPLICATION</a></li>
                           <li><a href="#web">SITE WEB</a></li>
                           <li><a href="#livret">LIVRETS PAPIER</a></li>
-                          <li><a href="#presence">PR&Eacute;SENCE NATIONAL</a></li>
+                          <li><a href="#presence">PR&Eacute;SENCE NATIONALE</a></li>
                           <li><a href="#formules">FORMULES</a></li>
                           <li><a href="#temoignages">T&Eacute;MOIGNAGES</a></li>
                           <li><a href="#devis">DEVIS</a></li>
@@ -93,7 +93,7 @@
                 <div class="span6 bloc-deux">
                   <div class="iconActivite bgIcon"></div>
                   <h3>NOUVELLE ACTIVIT&Eacute; DE PLEINE NATURE</h3>
-                  <p>Téléchargeable gratuitement et utilisable off line, <strong>Ecobalade transforme les balades</strong> en nouvelle activité de pleine nature,  où <bstrong>la biodiversité et le patrimoine<strong/> sont à la portée de tous.</p>
+                  <p>Téléchargeable gratuitement et utilisable déconnecté, <strong>Ecobalade transforme les balades</strong> en nouvelle activité de pleine nature,  où <bstrong>la biodiversité et le patrimoine<strong/> sont à la portée de tous.</p>
                 </div>
 
             </div>
@@ -213,7 +213,7 @@
                       Elle constitue un outil de communication performant, dans le cadre d’une stratégie de <strong>marketing territorial</strong>, et un moyen de promouvoir efficacement les actions entreprises dans le domaine du <strong>développement durable</strong>, de la protection de la biodiversité…
                       <br/>
                       <br/>
-                      En proposant aux visiteurs une <strong>découverte instantanée de la nature</strong> via des parcours de randonnées « enrichies » et réalisés sur mesure par des naturalistes, Ecobalade contribue à la <strong>mise en valeur du patrimoine des territoires</strong>. Elle renforce aussi leur attractivité auprès d’une clientèle à la recherche de destinations <strong>« écotouristique »</strong>.  
+                      En proposant aux visiteurs une <strong>découverte instantanée de la nature</strong> via des parcours de randonnées « enrichies » et réalisés sur mesure par des naturalistes, Ecobalade contribue à la <strong>mise en valeur du patrimoine des territoires</strong>. Elle renforce aussi leur attractivité auprès d’une clientèle à la recherche de destinations <strong>« écotouristiques »</strong>.  
                       <br/>
                       <br/>
                       L’application fonctionne comme un <strong>sentier d’interprétation numérique et interactif</strong>, utilisable en complément de vos panneaux d’information existants.
@@ -266,7 +266,7 @@
             <div class="span8 img1StandartFormule"></div>
              <div class="span4 otherTwo">
                 <div class="standartTitleFormule">
-                    <h3>STANDART</h3>
+                    <h3>STANDARD</h3>
                     <p>FORMULE</p>
                 </div>
                 <div class="detailFormuleBasic"> <!-- même class que la liste de la formule basic -->
@@ -292,12 +292,12 @@
        <div class="span7 img1PreniumFormule"></div>
        <div class="span5 positionTxtFormulePrenium">
            <div class="preniumTitleFormule">
-                  <h3>PRENIUM</h3>
+                  <h3>PREMIUM</h3>
                   <p class="txtFormuleBold">FORMULE</p>
             </div>
             <div class="detailFormuleBasic positionPreniumFormuleDetail"> <!-- même class que la liste de la formule basic -->
                 <ul>
-                    <li><a href="#formuleStandartItem"><span class="txtFormuleBold">- LA FORMULE STANDART + le Livret papier</span></a></li>
+                    <li><a href="#formuleStandartItem"><span class="txtFormuleBold">- LA FORMULE STANDARD + le Livret papier</span></a></li>
                     <li>- La création des <span class="txtFormuleBold">illustrations</span> du livret</li>
                     <li>- La création du <span class="txtFormuleBold">contenu des fiches</span> du livret</li>
                     <li>- La création <span class="txtFormuleBold">graphique</span> du livret</li>
@@ -350,7 +350,7 @@
           <div class="span4 borderRecapFormuleStandart">
               <div class="titleRecapFormule">
                   <p>FORMULE</p>
-                  <h3>STANDART</h3>
+                  <h3>STANDARD</h3>
                  <div class="detailFormuleBasic">
                       <ul>
                           <li>La <span class="txtFormuleBold">définition</span> de la balade, du parcours, du nombre d’espèces</li>
@@ -371,7 +371,7 @@
           <div class="span4 borderRecapFormule paddindFormulePreniumRecap">
               <div class="titleRecapFormule">
                   <p>FORMULE</p>
-                  <h3>PRENIUM</h3>
+                  <h3>PREMIUM</h3>
                   <div class="detailFormuleBasic">
                       <ul>
                           <li>La <span class="txtFormuleBold">définition</span> de la balade, du parcours, du nombre d’espèces</li>
@@ -383,7 +383,7 @@
                           <li>Envoi d’un <span class="txtFormuleBold">fichier d’impression</span> d’affiches et de flyers</li>
                           <li>Le <span class="txtFormuleBold">relevé naturaliste</span> pour la création d'une ecobalade</li>
                           <li><span class="txtFormuleBold">Prise de photos</span> de la balade</li>
-                          <li>La création des <span class="txtFormuleBold">illustration</span> du livret</li>
+                          <li>La création des <span class="txtFormuleBold">illustrations</span> du livret</li>
                           <li>La création du <span class="txtFormuleBold">contenu des fiches</span> du livret</li>
                           <li>La création <span class="txtFormuleBold">graphique</span> du livret</li>
                           <li>La mise à disposition d'un <span class="txtFormuleBold">fichier numérique</span> pour l'impression du livret par le client</li>
@@ -458,7 +458,7 @@
         <div class="row txtTitleFold7">
             <div class="span12">
                 <h2>DEMANDE DE DEVIS</h2>
-                <p>In at metus quis nunc varius pulvinar id a nunc. Maecenas at egestas ex. Donec id nisl tempor, dapibus. Phasellus mattis in eros sit amet volutpat. Proin sit amet tincidunt nunc. Cras laoreet  massa vitae nibh tempor, a tincidunt enim tristique. Aliquam interdum vitae felis fermentum tempor.</p> 
+                <!-- <p>In at metus quis nunc varius pulvinar id a nunc. Maecenas at egestas ex. Donec id nisl tempor, dapibus. Phasellus mattis in eros sit amet volutpat. Proin sit amet tincidunt nunc. Cras laoreet  massa vitae nibh tempor, a tincidunt enim tristique. Aliquam interdum vitae felis fermentum tempor.</p>  -->
             </div>
         </div>
 
