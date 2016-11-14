@@ -269,8 +269,11 @@ $baladenid = $node->nid;
 		echo "
 			<div class='blocConseil'>
 				<p>1/ Préparer la balade sur le site ecobalade.fr</p>
-				<p>2/ Télécharger l'app gratuitement</p>
-				<p>3/ L'ouvrir et télécharger votre balade</p>
+				<p>2/ Télécharger l'app et votre balade gratuitement</p>
+				<a class='badge4GooglePlay' target='_blank' title='Télécharger ecoBalade sur GooglePlay' href='https://play.google.com/store/apps/details?id=com.ns.ecoBalade&amp;feature=search_result#?t=W251bGwsMSwyLDEsImNvbS5ucy5lY29CYWxhZGUiXQ..''>
+				</a>
+				<a class='badge4AppStore' target='_blank' title='Télécharger ecobalade sur appleStore' href='https://itunes.apple.com/fr/app/ecobalade/id674569147?l=fr&amp;ls=1&amp;mt=8'></a>
+				<p>3/ Partez à la découverte de la faune et la flore</p>
 			</div>
 			";
 

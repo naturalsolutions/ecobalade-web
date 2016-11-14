@@ -966,6 +966,21 @@ body.node-type-balade div#baladeSimilaire figure{
 body.node-type-balade div#baladeSimilaire{
   padding-bottom: 12px;
 }
+body.node-type-balade .badge4GooglePlay,
+body.node-type-balade .badge4AppStore{
+  display: inline-block;
+  height: 56px;
+  width: 100px;
+  margin-top: 5px;
+}
+body.node-type-balade .badge4GooglePlay{
+  background: url(../img/badgeGooglePlay.png) no-repeat scroll 100% 0% transparent;
+  background-size: 100%;
+
+}body.node-type-balade .badge4AppStore{
+  background: url(../img/badgeAppStore.png) no-repeat scroll 90% 0% transparent;
+  background-size: 100%;
+}
 /*hover*/
 body.node-type-balade figure.effect-zoe{
   overflow: hidden;
