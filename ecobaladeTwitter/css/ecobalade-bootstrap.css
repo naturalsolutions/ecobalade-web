@@ -3298,6 +3298,7 @@ body.page-pro div.txtFold6 h2{
 }
 body.page-pro div.txtFold6{
   margin-top: 230px;
+  padding-bottom: 100px;
 }
 /* FOLD7 */
 body.page-pro div.txtTitleFold7{
@@ -3326,6 +3327,9 @@ body.page-pro div.basicTitleFormule p{
   color: #505050;
   padding-left: 0.5%;
   letter-spacing: 2px;
+}
+body.page-pro div.detailFormuleBasic{
+  padding-bottom: 115px;
 }
 body.page-pro div.basicTitleFormule{
   margin-top: 78px;
@@ -5672,6 +5676,20 @@ margin-left: 9%;
 /*En dessous de 1200*/
 @media (max-width: 1199px){  
   /* Pro */
+  body.page-pro div.divAppDedie {    
+    margin-top: -204px;
+  }
+  body.page-pro div.detailFormuleBasic {
+    padding-bottom: 0;
+  }
+  body.page-pro div.paddindFormulePreniumRecap {
+    padding-bottom: 0;
+    min-height: 997px;
+  }
+  body.page-pro div.standartTitleFormule p,    
+  body.page-pro div.preniumTitleFormule p {    
+    color: #505050;
+  }
   body.page-pro div.imgTemoignage {   
     padding: 100px 2% 0 2%;
   }
@@ -5837,6 +5855,12 @@ margin-left: 9%;
 }
 @media  (max-width: 979px) {
   /* pro */
+  body.page-pro div.paddindFormuleBasicRecap {
+    padding-bottom: 0;
+  }
+  body.page-pro div.paddindFormulePreniumRecap {  
+    min-height: 707px;
+  }
   body.page-pro div.formContactPro textarea {
     width: 94%;
   }
@@ -5931,6 +5955,7 @@ margin-left: 9%;
   }
   body.page-pro div.txtFold6 p {    
     padding-right: 0;
+    text-align: left;
   }
   body.page-pro div.zoneStat {
     margin-top: 59px;

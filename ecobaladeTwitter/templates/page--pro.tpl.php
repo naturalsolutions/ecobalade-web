@@ -337,12 +337,14 @@
                   <div class="detailFormuleBasic">
                       <ul>
                           <li>La <span class="txtFormuleBold">définition</span> de la balade, du parcours, du nombre d’espèces</li>
-                          <li>L’intégration des <span class="txtFormuleBold">données</span> dans le service ecobalade</li>
-                          <li>Le développement informatique sur le site web <span class="txtFormuleBold">ecobalade.fr</span> et sur <span class="txtFormuleBold">l’application</span></li>
-                          <li>La <span class="txtFormuleBold">mise en ligne</span> de la balade</li>
-                          <li>La présence de <span class="txtFormuleBold">votre logo</span></li>
-                          <li>Soutient en <span class="txtFormuleBold">communication auprès des médias</span> (radios, TV, presse) et sur les <span class="txtFormuleBold">réseaux sociaux</span></li>
-                          <li>Envoi d’un <span class="txtFormuleBold">fichier d’impression</span> d’affiches et de flyers</li>
+                        <li>L’intégration des <span class="txtFormuleBold">données</span> dans le service ecobalade</li>
+                        <li>Le développement informatique sur le site web <span class="txtFormuleBold">ecobalade.fr</span> et sur <span class="txtFormuleBold">l’application</span></li>
+                        <li>La <span class="txtFormuleBold">mise en ligne</span> de la balade</li>
+                        <li>Audience importante de votre page Ecobalade sur les <span class="txtFormuleBold">moteurs de recherche (SEO).</span></li>
+                        <li>La présence de <span class="txtFormuleBold">votre logo</span></li>
+                        <li>Soutient en communication sur les réseaux sociaux, auprès des médias (radios, TV, presse), organisation d'un point presse</li>
+                        <li>Soutien en <span class="txtFormuleBold">communication sur les réseaux sociaux</span>, auprès des médias (radios, TV, presse) et organisation d'un <span class="txtFormuleBold">point presse</span></li>
+                        <li>Envoi d’un <span class="txtFormuleBold">fichier d’impression</span> d’affiches et de flyers</li>
                       </ul>
                       <!-- <a class="btnDevisFormule" href="#">Demander un devis</a> -->
                   </div>
@@ -355,15 +357,17 @@
                   <h3>STANDARD</h3>
                  <div class="detailFormuleBasic">
                       <ul>
-                          <li>La <span class="txtFormuleBold">définition</span> de la balade, du parcours, du nombre d’espèces</li>
-                          <li>L’intégration des <span class="txtFormuleBold">données</span> dans le service ecobalade</li>
-                          <li>Le développement informatique sur le site web <span class="txtFormuleBold">ecobalade.fr</span> et sur <span class="txtFormuleBold">l’application</span></li>
-                          <li>La <span class="txtFormuleBold">mise en ligne</span> de la balade</li>
-                          <li>La présence de <span class="txtFormuleBold">votre logo</span></li>
-                          <li>Soutient en <span class="txtFormuleBold">communication auprès des médias</span> (radios, TV, presse) et sur les <span class="txtFormuleBold">réseaux sociaux</span></li>
-                          <li>Envoi d’un <span class="txtFormuleBold">fichier d’impression</span> d’affiches et de flyers</li>
-                          <li>Le <span class="txtFormuleBold">relevé naturaliste</span> pour la création d'une ecobalade</li>
-                          <li><span class="txtFormuleBold">Prise de photos</span> de la balade</li>
+                        <li>La <span class="txtFormuleBold">définition</span> de la balade, du parcours, du nombre d’espèces</li>
+                        <li>L’intégration des <span class="txtFormuleBold">données</span> dans le service ecobalade</li>
+                        <li>Le développement informatique sur le site web <span class="txtFormuleBold">ecobalade.fr</span> et sur <span class="txtFormuleBold">l’application</span></li>
+                        <li>La <span class="txtFormuleBold">mise en ligne</span> de la balade</li>
+                        <li>Audience importante de votre page Ecobalade sur les <span class="txtFormuleBold">moteurs de recherche (SEO).</span></li>
+                        <li>La présence de <span class="txtFormuleBold">votre logo</span></li>
+                        <li>Soutient en communication sur les réseaux sociaux, auprès des médias (radios, TV, presse), organisation d'un point presse</li>
+                        <li>Soutien en <span class="txtFormuleBold">communication sur les réseaux sociaux</span>, auprès des médias (radios, TV, presse) et organisation d'un <span class="txtFormuleBold">point presse</span></li>
+                        <li>Envoi d’un <span class="txtFormuleBold">fichier d’impression</span> d’affiches et de flyers</li>
+                        <li>Le <span class="txtFormuleBold">relevé naturaliste</span> pour la création d'une ecobalade</li>
+                        <li><span class="txtFormuleBold">Prise de photos</span> de la balade</li>
                       </ul>
                       <!-- <a class="btnDevisFormule" href="#">Demander un devis</a> -->
                   </div>
@@ -380,8 +384,10 @@
                           <li>L’intégration des <span class="txtFormuleBold">données</span> dans le service ecobalade</li>
                           <li>Le développement informatique sur le site web <span class="txtFormuleBold">ecobalade.fr</span> et sur <span class="txtFormuleBold">l’application</span></li>
                           <li>La <span class="txtFormuleBold">mise en ligne</span> de la balade</li>
+                          <li>Audience importante de votre page Ecobalade sur les <span class="txtFormuleBold">moteurs de recherche (SEO).</span></li>
                           <li>La présence de <span class="txtFormuleBold">votre logo</span></li>
-                          <li>Soutient en <span class="txtFormuleBold">communication auprès des médias</span> (radios, TV, presse) et sur les <span class="txtFormuleBold">réseaux sociaux</span></li>
+                          <li>Soutient en communication sur les réseaux sociaux, auprès des médias (radios, TV, presse), organisation d'un point presse</li>
+                          <li>Soutien en <span class="txtFormuleBold">communication sur les réseaux sociaux</span>, auprès des médias (radios, TV, presse) et organisation d'un <span class="txtFormuleBold">point presse</span></li>
                           <li>Envoi d’un <span class="txtFormuleBold">fichier d’impression</span> d’affiches et de flyers</li>
                           <li>Le <span class="txtFormuleBold">relevé naturaliste</span> pour la création d'une ecobalade</li>
                           <li><span class="txtFormuleBold">Prise de photos</span> de la balade</li>
