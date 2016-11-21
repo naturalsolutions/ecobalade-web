@@ -92,9 +92,9 @@
 			<div class='row-fluid'>
 				<div class='span2' id="image_specie">
 					<?php if($isFilterBalade) { ?>
-	  					<a href="<?php echo $base_url.'/espece/'.$lien_espece_url.'?balade='.$titleBalade;?>"><?php echo $image_espece; ?></a>
+	  					<?php echo $image_espece; ?>
 					<?php }else{ ?> 
-						<a href="<?php echo $base_url.'/espece/'.$lien_espece_url; ?>"><?php echo $image_espece; ?></a>
+						<?php echo $image_espece; ?>
 					<?php } ?>
 				
 				</div>
@@ -122,11 +122,11 @@
 				<div class='span2' id="lien_specie">
 					<?php if($isFilterBalade) : ?>
 				
-	  					<a href="<?php echo $base_url.'/espece/'.$lien_espece_url.'?balade='.$titleBalade;?>">voir</a>
+	  					<a href="<?php echo $base_url.'/espece/'.$lien_espece_url.'?balade='.$titleBalade;?>">Découvrir, <?php echo $title_espece; ?></a>
 					
 					<?php else : ?>
 					
-						<a href="<?php echo $base_url.'/espece/'.$lien_espece_url; ?>">voir</a>
+						<a href="<?php echo $base_url.'/espece/'.$lien_espece_url; ?>">Découvrir, <?php echo $title_espece; ?></a>
 
 					<?php endif; ?>
 

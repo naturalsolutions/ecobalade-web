@@ -2032,6 +2032,9 @@ body.page-liste-especes h1>span{
 /***************************************************************************/
 /*********************************  ****************************************/
 
+body.page-liste-balades span.nameBalSmall {
+
+}
 body.page-liste-balades .container-node {
   padding-bottom: 45px;
 }
@@ -2050,6 +2053,14 @@ body.page-liste-balades .view-v-liste-balade .views-field-field-vote{
   width:18.7%;
   border-right:1px solid #BBBBBB;
   text-align: center;  
+}
+body.page-liste-balades .view-v-liste-balade .views-field-field-difficulte{
+  border: 0;
+}
+body.page-liste-balades .view-v-liste-balade .views-field-nothing{
+  float:left;
+  width: 37%;
+  text-align: center;   
 }
 body.page-liste-balades div#edit-field-difficulte-tid-wrapper p.help-block,
 body.page-liste-balades div#edit-field-type-de-circuit-tid-wrapper p.help-block{
@@ -2096,8 +2107,8 @@ body.page-liste-balades aside button#edit-submit-v-liste-balade:hover{
 body.page-liste-balades .view-v-liste-balade .views-field-field-vote{
     height: 41px;
 }
-body.page-liste-balades .view-v-liste-balade .views-field-view-node a{
-  padding: 7% 0%;
+body.page-liste-balades .view-v-liste-balade .views-field-nothing a{
+  padding: 6% 8.2%;
   display: block;
   width: 100%;
   color: #fff;
@@ -2105,9 +2116,9 @@ body.page-liste-balades .view-v-liste-balade .views-field-view-node a{
   letter-spacing: 0.05em;
   background-color: #4DBB74;
 }
-body.page-liste-balades .view-v-liste-balade .views-field-view-node a:hover{
-  text-decoration: none;
-  font-family: 'Raleway-SemiBold';
+body.page-liste-balades .view-v-liste-balade .views-field-nothing a:hover{
+  text-decoration: none;  
+  font-weight: bold;
 }
 body.page-liste-balades .view-v-liste-balade .views-field-field-photo-resume {
     float: left;
@@ -2171,8 +2182,12 @@ body.page-liste-balades .view-v-liste-balade .views-field-field-sponsor,
 body.page-liste-balades .view-v-liste-balade .views-field-field-distance,
 body.page-liste-balades .view-v-liste-balade .views-field-field-difficulte,
 body.page-liste-balades .view-v-liste-balade .views-field-field-vote,
+body.page-liste-balades .view-v-liste-balade .views-field-nothing,
 body.page-liste-balades .view-v-liste-balade .views-field-view-node{
     margin:15px 4px 0px;
+}
+body.page-liste-balades .view-v-liste-balade .views-field-nothing{
+  margin-top: 0;
 }
 body.page-liste-balades .view-v-liste-balade .views-field-field-distance,
 body.page-liste-balades .view-v-liste-balade .views-field-field-difficulte,
@@ -4368,39 +4383,41 @@ body.node-type-balade div.view-v-liste-taxon-balade #containerOf1Specie p, body.
   padding: 6px;
   border-top: 1px solid #dddddd;
 }
+#lien_specie{
 
+}
 #lien_specie a{
-width: 76px;
-height: 56px;
-padding-top: 30px;
-float:right;
+  width: 135px;
+  padding: 20px 10px 8px 10px;
+  float:right;
   font-size: 14px;
   color: #333333;
   text-align: center;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   cursor: pointer;
   background-color: #f5f5f5;
-  *background-color: #e6e6e6;
+  height: 57px;
+  
+
   background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
   background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
   background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
   background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
-  background-repeat: repeat-x;
-  border: 1px solid #bbbbbb;
-  *border: 0;
+  background-repeat: repeat-x; 
+  border: 1px solid #bbbbbb;  
   border-color: #e6e6e6 #e6e6e6 #bfbfbf;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   border-bottom-color: #a2a2a2;
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
           border-radius: 4px;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
   *zoom: 1;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
      -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); 
 }
 
 
@@ -6766,6 +6783,7 @@ margin-left: 9%;
   }
   /*LISTE BALADE*/
   body.page-liste-balades .view-v-liste-balade .views-field-view-node, 
+  body.page-liste-balades .view-v-liste-balade .views-field-nothing, 
   body.page-liste-balades .view-v-liste-balade .views-field-field-sponsor, 
   body.page-liste-balades .view-v-liste-balade .views-field-field-distance, 
   body.page-liste-balades .view-v-liste-balade .views-field-field-difficulte, 
@@ -6773,6 +6791,13 @@ margin-left: 9%;
     float: none;
     width: auto;
     border-right: 0;
+  }
+  body.page-liste-balades .view-v-liste-balade .views-field-nothing a {
+    padding: 3% 2%;    
+    margin: 0 auto;
+    margin-top: 11px;
+    font-size: 1.1em;
+    width: 40%;
   }
   body.page-liste-balades .view-v-liste-balade .views-field-field-photo-resume {
     margin: 0 auto;
