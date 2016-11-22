@@ -2976,6 +2976,9 @@ body.page-application-nature-territoire div.navProStyle{
   background: none;
   border: none;
 }
+body.page-application-nature-territoire div.navProStyle li:nth-child(5) > a{
+  min-width: 185px;
+}
 body.page-application-nature-territoire div.navProStyle li a{
   font-family: 'ProximaNova-Light', sans-serif !important;
   font-size: 1.1em;
