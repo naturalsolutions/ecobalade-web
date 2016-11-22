@@ -66,7 +66,7 @@
 
         <div class="row-fluid rowScrollFold1">
             <div class="span12 scrollDown">
-                <p href="#" class="txtScroll">DÉFILER VERS LE BAS</p>
+                <h1 class="txtScroll">Découvrez nos offres</h1>
                 <p>&darr;</p>
             </div>
         </div>
@@ -86,13 +86,13 @@
 
                 <div class="span6 alignBlocHaut bloc-un">
                   <div class="iconDecouvrir bgIcon"></div>
-                  <h3>D&Eacute;COUVRIR LA FAUNE &amp; LA FLORE</h3>
+                  <h2>D&Eacute;COUVRIR LA FAUNE &amp; LA FLORE</h2>
                   <p>Ecobalade est une <strong>application mobile</strong> qui offre une <strong>découverte</strong> de la faune et de la flore, lors de balades ou de randonnées.</p>
                 </div>
 
                 <div class="span6 bloc-deux">
                   <div class="iconActivite bgIcon"></div>
-                  <h3>NOUVELLE ACTIVIT&Eacute; DE PLEINE NATURE</h3>
+                  <h2>NOUVELLE ACTIVIT&Eacute; DE PLEINE NATURE</h2>
                   <p>Téléchargeable gratuitement et utilisable déconnecté, <strong>Ecobalade transforme les balades</strong> en nouvelle activité de pleine nature,  où <bstrong>la biodiversité et le patrimoine<strong/> sont à la portée de tous.</p>
                 </div>
 
@@ -102,14 +102,14 @@
 
                 <div class="span6 alignBlocBas bloc-trois">
                   <div class="iconValoriser bgIcon"></div>
-                  <h3>VALORISER LE TERRITOIRE</h3>
+                  <h2>VALORISER LE TERRITOIRE</h2>
                   <p>Ecobalade a pour objectif <strong>la promotion</strong> et <strong>la valorisation des territoires</strong>, via la découverte de leur biodiversité et de leur nature.</p>
                 </div>
 
               
                 <div class="span6 bloc-quatres">
                   <div class="iconSensibiliser bgIcon"></div>
-                  <h3>SENSIBILISER</h3>
+                  <h2>SENSIBILISER</h2>
                   <p>A destination des familles, des scolaires, Ecobalade est <strong>un outil pédagogique</strong>. Elle permet d’aborder les thématiques de <strong>la biodiversité</strong>, de la protection de l’environnement, de <strong>l’éco-citoyenneté</strong>…</p>
                 </div>
 
@@ -124,7 +124,7 @@
   <div class="container" id="app">
     <div class="row-fluid">
         <div class="span6 txtFold3">
-            <h2>L' APPLICATION</h2>
+            <h3>L' APPLICATION</h3>
             <p>
             Téléchargeable gratuitement sur Play Store (Androïd) et Apple Store, l’application Ecobalade permet de sélectionner et d’enregistrer une ou plusieurs balades sur son smartphone, en prévision des parcours qu’on souhaite effectuer. Une fois téléchargées, elles sont alors consultables en autonomie totale, même <strong>sans connexion internet</strong>.
             <br/>
@@ -150,7 +150,7 @@
 		<div class="span7 imgFold4">
 		</div>
 		<div class="span5 txtFold4">
-			<h2>LE SITE WEB</h2>
+			<h3>LE SITE WEB</h3>
             <p>
             <a href="http://www.ecobalade.fr/" alt='vers le site ecobalade' title='vers le site ecobalade'>www.ecobalade.fr</a> est le principal point d’entrée pour la découverte du service Ecobalade. Sur le site, le visiteur peut sélectionner et préparer une balade en effectuant un tri par type de circuit, difficulté, distance à parcourir ou <strong>localisation géographique</strong>. Il a également accès à toutes les randonnées et balades, mais aussi à l’ensemble des <strong>fiches espèces</strong> (plus de 1500). Les utilisateurs peuvent aussi poster des <strong>commentaires</strong> ou des <strong>photos</strong> de leurs balades.
             </p>
@@ -164,7 +164,7 @@
     <div class="row-fluid imgFold5" id="livret"> 
         <div class="container">  <!-- livret papier -->
             <div class="span6 txtFold5"> 
-              <h2>LE LIVRET PAPIER</h2>
+              <h3>LE LIVRET PAPIER</h3>
                     <p>
                     Nous vous proposons l’édition d’un guide papier, dans le prolongement du site internet et de l’application. Il présente <strong>les parcours de promenades et de randonnées</strong> et informe sur les <strong>espèces emblématiques</strong> susceptibles d’être rencontrées lors de la balade, grâce à des fiches très complètes. Un système de <strong>QR codes</strong> renvoie vers le site internet <a href="http://www.ecobalade.fr/" alt='vers le site ecobalade' title='vers le site ecobalade'>www.ecobalade.fr</a> pour obtenir des informations complémentaires et aller plus loin, avant, pendant ou après la balade.
                     </p>
@@ -178,22 +178,22 @@
             <div class="container">
                 <div class="span3 oneStat">
                     <div class="bgIcon iconEmerveillement"></div>
-                    <h4>400</h4>
+                    <p class='bigNumber'>400</p>
                     <p>KM &Eacute;MERVEILLEMENT</p>
                 </div>
                 <div class="span3 oneStat">
                     <div class="bgIcon iconConnexion"></div>
-                    <h4>150.000</h4>
+                    <p class='bigNumber'>150.000</p>
                     <p>CONNEXION / AN</p>
                 </div>
                 <div class="span3 oneStat">
                     <div class="bgIcon iconTelechargement"></div>
-                    <h4>30.000+</h4>
+                    <p class='bigNumber'>30.000+</p>
                     <p>T&Eacute;L&Eacute;CHARGEMENT</p>        
                 </div>
                 <div class="span3 oneStat">
                     <div class="bgIcon iconLike"></div>
-                    <h4>5.000+</h4>
+                    <p class='bigNumber'>5.000+</p>
                     <p>LIKE FACEBOOK</p>      
                 </div>
             </div>
@@ -205,7 +205,7 @@
     <div class="row-fluid borderBottomFold2" id="presence">
         <div class="span6 imgCarteFold6"></div>
         <div class="span6 txtFold6">
-            <h2>PR&Eacute;SENCE NATIONALE</h2>
+            <h3>PR&Eacute;SENCE NATIONALE</h3>
                       <p>
                       <strong>Solution innovante</strong>, Ecobalade s’adresse aux gestionnaires d’espaces naturels, aux responsables de collectivités territoriales, aux offices de tourisme... désireux de promouvoir <strong>l’écotourisme</strong> sur leur territoire.
                       <br/>
@@ -229,7 +229,7 @@
     <div class="container" id="formules">
         <div class="row txtTitleFold7">
             <div class="span12">
-                <h2>NOS FORMULES</h2>
+                <h3>NOS FORMULES</h3>
                 <!-- <p>In at metus quis nunc varius pulvinar id a nunc. Maecenas at egestas ex. Donec id nisl tempor, dapibus. Phasellus mattis in eros sit amet volutpat. Proin sit amet tincidunt nunc. Cras laoreet  massa vitae nibh tempor, a tincidunt enim tristique. Aliquam interdum vitae felis fermentum tempor.</p>  -->
             </div>
         </div>
@@ -238,7 +238,7 @@
              <div class="span4 img1BasicFormule" id="formuleBasicItem"></div>
              <div class="span8 otherOne">
                 <div class="basicTitleFormule">
-                    <h3>BASIC</h3>
+                    <p class='fatStyle'>BASIC</p>
                     <p>FORMULE</p>
                 </div>
                 <div class="detailFormuleBasic">
@@ -268,7 +268,7 @@
             <div class="span8 img1StandartFormule"></div>
              <div class="span4 otherTwo">
                 <div class="standartTitleFormule">
-                    <h3>STANDARD</h3>
+                    <p class='fatStyle'>STANDARD</p>
                     <p>FORMULE</p>
                 </div>
                 <div class="detailFormuleBasic"> <!-- même class que la liste de la formule basic -->
@@ -294,7 +294,7 @@
        <div class="span7 img1PreniumFormule"></div>
        <div class="span5 positionTxtFormulePrenium">
            <div class="preniumTitleFormule">
-                  <h3>PREMIUM</h3>
+                  <p class='fatStyle'>PREMIUM</p>
                   <p class="txtFormuleBold">FORMULE</p>
             </div>
             <div class="detailFormuleBasic positionPreniumFormuleDetail"> <!-- même class que la liste de la formule basic -->
@@ -324,7 +324,7 @@
      <div class="container">
         <div class="row txtTitleFold7">
             <div class="span12">
-                <h2>R&Eacute;CAPITULATIF</h2>
+                <h3>R&Eacute;CAPITULATIF</h3>
                 <!-- <p>In at metus quis nunc varius pulvinar id a nunc. Maecenas at egestas ex. Donec id nisl tempor, dapibus. Phasellus mattis in eros sit amet volutpat. Proin sit amet tincidunt nunc. Cras laoreet  massa vitae nibh tempor, a tincidunt enim tristique. Aliquam interdum vitae felis fermentum tempor.</p>  -->
             </div>
         </div>
@@ -333,7 +333,7 @@
           <div class="span4 borderRecapFormule paddindFormuleBasicRecap">
               <div class="titleRecapFormule">
                   <p>FORMULE</p>
-                  <h3>BASIC</h3>
+                  <p class='kmeStyle'>BASIC</p>
                   <div class="detailFormuleBasic">
                       <ul>
                           <li>La <span class="txtFormuleBold">définition</span> de la balade, du parcours, du nombre d’espèces</li>
@@ -354,7 +354,7 @@
           <div class="span4 borderRecapFormuleStandart">
               <div class="titleRecapFormule">
                   <p>FORMULE</p>
-                  <h3>STANDARD</h3>
+                  <p class='kmeStyle'>STANDARD</p>
                  <div class="detailFormuleBasic">
                       <ul>
                         <li>La <span class="txtFormuleBold">définition</span> de la balade, du parcours, du nombre d’espèces</li>
@@ -377,7 +377,7 @@
           <div class="span4 borderRecapFormule paddindFormulePreniumRecap">
               <div class="titleRecapFormule">
                   <p>FORMULE</p>
-                  <h3>PREMIUM</h3>
+                  <p class='kmeStyle'>PREMIUM</p>
                   <div class="detailFormuleBasic">
                       <ul>
                           <li>La <span class="txtFormuleBold">définition</span> de la balade, du parcours, du nombre d’espèces</li>
@@ -404,8 +404,8 @@
 
         <div class="row">
             <div class="span8 divAppDedie">
-                 <h4>APPLICATION D&Eacute;DI&Eacute;E</h4>
-                 <h3>SUR MESURE</h3>
+                 <p class='kmeStyle'>APPLICATION D&Eacute;DI&Eacute;E</p>
+                 <p>SUR MESURE</p>
                  <p>
                  APPLICATION SPÉCIALEMENT CONSTRUITE POUR VOUS ET PERSONNALISÉE (SELON VOTRE CAHIER DES CHARGES, AVEC ATELIERS CRÉATIFS DE CO-CONCEPTION)
                  </p>
@@ -465,7 +465,7 @@
 
         <div class="row txtTitleFold7">
             <div class="span12">
-                <h2>DEMANDE DE DEVIS</h2>
+                <h3>DEMANDE DE DEVIS</h3>
                 <!-- <p>In at metus quis nunc varius pulvinar id a nunc. Maecenas at egestas ex. Donec id nisl tempor, dapibus. Phasellus mattis in eros sit amet volutpat. Proin sit amet tincidunt nunc. Cras laoreet  massa vitae nibh tempor, a tincidunt enim tristique. Aliquam interdum vitae felis fermentum tempor.</p>  -->
             </div>
         </div>

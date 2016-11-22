@@ -2915,28 +2915,28 @@ body.page-node-2469 div.row-fluid.monTitle{
 /*                                                                         */   
 /***************************************************************************/
 /* MENU */
-body.page-pro div.navProStyle a.btn.btn-navbar{
+body.page-application-nature-territoire div.navProStyle a.btn.btn-navbar{
   padding: 15px 15px;
   margin-top: -37px;
 }
-body.page-pro div.navProStyle a.btn.btn-navbar span.icon-bar{
+body.page-application-nature-territoire div.navProStyle a.btn.btn-navbar span.icon-bar{
   background-color: #4DBB74;
 }
-body.page-pro div.navProStyle a.btn.btn-navbar:hover{
+body.page-application-nature-territoire div.navProStyle a.btn.btn-navbar:hover{
   border: none;
 }
 /* FOLD1 */
-body.page-pro p{
+body.page-application-nature-territoire p{
     line-height: 1.6em;
     font-size: 1.1em ;
 }
-body.page-pro{
+body.page-application-nature-territoire{
     padding:0;
 }
-body.page-pro div.containerNoMargin{
+body.page-application-nature-territoire div.containerNoMargin{
   padding:0;
 }
-body.page-pro div.profold1{
+body.page-application-nature-territoire div.profold1{
   padding:0;
   background-image: url('../img/pro/pro_bg_fold1.jpg');
   background-position: center center;
@@ -2945,7 +2945,7 @@ body.page-pro div.profold1{
   min-height:1080px;
   max-width: 100%;
 }
-body.page-pro div.logo{
+body.page-application-nature-territoire div.logo{
   background-image: url('../img/pro/logo.png');
   background-position: center center;
   background-repeat:  no-repeat;
@@ -2953,25 +2953,27 @@ body.page-pro div.logo{
   width:100%;
   background-size: 62%;
 } 
-body.page-pro div.rowLogoFold1{
+body.page-application-nature-territoire div.rowLogoFold1{
   margin-top:187px;
 }
-body.page-pro div.scrollDown {
+body.page-application-nature-territoire div.scrollDown {
   color: #fff;
   text-align: center;
   margin-top: 206px;
 }
-body.page-pro div.scrollDown p.txtScroll{
+body.page-application-nature-territoire div.scrollDown h1.txtScroll{
   font-size: 1em;
   letter-spacing: 4px;
+  text-transform: uppercase;
   font-family: 'ProximaNova-Semibold', sans-serif;
   color:#fff;
+  margin: 0;
 }
-body.page-pro div.navProStyle{
+body.page-application-nature-territoire div.navProStyle{
   background: none;
   border: none;
 }
-body.page-pro div.navProStyle li a{
+body.page-application-nature-territoire div.navProStyle li a{
   font-family: 'ProximaNova-Light', sans-serif !important;
   font-size: 1.1em;
   color: #fff;
@@ -2980,12 +2982,12 @@ body.page-pro div.navProStyle li a{
   padding: 11px 0 10px 1%;
   border-bottom: 1px transparent solid;  
 }
-body.page-pro div.navProStyle li a:hover{
+body.page-application-nature-territoire div.navProStyle li a:hover{
   text-shadow:none;
   color:#4DBB73;
   border-bottom: 1px #4DBB73 solid;  
 }
-body.page-pro div.navProStyle a.navProActive{
+body.page-application-nature-territoire div.navProStyle a.navProActive{
   border-bottom: 1px #4DBB73 solid;
   padding: 11px 0 10px 0;
   color:#4DBB73;
@@ -2994,7 +2996,7 @@ body.page-pro div.navProStyle a.navProActive{
   box-shadow:none;
   height: 18px;
 }
-body.page-pro div.navProStyle a.navProActive:hover{
+body.page-application-nature-territoire div.navProStyle a.navProActive:hover{
   border-bottom: 1px #4DBB73 solid;
   padding: 11px 0 10px 0;
   color:#4DBB73;
@@ -3003,7 +3005,7 @@ body.page-pro div.navProStyle a.navProActive:hover{
   box-shadow:none;
   height: 18px;
 }
-body.page-pro a.btnRetourSite{
+body.page-application-nature-territoire a.btnRetourSite{
   background:none;
   border: 1px solid #fff;
   border-radius: 45px;
@@ -3015,7 +3017,7 @@ body.page-pro a.btnRetourSite{
   letter-spacing: 1px;
   text-align:center;
 }
-body.page-pro a.btnRetourSite:hover{
+body.page-application-nature-territoire a.btnRetourSite:hover{
   border: 1px solid transparent;
   background: #4dbb74; /* Old browsers */
   background: -moz-linear-gradient(left, #4dbb74 0%, #4dbb8e 100%); /* FF3.6-15 */
@@ -3023,14 +3025,14 @@ body.page-pro a.btnRetourSite:hover{
   background: linear-gradient(to right, #4dbb74 0%,#4dbb8e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dbb74', endColorstr='#4dbb8e',GradientType=1 ); /* IE6-9 */
 }
-body.page-pro div.marginBtnRetour{
+body.page-application-nature-territoire div.marginBtnRetour{
   margin-top:21px;
 }
-body.page-pro div.marginRowHeader{
+body.page-application-nature-territoire div.marginRowHeader{
   padding-top: 48px;
 }
 /* FOLD2 */
-body.page-pro div.imgApportClient{
+body.page-application-nature-territoire div.imgApportClient{
   background-image: url('../img/pro/imgApport.jpg');
   background-position: center center;
   background-repeat:  no-repeat;
@@ -3038,58 +3040,58 @@ body.page-pro div.imgApportClient{
   min-height:905px;
   max-width: 100%;
 }
-body.page-pro div.bgIcon{
+body.page-application-nature-territoire div.bgIcon{
   background-position: center center;
   background-repeat:  no-repeat;
 }
-body.page-pro div.iconDecouvrir{
+body.page-application-nature-territoire div.iconDecouvrir{
   background: url(../img/pro/iconDecouvrir.png) no-repeat 50% 50% transparent;  
   background-size: auto;  
   height:117px;
 }
-body.page-pro div.iconActivite{
+body.page-application-nature-territoire div.iconActivite{
   background: url(../img/pro/iconActivite.png) no-repeat 50% 50% transparent;  
   background-size: auto;
   height:171px;
 }
-body.page-pro div.iconValoriser{
+body.page-application-nature-territoire div.iconValoriser{
   background: url(../img/pro/iconValoriser.png) no-repeat 50% 50% transparent;  
   background-size: auto;  
   height:89px;
 }
-body.page-pro div.iconSensibiliser{
+body.page-application-nature-territoire div.iconSensibiliser{
   background: url(../img/pro/iconSensibiliser.png) no-repeat 50% 50% transparent;  
   background-size: auto;    
   height:111px;
 }
-body.page-pro div.styleTxtFold2 h3{
+body.page-application-nature-territoire div.styleTxtFold2 h2{
   text-align:center;
   text-align:center;
   font-family: 'ProximaNova-Semibold', sans-serif !important;
 }
-body.page-pro div.styleTxtFold2 p{
+body.page-application-nature-territoire div.styleTxtFold2 p{
   text-align:center;
   text-align:center;
   font-family: 'ProximaNova-Light', sans-serif !important;
   padding: 0 7% 0 7%;
 }
-body.page-pro div.styleTxtFold2 div.rowHaut{
+body.page-application-nature-territoire div.styleTxtFold2 div.rowHaut{
   margin-top:112px;
 }
-body.page-pro div.styleTxtFold2 div.rowBas{
+body.page-application-nature-territoire div.styleTxtFold2 div.rowBas{
   margin-top:139px;
 }
-body.page-pro div.styleTxtFold2 div.alignBlocHaut{
+body.page-application-nature-territoire div.styleTxtFold2 div.alignBlocHaut{
   margin-top:54px;
 }
-body.page-pro div.styleTxtFold2 div.alignBlocBas{
+body.page-application-nature-territoire div.styleTxtFold2 div.alignBlocBas{
   margin-top:22px;
 }
-body.page-pro div.borderBottomFold2{
+body.page-application-nature-territoire div.borderBottomFold2{
   border-bottom: 1px solid #a4a4a4;
 }
 /* FOLD3 */
-body.page-pro div.iphoneImg{
+body.page-application-nature-territoire div.iphoneImg{
   background-image: url('../img/pro/iphone_app_fold3.gif');
   background-position: center center;
   background-repeat:  no-repeat;
@@ -3097,7 +3099,7 @@ body.page-pro div.iphoneImg{
   margin-top:155px;
   margin-bottom:100px;
 }
-body.page-pro a.btnAppStore{
+body.page-application-nature-territoire a.btnAppStore{
   background: none;
   border: 1px solid #656565;
   border-radius: 45px;
@@ -3111,14 +3113,14 @@ body.page-pro a.btnAppStore{
   background-repeat: no-repeat;
   margin-right: 5%;
 }
-body.page-pro a.btnAppStore:hover{
+body.page-application-nature-territoire a.btnAppStore:hover{
   background: #656565;
   color: #fff;
   background-image: url('../img/pro/iphoneIconHover.png');
   background-position: 16% 50%;
   background-repeat: no-repeat;
 }
-body.page-pro a.btnGooglePlay{
+body.page-application-nature-territoire a.btnGooglePlay{
   background:none;
   border: 1px solid #46b973;
   border-radius: 45px;
@@ -3131,32 +3133,32 @@ body.page-pro a.btnGooglePlay{
   background-position: 16% 50%;
   background-repeat: no-repeat;
 }
-body.page-pro a.btnGooglePlay:hover{
+body.page-application-nature-territoire a.btnGooglePlay:hover{
   background: #46b973;
   color: #fff;
   background-image: url('../img/pro/googlePlayIconHover.png');
   background-position: 16% 50%;
   background-repeat: no-repeat;
 }
-body.page-pro div.placeBtnFold3{ 
+body.page-application-nature-territoire div.placeBtnFold3{ 
   margin-top:30px;
 }
-body.page-pro div.txtFold3 p{
+body.page-application-nature-territoire div.txtFold3 p{
   font-family: 'ProximaNova-Light', sans-serif !important;
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: justify;
 }
-body.page-pro div.txtFold3 h2{
+body.page-application-nature-territoire div.txtFold3 h3{
   font-family: 'ProximaNova-Thin', sans-serif !important;
   font-size:5em;
   color: #505050;
 }
-body.page-pro div.txtFold3{
+body.page-application-nature-territoire div.txtFold3{
   margin-top:270px;
 }
 /* FOLD4 */
-body.page-pro a.btnVoirLeSiteFold4{
+body.page-application-nature-territoire a.btnVoirLeSiteFold4{
   background:none;
   border: 1px solid #fff;
   border-radius: 45px;
@@ -3167,11 +3169,11 @@ body.page-pro a.btnVoirLeSiteFold4{
   letter-spacing: 1px;
   font-size:1.2em;
 }
-body.page-pro a.btnVoirLeSiteFold4:hover{
+body.page-application-nature-territoire a.btnVoirLeSiteFold4:hover{
   background-color:#fff;
   color: #505050;
 }
-body.page-pro div.imgFold4{
+body.page-application-nature-territoire div.imgFold4{
   background-image: url('../img/pro/imgFold4');
   height: 953px;
   background-position: 100% 50%;
@@ -3180,14 +3182,14 @@ body.page-pro div.imgFold4{
   background-size: cover;  
 
 }
-body.page-pro div.bgVert{
+body.page-application-nature-territoire div.bgVert{
   background: #4dbb74; /* Old browsers */
   background: -moz-linear-gradient(left, #4dbb74 0%, #4dbb8e 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(left, #4dbb74 0%,#4dbb8e 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to right, #4dbb74 0%,#4dbb8e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dbb74', endColorstr='#4dbb8e',GradientType=1 ); /* IE6-9 */
 }
-body.page-pro div.txtFold4 p{
+body.page-application-nature-territoire div.txtFold4 p{
   font-family: 'ProximaNova-Light', sans-serif !important;
   padding-top: 30px;
   padding-bottom: 73px;
@@ -3195,27 +3197,28 @@ body.page-pro div.txtFold4 p{
   padding-right: 19%;
   text-align: justify;
 }
-body.page-pro div.txtFold4 p a{
+body.page-application-nature-territoire div.txtFold4 p a{
   color: #fff;
 }
 
-body.page-pro div.txtFold4 h2{
+body.page-application-nature-territoire div.txtFold4 h3{
   font-family: 'ProximaNova-Thin', sans-serif !important;
   font-size:5em;
   color: #fff;
+  line-height: 1em;
 }
-body.page-pro div.txtFold4 {
+body.page-application-nature-territoire div.txtFold4 {
   margin-top:271px;
 }
 /* FOLD5 */
-body.page-pro div.imgFold5{
+body.page-application-nature-territoire div.imgFold5{
   background-image: url('../img/pro/ImgFold5.jpg');
   height: 1700px;
   background-position: center center;
   background-repeat:  no-repeat;
   background-size: cover;
 }
-body.page-pro a.btnVoirLivret{
+body.page-application-nature-territoire a.btnVoirLivret{
   background:none;
   border: 1px solid #505050;
   border-radius: 45px;
@@ -3226,11 +3229,11 @@ body.page-pro a.btnVoirLivret{
   letter-spacing: 1px;
   font-size:1.2em;
 }
-body.page-pro a.btnVoirLivret:hover{
+body.page-application-nature-territoire a.btnVoirLivret:hover{
   background-color:#505050;
   color:#fff ;
 }
-body.page-pro div.imgLivretFold5{
+body.page-application-nature-territoire div.imgLivretFold5{
   background-image: url('../img/pro/livret_papier.png');
   background-position: center center;
   background-repeat:  no-repeat;
@@ -3238,57 +3241,58 @@ body.page-pro div.imgLivretFold5{
   background-size: 100%;
   margin-top:155px;
 }
-body.page-pro div.txtFold5 p a{
+body.page-application-nature-territoire div.txtFold5 p a{
   color: rgb(51, 51, 51);
 }
-body.page-pro div.txtFold5 p{
+body.page-application-nature-territoire div.txtFold5 p{
   font-family: 'ProximaNova-Light', sans-serif !important;
   padding-top: 30px;
   padding-bottom: 60px;
   text-align: justify;
 }
-body.page-pro div.txtFold5 h2{
+body.page-application-nature-territoire div.txtFold5 h3{
   font-family: 'ProximaNova-Thin', sans-serif !important;
   font-size:5em;
   color: #505050;
   line-height: 72px;
 }
-body.page-pro div.txtFold5{
+body.page-application-nature-territoire div.txtFold5{
   margin-top:270px;
 }
 /* Statistiques */
-body.page-pro div.zoneStat{
+body.page-application-nature-territoire div.zoneStat{
   margin-top: 500px;
 }
-body.page-pro div.zoneStat h4{
+body.page-application-nature-territoire div.zoneStat p.bigNumber{
   text-align:center;
   font-size:3.5em;
   font-family: 'ProximaNova-Semibold', sans-serif;
   color: #3b3b3b;
   padding-top:30px;
+  line-height: 0.8em;
 }
-body.page-pro div.zoneStat p{
+body.page-application-nature-territoire div.zoneStat p{
   text-align:center;
   font-family: 'ProximaNova-Light', sans-serif;
 }
-body.page-pro div.iconEmerveillement{
+body.page-application-nature-territoire div.iconEmerveillement{
   background-image: url('../img/pro/iconEmerveillement.png');
   height:94px;
 }
-body.page-pro div.iconConnexion{
+body.page-application-nature-territoire div.iconConnexion{
   background-image: url('../img/pro/iconConnexion.png');
   height:94px;
 }
-body.page-pro div.iconTelechargement{
+body.page-application-nature-territoire div.iconTelechargement{
   background-image: url('../img/pro/iconTelechargement.png');
   height:94px;
 }
-body.page-pro div.iconLike{
+body.page-application-nature-territoire div.iconLike{
   background-image: url('../img/pro/iconLike.png');
   height:94px;
 }
 /* FOLD6 */
-body.page-pro div.imgCarteFold6{
+body.page-application-nature-territoire div.imgCarteFold6{
   background-image: url('../img/pro/ecocarto_national.png');
   height:783px;
   background-repeat: no-repeat;
@@ -3296,34 +3300,34 @@ body.page-pro div.imgCarteFold6{
   margin: 130px 0 130px 0;
   background-size: 90%;
 }
-body.page-pro div.txtFold6 p a{
+body.page-application-nature-territoire div.txtFold6 p a{
   color: rgb(51,51,51);
 }
-body.page-pro div.txtFold6 p{
+body.page-application-nature-territoire div.txtFold6 p{
   font-family: 'ProximaNova-Light', sans-serif !important;
   padding-top: 30px;
   padding-bottom: 80px;
   padding-right: 19%;
 }
-body.page-pro div.txtFold6 h2{
+body.page-application-nature-territoire div.txtFold6 h3{
   font-family: 'ProximaNova-Thin', sans-serif !important;
   font-size:5em;
   color: #505050;
-  line-height: 60px;
+  line-height: 1em;
 }
-body.page-pro div.txtFold6{
+body.page-application-nature-territoire div.txtFold6{
   margin-top: 230px;
   padding-bottom: 100px;
 }
 /* FOLD7 */
-body.page-pro div.txtTitleFold7{
+body.page-application-nature-territoire div.txtTitleFold7{
   text-align: center;
 }
-body.page-pro div.txtTitleFold7 p{
+body.page-application-nature-territoire div.txtTitleFold7 p{
   font-family: 'ProximaNova-Light', sans-serif !important;
   padding-top: 20px;
 }
-body.page-pro div.txtTitleFold7 h2{
+body.page-application-nature-territoire div.txtTitleFold7 h3{
   font-family: 'ProximaNova-Thin', sans-serif !important;
   font-size:5em;
   color: #505050;
@@ -3331,38 +3335,40 @@ body.page-pro div.txtTitleFold7 h2{
   line-height: 60px;
 }
 /* Basic formule */
-body.page-pro div.basicTitleFormule h3{
+body.page-application-nature-territoire div.basicTitleFormule p.fatStyle{
   font-family: 'ProximaNova-Bold', sans-serif;
   font-size: 5em;
   color: #505050;
+  padding: 0;
+  line-height: 0.8em;
 }
-body.page-pro div.basicTitleFormule p{
+body.page-application-nature-territoire div.basicTitleFormule p{
   font-family: 'ProximaNova-Light', sans-serif;
   font-size: 1.2em;
   color: #505050;
   padding-left: 0.5%;
   letter-spacing: 2px;
 }
-body.page-pro div.detailFormuleBasic{
+body.page-application-nature-territoire div.detailFormuleBasic{
   padding-bottom: 115px;
 }
-body.page-pro div.basicTitleFormule{
+body.page-application-nature-territoire div.basicTitleFormule{
   margin-top: 78px;
   margin-left: -13%;
 }
-body.page-pro div.detailFormuleBasic ul{
+body.page-application-nature-territoire div.detailFormuleBasic ul{
   list-style-type: none;
   font-family: 'ProximaNova-Light', sans-serif;
   margin-top: 15px;
   margin-bottom:50px;
 }
-body.page-pro div.detailFormuleBasic li{
+body.page-application-nature-territoire div.detailFormuleBasic li{
   line-height: 35px;  
 }
-body.page-pro span.txtFormuleBold{
+body.page-application-nature-territoire span.txtFormuleBold{
   font-family: 'ProximaNova-Bold', sans-serif;
 }
-body.page-pro a.btnDevisFormule{
+body.page-application-nature-territoire a.btnDevisFormule{
   background:none;
   border: 1px solid #46b973;
   border-radius: 45px;
@@ -3374,7 +3380,7 @@ body.page-pro a.btnDevisFormule{
   font-size:1.2em;
   margin-left: 3%;
 }
-body.page-pro a.btnDevisFormule:hover{
+body.page-application-nature-territoire a.btnDevisFormule:hover{
   background: #4dbb74; /* Old browsers */
   background: -moz-linear-gradient(left, #4dbb74 0%, #4dbb8e 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(left, #4dbb74 0%,#4dbb8e 100%); /* Chrome10-25,Safari5.1-6 */
@@ -3382,21 +3388,21 @@ body.page-pro a.btnDevisFormule:hover{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dbb74', endColorstr='#4dbb8e',GradientType=1 ); /* IE6-9 */
   color:#fff ;
 }
-body.page-pro div.zindexHaut{
+body.page-application-nature-territoire div.zindexHaut{
   z-index: 100;
   position: relative;
 }
-body.page-pro div.espaceRowFormule{
+body.page-application-nature-territoire div.espaceRowFormule{
   margin-top: 75px;
 }
-body.page-pro div.img1BasicFormule{
+body.page-application-nature-territoire div.img1BasicFormule{
   background-image: url('../img/pro/basic_formule_img1.jpg');
   height:601px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100%;
 }
-body.page-pro div.img2BasicFormule{
+body.page-application-nature-territoire div.img2BasicFormule{
   background-image: url('../img/pro/basic_formule_img2_hover.jpg');
   height:420px;
   background-repeat: no-repeat;
@@ -3411,7 +3417,7 @@ body.page-pro div.img2BasicFormule{
   -o-filter: grayscale(100%); 
   -o-transition: .5s ease-in-out;
 }
-body.page-pro div.img2BasicFormule:hover{
+body.page-application-nature-territoire div.img2BasicFormule:hover{
   -webkit-filter: grayscale(0%);
   -webkit-transition: .5s ease-in-out;
   -moz-filter: grayscale(0%);
@@ -3419,14 +3425,14 @@ body.page-pro div.img2BasicFormule:hover{
   -o-filter: grayscale(0%);
   -o-transition: .5s ease-in-out;
 }
-body.page-pro div.img1StandartFormule{
+body.page-application-nature-territoire div.img1StandartFormule{
   background-image: url('../img/pro/standart_formule_img1.jpg');
   height:521px;
   background-repeat: no-repeat;
   background-position: right center;
   background-size: 62%;
 }
-body.page-pro div.img2StandartFormule{
+body.page-application-nature-territoire div.img2StandartFormule{
   background-image: url('../img/pro/standart_formule_img2_hover.jpg');
   height:448px;
   background-repeat: no-repeat;
@@ -3440,7 +3446,7 @@ body.page-pro div.img2StandartFormule{
   -o-transition: .5s ease-in-out;
   margin-top: -150px;
 }
-body.page-pro div.img2StandartFormule:hover{
+body.page-application-nature-territoire div.img2StandartFormule:hover{
   -webkit-filter: grayscale(0%);
   -webkit-transition: .5s ease-in-out;
   -moz-filter: grayscale(0%);
@@ -3448,35 +3454,37 @@ body.page-pro div.img2StandartFormule:hover{
   -o-filter: grayscale(0%);
   -o-transition: .5s ease-in-out;
 }
-body.page-pro div.standartTitleFormule h3{
+body.page-application-nature-territoire div.standartTitleFormule p.fatStyle{
   font-family: 'ProximaNova-Bold', sans-serif;
   font-size: 5em;
   color: #505050;
+  line-height: 0.8em;
+  padding: 0; 
 }
-body.page-pro div.standartTitleFormule p{
+body.page-application-nature-territoire div.standartTitleFormule p{
   font-family: 'ProximaNova-Light', sans-serif;
   font-size: 1.2em;
   color: #fff;
   padding-left: 0.5%;
   letter-spacing: 2px;
 }
-body.page-pro div.standartTitleFormule{
+body.page-application-nature-territoire div.standartTitleFormule{
   margin-top: 78px;
   margin-left: -50%;
 }
-body.page-pro div.img1PreniumFormule{
+body.page-application-nature-territoire div.img1PreniumFormule{
   background-image: url('../img/pro/prenium_formule_img1.jpg');
   height:452px;
   background-repeat: no-repeat;
   background-position: 77% center;
   background-size: 68%;
 }
-body.page-pro div.preniumRowFluid{
+body.page-application-nature-territoire div.preniumRowFluid{
   margin-top:80px;
   z-index: 100;
   position:relative;
 }
-body.page-pro div.img2PreniumFormule{
+body.page-application-nature-territoire div.img2PreniumFormule{
   background-image: url('../img/pro/prenium_formule_img2_hover.jpg');
   height:504px;
   background-repeat: no-repeat;
@@ -3491,7 +3499,7 @@ body.page-pro div.img2PreniumFormule{
   -o-transition: .5s ease-in-out;
   margin-top: -150px;
 }
-body.page-pro div.img2PreniumFormule:hover{
+body.page-application-nature-territoire div.img2PreniumFormule:hover{
   -webkit-filter: grayscale(0%);
   -webkit-transition: .5s ease-in-out;
   -moz-filter: grayscale(0%);
@@ -3499,37 +3507,39 @@ body.page-pro div.img2PreniumFormule:hover{
   -o-filter: grayscale(0%);
   -o-transition: .5s ease-in-out;
 }
-body.page-pro div.preniumTitleFormule h3{
+body.page-application-nature-territoire div.preniumTitleFormule p.fatStyle{
   font-family: 'ProximaNova-Bold', sans-serif;
   font-size: 5em;
   color: #505050;
   padding-bottom: 11px;
+  line-height: 0.8em;
 }
-body.page-pro div.preniumTitleFormule p{
+body.page-application-nature-territoire div.preniumTitleFormule p{
   font-family: 'ProximaNova-Semibold', sans-serif;
   font-size: 1.2em;
   color: #fff;
   padding-left: 0.5%;
   letter-spacing: 2px;
 }
-body.page-pro div.preniumTitleFormule{
+body.page-application-nature-territoire div.preniumTitleFormule{
   margin-top: 93px;
   margin-left: -16%;
 }
-body.page-pro div.positionTxtFormulePrenium{
+body.page-application-nature-territoire div.positionTxtFormulePrenium{
   margin-left:-3%;
 }
-body.page-pro div.positionPreniumFormuleDetail{
+body.page-application-nature-territoire div.positionPreniumFormuleDetail{
   margin-left:10%;
 }
-body.page-pro div.titleRecapFormule h3{
+body.page-application-nature-territoire div.titleRecapFormule p.kmeStyle{
   font-family: 'ProximaNova-Bold', sans-serif;
   font-size: 3em;
   color: #505050;
   margin-top: 0;
   text-align: center;
+  line-height: 0.8em;
 }
-body.page-pro div.titleRecapFormule p{
+body.page-application-nature-territoire div.titleRecapFormule p{
   font-family: 'ProximaNova-Light', sans-serif;
   font-size: 1.2em;
   color: #505050;
@@ -3537,11 +3547,11 @@ body.page-pro div.titleRecapFormule p{
   margin-top: 40px;
   text-align: center;
 }
-body.page-pro div.borderRecapFormule{
+body.page-application-nature-territoire div.borderRecapFormule{
   border: 1px #909090 solid;
   margin-top: 50px;
 }
-body.page-pro div.borderRecapFormuleStandart{
+body.page-application-nature-territoire div.borderRecapFormuleStandart{
   border: none;
   background: #4dbb74; /* Old browsers */
   background: -moz-linear-gradient(left, #4dbb74 0%, #4dbb8e 100%); /* FF3.6-15 */
@@ -3551,45 +3561,45 @@ body.page-pro div.borderRecapFormuleStandart{
   color: #fff;
   margin-top: 50px;
 }
-body.page-pro div.borderRecapFormuleStandart:hover{
+body.page-application-nature-territoire div.borderRecapFormuleStandart:hover{
   border: 1px #46b973 solid;
   background: none;
   color: #46b973;
 }
-body.page-pro div.borderRecapFormuleStandart div.titleRecapFormule p,
-body.page-pro div.borderRecapFormuleStandart div.titleRecapFormule h3{
+body.page-application-nature-territoire div.borderRecapFormuleStandart div.titleRecapFormule p,
+body.page-application-nature-territoire div.borderRecapFormuleStandart div.titleRecapFormule h3{
   color: #fff;
 }
-body.page-pro div.borderRecapFormuleStandart div.titleRecapFormule:hover p,
-body.page-pro div.borderRecapFormuleStandart div.titleRecapFormule:hover h3{
+body.page-application-nature-territoire div.borderRecapFormuleStandart div.titleRecapFormule:hover p,
+body.page-application-nature-territoire div.borderRecapFormuleStandart div.titleRecapFormule:hover h3{
   color: #46b973;
 }
-body.page-pro div.borderRecapFormule:hover{
+body.page-application-nature-territoire div.borderRecapFormule:hover{
   border: 1px #46b973 solid;
 }
-body.page-pro div.titleRecapFormule div.detailFormuleBasic li{
+body.page-application-nature-territoire div.titleRecapFormule div.detailFormuleBasic li{
   line-height: 17px;
   padding-bottom: 15px;
   list-style-type: disc;
 }
-body.page-pro div.titleRecapFormule div.detailFormuleBasic ul{
+body.page-application-nature-territoire div.titleRecapFormule div.detailFormuleBasic ul{
   padding: 0 10% 0 10%;
   margin-top: 30px;
 }
-body.page-pro div.titleRecapFormule li.hoverVert:hover{
+body.page-application-nature-territoire div.titleRecapFormule li.hoverVert:hover{
   color: #46b973;
 }
-body.page-pro div.paddindFormuleBasicRecap{
+body.page-application-nature-territoire div.paddindFormuleBasicRecap{
   padding-bottom: 79px;
 }
-body.page-pro div.divAppDedie{
+body.page-application-nature-territoire div.divAppDedie{
   border: solid 1px #ed8f21;
   color: #505050;
   margin-top: 50px;
   padding : 31px 0;
   margin-top: -185px;
 }
-body.page-pro div.divAppDedie:hover{
+body.page-application-nature-territoire div.divAppDedie:hover{
   background: #ed8f21; /* Old browsers */
   background: -webkit-linear-gradient(left, #ed8f21 0%, #f27115 100%);
   background: -o-linear-gradient(left, #ed8f21 0%, #f27115 100%);
@@ -3597,7 +3607,7 @@ body.page-pro div.divAppDedie:hover{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed8f21', endColorstr='#f27115',GradientType=1 ); /* IE6-9 */
   color: #fff;
 }
-body.page-pro div.divAppDedie h4{
+body.page-application-nature-territoire div.divAppDedie h4{
   font-family: 'ProximaNova-Light', sans-serif;
   font-size: 1.2em;
   letter-spacing: 2px;
@@ -3605,35 +3615,36 @@ body.page-pro div.divAppDedie h4{
   color: #ed8f21;
   margin: 0;
 }
-body.page-pro div.divAppDedie h3{
+body.page-application-nature-territoire div.divAppDedie p.kmeStyle{
   font-family: 'ProximaNova-Bold', sans-serif;
   font-size: 3em;
   margin-top: 0;
   color: #ed8f21;
   text-align: center;
+  line-height: 0.8em;
 }
-body.page-pro div.divAppDedie:hover h4{
+body.page-application-nature-territoire div.divAppDedie:hover h4{
   color: #fff;
 }
-body.page-pro div.divAppDedie:hover h3{
+body.page-application-nature-territoire div.divAppDedie:hover p.kmeStyle{
   color: #fff;
 }
-body.page-pro div.divAppDedie p{
+body.page-application-nature-territoire div.divAppDedie p{
   font-family: 'ProximaNova-Light', sans-serif;
   text-align: center;
   padding: 0 10%;
   line-height:20px;
   padding-top: 10px;
 }
-body.page-pro div.separateurProRecapitulatif{
+body.page-application-nature-territoire div.separateurProRecapitulatif{
   border-bottom: 1px solid #dedede;
   padding-top: 57px;
 }
-body.page-pro div.paddindFormulePreniumRecap{
+body.page-application-nature-territoire div.paddindFormulePreniumRecap{
   padding-bottom: 55px;
 }
-body.page-pro input.btnDevisRecap,
-body.page-pro a.btnDevisRecap{
+body.page-application-nature-territoire input.btnDevisRecap,
+body.page-application-nature-territoire a.btnDevisRecap{
   background:none;
   border: 1px solid #46b973;
   border-radius: 45px;
@@ -3644,8 +3655,8 @@ body.page-pro a.btnDevisRecap{
   letter-spacing: 1px;
   font-size:1.2em;
 }
-body.page-pro input.btnDevisRecap:hover,
-body.page-pro a.btnDevisRecap:hover{
+body.page-application-nature-territoire input.btnDevisRecap:hover,
+body.page-application-nature-territoire a.btnDevisRecap:hover{
   background: #4dbb74; /* Old browsers */
   background: -moz-linear-gradient(left, #4dbb74 0%, #4dbb8e 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(left, #4dbb74 0%,#4dbb8e 100%); /* Chrome10-25,Safari5.1-6 */
@@ -3653,33 +3664,33 @@ body.page-pro a.btnDevisRecap:hover{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dbb74', endColorstr='#4dbb8e',GradientType=1 ); /* IE6-9 */
   color:#fff ;
 }
-body.page-pro div.placementBtnRecap{
+body.page-application-nature-territoire div.placementBtnRecap{
   margin: 90px 0;
   text-align: center;
 }
 /* FOLD TEMOIGNAGE */
-body.page-pro div.imgTemoignage div.oneTemoignage{
+body.page-application-nature-territoire div.imgTemoignage div.oneTemoignage{
   display: inline-block;
   width: 20%;
   vertical-align: top;
   padding: 0 2%;
 }
-body.page-pro div.imgTemoignage p b{
+body.page-application-nature-territoire div.imgTemoignage p b{
   margin-top: 75px;
   display: inline-block;
   min-height: 66px;
   vertical-align: bottom;
 }
-body.page-pro div.imgTemoignage p i{
+body.page-application-nature-territoire div.imgTemoignage p i{
   padding-top: 30px;
   border-top: 1px solid #fff;
   display: inline-block;
 }
-body.page-pro div.imgTemoignage p{
+body.page-application-nature-territoire div.imgTemoignage p{
   text-align: center;
   color: #fff;    
 }
-body.page-pro div.imgTemoignage{
+body.page-application-nature-territoire div.imgTemoignage{
   background-image: url('../img/pro/fond_temoignage.jpg');
   background-repeat: no-repeat;
   background-position: center center;
@@ -3688,11 +3699,11 @@ body.page-pro div.imgTemoignage{
   text-align: center;
 }
 /* FOLD FORM CONTACT */
-body.page-pro div.formContactPro{
+body.page-application-nature-territoire div.formContactPro{
   margin-top:30px;
   text-align: center;
 }
-body.page-pro div.formContactPro input[type="text"]{
+body.page-application-nature-territoire div.formContactPro input[type="text"]{
   padding: 13px 6%;
   border-radius: 45px;
   margin-top: 20px;
@@ -3701,14 +3712,14 @@ body.page-pro div.formContactPro input[type="text"]{
   box-shadow: none;  
   width: 88%;
 }
-body.page-pro div.formContactPro input.large[type="text"]{
+body.page-application-nature-territoire div.formContactPro input.large[type="text"]{
   padding: 13px 2%;
   width: 96%;
 }
-body.page-pro div.formContactPro div.grandInput input[type="text"]{
+body.page-application-nature-territoire div.formContactPro div.grandInput input[type="text"]{
   padding: 13px 23% 13px 2%;
 }
-body.page-pro div.formContactPro textarea{
+body.page-application-nature-territoire div.formContactPro textarea{
   padding: 20px 3% 20px 3%;
   border-radius: 30px;
   margin-top: 20px;
@@ -3718,26 +3729,26 @@ body.page-pro div.formContactPro textarea{
   width: 60%;
   min-height: 100px;
 }
-body.page-pro div.formButtonRadio{
+body.page-application-nature-territoire div.formButtonRadio{
   text-align: center;
 }
-body.page-pro div.formButtonRadio p{
+body.page-application-nature-territoire div.formButtonRadio p{
   font-family: 'ProximaNova-Light', sans-serif;
   color: #505050;
   letter-spacing: 1%;
 }
-body.page-pro div.formButtonRadio p.titleBtnRadioFormContact{
+body.page-application-nature-territoire div.formButtonRadio p.titleBtnRadioFormContact{
   font-size:1.4em;
   margin-bottom: 15px;
   letter-spacing: 1%;
 }
-body.page-pro div.formButtonRadio input[type=radio] {
+body.page-application-nature-territoire div.formButtonRadio input[type=radio] {
   display: none;
 }
-body.page-pro div.formButtonRadio label:before{
+body.page-application-nature-territoire div.formButtonRadio label:before{
   border-radius: 8px;
 }
-body.page-pro div.formButtonRadio label {
+body.page-application-nature-territoire div.formButtonRadio label {
   display: inline-block;
   cursor: pointer;
   position: relative;
@@ -3745,7 +3756,7 @@ body.page-pro div.formButtonRadio label {
   margin-right: 15px;
   font-size: 13px;
 }
-body.page-pro div.formButtonRadio label:before {
+body.page-application-nature-territoire div.formButtonRadio label:before {
   content: "";
   display: inline-block;
   width: 16px;
@@ -3756,27 +3767,27 @@ body.page-pro div.formButtonRadio label:before {
   bottom: 1px;
   background-color: #cacaca;
 }
-body.page-pro div.g-recaptcha {
+body.page-application-nature-territoire div.g-recaptcha {
   display: inline-block;
   padding-bottom: 30px;
 }
-body.page-pro div.buttonRow {
+body.page-application-nature-territoire div.buttonRow {
   width: 100%;
   height: 57px;
   margin-top: 51px;
   margin-bottom: 40px;
 }
-body.page-pro .radio label:before {
+body.page-application-nature-territoire .radio label:before {
   border-radius: 8px;
 }
-body.page-pro div.formButtonRadio input[type=radio]:checked + label:before {
+body.page-application-nature-territoire div.formButtonRadio input[type=radio]:checked + label:before {
   content: "\2022";
   color: #f3f3f3;
   font-size: 30px;
   text-align: center;
   line-height: 15px;
 }
-body.page-pro div.formButtonRadio div.blocRadioButtons{
+body.page-application-nature-territoire div.formButtonRadio div.blocRadioButtons{
   margin-bottom: 50px;
   text-align: left;
   margin: 0 auto;
@@ -5686,43 +5697,43 @@ margin-left: 9%;
   body.front div#img-front {
     background-position: 84% 0%;
   }
-  body.page-pro.cookieBar{
+  body.page-application-nature-territoire.cookieBar{
     padding-top: 25px; 
   }
 }
 /*En dessous de 1200*/
 @media (max-width: 1199px){  
   /* Pro */
-  body.page-pro div.divAppDedie {    
+  body.page-application-nature-territoire div.divAppDedie {    
     margin-top: -204px;
   }
-  body.page-pro div.detailFormuleBasic {
+  body.page-application-nature-territoire div.detailFormuleBasic {
     padding-bottom: 0;
   }
-  body.page-pro div.paddindFormulePreniumRecap {
+  body.page-application-nature-territoire div.paddindFormulePreniumRecap {
     padding-bottom: 0;
     min-height: 997px;
   }
-  body.page-pro div.standartTitleFormule p,    
-  body.page-pro div.preniumTitleFormule p {    
+  body.page-application-nature-territoire div.standartTitleFormule p,    
+  body.page-application-nature-territoire div.preniumTitleFormule p {    
     color: #505050;
   }
-  body.page-pro div.imgTemoignage {   
+  body.page-application-nature-territoire div.imgTemoignage {   
     padding: 100px 2% 0 2%;
   }
-  body.page-pro div.img2BasicFormule,
-  body.page-pro div.img2PreniumFormule,
-  body.page-pro div.img2StandartFormule {
+  body.page-application-nature-territoire div.img2BasicFormule,
+  body.page-application-nature-territoire div.img2PreniumFormule,
+  body.page-application-nature-territoire div.img2StandartFormule {
     display: none;
   }
-  body.page-pro div.espaceRowFormule {
+  body.page-application-nature-territoire div.espaceRowFormule {
     margin-top: 0px;
   }
-  body.page-pro div.txtFold3 h2 {  
+  body.page-application-nature-territoire div.txtFold3 h3 {  
     font-size: 4em;
     white-space: nowrap;
   }
-  body.page-pro div.imgFold4 {    
+  body.page-application-nature-territoire div.imgFold4 {    
     background-position: 70% 50%;
   }
   /*HP*/
@@ -5872,83 +5883,83 @@ margin-left: 9%;
 }
 @media  (max-width: 979px) {
   /* pro */
-  body.page-pro div.paddindFormuleBasicRecap {
+  body.page-application-nature-territoire div.paddindFormuleBasicRecap {
     padding-bottom: 0;
   }
-  body.page-pro div.paddindFormulePreniumRecap {  
+  body.page-application-nature-territoire div.paddindFormulePreniumRecap {  
     min-height: 707px;
   }
-  body.page-pro div.formContactPro textarea {
+  body.page-application-nature-territoire div.formContactPro textarea {
     width: 94%;
   }
-  body.page-pro div.imgApportClient {
+  body.page-application-nature-territoire div.imgApportClient {
     display: none;
   }
-  body.page-pro div.imgTemoignage {
+  body.page-application-nature-territoire div.imgTemoignage {
     padding: 60px 2% 0 2%;
   }
-  body.page-pro div.imgTemoignage p b {   
+  body.page-application-nature-territoire div.imgTemoignage p b {   
     min-height: 105px;
   }
-  body.page-pro div.divAppDedie {    
+  body.page-application-nature-territoire div.divAppDedie {    
     margin-top: 50px;
   }
-  body.page-pro div.borderRecapFormuleStandart {    
+  body.page-application-nature-territoire div.borderRecapFormuleStandart {    
     padding: 10px 0;
   }
-  body.page-pro div.img1StandartFormule {
+  body.page-application-nature-territoire div.img1StandartFormule {
     display: inline-block;
     width: 46%;
     background-size: 100%;
     height: 455px;
     vertical-align: top;
   }
-  body.page-pro div.preniumRowFluid {
+  body.page-application-nature-territoire div.preniumRowFluid {
     margin-top: -37px;
   }
-  body.page-pro div.positionTxtFormulePrenium h3 {
+  body.page-application-nature-territoire div.positionTxtFormulePrenium h3 {
     padding-left: 0;
   }
-  body.page-pro div.preniumTitleFormule {    
+  body.page-application-nature-territoire div.preniumTitleFormule {    
     margin-left: 0%;
   }
-  body.page-pro div.detailFormuleBasic ul {
+  body.page-application-nature-territoire div.detailFormuleBasic ul {
     margin-left: 0;
   }
-  body.page-pro div.positionPreniumFormuleDetail {
+  body.page-application-nature-territoire div.positionPreniumFormuleDetail {
     margin-left: 0;
   }
-  body.page-pro div.positionTxtFormulePrenium {
+  body.page-application-nature-territoire div.positionTxtFormulePrenium {
     margin-left: 0;
     text-align: center;
     padding: 0 3%;
   }
-  body.page-pro div.img1PreniumFormule {   
+  body.page-application-nature-territoire div.img1PreniumFormule {   
     height: 345px;
     background-position: center;
     background-size: 76%;
   } 
-  body.page-pro div.standartTitleFormule {  
+  body.page-application-nature-territoire div.standartTitleFormule {  
     margin-left: -38%;
   }
-  body.page-pro div.otherTwo {
+  body.page-application-nature-territoire div.otherTwo {
     display: inline-block;
     width: 53%;
     vertical-align: top;
   }
-  body.page-pro div.espaceRowFormule {
+  body.page-application-nature-territoire div.espaceRowFormule {
     margin-top: 0px;
     margin-bottom: 95px;
   }
-  body.page-pro div#formules div.otherOne{
+  body.page-application-nature-territoire div#formules div.otherOne{
     display: inline-block;
     width: 53%;
   }    
-  body.page-pro div.imgCarteFold6 {    
+  body.page-application-nature-territoire div.imgCarteFold6 {    
     margin: 130px 0 10px 0;
     background-size: 87%;
   }
-  body.page-pro div.img1BasicFormule {  
+  body.page-application-nature-territoire div.img1BasicFormule {  
     height: 500px;  
     background-position: 0 0;
     background-size: 100%;
@@ -5956,70 +5967,70 @@ margin-left: 9%;
     width: 46%;
     vertical-align: top;
   }
-  body.page-pro div.txtTitleFold7 {
+  body.page-application-nature-territoire div.txtTitleFold7 {
     text-align: center;
     padding-bottom: 50px;
     padding-left: 3%;
     padding-right: 3%;
   }
-  body.page-pro div.txtFold6 {
+  body.page-application-nature-territoire div.txtFold6 {
     margin-top: 50px;
     padding: 0 5%;
     text-align: center;
   }
-  body.page-pro div.imgFold5 {   
+  body.page-application-nature-territoire div.imgFold5 {   
     height: 1902px;
   }
-  body.page-pro div.txtFold6 p {    
+  body.page-application-nature-territoire div.txtFold6 p {    
     padding-right: 0;
     text-align: left;
   }
-  body.page-pro div.zoneStat {
+  body.page-application-nature-territoire div.zoneStat {
     margin-top: 59px;
   }
-  body.page-pro div.zoneStat div.oneStat{
+  body.page-application-nature-territoire div.zoneStat div.oneStat{
     width: 49%;
     float: none;
     display: inline-block;
     padding-bottom: 65px;
   }
-  body.page-pro div.txtFold4 {
+  body.page-application-nature-territoire div.txtFold4 {
     margin-top: 0;
     padding: 80px 17%;
   }    
-  body.page-pro div.txtFold4 p {    
+  body.page-application-nature-territoire div.txtFold4 p {    
     padding-right: 0%;
   }
-  body.page-pro div.txtFold5 { 
+  body.page-application-nature-territoire div.txtFold5 { 
     margin-top: 130px;
     padding: 0 7%;
   }   
-  body.page-pro div.placeBtnFold3 {    
+  body.page-application-nature-territoire div.placeBtnFold3 {    
     text-align: center;
   }
-  body.page-pro div.imgFold4 {    
+  body.page-application-nature-territoire div.imgFold4 {    
     background-position: 100% 50%;
   }  
-  body.page-pro.cookieBar {
+  body.page-application-nature-territoire.cookieBar {
     padding-top: 0px;
   }
-  body.page-pro div.styleTxtFold2 div.rowHaut{
+  body.page-application-nature-territoire div.styleTxtFold2 div.rowHaut{
     margin-top: 0;
   }
-  body.page-pro div.styleTxtFold2 div.alignBlocHaut {
+  body.page-application-nature-territoire div.styleTxtFold2 div.alignBlocHaut {
     margin-bottom: 54px;
   }
-  body.page-pro div.styleTxtFold2 div.rowBas {
+  body.page-application-nature-territoire div.styleTxtFold2 div.rowBas {
     margin-top: 0;
   }
-  body.page-pro div.styleTxtFold2 div.alignBlocBas {
+  body.page-application-nature-territoire div.styleTxtFold2 div.alignBlocBas {
     margin-top: 60px;
     margin-bottom: 60px;
   }
-  body.page-pro div.txtFold3 {
+  body.page-application-nature-territoire div.txtFold3 {
     margin-top: 90px;
   }
-  body.page-pro div.borderBottomFold2 {  
+  body.page-application-nature-territoire div.borderBottomFold2 {  
     padding-bottom: 100px;
   }
   /* page mobile */
@@ -6588,16 +6599,16 @@ margin-left: 9%;
   
 }
 @media (max-width: 850px){
-  body.page-pro div.imgFold4 {
+  body.page-application-nature-territoire div.imgFold4 {
     background-position: 77% 50%;
   }
 }
 @media (max-width: 767px) {  
   /* Pro */
-  body.page-pro div#temoignages {
+  body.page-application-nature-territoire div#temoignages {
     padding: 35px 2% 0 2%;
   }
-  body.page-pro div.imgTemoignage {   
+  body.page-application-nature-territoire div.imgTemoignage {   
     height: 738px;
     padding: 40px 2% 0 2%;
     background-size: cover;
@@ -6605,39 +6616,39 @@ margin-left: 9%;
     -webkit-background-size: cover;    
     -ms-background-size: cover;
   }
-  body.page-pro div.imgTemoignage p b {
+  body.page-application-nature-territoire div.imgTemoignage p b {
     min-height: 67px;
   }
-  body.page-pro div.imgTemoignage div.oneTemoignage {   
+  body.page-application-nature-territoire div.imgTemoignage div.oneTemoignage {   
     width: 40%;
     padding-bottom: 55px;
   }
-  body.page-pro div#devis{
+  body.page-application-nature-territoire div#devis{
     padding: 0 3%;
   }
-  body.page-pro div.txtTitleFold7 h2 {   
+  body.page-application-nature-territoire div.txtTitleFold7 h3 {   
     font-size: 4em;
   }
-  body.page-pro div.img1PreniumFormule {      
+  body.page-application-nature-territoire div.img1PreniumFormule {      
       background-size: 100%;
   }
-  body.page-pro div.imgCarteFold6 {
+  body.page-application-nature-territoire div.imgCarteFold6 {
     margin: 51px 0 0px 0;
     height: 640px;
   }
-  body.page-pro div.imgFold5 {   
+  body.page-application-nature-territoire div.imgFold5 {   
     height: 2000px;
   }
-  body.page-pro div.imgLivretFold5 {    
+  body.page-application-nature-territoire div.imgLivretFold5 {    
     margin-top: 57px;
   }
-  body.page-pro div.zoneStat {
+  body.page-application-nature-territoire div.zoneStat {
     margin-top: 160px;
   }
-  body.page-pro div.txtFold3{
+  body.page-application-nature-territoire div.txtFold3{
     padding: 0px 10%;
   }
-  body.page-pro div.imgFold4 {
+  body.page-application-nature-territoire div.imgFold4 {
     background-position: 71% 50%;
   }
   /* nav */
@@ -6907,12 +6918,12 @@ margin-left: 9%;
 }
 @media (max-width: 650px) {
   /* Pro */
-  body.page-pro div.imgFold4 {
+  body.page-application-nature-territoire div.imgFold4 {
     background-position: -142px 50%;
     background-size: 126%;
     height: 544px;
   }
-  body.page-pro div.txtFold4 p {   
+  body.page-application-nature-territoire div.txtFold4 p {   
     padding-right: 0;
   }
   /*Page mobile*/
@@ -7027,13 +7038,13 @@ margin-left: 9%;
     background-position: 42% 5%;
   }
   /* Pro */
-  body.page-pro div.imgFold4 {
+  body.page-application-nature-territoire div.imgFold4 {
     background-position: 87% 0%;
   }
-  body.page-pro div.imgLivretFold5 {
+  body.page-application-nature-territoire div.imgLivretFold5 {
     margin-top: 22px;
   }
-  body.page-pro div.imgTemoignage {   
+  body.page-application-nature-territoire div.imgTemoignage {   
     padding: 8px 2% 0 2%;
   }
 }
@@ -7067,93 +7078,93 @@ margin-left: 9%;
     background-size: 90%;
   }
   /* Pro */
-  body.page-pro div.imgTemoignage {
+  body.page-application-nature-territoire div.imgTemoignage {
     padding: 0px 2% 0 2%;
   }
 }
 @media (max-width: 480px) {
   /* Pro */
-  body.page-pro div.imgTemoignage div.oneTemoignage {  
+  body.page-application-nature-territoire div.imgTemoignage div.oneTemoignage {  
     padding-bottom: 0px;
   }
-  body.page-pro div.imgTemoignage {
+  body.page-application-nature-territoire div.imgTemoignage {
     height: 1150px;
   }
-  body.page-pro div.imgTemoignage div.oneTemoignage {
+  body.page-application-nature-territoire div.imgTemoignage div.oneTemoignage {
     width: 72%;
   }
-  body.page-pro div.txtTitleFold7 h2 {   
+  body.page-application-nature-territoire div.txtTitleFold7 h3 {   
     font-size: 3.5em;
   }
-  body.page-pro div.preniumTitleFormule {
+  body.page-application-nature-territoire div.preniumTitleFormule {
     margin-top: 0;
     margin-left: 0;
   }
-  body.page-pro div.positionPreniumFormuleDetail {
+  body.page-application-nature-territoire div.positionPreniumFormuleDetail {
     margin-left: 0%;
   }
-  body.page-pro div.preniumTitleFormule p,    
-  body.page-pro div.standartTitleFormule p {    
+  body.page-application-nature-territoire div.preniumTitleFormule p,    
+  body.page-application-nature-territoire div.standartTitleFormule p {    
     display: none;
   }
-  body.page-pro div.positionTxtFormulePrenium {
+  body.page-application-nature-territoire div.positionTxtFormulePrenium {
     padding: 0 3%;
     margin-bottom: 60px;
     text-align: left;
     margin-top: 30px;
   }
-  body.page-pro div.preniumTitleFormule h3,  
-  body.page-pro div.basicTitleFormule h3,  
-  body.page-pro div.standartTitleFormule h3 {   
+  body.page-application-nature-territoire div.preniumTitleFormule p.fatStyle,  
+  body.page-application-nature-territoire div.basicTitleFormule p.fatStyle,  
+  body.page-application-nature-territoire div.standartTitleFormule p.fatStyle {   
     font-size: 4em;
     padding-left: 0;
     margin-left: 0;
   }
-  body.page-pro div.img1PreniumFormule,  
-  body.page-pro div.img1StandartFormule,  
-  body.page-pro div.img1BasicFormule {   
+  body.page-application-nature-territoire div.img1PreniumFormule,  
+  body.page-application-nature-territoire div.img1StandartFormule,  
+  body.page-application-nature-territoire div.img1BasicFormule {   
     width: 100%;   
     height: 240px;
     background-position: center;
     background-size: 100%;
   }
-  body.page-pro div.img1BasicFormule {   
+  body.page-application-nature-territoire div.img1BasicFormule {   
     background-position: center 29%;
   }
-  body.page-pro div#formules div.otherTwo{
+  body.page-application-nature-territoire div#formules div.otherTwo{
     margin-bottom: 30px;
   }
-  body.page-pro div#formules div.otherOne,   
-  body.page-pro div#formules div.otherTwo, 
-  body.page-pro div#formules div.positionTxtFormulePrenium {   
+  body.page-application-nature-territoire div#formules div.otherOne,   
+  body.page-application-nature-territoire div#formules div.otherTwo, 
+  body.page-application-nature-territoire div#formules div.positionTxtFormulePrenium {   
     width: 100%;
     padding: 28px 3% 28px 3%;
   }    
-  body.page-pro div.zoneStat {
+  body.page-application-nature-territoire div.zoneStat {
     margin-top: 120px;
   }
-  body.page-pro div.basicTitleFormule,
-  body.page-pro div.standartTitleFormule {
+  body.page-application-nature-territoire div.basicTitleFormule,
+  body.page-application-nature-territoire div.standartTitleFormule {
     margin-top: 0;
     margin-left: 0;
   }  
-  body.page-pro div.imgFold5 {
+  body.page-application-nature-territoire div.imgFold5 {
     height: 1400px;
   }
-  body.page-pro div#presence {
+  body.page-application-nature-territoire div#presence {
     margin-top: 1060px;
   }
-  body.page-pro div.zoneStat div.oneStat {
+  body.page-application-nature-territoire div.zoneStat div.oneStat {
     width: 100%;
   }
-  body.page-pro div.txtFold4 h2 {
+  body.page-application-nature-territoire div.txtFold4 h2 {
     font-size: 4em;
     line-height: 60px;
   }
-  body.page-pro div.imgFold4 {   
+  body.page-application-nature-territoire div.imgFold4 {   
     height: 521px;
   }
-  body.page-pro div.txtFold4 {
+  body.page-application-nature-territoire div.txtFold4 {
     margin-top: -58px;
   }
   /*Blog*/
@@ -7274,7 +7285,10 @@ margin-left: 9%;
 }
 @media (max-width: 396px) {
   /* Pro */
-  body.page-pro div.imgFold4 {
+  body.page-application-nature-territoire div.txtFold6 h3 {   
+    font-size: 4em;
+  }
+  body.page-application-nature-territoire div.imgFold4 {
     height: 439px;
   }
   /*HP*/
@@ -7319,7 +7333,7 @@ margin-left: 9%;
 }
 @media (max-width: 390px) {
   /* Pro */
-  body.page-pro div.txtFold3 h2 {
+  body.page-application-nature-territoire div.txtFold3 h2 {
     font-size: 3em;
   }
   body.node-type-espece #fieldPersoCriteria1line div {
@@ -7375,7 +7389,13 @@ margin-left: 9%;
 
 @media (max-width: 350px) {
   /* Pro */
-  body.page-pro div.imgFold4 {
+  body.page-application-nature-territoire div.txtTitleFold7 h3 {
+    font-size: 3em;
+  }
+  body.page-application-nature-territoire div.txtFold6 h3 {    
+    font-size: 3em;
+  }
+  body.page-application-nature-territoire div.imgFold4 {
     height: 367px;
   }
   body.front div.fleche-balade{
@@ -7397,6 +7417,11 @@ margin-left: 9%;
 }
 
 @media (max-width: 300px) {
+  /* pro */
+  body.page-application-nature-territoire div.txtTitleFold7 h3 {
+    font-size: 2.5em;
+  }
+  /* popup */
   div.popup_onload div.content div.row-fluid div.span12 input#mc-embedded-subscribe {
     width: 75% !important; 
   }
