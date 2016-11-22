@@ -2993,9 +2993,8 @@ body.page-application-nature-territoire div.navProStyle li a{
   color: #fff;
   letter-spacing: 1px;
   text-shadow:none;
-  padding: 11px 0 10px 1%;
-  border-bottom: 1px transparent solid;  
-  word-break: break-all;
+  padding: 11px 0 10px 0;
+  border-bottom: 1px transparent solid;    
 }
 body.page-application-nature-territoire div.navProStyle li a:hover{
   text-shadow:none;
