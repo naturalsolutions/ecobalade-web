@@ -2036,6 +2036,10 @@ body.page-liste-especes h1>span{
 /***************************************************************************/
 /*********************************  ****************************************/
 
+body.page-liste-balades div#cboxWrapper {
+  padding-left: 15px;
+  padding-top: 15px;
+}
 body.page-liste-balades span.nameBalSmall {
 
 }
@@ -7032,6 +7036,11 @@ margin-left: 9%;
     padding-bottom: 88px;
   }
   body.page-liste-especes div#cboxWrapper {
+    padding-top: 17px;
+    padding-left: 14px;
+    margin-top: 0;
+  }
+  body.page-liste-balades div#cboxWrapper {
     padding-top: 17px;
     padding-left: 14px;
     margin-top: 0;
