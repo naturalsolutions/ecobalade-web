@@ -1905,6 +1905,10 @@ div.view-v-on-en-parle-presse div.imageZonePress, div.view-v-on-en-parle-presse 
 /***************************************************************************/
 /*********************************  ****************************************/
 /*********************************  ****************************************/
+body.page-liste-especes div#cboxWrapper{
+  padding-top: 17px;
+  padding-left: 14px;
+}
 body.page-liste-especes div.mycontainersubfooter{
   margin-bottom: 45px;
 }  
@@ -7026,6 +7030,11 @@ margin-left: 9%;
   div#cboxWrapper {
     margin-top: 42px;
     padding-bottom: 88px;
+  }
+  body.page-liste-especes div#cboxWrapper {
+    padding-top: 17px;
+    padding-left: 14px;
+    margin-top: 0;
   }
   div.popup_onload div.content div.row-fluid div.span12 input[type=text] {
     width: 70% !important;
