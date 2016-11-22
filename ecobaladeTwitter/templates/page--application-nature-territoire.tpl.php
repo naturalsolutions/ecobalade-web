@@ -6,7 +6,7 @@
     <div class="row-fluid marginRowHeader">
 
         <div class="span4 marginBtnRetour">
-          <a class="btnRetourSite" href="http://www.ecobalade.fr/" target="blank">RETOUR AU SITE</a>
+          <a class="btnRetourSite" href="http://www.ecobalade.fr/">RETOUR AU SITE</a>
         </div>
         
         <div class="span8">
