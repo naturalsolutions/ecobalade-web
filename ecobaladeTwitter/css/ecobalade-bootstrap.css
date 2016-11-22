@@ -2915,6 +2915,9 @@ body.page-node-2469 div.row-fluid.monTitle{
 /*                                                                         */   
 /***************************************************************************/
 /* MENU */
+body.page-application-nature-territoire .nav{
+  margin : 0;
+}
 body.page-application-nature-territoire div.navProStyle a.btn.btn-navbar{
   padding: 15px 15px;
   margin-top: -37px;
