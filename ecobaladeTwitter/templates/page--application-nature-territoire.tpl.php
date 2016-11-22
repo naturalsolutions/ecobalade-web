@@ -152,7 +152,7 @@
 		<div class="span5 txtFold4">
 			<h3>LE SITE WEB</h3>
             <p>
-            <a href="http://www.ecobalade.fr/" alt='vers le site ecobalade' title='vers le site ecobalade'>www.ecobalade.fr</a> est le principal point d’entrée pour la découverte du service Ecobalade. Sur le site, le visiteur peut sélectionner et préparer une balade en effectuant un tri par type de circuit, difficulté, distance à parcourir ou <strong>localisation géographique</strong>. Il a également accès à toutes les randonnées et balades, mais aussi à l’ensemble des <strong>fiches espèces</strong> (plus de 1500). Les utilisateurs peuvent aussi poster des <strong>commentaires</strong> ou des <strong>photos</strong> de leurs balades.
+            Ecobalade.fr est le principal point d’entrée pour la découverte du service Ecobalade. Sur le site, le visiteur peut sélectionner et préparer une balade en effectuant un tri par type de circuit, difficulté, distance à parcourir ou <strong>localisation géographique</strong>. Il a également accès à toutes les randonnées et balades, mais aussi à l’ensemble des <strong>fiches espèces</strong> (plus de 1500). Les utilisateurs peuvent aussi poster des <strong>commentaires</strong> ou des <strong>photos</strong> de leurs balades.
             </p>
 			<a class="btnVoirLeSiteFold4" href="http://www.ecobalade.fr/" target="blank">Voir le site web</a>
 		</div>
@@ -166,7 +166,7 @@
             <div class="span6 txtFold5"> 
               <h3>LE LIVRET PAPIER</h3>
                     <p>
-                    Nous vous proposons l’édition d’un guide papier, dans le prolongement du site internet et de l’application. Il présente <strong>les parcours de promenades et de randonnées</strong> et informe sur les <strong>espèces emblématiques</strong> susceptibles d’être rencontrées lors de la balade, grâce à des fiches très complètes. Un système de <strong>QR codes</strong> renvoie vers le site internet <a href="http://www.ecobalade.fr/" alt='vers le site ecobalade' title='vers le site ecobalade'>www.ecobalade.fr</a> pour obtenir des informations complémentaires et aller plus loin, avant, pendant ou après la balade.
+                    Nous vous proposons l’édition d’un guide papier, dans le prolongement du site internet et de l’application. Il présente <strong>les parcours de promenades et de randonnées</strong> et informe sur les <strong>espèces emblématiques</strong> susceptibles d’être rencontrées lors de la balade, grâce à des fiches très complètes. Un système de <strong>QR codes</strong> renvoie vers le site internet www.ecobalade.fr pour obtenir des informations complémentaires et aller plus loin, avant, pendant ou après la balade.
                     </p>
               <a class="btnVoirLivret" href="sites/all/themes/ecobaladeTwitter/img/livrets/Guide_CapSizun_web.pdf" target="blank">Voir plus</a>
             </div>
@@ -219,7 +219,7 @@
                       L’application fonctionne comme un <strong>sentier d’interprétation numérique et interactif</strong>, utilisable en complément de vos panneaux d’information existants.
                       <br/>
                       <br/>
-                      Complémentaire de l’application, le site <a href="http://www.ecobalade.fr/" alt='vers le site ecobalade' title='vers le site ecobalade'>www.ecobalade.fr</a> apporte une visibilité supplémentaire (150 000 visiteurs / an) au territoire et la possibilité de promouvoir des offres de séjours (hébergement, restauration, activités nature…), dans une optique de <strong>développement économique</strong>.
+                      Complémentaire de l’application, le site www.ecobalade.fr apporte une visibilité supplémentaire (150 000 visiteurs / an) au territoire et la possibilité de promouvoir des offres de séjours (hébergement, restauration, activités nature…), dans une optique de <strong>développement économique</strong>.
                       </p>
             <a class="btnVoirLivret" href="http://www.natural-solutions.eu/contacts/" target="blank">Contact</a>
         </div>
