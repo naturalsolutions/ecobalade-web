@@ -66,7 +66,7 @@
 
         <div class="row-fluid rowScrollFold1">
             <div class="span12 scrollDown">
-                <h1 class="txtScroll">Découvrez nos offres</h1>
+                <h1 class="txtScroll">Découvrez comment valoriser votre territoire</h1>
                 <p>&darr;</p>
             </div>
         </div>
