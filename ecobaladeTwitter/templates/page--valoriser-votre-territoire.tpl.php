@@ -473,7 +473,7 @@
 
         <div class="row">
            <div class="span12 formContactPro">
-                <form method="POST" action="pro" class='formContact'>
+                <form method="POST" action="valoriser-votre-territoire" class='formContact'>
                                             
                       <div class="row">                        
                         <div class="span4 offset2">
