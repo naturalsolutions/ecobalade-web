@@ -1,6 +1,9 @@
 <?php 
 //MODULE DE HOOK NS  
 
+function custom_form_pro_submit($form, &$form_state) {
+  $form_state['redirect'] = '/valoriser-votre-territoire';
+}
 
 function NsHook_form_alter(&$form, &$form_state, $form_id) {
 
@@ -32,8 +35,132 @@ function NsHook_form_alter(&$form, &$form_state, $form_id) {
 	
 		drupal_set_message(t("Nouveau ! <br/> Pour toutes les images (sauf celle Haute qualité) il est possible de réduire le poid des images avec <a href='https://tinypng.com/' target='_blank'>Tiny PNG</a>"), "status");	
 	
-	}
-	 
+	}else if(isset($form['#form_id']) && $form['#form_id'] == 'contact_personal_form'){
+		
+		//Alter label of submit button
+		$form['actions']['submit']['#value'] = 'Demander un devis gratuit';
+		$form['#submit'][] = 'custom_form_pro_submit';
+		$form['actions']['submit']['#attributes']['class'] = array('btnDevisRecap');
+
+		//Add class on form field
+		$form['#attributes']['class'] = array('formContact');
+
+		//Hide field "to"		
+		$form['to']['#access'] = FALSE;
+		
+
+		//alter subject field
+		$form['subject'] = array(
+  			'#type' => 'textfield',   			
+			'#default_value' => 'Demande de devis',
+			'#access' => FALSE
+		);
+
+		//alter name field
+  		$form['name'] = array(
+  			'#type' => 'textfield',
+  			'#weight' => 1,
+			'#attributes' => array(
+        		'placeholder' => t('Nom *'),
+        		'class' => array(
+        			'form-control',
+        			'name'
+        		)
+        		
+    		)
+		);
+
+		//Add firstName field
+		$form['firstname'] = array(
+			'#type' => 'textfield',
+			'#title' => t(''),
+			'#default_value' => '',
+			'#weight' => 2,
+			'#attributes' => array(
+        		'placeholder' => t('Prénom'),
+        		'class' => array(
+        			'form-control',
+        			'firstname'
+        		)
+    		)
+		);
+
+		//Add territoire field
+		$form['territoire'] = array(
+			'#type' => 'textfield',
+			'#title' => t(''),
+			'#default_value' => '',
+			'#weight' => 3,
+			'#attributes' => array(
+        		'placeholder' => t('Territoire'),
+        		'class' => array(
+        			'territoire',
+        			'large'
+        		)
+    		)
+		);
+
+		//alter mail field
+  		$form['mail'] = array(
+  			'#type' => 'textfield',
+  			'#maxlength' => 255,
+            '#required' => 1,
+  			'#weight' => 4,
+			'#attributes' => array(
+        		'placeholder' => t('Email *'),
+        		'class' => array(
+        			'form-control',
+        			'email'
+        		)
+    		)
+		);
+
+		//Add phone field
+		$form['phone'] = array(
+			'#type' => 'textfield',
+			'#title' => t(''),			
+			'#default_value' => '',
+			'#weight' => 5,
+			'#attributes' => array(
+        		'placeholder' => t('Téléphone'),
+        		'class' => array(
+        			'form-control',
+        			'phone'
+        		)
+    		)
+		);		
+		
+
+		//alter comment field
+  		$form['message'] = array(
+  			'#type' => 'textarea', 
+  			'#weight' => 6,
+			'#rows' => 5,
+			'#attributes' => array(
+        		'placeholder' => t('Votre message...'),
+    		)
+		);
+
+
+  		//alter subject field
+		$form['fonction'] = array(
+			'#type' => 'radios', 
+			'#weight' => 7,
+			'#title' => t('Vous êtes :'), 
+			'#options' => array(
+			// Values are displayed to user submitting the form, but keys are used in composing e-mail – 
+			// that's why we need them identical.
+			t('Un office de tourisme') => t('Un office de tourisme'),
+			t('Une collectivité territoriale') => t('Une collectivité territoriale'),
+			t('Un particulier') => t('Un particulier'),
+			),
+			'#required' => false,
+		);
+
+		/*		
+		drupal_set_message( "<pre>" . print_r($form, TRUE) . "</pre>" ); 
+		*/
+	}	 
 } 
 
 /*
@@ -51,7 +178,7 @@ function NsHook_mail ($key, &$message, $params) {
   }
 }
 */
-
+/*
 function NsHook_mail($key, &$message, $params){
 
   // Set the mail content type to html to send an html e-mail (optional).
@@ -71,4 +198,4 @@ function NsHook_mail($key, &$message, $params){
   //drupal_set_message("Sent e-mail to p.delaunay1@gmail.com from module 3");
 
 }
-  
+  */

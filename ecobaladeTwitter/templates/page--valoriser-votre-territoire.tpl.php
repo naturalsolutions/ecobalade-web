@@ -47,6 +47,7 @@
     <div class="container">
 
         <div class="row-fluid rowLogoFold1">
+            <?php print $messages; ?>
             <?php //simulation de  drupal_set_message
             if( isset($_POST['name']) && isset($_POST['email']) ){ 
                 
@@ -472,85 +473,30 @@
 
 
         <div class="row">
-           <div class="span12 formContactPro">
-                <form method="POST" action="valoriser-votre-territoire" class='formContact'>
-                                            
-                      <div class="row">                        
-                        <div class="span4 offset2">
-                        
-                          <div class="input-group">
-                            <input type="text" class="form-control name" name="name" placeholder="Nom *">                            
-                          </div>
-
-                        </div>
-                        <div class="span4">
-                        
-                          <div class="input-group">
-                            <input type="text" class="form-control" name="firstname" placeholder="Prénom">
-                          </div>
-
-                        </div>
-                      </div>
+            <div class="span12 formContactPro">
+            <?php 
+            $recipient = user_load(1);
+            module_load_include('inc', 'contact', 'contact.pages');
+            print drupal_render(drupal_get_form('contact_personal_form',$recipient));
+            ?>                
+            </div>
+        </div>
         
-                      <div class="row">
-                          <div class="span8 offset2">
-                            <input type="text" class="large" name="country" placeholder="Territoire"/>                            
-                          </div>                        
-                      </div>
-
-                      <div class="row">                        
-                        <div class="span4 offset2">
-                        
-                          <div class="input-group">
-                            <input type="text" class="form-control email" name="email" placeholder="Email *">                            
-                          </div>
-
-                        </div>
-                        <div class="span4">
-                        
-                          <div class="input-group">
-                            <input type="text" class="form-control" name="phone" placeholder="Téléphone">
-                          </div>
-
-                        </div>
-                      </div>
-                      
-                      <div class="row">
-                          <div class="span12">                            
-                            <textarea name="comment" placeholder="Votre message..."></textarea>
-                          </div>                        
-                      </div>                      
-                      
-                
-            </div>
-          
-            <div class="row">
-              <div class="span12 formButtonRadio">
-                <p class="titleBtnRadioFormContact">Vous êtes :</p>
-                
-                <div class="blocRadioButtons">
-                    <input type="radio" name="whoIs" value="Office de tourisme" id="unOT" /> <label for="unOT"> Un office de tourisme</label></br>
-                    <input type="radio" name="whoIs" value="Collectivité territoriale" id="unCT" /> <label for="unCT"> Une collectivité territoriale</label></br>
-                    <input type="radio" name="whoIs" value="Particulier" id="unPA"/> <label for="unPA"> Un particulier</label></br>
-                </div>
-
-                <div class="buttonRow">
-                  <input  type="submit" value="Demander un devis gratuit" class="btnDevisRecap" />                
-                </div>
-
-                <div id='recaptcha' data-sitekey='6LdH9wsTAAAAAMQj9bKngiwwbIwU9WpdCD2WC1X_' class="g-recaptcha"></div>
-
-
-              </div>
-            </div>
-          </form>
-
     </div> <!-- fin container form de contact -->
 
 
 
 <?php 
+/*function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
 if( isset($_POST['name']) && isset($_POST['email']) ){  
+
+  // define variables and set to empty values
+  $name = $firstname = $country = $email = $comment = $whoIs = $phone = "";
 
   $name = $_POST['name'];
   $firstname = $_POST['firstname'];
@@ -574,7 +520,7 @@ if( isset($_POST['name']) && isset($_POST['email']) ){
   // Send out the e-mail.
   drupal_mail('NsHook', 'NsHook_mail_page_pro', "ecobalade@natural-solutions.eu", language_default(), $params);  
 
-}
+}*/
 
 ?> 
 </div> <!-- fin container-fluid.pro -->
@@ -596,16 +542,16 @@ jQuery( document ).ready(function() {
       else if(email == '') alert('Veuillez inscrire votre email pour soumettre le formulaire');
       else if(name != '' && email != '') {
       
-
+/*
         var v = grecaptcha.getResponse();
 
-        if(v.length != 0) {
+        if(v.length != 0) {*/
 
-          form[0].submit();
+        form[0].submit();
 
-        }else{
+        /*}else{
           alert("Veuillez répondre aux question Google pour vérifier que vous n'êtes pas un robot.");
-        }
+        }*/
       }
 
 
@@ -613,8 +559,18 @@ jQuery( document ).ready(function() {
     
   };
 
+  var scrollToAncre = function(){
+    jQuery('a[href^="#"], button.ancre[href^="#"]').click(function(){  
+        var id = jQuery(this).attr("href");
+        var offset = jQuery(id).offset().top 
+        jQuery('html, body').animate({scrollTop: offset}, 'slow'); 
+        return false;  
+    });
+  }
+
   window.init = function() {
     checkForm();
+    scrollToAncre();
   }
 
   init(); // true 
