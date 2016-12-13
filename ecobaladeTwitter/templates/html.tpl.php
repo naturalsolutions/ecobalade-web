@@ -8,7 +8,7 @@
   <?php print $scripts; ?>
   
   <!-- Panoramio -->
-  <script type="text/javascript" src="http://www.panoramio.com/wapi/wapi.js?v=1&amp;hl=fr"></script> 
+  <!-- <script type="text/javascript" src="http://www.panoramio.com/wapi/wapi.js?v=1&amp;hl=fr"></script>  -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <!-- PUB -->
