@@ -1492,8 +1492,7 @@ body.node-type-espece div#blockDetailsEspece audio{
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
-  width: 43px;
-  float: left;
+  width: 96%;  
   margin: 8px 20px 0px 15px;
   cursor: pointer;
 }
