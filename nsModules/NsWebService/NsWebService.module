@@ -86,22 +86,22 @@ function _NsWebService_balade_retrieve($fn, $nitems, $timestamp, $id, $balade, $
 
 /**
  * Gets balades informations
- * 
+ *
  */
 function NsWebService_find_balade_information($nitems, $timestamp, $id, $balade, $espece) {
-  
 
-  //node 
+
+  //node
   $query = db_select('node', 'n');
-      
-  if ($espece == 'detail') { 
+
+  if ($espece == 'detail') {
 
     //http://192.168.1.102/ecobalade-pierre/data/xml/retrieve?espece=detail
 
-    
-    
 
-    //Nom scientifique 
+
+
+    //Nom scientifique
     $query->leftJoin('field_revision_field_nom_scientifique', 'j', '(j.revision_id = n.vid)');
 
     //Description
@@ -109,33 +109,33 @@ function NsWebService_find_balade_information($nitems, $timestamp, $id, $balade,
 
     //Audio
     $query->leftJoin('field_revision_field_son', 's', '(s.revision_id = n.vid)');
-    $query->leftJoin('file_managed', 't', '(t.fid = s.field_son_fid)');    
+    $query->leftJoin('file_managed', 't', '(t.fid = s.field_son_fid)');
 
     //Groupe
     $query->join('field_revision_field_groupe_taxonomique', 'f', '(f.revision_id = n.vid)');
     $query->join('taxonomy_term_data', 'z', '(z.tid = f.field_groupe_taxonomique_tid)');
-    
+
     //Image de présentation
     $query->join('field_revision_field_image_mobile_fiche_esp_ce', 'm', '(m.revision_id = n.vid)');
     $query->join('file_managed', 'b', '(b.fid = m.field_image_mobile_fiche_esp_ce_fid)');
-    
+
     //Image miniature
     $query->join('field_revision_field_image_mobile_minature', 'v', '(v.revision_id = n.vid)');
     $query->join('file_managed', 'c', '(c.fid = v.field_image_mobile_minature_fid)');
 
     //recupération de la liste des NID associés à une balade
     $subquery = db_select('field_data_field_esp_ces', 'i')->fields('i', array('field_esp_ces_nid'));
-    
+
     // On ne prends que les espèce qui sont présentes sur une balade
     $query->condition('n.nid', $subquery, 'IN');
 
-    
+
     $query->addField('n', 'title', 'nom');
     $query->addField('n', 'nid', 'nidEspece');
     $query->addField('n', 'vid', 'vidEspece');
     $query->addField('j', 'field_nom_scientifique_value', 'nom_scientifique');
-    $query->addField('o', 'field_description_value', 'description');    
-    $query->addField('z', 'name', 'groupeTaxo');    
+    $query->addField('o', 'field_description_value', 'description');
+    $query->addField('z', 'name', 'groupeTaxo');
     $query->addField('b', 'uri', 'imgEspeceFirst');
     $query->addField('b', 'filesize', 'imgEspeceFirstFilesize');
     $query->addField('c', 'uri', 'imgEspeceThumb');
@@ -148,35 +148,38 @@ function NsWebService_find_balade_information($nitems, $timestamp, $id, $balade,
 
 
     $query->condition('n.type', 'espece', '=');
-  
-  
+
+
   }
-  else if ($balade == 'list') { 
+  else if ($balade == 'list') {
 
     // /data/xml/retrieve?balade/retrieve?balade=list
-  
+
     $query->addField('n', 'title', 'balade');
     $query->addField('n', 'nid', 'nidHide');
     $query->addField('n', 'vid', 'vidHide');
 
-    $query->condition('n.type', 'balade', '=');  
-    $query->condition('n.custom_pub_mobile', '1', '='); 
-  
+    $query->condition('n.type', 'balade', '=');
+    $query->condition('n.custom_pub_mobile', '1', '=');
+
   }else{
 
     // /data/xml/retrieve?balade=detail?nitems=5&since=10
-  
-    //Description 
-    $query->join('field_revision_field_description_de_la_balade', 'd', '(d.revision_id = n.vid)');    
-    
-    //Acces au site : 
+
+    //Description
+    $query->join('field_revision_field_description_de_la_balade', 'd', '(d.revision_id = n.vid)');
+
+    //Acces au site :
     $query->leftJoin('field_revision_field_acces_site', 'a', '(a.revision_id = n.vid)');
-    
+
     //Durée
     $query->join('field_revision_field_duree', 't', '(t.revision_id = n.vid)');
 
     //Distance
     $query->join('field_revision_field_distance', 'y', '(y.revision_id = n.vid)');
+
+    //Distance
+    $query->leftJoin('field_revision_field_denivele', 'q', '(q.revision_id = n.vid)');
 
     //Vignettes de presentation
     $query->leftJoin('field_revision_field_vignette_presentation', 'p', '(p.revision_id = n.vid)');
@@ -195,52 +198,53 @@ function NsWebService_find_balade_information($nitems, $timestamp, $id, $balade,
     $query->join('taxonomy_term_data', 'e', '(e.tid = f.field_type_de_circuit_tid)');
 
 
-    
+
 
     //Photos -> Requette execute parallèlement plus loin dans le key === vid
     //trace -> Requette execute parallèlement plus loin dans le key === vid
     //taxons -> Requette execute parallèlement plus loin dans le key === nid
-        
+
     //Point de départ
     $query->leftJoin('field_revision_field_point_de_d_part', 'g', '(g.revision_id = n.vid)');
 
     //Point d'arriver
     $query->leftJoin('field_revision_field_point_d_arriv_e', 'r', '(r.revision_id = n.vid)');
 
-    $query->addExpression('astext(geomfromwkb(field_point_de_d_part_geom))','start' );  
-    $query->addExpression('astext(geomfromwkb(field_point_d_arriv_e_geom))','end' ); 
+    $query->addExpression('astext(geomfromwkb(field_point_de_d_part_geom))','start' );
+    $query->addExpression('astext(geomfromwkb(field_point_d_arriv_e_geom))','end' );
     /* Notion de temps
     $query->fields('v', array('timestamp', 'title')); */
 
     $query->addField('n', 'title', 'titre');
     $query->addField('n', 'vid', 'vid');
     $query->addField('n', 'nid', 'nid');
-    $query->addField('n', 'created', 'date_post');    
+    $query->addField('n', 'created', 'date_post');
     $query->addField('d', 'field_description_de_la_balade_value', 'description');
     $query->addField('a', 'field_acces_site_value', 'acces');
     $query->addField('t', 'field_duree_value', 'duree');
+    $query->addField('q', 'field_denivele_value', 'denivele');
     $query->addField('z', 'name', 'difficulte');
     $query->addField('e', 'name', 'type');
-    
+
     $query->addField('c', 'uri', 'imgBaladeEspecePhare');
     $query->addField('c', 'filesize', 'imgBaladeEspecePhareFilesize');
 
     $query->addField('b', 'uri', 'imgBaladePresentation');
     $query->addField('b', 'filesize', 'imgBaladePresentationFilesize');
     $query->addField('p', 'field_vignette_presentation_title', 'titleImgBaladePresentation');
-    
+
     $query->addField('y', 'field_distance_value', 'distance');
 
-    
-      
 
-    $query->condition('n.type', 'balade', '='); 
-    $query->condition('n.custom_pub_mobile', '1', '=');  
-  }  
- 
-  $query->condition('n.status', '1', '='); 
-  
-  
+
+
+    $query->condition('n.type', 'balade', '=');
+    $query->condition('n.custom_pub_mobile', '1', '=');
+  }
+
+  $query->condition('n.status', '1', '=');
+
+
   /*
   How many days ago?
   if ($timestamp) {
@@ -365,34 +369,34 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
     if (is_array($data)) {
       $assoc = FALSE || empty($data);
 
-      
-     
+
+
 
       //Nommage label item
       if(isset($data[0]->espece) || isset($data[0]->nom)){
-        $k = 'espece';  
-      }else{       
+        $k = 'espece';
+      }else{
        $k = 'balade';
       }
-      
-      
+
+
       //Creation des noeuds
-      $media = $doc->createElement('media');      
+      $media = $doc->createElement('media');
       $taxon = $doc->createElement('taxons');
-      
-      $imgBaladeEspecePhare = $doc->createElement('img');      
+
+      $imgBaladeEspecePhare = $doc->createElement('img');
       $imgBaladePresentation = $doc->createElement('img');
-      
-      $imgEspeceFirst = $doc->createElement('img');      
-      $imgEspeceThumb = $doc->createElement('img');      
+
+      $imgEspeceFirst = $doc->createElement('img');
+      $imgEspeceThumb = $doc->createElement('img');
       $imgEspeceFull = $doc->createElement('img');
-            
+
       $balade = $doc->createElement('balade');
       $balade = $doc->createElement('espece');
-      
+
       $audio = $doc->createElement('son');
-      $criteres = $doc->createElement('criteres'); 
-      
+      $criteres = $doc->createElement('criteres');
+
       $groupeTaxo = $doc->createElement('groupe');
       $groupe = $doc->createElement('groupe');
       $groupeCritereFormF = $doc->createElement('groupe');
@@ -400,69 +404,69 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
       $groupeCritereDispoF = $doc->createElement('groupe');
       $groupeCritereFruit = $doc->createElement('groupe');
       $groupeCritereCouleur = $doc->createElement('groupe');
-      
+
       $itemTaxon = $doc->createElement('item');
       $itemCritere = $doc->createElement('item');
-      
+
       $date_post = $doc->createElement('date_post');
-      
-      $patrimoines = $doc->createElement('patrimoines');                
-            
-      
+
+      $patrimoines = $doc->createElement('patrimoines');
+
+
       foreach ($data as $key => $value) {
         if ($key === "nid") {
-          
+
           //Requette pour aller chercher les taxons
-          $query3 = db_select('field_data_field_esp_ces', 'i');        
+          $query3 = db_select('field_data_field_esp_ces', 'i');
           $query3->join('node', 'n', '(n.nid = i.field_esp_ces_nid)');
 
-          $query3->condition('i.entity_id', $value, '=');  
+          $query3->condition('i.entity_id', $value, '=');
           $query3->addField('n', 'nid', 'itemTaxon');
 
           // Execution
           $taxons = $query3->execute()->fetchAll();
 
           //Ajout du media au parent
-          $parent->appendChild($taxon); 
+          $parent->appendChild($taxon);
 
           foreach ($taxons as $i => $vals) {
-            
+
             $this->xml_recurse($doc, $taxon, $vals );
 
           }
 
           //Requette pour aller chercher les patrimoines
-          $query4 = db_select('field_revision_field_description_patrimoine', 'g');                  
-          $query4->join('field_data_field_lien_balade', 'l', '(l.entity_id = g.entity_id)');          
-          $query4->join('node', 'n', '(n.vid = g.revision_id)');          
-          $query4->condition('l.field_lien_balade_nid', $value, '=');  
-          $query4->condition('n.status', 1, '=');  
-          $query4->addField('g', 'field_description_patrimoine_value', 'descriptionPat');          
-          $query4->addField('g', 'entity_id', 'idpatrimoine');          
-          $query4->addField('g', 'revision_id', 'vidpatrimoine');          
-          $query4->addField('n', 'title', 'titrePat');          
-          $query4->addField('n', 'nid', 'nidPat');          
-          //$query4->addField('n', 'vid', 'vidPat');          
-          
+          $query4 = db_select('field_revision_field_description_patrimoine', 'g');
+          $query4->join('field_data_field_lien_balade', 'l', '(l.entity_id = g.entity_id)');
+          $query4->join('node', 'n', '(n.vid = g.revision_id)');
+          $query4->condition('l.field_lien_balade_nid', $value, '=');
+          $query4->condition('n.status', 1, '=');
+          $query4->addField('g', 'field_description_patrimoine_value', 'descriptionPat');
+          $query4->addField('g', 'entity_id', 'idpatrimoine');
+          $query4->addField('g', 'revision_id', 'vidpatrimoine');
+          $query4->addField('n', 'title', 'titrePat');
+          $query4->addField('n', 'nid', 'nidPat');
+          //$query4->addField('n', 'vid', 'vidPat');
+
 
           // Execution
           $resQueryPatrimoines = $query4->execute()->fetchAll();
 
-          if($resQueryPatrimoines){            
-            
-            //Si on a des patrimoine, on les ajoutes au document
-            $parent->appendChild($patrimoines);  
+          if($resQueryPatrimoines){
 
-            //Pour chaque résultat 
+            //Si on a des patrimoine, on les ajoutes au document
+            $parent->appendChild($patrimoines);
+
+            //Pour chaque résultat
             foreach ($resQueryPatrimoines as $i => $vals) {
 
               //Creation d'un patrimoine
               $patrimoine = $doc->createElement('patrimoine');
 
               //Ajout du nid et revision du patrimoine
-              $patrimoine->setAttribute($attr_name = 'id', $attr_value = $vals->nidPat);              
-              
-              //$patrimoine->setAttribute($attr_name = 'version', $attr_value = $vals->vidPat);              
+              $patrimoine->setAttribute($attr_name = 'id', $attr_value = $vals->nidPat);
+
+              //$patrimoine->setAttribute($attr_name = 'version', $attr_value = $vals->vidPat);
 
               //Creation d'une description
               $descriptionPatrimoine = $doc->createElement('description');
@@ -472,7 +476,7 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
 
               $patrimoine->appendChild($titrePatrimoine);
 
-              $this->xml_recurse($doc, $titrePatrimoine, $vals->titrePat );              
+              $this->xml_recurse($doc, $titrePatrimoine, $vals->titrePat );
 
               //Add current description to current patrimoine
               $patrimoine->appendChild($descriptionPatrimoine);
@@ -480,26 +484,26 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
               //Add value in current description patrimoine
               $this->xml_recurse($doc, $descriptionPatrimoine, $vals->descriptionPat );
 
-              //Query --> requete pour aller chercher les images des patrimoines              
-              $query5 = db_select('field_revision_field_images_patrimoine', 'i');                  
-              $query5->join('file_managed', 'm', '(m.fid = i.field_images_patrimoine_fid)');          
-              $query5->condition('i.revision_id', $vals->vidpatrimoine, '=');                              
+              //Query --> requete pour aller chercher les images des patrimoines
+              $query5 = db_select('field_revision_field_images_patrimoine', 'i');
+              $query5->join('file_managed', 'm', '(m.fid = i.field_images_patrimoine_fid)');
+              $query5->condition('i.revision_id', $vals->vidpatrimoine, '=');
               $query5->addField('i', 'field_images_patrimoine_title', 'titleImagePat');
               $query5->addField('m', 'uri', 'img');
               $query5->addField('m', 'filesize', 'imgFileSize');
               $resQueryImagesPatrimoines = $query5->execute()->fetchAll();
 
               //Creation d'un noeud images
-              $imagesPatrimoine = $doc->createElement('media');              
-              
+              $imagesPatrimoine = $doc->createElement('media');
+
               //Ajout du noeuf images au noeud patrimoine courant
               $patrimoine->appendChild($imagesPatrimoine);
-              
-              //Pour chaque image de patrimoine : 
-              foreach ($resQueryImagesPatrimoines as $j => $imgVals) {   
+
+              //Pour chaque image de patrimoine :
+              foreach ($resQueryImagesPatrimoines as $j => $imgVals) {
 
                 //Creation d'un noeuf image
-                $imagesPat = $doc->createElement('img');             
+                $imagesPat = $doc->createElement('img');
 
                 //Ajout du noeud image dans noeud images
                 $imagesPatrimoine->appendChild($imagesPat);
@@ -512,41 +516,41 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
 
                 //Set attribute title
                 $imagesPat->setAttribute($attr_name = 'title', $attr_value = $imgVals->titleImagePat);
-                
+
                 //Convert in url
                 $imgVals->img = file_create_url($imgVals->img);
 
-                //Ajout de la valeur img directement dans l'image courante, du patrimoine courant           
+                //Ajout de la valeur img directement dans l'image courante, du patrimoine courant
                 $this->xml_recurse($doc, $imagesPat, $imgVals->img );
 
               }
 
               //Add current patrimoine to patrimoines
-              $patrimoines->appendChild($patrimoine);            
-            }           
+              $patrimoines->appendChild($patrimoine);
+            }
 
-                     
+
           }
 
           //ajout attribut id à balade
-          $parent->setAttribute($attr_name = 'id', $attr_value = $value);          
+          $parent->setAttribute($attr_name = 'id', $attr_value = $value);
 
           continue;
         }
         else if ($key === "vid") {
-          
+
           $vid = $value;
           //ajout attribut verion à balade
-          $parent->setAttribute($attr_name = 'version', $attr_value = $value);          
-         
+          $parent->setAttribute($attr_name = 'version', $attr_value = $value);
+
           //trace
           $query0 = db_select('field_revision_field_carte', 'f');
-          $query0->condition('f.revision_id', $vid, '=');            
-          $query0->addExpression('astext(geomfromwkb(field_carte_geom))','trace' );  
-          
+          $query0->condition('f.revision_id', $vid, '=');
+          $query0->addExpression('astext(geomfromwkb(field_carte_geom))','trace' );
+
           // Execution
           $trace = $query0->execute()->fetchAll();
-          
+
           foreach ($trace as $i => $val) {
 
             $this->xml_recurse($doc, $parent, $val );
@@ -554,137 +558,137 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
           }
 
           continue;
-        }//Pour l'image de présentation de balade         
-        else if ($key === "imgBaladeEspecePhare") {          
+        }//Pour l'image de présentation de balade
+        else if ($key === "imgBaladeEspecePhare") {
 
           //Conersion en image public depuis une uri
           $value = file_create_url($value);
           //Ajout du media au parent
-          $parent->appendChild($media);          
+          $parent->appendChild($media);
           //ajout attribut type à imgBaladeEspecePhare
-          $imgBaladeEspecePhare->setAttribute($attr_name = 'type', $attr_value = 'especesPhares'); 
+          $imgBaladeEspecePhare->setAttribute($attr_name = 'type', $attr_value = 'especesPhares');
           //Ajout de l'img au media
-          $media->appendChild ( $imgBaladeEspecePhare );          
+          $media->appendChild ( $imgBaladeEspecePhare );
 
           //Insertion dans le xml avec la valeur courante de l'image
           $this->xml_recurse($doc, $imgBaladeEspecePhare, $value );
-          
+
           continue;
         }//Pour les autres images de présentation de balade
-        else if ($key === "imgBaladePresentation") {       
+        else if ($key === "imgBaladePresentation") {
 
           //Conersion en image public depuis une uri
           $value = file_create_url($value);
           //Ajout du media au parent
-          $parent->appendChild($media);          
+          $parent->appendChild($media);
           //ajout attribut type à imgBaladeEspecePhare
-          $imgBaladePresentation->setAttribute($attr_name = 'type', $attr_value = 'main'); 
+          $imgBaladePresentation->setAttribute($attr_name = 'type', $attr_value = 'main');
           //Ajout de l'img au media
-          $media->appendChild ( $imgBaladePresentation );          
+          $media->appendChild ( $imgBaladePresentation );
 
           //Insertion dans le xml avec la valeur courante de l'image
           $this->xml_recurse($doc, $imgBaladePresentation, $value );
-          
+
           continue;
         }
-        else if ($key === "imgEspeceFull") {       
+        else if ($key === "imgEspeceFull") {
 
           //Conersion en image public depuis une uri
           $value = file_create_url($value);
           //ajout attribut type à img
-          $imgEspeceFull->setAttribute($attr_name = 'type', $attr_value = 'full'); 
+          $imgEspeceFull->setAttribute($attr_name = 'type', $attr_value = 'full');
           //Ajout de l'img au parent (media ici)
-          $parent->appendChild ( $imgEspeceFull );          
+          $parent->appendChild ( $imgEspeceFull );
 
           //Insertion dans le xml avec la valeur courante de l'image
           $this->xml_recurse($doc, $imgEspeceFull, $value );
-          
+
           continue;
         }//Pour image principale de l'espece
-        else if ($key === "imgEspeceFirst") {       
+        else if ($key === "imgEspeceFirst") {
 
           //Conersion en image public depuis une uri
           $value = file_create_url($value);
           //Ajout du media au parent
-          $parent->appendChild($media);                    
+          $parent->appendChild($media);
           //ajout attribut type à img
-          $imgEspeceFirst->setAttribute($attr_name = 'type', $attr_value = 'landscape'); 
+          $imgEspeceFirst->setAttribute($attr_name = 'type', $attr_value = 'landscape');
           //Ajout de l'img au parent (media ici)
-          $media->appendChild ( $imgEspeceFirst );          
+          $media->appendChild ( $imgEspeceFirst );
 
           //Insertion dans le xml avec la valeur courante de l'image
           $this->xml_recurse($doc, $imgEspeceFirst, $value );
-          
+
           continue;
         }
-        else if ($key === "imgEspeceThumb") {       
-          
+        else if ($key === "imgEspeceThumb") {
+
           //Conersion en image public depuis une uri
           $value = file_create_url($value);
           //Ajout du media au parent
-          $parent->appendChild($imgEspeceThumb);                    
+          $parent->appendChild($imgEspeceThumb);
           //ajout attribut type à img
-          $imgEspeceThumb->setAttribute($attr_name = 'type', $attr_value = 'thumb'); 
+          $imgEspeceThumb->setAttribute($attr_name = 'type', $attr_value = 'thumb');
           //Ajout de l'img au parent (media ici)
-          $media->appendChild ( $imgEspeceThumb );          
+          $media->appendChild ( $imgEspeceThumb );
 
           //Insertion dans le xml avec la valeur courante de l'image
           $this->xml_recurse($doc, $imgEspeceThumb, $value );
 
-          
+
           continue;
         }
-        else if ($key === "audio") {       
+        else if ($key === "audio") {
 
           //Si on a du son, on ajoute audio à média
-          if($value != ''){     
-            
+          if($value != ''){
+
             //Conersion en audio public depuis une uri
             $value = file_create_url($value);
 
-            $parent->appendChild($audio);                              
-            $media->appendChild ( $audio );          
-            $this->xml_recurse($doc, $audio, $value );            
+            $parent->appendChild($audio);
+            $media->appendChild ( $audio );
+            $this->xml_recurse($doc, $audio, $value );
           }
-          
-          continue;
-        }         
-        else if ($key === "nidHide") { 
 
-          
-          $parent->setAttribute($attr_name = 'id', $attr_value = $value);           
           continue;
-        
         }
-        else if ($key === "vidHide") { 
-          
-          $parent->setAttribute($attr_name = 'version', $attr_value = $value); 
+        else if ($key === "nidHide") {
+
+
+          $parent->setAttribute($attr_name = 'id', $attr_value = $value);
           continue;
 
         }
-        else if ($key === "nidEspece") { 
+        else if ($key === "vidHide") {
 
-          
-          $parent->setAttribute($attr_name = 'id', $attr_value = $value);           
+          $parent->setAttribute($attr_name = 'version', $attr_value = $value);
           continue;
-        
+
         }
-        else if ($key === "vidEspece") { 
+        else if ($key === "nidEspece") {
+
+
+          $parent->setAttribute($attr_name = 'id', $attr_value = $value);
+          continue;
+
+        }
+        else if ($key === "vidEspece") {
 
           //Ajout du num de version à l'espece
-          $parent->setAttribute($attr_name = 'version', $attr_value = $value); 
-          
+          $parent->setAttribute($attr_name = 'version', $attr_value = $value);
+
           //On profite de parcour les vid pour allez chercher les images des especes
           $vid = $value;
 
           //On profite de parcour les vid pour allez chercher la saisonalité
-          $query0 = db_select('field_revision_field_saison', 'r'); 
-          $query0->condition('r.revision_id', $vid, '=');            
+          $query0 = db_select('field_revision_field_saison', 'r');
+          $query0->condition('r.revision_id', $vid, '=');
           $query0->addField('r', 'field_saison_value', 'moisPesence');
 
           // Execution
-          $saisons = $query0->execute()->fetchAll();          
-          
+          $saisons = $query0->execute()->fetchAll();
+
           foreach ($saisons as $i => $val) {
 
             $this->xml_recurse($doc, $parent, $val );
@@ -692,13 +696,13 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
           }
 
           //On profite de parcour les vid pour allez chercher la saisonalité
-          $query8 = db_select('field_revision_field_visible', 'c'); 
-          $query8->condition('c.revision_id', $vid, '=');            
+          $query8 = db_select('field_revision_field_visible', 'c');
+          $query8->condition('c.revision_id', $vid, '=');
           $query8->addField('c', 'field_visible_value', 'jourPesence');
 
           // Execution
-          $joursPresences = $query8->execute()->fetchAll();          
-          
+          $joursPresences = $query8->execute()->fetchAll();
+
           foreach ($joursPresences as $i => $val) {
 
             $this->xml_recurse($doc, $parent, $val );
@@ -706,56 +710,56 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
           }
 
           //Requette pour aller chercher les images espece
-          $query2 = db_select('field_revision_field_image_mobile_diaporama', 'f');        
+          $query2 = db_select('field_revision_field_image_mobile_diaporama', 'f');
           $query2->join('file_managed', 'b', '(b.fid = f.field_image_mobile_diaporama_fid)');
 
-          $query2->condition('f.revision_id', $vid, '=');  
+          $query2->condition('f.revision_id', $vid, '=');
           $query2->addField('b', 'uri', 'imgEspeceFull');
           $query2->addField('b', 'filesize', 'imgEspeceFullFilesize');
           $query2->addField('f', 'field_image_mobile_diaporama_title', 'titleImgEspeceFull');
 
           // Execution
-          $photos = $query2->execute()->fetchAll();          
-          
+          $photos = $query2->execute()->fetchAll();
+
           foreach ($photos as $i => $val) {
 
             $this->xml_recurse($doc, $media, $val );
 
           }
-          
+
           //Requette pour aller chercher les critères
-          $query3 = db_select('field_revision_field_crit_res', 'f');   
+          $query3 = db_select('field_revision_field_crit_res', 'f');
           $query3->join('taxonomy_term_data', 't', '(t.tid = f.field_crit_res_tid)');
 
-          $query3->condition('f.revision_id', $vid, '=');  
+          $query3->condition('f.revision_id', $vid, '=');
           $query3->addField('t', 'name', 'itemCritere');
-          
+
           // Execution
-          $ResultCriteres = $query3->execute()->fetchAll();                          
-                              
+          $ResultCriteres = $query3->execute()->fetchAll();
+
 
           // On insert dans critères les valeurs de la requette SQL
           foreach ($ResultCriteres as $i => $val) {
 
             $value = $val->itemCritere;
-            
+
             //On test la valeur pour savoir dans quel groupe de critère elle doit etre - (1er caractère)
             $idCrit = substr ( $value , 0 , 1 );
 
-            if($idCrit == 1) $this->xml_recurse($doc, $groupeCritereFormF, $val );            
+            if($idCrit == 1) $this->xml_recurse($doc, $groupeCritereFormF, $val );
             else if($idCrit == 2) $this->xml_recurse($doc, $groupeCritereBordF, $val );
             else if($idCrit == 3) $this->xml_recurse($doc, $groupeCritereDispoF, $val );
             else if($idCrit == 4) $this->xml_recurse($doc, $groupeCritereFruit, $val );
             else if($idCrit == 5) $this->xml_recurse($doc, $groupeCritereCouleur, $val );
-            
-            
+
+
           }
-          
+
           continue;
 
         }
-        else if ($key === "itemCritere") {           
-          
+        else if ($key === "itemCritere") {
+
           //Pour enlever les perfix des critères
           $value = explode('-', $value);
           $value = $value[ count($value) - 1];
@@ -763,33 +767,33 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
           //On ajoute un conteneur item à la valeur
           $parent->appendChild($itemCritere);
           $this->xml_recurse($doc, $itemCritere, $value );
-          
+
           continue;
-        }  
-        else if ($key === "itemTaxon") {           
-          
+        }
+        else if ($key === "itemTaxon") {
+
           //On ajoute un conteneur item à la valeur
-          $parent->appendChild($itemTaxon);          
+          $parent->appendChild($itemTaxon);
           $this->xml_recurse($doc, $itemTaxon, $value );
-          
-          continue;
-        }                  
-        else if ($key === "date_post") {      
 
-          $datePubli = format_date($timestamp = $value, $type = 'custom', $format = 'Y-m-d', $timezone = 'Europe/Paris'); 
-          
+          continue;
+        }
+        else if ($key === "date_post") {
+
+          $datePubli = format_date($timestamp = $value, $type = 'custom', $format = 'Y-m-d', $timezone = 'Europe/Paris');
+
           //On ajoute un conteneur item à la valeur
-          $parent->appendChild($date_post);          
+          $parent->appendChild($date_post);
           $this->xml_recurse($doc, $date_post, $datePubli );
-          
-          continue;
-        }               
-        else if ($key === "groupeTaxo") {    
 
-          //On ajoute un item "groupe" 
+          continue;
+        }
+        else if ($key === "groupeTaxo") {
+
+          //On ajoute un item "groupe"
           $parent->appendChild($groupe);
           $this->xml_recurse($doc, $groupe, $value );
-          
+
           //On ajoute l'attribut nom du groupe taxo
           if($value == 'Arbres') $id = 1;
           else if($value == 'Arbustes et plantes') $id = 2;
@@ -798,8 +802,8 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
           else if($value == 'Mammifères') $id = 5;
           else if($value == 'Reptiles') $id = 6;
           else if($value == 'Amphibiens') $id = 7;
-          
-          $groupeTaxo->setAttribute($attr_name = 'name', $attr_value = $value);           
+
+          $groupeTaxo->setAttribute($attr_name = 'name', $attr_value = $value);
           $groupeTaxo->setAttribute($attr_name = 'id', $attr_value = $id);
 
           //On profite de tester les groupe taxo pour définir la structure de critères si besoin (arbre / arbuste)
@@ -812,91 +816,91 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
             $criteres->appendChild($groupeTaxo);
 
             //Ajout des groupe critères au groupe taxo
-            $groupeTaxo->appendChild($groupeCritereFormF);          
-            $groupeTaxo->appendChild($groupeCritereBordF);          
-            $groupeTaxo->appendChild($groupeCritereDispoF);          
-            $groupeTaxo->appendChild($groupeCritereFruit);          
-            $groupeTaxo->appendChild($groupeCritereCouleur); 
+            $groupeTaxo->appendChild($groupeCritereFormF);
+            $groupeTaxo->appendChild($groupeCritereBordF);
+            $groupeTaxo->appendChild($groupeCritereDispoF);
+            $groupeTaxo->appendChild($groupeCritereFruit);
+            $groupeTaxo->appendChild($groupeCritereCouleur);
 
-            //Attributs                         
-            $groupeCritereFormF->setAttribute($attr_name = 'name', $attr_value = 'De quelles formes sont les feuilles ?'); 
-            $groupeCritereBordF->setAttribute($attr_name = 'name', $attr_value = 'Comment est le bord de la feuille ?'); 
-            $groupeCritereDispoF->setAttribute($attr_name = 'name', $attr_value = 'Comment les feuilles sont-elles disposées ?'); 
-            $groupeCritereFruit->setAttribute($attr_name = 'name', $attr_value = 'Comment est le fruit ?'); 
-            $groupeCritereCouleur->setAttribute($attr_name = 'name', $attr_value = 'De quelle couleur est la fleur?'); 
-            $groupeCritereFormF->setAttribute($attr_name = 'id', $attr_value = 1); 
-            $groupeCritereBordF->setAttribute($attr_name = 'id', $attr_value = 2); 
-            $groupeCritereDispoF->setAttribute($attr_name = 'id', $attr_value = 3); 
-            $groupeCritereFruit->setAttribute($attr_name = 'id', $attr_value = 4); 
-            $groupeCritereCouleur->setAttribute($attr_name = 'id', $attr_value = 5); 
+            //Attributs
+            $groupeCritereFormF->setAttribute($attr_name = 'name', $attr_value = 'De quelles formes sont les feuilles ?');
+            $groupeCritereBordF->setAttribute($attr_name = 'name', $attr_value = 'Comment est le bord de la feuille ?');
+            $groupeCritereDispoF->setAttribute($attr_name = 'name', $attr_value = 'Comment les feuilles sont-elles disposées ?');
+            $groupeCritereFruit->setAttribute($attr_name = 'name', $attr_value = 'Comment est le fruit ?');
+            $groupeCritereCouleur->setAttribute($attr_name = 'name', $attr_value = 'De quelle couleur est la fleur?');
+            $groupeCritereFormF->setAttribute($attr_name = 'id', $attr_value = 1);
+            $groupeCritereBordF->setAttribute($attr_name = 'id', $attr_value = 2);
+            $groupeCritereDispoF->setAttribute($attr_name = 'id', $attr_value = 3);
+            $groupeCritereFruit->setAttribute($attr_name = 'id', $attr_value = 4);
+            $groupeCritereCouleur->setAttribute($attr_name = 'id', $attr_value = 5);
 
           }
 
           continue;
-        }       
-        else if ($key === "balade") { 
-                    
+        }
+        else if ($key === "balade") {
+
           //Insertion dans le xml avec la valeur courante de l'image
           $this->xml_recurse($doc, $parent, $value );
           continue;
         }
-        else if ($key === "imgBaladeEspecePhareFilesize") { 
-                              
-          $imgBaladeEspecePhare->setAttribute($attr_name = 'size', $attr_value = $value); 
+        else if ($key === "imgBaladeEspecePhareFilesize") {
+
+          $imgBaladeEspecePhare->setAttribute($attr_name = 'size', $attr_value = $value);
           continue;
         }
-        else if ($key === "imgBaladePresentationFilesize") { 
-                              
-          $imgBaladePresentation->setAttribute($attr_name = 'size', $attr_value = $value); 
+        else if ($key === "imgBaladePresentationFilesize") {
+
+          $imgBaladePresentation->setAttribute($attr_name = 'size', $attr_value = $value);
           continue;
         }
-        else if ($key === "titleImgBaladePresentation") { 
-                              
-          $imgBaladePresentation->setAttribute($attr_name = 'title', $attr_value = $value); 
+        else if ($key === "titleImgBaladePresentation") {
+
+          $imgBaladePresentation->setAttribute($attr_name = 'title', $attr_value = $value);
           continue;
         }
-        else if ($key === "imgEspeceFullFilesize") { 
-                              
-          $imgEspeceFull->setAttribute($attr_name = 'size', $attr_value = $value); 
+        else if ($key === "imgEspeceFullFilesize") {
+
+          $imgEspeceFull->setAttribute($attr_name = 'size', $attr_value = $value);
           continue;
         }
-        else if ($key === "titleImgEspeceFull") { 
-                              
-          $imgEspeceFull->setAttribute($attr_name = 'title', $attr_value = $value); 
+        else if ($key === "titleImgEspeceFull") {
+
+          $imgEspeceFull->setAttribute($attr_name = 'title', $attr_value = $value);
           continue;
         }
-        else if ($key === "imgEspeceFirstFilesize") { 
-                              
-          $imgEspeceFirst->setAttribute($attr_name = 'size', $attr_value = $value); 
+        else if ($key === "imgEspeceFirstFilesize") {
+
+          $imgEspeceFirst->setAttribute($attr_name = 'size', $attr_value = $value);
           continue;
         }
-        else if ($key === "titleImgEspeceFirst") { 
-                              
-          $imgEspeceFirst->setAttribute($attr_name = 'title', $attr_value = $value); 
+        else if ($key === "titleImgEspeceFirst") {
+
+          $imgEspeceFirst->setAttribute($attr_name = 'title', $attr_value = $value);
           continue;
         }
-        else if ($key === "imgEspeceThumbFilesize") { 
-                              
-          $imgEspeceThumb->setAttribute($attr_name = 'size', $attr_value = $value); 
+        else if ($key === "imgEspeceThumbFilesize") {
+
+          $imgEspeceThumb->setAttribute($attr_name = 'size', $attr_value = $value);
           continue;
         }
-        else if ($key === "titleImgEspeceThumb") { 
-                              
-          $imgEspeceThumb->setAttribute($attr_name = 'title', $attr_value = $value); 
+        else if ($key === "titleImgEspeceThumb") {
+
+          $imgEspeceThumb->setAttribute($attr_name = 'title', $attr_value = $value);
           continue;
         }
-        else if ($key === "filesizeAudio") { 
-                              
-          $audio->setAttribute($attr_name = 'size', $attr_value = $value); 
+        else if ($key === "filesizeAudio") {
+
+          $audio->setAttribute($attr_name = 'size', $attr_value = $value);
           continue;
         }
-        else if ($key === "titleAudioEspece") { 
-                              
-          $audio->setAttribute($attr_name = 'title', $attr_value = $value); 
+        else if ($key === "titleAudioEspece") {
+
+          $audio->setAttribute($attr_name = 'title', $attr_value = $value);
           continue;
         }
-        else if ($key === "espece") { 
-              
+        else if ($key === "espece") {
+
           //Insertion dans le xml avec la valeur courante de l'image
           $this->xml_recurse($doc, $parent, $value );
           continue;
@@ -913,16 +917,16 @@ class ExampleRESTServerView extends ServicesXMLFormatter {
             $parent->setAttribute($attr_name, $attr_value);
           }
           continue;
-        }*/       
+        }*/
         else if (is_numeric($key)) {
           $key = $k;
         }
         else {
-          $assoc = TRUE;          
+          $assoc = TRUE;
           //$key = preg_replace('/[^A-Za-z0-9_]/', '_', $key);
           //$key = preg_replace('/^([0-9]+)/', '_$1', $key);
         }
-        
+
         $element = $doc->createElement($key);
         $parent->appendChild($element);
         $this->xml_recurse($doc, $element, $value);

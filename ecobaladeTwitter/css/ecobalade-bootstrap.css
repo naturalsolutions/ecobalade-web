@@ -5602,7 +5602,7 @@ body.node-type-balade div.view-v-caracteristiques-balade  .views-field-field-dif
   background: #55BB79;
   padding:5px 0;
  }
-.views-field-field-distance,
+/* .views-field-field-distance,
 .views-field-field-type-de-circuit,
 .views-field-field-duree{
     text-align: center;
@@ -5615,16 +5615,31 @@ body.node-type-balade div.view-v-caracteristiques-balade  .views-field-field-dif
   line-height:16px;
   clear:right!important;
 
+} */
+body.node-type-balade div.views-field-field-denivele span.views-label-field-denivele{
+  font-size: 12px;
+  font-weight: normal;
 }
+/* body.node-type-balade div.views-field-field-denivele,
+body.node-type-balade div.views-field-field-duree{
+  text-align: center;
+  width: 48%;
+  float: left;
+  height: 56px;
+  padding-top: 15px;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 16px;
+  clear: right!important;
+  border-top: 1px solid #bbbbbb;
+} */
+/* body.node-type-balade div.views-field-field-duree{
+  border-right: 1px solid #bbbbbb;
+} */
 
 .view-v-liste-balade .views-field-field-distance{
   margin: 10px 0px 0px 0px!important;
   height:35px!important;
-}
-
-
-.views-field-field-acces-site{
-margin-top:-5px!important;
 }
 
 .views-field-field-distance span,
@@ -5645,13 +5660,27 @@ margin-top:-5px!important;
   min-height:30px;
   margin:10px 0px 5px;
 }
-.views-field-field-distance,
-.views-field-field-type-de-circuit{
-  border-right:1px solid #bbbbbb;
+body.node-type-balade .views-field-field-distance,
+body.node-type-balade .views-field-field-type-de-circuit,
+body.node-type-balade .views-field-field-duree,
+body.node-type-balade .views-field-field-denivele{
+  border-right: 1px solid #bbbbbb;
+  text-align: center;
+  width: 48%;
+  display: inline-block;
+  padding: 20px 0;
+  font-weight: bold;
+  font-size: 13px;
 }
-.views-field-field-acces-site{
-  border-top: 1px solid #BBBBBB;
-  clear: left;
+body.node-type-balade .views-field-field-type-de-circuit,
+body.node-type-balade .views-field-field-denivele{
+  border: 0;
+}
+body.node-type-balade .views-field-field-duree,
+body.node-type-balade .views-field-field-denivele{
+  border-top: 1px solid #bbbbbb;
+}
+body.node-type-balade .views-field-field-acces-site{
   padding: 20px 10%;
 }
 
