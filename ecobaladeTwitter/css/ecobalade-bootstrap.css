@@ -7456,6 +7456,10 @@ margin-left: 9%;
   div#container-mobile div#description p{
     width:  90%;
   }
+  div#container-mobile div#titleOfMobileApp h1{
+    margin-left: 15px;
+    font-size: 3em;
+  }
 }
 @media (max-width: 396px) {
   /* Pro */
