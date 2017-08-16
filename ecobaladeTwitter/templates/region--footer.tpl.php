@@ -28,7 +28,7 @@ global $base_url;
 			<div class="span6 inputSubFooter">
 
 				<!-- Begin MailChimp Signup Form -->
-				<form action="//ecobalade.us7.list-manage.com/subscribe/post?u=1a9b21fb9d9d31564dd16e46e&amp;id=92410d0fa0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+				<form action="//natural-solutions.us7.list-manage.com/subscribe/post?u=1a9b21fb9d9d31564dd16e46e&amp;id=88816e454f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 					<div id="mc_embed_signup_scroll">
 						<input type="email" value="" placeholder="Votre email" name="EMAIL" class="required email styleinputSubFooter" id="mce-EMAIL">
 						<input type="hidden" value="subfooter" name="ORIG" id="ORIG">
