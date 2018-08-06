@@ -84,7 +84,7 @@ global $base_url;
 
 					foreach ($result as $record) {
 						$cleanUrl = drupal_get_path_alias('node/'.$record->nid);
-						echo "<a href='".$cleanUrl."' title='".$record->title."' alt='".$record->title."'>".$record->title."</a>";
+						echo "<a href='/".$cleanUrl."' title='".$record->title."' alt='".$record->title."'>".$record->title."</a>";
 					}
 					?>
 

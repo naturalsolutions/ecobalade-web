@@ -1406,7 +1406,7 @@ body.node-type-espece .gallery-top p.swiper-caption{
   padding: 2px 1%;
 }
 body.node-type-espece .gallery-thumbs .swiper-slide {
-  width: 92%;
+  width: 100%;
   margin-bottom: 6.1px;
   height: 81px;
 }
@@ -3899,8 +3899,11 @@ body.node-type-blogosphere a.commentButton{
   font-size: 22px;
 }
 
-body.page-taxonomy-term div.likeShareCommentActu.inSlider{
-  margin-left: 4em;
+@media screen and (min-width: 960px)
+{
+	body.page-taxonomy-term div.likeShareCommentActu.inSlider{
+  		margin-left: 4em;
+	}
 }
 body.node-type-blogosphere article.node-blogosphere header span.submitted, body.node-type-blogosphere fieldset.filter-wrapper.form-wrapper{display:  none; }
 body.node-type-blogosphere section#comments section.collapseComment{
@@ -3967,7 +3970,6 @@ body.node-type-blogosphere div.navbarBlog nav.navbar-inner{
   border: 0px;
   margin: 0 auto;
   background: #fff;
-  max-width: 850px;
   display: flex;
   justify-content: center;
   box-shadow: none;
@@ -3993,7 +3995,6 @@ body.node-type-blogosphere div.navbarBlog nav.navigationBlog ul.navBlog a{
   font-weight: 700;
   text-align: center;
   font-size: 1.2em;
-  margin: 15px 20px 10px;
   padding: 0px 5px 1px;
   color: #777777;
   text-decoration: none;
@@ -4004,6 +4005,51 @@ body.page-taxonomy-term div.navbarBlog nav.navigationBlog ul.navBlog a:hover,
 body.node-type-blogosphere div.navbarBlog nav.navigationBlog ul.navBlog a:hover{
   border-bottom: 1px solid #a08a77;
   color: #a08a77;
+}
+@media screen and (min-width: 960px)
+{
+	body.page-taxonomy-term div.navbarBlog nav.navbar-inner,
+	body.node-type-blogosphere div.navbarBlog nav.navbar-inner{
+  		border: 0px;
+ 		margin: 0 auto;
+  		background: #fff;
+  		display: flex;
+  		justify-content: center;
+  		box-shadow: none;
+  		-webkit-box-shadow: none;
+  		-moz-box-shadow: none;
+  		-o-box-shadow: none;
+  		-ms-box-shadow: none;
+	}
+	body.page-taxonomy-term div.navbarBlog nav.navigationBlog ul.navBlog,
+	body.node-type-blogosphere div.navbarBlog nav.navigationBlog ul.navBlog{
+  		list-style-type: none;
+  		float: none;
+	}
+	body.page-taxonomy-term div.navbarBlog nav.navigationBlog ul.navBlog li,
+	body.node-type-blogosphere div.navbarBlog nav.navigationBlog ul.navBlog li{
+  		padding-top: 1em;
+	}
+	body.page-taxonomy-term div.navbarBlog nav.navigationBlog ul.navBlog a,
+	body.node-type-blogosphere div.navbarBlog nav.navigationBlog ul.navBlog a{
+  		font-family: 'Nunito', sans-serif;
+  		text-transform: lowercase;
+  		font-variant: small-caps;
+  		font-weight: 700;
+  		text-align: center;
+  		font-size: 1.2em;
+  		padding: 0px 5px 1px;
+  		margin: 15px 20px 10px;
+  		color: #777777;
+  		text-decoration: none;
+  		text-shadow: 0 1px 0 #ffffff;
+  		border-bottom: 1px solid #fff;
+	}
+	body.page-taxonomy-term div.navbarBlog nav.navigationBlog ul.navBlog a:hover,
+	body.node-type-blogosphere div.navbarBlog nav.navigationBlog ul.navBlog a:hover{
+  		border-bottom: 1px solid #a08a77;
+  		color: #a08a77;
+	}
 }
 /* swiper */
 body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.span12{
@@ -4071,7 +4117,7 @@ body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.
   color: #fff;
   font-size: 3em;
   font-family: 'neythalregular';
-  margin-top: 30px;
+  padding-top: 30px;
 }
 body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog i{
   margin-left: 3vw;
@@ -4086,15 +4132,27 @@ body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.
   font-size: 1vw;
   font-weight: 300;
 }
+
 body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog p.subtitle{
   margin-left: 7%;
-  margin-top: -6px;
-  width: 20vw;
   color: #e8e8e8;
   font-size: 1.2em;
   font-family: 'Nunito', sans-serif;
   line-height: 20px;
   font-weight: 300;
+}
+@media screen and (min-width: 960px)
+{
+	body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog p.subtitle{
+  		margin-left: 7%;
+  		margin-top: -6px;
+  		width: 20vw;
+  		color: #e8e8e8;
+  		font-size: 1.2em;
+  		font-family: 'Nunito', sans-serif;
+  		line-height: 20px;
+  		font-weight: 300;
+	}
 }
 body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog > a{
   margin-left: 1vw;
@@ -4231,6 +4289,7 @@ body.node-type-blogosphere h3.subtitle{
   padding-bottom: .2em;
   margin-top: 0;
   text-align: center;
+  max-width: 800px;
 }
 body.page-taxonomy-term div.listeArticle .subtitle{
   font-size: 1.4em;
@@ -4263,6 +4322,7 @@ body.page-taxonomy-term div.listeArticle a.lirePlus{
   color:#a08a77;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.4em;
 }
 /* bloc blog */
 body.node-type-blogosphere div.tagsBlog iframe,
@@ -4411,6 +4471,7 @@ body.node-type-blogosphere h2{
   color: #a08a77;
   padding-bottom: .2em;
   text-align: center;
+  max-width: 800px;
 }
 body.node-type-blogosphere div.contentArticle{
   max-width: 800px;
@@ -4442,6 +4503,7 @@ body.node-type-blogosphere p.created{
   color: #707070;
   font-size: 1em;
   text-align: center;
+  max-width: 800px;
 }
 body.node-type-blogosphere div.separatorPageArticle{
   margin-top: 1em;
@@ -4656,7 +4718,9 @@ div#picto_géologie{
 }
 /* FIN PARTIE FILTRES ON LISTE TAXON BALADES*/
 
-
+.swiper-blog-background{
+  background-color: #9f8976;
+}
 
 
 
