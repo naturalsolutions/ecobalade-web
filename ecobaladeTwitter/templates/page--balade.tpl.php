@@ -172,13 +172,77 @@ $baladenid = $node->nid;
 			    <!-- AddThis Button END -->
 		    </div>				
 				
+				<!-- Reponsive -->
+				<!-- infos balade -->
+				<div class="hidden-desktop caracteristiques_balades">
+				<?php print views_embed_view('v_caracteristiques_balade','block_1',$baladenid);?>
+				</div>
+				<!-- especes pahres -->
+				<div class="especes-phares hidden-desktop">
+					<h2>Espèces phares</h2>
+					<?php $especesPhares = field_get_items($entity_type = 'node', $node, $field_name = 'field_esp_ces_phares'); ?>
+
+
+					<div class="row-fluid">
+					<?php for($i=0;$i<count($especesPhares);$i++) { 
+						
+						$nodeEspecePhare = node_load($especesPhares[$i]['nid']);
+						$TitlePhotoResumeEspecePhare = $nodeEspecePhare->field_photo_resume['und'][0]['title'];
+						//$AltPhotoResumeEspecePhare = $nodeEspecePhare->field_photo_resume['und'][0]['alt'];
+						$urlPhotoResumeEspecePhare = file_create_url($nodeEspecePhare->field_photo_resume['und'][0]['uri']);
+
+						$variables = array(
+									'style_name' => 'slideshow_detail_balade_full',
+									'path' => $nodeEspecePhare->field_photo_resume['und'][0]['uri'],
+									'width' => $nodeEspecePhare->field_photo_resume['und'][0]['width'],
+									'height' => $nodeEspecePhare->field_photo_resume['und'][0]['height'],
+									'title' => $nodeEspecePhare->field_photo_resume['und'][0]['title'],
+							'alt' => $nodeEspecePhare->field_photo_resume['und'][0]['alt']
+						);
+						
+						$imgPhotoResumeEspecePhare = theme( 'image_style', $variables );
+						$nidPhotoResumeEspecePhare = $nodeEspecePhare->nid;
+						$nidPhotoResumeEspecePhare = drupal_get_path_alias('node/'.$nidPhotoResumeEspecePhare);
+
+						//Affichage	
+						echo "<div class='span4'>";
+							echo '<figure class="effect-zoe">';
+								echo "<a href='$base_url/$nidPhotoResumeEspecePhare' title=\"$TitlePhotoResumeEspecePhare\">$imgPhotoResumeEspecePhare</a>"; 
+								echo "<a href='$urlPhotoResumeEspecePhare' class='imageTaxon' title=\"$TitlePhotoResumeEspecePhare\"></a>";
+
+								echo "<figcaption>";
+									echo "<a title='Visiter la page' href='$base_url/$nidPhotoResumeEspecePhare'><p>$nodeEspecePhare->title</p></a>";
+								echo '</figcaption>';
+							echo '</figure>';
+						echo "</div>";
+						
+					} ?>
+					</div>					
+				</div>
+
+				<div class="hidden-desktop">
+					<div id="btn-esp-full" class="icones_liste hidden-desktop"></div>
+					<div class="liste-espece-teaser">Espèces à découvrir dans cette balade</div>
+					<a id="btn-esp" class="btn btn-primary" alt="lien vers la liste des espèces" href="<?php echo $base_url; ?>/especes?balade=<?php echo $currentPath; ?>" title="Les espèces a découvrir">Liste des espèces</a>
+					</div>
+				</div>
+				
 				
 					<!-- Boc texte description de la balade -->
-					<div id="descriptionZone">	
-						<h2>Description de la balade</h2>
+					<div id="descriptionZone" class="zoneDescription">	
+						<!-- <h2>Description de la balade</h2> -->
 						<?php $description = field_get_items($entity_type = 'node', $node, $field_name = 'field_description_de_la_balade'); ?>
 						<?php $description = $description[0]['value']; ?>				
 						<?php echo $description; ?>
+						
+						<!--Bouton téléchargement pdf balade -->
+						
+						<?php $pdf = field_get_items($entity_type = 'node', $node, $field_name = 'field_pdf_balade'); 
+							if (!empty($pdf)){ ?>
+								<div class="btn_download_pdf_balade" >	
+								<button class="btn-primary" ><a class="btn-primary" href="<?php echo file_create_url($pdf[0]['uri']); ?>">Télécharger la balade</a></button>
+								</div>
+							<?php } ?>
 						
 						<div align="center" class='pubAdsens'>
 							<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -193,8 +257,23 @@ $baladenid = $node->nid;
 						</div>
 					</div>
 
+					<div class="hidden-desktop">
+						<?php 
+							echo "
+							<div class='blocConseil'>
+								<p>1/ Préparer la balade sur le site ecobalade.fr</p>
+								<p>2/ Télécharger l'app et votre balade gratuitement</p>
+								<a class='badge4GooglePlay' target='_blank' title='Télécharger ecoBalade sur GooglePlay' href='https://play.google.com/store/apps/details?id=com.ns.ecoBalade&amp;feature=search_result#?t=W251bGwsMSwyLDEsImNvbS5ucy5lY29CYWxhZGUiXQ..''>
+								</a>
+								<a class='badge4AppStore' target='_blank' title='Télécharger ecobalade sur appleStore' href='https://itunes.apple.com/fr/app/ecobalade/id674569147?l=fr&amp;ls=1&amp;mt=8'></a>
+								<p>3/ Partez à la découverte de la faune et la flore</p>
+							</div>
+							";
+						?>
+					</div>
+
 					<!-- Boc espece phare de la balade -->
-					<div class="especes-phares">
+					<div class="especes-phares visible-desktop">
 						<h2>Espèces phares</h2>
 						<?php $especesPhares = field_get_items($entity_type = 'node', $node, $field_name = 'field_esp_ces_phares'); ?>
 
@@ -239,10 +318,91 @@ $baladenid = $node->nid;
 
 						$field_balade_google_map‎ = field_get_items($entity_type = 'node', $node, $field_name = 'field_balade_google_map');
 						echo "<div class='row-fluid googleMap'><div class='span12'>".$field_balade_google_map‎[0]['value']."</div></div>";
-
-						//Affichage du reste du node
-						print render($page['content']); 
 						?>
+						<div class="hidden-desktop">
+						<h3>Informations pratiques</h3>
+						<?php print views_embed_view('v_informations_pratiques_balade','block',$baladenid);?>
+					</div>
+						
+						
+						<?php print render($page['content']); 
+						// affichage reste du node
+						?>
+
+						<!-- guide -->
+						<div class="guide hidden-desktop">
+							<?php
+								//si pas guide
+								if($node->field_lien_guide['und'][0]['value'] == 'mailto:contact@natural-solutions.eu'){
+									echo "<h3>Randonner avec un guide ?</h3>"; 	
+								} 
+								//si guide
+								else {
+									echo "<h3>Randonner avec un guide !</h3>"; 
+								}
+								$url_image_guide = file_create_url($node->field_img_guide['und'][0]['uri']);
+								$name_image_guide = $node->field_img_guide['und'][0]['filename'];
+								$link_image_guide = $node->field_lien_guide['und'][0]['value'];
+								
+								echo "<a href='$link_image_guide' alt='$name_image_guide'><img alt='$name_image_guide' title='$name_image_guide' src='$url_image_guide' /></a>";
+							?>
+						</div>
+
+						<div class="baladeSimilaire hidden-desktop">
+							<h3>Balades similaires</h3>
+							<?php
+							
+							//On recupère la difficulté
+							$difficulte = $node->field_difficulte['und'][0]['taxonomy_term']->tid;
+
+							//On charge la vue qui nous renvoie  5 ID balade avec même diffifculté
+							$view = views_get_view('v_balade_similaire');
+							$view->set_display('block');
+							$view->set_arguments(array($difficulte));		
+							$view->pre_execute();
+							$view->execute();
+							$objects = $view->result;
+
+							//Parcour des id balades
+							foreach ($objects as $key => $value) {
+								
+								$nodeBaladeSim = node_load($value->nid);
+								
+								//On get les infos qui nous intéresses (title, image)
+								$title = $nodeBaladeSim->title;			
+								$imgbaladeSim = field_get_items($entity_type = 'node', $nodeBaladeSim, $field_name = 'field_photo_resume');
+								$url = file_create_url($imgbaladeSim[0]['uri']);
+
+								$variables = array(
+									'style_name' => 'slideshow_detail_balade_full',
+									'path' => $imgbaladeSim[0]['uri'],
+									'width' => $imgbaladeSim[0]['width'],
+									'height' => $imgbaladeSim[0]['height'],
+									'title' => $imgbaladeSim[0]['title'],
+									'alt' => $imgbaladeSim[0]['alt']
+								);
+
+								//Notre image
+								$imgbaladeSim = theme( 'image_style', $variables );
+
+								//remplacer le node par le alias
+								$loadPathBalade = drupal_get_path_alias('node/'.$value->nid);
+								
+								//Affichage	
+								echo '<figure class="effect-zoe">';
+									echo "<a href='$base_url/$loadPathBalade' title=\"$title\">$imgbaladeSim</a>";
+									echo "<a href='$url' class='imageBaladeSim' title=\"$title\"></a>";
+									echo "<figcaption>";
+										echo "<a title='Visiter la page' href='$base_url/$loadPathBalade'><p>$title</p></a>";											
+									echo '</figcaption>';
+								echo '</figure>';
+							
+
+							}
+
+							?>
+						</div>
+
 		</div> <!-- Fin active -->	
 			
 
@@ -252,13 +412,14 @@ $baladenid = $node->nid;
                   		<?php print views_embed_view('v_all_patrimoine','patrimoine_block', $baladenid); ?>
 
 			</div> <!-- fin #patrimoine -->
-	</div> <!-- Fin tab-content -->
-	
+
+
+
 	
 	</section>
 	<!-- *****ASIDE RIGHT****** -->
     <?php if ($page['sidebar_second']): ?>
-      <aside class="span3 region-sidebar-second" role="complementary">
+      <aside class="span3 region-sidebar-second visible-desktop" role="complementary">
         
         <div id="btn-esp-full" class="icones_liste"></div>
 	    <div class="liste-espece-teaser">Espèces à découvrir dans cette balade</div>
@@ -315,12 +476,8 @@ $baladenid = $node->nid;
 			(adsbygoogle = window.adsbygoogle || []).push({});
 			</script>
 		</div>
-		<!-- <a href="https://clk.tradedoubler.com/click?p=117553&a=2794210&g=21636760" rel="nofollow" target="_BLANK"><img src="https://impfr.tradedoubler.com/imp?type(img)g(21636760)a(2794210)" border=0></a> -->
 		
-		<h3>Informations pratiques</h3>
-		<?php print views_embed_view('v_informations_pratiques_balade','block',$baladenid);?>
-		
-		<div id="baladeSimilaire">
+		<div id="baladeSimilaire" class="visible-desktop">
 		<h3>Balades similaires</h3>
 		<?php
 		
@@ -374,7 +531,11 @@ $baladenid = $node->nid;
 
 		?>
 		</div>
-					
+
+		<!-- <a href="https://clk.tradedoubler.com/click?p=117553&a=2794210&g=21636760" rel="nofollow" target="_BLANK"><img src="https://impfr.tradedoubler.com/imp?type(img)g(21636760)a(2794210)" border=0></a> -->
+		
+		<h3>Informations pratiques</h3>
+		<?php print views_embed_view('v_informations_pratiques_balade','block',$baladenid);?>
 	
       </aside>  <!-- /#sidebar-second -->
     <?php endif; ?>
