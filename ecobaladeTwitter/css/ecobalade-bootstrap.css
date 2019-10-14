@@ -896,6 +896,9 @@ body.front figure{
   height: 100% !important;
 }
 @media  (max-width: 979px) {
+  body.node-type-balade div#descriptionZone{
+    position : initial !important;
+  }
   body.front .img-polaroid {
     width: 170px;
   }
@@ -903,7 +906,43 @@ body.front figure{
     width: 170px;
     float: left;
   }
-
+  body.admin-menu:not(.front) > div.container {
+    margin-top: 47px;
+  }
+  h1.page-header{
+    padding : 10px !important;
+  }
+  .hidden-desktop.caracteristiques_balades .views-field-field-sponsor{
+    display: none;
+  }
+  body.node-type-balade div.especes-phares{
+    margin-top : 20px !important;
+  }
+  .zoneDescription{
+    max-height: 500px;
+    overflow-y: auto;
+  }
+  .zoneDescription h3{
+    padding-left : 10px;
+  }
+  body.node-type-balade div.zoneDescription > p {
+    padding: 0px 10px !important;
+  }
+  body.node-type-balade h2 {
+    position : initial !important;
+  }
+  .hidden-desktop h3{
+    padding: 0px 10px;
+  }
+  body.node-type-balade .view-v-informations-pratiques-balade{
+    padding : 10px !important;
+  }
+  .hidden-desktop.caracteristiques_balades.guide .views-field-field-sponsor img{
+    margin-top : 0px;
+  }
+  .hidden-desktop.caracteristiques_balades.guide .views-field:not(.views-field-field-sponsor){
+    display: none;
+  }
 }
 @media  (max-width: 967px) {
   /* body{
@@ -918,7 +957,10 @@ body.front figure{
 
   body.front figure{
     width: 400% !important;
-
+  }
+  .zoneDescription{
+    max-height: 50vh;
+    overflow-y: auto;
   }
 }
 @media  (max-width: 530px) {
@@ -1166,6 +1208,14 @@ body.node-type-balade h2{
   padding: 0 6px;
 }
 
+body.node-type-balade div#descriptionZone div.btn_download_pdf_balade {
+
+  position : relative; 
+  left: 50%;  
+  margin-top:20px; 
+  margin-bottom: 40px; 
+  transform: translateX(-50%); 
+ }
 
 /********************************************/
 
@@ -1458,7 +1508,7 @@ body.node-type-espece #blockEspece #picto_Patrimoine {
 body.node-type-espece p#nom_scf{
   font-style: italic;
   position: absolute;
-  left: 55px;
+  left: 200px;
   top: 15px;
   font-size: 1em;
 }

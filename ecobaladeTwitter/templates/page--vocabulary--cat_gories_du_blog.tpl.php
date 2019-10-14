@@ -140,7 +140,7 @@ Template de la page liste des articles
     </nav>
   </div>
 
-  <div class="swiper-container swiper-blog swiper-blog-background">
+  <div class="swiper-container swiper-blog">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
         <!-- Slides -->
@@ -330,7 +330,7 @@ Template de la page liste des articles
                 ?>
 
                 <!-- Display Article -->
-                <h2><a href="<?php echo $base_url.'/'.$cleanUrlArticle; ?>"><?php echo $title; ?></a></h2>
+                <h2><?php echo $title ?></h2>
                 <?php if ($currentArticle->field_sous_titre_blog != '') {
                   $subTitle = $currentArticle->field_sous_titre_blog['und'][0]['value'];
                   echo "<p class='subtitle'>".$subTitle."</p>";
@@ -343,7 +343,7 @@ Template de la page liste des articles
                <div class="likeShareCommentActu">
                 <!-- AddThis Button BEGIN -->
                 <div class="boutons_partage">
-                  <div class="addthis_toolbox addthis_default_style addthis_32x32_style" >
+                  <div class="addthis_toolbox addthis_default_style addthis_16x16_style" >
                       <a class="addthis_button_facebook"></a>
                       <a class="addthis_button_twitter"></a>
                       <a class="addthis_button_google_plusone_share"></a>
@@ -472,8 +472,8 @@ Template de la page liste des articles
             <div class="tagsBlog" id="instaBloc">
               <p class='littleTitle'>instagram</p>
               <!-- SnapWidget -->
-              <iframe src="https://snapwidget.com/embed/571623" title="Instagram Widget" class="snapwidget-widget largeScreen" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:249px; height:169px;"></iframe>
-              <iframe src="https://snapwidget.com/embed/571623" title="Instagram Widget" class="snapwidget-widget smallScreen" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:200px; height:139px"></iframe>
+              <iframe src="http://snapwidget.com/in/?u=ZWNvYmFsYWRlfGlufDgwfDN8M3x8bm98M3xmYWRlT3V0fG9uU3RhcnR8eWVzfG5v&ve=101215" title="Instagram Widget" class="snapwidget-widget largeScreen" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:249px; height:249px;"></iframe>
+              <iframe src="http://snapwidget.com/sc/?u=ZWNvYmFsYWRlfGlufDgwfDN8M3x8eWVzfDIwfG5vbmV8b25TdGFydHx5ZXN8bm8=&ve=171215" title="Instagram Widget" class="snapwidget-widget smallScreen" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:200px; height:80px"></iframe>
             </div>
             <!-- fin bloc insta -->
 
