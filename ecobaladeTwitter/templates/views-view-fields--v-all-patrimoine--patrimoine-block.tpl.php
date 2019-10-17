@@ -56,7 +56,7 @@
 	$monPatrimoine  = node_load($nid);
 	?>
 
-	<!-- Bloc texte description de la patrimoine -->
+	<!-- Bloc texte description du patrimoine -->
 
 	<h2><?php echo $title_patrimoine; ?></h2>	
 				

@@ -67,7 +67,7 @@ if(isset($_GET['balade']) && $_GET['balade'] != '') {
   $titleBalade = $titleBalade->title;
 
 
-$breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/">Accueil</a> » <a href="'.$base_url.'/balade/'.$titleBaladeMachine.'">'.$titleBalade.'</a> » <a href="'.$base_url.'/especes?balade='.$titleBaladeMachine.'">Liste des espèces</a> » '.$node->title.'</div>';
+$breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/"><img src=\"../../sites/all/themes/ecobaladetwitter/img/pictos/icone_home.svg\"></a> » <a href="'.$base_url.'/balade/'.$titleBaladeMachine.'">'.$titleBalade.'</a> » <a href="'.$base_url.'/especes?balade='.$titleBaladeMachine.'">Liste des espèces</a> » '.$node->title.'</div>';
 
 } else $nidBalade = 'all';
 ?>
@@ -110,7 +110,6 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/">Accueil</a> » <
 				
 			<section class="span12">  
 
-								
 					<?php if ($node){			 
 							$espnid = $node->nid;
 							$nom_scf = $node->field_nom_scientifique; 
@@ -138,9 +137,8 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/">Accueil</a> » <
 
 					}?>			  
 						
-
 						<div class="row-fluid">
-							<div class="span9" id='blockEspece'>
+							<div class="span12" id='blockEspece'>
 							
 									<!-- ici on définit le nom de taxo -->
 									<div class="row-fluid">
@@ -259,14 +257,14 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/">Accueil</a> » <
 										</div>
 									</div>	
 											<!-- AddThis Button BEGIN -->
-										    <div id="boutons_partage">
+										    <!-- <div id="boutons_partage">
 										      <div class="addthis_toolbox addthis_default_style addthis_32x32_style" >
 										          <a class="addthis_button_facebook"></a>
 										          <a class="addthis_button_twitter"></a>
 										          <a class="addthis_button_google_plusone_share"></a>
 										          <a class="addthis_counter addthis_bubble_style"></a>
 										      </div>
-										    </div>
+										    </div> -->
 										    <!-- AddThis Button END -->		
 
 
@@ -297,124 +295,6 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/">Accueil</a> » <
 											<h2>Description</h2>
 											<p><?php echo $description; ?></p>											
 										</div>
-									</div>	
-
-									<?php if(count($criteres) > 1) : ?>
-									<div class="row-fluid">
-										<div class="span12" id='blockCriteresEspece'>
-													<?php  echo "<h2>Les indices pour le reconnaître</h2>"; ?>
-													<?php echo "<div class='field-content' id='fieldPersoCriteria1line'>"; //if(count($criteres) > 8) { echo "<div class='field-content' id='fieldPersoCriteria2line'>"; } else{echo "<div class='field-content' id='fieldPersoCriteria1line'>";}; ?>
-																													
-													<?php for($j=0; $j < count($criteres); $j++): ?>
-													<?php $valEnCour = $criteres[$j][taxonomy_term]->name; ?>
-													<?php switch ($valEnCour) {
-													case "1.1-Coeur":
-													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Coeur.png' alt='pictogramme de feuilles Coeur' /><span class='labelCrit'>Coeur</span></div>";
-													break;
-													case "1.2-Aiguille":
-													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Aiguille.png' alt='pictogramme de feuilles Aiguille' /><span class='labelCrit'>Aiguille</span></div>";
-													break; 
-													case "1.3-Ovale":
-													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Ovale.png' alt='pictogramme de feuilles Ovale' /><span class='labelCrit'>Ovale</span></div>";
-													break;
-													case "1.4-Lance":
-													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Lance.png' alt='pictogramme de feuilles lance' /><span class='labelCrit'>Lance</span></div>";
-													break;
-													case "1.5-Ecaille":
-													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Ecaille.png' alt='pictogramme de feuilles Ecaille' /><span class='labelCrit'>Ecaille</span></div>";
-													break;  
-													case "1.6-Lobée":
-													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Lobe.png' alt='pictogramme de feuilles lobée' /><span class='labelCrit'>Lobée</span></div>";
-													break;    
-													case "2.1-Lisse":
-													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Lisse.png' alt='pictogramme de feuilles lisse' /><span class='labelCrit'>Lisse</span></div>";
-													break;        
-													case "2.2-Denté":
-													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Dentee.png' alt='pictogramme de feuilles lisse' /><span class='labelCrit'>Denté</span></div>";
-													break;
-													case "2.3-Denté et piquant":
-													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Dentee_piquant.png' alt='pictogramme de feuilles alternée' /><span class='labelCrit'>Denté et piquant</span></div>";
-													break;
-													case "2.4-Crénelé":
-													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Crenele.png' alt='pictogramme de fruit autre' /><span class='labelCrit'>Crénelé</span></div>";
-													break;
-													case "3.1-Alternée":
-													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Alternee.png' alt='pictogramme de fleur Blanche' /><span class='labelCrit'>Alternée</span></div>";
-													break;
-													case "3.2-Opposée":
-													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Opposee.png' alt='pictogramme de fleur Blanche' /><span class='labelCrit'>Opposée</span></div>";
-													break;
-													case "3.3-En bouquet":
-													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/En_bouquet.png' alt='pictogramme de fleur Blanche' /><span class='labelCrit'>En bouquet</span></div>";
-													break;
-													case "4.1-Gland":
-													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Gland.png' alt='pictogramme de fleur Blanche' /><span class='labelCrit'>Gland</span></div>";
-													break;
-													case "4.8-Pomme de pin":
-													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Pomme_de_pin.png' alt='pictogramme de fleur Blanche' /><span class='labelCrit'>Pomme de pin</span></div>";
-													break;
-													case "4.7-Gousse":
-													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Gousse.png' alt='pictogramme de fleur Blanche' /><span class='labelCrit'>Gousse</span></div>";
-													break;
-													case "4.2-Clochette":
-													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Clochette.png' alt='pictogramme de fleur Blanche' /><span class='labelCrit'>Clochette</span></div>";
-													break;
-													case "4.3-Baie":
-													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Baie.png' alt='pictogramme de fleur Blanche' /><span class='labelCrit'>Baie</span></div>";
-													break;
-													case "4.4-Akène":
-													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Akene.png' alt='pictogramme de fleur Blanche' /><span class='labelCrit'>Akène</span></div>";
-													break;
-													case "4.5-Grappe":
-													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Grappe.png' alt='pictogramme de fleur Blanche' /><span class='labelCrit'>Grappe</span></div>";
-													break;
-													case "4.6-Autre":
-													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Autres.png' alt='pictogramme de fleur Blanche' /><span class='labelCrit'>Autre</span></div>";
-													break;
-													case "5.1-Blanche":
-													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Blanche.png' alt='pictogramme de fleur Blanche' /><span class='labelCrit'>Blanche</span></div>";
-													break;
-													case "5.2-Jaune":
-													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Jaune.png' alt='pictogramme de fleur Jaune' /><span class='labelCrit'>Jaune</span></div>";
-													break; 
-													case "5.3-Vert":
-													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Vert.png' alt='pictogramme de fleur Jaune' /><span class='labelCrit'>Vert</span></div>";
-													break;
-													case "5.4-Bleu_violace":
-													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Bleu_violace.png' alt='pictogramme de fleur Jaune' /><span class='labelCrit'>Bleu-violacé</span></div>";
-													break;
-													case "5.5-Rose_violace":
-													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Rose-violace.png' alt='pictogramme de fleur Jaune' /><span class='labelCrit'>Rose-violacé</span></div>";
-													break;
-													case "5.6-Marron_rouge":
-													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Marron-rouge.png' alt='pictogramme de fleur Jaune' /><span class='labelCrit'>Marron-rouge</span></div>";
-													break;
-													} ?>
-													<?php endfor ?>    													
-													<?php  echo "</div>"; ?>
-										</div>
-									</div>	<!-- Fin du row-fluid des critere -->	
-									<?php endif; ?>													
-
-									<!-- Saisonalité -->
-									<?php 
-									//test si il a des valeurs de saisonalité
-									if(count($TabOfSaisonValue) > 0 || count($TabOfTimeVisibiliteValue) > 0): ?>
-
-									<?php if(count($TabOfSaisonValue) > 0 ): ?>
-
-									<?php 
-									echo "<div id='valueSaisonHidden'>";
-									$currentMonth = date('m');
-									foreach ($TabOfSaisonValue as $key => $value) {
-									
-										if($value['value'] == $currentMonth) $isNow = true;
-										echo "<div class='hidden'>$value[value]</div>";
-
-									}
-									echo "</div>"; // fin valueSaisonHidden 
-									?>
-									<?php endif; ?>
 
 										<div class="row-fluid">
 											    <div class="span12" id="containerOfSaisonalite">												
@@ -626,74 +506,11 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/">Accueil</a> » <
 													</div> <!-- fin span8 -->	
 													<?php endif; ?>											
 												</div> <!-- fin row-fluid -->														
-											</div> <!-- fin containerOfSaisonalite -->									
-										</div> <!-- fin row-fluid Saisonalité -->	 
-									
-									<?php endif; ?>		
-								<div class="row-fluid pub">
-									<div class="span12">
-										<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-										<!-- bas de page espece -->
-										<ins class="adsbygoogle"
-										     style="display:inline-block;width:728px;height:90px"
-										     data-ad-client="ca-pub-4110701213934425"
-										     data-ad-slot="5764794793"></ins>
-										<script>
-										(adsbygoogle = window.adsbygoogle || []).push({});
-										</script>										
-									</div>
-								</div>
-									
-							</div> <!-- fin bloc espece -->
-							
-							<!-- On execute la vue qui nous renvoie la liste des id de balades associé à l'espèce courante -->
-							<div class="span3" id='aussiPresentDansBalade'>
-								
-								<?php 		 								
-								$view = views_get_view('v_taxon_suivant_precedent');
-								$view->set_display('block_1');
-								$view->set_arguments(array($espnid));
-								//$view->set_items_per_page(3);
-								$view->pre_execute();
-								$view->execute();
-								$objects = $view->result;
-								?>
-								
-								<!-- Test s'il y a des valeurs -->
-								<?php if($objects[0]->field_esp_ces_node_nid): ?>
-									<div class="blocBalade">
-									
-										<h3>A retrouver dans cette balade</h3>
-										<?php 
+											</div> <!-- fin containerOfSaisonalite -->	
 
-										//Charge node de la balade
-										$nodeBalade = node_load($objects[0]->field_esp_ces_node_nid);	
-										
-										//Récuperation des info dans la variable $nodeBalade 
-										$url = file_create_url($nodeBalade->field_photo_resume['und'][0]['uri']);
-										$alt = $nodeBalade->field_photo_resume['und'][0]['alt'];
-										$title = $nodeBalade->field_photo_resume['und'][0]['title'];
+									</div>	
 
-										//remplacer le node par le alias
-										$loadPathBalade = drupal_get_path_alias('node/'.$nodeBalade->nid);
-										$loadPathBalade = explode("/", $loadPathBalade);
-										$loadPathBalade = $loadPathBalade[1];
-
-										//Affichage												
-										echo '<figure class="effect-zoe">';
-											echo "<a href='$base_url/balade/$loadPathBalade' title=\"$title\"><img title=\"$nodeBalade->title\" src='$url' alt='$alt'/></a>";
-											echo "<a href='$url' class='imageBalade' title=\"$title\"></a>";
-											echo "<figcaption>";
-												echo "<a class='visitBalade' title=\"$nodeBalade->title\" href='$base_url/balade/$loadPathBalade'><p>$nodeBalade->title</p></a>";											
-											echo '</figcaption>';
-										echo '</figure>';
-
-																					
-										?>			
-									</div> <!-- fin blocBalade -->
-								<?php endif; ?>
-
-								<div class="blocTaxon">
+									<div class="blocTaxon">
 
 									<h3>A découvrir</h3>
 									<?php 		 
@@ -734,6 +551,191 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/">Accueil</a> » <
 									?>
 
 								</div> <!-- fin blocTaxon -->
+
+									<?php if(count($criteres) > 1) : ?>
+									<div class="row-fluid">
+										<div class="span12" id='blockCriteresEspece'>
+													<?php  echo "<h2>Les indices pour le reconnaître</h2>"; ?>
+													<?php echo "<div class='field-content' id='fieldPersoCriteria1line'>"; //if(count($criteres) > 8) { echo "<div class='field-content' id='fieldPersoCriteria2line'>"; } else{echo "<div class='field-content' id='fieldPersoCriteria1line'>";}; ?>
+																													
+													<?php for($j=0; $j < count($criteres); $j++): ?>
+													<?php $valEnCour = $criteres[$j][taxonomy_term]->name; ?>
+													<?php switch ($valEnCour) {
+													case "1.1-Coeur":
+													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Coeur.png' alt='pictogramme de feuilles Coeur' /><span class='labelCrit'>Coeur</span></div>";
+													break;
+													case "1.2-Aiguille":
+													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Aiguille.png' alt='pictogramme de feuilles Aiguille' /><span class='labelCrit'>Aiguille</span></div>";
+													break; 
+													case "1.3-Ovale":
+													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Ovale.png' alt='pictogramme de feuilles Ovale' /><span class='labelCrit'>Ovale</span></div>";
+													break;
+													case "1.4-Lance":
+													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Lance.png' alt='pictogramme de feuilles lance' /><span class='labelCrit'>Lance</span></div>";
+													break;
+													case "1.5-Ecaille":
+													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Ecaille.png' alt='pictogramme de feuilles Ecaille' /><span class='labelCrit'>Ecaille</span></div>";
+													break;  
+													case "1.6-Lobée":
+													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Lobe.png' alt='pictogramme de feuilles lobée' /><span class='labelCrit'>Lobée</span></div>";
+													break;    
+													case "2.1-Lisse":
+													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Lisse.png' alt='pictogramme de feuilles lisse' /><span class='labelCrit'>Lisse</span></div>";
+													break;        
+													case "2.2-Denté":
+													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Dentee.png' alt='pictogramme de feuilles lisse' /><span class='labelCrit'>Denté</span></div>";
+													break;
+													case "2.3-Denté et piquant":
+													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Dentee_piquant.png' alt='pictogramme de feuilles alternée' /><span class='labelCrit'>Denté et piquant</span></div>";
+													break;
+													case "2.4-Crénelé":
+													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Crenele.png' alt='pictogramme de fruit autre' /><span class='labelCrit'>Crénelé</span></div>";
+													break;
+													case "3.1-Alternée":
+													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Alternee.png' alt='pictogramme de fleur Blanche' /><span class='labelCrit'>Alternée</span></div>";
+													break;
+													case "3.2-Opposée":
+													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Opposee.png' alt='pictogramme de fleur Blanche' /><span class='labelCrit'>Opposée</span></div>";
+													break;
+													case "3.3-En bouquet":
+													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/En_bouquet.png' alt='pictogramme de fleur Blanche' /><span class='labelCrit'>En bouquet</span></div>";
+													break;
+													case "4.1-Gland":
+													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Gland.png' alt='pictogramme de fleur Blanche' /><span class='labelCrit'>Gland</span></div>";
+													break;
+													case "4.8-Pomme de pin":
+													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Pomme_de_pin.png' alt='pictogramme de fleur Blanche' /><span class='labelCrit'>Pomme de pin</span></div>";
+													break;
+													case "4.7-Gousse":
+													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Gousse.png' alt='pictogramme de fleur Blanche' /><span class='labelCrit'>Gousse</span></div>";
+													break;
+													case "4.2-Clochette":
+													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Clochette.png' alt='pictogramme de fleur Blanche' /><span class='labelCrit'>Clochette</span></div>";
+													break;
+													case "4.3-Baie":
+													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Baie.png' alt='pictogramme de fleur Blanche' /><span class='labelCrit'>Baie</span></div>";
+													break;
+													case "4.4-Akène":
+													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Akene.png' alt='pictogramme de fleur Blanche' /><span class='labelCrit'>Akène</span></div>";
+													break;
+													case "4.5-Grappe":
+													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Grappe.png' alt='pictogramme de fleur Blanche' /><span class='labelCrit'>Grappe</span></div>";
+													break;
+													case "4.6-Autre":
+													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Autres.png' alt='pictogramme de fleur Blanche' /><span class='labelCrit'>Autre</span></div>";
+													break;
+													case "5.1-Blanche":
+													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Blanche.png' alt='pictogramme de fleur Blanche' /><span class='labelCrit'>Blanche</span></div>";
+													break;
+													case "5.2-Jaune":
+													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Jaune.png' alt='pictogramme de fleur Jaune' /><span class='labelCrit'>Jaune</span></div>";
+													break; 
+													case "5.3-Vert":
+													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Vert.png' alt='pictogramme de fleur Jaune' /><span class='labelCrit'>Vert</span></div>";
+													break;
+													case "5.4-Bleu_violace":
+													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Bleu_violace.png' alt='pictogramme de fleur Jaune' /><span class='labelCrit'>Bleu-violacé</span></div>";
+													break;
+													case "5.5-Rose_violace":
+													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Rose-violace.png' alt='pictogramme de fleur Jaune' /><span class='labelCrit'>Rose-violacé</span></div>";
+													break;
+													case "5.6-Marron_rouge":
+													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Marron-rouge.png' alt='pictogramme de fleur Jaune' /><span class='labelCrit'>Marron-rouge</span></div>";
+													break;
+													} ?>
+													<?php endfor ?>    													
+													<?php  echo "</div>"; ?>
+										</div>
+									</div>	<!-- Fin du row-fluid des critere -->	
+									<?php endif; ?>													
+
+										
+								<!-- <div class="row-fluid pub">
+									<div class="span12">
+										<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+										<!-- bas de page espece -->
+										<!-- <ins class="adsbygoogle"
+										     style="display:inline-block;width:728px;height:90px"
+										     data-ad-client="ca-pub-4110701213934425"
+										     data-ad-slot="5764794793"></ins> -->
+										<!-- <script>
+										(adsbygoogle = window.adsbygoogle || []).push({});
+										</script> -->										
+									<!-- </div>
+								</div> -->
+									
+							</div> <!-- fin bloc espece -->
+							
+							<!-- On execute la vue qui nous renvoie la liste des id de balades associé à l'espèce courante -->
+							<div class="span3" id='aussiPresentDansBalade'>
+								<!-- Saisonalité -->
+								<?php 
+									//test si il a des valeurs de saisonalité
+									if(count($TabOfSaisonValue) > 0 || count($TabOfTimeVisibiliteValue) > 0): ?>
+
+									<?php if(count($TabOfSaisonValue) > 0 ): ?>
+
+									<?php 
+									echo "<div id='valueSaisonHidden'>";
+									$currentMonth = date('m');
+									foreach ($TabOfSaisonValue as $key => $value) {
+									
+										if($value['value'] == $currentMonth) $isNow = true;
+										echo "<div class='hidden'>$value[value]</div>";
+
+									}
+									echo "</div>"; // fin valueSaisonHidden 
+									?>
+									<?php endif; ?>
+
+																		
+										</div> <!-- fin row-fluid Saisonalité -->	 
+									
+									<?php endif; ?>	
+								<?php 		 								
+								$view = views_get_view('v_taxon_suivant_precedent');
+								$view->set_display('block_1');
+								$view->set_arguments(array($espnid));
+								//$view->set_items_per_page(3);
+								$view->pre_execute();
+								$view->execute();
+								$objects = $view->result;
+								?>
+								
+								<!-- Test s'il y a des valeurs -->
+								<?php if($objects[0]->field_esp_ces_node_nid): ?>
+									<!-- <div class="blocBalade">
+									
+										<h3>A retrouver dans cette balade</h3> -->
+										<?php 
+
+										//Charge node de la balade
+									/* 	$nodeBalade = node_load($objects[0]->field_esp_ces_node_nid);	
+										
+										//Récuperation des info dans la variable $nodeBalade 
+										$url = file_create_url($nodeBalade->field_photo_resume['und'][0]['uri']);
+										$alt = $nodeBalade->field_photo_resume['und'][0]['alt'];
+										$title = $nodeBalade->field_photo_resume['und'][0]['title'];
+
+										//remplacer le node par le alias
+										$loadPathBalade = drupal_get_path_alias('node/'.$nodeBalade->nid);
+										$loadPathBalade = explode("/", $loadPathBalade);
+										$loadPathBalade = $loadPathBalade[1];
+
+										//Affichage												
+										echo '<figure class="effect-zoe">';
+											echo "<a href='$base_url/balade/$loadPathBalade' title=\"$title\"><img title=\"$nodeBalade->title\" src='$url' alt='$alt'/></a>";
+											echo "<a href='$url' class='imageBalade' title=\"$title\"></a>";
+											echo "<figcaption>";
+												echo "<a class='visitBalade' title=\"$nodeBalade->title\" href='$base_url/balade/$loadPathBalade'><p>$nodeBalade->title</p></a>";											
+											echo '</figcaption>';
+										echo '</figure>';
+ */
+																					
+										?>			
+									<!-- </div> --> <!-- fin blocBalade -->
+								<?php endif; ?>
+
 							</div> <!-- fin aussiPresentDansBalade -->
 
 						</div>										

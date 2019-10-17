@@ -58,7 +58,7 @@
 
     <?php print render($page['header']); ?>
   </header> <!-- /#header -->
- <?php if ($breadcrumb): /*print $breadcrumb;*/echo "<div class='breadcrumb'><a href='".$base_url."'>Accueil</a>&nbsp»&nbspLes sites</div>"; endif;?>
+ <?php if ($breadcrumb): /*print $breadcrumb;*/echo "<div class='breadcrumb'><a href='".$base_url."'><img src=\"../../sites/all/themes/ecobaladetwitter/img/pictos/icone_home.svg\"></a>&nbsp»&nbspLes sites</div>"; endif;?>
 
 	
       <a id="main-content"></a>

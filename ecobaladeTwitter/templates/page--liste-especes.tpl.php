@@ -89,7 +89,7 @@ else $nidBalade = 'all';
 
             //$listeEspeces = $titleBreadcrumb[0];
 
-           if ($breadcrumb && $_GET['balade'] != ''){ echo "<div class='breadcrumb'><a href='".$base_url."'>Accueil</a> »
+           if ($breadcrumb && $_GET['balade'] != ''){ echo "<div class='breadcrumb'><a href='".$base_url."'><img src=\"../../sites/all/themes/ecobaladetwitter/img/pictos/icone_home.svg\"></a> »
             <a href='".$base_url."/balade/".$titleBaladeMachine."'>".$titleBalade."</a> » ".$title."</div>";
             
            } else {
@@ -158,7 +158,7 @@ else $nidBalade = 'all';
 
 
     				<div class="row-fluid">
-    					<div class="span12" id='blockAllEspeces'>
+    					<div class="span12 all-species" id='blockAllEspeces'>
     						
                 <?php
                 if($nidBalade == 'all') print views_embed_view('v_all_especes','block_1');

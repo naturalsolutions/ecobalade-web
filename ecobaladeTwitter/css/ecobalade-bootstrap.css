@@ -159,14 +159,14 @@
     font-style: normal;
 }
 
-
-
-
 /* @import url(https://fonts.googleapis.com/css?family=Nunito:400,300,700); */
 /***************************************************************************/
 /*                          DIVERS - Tools                                 */
 /*                                                                         */
 /***************************************************************************/
+body{
+  font-family: 'ProximaNova-Regular', 'Raleway-Light', sans-serif;
+}
 h1,
 h2,
 h3,
@@ -174,6 +174,7 @@ h4,
 h5,
 h6 {
   color: #4DBB74;
+  font-family: 'Raleway-Semibold', 'ProximaNova-Bold', sans-serif;
 }
 body{
   padding-top: 0;
@@ -185,42 +186,42 @@ body.logged-in header#navbar{
   top: 28px;
 }
 .element-invisible{display: none;}
+
 .page-header{
-  padding: 1% 0 1% 1%;
-  margin-bottom: 8px;
+  /* padding: 1% 0 1% 1%; */
+  /* margin-bottom: 8px; */
   border-bottom: 0;
-  background-color: #FAFAFA;
+  margin: 0px;
+  /* background-color: #FAFAFA;
   background-image: -moz-linear-gradient(top, white, #F2F2F2);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#F2F2F2));
   background-image: -webkit-linear-gradient(top, white, #F2F2F2);
   background-image: -o-linear-gradient(top, white, #F2F2F2);
   background-image: linear-gradient(to bottom, white, #F2F2F2);
   background-repeat: repeat-x;
-  border: 1px solid #D4D4D4;
-  -webkit-border-radius: 4px;
+  border: 1px solid #D4D4D4; */
+  /* -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
-  border-radius: 4px;
+  border-radius: 4px; */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#F2F2F2', GradientType=0);
 }
 .container-node {
-  background:#E6E6E6;
+  /* background:#E6E6E6;
   border-radius: 4px ;
   -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
+  -moz-border-radius: 4px; */
   min-height: 500px;
 }
-body:not(.front) > div.container{
+/* body:not(.front) > div.container{
   margin-top: 60px;
-}
-body.cookieBar:not(.front) > div#container-mobile{
+} */
+/* body.cookieBar:not(.front) > div#container-mobile{
   margin-top: 100px;
 }
 body:not(.front) > div#container-mobile{
   margin-top: 60px;
-}
-body.admin-menu:not(.front) > div.container {
-    margin-top: 128px;
-}
+} */
+
 html body.admin-menu {
   margin-top: -28px !important;
 }
@@ -257,6 +258,28 @@ span.closeBtn{
 span.closeBtn:hover{
   font-weight:  bold;
 }
+/* ----------------------- BREADCRUMB---------------------- */
+.breadcrumb {
+  background-color: #54b472;
+  color: #fff;
+  border-radius: 0px;
+  padding: 15px 15px 10px 15px;
+  font-size: 16px;
+}
+.breadcrumb a{
+  color: #fff;
+  text-decoration: none;
+  font-family: 'raleway-semibold', sans-serif;
+  opacity: 0.8;
+  padding: 0px 10px;
+}
+.breadcrumb img{
+  margin-top: -7px;
+}
+.breadcrumb a:hover{
+  opacity: 1;
+  color: #fff;
+}
 /***************************************************************************/
 /*                             HEADER - LOGO                               */
 /*                                                                         */
@@ -270,9 +293,53 @@ span.closeBtn:hover{
 /*                                                                         */
 /***************************************************************************/
 #main-menu .active{
-  background: #4DBB74;
-  color: #fff;
+  border-bottom: solid 4px #4DBB74;
   text-shadow: none;
+}
+#main-menu li{
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/* ONGLETS PAGE BALADE */
+.onglets li.active a {
+  font-size:18px;
+  background-color:#4DBB74;
+  color:#fff;
+}.onglets li.active:hover a {
+  font-size:18px;
+  background-color:#4DBB74;
+  color:#fff;
+}
+.onglets li a {
+  font-size:18px;
+  background-color: #e2f0e4;
+  color:#333;
+  margin-right: 5px;
+  border-radius: 0px;
+  border: none !important;
+}
+.onglets li:hover a, li.active a.espece:hover a{
+  font-size:18px;
+  background-color:#4DBB74;
+  color:#fff;
+}
+  
+  /* ONGLET PAGE SITE*/
+li.active a.especesite {
+  font-size:18px;
+  background-color:#4DBB74;
+  color:#fff;
+}
+li.active a.especesite:hover, li.active a.especesite:focus{
+  font-size:18px;
+  background-color:#4DBB74;
+  color:#fff;
+}
+li a.especesite{
+  font-size:18px;
+  background-color:#fff;
+  color:#4DBB74;
+  border-bottom:1px solid #ddd;
 }
 /***************************************************************************/
 /***************************************************************************/
@@ -460,7 +527,7 @@ body.front div.galleryFold2 span.swiper-pagination-bullet-active{
 /**/
 body.front div#foldOnEnParle{
   background-color: #F2F2F2;
-  margin-top: 47px;
+  /* margin-top: 47px; */
   overflow: hidden;
 }
 body.front div#foldOnEnParle img{
@@ -906,36 +973,36 @@ body.front figure{
     width: 170px;
     float: left;
   }
-  body.admin-menu:not(.front) > div.container {
+  /* body.admin-menu:not(.front) > div.container {
     margin-top: 47px;
-  }
-  h1.page-header{
+  } */
+  /* h1.page-header{
     padding : 10px !important;
-  }
+  } */
   .hidden-desktop.caracteristiques_balades .views-field-field-sponsor{
     display: none;
   }
-  body.node-type-balade div.especes-phares{
+  /* body.node-type-balade div.especes-phares{
     margin-top : 20px !important;
-  }
-  .zoneDescription{
+  } */
+/*   .zoneDescription{
     max-height: 500px;
     overflow-y: auto;
-  }
+  } 
   .zoneDescription h3{
     padding-left : 10px;
   }
-  body.node-type-balade div.zoneDescription > p {
+   body.node-type-balade div.zoneDescription > p {
     padding: 0px 10px !important;
-  }
+  } */
   body.node-type-balade h2 {
     position : initial !important;
   }
-  .hidden-desktop h3{
+  /* .hidden-desktop h3{
     padding: 0px 10px;
-  }
+  } */
   body.node-type-balade .view-v-informations-pratiques-balade{
-    padding : 10px !important;
+    padding : 0px !important;
   }
   .hidden-desktop.caracteristiques_balades.guide .views-field-field-sponsor img{
     margin-top : 0px;
@@ -958,10 +1025,10 @@ body.front figure{
   body.front figure{
     width: 400% !important;
   }
-  .zoneDescription{
+  /* .zoneDescription{
     max-height: 50vh;
     overflow-y: auto;
-  }
+  } */
 }
 @media  (max-width: 530px) {
 
@@ -999,6 +1066,38 @@ body.front figure{
 /***************************************************************************/
 /*********************************  ****************************************/
 /*********************************  ****************************************/
+div[id^=views_slideshow_cycle_teaser_section_v_slideshow_detail_balade-block], div[id^=views_slideshow_cycle_div_v_slideshow_detail_balade-block_]{
+  width: 100% !important;
+}
+body.node-type-balade section.span12{
+  margin: 0;
+}
+body.node-type-balade .imgSlideShow img{
+  width: 100%;
+  height: auto;
+}
+body.node-type-balade .container-node{
+  background: none !important;
+}
+body.node-type-balade .tab-content{
+  overflow: hidden;
+}
+body.node-type-balade h1.page-header{
+  background : #fff;
+  border: none;
+  border-radius: 0px;
+  font-family: 'Rockwell-Regular', sans-serif;
+  color: #111;
+  padding: 0px;
+  font-size: 2rem;
+}
+body.node-type-balade h3, body.node-type-espece h2,body.node-type-espece h3{
+  color: #111;
+  border-bottom: solid 2px #4DBB74;
+}
+body.node-type-balade .zoneDescription iframe{
+  width: 100%;
+}
 body.node-type-balade section#comments section.collapseComment{
   background-position:  0 0 !important;
 }
@@ -1037,7 +1136,7 @@ body.node-type-balade figure.effect-zoe a.imageBaladeSim, body.node-type-balade 
   position: absolute;
   display: block;
   top: -50px;
-  right: -3px;
+  right: 5px;
   width: 20px;
   height: 20px;
   background: url('../img/Zoom.png') 50% 50% no-repeat;
@@ -1061,7 +1160,7 @@ body.node-type-balade figure.effect-zoe a.imagePatrimoine{
     top: -55px;
     left: 1px;
 }
-body.node-type-balade figure.effect-zoe figcaption {
+/* body.node-type-balade figure.effect-zoe figcaption {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -1072,22 +1171,38 @@ body.node-type-balade figure.effect-zoe figcaption {
   transition: transform 0.35s;
   -webkit-transform: translate3d(0,100%,0);
   transform: translate3d(0,100%,0);
-}
+} */
 body.node-type-balade figure.effect-zoe:hover figcaption{
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
 }
 body.node-type-balade figure.effect-zoe p {
-  font-size: 1em;
+  font-size: 1rem;
   padding: 0 3%;
-  font-family: Raleway-Light;
-  color: rgb(51,51,51);
+  font-family: 'Raleway-Semibold';
+  color: #111;
   text-align: center;
   line-height: 20px;
   padding: 5px 0;
 }
 body.node-type-balade div.blocTaxon figure.effect-zoe p {
     text-align: center;
+}
+body.node-type-balade .more_species {
+  color: #fff;
+  text-align: center;
+}
+body.node-type-balade .more_species a{
+  font-size: 25px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+}
+body.node-type-balade .more_species:hover a{
+  /* transform: scale(1.1); */
 }
 /*Fin hover*/
 body.node-type-balade .views-slideshow-controls-bottom .views-content-field-image > img{
@@ -1107,30 +1222,20 @@ body.node-type-balade aside.region-sidebar-second h3:first-of-type{
   margin-top: 12px;
 }
 body.node-type-balade aside.region-sidebar-second h3{
-  padding: 12px 0;
-  background-color: #FAFAFA;
-  background-image: -moz-linear-gradient(top, white, #F2F2F2);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#F2F2F2));
-  background-image: -webkit-linear-gradient(top, white, #F2F2F2);
-  background-image: -o-linear-gradient(top, white, #F2F2F2);
-  background-image: linear-gradient(to bottom, white, #F2F2F2);
-  background-repeat: repeat-x;
-  font-size: 1.1em;
+  font-size: 1.5em;
   margin-top: 23px;
-  text-align: center;
   margin-bottom: 0;
-
-  -webkit-border-radius: 4px 4px 0px 0px;
-  -moz-border-radius: 4px 4px 0px 0px;
-  border-radius: 4px 4px 0px 0px;
-
+  border-bottom: solid 1px #111;
 }
 /* section#comments{
   margin-top: 21px;
 } */
+body.node-type-balade ul.nav-tabs{
+  margin-bottom: 10px;
+}
 body.node-type-balade h1.page-header{
   position: relative;
-  padding-right: 20%;
+  padding-bottom: 10px;
 }
 body.node-type-balade p.newBalade{
   display: none;
@@ -1138,11 +1243,11 @@ body.node-type-balade p.newBalade{
   position: absolute;
   top: 17px;
   right: 1.6%;
-  font-family: Rockwell-Regular;
+  font-family: 'Rockwell-Regular';
   font-size: 0.6em;
 }
 body.node-type-balade div.googleMap iframe{
-  width: 97%;
+  width: 100%;
   height: 400px;
   margin: 0 auto;
   display: block;
@@ -1153,18 +1258,21 @@ body.node-type-balade article.node-balade div.field-name-field-carte div.field-l
   background-color: #FAFAFA;
   padding: 1%;
   border-radius: 4px 0px;
-  font-family: Rockwell-Regular;
+  font-family: 'Rockwell-Regular';
   font-size: 1.1em;
 }
-body.node-type-balade article.node-balade{
+/* body.node-type-balade article.node-balade{
   padding: 0 1.5%;
-}
+} */
 body.node-type-balade section.span9 {
   background-color: #fff;
   border-radius: 4px ;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
-  margin: 0 0 13px 40px;
+  margin: 0px 20px 0px 0px;
+}
+body.node-type-balade [class^=span]{
+  margin-top: 15px;
 }
 body.node-type-balade .region-sidebar-second {
   margin-left: 8px;
@@ -1174,59 +1282,136 @@ body.node-type-balade .field-name-field-carte{
   top: 10px;
   color:#4DBB74;
 }
+body.node-type-balade .infos_pratiques{
+  margin: 20px 0px;
+  padding: 10px 0px;
+  border-top: solid 1px #ccc;
+  border-bottom: solid 1px #ccc;
+}
+body.node-type-balade .infos_pratiques h3{
+  border-bottom: none !important;
+  margin: 0;
+}
 body.node-type-balade .view-v-informations-pratiques-balade{
-  padding: 7%;
+  padding: 10px 0px;
+}
+body.node-type-balade .view-v-informations-pratiques-balade .views-row{
+  display: inline-flex;
+  width: 100%;
+}
+body.node-type-balade .view-v-informations-pratiques-balade .views-row .views-field{
+  flex-grow: 1;
+  position: relative;
+  padding-left: 60px;
+}
+body.node-type-balade .view-v-informations-pratiques-balade .views-row .views-field:last-child{
+  flex-grow: 2;
 }
 body.node-type-balade .views_slideshow_cycle_main {
-  width: 86%;
+  width: 89%;
   float: left;
 }
+.views-slideshow-pager-fields img{
+  min-width: 115px;
+  min-height: 115px;
+  margin-bottom: 10px;
+  opacity: 0.6;
+}
+.views-slideshow-pager-fields .active img {
+  opacity: 1;
+  border: none;
+}
 body.node-type-balade div#descriptionZone > p{
-  padding: 20px 15px 20px 15px;
+  padding: 0px; /*20px 15px*/
+  font-weight: 600;
 }
-body.node-type-balade div.view-v-slideshow-detail-balade{
+/* body.node-type-balade div.view-v-slideshow-detail-balade{
   padding-left: 3%;
-}
+} */
 body.node-type-balade div#descriptionZone {
   position: relative;
-  top: 35px;
-  border: 1px solid #BBB;
+  /* top: 35px;
+   border: 1px solid #BBB;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
-  border-radius: 4px;
-  margin: 0px 10px;
+  border-radius: 4px; 
+  margin: 0px 10px; */
 }
 body.node-type-balade h2{
-  position: absolute;
-  z-index: 2;
+  /* position: absolute; */
+  z-index: 2; /* 
   color: #4DBB74;
   top: -23px;
   left: 10px;
-  background-color: #FFF;
+  background-color: #FFF; */
   font-size: 17.5px;
   line-height: 20px;
-  padding: 0 6px;
+  /* padding: 0 6px; */
 }
-
-body.node-type-balade div#descriptionZone div.btn_download_pdf_balade {
-
-  position : relative; 
-  left: 50%;  
-  margin-top:20px; 
-  margin-bottom: 40px; 
-  transform: translateX(-50%); 
- }
-
+/* MOTEUR DE RECHERCHE */
+body.node-type-balade div.selectBalade{
+  padding: 0px 20px;
+  background: #54b472;
+}
+body.node-type-balade div.selectBalade select{
+  border: none !important;
+  border-radius: 0px !important;
+}
+/* LISTE ESPECES */
+body.node-type-balade div.view-v-all-especes .view-content{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px 15px;
+}
+body.node-type-balade div.view-v-all-especes .views-row{
+  width: 20%;
+  transition: all 0.5s ease;
+  /* border-top: solid 1px #ccc; */
+}
+body.node-type-balade div.view-v-all-especes .views-row:hover{
+  box-shadow: 0px 4px 24px -13px rgba(0,0,0,0.81);
+}
+body.node-type-balade div.view-v-all-especes .views-row #image_specie img{
+  width: 100% !important;
+}
+body.node-type-balade div.view-v-all-especes .span12{
+  margin-top: 0px;
+}
+body.node-type-balade div.view-v-all-especes .views-row h3{
+  font-size: 16px;
+  line-height: 20px;
+  border-bottom: none;
+  margin-bottom: 0px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+body.node-type-balade div.view-v-all-especes #lien_specie a:first-child {
+  border: solid 1px #111;
+  padding: 5px 30px;
+  text-transform: uppercase;
+  margin-top: 10px !important;
+  background: none;
+  border-radius: 0px !important;
+  width: 100%;
+  box-sizing: border-box;
+  height: fit-content;
+}
 /********************************************/
 
 body.node-type-balade div#patrimoineZone {
-    padding: 20px 15px 20px 15px;
+    /* padding: 20px 15px 20px 15px; */
     position: relative;
-    border: 1px solid #BBB;
+    /* border: 1px solid #BBB;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-    margin: 10px 10px 25px 10px;
+    margin: 10px 10px 25px 10px; */
+    margin-bottom: 30px;
+}
+
+body.node-type-balade div#patrimoineZone .span12{
+  margin-top: 0px;
 }
 
 body.node-type-balade div#patrimoineZone h1{
@@ -1239,6 +1424,7 @@ body.node-type-balade div#patrimoineZone figcaption p {
   font-size: 1em;
   text-align: center;
   padding: 5px 2%;
+  line-height: 15px;
 }
 
 body.node-type-balade div#patrimoine h4{
@@ -1248,8 +1434,6 @@ body.node-type-balade div#patrimoine h4{
     left: 10px;
     background-color: #FFF;
 }
-
-
 
 body.node-type-balade div.lesPatrimoinesImages {
     margin-top: 15px;
@@ -1266,19 +1450,57 @@ body.node-type-balade div.lesPatrimoinesImages {
   line-height: 20px;
   padding: 0 6px;
 } */
-body.node-type-balade div.especes-phares{
-  padding: 20px;
-  border: 1px solid #BBBBBB;
-  margin: 60px 10px 20px;
+body.node-type-balade div.accordion-group{
+  padding: 0px;
+  /*padding-bottom: 20px; */
+  border: none; 
+  margin: 0px;/* 
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
-  border-radius: 4px;
+  border-radius: 4px; */
   position: relative;
 }
-body.node-type-balade div.especes-phares a:hover{
+/* ACCORDION */
+body.node-type-balade .accordion .accordion-toggle h3{
+  position: relative;
+}
+body.node-type-balade .accordion .accordion-toggle.collapsed h3:after{
+  content: ' ';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 6.5px 0 6.5px;
+  border-color: #2E9050 transparent transparent transparent;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  transition: all 0.3s ease;
+}
+body.node-type-balade .accordion .accordion-toggle:not(.collapsed) h3:after{
+  content: ' ';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 6.5px 0 6.5px;
+  border-color: #2E9050 transparent transparent transparent;
+  transform: rotate(180deg);
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  transition: all 0.3s ease;
+}
+body.node-type-balade .accordion .accordion-inner{
+  border-top: none;
+}
+body.node-type-balade div.accordion a{
+  padding: 0px;
+}
+body.node-type-balade div.accordion a:hover{
   text-decoration: none;
 }
-
+body.node-type-balade div.especes-phares .row-fluid .span4{
+  margin-top: 0px !important;
+}
 body.node-type-balade div#boutons_partage{
   margin-left: 24px;
   margin-top: 3px;
@@ -1287,6 +1509,7 @@ body.node-type-balade div.view-v-slideshow-detail-balade div.field-content{
   color: #fff;
   padding-top: 1.5%;
   padding-left: 1%;
+  line-height: 15px;
 }
 body.node-type-balade #btn-guide{
   width: 89%;
@@ -1373,7 +1596,7 @@ body.node-type-balade div.field-name-field-detail-balade {
   margin-top: 30px;
 }
 body.node-type-balade div.view-v-informations-pratiques-balade div.views-field > span{
-  float:left;
+  /* float:left; */
   font-weight:bold;
   color:#4DBB74;
 }
@@ -1382,6 +1605,15 @@ body.node-type-balade div.blocConseil{
   background-color: #fff;
   padding: 17px 2%;
   margin-top: 10px;
+}
+body.node-type-balade .baladeSimilaire figure.effect-zoe{
+  overflow: hidden;
+  margin: 0;
+  position: relative;
+  margin-left: 1px;
+  display: inline-flex;
+  flex-direction: column;
+  padding: 0px 5px;
 }
 /*FIN PAGE BALADE*/
 
@@ -1439,6 +1671,9 @@ body.node-type-espece .swiper-container {
 body.node-type-espece .swiper-slide {
   background-size: cover;
   background-position: center;
+}
+body.node-type-espece .pictureSlider{
+  width: 100%;
 }
 body.node-type-espece .gallery-top {
   height: auto;
@@ -1538,7 +1773,7 @@ body.node-type-espece div.pictoGroupeTax{
   height: 1px;
 }
 body.node-type-espece div#blockDetailsEspece audio{
-  background: #4DBB74;
+  /* background: #4DBB74; */
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
@@ -1591,38 +1826,38 @@ body.node-type-espece #blockCriteresEspece{
   margin-top: 30px;
 }
 body.node-type-espece #blockDetailsEspece{
-  margin: 23px 10px 0px 10px;
-  border: 1px solid #BBBBBB;
+  /* margin: 23px 10px 0px 10px; *//* 
+  border: 1px solid #BBBBBB; */
   padding: 10px 10px 10px 10px;
-  width: 97%;
+  width: 97%;/* 
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  border-radius: 5px;
+  border-radius: 5px; */
   position: relative;
 }
 body.node-type-espece h2{
-  position: absolute;
+/*   position: absolute;
   top: -20px;
   background: #fff;
   padding: 0 8px;
   font-size: 17.5px;
-  line-height: 20px;
+  line-height: 20px; */
 }
 body.node-type-espece div#widget_pager_bottom_v_slideshow_detail_taxon-block img{
   height: 80px;
 }
 body.node-type-espece div#containerOfSaisonalite{
-  padding: 0px 10px 15px 10px;
+  padding: 10px 0px;
   position: relative;
   text-align: center;
-  margin-top: 30px;
+  /* margin-top: 30px; */
 }
 body.node-type-espece div#containerOfSaisonalite > div.row-fluid > div.span4:first-of-type{
   border: 1px solid #BBBBBB;
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  padding: 47px 12px 24px 12px;
+  padding: 24px 12px;
 }
 body.node-type-espece div#containerOfSaisonalite h4{
   position: absolute;
@@ -1667,7 +1902,7 @@ body.node-type-espece div#containerOfSaisonalite div.span8{
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  padding: 32px 0;
+  padding: 52px 0;
 }
 body.node-type-espece div#containerOfSaisonalite div.span8 > div.row-fluid > div.span6{
   padding-left: 15px;
@@ -1677,7 +1912,7 @@ body.node-type-espece div#containerOfSaisonalite div.matinee, body.node-type-esp
   padding-top: 163px;
 }
 body.node-type-espece div#containerOfSaisonalite div.journee{
-  background: url('../img/saisonalite/sun_black.png') no-repeat 65% 42%;
+  background: url('../img/saisonalite/sun_black.png') no-repeat 49% 49% !important;
   background-size: 70%;
 }
 body.node-type-espece div#containerOfSaisonalite div.matinee{
@@ -1728,19 +1963,25 @@ body.node-type-espece #aussiPresentDansBalade > h4:nth-child(3){
 }
 body.node-type-espece div.blocTaxon{
   margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 body.node-type-espece div.blocTaxon figure:first-of-type{
   margin-top: 0px;
   border: 0;
 }
-body.node-type-espece div.blocTaxon figure{
-  border-top: 1px solid #fff;
-}
+/* body.node-type-espece div.blocTaxon figure{
+  width: 33%;
+  margin: 0 auto;
+  display: inline-flex;
+  min-height: 200px;
+  max-height: 200px;
+} */
 /*hover*/
 body.node-type-espece figure.effect-zoe{
   overflow: hidden;
   margin: 0;
-  width: 90%;
+  width: 100%;
   position: relative;
   margin-left: 1px;
 }
@@ -1797,7 +2038,7 @@ body.node-type-espece h3{
   -webkit-border-radius: 4px 4px 0px 0px;
   -moz-border-radius: 4px 4px 0px 0px;
   border-radius: 4px 4px 0px 0px;
-  width: 80%;
+  width: 100%;
   padding: 10px 5%;
   margin-top: 0;
   font-size: 17.5px;
@@ -1805,12 +2046,12 @@ body.node-type-espece h3{
   margin-bottom: 0;
 }
 body.node-type-espece #blockEspece{
-  padding-bottom: 20px;
+  padding-bottom: 20px;/* 
   background-color : #fff;
   border: 1px solid #BBBBBB;
   border-radius: 4px ;
   -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
+  -moz-border-radius: 4px; */
 }
 /***************************************************************************/
 /***************************************************************************/
@@ -1967,8 +2208,11 @@ body.page-liste-especes h2{
 body.page-liste-especes div#title_specie h3{
   color: rgb(51,51,51);
   font-size: 14px;
+  min-height: 40px;
+  display: flex;
   line-height: 20px;
   font-family: "Raleway-Light", Arial, sans-serif;
+  align-items: center;
 
 }
 body.page-liste-especes .page-header{
@@ -2018,8 +2262,32 @@ body.page-liste-especes form {
 	margin: 0px!important;
 }
 body.page-liste-especes #containerOf1Specie {
-	border-left: 1px solid #dddddd;
-	border-right: 1px solid #dddddd;
+	/* border-left: 1px solid #dddddd;
+	border-right: 1px solid #dddddd; */
+}
+body.page-liste-especes .all-species .view-content{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+body.page-liste-especes .all-species .view-content .views-row{
+  width: 18%;
+  margin: 1%;
+}
+body.page-liste-especes .all-species .view-content .views-row:hover{
+  box-shadow: 0px 4px 24px -13px rgba(0,0,0,0.81);
+}
+body.page-liste-especes .all-species .view-content .views-row img{
+  width: 100%;
+}
+body.page-liste-especes .all-species .view-content .views-row #lien_specie a{
+  height: fit-content;
+    width: 100%;
+    background: none;
+    box-shadow: none;
+    border: solid 1px #000;
+    border-radius: 0px;
+    padding: 5px 0px;
 }
 body.page-liste-especes .views_slideshow_cycle_main {
 	width: 100%!important;
@@ -2053,9 +2321,12 @@ body.page-liste-especes .views-field.views-field-field-photo-resume-1 {
 	z-index: 8;
 }
 body.page-liste-especes .views-exposed-widgets.clearfix{
-	padding-left: 15px;
   display: inline-block;
   float: left;
+  width: 100%;
+  background: #4DBB74;
+  color: #fff;
+  padding: 5px;
 }
 body.page-liste-especes .views-exposed-widgets .form-item-items-per-page {
 	text-align: center;
@@ -2069,7 +2340,10 @@ body.page-liste-especes select#selectBalade {
   padding: 4px 6px;
 }
 body.page-liste-especes div.selectBalade {
-  padding: 0 15px;
+  color: #fff;
+  background: #4DBB74;
+  padding: 5px;
+  width: 100%;
 }
 body.page-liste-especes div.views-exposed-form:nth-of-type(1){
   margin-top: 3px;
@@ -2094,26 +2368,38 @@ body.page-liste-balades span.nameBalSmall {
 }
 body.page-liste-balades .container-node {
   padding-bottom: 45px;
+  background: none !important;
 }
 
 body.page-liste-balades div.mycontainersubfooter{
   margin-bottom: 45px;
 }
-
+body.page-liste-balades aside.span3{
+  display: none;
+}
+body.page-liste-balades section.span9{
+  width: 100%;
+}
 
 body.page-liste-balades .view-v-liste-balade .views-field-view-node,
 body.page-liste-balades .view-v-liste-balade .views-field-field-sponsor,
 body.page-liste-balades .view-v-liste-balade .views-field-field-distance,
 body.page-liste-balades .view-v-liste-balade .views-field-field-difficulte,
-body.page-liste-balades .view-v-liste-balade .views-field-field-vote{
-  float:left;
-  width:18.7%;
-  border-right:1px solid #BBBBBB;
+body.page-liste-balades .view-v-liste-balade .views-field-field-vote,
+body.page-liste-balades .view-v-liste-balade .views-field-field-denivele,
+body.page-liste-balades .view-v-liste-balade .views-field-field-duree{
+  float: left;
+  width: 30%;
+  border-right: 1px solid #BBBBBB;
   text-align: center;
+  margin: 5px 5px 0px 0px;
 }
-body.page-liste-balades .view-v-liste-balade .views-field-field-difficulte{
+body.page-liste-balades .view-v-liste-balade .views-field-field-sponsor, body.page-liste-balades .view-v-liste-balade .views-field-field-vote, body.page-liste-balades .view-v-liste-balade .views-field-field-difficulte,body.page-liste-balades .view-v-liste-balade .views-label-field-r-gion{
+  display: none !important;
+}
+body.page-liste-balades .view-v-liste-balade .views-field-field-denivele{
   border: 0;
-}
+} 
 body.page-liste-balades .view-v-liste-balade .views-field-nothing{
   float:left;
   width: 37%;
@@ -2125,13 +2411,78 @@ body.page-liste-balades div#edit-field-type-de-circuit-tid-wrapper p.help-block{
 }
 body.page-liste-balades .view-v-liste-balade .views-field-title h3 a{
   text-decoration: none;
+  color: #111;
+  padding-top: 10px;
+  font-family: 'ProximaNova-Bold', sans-serif;
 }
+
 body.page-liste-balades section#block-block-10{
   margin-top: 30px;
 }
+/* Bouton "en savoir +" */
 body.page-liste-balades .view-v-liste-balade .views-field-view-node{
-  border: none;
+  border: solid 1px #111;
+  width: fit-content;
+  padding: 5px 30px;
+  text-transform: uppercase;/* 
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s; */
+  margin-top: 20px !important;
 }
+ body.page-liste-balades .view-v-liste-balade div.views-row:hover{
+  -webkit-box-shadow: 0px 4px 24px -13px rgba(0,0,0,0.81);
+  -moz-box-shadow: 0px 4px 24px -13px rgba(0,0,0,0.81);
+  box-shadow: 0px 4px 24px -13px rgba(0,0,0,0.81);
+} 
+body.page-liste-balades .view-v-liste-balade .views-field-view-node a {
+  font-weight: bold;
+  color: #111;
+}
+body.page-liste-balades .view-v-liste-balade .views-field-view-node-1{
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+body.page-liste-balades .view-v-liste-balade .views-field-view-node-1 .field-content{
+  width: 100% !important;
+  margin-top: 0 !important;
+}
+body.page-liste-balades .view-v-liste-balade .views-field-view-node-1 .field-content a {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  opacity: 0;
+}
+/* Wrapper link */
+.wrapper_link{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+}
+.wrapper_link .field-content{
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100% !important;
+}
+.wrapper_link .field-content a{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 body.page-liste-balades div.olFramedCloudPopupContent div.openlayers-popup-feature{
   border-bottom: 1px dotted #fff;
   padding-bottom: 20px;
@@ -2178,10 +2529,17 @@ body.page-liste-balades .view-v-liste-balade .views-field-nothing a:hover{
   font-weight: bold;
 }
 body.page-liste-balades .view-v-liste-balade .views-field-field-photo-resume {
-    float: left;
-  margin-right: 3%;
-  max-width: 43%;
-  margin-left: -15px;
+  padding-bottom: 0px;
+}
+body.page-liste-balades .view-v-liste-balade .views-field-field-photo-resume .field-content{
+  padding-bottom: 10px;
+  margin-top: 0px !important;
+  float: none !important;
+  padding: 0;
+  width: 100% !important;
+}
+body.page-liste-balades .view-v-liste-balade .views-field-field-photo-resume img{
+  width: 100% !important;
 }
 body.page-liste-balades aside{
   width: 20%;
@@ -2189,11 +2547,15 @@ body.page-liste-balades aside{
 }
 body.page-liste-balades p.newBalade{
   display: none;
-  color: #FD7939;
+  color: #4DBB74;
   position: absolute;
-  top: 7px;
-  right: 2%;
+  top: 4px;
+  right: 20px;
   font-family: Rockwell-Regular;
+  background: white;
+  padding: 0px 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 body.page-liste-balades .views-field.views-field-created {
   display: none;
@@ -2218,46 +2580,125 @@ body.page-liste-balades aside h2{
 
 }
 /************ VIEW LISTE BALADE **********/
+body.page-liste-balades .view-v-liste-balade .view-content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 body.page-liste-balades .view-v-liste-balade .views-row {
-  border:1px solid #EBEBEB;
-  position: relative;
+  /* border: 1px solid #EBEBEB;
+  border: 1px solid #bbbbbb; 
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
-  border-radius: 4px;
-  margin-bottom: 15px;
+  border-radius: 0px; 
+   padding: 5px 15px; */
+  position: relative;
   min-height: 350px;
-  padding:5px 15px;
   background-color: #fff;
-  border: 1px solid #bbbbbb;
+  width: 280px; /*290*/
+  margin: 5px;
+  padding: 5px;
+  margin-bottom: 25px;
+  transition: all 0.5s ease;
 }
 body.page-liste-balades .view-v-liste-balade .views-field-title h3{
   font-size: 1.2em;
-  padding-right: 12%;
+  line-height: 1.2em;
+  padding-top: 10px;
+  margin-top: 0px !important;
+  margin-bottom: 0px;
+  float: none !important;
+  font-size: 16px !important;
 }
 
 body.page-liste-balades .view-v-liste-balade .views-field-field-sponsor,
 body.page-liste-balades .view-v-liste-balade .views-field-field-distance,
 body.page-liste-balades .view-v-liste-balade .views-field-field-difficulte,
-body.page-liste-balades .view-v-liste-balade .views-field-field-vote,
+body.page-liste-balades .view-v-liste-balade .views-field-field-denivele,
 body.page-liste-balades .view-v-liste-balade .views-field-nothing,
-body.page-liste-balades .view-v-liste-balade .views-field-view-node{
-    margin:15px 4px 0px;
+body.page-liste-balades .view-v-liste-balade .views-field-view-node,
+body.page-liste-balades .view-v-liste-balade .views-field-field-duree{
+    margin:5px 4px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 body.page-liste-balades .view-v-liste-balade .views-field-nothing{
   margin-top: 0;
 }
+/* RECAP INFOS BALADE */
 body.page-liste-balades .view-v-liste-balade .views-field-field-distance,
 body.page-liste-balades .view-v-liste-balade .views-field-field-difficulte,
-body.page-liste-balades .view-v-liste-balade .views-field-field-vote{
+body.page-liste-balades .view-v-liste-balade .views-field-field-denivele,
+body.page-liste-balades .view-v-liste-balade .views-field-field-vote,
+body.page-liste-balades .view-v-liste-balade .views-field-field-duree{
   text-align:center;
 }
 
 body.page-liste-balades .view-v-liste-balade .views-field-field-distance .field-content,
-body.page-liste-balades .view-v-liste-balade .views-field-field-difficulte .field-content{
-  font-weight:bold;
+body.page-liste-balades .view-v-liste-balade .views-field-field-difficulte .field-content,
+body.page-liste-balades .view-v-liste-balade .views-field-field-denivele .field-content,
+body.page-liste-balades .view-v-liste-balade .views-field-field-vote .field-content,
+body.page-liste-balades .view-v-liste-balade .views-field-field-duree .field-content{ 
+padding-right: 5px;
+transform: translateX(12px);
 }
-body.page-liste-balades .view-v-liste-balade .views-field-field-difficulte{
-  font-size:12px;
+body.page-liste-balades .view-v-liste-balade .views-field .views-label{
+  font-family: 'ProximaNova-bold', sans-serif;
+}
+body.page-liste-balades .view-v-liste-balade .views-field .field-content{
+  font-size: 14px;
+  width: fit-content;
+  float: right;
+  position: relative;
+  font-weight: normal;
+  margin-top: 10px;
+  width: fit-content;
+  line-height: 18px;
+}
+body.page-liste-balades .view-v-liste-balade .views-field-view-node .field-content{
+  margin-top: 0px !important;
+}
+/* RECAP INFOS BALADE ICONES */
+body.page-liste-balades .view-v-liste-balade .views-field-field-distance .field-content:before{
+  content: "";
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: -28px;
+  top: -5px;
+  display: block;
+  background-size: 25px 25px;
+  background-image: url(../img/pictos/icone_distance.svg);
+  background-repeat: no-repeat;
+}
+body.page-liste-balades .view-v-liste-balade .views-field-field-denivele .field-content:before{
+  content: "";
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: -30px;
+  top: -4px;
+  display: block;
+  background-size: 25px 25px;
+  background-image: url(../img/pictos/icone_denivele.svg);
+  background-repeat: no-repeat;
+}
+body.page-liste-balades .view-v-liste-balade .views-field-field-duree .field-content:before{
+  content: "";
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: -28px;
+  top: -4px;
+  display: block;
+  background-size: 25px 25px;
+  background-image: url(../img/pictos/icone_temps.svg);
+  background-repeat: no-repeat;
+}
+
+body.page-liste-balades .view-v-liste-balade .views-field-field-difficulte, body.page-liste-balades .view-v-liste-balade .views-field-field-denivele{
+  font-size:13px;
 }
 body.page-liste-balades .view-v-liste-balade  .fivestar-widget-static {
   width: 100px;
@@ -2267,13 +2708,17 @@ body.page-liste-balades #edit-field-distance-value{
   width:60px;
 }
 body.page-liste-balades .view-v-liste-balade .views-field-field-teaser{
-  margin-left:-1.8%;
+  /* margin-left:-1.8%;
   background:white;
   border:1px solid #eeeeee;
-  width: 103.4%;
+  width: 103.4%; */
+  font-size: 12px;
 }
 body.page-liste-balades .view-v-liste-balade .views-field-field-teaser p{
   margin:1.7% 10px 0px 0px;
+  margin-top: 0px !important;
+  font-family: 'ProximaNova-Regular', sans-serif;
+  padding:  5px 0px 5px 0px;
 }
 body.page-liste-balades .view-v-liste-balade .fivestar-widget{
   width:110px;
@@ -2282,17 +2727,19 @@ body.page-liste-balades .view-v-liste-balade .fivestar-widget{
 body.page-liste-balades .fivestar-average-text{
   font-size:11px
 }
-body.page-liste-balades .page-liste-balades .well{
+body.page-liste-balades .well{
   padding:0px;
+  background: inherit;
+  border: inherit;
 }
 body.page-liste-balades .views-exposed-widget .views-submit-button{
   float:right;
 }
 body.page-liste-balades #block-views-exp-v-liste-balade-page-1 legend{
   border: medium none;
-    font-size: 14px;
-    line-height: 20px;
-    margin-bottom:0px;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom:0px;
 }
 body.page-liste-balades #block-views-exp-v-liste-balade-page-1 form{
   margin:0 0 50px;
@@ -2303,17 +2750,15 @@ body.page-liste-balades #block-views-exp-v-liste-balade-page-1 label{
 }
 body.page-liste-balades .critere-form-aside{
   background: #4DBB74;
-  background:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #4DBB74), color-stop(100%, #2E9050));
+/*   background:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #4DBB74), color-stop(100%, #2E9050));
   background:-moz-gradient(linear, left top, left bottom, color-stop(0%, #4DBB74), color-stop(100%, #2E9050));
   background:-ms-gradient(linear, left top, left bottom, color-stop(0%, #4DBB74), color-stop(100%, #2E9050));
-  background:-o-gradient(linear, left top, left bottom, color-stop(0%, #4DBB74), color-stop(100%, #2E9050));
-
+  background:-o-gradient(linear, left top, left bottom, color-stop(0%, #4DBB74), color-stop(100%, #2E9050)); */
   padding: 5px;
-  border: 1px solid #D4D4D4;
-
+/*   border: 1px solid #D4D4D4;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
-  border-radius: 4px;
+  border-radius: 4px; */
 }
 /***************************************************************************/
 /***************************************************************************/
@@ -2777,7 +3222,7 @@ footer.footer > div.container:nth-of-type(2){
 }
 footer.footer div#contact a.linkMap{
   background: url('../img/footer/contact_icon.png') no-repeat 50% 50%;
-  background-size: 85%;
+  background-size: 65%;
   height: 50px;
   width: 100%;
   display: block;
@@ -3931,6 +4376,16 @@ body.page-valoriser-votre-territoire div.form-item-fonction div.blocRadioButtons
 /*                                                                         */
 /***************************************************************************/
 /*********************************  ****************************************/
+body.page-taxonomy .article {
+  position: relative;
+}
+body.page-taxonomy .article a.clickable{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 body.page-taxonomy-term div.likeShareCommentActu,
 body.node-type-blogosphere div.likeShareCommentActu{
   margin-top: 9px;
@@ -3949,11 +4404,10 @@ body.node-type-blogosphere a.commentButton{
   font-size: 22px;
 }
 
-@media screen and (min-width: 960px)
-{
+@media screen and (min-width: 960px){
 	body.page-taxonomy-term div.likeShareCommentActu.inSlider{
   		margin-left: 4em;
-	}
+  }
 }
 body.node-type-blogosphere article.node-blogosphere header span.submitted, body.node-type-blogosphere fieldset.filter-wrapper.form-wrapper{display:  none; }
 body.node-type-blogosphere section#comments section.collapseComment{
@@ -4056,8 +4510,7 @@ body.node-type-blogosphere div.navbarBlog nav.navigationBlog ul.navBlog a:hover{
   border-bottom: 1px solid #a08a77;
   color: #a08a77;
 }
-@media screen and (min-width: 960px)
-{
+@media screen and (min-width: 960px){
 	body.page-taxonomy-term div.navbarBlog nav.navbar-inner,
 	body.node-type-blogosphere div.navbarBlog nav.navbar-inner{
   		border: 0px;
@@ -4585,8 +5038,8 @@ body.node-type-balade div.view-v-liste-taxon-balade #containerOf1Specie p, body.
 }
 #containerOf1Specie{
   height:auto;
-  padding: 6px;
-  border-top: 1px solid #dddddd;
+  padding: 10px;
+  /* border-top: 1px solid #dddddd; */
 }
 #lien_specie{
 
@@ -4629,7 +5082,7 @@ body.node-type-balade div.view-v-liste-taxon-balade #containerOf1Specie p, body.
 
 #lien_specie a:hover,
 #lien_specie a:active,
-.#lien_specie a.active,
+#lien_specie a.active,
 #lien_specie a.disabled,
 #lien_specie a[disabled] {
   color: #333333;
@@ -5329,7 +5782,7 @@ display:none;
 .hero-unit p{
   font-size:18px;
   line-height:30px;
-  padding: 0 30px 10px 10px;
+  /* padding: 0 30px 10px 10px; */
   text-align: justify;
   min-height:100px;
 }
@@ -5347,7 +5800,7 @@ a,a:hover, a:active, a:focus {
 
 .hero-unit{
   background:white;
-  padding:0 60px;
+  padding:0px;
 }
 
 .hero-unit p{
@@ -5584,6 +6037,9 @@ body.node-type-balade div.view-id-v_note_balade{
 div.view-v-caracteristiques-balade div.views-field-field-difficulte div.field-content a{
   color: #fff;
 }
+div.caracteristiques_balades {
+  margin-top: 10px;
+}
 /*******************PAGE ESPECE************************/
 .picto-groupe-label{
   margin-left:20px;
@@ -5601,47 +6057,6 @@ margin-left: 1%;
   margin-top:20px;
 }
 
-/* ONGLETS PAGE BALADE*/
-li.active a.description, li.active a.espece {
-
-font-size:18px;
-background-color:#4DBB74;
-color:#fff;
-}
-li.active a.description:hover, li.active a.espece:hover, li.active a.description:focus, li.active a.espece:focus{
-
-font-size:18px;
-background-color:#4DBB74;
-color:#fff;
-}
-li a.description, li a.espece{
-
-font-size:18px;
-background-color:#fff;
-color:#4DBB74;
-border-bottom:1px solid #ddd;
-}
-
-/* ONGLET PAGE SITE*/
-li.active a.especesite {
-
-font-size:18px;
-background-color:#4DBB74;
-color:#fff;
-}
-li.active a.especesite:hover, li.active a.especesite:focus{
-
-font-size:18px;
-background-color:#4DBB74;
-color:#fff;
-}
-li a.especesite{
-
-font-size:18px;
-background-color:#fff;
-color:#4DBB74;
-border-bottom:1px solid #ddd;
-}
 /**** VIEW LISTE TAXONS ******/
 .mini_img_liste_taxon{
 width:100px;
@@ -5686,13 +6101,29 @@ max-width: none;
   -moz-border-radius: 0px 0px 4px 4px;
   border-radius: 0px 0px 4px 4px;
 }
+body.node-type-balade .view-v-caracteristiques-balade .views-row{
+  display: inline-flex;
+  width: 99%;
+  min-width: 99.5%;
+  border: solid 1px #bbb;
+}
+body.node-type-balade .view-v-caracteristiques-balade .views-row .views-field:last-child{
+  border-right: none;
+}
+body.node-type-balade .views-field span {
+  width: fit-content !important;
+  text-align: center !important;
+}
+body.node-type-balade .caracteristiques_balades .views-field {
+  padding: 20px 0px 20px 50px !important;
+}
 .view-v-caracteristiques-balade  .views-field-field-difficulte,
 .views-field-field-acces-site .field-content {
-    color: white;
+    /* color: white;
     font-weight: bold;
-   /* height: 30px;
-    line-height: 30px;*/
-    text-align: center;
+   height: 30px;
+    line-height: 30px;
+    text-align: center; */
  }
 .view-v-informations-pratiques-balade   .views-field-field-acces-site span {
     color: white;
@@ -5712,10 +6143,10 @@ body.node-type-balade .views-field-field-acces-site .field-content a {
   color: white;
   text-decoration: underline;
 }
-body.node-type-balade div.view-v-caracteristiques-balade  .views-field-field-difficulte{
+/* body.node-type-balade div.view-v-caracteristiques-balade .views-field-field-difficulte{
   background: #55BB79;
   padding:5px 0;
- }
+ } */
 /* .views-field-field-distance,
 .views-field-field-type-de-circuit,
 .views-field-field-duree{
@@ -5731,29 +6162,8 @@ body.node-type-balade div.view-v-caracteristiques-balade  .views-field-field-dif
 
 } */
 body.node-type-balade div.views-field-field-denivele span.views-label-field-denivele{
-  font-size: 12px;
-  font-weight: normal;
-}
-/* body.node-type-balade div.views-field-field-denivele,
-body.node-type-balade div.views-field-field-duree{
-  text-align: center;
-  width: 48%;
-  float: left;
-  height: 56px;
-  padding-top: 15px;
-  font-weight: bold;
   font-size: 13px;
-  line-height: 16px;
-  clear: right!important;
-  border-top: 1px solid #bbbbbb;
-} */
-/* body.node-type-balade div.views-field-field-duree{
-  border-right: 1px solid #bbbbbb;
-} */
-
-.view-v-liste-balade .views-field-field-distance{
-  margin: 10px 0px 0px 0px!important;
-  height:35px!important;
+  font-weight: bold;
 }
 
 .views-field-field-distance span,
@@ -5761,8 +6171,7 @@ body.node-type-balade div.views-field-field-duree{
 .views-field-field-duree span,
 .views-field-field-acces-site span,
 .views-field-field-sponsor span{
-   font-size:12px;
-   font-weight:normal;
+   font-size: 13px;
 }
 .views-field-field-point-de-depart .field-content{
    margin-left:5px;
@@ -5774,32 +6183,135 @@ body.node-type-balade div.views-field-field-duree{
   min-height:30px;
   margin:10px 0px 5px;
 }
+/* ZONE INFOS CIRCUIT */
 body.node-type-balade .views-field-field-distance,
 body.node-type-balade .views-field-field-type-de-circuit,
 body.node-type-balade .views-field-field-duree,
-body.node-type-balade .views-field-field-denivele{
+body.node-type-balade .views-field-field-denivele,
+body.node-type-balade .views-field-field-difficulte{
+  position: relative;
   border-right: 1px solid #bbbbbb;
   text-align: center;
-  width: 48%;
-  display: inline-block;
-  padding: 20px 0;
+  width: calc(100% - 50px);
+  padding: 20px 0px 20px 50px;
   font-weight: bold;
   font-size: 13px;
+  display: inline-flex;
+  justify-content: center;
 }
-body.node-type-balade .views-field-field-type-de-circuit,
-body.node-type-balade .views-field-field-denivele{
-  border: 0;
+body.node-type-balade .views-field-field-sy-rendre{
+  padding: 10px 0px !important;
 }
-body.node-type-balade .views-field-field-duree,
-body.node-type-balade .views-field-field-denivele{
-  border-top: 1px solid #bbbbbb;
+body.node-type-balade .views-field-field-distance span,
+body.node-type-balade .views-field-field-type-de-circuit span,
+body.node-type-balade .views-field-field-duree span,
+body.node-type-balade .views-field-field-denivele span,
+body.node-type-balade .views-field-field-balade-adresse span,
+body.node-type-balade .views-field-field-sy-rendre span,
+body.node-type-balade .views-field-field-difficulte span{
+  font-family: 'Raleway-SemiBold', sans-serif;
+  padding-right: 5px;
+  line-height: 18px;
+  text-align: right;
+  width: 45%; /*test*/
 }
+body.node-type-balade .views-field-field-balade-adresse div{
+  text-align: left;
+}
+/* ICONES FICHE TECHNIQUE INFOS CIRCUIT */
+body.node-type-balade .views-field-field-difficulte:before{
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 10%;
+  top: 14px;
+  display: block;
+  background-size: 30px 30px;
+  background-image: url(../img/pictos/icone_diff.svg);
+  background-repeat: no-repeat;
+}
+body.node-type-balade .views-field-field-distance:before{
+  content: "";
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 10%;
+  top: 11px;
+  display: block;
+  background-size: 35px 35px;
+  background-image: url(../img/pictos/icone_distance.svg);
+  background-repeat: no-repeat;
+}
+body.node-type-balade .views-field-field-type-de-circuit:before{
+  content: "";
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 10%;
+  top: 11px;
+  display: block;
+  background-size: 35px 35px;
+  background-image: url(../img/pictos/icone_circuit.svg);
+  background-repeat: no-repeat;
+}
+body.node-type-balade .views-field-field-duree:before{
+  content: "";
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 10%;
+  top: 11px;
+  display: block;
+  background-size: 35px 35px;
+  background-image: url(../img/pictos/icone_temps.svg);
+  background-repeat: no-repeat;
+}
+body.node-type-balade .views-field-field-denivele:before{
+  content: "";
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 10%;
+  top: 11px;
+  display: block;
+  background-size: 35px 35px;
+  background-image: url(../img/pictos/icone_denivele.svg);
+  background-repeat: no-repeat;
+}
+body.node-type-balade .views-field-field-balade-adresse:before{
+  content: "";
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 4px;
+  top: -10px;
+  display: block;
+  background-size: 35px 35px;
+  background-image: url(../img/pictos/icone_location.svg);
+  background-repeat: no-repeat;
+}
+/* BOUTON TELECHARGER BALADE */
+body.node-type-balade .views-field.views-field-field-detail-balade {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  margin: 20px 0px;
+}
+body.node-type-balade .views-field.views-field-field-detail-balade .field-content{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+}
+
 body.node-type-balade .views-field-field-acces-site{
   padding: 20px 10%;
 }
-
-
-
 
 /************************************************************************/
 /**img-front**/
@@ -5856,8 +6368,12 @@ body.front #fold2 > h2{
 }
 
 /***Sponsort***/
+body.node-type-balade div.views-field-field-sponsor, body.node-type-balade div.views-field-field-sponsort-2, body.node-type-balade div.views-field-field-sponsort-3{
+  width: 30%;
+  display: inline-flex;
+}
 
-body.node-type-balade div.views-field-field-sponsort-2 img{
+/* body.node-type-balade div.views-field-field-sponsort-2 img{
   border-top: 1px dotted #4DBB74;
   border-bottom: 1px dotted #4DBB74;
   width: 66%;
@@ -5868,7 +6384,7 @@ body.node-type-balade div.views-field-field-sponsort-3 img{
 width: 66%;
 padding: 4% 8%;
 margin-left: 9%;
-}
+} */
 /***FinSponsort***/
 
 
@@ -5988,8 +6504,22 @@ margin-left: 9%;
   }
   /*PAGE BALADE*/
   body.node-type-balade section.span9 {
-    margin: 0 0 0 20px;
-    border: 1px solid #e1e1e1;
+    margin: 0 0 0 20px;/* 
+    border: 1px solid #e1e1e1; */
+  }
+  body.node-type-balade .span9 h3, body.node-type-balade .span9 h2{
+    border-bottom: solid 1px #111;
+    padding: 0px;
+    font-size: 24px;
+    line-height: 40px;
+  }
+  body.node-type-balade .views-slideshow-pager-fields img {
+    min-width: 100px;
+    min-height: 100px;
+    margin-bottom: 5px;
+  }
+  body.node-type-balade .views-slideshow-pager-fields > div {
+    padding-left: inherit;
   }
   /*FOOTER*/
   footer.footer .icon_android_store, footer.footer .icon_apple_store {
@@ -6071,6 +6601,26 @@ margin-left: 9%;
     margin-left: 0;
   }
 }
+@media (max-width: 1023px){
+  body.node-type-balade div.view-v-all-especes .view-content{
+    padding: 0px;
+  }
+  body.node-type-balade div.especes-phares .row-fluid {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+  body.node-type-balade div.especes-phares .row-fluid .span4{
+    width: 90%;
+    padding: 0px 5px;
+    min-width: 90%;
+  }
+  body.node-type-balade div.view-v-all-especes .views-row{
+    width:33%;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+  }
+}
 @media  (max-width: 1000px) {
   body.front div#img-front {
     height: 685px;
@@ -6104,6 +6654,9 @@ margin-left: 9%;
   body.page-taxonomy-term div.swiper-blog div.swiper-wrapper div.swiper-slide div.row-fluid div.infoArticleBlog{
     position: absolute;
     width: 40%;
+  }
+  body.admin-menu:not(.front) > div.container {
+    margin-top: 128px;
   }
 }
 @media  (max-width: 979px) {
@@ -6648,7 +7201,7 @@ margin-left: 9%;
   }
   body.node-type-balade div#image_specie, body.node-type-balade div#title_specie, body.node-type-balade div#descro_specie, body.node-type-balade div#lien_specie{
     float: left;
-    width: auto;
+    width: 100%;
   }
   body.node-type-balade div#title_specie{
     padding-left: 2%;
@@ -6684,7 +7237,7 @@ margin-left: 9%;
     margin-top: 5px;
   }
   body.node-type-balade .views_slideshow_cycle_main {
-    width: 96%;
+    width: 100%;
   }
   /*FOOTER*/
   footer.footer div#questions{
@@ -6835,6 +7388,18 @@ margin-left: 9%;
 @media (max-width: 850px){
   body.page-valoriser-votre-territoire div.imgFold4 {
     background-position: 77% 50%;
+  }
+}
+@media (min-width: 767px){
+  body.node-type-balade .baladeSimilaire figure.effect-zoe{
+    width: 24%;
+  }
+  body.node-type-espece div.blocTaxon figure{
+    width: 33%;
+    margin: 0 auto;
+    display: inline-flex;
+    min-height: 200px;
+    max-height: 200px;
   }
 }
 @media (max-width: 767px) {
@@ -6998,23 +7563,106 @@ margin-left: 9%;
     padding: 16px !important;
   }
   /*PAGE ESPECE*/
+  body.node-type-espece div#containerOfSaisonalite > div.row-fluid > div.span4:first-of-type{
+    margin-bottom: 15px;
+  }
   /*PAGE LES BALADES*/
   body.page-liste-balades div.container-node > .row > aside, body.page-liste-balades div.container-node > .row > section {
-    width: 95.7%;
+    /* width: 95.7%; */
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
-  body.page-liste-balades .view-v-liste-balade .views-field-view-node a {
-    font-size: 2em;
+  body.page-liste-balades .view-v-liste-balade .views-row {
+    width: 100%;
+    border-bottom: solid 1px lightgrey;
+    margin-bottom: 15px;
+    padding-bottom: 25px;
+  }
+  body.page-liste-balades .view-v-liste-balade .views-field-view-node {
+    width: -webkit-fill-available !important;
+    margin-top: 30px !important;
   }
   /*PAGE BALADE*/
+  body.node-type-balade ul#myTab li{
+    max-width: 33%;
+  }
+  body.admin-menu:not(.front) > div.container{
+    margin-top: 0px !important;
+  }
+  body.node-type-balade .breadcrumb{
+    margin: 0 -20px;
+    margin-bottom: 10px;
+  }
+  body.node-type-balade .views_slideshow_main {
+    margin-bottom: 5px;
+  }
+  body.node-type-balade div[class^=views-slideshow-pager-fields]{
+    display: inline-flex;
+    overflow-x: scroll;
+    max-width: -webkit-fill-available;
+  }
+  body.node-type-balade .views-slideshow-pager-fields > div {
+    padding-left: inherit;
+    min-width: 105px;
+  }
+  body.node-type-balade h1.page-header{
+    font-size: 30px;
+    /* padding: 0px; */
+    line-height: 30px;
+    margin-top: 0px;
+  }
+  body.node-type-balade .view-v-caracteristiques-balade .views-row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  body.node-type-balade .view-v-caracteristiques-balade .views-row .views-field{
+    width: 50% !important;
+    padding: 10px 0px !important;
+    text-align: right;
+    display: flex;
+    box-sizing: border-box;
+    border: none;
+    padding-left: 50px !important;
+  }
+  body.node-type-balade .views-field:before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    position: absolute;
+   /*  left: 12px; */
+    top: 8px;
+    display: block;
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+  }
+  body.node-type-balade .caracteristiques_balades .views-field:nth-child(1), body.node-type-balade .caracteristiques_balades .views-field:nth-child(2){
+    border-bottom: solid 1px #ccc;
+  }
+  body.node-type-balade div.view-v-all-especes .views-row{
+    width: 50% !important;
+  }
+  body.node-type-balade div.view-v-all-especes #image_specie, body.node-type-balade div.view-v-all-especes #lien_specie{
+    width: 100%;
+  }
+  /* body.node-type-balade .caracteristiques_balades .views-field:nth-child(even){
+    border-right: solid 1px #ccc;
+  } */
   body.node-type-balade div#les_picto_balades div{
     width: 90px;
     height: 90px;
   }
-  body.node-type-balade h1.page-header {
+  body.node-type-balade .views-field-field-distance, body.node-type-balade .views-field-field-type-de-circuit, body.node-type-balade .views-field-field-duree, body.node-type-balade .views-field-field-denivele, body.node-type-balade .views-field-field-difficulte{
+    width: 34% !important;
+  }
+  body.node-type-balade .view-v-caracteristiques-balade .views-field-field-balade-adresse, body.node-type-balade .view-v-caracteristiques-balade .views-field-field-sy-rendre{
+    display: none;
+  }
+  /* body.node-type-balade h1.page-header {
     position: relative;
     padding: 5% 15%;
     text-align: center;
-  }
+  } */
   body.node-type-balade p.newBalade {
     top: 25px;
     right: 1%;
@@ -7029,8 +7677,48 @@ margin-left: 9%;
     width: 100%;
     margin: 0;
   }
+  body.node-type-balade div.especes-phares{
+    margin: 0px;
+    padding-top: 0px;
+  }
+  body.node-type-balade div.especes-phares .more_species {
+    width: calc(50% - 5px);
+    height: inherit;
+    margin-left: 5px;
+    position: relative;
+  }
+  body.node-type-balade div.especes-phares .more_species a{
+    font-size: 18px;
+  }
+  body.node-type-balade div.especes-phares .more_species img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  body.node-type-balade div.especes-phares figure.effect-zoe figcaption p{
+    text-align: left;
+    font-family: 'Raleway-Semibold', sans-serif;
+  }
+  body.node-type-balade .infos_pratiques .views-field-field-balade-adresse{
+    padding: 5px 0px 10px 50px;
+  }
+  body.node-type-balade .infos_pratiques .views-field-field-balade-adresse:before{
+    top: -5px;
+  }
+  body.node-type-balade .infos_pratiques div[class^="views-field-field-sponsor"] {
+    width: 30% !important;
+    display: inline-flex;
+  }
+  body.node-type-balade .view-v-informations-pratiques-balade .views-row{
+    display: flex;
+    flex-direction: column;
+  }
+  body.node-type-balade .baladeSimilaire figure.effect-zoe{
+    margin-bottom: 20px;
+  }
   /*LISTE BALADE*/
-  body.page-liste-balades .view-v-liste-balade .views-field-view-node,
+/*   body.page-liste-balades .view-v-liste-balade .views-field-view-node,
   body.page-liste-balades .view-v-liste-balade .views-field-nothing,
   body.page-liste-balades .view-v-liste-balade .views-field-field-sponsor,
   body.page-liste-balades .view-v-liste-balade .views-field-field-distance,
@@ -7039,7 +7727,7 @@ margin-left: 9%;
     float: none;
     width: auto;
     border-right: 0;
-  }
+  } */
   body.page-liste-balades .view-v-liste-balade .views-field-nothing a {
     padding: 3% 2%;
     margin: 0 auto;
@@ -7052,12 +7740,12 @@ margin-left: 9%;
     float: none;
     text-align: center;
     margin-right: 0;
-    padding-bottom: 12px;
+    /* padding-bottom: 12px; */
     max-width: 100%;
   }
   body.page-liste-balades .view-v-liste-balade .views-field-title {
-    text-align: center;
-    padding-bottom: 12px;
+    /* text-align: center;
+    padding-bottom: 12px; */
   }
   body.page-liste-balades .view-v-liste-balade .views-field-title h1{
     padding-right: inherit;
@@ -7066,18 +7754,23 @@ margin-left: 9%;
     margin: 0 auto;
   }
   body.page-liste-balades .view-v-liste-balade .views-field-field-teaser p{
-    padding: 2%;
+    /* padding: 2%; */
     margin: 0;
+    font-size: 16px !important;
   }
   body.page-liste-balades p.newBalade {
-    top: 15px;
+    /* top: 15px;
     right: 1%;
-    -ms-transform: rotate(22deg); /* IE 9 */
-    -webkit-transform: rotate(22deg); /* Chrome, Safari, Opera */
-    transform: rotate(22deg);
+    -ms-transform: rotate(22deg);
+    -webkit-transform: rotate(22deg); 
+    transform: rotate(22deg); */
+    font-size: 1.3rem;
   }
   /*FIN LISTE BALADE*/
   /*FOOTER*/
+  footer, .subfooter{
+    margin: 0px -20px;
+  }
   footer.footer .icon_android_store, footer.footer .icon_apple_store {
     width: 50%;
     padding: 2% 2%;
@@ -7262,7 +7955,7 @@ margin-left: 9%;
     padding: 3% 3%;
   }
   body.node-type-balade h1.page-header {
-    padding-top: 50px;
+    padding-top: 10px;
   }
   footer.footer .icon_android_store, footer.footer .icon_apple_store{
     background-image: none;
