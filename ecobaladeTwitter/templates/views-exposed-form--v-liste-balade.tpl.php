@@ -47,9 +47,6 @@
         </div>
       </div>
     <?php endforeach; ?>
-    <div class="views-exposed-widget views-submit-button ">
-      <?php print $button; ?>
-    </div>
 </div> <!-- fin critere-form-aside-->
     <?php if (!empty($sort_by)): ?>
       <div class="views-exposed-widget views-widget-sort-by">
@@ -75,8 +72,8 @@
         <?php print $reset_button; ?>
       </div>
     <?php endif; ?>
-<!-- 	<div class="views-exposed-widget views-submit-button ">
+	<div class="views-exposed-widget views-submit-button ">
       <?php print $button; ?>
-    </div> -->
+    </div>
   </div>
 </div>

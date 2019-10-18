@@ -89,8 +89,8 @@
 	
 	<div class='row-fluid'>
 		<div class='span12' id="containerOf1Specie">
-			
-				<div id="image_specie">
+			<div class='row-fluid'>
+				<div class='span2' id="image_specie">
 					<?php if($isFilterBalade) { ?>
 	  					<?php echo $image_espece; ?>
 					<?php }else{ ?> 
@@ -98,13 +98,13 @@
 					<?php } ?>
 				
 				</div>
-				<div id="title_specie">
+				<div class='span2' id="title_specie">
 						<h3><?php echo $title_espece; ?></h3>
 				</div>
-<!-- 				<div class='span6' id="descro_specie">
+				<div class='span6' id="descro_specie">
 						
 				<?php 
-				/* $descro_espece = drupal_html_to_text($descro_espece); 	
+				$descro_espece = drupal_html_to_text($descro_espece); 	
 				
 					//Si on vient d'un texte brut dans balises
 				if($descro_espece[0] != '<'){
@@ -115,25 +115,25 @@
 
 					//Si on vient d'un plain texte avec wisiwig et balise
 					echo $descro_espece;												
-				} */
+				}
 				?>
 
-				</div> -->
-				<div id="lien_specie">
+				</div>
+				<div class='span2' id="lien_specie">
 					<?php if($isFilterBalade) : ?>
 				
 	  					<a href="<?php echo $base_url.'/espece/'.$lien_espece_url.'?balade='.$titleBalade;?>">Découvrir, <?php echo $title_espece; ?></a>
 					
 					<?php else : ?>
 					
-						<a href="<?php echo $base_url.'/espece/'.$lien_espece_url; ?>">Découvrir <?php /* echo $title_espece; */ ?></a>
+						<a href="<?php echo $base_url.'/espece/'.$lien_espece_url; ?>">Découvrir, <?php echo $title_espece; ?></a>
 
 					<?php endif; ?>
 
 				</div>
 			
 				<div class='<?php echo($groupe_taxo)?>'></div>
-				
+			</div>	
 			
 		</div>
 	</div>

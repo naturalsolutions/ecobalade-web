@@ -330,43 +330,41 @@ Template de la page liste des articles
                 ?>
 
                 <!-- Display Article -->
-                <div class="article">
-                  <h2><?php echo $title ?></h2>
-                  <?php if ($currentArticle->field_sous_titre_blog != '') {
-                    $subTitle = $currentArticle->field_sous_titre_blog['und'][0]['value'];
-                    echo "<p class='subtitle'>".$subTitle."</p>";
-                  } 
-                  ?>
-                  <i><?php echo "Posté dans ".$blogCategorie." le ".$created ?></i>
-                  <br>
-                  <a href="<?php echo $base_url.'/'.$cleanUrlArticle; ?>"><?php echo $blogImage; ?></a>
-                  <p><?php echo $blogResume ?></p>
-                <div class="likeShareCommentActu">
-                  <!-- AddThis Button BEGIN -->
-                  <div class="boutons_partage">
-                    <div class="addthis_toolbox addthis_default_style addthis_16x16_style" >
-                        <a class="addthis_button_facebook"></a>
-                        <a class="addthis_button_twitter"></a>
-                        <a class="addthis_button_google_plusone_share"></a>
-                        <a class="addthis_counter addthis_bubble_style"></a>
-                    </div>
+                <h2><?php echo $title ?></h2>
+                <?php if ($currentArticle->field_sous_titre_blog != '') {
+                  $subTitle = $currentArticle->field_sous_titre_blog['und'][0]['value'];
+                  echo "<p class='subtitle'>".$subTitle."</p>";
+                } 
+                ?>
+                <i><?php echo "Posté dans ".$blogCategorie." le ".$created ?></i>
+                <br>
+                <a href="<?php echo $base_url.'/'.$cleanUrlArticle; ?>"><?php echo $blogImage; ?></a>
+                <p><?php echo $blogResume ?></p>
+               <div class="likeShareCommentActu">
+                <!-- AddThis Button BEGIN -->
+                <div class="boutons_partage">
+                  <div class="addthis_toolbox addthis_default_style addthis_16x16_style" >
+                      <a class="addthis_button_facebook"></a>
+                      <a class="addthis_button_twitter"></a>
+                      <a class="addthis_button_google_plusone_share"></a>
+                      <a class="addthis_counter addthis_bubble_style"></a>
                   </div>
-                  <!-- AddThis Button END -->   
-                    <!-- <a href="#"><img id="imgLike" src=" <?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-like.png" 
-                                      onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-likehover$-.png'" 
-                                      onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-like.png'"></a>
-                    <a href="#"><img id="imgShare" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/share.png"
-                                      onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/sharehover.png'" 
-                                      onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/share.png'"></a> -->
-                    <a class="commentButton" href="<?php echo $base_url.'/'.$cleanUrlArticle; ?>#comment-form-wrapper"><img id="imgComment" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png"
-                                      onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubulehover.png'" 
-                                      onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png'"></a>
-                  </div>
-                  <br/>
-                  <a class="lirePlus" href="<?php echo $base_url.'/'.$cleanUrlArticle; ?>"> > Continuer de lire</a>
-                  <a class="clickable" href="<?php echo $base_url.'/'.$cleanUrlArticle; ?>"></a>
-                  <hr>
                 </div>
+                <!-- AddThis Button END -->   
+                  <!-- <a href="#"><img id="imgLike" src=" <?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-like.png" 
+                                    onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-likehover$-.png'" 
+                                    onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/heart-like.png'"></a>
+                  <a href="#"><img id="imgShare" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/share.png"
+                                    onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/sharehover.png'" 
+                                    onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/share.png'"></a> -->
+                  <a class="commentButton" href="<?php echo $base_url.'/'.$cleanUrlArticle; ?>#comment-form-wrapper"><img id="imgComment" src="<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png"
+                                    onmouseover="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubulehover.png'" 
+                                    onmouseout="this.src='<?php echo $base_url; ?>/sites/all/themes/ecobaladeTwitter/img/img_blog/bubule.png'"></a>
+                </div>
+                <br/>
+                <a class="lirePlus" href="<?php echo $base_url.'/'.$cleanUrlArticle; ?>"> > Continuer de lire</a>
+                <hr>
+
 
                 <?php } ?>
                 <div class="nextArticles"> <p id ="test">

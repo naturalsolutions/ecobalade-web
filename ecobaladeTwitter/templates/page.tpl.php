@@ -74,9 +74,6 @@
       <?php if ($page['highlighted']): ?>
         <div class="highlighted hero-unit"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
-      <div class="searchbar">
-        <?php print render($page['sidebar_first']); ?>
-      </div>
       <?php //if ($breadcrumb): print $breadcrumb; endif;?>
       <!--<a id="main-content"></a>-->
       <?php //print render($title_prefix); ?>
