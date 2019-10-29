@@ -126,7 +126,7 @@
 					
 					<?php else : ?>
 					
-						<a href="<?php echo $base_url.'/espece/'.$lien_espece_url; ?>">Découvrir <?php /* echo $title_espece; */ ?></a>
+						<a href="<?php echo $base_url.'/espece/'.$lien_espece_url; ?>"><?php /* echo $title_espece; */ ?></a>
 
 					<?php endif; ?>
 

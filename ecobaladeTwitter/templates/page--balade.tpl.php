@@ -379,9 +379,12 @@
 
 							//Affichage	
 							echo '<figure class="effect-zoe">';
+							echo "<figcaption class='visible-phone hidden-desktop'>";
+							echo "<a title='Visiter la page' href='$base_url/$loadPathBalade'><p>$title</p></a>";
+							echo '</figcaption>';
 							echo "<a href='$base_url/$loadPathBalade' title=\"$title\">$imgbaladeSim</a>";
 							echo "<a href='$url' class='imageBaladeSim' title=\"$title\"></a>";
-							echo "<figcaption>";
+							echo "<figcaption class='hidden-phone'>";
 							echo "<a title='Visiter la page' href='$base_url/$loadPathBalade'><p>$title</p></a>";
 							echo '</figcaption>';
 							echo '</figure>';

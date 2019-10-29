@@ -411,7 +411,7 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/"><img src=\"../..
 													<div class="span8">
 														<h4>Présence</h4>
 														<div class="row-fluid">
-															<div class="span6">																
+															<div class="span7">																
 																<div class="row-fluid">
 																	<?php
 																	$nbitemTimeValue = count($TabOfTimeVisibiliteValue);
@@ -494,7 +494,7 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/"><img src=\"../..
 																	?>																	
 																</div>															
 															</div>															
-															<div class="span6">
+															<div class="span5">
 																<?php 
 																																
 																if($isTime && $isNow) echo "<div class='visibleEnCeMoment'>Visible en ce moment</div>";	
