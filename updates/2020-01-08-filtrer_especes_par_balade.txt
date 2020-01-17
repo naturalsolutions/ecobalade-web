@@ -1,0 +1,8 @@
+:> Mettre à jour la v-all-especes en base de données
+sur l'interface de gestion des views de drupal
+  --> import copier/coller l'export de la view depuis l'instance de dev
+:> Mettre à jour les templates de la view v-all-especes
+ --> git pull de la dev sur le dev/demo/prod
+
+:> Retirer la boutique
+désactiver la v-boutique dans structure/view

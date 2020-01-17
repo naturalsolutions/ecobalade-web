@@ -1,0 +1,5 @@
+Après mise à jour de tous les modules et du core
+PHP Fatal error:  Cannot redeclare _views_theme_functions() (previously declared in sites/all/modules/views-back/theme/theme.inc:18) in /sites/all/modules/views/theme/theme.inc on line 39
+> supprimer views-back
+Problème avec les aggrégations css/js
+reload 2X
