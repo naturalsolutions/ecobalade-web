@@ -83,7 +83,7 @@
 
 		<?php print render($page['header']); ?>
 	</header>
-	
+
 	<?php if ($breadcrumb) : echo "<div class='breadcrumb'><a href='" . $base_url . "'><img src=\"../../sites/all/themes/ecobaladetwitter/img/pictos/icone_home.svg\"></a>&nbsp»&nbsp<a href='" . $base_url . "/liste-balades' title='Liste des balades'>Balades</a>&nbsp»&nbsp" . $title . " </div>";
 	endif; ?>
 
@@ -187,7 +187,7 @@
 							// affichage reste du node
 							?>
 						</div>
-					
+
 					</div> <!-- Fin active -->
 
 					<!-- Conteneur de l'onglet Patrimoine -->
@@ -234,7 +234,7 @@
 												$nidPhotoResumeEspecePhare = $nodeEspecePhare->nid;
 												$nidPhotoResumeEspecePhare = drupal_get_path_alias('node/' . $nidPhotoResumeEspecePhare);
 
-												//Affichage	
+												//Affichage
 												echo "<div class='span4'>";
 												echo '<figure class="effect-zoe">';
 												echo "<a href='$base_url/$nidPhotoResumeEspecePhare' title=\"$TitlePhotoResumeEspecePhare\">$imgPhotoResumeEspecePhare</a>";
@@ -262,23 +262,7 @@
 										<?php /* if ($breadcrumb): echo "<div class='breadcrumb'><a href='".$base_url."'><img src=\"../../sites/all/themes/ecobaladetwitter/img/pictos/icone_home.svg\"></a>&nbsp»&nbsp<a href='".$base_url."/liste-balades' title='Liste des balades'>Balades</a>&nbsp»&nbsp".$title." </div>"; endif; */ ?>
 
 										<?php
-										global $base_url;
-										$isFilterBalade = false;
-
-										if (isset($_GET['balade']) && $_GET['balade'] != '') {
-											$isFilterBalade = true;
-
-											$titleBalade = $_GET['balade'];
-											$titleBaladeMachine = $titleBalade;
-											$titleBalade = 'balade/' . $titleBalade;
-											$titleBalade = drupal_get_normal_path($titleBalade);
-											$titleBalade = explode('/', $titleBalade);
-											$nidBalade = $titleBalade[1];
-											$titleBalade = node_load($nidBalade);
-											$titleBalade = $titleBalade->title;
-											//drupal_set_title($title = $title.' - '.$titleBalade);
-										} else $nidBalade = 'all';
-
+											global $base_url;
 										?>
 
 										<a id="main-content"></a>
@@ -286,43 +270,15 @@
 											<div class="row-fluid">
 												<section class="span12">
 
-													<?php
-													//Liste des balades publiés        
-													try {
-
-														$query = db_select('node', 'n');
-														$query->innerjoin('url_alias', 'ua', "ua.source = CONCAT('node/', n.nid)");
-														$query->condition('n.status', 1, '=')
-															->condition('n.type', 'balade', '=')
-															->fields('n', array('title', 'nid'))
-															->fields('ua', array('alias'))
-															->orderBy('created', 'DESC');
-
-														$result = $query->execute();
-													} catch (Exception $e) {
-
-														drupal_set_message(t("Sorry, they are an error in the query."), 'error');
-													}; ?>
-
-													<div id="filterBalade" class="selectBalade views-exposed-widget views-exposed-form">
-														<p>Rechercher ici votre espèce</p><br />
-														<label for="selectBalade">Par balade</label>
-														<select id="selectBalade" name="select">
-															<option value='balade/all'>Toutes</option>
-
-															<?php while ($record = $result->fetchAssoc()) {
-
-																if ($nidBalade == $record['nid']) echo "<option selected='selected' value='" . $record['alias'] . "'>" . $record['title'] . "</option>";
-																else echo "<option value='" . $record['alias'] . "'>" . $record['title'] . "</option>";
-															} ?>
-														</select>
-													</div>
-
 													<div class="row-fluid">
 														<div class="span12" id='blockAllEspeces'>
 															<?php
-															if ($nidBalade == 'all') print views_embed_view('v_all_especes', 'block_1');
-															else print views_embed_view('v_all_especes', 'block_all_especes', $nidBalade);
+															if ($baladenid) {
+																print views_embed_view('v_all_especes', 'block_all_especes', $baladenid);
+															}
+															else {
+																print views_embed_view('v_all_especes', 'block_1');
+															}
 															?>
 														</div>
 													</div>
@@ -377,7 +333,7 @@
 							//remplacer le node par le alias
 							$loadPathBalade = drupal_get_path_alias('node/' . $value->nid);
 
-							//Affichage	
+							//Affichage
 							echo '<figure class="effect-zoe">';
 							echo "<figcaption class='visible-phone hidden-desktop'>";
 							echo "<a title='Visiter la page' href='$base_url/$loadPathBalade'><p>$title</p></a>";
@@ -396,7 +352,7 @@
 			<!-- *****ASIDE RIGHT****** -->
 			<?php if ($page['sidebar_second']) : ?>
 				<!-- <aside class="span12 region-sidebar-second visible-desktop" role="complementary">
-				<h3>Informations pratiques</h3>	
+				<h3>Informations pratiques</h3>
 				<?php /* print views_embed_view('v_informations_pratiques_balade','block',$baladenid); */ ?>
 		</aside -->
 				<!-- /#sidebar-second -->
@@ -423,30 +379,30 @@
 
 		//LightBox pour especes phares
 		/* 	if( $('.imageTaxon').length > 1 ){
-				
-				$('.imageTaxon').vanillabox({		
-					
+
+				$('.imageTaxon').vanillabox({
+
 					closeButton: false,
 					loop: true,
 					repositionOnScroll: true,
 					type: 'image',
 					adjustToWindow: 'both'
-		    	
-		    	});	
+
+		    	});
 			}  */
 
 		//LightBox pour balades similaire
 		/* 	if( $('.imageBaladeSim').length > 1 ){
-				
-				$('.imageBaladeSim').vanillabox({		
-					
+
+				$('.imageBaladeSim').vanillabox({
+
 					closeButton: false,
 					loop: true,
 					repositionOnScroll: true,
 					type: 'image',
 					adjustToWindow: 'both'
-		    	
-		    	});	
+
+		    	});
 			} */
 
 		//LightBox pour patrimoines
