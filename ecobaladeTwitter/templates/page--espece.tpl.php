@@ -1,6 +1,6 @@
 <header id="navbar" role="banner" class="navbar navbar-fixed-top">
   <div class="navbar-inner">
-  	<div class="container">  
+  	<div class="container">
   	  <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
   	  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
   		<span class="icon-bar"></span>
@@ -24,22 +24,22 @@
     		  <?php endif; ?>
     		</hgroup>
   	  <?php endif; ?>
-  	  
+
   	  <div class="nav-collapse pull-right">
     	  <nav role="navigation">
       		<?php if ($primary_nav): ?>
       		  <?php print $primary_nav; ?>
       		<?php endif; ?>
-      	  
+
       		<?php if ($search): ?>
       		  <?php if ($search): print render($search); endif; ?>
       		<?php endif; ?>
-      		
+
       		<?php if ($secondary_nav): ?>
       		  <?php print $secondary_nav; ?>
       		<?php endif; ?>
     		</nav>
-  	  </div>         
+  	  </div>
   	</div>
   </div>
 </header>
@@ -53,7 +53,7 @@
 <?php
 //On test si l'on vient d'une page balade pour proposer un fil d'ariane complet
 
-global $base_url; 
+global $base_url;
 $isFilterBalade = false;
 
 if(isset($_GET['balade']) && $_GET['balade'] != '') {
@@ -90,7 +90,7 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/"><img src=\"../..
         <h1 class="page-header"><?php print $title; ?></h1>
       <?php endif; ?>
       <?php print render($title_suffix); ?>
-	  <?php print $messages; ?>	   
+	  <?php print $messages; ?>
 
 
  	<?php if ($page['highlighted']): ?>
@@ -99,7 +99,7 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/"><img src=\"../..
 	    <?php if ($tabs): ?>
         <?php print render($tabs); ?>
       <?php endif; ?>
-      <?php if ($page['help']): ?> 
+      <?php if ($page['help']): ?>
         <div class="well"><?php print render($page['help']); ?></div>
       <?php endif; ?>
       <?php if ($action_links): ?>
@@ -107,39 +107,39 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/"><img src=\"../..
       <?php endif; ?>
 
 		<div class="row-fluid">
-				
-			<section class="span12">  
 
-					<?php if ($node){			 
+			<section class="span12">
+
+					<?php if ($node){
 							$espnid = $node->nid;
-							$nom_scf = $node->field_nom_scientifique; 
+							$nom_scf = $node->field_nom_scientifique;
 							$nom_scf = $nom_scf[und][0][value];
-							
+
 							$groupe_tax = $node->field_groupe_taxonomique;
 							$groupe_tax = $groupe_tax[und][0][taxonomy_term];
 							$groupe_tax = $groupe_tax->name;
-							
+
 							$baladenid = $node->field_c_ft_balade;
 							$baladenid = $baladenid[und][0][node];
 							$baladenid = $baladenid->nid;
-							
+
 							$baladename = $node->field_c_ft_balade;
 							$baladename = $baladename[und][0][node];
 							$baladename = $baladename->title;
-							
+
 							$criteres = $node->field_crit_res;
 							$criteres = $criteres[und];
 							//$valEnCour = $criteres[0][taxonomy_term]->[name];
-						
+
 							$TabOfSaisonValue = $node->field_saison['und'];
 							$TabOfTimeVisibiliteValue = $node->field_visible['und'];
 							$TabOfVisibilityValue = $node->field_visible['und'];
 
-					}?>			  
-						
+					}?>
+
 						<div class="row-fluid">
 							<div class="span12" id='blockEspece'>
-							
+
 									<!-- ici on définit le nom de taxo -->
 									<div class="row-fluid">
 										<div class="span12" id='blockTitleEsp'>
@@ -159,19 +159,19 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/"><img src=\"../..
 											<a class="btn-back-list-espece btn btn-primary" title="Retour à la liste des espèces" href="<?php echo $base_url.'/especes?balade='.$titleBaladeMachine; ?>">Retour à la liste des espèces</a>
 										</div>
 									</div>
-									
+
 									<div class="row-fluid">
 										<div class="span12" id='blockSlideEsp'>
 											<div class="row-fluid">
-											<?php 		 
-											
+											<?php
+
 											//On récupere les photos
-											$field_image = field_get_items($entity_type = 'node', $node, $field_name = 'field_image'); 
-																						
+											$field_image = field_get_items($entity_type = 'node', $node, $field_name = 'field_image');
+
 											//Si pas d'image
 											if(empty($field_image) || count($field_image) < 2){
 
-												
+
 
 												//On définit notre format
 												$variables = array(
@@ -180,34 +180,34 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/"><img src=\"../..
 											        'width' => $node->field_photo_resume['und'][0]['width'],
 											        'height' => $node->field_photo_resume['und'][0]['height'],
 											        'title' => $node->field_photo_resume['und'][0]['title'],
-											        'attributes' => $arrayName = array('class' => 'pictureWhenNoSlider' ),										        
+											        'attributes' => $arrayName = array('class' => 'pictureWhenNoSlider' ),
 													'alt' => $node->field_photo_resume['und'][0]['alt'],
 												);
-												
+
 												$imgPhotoResumeTaxon = theme( 'image_style', $variables );
 												//affiche simple photo
 												echo $imgPhotoResumeTaxon;
 
 											}else{
-												
+
 												echo '<div class="span10">';
 													echo "<div class='swiper-container gallery-top'>";
 								 						echo "<div class='swiper-wrapper'>";
-													    
-													//Affiche slideshow
-			
 
-																									    
+													//Affiche slideshow
+
+
+
 													    foreach ($field_image as $key => $value) {
-													    	
-													    	//drupal_set_message( "<pre>" . print_r($value['uri'], TRUE) . "</pre>" ); 
+
+													    	//drupal_set_message( "<pre>" . print_r($value['uri'], TRUE) . "</pre>" );
 													    	$variables = array(
 														        'style_name' => 'slideshow_detail_balade_full',
 														        'path' => $value['uri'],
 														        'width' => $value['width'],
 														        'height' => $value['height'],
 														        'title' => $value['title'],
-														        'attributes' => $arrayName = array('class' => 'pictureSlider' ),										        
+														        'attributes' => $arrayName = array('class' => 'pictureSlider' ),
 																'alt' => $nom_scf
 															);
 
@@ -215,20 +215,20 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/"><img src=\"../..
 
 													       	//Store title image for crédits
 													       	$titleImg = $value['title'];
-													    	
+
 													    	 // Slides
 													        echo "<div class='swiper-slide'>$imgPhotoResumeTaxon<p class='swiper-caption'>$titleImg</p></div>";
-													        
+
 
 													    }
 
 													    echo "</div>"; // fin swiper-wrapper
-													    
+
 													    echo '<div class="swiper-button-next swiper-button-white"></div>';
 	        											echo '<div class="swiper-button-prev swiper-button-white"></div>';
 
 													echo "</div>"; //fin swiper-container
-												echo "</div>"; 
+												echo "</div>";
 
 
 
@@ -236,11 +236,11 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/"><img src=\"../..
 												echo '<div class="span2">';
 							 						echo '<div class="swiper-container gallery-thumbs">';
 												        echo '<div class="swiper-wrapper">';
-												        	foreach ($field_image as $key => $value) {												        		
+												        	foreach ($field_image as $key => $value) {
 
 													    		$imageThumb = file_create_url($value['uri']);
-													    		
-													    		// Slides													        
+
+													    		// Slides
 												        		echo "<div class='swiper-slide' style='background-image:url($imageThumb)'></div>";
 
 														    }
@@ -248,14 +248,14 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/"><img src=\"../..
 												        echo '</div>';
 												    echo '</div>';
 											    echo '</div>';
-											    
-											
-											} 											
-													
+
+
+											}
+
 											?>
 											</div> <!-- fin row-fluid -->
 										</div>
-									</div>	
+									</div>
 											<!-- AddThis Button BEGIN -->
 										    <!-- <div id="boutons_partage">
 										      <div class="addthis_toolbox addthis_default_style addthis_32x32_style" >
@@ -265,7 +265,7 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/"><img src=\"../..
 										          <a class="addthis_counter addthis_bubble_style"></a>
 										      </div>
 										    </div> -->
-										    <!-- AddThis Button END -->		
+										    <!-- AddThis Button END -->
 
 
 									<div class="row-fluid">
@@ -274,46 +274,46 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/"><img src=\"../..
 
 
 											<?php $son = field_get_items($entity_type = 'node', $node, $field_name = 'field_son'); ?>
-											
-											<?php 
+
+											<?php
 											if(!empty($son)){
-												
+
 												$titleOfSon = $son[0]['description'];
-												$son = file_create_url($son[0]['uri']);	
+												$son = file_create_url($son[0]['uri']);
 												print ("
-												<audio preload='auto' title='Chant du $node->title | crédit : $titleOfSon' controls='controls'>												  
+												<audio preload='auto' title='Chant du $node->title | crédit : $titleOfSon' controls='controls'>
 												  <source src='$son' type='audio/mp3' />
 												  <span style='text-align:center;display:block;'>ø</span>
 												</audio>
 												");
-											
-											} 
+
+											}
 											?>
 
 											<?php $description = field_get_items($entity_type = 'node', $node, $field_name = 'field_description'); ?>
-											<?php $description = $description[0]['value']; ?>				
+											<?php $description = $description[0]['value']; ?>
 											<h2>Description</h2>
-											<p><?php echo $description; ?></p>											
+											<p><?php echo $description; ?></p>
 										</div>
 
 										<div class="row-fluid">
-											    <div class="span12" id="containerOfSaisonalite">												
+											    <div class="span12" id="containerOfSaisonalite">
 													<div class='row-fluid'>
-													
+
 													<?php if(count($TabOfSaisonValue) > 0 ): ?>
 													<div class="span4">
 
-														<?php 
+														<?php
 														//test si c'est une plante
 														if($groupe_tax == 'Arbustes et plantes' || $groupe_tax == 'Arbres') echo "<h2>Période de floraison</h2>";
-														else echo "<h2>Présence</h2>";																				
-														
+														else echo "<h2>Période d'observation</h2>";
+
 														?>
-														
+
 														<div class="row-fluid">
 
-															<?php 
-															$currentMonth =  date('m'); 
+															<?php
+															$currentMonth =  date('m');
 
 															switch ($currentMonth) {
 																case '01':
@@ -352,27 +352,27 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/"><img src=\"../..
 																case '12':
 																	$currentMonth = 'Décembre';
 																break;
-															
+
 																default:
 																	# code...
 																	break;
 															}
-															
+
 															?>
 
 															<div class="row-fluid">
-																<div class="span12">																			
+																<div class="span12">
 																	<p class='currentMonth'><?php echo $currentMonth; ?></p>
-																	<?php 
+																	<?php
 																	if($groupe_tax == 'Arbustes et plantes' || $groupe_tax == 'Arbres') {
-																		
+
 																		if($isNow) echo "<p class='labelCurrentMonth'>En fleur ce mois ci</p>";
 																		else echo "<p class='labelCurrentMonth'>Pas en fleur ce mois ci</p>";
 																	}
 																	else {
-																		
-																		if($isNow) echo "<p class='labelCurrentMonth'>Visible ce mois ci</p>";	
-																		else echo "<p class='labelCurrentMonth'>Pas visible ce mois ci</p>";	
+
+																		if($isNow) echo "<p class='labelCurrentMonth'>Visible ce mois ci</p>";
+																		else echo "<p class='labelCurrentMonth'>Pas visible ce mois ci</p>";
 																	}
 																	?>
 																	<span class='lineSeparator'></span>
@@ -393,16 +393,16 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/"><img src=\"../..
 																	<div id='07' class="span3">Juil</div>
 																	<div id='08' class="span3">Aoû</div>
 																</div>
-																
+
 																<div class="row-fluid labelMois">
 																	<div id='09' class="span3">Sep</div>
 																	<div id='10' class="span3">Oct</div>
 																	<div id='11' class="span3">Nov</div>
 																	<div id='12' class="span3">Dec</div>
-																</div>																																			
+																</div>
 															</div>
 
-														</div> <!--	fin row-fluid -->											
+														</div> <!--	fin row-fluid -->
 													</div> <!-- fin span4 -->
 
 													<?php endif; ?>
@@ -411,7 +411,7 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/"><img src=\"../..
 													<div class="span8">
 														<h4>Présence</h4>
 														<div class="row-fluid">
-															<div class="span7">																
+															<div class="span7">
 																<div class="row-fluid">
 																	<?php
 																	$nbitemTimeValue = count($TabOfTimeVisibiliteValue);
@@ -429,15 +429,15 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/"><img src=\"../..
 																		case 3:
 																			$spanNumber = 'span4';
 																			$allstyle = 'background-position-y:46%;';
-																		break;																		
-																		
+																		break;
+
 																		default:
 																		# code...
 																		break;
 																	}
 																	foreach ($TabOfTimeVisibiliteValue as $key => $value) {
-																		
-																		$val = $value['value'];																	
+
+																		$val = $value['value'];
 																		$hour = date('H');
 																		$hour = intval($hour);
 
@@ -448,14 +448,14 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/"><img src=\"../..
 
 																		if($val == $currenTime) $isTime = true;
 
-																		if($nbitemTimeValue < 4) {	
+																		if($nbitemTimeValue < 4) {
 
 																			if($nbitemTimeValue == 2 && $val == 'journee') $allstyle = 'background-size: 70%;';
 																			else if($nbitemTimeValue == 2) $allstyle = 'background-size: 80%;';
 
 																			echo "<div style='$allstyle' class='$spanNumber $val' title='$val'>";
 																				switch ($val) {
-																					
+
 																					case 'matinee':
 																						echo 'A l\'aube';
 																					break;
@@ -471,7 +471,7 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/"><img src=\"../..
 																					case 'nuit':
 																						echo 'La nuit';
 																					break;
-																					
+
 																					default:
 																					# code...
 																					break;
@@ -485,47 +485,47 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/"><img src=\"../..
 
 																				echo "<div class='span12 jourNuit' title='jourNuit'>";
 																					echo 'Jour & Nuit';
-																				echo "</div>";																				
+																				echo "</div>";
 
 																			}
 																		}
 
 																	}
-																	?>																	
-																</div>															
-															</div>															
+																	?>
+																</div>
+															</div>
 															<div class="span5">
-																<?php 
-																																
-																if($isTime && $isNow) echo "<div class='visibleEnCeMoment'>Visible en ce moment</div>";	
-																else echo "<div class='InvisibleEnCeMoment'>Pas visible en ce moment</div>";	
-															
-																?>																
+																<?php
+
+																if($isTime && $isNow) echo "<div class='visibleEnCeMoment'>Visible en ce moment</div>";
+																else echo "<div class='InvisibleEnCeMoment'>Pas visible en ce moment</div>";
+
+																?>
 															</div>
 														</div>
-													</div> <!-- fin span8 -->	
-													<?php endif; ?>											
-												</div> <!-- fin row-fluid -->														
-											</div> <!-- fin containerOfSaisonalite -->	
+													</div> <!-- fin span8 -->
+													<?php endif; ?>
+												</div> <!-- fin row-fluid -->
+											</div> <!-- fin containerOfSaisonalite -->
 
-									</div>	
+									</div>
 
 									<div class="blocTaxon">
 
 									<h3>A découvrir</h3>
-									<?php 		 
+									<?php
 									$view = views_get_view('v_taxon_suivant_precedent');
-									$view->set_display('block_vsui');									
+									$view->set_display('block_vsui');
 									$view->pre_execute();
 									$view->execute();
 									$objects = $view->result;
 
 									foreach ($objects as $key => $value) {
-										
+
 										//Charge node taxon
 										$nodeTaxon = node_load($value->nid);
 
-										//Récuperation des info dans la variable $nodeTaxon 
+										//Récuperation des info dans la variable $nodeTaxon
 										$url = file_create_url($nodeTaxon->field_photo_resume['und'][0]['uri']);
 										$alt = $nodeTaxon->field_photo_resume['und'][0]['alt'];
 										$title = $nodeTaxon->field_photo_resume['und'][0]['title'];
@@ -536,18 +536,18 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/"><img src=\"../..
 										$loadPathAnimal = drupal_get_path_alias('node/'.$nodeTaxon->nid);
 										$loadPathAnimal = explode("/", $loadPathAnimal);
 										$loadPathAnimal = $loadPathAnimal[1];
-												
-										//Affichage	
+
+										//Affichage
 										echo '<figure class="effect-zoe">';
 											echo "<a href='$base_url/espece/$loadPathAnimal' title=\"$title\"><img title=\"$nodeTaxon->title\" src='$url' alt='$alt'/></a>";
 											echo "<a href='$url' class='imageTaxon' title=\"$title\"></a>";
 											echo "<figcaption>";
-												echo "<a title='Visiter la page' href='$base_url/espece/$loadPathAnimal'><p>$nodeTaxon->title</p></a>";											
+												echo "<a title='Visiter la page' href='$base_url/espece/$loadPathAnimal'><p>$nodeTaxon->title</p></a>";
 											echo '</figcaption>';
-										echo '</figure>';								
-									
+										echo '</figure>';
+
 									}
-									
+
 									?>
 
 								</div> <!-- fin blocTaxon -->
@@ -557,7 +557,7 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/"><img src=\"../..
 										<div class="span12" id='blockCriteresEspece'>
 													<?php  echo "<h2>Les indices pour le reconnaître</h2>"; ?>
 													<?php echo "<div class='field-content' id='fieldPersoCriteria1line'>"; //if(count($criteres) > 8) { echo "<div class='field-content' id='fieldPersoCriteria2line'>"; } else{echo "<div class='field-content' id='fieldPersoCriteria1line'>";}; ?>
-																													
+
 													<?php for($j=0; $j < count($criteres); $j++): ?>
 													<?php $valEnCour = $criteres[$j][taxonomy_term]->name; ?>
 													<?php switch ($valEnCour) {
@@ -566,7 +566,7 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/"><img src=\"../..
 													break;
 													case "1.2-Aiguille":
 													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Aiguille.png' alt='pictogramme de feuilles Aiguille' /><span class='labelCrit'>Aiguille</span></div>";
-													break; 
+													break;
 													case "1.3-Ovale":
 													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Ovale.png' alt='pictogramme de feuilles Ovale' /><span class='labelCrit'>Ovale</span></div>";
 													break;
@@ -575,13 +575,13 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/"><img src=\"../..
 													break;
 													case "1.5-Ecaille":
 													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Ecaille.png' alt='pictogramme de feuilles Ecaille' /><span class='labelCrit'>Ecaille</span></div>";
-													break;  
+													break;
 													case "1.6-Lobée":
 													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Lobe.png' alt='pictogramme de feuilles lobée' /><span class='labelCrit'>Lobée</span></div>";
-													break;    
+													break;
 													case "2.1-Lisse":
 													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Lisse.png' alt='pictogramme de feuilles lisse' /><span class='labelCrit'>Lisse</span></div>";
-													break;        
+													break;
 													case "2.2-Denté":
 													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Dentee.png' alt='pictogramme de feuilles lisse' /><span class='labelCrit'>Denté</span></div>";
 													break;
@@ -629,7 +629,7 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/"><img src=\"../..
 													break;
 													case "5.2-Jaune":
 													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Jaune.png' alt='pictogramme de fleur Jaune' /><span class='labelCrit'>Jaune</span></div>";
-													break; 
+													break;
 													case "5.3-Vert":
 													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Vert.png' alt='pictogramme de fleur Jaune' /><span class='labelCrit'>Vert</span></div>";
 													break;
@@ -643,13 +643,13 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/"><img src=\"../..
 													echo "<div class='crit'><img src='".$base_url."/sites/all/themes/ecobaladeTwitter/img/pictos/Marron-rouge.png' alt='pictogramme de fleur Jaune' /><span class='labelCrit'>Marron-rouge</span></div>";
 													break;
 													} ?>
-													<?php endfor ?>    													
+													<?php endfor ?>
 													<?php  echo "</div>"; ?>
 										</div>
-									</div>	<!-- Fin du row-fluid des critere -->	
-									<?php endif; ?>													
+									</div>	<!-- Fin du row-fluid des critere -->
+									<?php endif; ?>
 
-										
+
 								<!-- <div class="row-fluid pub">
 									<div class="span12">
 										<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
@@ -660,39 +660,39 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/"><img src=\"../..
 										     data-ad-slot="5764794793"></ins> -->
 										<!-- <script>
 										(adsbygoogle = window.adsbygoogle || []).push({});
-										</script> -->										
+										</script> -->
 									<!-- </div>
 								</div> -->
-									
+
 							</div> <!-- fin bloc espece -->
-							
+
 							<!-- On execute la vue qui nous renvoie la liste des id de balades associé à l'espèce courante -->
 							<div class="span3" id='aussiPresentDansBalade'>
 								<!-- Saisonalité -->
-								<?php 
+								<?php
 									//test si il a des valeurs de saisonalité
 									if(count($TabOfSaisonValue) > 0 || count($TabOfTimeVisibiliteValue) > 0): ?>
 
 									<?php if(count($TabOfSaisonValue) > 0 ): ?>
 
-									<?php 
+									<?php
 									echo "<div id='valueSaisonHidden'>";
 									$currentMonth = date('m');
 									foreach ($TabOfSaisonValue as $key => $value) {
-									
+
 										if($value['value'] == $currentMonth) $isNow = true;
 										echo "<div class='hidden'>$value[value]</div>";
 
 									}
-									echo "</div>"; // fin valueSaisonHidden 
+									echo "</div>"; // fin valueSaisonHidden
 									?>
 									<?php endif; ?>
 
-																		
-										</div> <!-- fin row-fluid Saisonalité -->	 
-									
-									<?php endif; ?>	
-								<?php 		 								
+
+										</div> <!-- fin row-fluid Saisonalité -->
+
+									<?php endif; ?>
+								<?php
 								$view = views_get_view('v_taxon_suivant_precedent');
 								$view->set_display('block_1');
 								$view->set_arguments(array($espnid));
@@ -701,18 +701,18 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/"><img src=\"../..
 								$view->execute();
 								$objects = $view->result;
 								?>
-								
+
 								<!-- Test s'il y a des valeurs -->
 								<?php if($objects[0]->field_esp_ces_node_nid): ?>
 									<!-- <div class="blocBalade">
-									
+
 										<h3>A retrouver dans cette balade</h3> -->
-										<?php 
+										<?php
 
 										//Charge node de la balade
-									/* 	$nodeBalade = node_load($objects[0]->field_esp_ces_node_nid);	
-										
-										//Récuperation des info dans la variable $nodeBalade 
+									/* 	$nodeBalade = node_load($objects[0]->field_esp_ces_node_nid);
+
+										//Récuperation des info dans la variable $nodeBalade
 										$url = file_create_url($nodeBalade->field_photo_resume['und'][0]['uri']);
 										$alt = $nodeBalade->field_photo_resume['und'][0]['alt'];
 										$title = $nodeBalade->field_photo_resume['und'][0]['title'];
@@ -722,32 +722,32 @@ $breadcrumb = '<div class="breadcrumb"><a href="'.$base_url.'/"><img src=\"../..
 										$loadPathBalade = explode("/", $loadPathBalade);
 										$loadPathBalade = $loadPathBalade[1];
 
-										//Affichage												
+										//Affichage
 										echo '<figure class="effect-zoe">';
 											echo "<a href='$base_url/balade/$loadPathBalade' title=\"$title\"><img title=\"$nodeBalade->title\" src='$url' alt='$alt'/></a>";
 											echo "<a href='$url' class='imageBalade' title=\"$title\"></a>";
 											echo "<figcaption>";
-												echo "<a class='visitBalade' title=\"$nodeBalade->title\" href='$base_url/balade/$loadPathBalade'><p>$nodeBalade->title</p></a>";											
+												echo "<a class='visitBalade' title=\"$nodeBalade->title\" href='$base_url/balade/$loadPathBalade'><p>$nodeBalade->title</p></a>";
 											echo '</figcaption>';
 										echo '</figure>';
  */
-																					
-										?>			
+
+										?>
 									<!-- </div> --> <!-- fin blocBalade -->
 								<?php endif; ?>
 
 							</div> <!-- fin aussiPresentDansBalade -->
 
-						</div>										
-						
+						</div>
+
 						<?php print render($page['content']); ?>
-				
+
 		  </section>
-		  
+
 	  </div>
  </div><!-- fin container-node -->
-  		
-  	
+
+
 
 <script type="text/javascript">
 jQuery( document ).ready(function() {
@@ -773,106 +773,106 @@ jQuery( document ).ready(function() {
 
 	})(jQuery, ResponsiveBootstrapToolkit);
 
-	
-	//slideshow 
+
+	//slideshow
 	var galleryTop = new Swiper('.gallery-top', {
         nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',            
+        prevButton: '.swiper-button-prev',
         effect : 'fade'
     });
-    
 
-    if($(window).width() < 968){    	
 
-    	var galleryThumbs = new Swiper('.gallery-thumbs', {	    	
-	        virtualTranslate : true,	        
+    if($(window).width() < 968){
+
+    	var galleryThumbs = new Swiper('.gallery-thumbs', {
+	        virtualTranslate : true,
 	        direction : 'horizontal',
 	        centeredSlides: true,
 	        slidesPerView: 'auto',
 	        touchRatio: 0.2,
-	        loop: true,    
+	        loop: true,
 	        slideToClickedSlide: true
-	    });	        	
-    	
+	    });
+
     }else{
 
     	//Au dessus de 968px de large
-    	var galleryThumbs = new Swiper('.gallery-thumbs', {	    	
-	        virtualTranslate : true,	        
+    	var galleryThumbs = new Swiper('.gallery-thumbs', {
+	        virtualTranslate : true,
 	        direction : 'vertical',
 	        centeredSlides: true,
 	        slidesPerView: 'auto',
 	        touchRatio: 0.2,
-	        loop: true,    
+	        loop: true,
 	        slideToClickedSlide: true
 	   	});
     }
 
-    
+
     galleryTop.params.control = galleryThumbs;
     galleryThumbs.params.control = galleryTop;
 
 
 	//Saisonalité - On parcour les 12 mois
 	$('.labelMois .span3').each(function(index, el) {
-	
+
 		var monthTotest = $(this).attr('id');
 		var blocMonthTotest = $(this);
-		
+
 		//pour chaque mois, on va tester s'il existe une valeur dans les champs cachés
 		$('#valueSaisonHidden > div').each(function(index, el) {
-			
+
 			//console.log( $(this).val() );
 			if(monthTotest == $(this).text()) blocMonthTotest.addClass('saisonOn');
-		
+
 		});
 
 	});
-	
 
-    //LightBox pour imageBalade espece     
+
+    //LightBox pour imageBalade espece
 	if( $('.imageBalade').length > 0 ){
-		
-		$('.imageBalade').vanillabox({		
-			
+
+		$('.imageBalade').vanillabox({
+
 			closeButton: false,
 			loop: true,
 			repositionOnScroll: true,
 			type: 'image',
 			adjustToWindow: 'both'
-    
-    	});	
-	
-	} 
-    //LightBox pour imageTaxon espece     
+
+    	});
+
+	}
+    //LightBox pour imageTaxon espece
 	if( $('.imageTaxon').length > 0 ){
-		
-		$('.imageTaxon').vanillabox({		
-			
+
+		$('.imageTaxon').vanillabox({
+
 			closeButton: false,
 			loop: true,
 			repositionOnScroll: true,
 			type: 'image',
 			adjustToWindow: 'both'
-    	
-    	});	
-	} 
+
+    	});
+	}
 
 	if( $('.imageComment').length > 0){
-	    //LightBox pour imageComment espece     
-		$('.imageComment').vanillabox({		
-		
+	    //LightBox pour imageComment espece
+		$('.imageComment').vanillabox({
+
 			closeButton: false,
 			loop: true,
 			repositionOnScroll: true,
 			type: 'image',
 			adjustToWindow: 'both'
-	    
+
 	    });
 	}
-	
-	
-  
+
+
+
 
 	//Click sur bouton commenter
 	$('section#comments section.collapseComment .title').click(function(){
@@ -887,7 +887,7 @@ jQuery( document ).ready(function() {
     var expires = "expires="+d.toUTCString();
     document.cookie = cname + "=" + cvalue + "; " + expires;
   }
-  
+
   function getCookie(cname) {
     var name = cname + "=";
     var ca = document.cookie.split(';');
@@ -904,7 +904,7 @@ jQuery( document ).ready(function() {
   }
 
   $('span.closeBtn').click(function(event) {
-    
+
     /* Act on the event */
     setCookie('cookieIsClosed','true', 1);
     $('div.usageCookie, span.closeBtn, div.fakeDivheightUsageCookie').animate({
@@ -913,25 +913,25 @@ jQuery( document ).ready(function() {
     }, function(){
       $(this).css('display','none');
     });
-  
-  });  
-  
+
+  });
+
   if(getCookie('cookieIsClosed') == 'false' || getCookie('cookieIsClosed') == ''){
 
     $('div.usageCookie, div.fakeDivheightUsageCookie').animate({
       height: "auto",
-      padding : "5px 0%"      
+      padding : "5px 0%"
     }, function(){
-      $(this).css('display','block');      
+      $(this).css('display','block');
     });
 
-  } 
-  
+  }
 
 
 
 
-	
+
+
 });
 </script>
 

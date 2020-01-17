@@ -67,15 +67,16 @@
 
 	<div class='row-fluid'>
 		<div class='span12' id="containerOf1Specie">
-				<div  id="image_specie">
-	  					<?php echo $image_espece; ?>
-				</div>
-				<div  id="title_specie">
-						<h3><?php echo $title_espece; ?></h3>
-				</div>
+			<div  id="image_specie">
+					<?php echo $image_espece; ?>
+			</div>
+			<div  id="title_specie">
+					<h3><?php echo $title_espece; ?></h3>
+			</div>
 
-				<div class='<?php echo($groupe_taxo)?>'></div>
-
+			<div class='span2' id="lien_specie">
+				<a href="<?php echo $base_url.'/espece/'.$lien_espece_url.'?balade='.$titleBalade;?>"></a>
+			</div>
 		</div>
 	</div>
 
