@@ -266,7 +266,7 @@ span.closeBtn:hover{
   font-weight: bold;
 }
 
-  
+
   /* ONGLET PAGE SITE*/
 li.active a.especesite {
   font-size:18px;
@@ -1122,7 +1122,7 @@ body.node-type-balade figure.effect-zoe a.imageBaladeSim, body.node-type-balade 
   -webkit-transition: -webkit-transform 0.35s;
   transition: transform 0.35s;
   -webkit-transform: translate3d(0,100%,0);
-  transform: translate3d(0,100%,0); 
+  transform: translate3d(0,100%,0);
 }
 /* Loupe affichée au hover sur l'image */
   body.node-type-balade figure.effect-zoe a.imagePatrimoine {
@@ -1368,7 +1368,7 @@ body.node-type-balade div.lesPatrimoinesImages img{
 }
 body.node-type-balade div.accordion-group{
   padding: 0px;
-  border: none; 
+  border: none;
   margin: 0px;
   position: relative;
 }
@@ -2143,7 +2143,7 @@ body.page-liste-balades .view-v-liste-balade .views-field-field-sponsor, body.pa
 }
 body.page-liste-balades .view-v-liste-balade .views-field-field-denivele{
   border: 0;
-} 
+}
 body.page-liste-balades .view-v-liste-balade .views-field-nothing{
   float:left;
   width: 37%;
@@ -2181,7 +2181,7 @@ body.page-liste-balades .view-v-liste-balade .views-field-view-node a{
   -webkit-box-shadow: 0px 4px 24px -13px rgba(0,0,0,0.81);
   -moz-box-shadow: 0px 4px 24px -13px rgba(0,0,0,0.81);
   box-shadow: 0px 4px 24px -13px rgba(0,0,0,0.81);
-} 
+}
 body.page-liste-balades .view-v-liste-balade .views-field-view-node a {
   color: #fff;
 }
@@ -2380,7 +2380,7 @@ body.page-liste-balades .view-v-liste-balade .views-field-field-distance .field-
 body.page-liste-balades .view-v-liste-balade .views-field-field-difficulte .field-content,
 body.page-liste-balades .view-v-liste-balade .views-field-field-denivele .field-content,
 body.page-liste-balades .view-v-liste-balade .views-field-field-vote .field-content,
-body.page-liste-balades .view-v-liste-balade .views-field-field-duree .field-content{ 
+body.page-liste-balades .view-v-liste-balade .views-field-field-duree .field-content{
 padding-right: 5px;
 transform: translateX(12px);
 }
@@ -6077,7 +6077,7 @@ body.node-type-balade div.views-field-field-sponsor, body.node-type-balade div.v
   }
   /*PAGE BALADE*/
   body.node-type-balade section.span9 {
-    margin: 0 0 0 20px;/* 
+    margin: 0 0 0 20px;/*
     border: 1px solid #e1e1e1; */
   }
   body.node-type-balade .span9 h3, body.node-type-balade .span9 h2{
@@ -6226,15 +6226,17 @@ body.node-type-balade div.views-field-field-sponsor, body.node-type-balade div.v
   }
 }
 @media (min-width: 710px) and (max-width: 979px){
-  body.page-liste-especes button#edit-submit-v-all-especes {
+  body.page-liste-especes button#edit-submit-v-all-especes,
+  body.node-type-balade button#edit-submit-v-all-especes {
     width: 97.594;
     height: 43.594;
     margin-left: 40%;
-    margin-top: 0;/* 
+    margin-top: 0;/*
     padding: 2%; */
   }
 
-  body.page-liste-especes .views-submit-button{
+  body.page-liste-especes .views-submit-button,
+  body.node-type-balade .views-submit-button {
     display: block;
     width: 100%;
   }
@@ -6795,7 +6797,7 @@ body.node-type-balade div.views-field-field-sponsor, body.node-type-balade div.v
     position: absolute;
     background: -webkit-linear-gradient(top, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 1%,rgba(0,0,0,0.2) 18%,rgba(0,0,0,0) 100%);
     background: -moz-linear-gradient(top, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 1%,rgba(0,0,0,0.2) 18%,rgba(0,0,0,0) 100%);
-    background: linear-gradient(to bottom, rgba(90, 76, 76, 0.5) 0%,rgba(0,0,0,0.5) 1%,rgba(0,0,0,0.2) 18%,rgba(0,0,0,0) 100%); 
+    background: linear-gradient(to bottom, rgba(90, 76, 76, 0.5) 0%,rgba(0,0,0,0.5) 1%,rgba(0,0,0,0.2) 18%,rgba(0,0,0,0) 100%);
     top: 0;
     left: 0;
     bottom: 0;
@@ -6820,10 +6822,10 @@ body.node-type-balade div.views-field-field-sponsor, body.node-type-balade div.v
     padding-top: 2%;
     padding-bottom: 2%;
   }
-  body.node-type-balade div#image_specie, body.node-type-balade div#title_specie, body.node-type-balade div#descro_specie, body.node-type-balade div#lien_specie{
+  /* body.node-type-balade div#image_specie, body.node-type-balade div#title_specie, body.node-type-balade div#descro_specie, body.node-type-balade div#lien_specie{
     float: left;
     width: 100%;
-  }
+  } */
   body.node-type-balade div#title_specie{
     padding-left: 2%;
   }
@@ -7232,8 +7234,8 @@ body.node-type-balade div.views-field-field-sponsor, body.node-type-balade div.v
     width: 100%;
   }
   #blockAllEspeces .view-filters .views-widget input, #blockAllEspeces .views-exposed-form .views-exposed-widget{
-    width: -webkit-fill-available;   
-    padding-right: 0px; 
+    width: -webkit-fill-available;
+    padding-right: 0px;
     margin: 0px;
   }
   body #blockAllEspeces .views-exposed-form .views-exposed-widget .control-group{
@@ -7337,9 +7339,9 @@ body.node-type-balade div.views-field-field-sponsor, body.node-type-balade div.v
     width: 100%;
     align-items: center;
   }
-  body.node-type-balade div.view-v-all-especes #image_specie, body.node-type-balade div.view-v-all-especes #lien_specie{
+  /*body.node-type-balade div.view-v-all-especes #image_specie, body.node-type-balade div.view-v-all-especes #lien_specie{
     width: 100%;
-  }
+  }*/
   body.node-type-balade div.view-v-all-especes #lien_specie a:first-child {
     position: absolute;
     top: 0;
