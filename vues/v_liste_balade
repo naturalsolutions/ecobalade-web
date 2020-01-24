@@ -1,0 +1,1115 @@
+$view = new view();
+$view->name = 'v_liste_balade';
+$view->description = 'Liste des balades pour une application ecoBalade';
+$view->tag = 'default';
+$view->base_table = 'node';
+$view->human_name = 'v_liste_balade';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = 'Liste des balades';
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'perm';
+$handler->display->display_options['cache']['type'] = 'none';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['exposed_form']['options']['submit_button'] = 'Recherchez';
+$handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Réinitialiser';
+$handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Trier par';
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '10';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['row_plugin'] = 'fields';
+/* Champ: Contenu: Titre */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['label'] = '';
+$handler->display->display_options['fields']['title']['alter']['text'] = '<a href=\'[path]\' title=\'détail de la balade\' alt=\'détail de la balade\'>[title]</a>';
+$handler->display->display_options['fields']['title']['alter']['path'] = 'node/1';
+$handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['title']['element_type'] = 'h3';
+$handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+/* Champ: Contenu: Photo emblématique de la balade */
+$handler->display->display_options['fields']['field_photo_resume']['id'] = 'field_photo_resume';
+$handler->display->display_options['fields']['field_photo_resume']['table'] = 'field_data_field_photo_resume';
+$handler->display->display_options['fields']['field_photo_resume']['field'] = 'field_photo_resume';
+$handler->display->display_options['fields']['field_photo_resume']['label'] = '';
+$handler->display->display_options['fields']['field_photo_resume']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_photo_resume']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_photo_resume']['settings'] = array(
+  'image_style' => 'mise_echelle_recadrage_400x240',
+  'image_link' => 'content',
+);
+/* Champ: Contenu: Teaser_ancien */
+$handler->display->display_options['fields']['field_teaser']['id'] = 'field_teaser';
+$handler->display->display_options['fields']['field_teaser']['table'] = 'field_data_field_teaser';
+$handler->display->display_options['fields']['field_teaser']['field'] = 'field_teaser';
+$handler->display->display_options['fields']['field_teaser']['label'] = '';
+$handler->display->display_options['fields']['field_teaser']['element_type'] = 'p';
+$handler->display->display_options['fields']['field_teaser']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_teaser']['element_wrapper_class'] = 'clearfix';
+/* Champ: Contenu: Post date */
+$handler->display->display_options['fields']['created']['id'] = 'created';
+$handler->display->display_options['fields']['created']['table'] = 'node';
+$handler->display->display_options['fields']['created']['field'] = 'created';
+$handler->display->display_options['fields']['created']['label'] = '';
+$handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['created']['date_format'] = 'short';
+$handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+$handler->display->display_options['fields']['created']['timezone'] = 'Europe/Paris';
+/* Champ: Contenu: Distance */
+$handler->display->display_options['fields']['field_distance']['id'] = 'field_distance';
+$handler->display->display_options['fields']['field_distance']['table'] = 'field_data_field_distance';
+$handler->display->display_options['fields']['field_distance']['field'] = 'field_distance';
+$handler->display->display_options['fields']['field_distance']['settings'] = array(
+  'thousand_separator' => ',',
+  'decimal_separator' => '.',
+  'scale' => '2',
+  'prefix_suffix' => 1,
+);
+/* Champ: Contenu: Durée */
+$handler->display->display_options['fields']['field_duree']['id'] = 'field_duree';
+$handler->display->display_options['fields']['field_duree']['table'] = 'field_data_field_duree';
+$handler->display->display_options['fields']['field_duree']['field'] = 'field_duree';
+/* Champ: Contenu: Denivele */
+$handler->display->display_options['fields']['field_denivele']['id'] = 'field_denivele';
+$handler->display->display_options['fields']['field_denivele']['table'] = 'field_data_field_denivele';
+$handler->display->display_options['fields']['field_denivele']['field'] = 'field_denivele';
+/* Champ: Contenu: Lien */
+$handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+$handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+$handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+$handler->display->display_options['fields']['view_node']['label'] = '';
+$handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['view_node']['text'] = 'En savoir +';
+/* Sort criterion: Contenu: Post date */
+$handler->display->display_options['sorts']['created']['id'] = 'created';
+$handler->display->display_options['sorts']['created']['table'] = 'node';
+$handler->display->display_options['sorts']['created']['field'] = 'created';
+$handler->display->display_options['sorts']['created']['order'] = 'DESC';
+/* Filter criterion: Contenu: Publié */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Contenu: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'balade' => 'balade',
+);
+$handler->display->display_options['filters']['type']['group'] = 1;
+/* Filter criterion: Contenu: Difficulté (field_difficulte) */
+$handler->display->display_options['filters']['field_difficulte_tid']['id'] = 'field_difficulte_tid';
+$handler->display->display_options['filters']['field_difficulte_tid']['table'] = 'field_data_field_difficulte';
+$handler->display->display_options['filters']['field_difficulte_tid']['field'] = 'field_difficulte_tid';
+$handler->display->display_options['filters']['field_difficulte_tid']['group'] = 1;
+$handler->display->display_options['filters']['field_difficulte_tid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_difficulte_tid']['expose']['operator_id'] = 'field_difficulte_tid_op';
+$handler->display->display_options['filters']['field_difficulte_tid']['expose']['label'] = 'Difficulté';
+$handler->display->display_options['filters']['field_difficulte_tid']['expose']['operator'] = 'field_difficulte_tid_op';
+$handler->display->display_options['filters']['field_difficulte_tid']['expose']['identifier'] = 'field_difficulte_tid';
+$handler->display->display_options['filters']['field_difficulte_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_difficulte_tid']['vocabulary'] = 'difficult_';
+/* Filter criterion: Contenu: Distance (field_distance) */
+$handler->display->display_options['filters']['field_distance_value']['id'] = 'field_distance_value';
+$handler->display->display_options['filters']['field_distance_value']['table'] = 'field_data_field_distance';
+$handler->display->display_options['filters']['field_distance_value']['field'] = 'field_distance_value';
+$handler->display->display_options['filters']['field_distance_value']['group'] = 1;
+$handler->display->display_options['filters']['field_distance_value']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_distance_value']['expose']['operator_id'] = 'field_distance_value_op';
+$handler->display->display_options['filters']['field_distance_value']['expose']['label'] = 'Distance (en km)';
+$handler->display->display_options['filters']['field_distance_value']['expose']['operator'] = 'field_distance_value_op';
+$handler->display->display_options['filters']['field_distance_value']['expose']['identifier'] = 'field_distance_value';
+/* Filter criterion: Contenu: Type de circuit (field_type_de_circuit) */
+$handler->display->display_options['filters']['field_type_de_circuit_tid']['id'] = 'field_type_de_circuit_tid';
+$handler->display->display_options['filters']['field_type_de_circuit_tid']['table'] = 'field_data_field_type_de_circuit';
+$handler->display->display_options['filters']['field_type_de_circuit_tid']['field'] = 'field_type_de_circuit_tid';
+$handler->display->display_options['filters']['field_type_de_circuit_tid']['group'] = 1;
+$handler->display->display_options['filters']['field_type_de_circuit_tid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['field_type_de_circuit_tid']['expose']['operator_id'] = 'field_type_de_circuit_tid_op';
+$handler->display->display_options['filters']['field_type_de_circuit_tid']['expose']['label'] = 'Type de circuit';
+$handler->display->display_options['filters']['field_type_de_circuit_tid']['expose']['operator'] = 'field_type_de_circuit_tid_op';
+$handler->display->display_options['filters']['field_type_de_circuit_tid']['expose']['identifier'] = 'field_type_de_circuit_tid';
+$handler->display->display_options['filters']['field_type_de_circuit_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_type_de_circuit_tid']['vocabulary'] = 'type_de_circuit';
+
+/* Display: Page */
+$handler = $view->new_display('page', 'Page', 'page_1');
+$handler->display->display_options['defaults']['pager'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'full';
+$handler->display->display_options['pager']['options']['items_per_page'] = '10';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['pager']['options']['id'] = '0';
+$handler->display->display_options['pager']['options']['quantity'] = '9';
+$handler->display->display_options['pager']['options']['tags']['first'] = '« premier';
+$handler->display->display_options['pager']['options']['tags']['previous'] = '‹ précédent';
+$handler->display->display_options['pager']['options']['tags']['next'] = 'suivant ›';
+$handler->display->display_options['pager']['options']['tags']['last'] = 'dernier »';
+$handler->display->display_options['exposed_block'] = TRUE;
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Champ: Contenu: Titre */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['label'] = '';
+$handler->display->display_options['fields']['title']['alter']['text'] = '<a href=\'[path]\' title=\'détail de la balade\' alt=\'détail de la balade\'>[title]</a>';
+$handler->display->display_options['fields']['title']['alter']['path'] = 'node/1';
+$handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['title']['element_type'] = 'h3';
+$handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+/* Champ: Contenu: Photo emblématique de la balade */
+$handler->display->display_options['fields']['field_photo_resume']['id'] = 'field_photo_resume';
+$handler->display->display_options['fields']['field_photo_resume']['table'] = 'field_data_field_photo_resume';
+$handler->display->display_options['fields']['field_photo_resume']['field'] = 'field_photo_resume';
+$handler->display->display_options['fields']['field_photo_resume']['label'] = '';
+$handler->display->display_options['fields']['field_photo_resume']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_photo_resume']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_photo_resume']['settings'] = array(
+  'image_style' => 'mise_echelle_recadrage_400x240',
+  'image_link' => 'content',
+);
+/* Champ: Contenu: Teaser_ancien */
+$handler->display->display_options['fields']['field_teaser']['id'] = 'field_teaser';
+$handler->display->display_options['fields']['field_teaser']['table'] = 'field_data_field_teaser';
+$handler->display->display_options['fields']['field_teaser']['field'] = 'field_teaser';
+$handler->display->display_options['fields']['field_teaser']['label'] = '';
+$handler->display->display_options['fields']['field_teaser']['alter']['max_length'] = '100';
+$handler->display->display_options['fields']['field_teaser']['alter']['trim'] = TRUE;
+$handler->display->display_options['fields']['field_teaser']['element_type'] = 'p';
+$handler->display->display_options['fields']['field_teaser']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_teaser']['element_wrapper_class'] = 'clearfix';
+/* Champ: Contenu: Post date */
+$handler->display->display_options['fields']['created']['id'] = 'created';
+$handler->display->display_options['fields']['created']['table'] = 'node';
+$handler->display->display_options['fields']['created']['field'] = 'created';
+$handler->display->display_options['fields']['created']['label'] = '';
+$handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['created']['date_format'] = 'short';
+$handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+$handler->display->display_options['fields']['created']['timezone'] = 'Europe/Paris';
+/* Champ: Contenu: Distance */
+$handler->display->display_options['fields']['field_distance']['id'] = 'field_distance';
+$handler->display->display_options['fields']['field_distance']['table'] = 'field_data_field_distance';
+$handler->display->display_options['fields']['field_distance']['field'] = 'field_distance';
+$handler->display->display_options['fields']['field_distance']['settings'] = array(
+  'thousand_separator' => ',',
+  'decimal_separator' => '.',
+  'scale' => '2',
+  'prefix_suffix' => 1,
+);
+/* Champ: Contenu: Durée */
+$handler->display->display_options['fields']['field_duree']['id'] = 'field_duree';
+$handler->display->display_options['fields']['field_duree']['table'] = 'field_data_field_duree';
+$handler->display->display_options['fields']['field_duree']['field'] = 'field_duree';
+/* Champ: Contenu: Denivele */
+$handler->display->display_options['fields']['field_denivele']['id'] = 'field_denivele';
+$handler->display->display_options['fields']['field_denivele']['table'] = 'field_data_field_denivele';
+$handler->display->display_options['fields']['field_denivele']['field'] = 'field_denivele';
+/* Champ: Contenu: Lien */
+$handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+$handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+$handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+$handler->display->display_options['fields']['view_node']['label'] = '';
+$handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['view_node']['text'] = 'En savoir +';
+/* Champ: Contenu: Lien */
+$handler->display->display_options['fields']['view_node_1']['id'] = 'view_node_1';
+$handler->display->display_options['fields']['view_node_1']['table'] = 'views_entity_node';
+$handler->display->display_options['fields']['view_node_1']['field'] = 'view_node';
+$handler->display->display_options['fields']['view_node_1']['label'] = '';
+$handler->display->display_options['fields']['view_node_1']['element_label_colon'] = FALSE;
+$handler->display->display_options['metatags'] = array(
+  'und' => array(
+    'title' => array(
+      'value' => '[view:title] | [site:name]',
+      'default' => '[view:title] | [site:name]',
+    ),
+    'description' => array(
+      'value' => 'Ecobalade vous propose des balades et randonnées dans la nature et avec l\'application la découverte de la faune et la flore.',
+      'default' => '[view:description]',
+    ),
+    'abstract' => array(
+      'value' => '[view:description]',
+      'default' => 'Balade : Randonnée près de chez vous | Idée de balade nature',
+    ),
+    'keywords' => array(
+      'value' => 'balades, balade, rando, randonnée, randonnées, nature, parcours, sentier, application, app, flore, faune, [view:title]',
+      'default' => 'balades, balade, se balader, balader, rando, randonnée, randonnées, nature, parcours, sentier, application, app, flore, faune, [view:title]',
+    ),
+    'robots' => array(
+      'value' => array(
+        'index' => 'index',
+        'follow' => 'follow',
+        'noindex' => 0,
+        'nofollow' => 0,
+        'noarchive' => 0,
+        'nosnippet' => 0,
+        'noodp' => 0,
+        'noydir' => 0,
+        'noimageindex' => 0,
+        'notranslate' => 0,
+      ),
+      'default' => array(
+        'index' => 'index',
+        'follow' => 'follow',
+        'noindex' => 0,
+        'nofollow' => 0,
+        'noarchive' => 0,
+        'nosnippet' => 0,
+        'noodp' => 0,
+        'noydir' => 0,
+        'noimageindex' => 0,
+        'notranslate' => 0,
+      ),
+    ),
+    'news_keywords' => array(
+      'value' => 'balades, balade, rando, randonnée, randonnées, nature, parcours, sentier, application, app, flore, faune, [view:title]',
+      'default' => 'balades, balade, se balader, balader, rando, randonnée, randonnées, nature, parcours, sentier, application, app, flore, faune, [view:title]',
+    ),
+    'standout' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'rating' => array(
+      'value' => 'safe for kids',
+      'default' => 'safe for kids',
+    ),
+    'referrer' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'rights' => array(
+      'value' => '',
+      'default' => 'natural-solutions',
+    ),
+    'image_src' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'canonical' => array(
+      'value' => '[view:url]',
+      'default' => '[view:url]',
+    ),
+    'shortlink' => array(
+      'value' => '[current-page:url:unaliased]',
+      'default' => '[current-page:url:unaliased]',
+    ),
+    'publisher' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'author' => array(
+      'value' => 'https://plus.google.com/106878953750776121381/posts',
+      'default' => 'https://plus.google.com/106878953750776121381/posts',
+    ),
+    'original-source' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'prev' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'next' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'content-language' => array(
+      'value' => '',
+      'default' => 'FR',
+    ),
+    'geo.position' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'geo.placename' => array(
+      'value' => 'Marseille',
+      'default' => 'Marseille',
+    ),
+    'geo.region' => array(
+      'value' => 'FR',
+      'default' => 'FR',
+    ),
+    'icbm' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'refresh' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'revisit-after' => array(
+      'value' => '',
+      'period' => '',
+      'default' => '',
+    ),
+    'pragma' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'cache-control' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'expires' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'al:android:package' => array(
+      'value' => 'com.ns.ecoBalade',
+      'default' => 'com.ns.ecoBalade',
+    ),
+    'al:android:url' => array(
+      'value' => 'https://play.google.com/store/apps/details?id=com.ns.ecoBalade&hl=fr',
+      'default' => 'https://play.google.com/store/apps/details?id=com.ns.ecoBalade&hl=fr',
+    ),
+    'al:android:class' => array(
+      'value' => 'PEGI 3',
+      'default' => 'PEGI 3',
+    ),
+    'al:android:app_name' => array(
+      'value' => 'ecobalade',
+      'default' => 'ecobalade',
+    ),
+    'al:ios:url' => array(
+      'value' => 'https://itunes.apple.com/fr/app/ecobalade/id674569147?l=fr&ls=1&mt=8',
+      'default' => 'https://itunes.apple.com/fr/app/ecobalade/id674569147?l=fr&ls=1&mt=8',
+    ),
+    'al:ios:app_store_id' => array(
+      'value' => '674569147',
+      'default' => '674569147',
+    ),
+    'al:ios:app_name' => array(
+      'value' => 'ecobalade',
+      'default' => 'ecobalade',
+    ),
+    'al:ipad:url' => array(
+      'value' => 'https://itunes.apple.com/fr/app/ecobalade/id674569147?l=fr&ls=1&mt=8',
+      'default' => 'https://itunes.apple.com/fr/app/ecobalade/id674569147?l=fr&ls=1&mt=8',
+    ),
+    'al:ipad:app_store_id' => array(
+      'value' => '674569147',
+      'default' => '674569147',
+    ),
+    'al:ipad:app_name' => array(
+      'value' => 'ecobalade',
+      'default' => 'ecobalade',
+    ),
+    'al:iphone:url' => array(
+      'value' => 'https://itunes.apple.com/fr/app/ecobalade/id674569147?l=fr&ls=1&mt=8',
+      'default' => 'https://itunes.apple.com/fr/app/ecobalade/id674569147?l=fr&ls=1&mt=8',
+    ),
+    'al:iphone:app_store_id' => array(
+      'value' => '674569147',
+      'default' => '674569147',
+    ),
+    'al:iphone:app_name' => array(
+      'value' => 'ecobalade',
+      'default' => 'ecobalade',
+    ),
+    'al:windows_phone:url' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'al:windows_phone:app_id' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'al:windows_phone:app_name' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'al:windows:url' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'al:windows:app_id' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'al:windows:app_name' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'al:windows_universal:url' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'al:windows_universal:app_id' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'al:windows_universal:app_name' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'al:web:url' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'al:web:should_fallback' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'fb:admins' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'fb:app_id' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'fb:pages' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'itemtype' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'itemprop:name' => array(
+      'value' => '[current-page:title]',
+      'default' => '[current-page:title]',
+    ),
+    'itemprop:description' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'itemprop:image' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'theme-color' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'MobileOptimized' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'HandheldFriendly' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'viewport' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'cleartype' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'apple-itunes-app' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'apple-mobile-web-app-capable' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'apple-mobile-web-app-status-bar-style' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'apple-mobile-web-app-title' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'format-detection' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'ios-app-link-alternative' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'android-app-link-alternative' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'android-manifest' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'x-ua-compatible' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'application-name' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'msapplication-allowDomainApiCalls' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'msapplication-allowDomainMetaTags' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'msapplication-badge' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'msapplication-config' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'msapplication-navbutton-color' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'msapplication-notification' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'msapplication-square150x150logo' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'msapplication-square310x310logo' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'msapplication-square70x70logo' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'msapplication-wide310x150logo' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'msapplication-starturl' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'msapplication-task' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'msapplication-task-separator' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'msapplication-tilecolor' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'msapplication-tileimage' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'msapplication-tooltip' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'msapplication-window' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'og:type' => array(
+      'value' => 'article',
+      'default' => 'article',
+    ),
+    'og:url' => array(
+      'value' => '[current-page:url:absolute]',
+      'default' => '[current-page:url:absolute]',
+    ),
+    'og:title' => array(
+      'value' => '[current-page:title]',
+      'default' => '[current-page:title]',
+    ),
+    'og:determiner' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'og:description' => array(
+      'value' => '',
+      'default' => 'EcoBalade est une nouvelle façon de vivre un moment dans la nature. Apprenez à reconnaître la faune et la flore, partagez vos découvertes, et sortez ressourcés de cette aventure!',
+    ),
+    'og:updated_time' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'og:see_also' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'og:image' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'og:image:url' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'og:image:secure_url' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'og:image:type' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'og:image:width' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'og:image:height' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'og:latitude' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'og:longitude' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'og:street_address' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'og:locality' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'og:region' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'og:postal_code' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'og:country_name' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'og:email' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'og:phone_number' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'og:fax_number' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'og:locale' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'og:locale:alternate' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'article:author' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'article:publisher' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'article:section' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'article:tag' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'article:published_time' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'article:modified_time' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'article:expiration_time' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'profile:first_name' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'profile:last_name' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'profile:username' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'profile:gender' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'og:audio' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'og:audio:secure_url' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'og:audio:type' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'book:author' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'book:isbn' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'book:release_date' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'book:tag' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'og:video:url' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'og:video:secure_url' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'og:video:width' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'og:video:height' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'og:video:type' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'video:actor' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'video:actor:role' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'video:director' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'video:writer' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'video:duration' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'video:release_date' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'video:tag' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'video:series' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'product:price:amount' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'product:price:currency' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'product:availability' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'product:brand' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'product:upc' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'product:ean' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'product:isbn' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'product:plural_title' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'product:retailer' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'product:retailer_title' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'product:retailer_part_no' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'product:mfr_part_no' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'product:size' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'product:product_link' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'product:category' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'product:color' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'product:material' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'product:pattern' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'product:shipping_cost:amount' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'product:shipping_cost:currency' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'product:weight:value' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'product:weight:units' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'product:shipping_weight:value' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'product:shipping_weight:units' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'product:expiration_time' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'product:condition' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:card' => array(
+      'value' => 'summary',
+      'default' => 'summary',
+    ),
+    'twitter:creator' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:creator:id' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:url' => array(
+      'value' => '[current-page:url:absolute]',
+      'default' => '[current-page:url:absolute]',
+    ),
+    'twitter:title' => array(
+      'value' => '[current-page:title]',
+      'default' => '[current-page:title]',
+    ),
+    'twitter:description' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:image' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:image:width' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:image:height' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:image:alt' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:image0' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:image1' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:image2' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:image3' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:player' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:player:width' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:player:height' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:player:stream' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:player:stream:content_type' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:app:country' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:app:name:iphone' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:app:id:iphone' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:app:url:iphone' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:app:name:ipad' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:app:id:ipad' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:app:url:ipad' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:app:name:googleplay' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:app:id:googleplay' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:app:url:googleplay' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:label1' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:data1' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:label2' => array(
+      'value' => '',
+      'default' => '',
+    ),
+    'twitter:data2' => array(
+      'value' => '',
+      'default' => '',
+    ),
+  ),
+);
+$handler->display->display_options['path'] = 'liste-balades';
+$handler->display->display_options['menu']['type'] = 'normal';
+$handler->display->display_options['menu']['title'] = 'Les balades';
+$handler->display->display_options['menu']['description'] = 'Listes des balades';
+$handler->display->display_options['menu']['weight'] = '0';
+$handler->display->display_options['menu']['name'] = 'main-menu';
+$handler->display->display_options['menu']['context'] = 0;
+$translatables['v_liste_balade'] = array(
+  t('Master'),
+  t('Liste des balades'),
+  t('more'),
+  t('Recherchez'),
+  t('Réinitialiser'),
+  t('Trier par'),
+  t('Asc'),
+  t('Desc'),
+  t('<a href=\'[path]\' title=\'détail de la balade\' alt=\'détail de la balade\'>[title]</a>'),
+  t('Distance'),
+  t('Durée'),
+  t('Denivele'),
+  t('En savoir +'),
+  t('Difficulté'),
+  t('Distance (en km)'),
+  t('Type de circuit'),
+  t('Page'),
+  t('Items per page'),
+  t('- All -'),
+  t('Offset'),
+  t('« premier'),
+  t('‹ précédent'),
+  t('suivant ›'),
+  t('dernier »'),
+);

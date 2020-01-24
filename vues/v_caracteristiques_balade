@@ -1,0 +1,204 @@
+$view = new view();
+$view->name = 'v_caracteristiques_balade';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'node';
+$view->human_name = 'v_caracteristiques_balade';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = 'v_caracteristiques_balade';
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'perm';
+$handler->display->display_options['cache']['type'] = 'time';
+$handler->display->display_options['cache']['results_lifespan'] = '21600';
+$handler->display->display_options['cache']['output_lifespan'] = '21600';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Réinitialiser';
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '5';
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['row_plugin'] = 'fields';
+/* Champ: Contenu: Picto des espèces */
+$handler->display->display_options['fields']['field_picto_des_especes']['id'] = 'field_picto_des_especes';
+$handler->display->display_options['fields']['field_picto_des_especes']['table'] = 'field_data_field_picto_des_especes';
+$handler->display->display_options['fields']['field_picto_des_especes']['field'] = 'field_picto_des_especes';
+$handler->display->display_options['fields']['field_picto_des_especes']['label'] = '';
+$handler->display->display_options['fields']['field_picto_des_especes']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_picto_des_especes']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_picto_des_especes']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_picto_des_especes']['settings'] = array(
+  'image_style' => '',
+  'image_link' => '',
+);
+/* Champ: Global: Custom text */
+$handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+$handler->display->display_options['fields']['nothing']['table'] = 'views';
+$handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+$handler->display->display_options['fields']['nothing']['label'] = '';
+$handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="#espece" target="_blank" alt="lien vers la liste des espèces">[field_picto_des_especes]</a>';
+$handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+/* Champ: Contenu: Difficulté */
+$handler->display->display_options['fields']['field_difficulte']['id'] = 'field_difficulte';
+$handler->display->display_options['fields']['field_difficulte']['table'] = 'field_data_field_difficulte';
+$handler->display->display_options['fields']['field_difficulte']['field'] = 'field_difficulte';
+$handler->display->display_options['fields']['field_difficulte']['label'] = '';
+$handler->display->display_options['fields']['field_difficulte']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_difficulte']['type'] = 'taxonomy_term_reference_plain';
+/* Champ: Contenu: Distance */
+$handler->display->display_options['fields']['field_distance']['id'] = 'field_distance';
+$handler->display->display_options['fields']['field_distance']['table'] = 'field_data_field_distance';
+$handler->display->display_options['fields']['field_distance']['field'] = 'field_distance';
+$handler->display->display_options['fields']['field_distance']['label'] = 'Distance :';
+$handler->display->display_options['fields']['field_distance']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_distance']['settings'] = array(
+  'thousand_separator' => ' ',
+  'decimal_separator' => '.',
+  'scale' => '2',
+  'prefix_suffix' => 1,
+);
+/* Champ: Contenu: Type de circuit */
+$handler->display->display_options['fields']['field_type_de_circuit']['id'] = 'field_type_de_circuit';
+$handler->display->display_options['fields']['field_type_de_circuit']['table'] = 'field_data_field_type_de_circuit';
+$handler->display->display_options['fields']['field_type_de_circuit']['field'] = 'field_type_de_circuit';
+$handler->display->display_options['fields']['field_type_de_circuit']['label'] = 'Type de circuit :';
+$handler->display->display_options['fields']['field_type_de_circuit']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_type_de_circuit']['type'] = 'taxonomy_term_reference_plain';
+/* Champ: Contenu: Durée */
+$handler->display->display_options['fields']['field_duree']['id'] = 'field_duree';
+$handler->display->display_options['fields']['field_duree']['table'] = 'field_data_field_duree';
+$handler->display->display_options['fields']['field_duree']['field'] = 'field_duree';
+$handler->display->display_options['fields']['field_duree']['label'] = 'Durée :';
+$handler->display->display_options['fields']['field_duree']['element_label_colon'] = FALSE;
+/* Champ: Contenu: Accès au site */
+$handler->display->display_options['fields']['field_acces_site']['id'] = 'field_acces_site';
+$handler->display->display_options['fields']['field_acces_site']['table'] = 'field_data_field_acces_site';
+$handler->display->display_options['fields']['field_acces_site']['field'] = 'field_acces_site';
+$handler->display->display_options['fields']['field_acces_site']['label'] = 'Réglementation et accès au site ';
+$handler->display->display_options['fields']['field_acces_site']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_acces_site']['alter']['text'] = '<a class="bnt_risque_incendie" href="#" alt="Liens vers le site du département">[field_acces_site]</a>';
+$handler->display->display_options['fields']['field_acces_site']['alter']['path'] = '#';
+$handler->display->display_options['fields']['field_acces_site']['alter']['external'] = TRUE;
+$handler->display->display_options['fields']['field_acces_site']['hide_empty'] = TRUE;
+/* Champ: Contenu: Logo du premier sponsor */
+$handler->display->display_options['fields']['field_sponsor']['id'] = 'field_sponsor';
+$handler->display->display_options['fields']['field_sponsor']['table'] = 'field_data_field_sponsor';
+$handler->display->display_options['fields']['field_sponsor']['field'] = 'field_sponsor';
+$handler->display->display_options['fields']['field_sponsor']['label'] = '';
+$handler->display->display_options['fields']['field_sponsor']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_sponsor']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_sponsor']['settings'] = array(
+  'image_style' => '',
+  'image_link' => '',
+);
+/* Sort criterion: Contenu: Post date */
+$handler->display->display_options['sorts']['created']['id'] = 'created';
+$handler->display->display_options['sorts']['created']['table'] = 'node';
+$handler->display->display_options['sorts']['created']['field'] = 'created';
+$handler->display->display_options['sorts']['created']['order'] = 'DESC';
+/* Contextual filter: Contenu: Nid */
+$handler->display->display_options['arguments']['nid']['id'] = 'nid';
+$handler->display->display_options['arguments']['nid']['table'] = 'node';
+$handler->display->display_options['arguments']['nid']['field'] = 'nid';
+$handler->display->display_options['arguments']['nid']['exception']['title'] = 'Tout';
+$handler->display->display_options['arguments']['nid']['default_argument_type'] = 'fixed';
+$handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+/* Filter criterion: Contenu: Publié */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Contenu: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'balade' => 'balade',
+);
+
+/* Display: Caractéristiques de la balade */
+$handler = $view->new_display('block', 'Caractéristiques de la balade', 'block_1');
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Champ: Contenu: Picto des espèces */
+$handler->display->display_options['fields']['field_picto_des_especes']['id'] = 'field_picto_des_especes';
+$handler->display->display_options['fields']['field_picto_des_especes']['table'] = 'field_data_field_picto_des_especes';
+$handler->display->display_options['fields']['field_picto_des_especes']['field'] = 'field_picto_des_especes';
+$handler->display->display_options['fields']['field_picto_des_especes']['label'] = '';
+$handler->display->display_options['fields']['field_picto_des_especes']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_picto_des_especes']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_picto_des_especes']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_picto_des_especes']['settings'] = array(
+  'image_style' => '',
+  'image_link' => '',
+);
+/* Champ: Global: Custom text */
+$handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+$handler->display->display_options['fields']['nothing']['table'] = 'views';
+$handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+$handler->display->display_options['fields']['nothing']['label'] = '';
+$handler->display->display_options['fields']['nothing']['alter']['text'] = '[field_picto_des_especes]';
+$handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+/* Champ: Contenu: Difficulté */
+$handler->display->display_options['fields']['field_difficulte']['id'] = 'field_difficulte';
+$handler->display->display_options['fields']['field_difficulte']['table'] = 'field_data_field_difficulte';
+$handler->display->display_options['fields']['field_difficulte']['field'] = 'field_difficulte';
+$handler->display->display_options['fields']['field_difficulte']['label'] = '';
+$handler->display->display_options['fields']['field_difficulte']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_difficulte']['type'] = 'taxonomy_term_reference_plain';
+/* Champ: Contenu: Durée */
+$handler->display->display_options['fields']['field_duree']['id'] = 'field_duree';
+$handler->display->display_options['fields']['field_duree']['table'] = 'field_data_field_duree';
+$handler->display->display_options['fields']['field_duree']['field'] = 'field_duree';
+$handler->display->display_options['fields']['field_duree']['label'] = 'Durée :';
+$handler->display->display_options['fields']['field_duree']['element_label_colon'] = FALSE;
+/* Champ: Contenu: Distance */
+$handler->display->display_options['fields']['field_distance']['id'] = 'field_distance';
+$handler->display->display_options['fields']['field_distance']['table'] = 'field_data_field_distance';
+$handler->display->display_options['fields']['field_distance']['field'] = 'field_distance';
+$handler->display->display_options['fields']['field_distance']['label'] = 'Distance :';
+$handler->display->display_options['fields']['field_distance']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_distance']['settings'] = array(
+  'thousand_separator' => ' ',
+  'decimal_separator' => '.',
+  'scale' => '2',
+  'prefix_suffix' => 1,
+);
+/* Champ: Contenu: Denivele */
+$handler->display->display_options['fields']['field_denivele']['id'] = 'field_denivele';
+$handler->display->display_options['fields']['field_denivele']['table'] = 'field_data_field_denivele';
+$handler->display->display_options['fields']['field_denivele']['field'] = 'field_denivele';
+$handler->display->display_options['fields']['field_denivele']['label'] = 'Dénivelé :';
+$handler->display->display_options['fields']['field_denivele']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_denivele']['hide_empty'] = TRUE;
+
+/* Display: Bloc 2 */
+$handler = $view->new_display('block', 'Bloc 2', 'block_2');
+$translatables['v_caracteristiques_balade'] = array(
+  t('Master'),
+  t('v_caracteristiques_balade'),
+  t('more'),
+  t('Apply'),
+  t('Réinitialiser'),
+  t('Sort by'),
+  t('Asc'),
+  t('Desc'),
+  t('<a href="#espece" target="_blank" alt="lien vers la liste des espèces">[field_picto_des_especes]</a>'),
+  t('Distance :'),
+  t('Type de circuit :'),
+  t('Durée :'),
+  t('Réglementation et accès au site '),
+  t('<a class="bnt_risque_incendie" href="#" alt="Liens vers le site du département">[field_acces_site]</a>'),
+  t('Tout'),
+  t('Caractéristiques de la balade'),
+  t('[field_picto_des_especes]'),
+  t('Dénivelé :'),
+  t('Bloc 2'),
+);

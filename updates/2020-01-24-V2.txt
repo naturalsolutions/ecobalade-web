@@ -1,0 +1,9 @@
+:> Mettre à jour les templates de la view v-all-especes et la calendrier des saisonnalités pour les plantes
+ --> git pull de la dev sur le dev/demo/prod
+
+:> Retirer la boutique
+désactiver la v-boutique dans structure/view
+
+:> Importer la vue caracteristiques_balade à partir du fichier vues > v_caracteristiques_balade.txt
+
+:> Importer la vue liste_balade à partir du fichier vues > v_liste_balade.txt
