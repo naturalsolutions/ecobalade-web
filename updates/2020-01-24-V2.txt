@@ -7,3 +7,6 @@ désactiver la v-boutique dans structure/view
 :> Importer la vue caracteristiques_balade à partir du fichier vues > v_caracteristiques_balade.txt
 
 :> Importer la vue liste_balade à partir du fichier vues > v_liste_balade.txt
+
+:> Supprimer l'affichage de l'information dénivelé en bas de la page détail balade
+- <monecobalade>/admin/structure/types/manage/balade/display passer le champ Denivele au format <Caché>
