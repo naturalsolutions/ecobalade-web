@@ -12,15 +12,13 @@ désactiver la v-boutique dans structure/view
 - <monecobalade>/admin/structure/types/manage/balade/display passer le champ Denivele au format <Caché>
 
 :> Ajouter un champ image pour les critères de valeur des espèces (taxonomie drupal)
-
-Au clic :
 - Se connecter en tant qu'admin
 - Aller dans Structure > Taxonomie >
 - Cliquer dans "modifier le vocabulaire" de la ligne "Critères arbuste et plante"
 - Cliquer sur l'onglet Gérer les champs
 correspond à l'url <monecobalade>/admin/structure/taxonomy/criteres/fields
 
-- Ajoute un nouveau champ ayant pour nom "picto" de type "image"
+- Ajouter un nouveau champ ayant pour nom "picto" de type "image"
 - paramétrer le champ :
     - Répertoire du fichier = picto_criteria
     - Résolution maximale = 600x600
